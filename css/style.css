@@ -2,14 +2,14 @@ html, body{
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: url('../img/background.png');
+    background-image: url('./img/background.png');
   }
 
   #end {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: url('../img/end-background.png');
+    background-image: url('./img/end-background.png');
     background-size: cover; /* Default to cover */
     background-position:center;
     background-repeat: no-repeat;
