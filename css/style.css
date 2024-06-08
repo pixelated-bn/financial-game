@@ -1,0 +1,176 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('/img/background.png');
+  }
+
+  #end {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('/img/end-background.png');
+    background-size: cover; /* Default to cover */
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+  #title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    background: none;
+  }
+
+  #mainbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    background: none;
+  }
+
+  #history{
+    position: relative; /* Position the text relative to this container */
+    background-image: url(../img/history.png);
+    background-size: cover; /* Optional: to cover the container with the background image */
+    background-position: center; /* Optional: to center the background image */
+    width: auto;
+    height: auto;
+    color: white; /* Text color */
+    padding-left: 45px;
+    padding-top: 7px;
+  }
+
+  .index-hover {
+    text-decoration: none;
+    color: #2F668C;
+    font-weight: bolder;
+  }
+
+  /* CSS for the text when hovered */
+  .index-hover:hover {
+    color: #88C9ED; /* Text color on hover */
+    text-decoration: none;
+  }
+
+  .hover-text {
+    vertical-align: middle;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff; /* Default text color */
+  }
+
+  /* CSS for the text when hovered */
+  .hover-text:hover {
+    color: #88C9ED; /* Text color on hover */
+    text-decoration: none;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 9%; /* Position the text at the vertical center */
+    left: 30%; /* Position the text at the horizontal center */
+    transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
+    color: white; /* Text color */
+  }
+
+  .circular-text {
+    width: 90px; /* Set your desired width */
+    height: 90px; /* Set your desired height */
+    border-radius: 50%; /* Make the element circular */
+    background-color: #002151; /* Background color of the circle */
+    color: white; /* Text color */
+    display:block;
+  }
+
+  .my-card {
+    position: relative;
+    overflow: hidden;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.my-card .card-content {
+    position: relative;
+    z-index: 1;
+}
+
+.my-card:hover {
+    background-image: url('../img/card-hover.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.selection-card {
+  position:relative;
+  width: 70%;
+  margin: 0 auto;
+  transition: background-image 0.5s ease-in-out;
+}
+
+
+.selection-card:hover {
+  background-image: url('../img/selection-hover.png');
+  background-size:contain;
+  background-position:center;
+}
+
+.sticky-row {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  background-color:unset; /* Optional: set a background color */
+  z-index: 1000; /* Ensure it stays on top of other content */
+  padding: 10px; /* Optional: add some padding */
+}
+
+.sticky-col {
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  width: 65%; /* Same width as the image */
+}
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+.image-container .overlay-text {
+  position: absolute;
+  top: 45%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  transform: translate(-50%, -50%) rotate(-35deg); /* Rotate the text */
+  color: black; /* Adjust text color */
+  font-weight: bolder; /* Adjust text style */
+  font-size: 36px;
+}
+
+.info-container img {
+  width: 100%;
+  height: 500px;
+}
+
+.info-container .overlay-text {
+  top: 50%; /* Adjust as needed */
+  left: 50%; /* Adjust as needed */
+  color: black; /* Adjust text color */
+  font-weight:lighter;
+  font-size: 24px;
+  text-align: center;
+}
+
+.info-container .overlay-button {
+  text-align: center;
+  left: 50%; /* Adjust as needed */
+  color: black; /* Adjust text color */
+  font-weight:lighter;
+  font-size: 24px;
+  text-decoration: none;
+}
