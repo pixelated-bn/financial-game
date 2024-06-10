@@ -77,19 +77,49 @@ html, body{
     color: white; /* Text color */
   }
 
-  .circular-text {
-    width: 90px; /* Set your desired width */
-    height: 90px; /* Set your desired height */
-    border-radius: 50%; /* Make the element circular */
-    background-color: #002151; /* Background color of the circle */
-    color: white; /* Text color */
-    display:block;
+  .circular-progress {
+    width: 120px; /* Outer ring size */
+    height: 120px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
   }
+  
+  .inner-circle {
+    width: 85%; /* Inner circle size */
+    height: 85%;
+    background-color: #002151; /* Inner circle color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1; /* Ensure it is above the outer ring */
+  }
+  
+  .percentage {
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Text color */
+  }
+  
+  .outer-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#2F668C 0%, #2F668C 0%, #f5f4f4 0% 100%);
+    position: absolute;
+    z-index: 0; /* Ensure it is below the inner circle */
+  }
+  
 
   .my-card {
     position: relative;
     overflow: hidden;
     transition: background-image 0.5s ease-in-out;
+    width: 290px;
 }
 
 .my-card .card-content {
@@ -98,9 +128,23 @@ html, body{
 }
 
 .my-card:hover {
-    background-image: url('../img/card-hover.png');
-    background-size: cover;
-    background-position: center;
+  background-image: url('../img/card-hover.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.hovertest:hover::before {
+  content: '';
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  left: 50%; /* Center the arrow horizontally */
+  transform: translateX(-50%); /* Center the arrow horizontally */
+  width: 28px; /* Adjust the width as needed */
+  height: 28px; /* Adjust the height as needed */
+  background-image: url('../img/arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .selection-card {
@@ -115,6 +159,20 @@ html, body{
   background-image: url('../img/selection-hover.png');
   background-size:contain;
   background-position:center;
+}
+
+.selection-card:hover::before {
+  content: '';
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  left: -5%; /* Center the arrow horizontally */
+  transform: translate(-50%, 50%) rotate(-90deg); /* Rotate the text */
+  width: 28px; /* Adjust the width as needed */
+  height: 28px; /* Adjust the height as needed */
+  background-image: url('../img/arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .sticky-row {
@@ -173,4 +231,13 @@ html, body{
   font-weight:lighter;
   font-size: 24px;
   text-decoration: none;
+}
+
+.hidden-section {
+  display: none;
+}
+
+/* Show the section when it's revealed */
+.visible-section {
+  display: block;
 }
