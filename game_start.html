@@ -22,9 +22,9 @@
     <div class="container" style="padding-top: 3px;">
         <div class="row sticky-row">
             <div class="col-sm-10">
-              <a class="index-hover" href="index.html"><span style="color: #002151; font-weight: bolder;">BDCB</span> FinancialGame</a>
+              <a class="index-hover" href="index.html"><span style="color: #002151; font-weight: bolder;">BDCB</span> CreditLit</a>
             </div>
-            <div class="col-sm-2 text-center" id="history">
+            <div class="col-sm-2 text-center" id="history" hidden>
                <a class="hover-text">HISTORY</a>
             </div>
     </div>
@@ -129,7 +129,7 @@
  <a href="#info2" id="navigate-link2" class="choice-card" data-happiness="90" data-focus="75" data-connection="60" data-wallet="2200" style="text-decoration: none; color: #000000;">
     <div class="card selection-card">
       <div class="card-body text-center" style="padding: 30px;">
-        <h3 class="card-text" style="font-weight:lighter;">Purchase PC.</h3>
+        <h3 class="card-text" style="font-weight:lighter;">Apply for Credit Card</h3>
       </div>
     </div>
     </a>
@@ -169,7 +169,7 @@
    <a href="#info2" id="navigate-link2" class="choice-card" data-happiness="90" data-focus="75" data-connection="60" data-wallet="1100" style="text-decoration: none; color: #000000;">
       <div class="card selection-card">
         <div class="card-body text-center" style="padding: 30px;">
-          <h3 class="card-text" style="font-weight:lighter;">Purchase PC.</h3>
+          <h3 class="card-text" style="font-weight:lighter;">Apply for Credit Card</h3>
         </div>
       </div>
       </a>
@@ -208,7 +208,7 @@
      <a href="#info2" id="navigate-link2" class="choice-card" data-happiness="90" data-focus="75" data-connection="60" data-wallet="1000" style="text-decoration: none; color: #000000;">
         <div class="card selection-card">
           <div class="card-body text-center" style="padding: 30px;">
-            <h3 class="card-text" style="font-weight:lighter;">Purchase PC.</h3>
+            <h3 class="card-text" style="font-weight:lighter;">Apply for Credit Card</h3>
           </div>
         </div>
         </a>
@@ -265,10 +265,10 @@
       <div class="col-sm-9">
         <div class="info-container">
           <img src="./img/info.png">
-          <div class="overlay-text">You buying a PC would be a very good investment for Long-Term Savings: Due to their upgradability, PCs can be more cost-effective in the long run, as you can update parts instead of buying new systems.  
+          <div class="overlay-text">Getting a credit card has its ups and downs. If you keep track of your balance, you'll be okay. But it's really important to understand all the terms of the credit card. Let’s go over them to make sure you know what to expect.
 
             <div class="text-right" style="padding-top: 50px;">
-            <a href="end.html" class="btn btn-secondary btn-lg" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <a href="#game1" id="navigate-link3" class="btn btn-secondary btn-lg" style="font-weight: bold; color: #ffffff;">PROCEED</a>
           </div>
           </div>
           
@@ -305,6 +305,73 @@
 
 
   </div>
+
+ 
+
+  <div id="game1" class="hidden-section">
+
+    <div class="text-center">
+      <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/Quote.png" alt="" style="width: 6%; height: 3%; vertical-align: top;">CREDIT CARD WORD SEARCH</h1>
+      <h3 class="text-center" style="font-weight:lighter;">Find the words listed on the word search puzzle</h3>
+  
+  </div>
+  
+      <div id="word-search">
+  
+  
+      </div>
+     <!-- <button onclick="generatePuzzle()">Generate Puzzle</button>-->
+      <div id="word-list" class="text-center"></div>
+  
+          <!-- Modal Structure -->
+          <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                  </div>
+                  <div class="modal-body text-center">
+                 
+                    <h3>WELL DONE!</h3>
+
+                   </div>
+                 
+                  <a href="#tips1" id="navigate-link4" type="button" class="btn btn-dark btn-lg" style="font-weight: bold;">PROCEED</a>
+              </div>
+          </div>
+  
+          </div>
+
+  </div>
+
+
+  <div id="tips1" class="hidden-section" style="padding-top: 20px ;">
+
+
+    <div class="row">
+      <div class="col-sm-3 text-right">
+        <div class="image-container">
+            <img src="./img/tips.png" alt="Tips">
+            <div class="overlay-text">TIPS!</div>
+        </div>
+    </div>
+      <div class="col-sm-9">
+        <div class="info-container">
+          <img src="./img/info.png">
+          <div class="overlay-text"> Now that you are familiar with the terms, please keep an eye on your credit score or you'll be in a lot of debt! You sure don't want that, do you? Good.
+
+            <div class="text-right" style="padding-top: 50px;">
+            <a href="end.html" class="btn btn-secondary btn-lg" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+          </div>
+          </div>
+          
+      </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
 
     </section>
 </div>
@@ -391,6 +458,42 @@ document.getElementById('navigate-link2').addEventListener('click', function(eve
 });
 
 
+document.getElementById('navigate-link3').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default anchor link behavior
+
+  // Reveal the section
+  var targetSection = document.getElementById('game1');
+  targetSection.classList.remove('hidden-section');
+  targetSection.classList.add('visible-section');
+
+  var hideSection = document.getElementById('info2');
+  hideSection.classList.remove('visible-section');
+  hideSection.classList.add('hidden-section');
+
+  // Scroll to the section
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+document.getElementById('navigate-link4').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default anchor link behavior
+
+  // Reveal the section
+  var targetSection = document.getElementById('tips1');
+  targetSection.classList.remove('hidden-section');
+  targetSection.classList.add('visible-section');
+
+  var hideSection = document.getElementById('info2');
+  hideSection.classList.remove('visible-section');
+  hideSection.classList.add('hidden-section');
+
+  var hideSection = document.getElementById('game1');
+  hideSection.classList.remove('visible-section');
+  hideSection.classList.add('hidden-section');
+
+  // Scroll to the section
+  targetSection.scrollIntoView({ behavior: 'smooth' });
+});
+
   // Function to update progress circle
   function updateCircularProgress(element, newValue) {
         element.setAttribute('data-progress', newValue);
@@ -432,7 +535,7 @@ document.getElementById('navigate-link2').addEventListener('click', function(eve
 
 
 </script>
-
+<script src="./js/script.js"></script>
 
 </body>
 </html>
