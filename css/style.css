@@ -15,6 +15,16 @@ html, body{
     background-repeat: no-repeat;
 }
 
+#gameover {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('../img/gameover.png');
+  background-size: cover; /* Default to cover */
+  background-position:center;
+  background-repeat: no-repeat;
+}
+
   #title {
     display: flex;
     justify-content: center;
@@ -45,7 +55,7 @@ html, body{
 
   .index-hover {
     text-decoration: none;
-    color: #2F668C;
+    color: #d7c026;
     font-weight: bolder;
   }
 
@@ -122,6 +132,7 @@ html, body{
     overflow: hidden;
     transition: background-image 0.5s ease-in-out;
     width: 260px;
+    height: 370px;
 }
 
 .my-card .card-content {
@@ -139,7 +150,7 @@ html, body{
   content: '';
   position: absolute;
   top: 10px; /* Adjust the top position as needed */
-  left: 50%; /* Center the arrow horizontally */
+  left: 40%; /* Center the arrow horizontally */
   transform: translateX(-50%); /* Center the arrow horizontally */
   width: 22px; /* Adjust the width as needed */
   height: 22px; /* Adjust the height as needed */
@@ -222,7 +233,7 @@ html, body{
   left: 50%; /* Adjust as needed */
   color: black; /* Adjust text color */
   font-weight:lighter;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -287,7 +298,8 @@ html, body{
 }
 
 .selected {
-  background-color: #88C9ED;
+  background-color: #205e55;
+  color: #fff;
 }
 
 .crossed-out {
@@ -295,44 +307,44 @@ html, body{
 }
 
 .completed {
-  background-color: #2F668C;
+  background-color: #d7c026;
   color: #fff;
 }
 
-
+.modal-open {
+  overflow: hidden; /* Prevent scrolling of the background */
+  pointer-events: none; /* Disable all pointer events on the body */
+}
 
 /* Modal Styles */
-.modal {
+#modal {
   display: none; 
   position: fixed; 
-  z-index: 1; 
+  z-index: 2000; 
   left: 0;
   top: 0;
   width: 100%; 
   height: 100%; 
-  overflow: auto; 
+  overflow: hidden; 
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4); 
 }
 
-.modal-content {
+#modal-content {
   background-color: #fefefe;
   margin: 15% auto; 
   padding: 20px;
   border: 1px solid #888;
   width: 80%; 
+  z-index: 1051; /* Ensure the modal content is above the backdrop */
+  pointer-events: auto; /* Re-enable pointer events for the modal content */
 }
 
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #35867a;
+  height:8%;
 }
 
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
