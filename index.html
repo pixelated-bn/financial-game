@@ -4,7 +4,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financial Game</title>
+    <title>CreditLit</title>
 
 <!-- Bootstrap and CSS -->
         <!--Link for connecting to bootstrap-->
@@ -19,16 +19,55 @@
 
 </head>
 <body>
-    <div class="container" style="padding-top: 250px;">
+ 
+    <audio id="myAudio" autoplay loop>
+        <source src="./audio/game-music-loop-6-144641.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+   <i class="fa fa-volume-off" aria-hidden="true"  id="toggleButton" onclick="toggleAudio()" hidden></i>
+
+    <div class="container" style="padding-top: 180px;">
         <div class="row" style="background: none;">
             <div class="col-sm-12" id="title">
-                <h1 style="font-size: 100px; color: #2F668C;font-weight: bolder;"><span style="font-size: 100px; color: #002151; font-weight: bolder;">BDCB</span> CreditLit</h1>
+                <h1 style="font-size:180px; color: #d7c026;font-weight: bolder;"><span style="font-size: 160px; color: #3a877d; font-weight: bolder;">Credit</span>Lit</h1>
             </div>
     </div>
     <div class="row" style="background: none;">
         <div class="col-sm-12" id="mainbtn">
-            <a href="game_start.html" type="button" class="btn btn-dark btn-lg" style="font-weight: bold;">Lets Gooo</a></div>
+            <a href="graduation.html" type="button" class="btn btn-dark btn-lg" style="font-weight: bold; font-size: xx-large;">Lets Play</a></div>
+       
 </div>
 </div>
+
+<script>
+    const audio = document.getElementById('myAudio');
+    const toggleButton = document.getElementById('toggleButton');
+
+    // Function to check and play audio on user interaction
+    function checkAutoplay() {
+        audio.play().catch(error => {
+            console.error('Autoplay error:', error);
+        });
+    }
+
+    // Function to toggle audio play and pause
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play().catch(error => {
+                console.error('Error playing audio:', error);
+            });
+            toggleButton.textContent = 'Stop Music';
+        } else {
+            audio.pause();
+            audio.currentTime = 0; // Optionally reset playback position
+            toggleButton.textContent = 'Start Music';
+        }
+    }
+
+    // Call checkAutoplay on page load
+    document.addEventListener('DOMContentLoaded', checkAutoplay);
+</script>
+
 </body>
 </html>
