@@ -9,7 +9,7 @@ html, body{
     margin: 0;
     padding: 0;
     height: 100%;
-    background-image: url('../img/end-background.png');
+    background-image: url('../img/gameend.png');
     background-size: cover; /* Default to cover */
     background-position:center;
     background-repeat: no-repeat;
@@ -85,8 +85,25 @@ html, body{
     left: 30%; /* Position the text at the horizontal center */
     transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
     color: white; /* Text color */
+    padding-top: 120px;
   }
 
+
+  .header-text {
+    position: absolute;
+    top: 7%; /* Position the text at the vertical center */
+    left: 5%; /* Position the text at the horizontal center */
+    color: white; /* Text color */
+  }
+
+
+  .circular-progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items horizontally */
+    position: relative;
+  }
+  
   .circular-progress {
     width: 100px; /* Outer ring size */
     height: 100px;
@@ -94,13 +111,13 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin-right: 10px; /* Space between the circle and the factor image */
   }
   
   .inner-circle {
-    width: 85%; /* Inner circle size */
-    height: 85%;
-    background-color: #002151; /* Inner circle color */
+    width: 80%; /* Inner circle size */
+    height: 80%;
+    background-color: #FCF8EA; /* Inner circle color */
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -121,9 +138,17 @@ html, body{
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: conic-gradient(#2F668C 0%, #2F668C 0%, #f5f4f4 0% 100%);
+    background: conic-gradient(#28d84e 0%, #0eb809 0%, #f5f4f4 0% 100%);
     position: absolute;
     z-index: 0; /* Ensure it is below the inner circle */
+  }
+  
+  .factor-up-image {
+    width: 30px; /* Adjust size as needed */
+    height: auto;
+    z-index: 2; /* Make sure it's on top */
+    position: relative; /* Ensure it positions beside the circular progress */
+    transform: translateX(0px); /* Optional: Adjust position */
   }
   
 
@@ -132,8 +157,11 @@ html, body{
     overflow: hidden;
     transition: background-image 0.5s ease-in-out;
     width: 260px;
-    height: 370px;
+    height: 410px;
+    background-position: center;
+    background-color: transparent !important;
 }
+
 
 .my-card .card-content {
     position: relative;
@@ -141,16 +169,37 @@ html, body{
 }
 
 .my-card:hover {
-  background-image: url('../img/card-hover.png');
-  background-size: cover;
+  background-image: url('../img/cardhover.png');
+  background-size: 260px 400px;
   background-position: center;
+}
+
+.my-card2 {
+  position: relative;
+  overflow: hidden;
+  transition: background-image 0.5s ease-in-out;
+  width: 260px;
+  height: 300px;
+  background-position: center;
+  background-color: transparent !important;
+}
+
+.my-card2 .card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.my-card2:hover {
+background-image: url('../img/cardhover.png');
+background-size: 250px 300px;
+background-position: center;
 }
 
 .hovertest:hover::before {
   content: '';
   position: absolute;
   top: 10px; /* Adjust the top position as needed */
-  left: 40%; /* Center the arrow horizontally */
+  left: 50%; /* Center the arrow horizontally */
   transform: translateX(-50%); /* Center the arrow horizontally */
   width: 22px; /* Adjust the width as needed */
   height: 22px; /* Adjust the height as needed */
@@ -162,14 +211,14 @@ html, body{
 
 .selection-card {
   position:relative;
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
   transition: background-image 0.5s ease-in-out;
 }
 
 
 .selection-card:hover {
-  background-image: url('../img/selection-hover.png');
+  background-image: url('../img/selectionhover.png');
   background-size:contain;
   background-position:center;
 }
@@ -344,7 +393,332 @@ html, body{
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #35867a;
-  height:8%;
+  height:6%;
 }
 
+
+.index-button {
+  background-color: #3a877d;    
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.index-button:hover {
+  background-color: #d7c026;
+  transform: scale(1.1);
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.index-button:active {
+  background-color: #35867a;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.game-button {
+  background-color: #3a877d;    
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.game-button:hover {
+  background-color: #d7c026;
+  transform: scale(1.1);
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.game-button:active {
+  background-color: #35867a;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.game-button2 {
+  background-color: #d4c029;    
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.game-button2:hover {
+  background-color: #3a877d;
+  transform: scale(1.1);
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.game-button2:active {
+  background-color: #d7c026;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.narrative-button {
+  background-color: #d4c029;    
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.narrative-button:hover {
+  background-color: #247267;
+  transform: scale(1.1);
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.narrative-button:active {
+  background-color: #35867a;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.accept-button {
+  background-color: #d4c029;    
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.accept-button:hover {
+  background-color: #247267;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.accept-button:active {
+  background-color: #35867a;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+#typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: pre-wrap; /* Allows wrapping */
+  animation: blink-caret 0.15s step-end infinite;
+  text-align: justify;
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+.animated-button {
+  opacity: 0; /* Initially hidden */
+  background-color: #3a877d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, opacity 1s;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.animated-button:hover {
+  background-color: #d7c026;
+  transform: scale(1.1);
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+}
+
+.animated-button:active {
+  background-color: #35867a;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+  padding: 15px 30px;
+}
+
+/* Define the fade-in and fade-out animations */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in; /* Adjust timing as needed */
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 1;
+  transition: opacity 0.3s ease-out; /* Adjust timing as needed */
+  display: block;
+}
+
+.fade-out.hide {
+  opacity: 0;
+}
+
+
+.notification {
+  background-image: url('../img/notification.png');
+  color: #000;
+  text-decoration: none;
+  padding: 9px 26px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.notification:hover {
+  background: #d4c029;
+  color: white;
+  text-decoration: none;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+
+@keyframes zoomInOut {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(0.9); /* Zoom in */
+  }
+  100% {
+    transform: scale(0.7); /* Zoom out */
+  }
+}
+
+.zoom-animation {
+  visibility: hidden; /* Initially hidden */
+  animation: zoomInOut 2s infinite; /* Animation duration and infinite repetition */
+  animation-delay: 5s; /* Delay the animation for 5 seconds */
+  animation-fill-mode: forwards; /* Keeps the final state after the animation ends */
+}
+
+.zoom-animation img {
+  visibility: visible; /* Make image visible when the animation starts */
+  opacity: 0; /* Start with opacity 0 */
+  animation: fadeIn 0s 5s forwards, zoomInOut 2s infinite 5s; /* 0s fadeIn delay, 5s total delay before animation */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
+
+
+.factor-up-image {
+  opacity: 0; /* Start with the image hidden */
+  transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
+}
+
+.factor-up-image.visible {
+  opacity: 1; /* Show image with transition */
+  transform: translateY(0); /* Ensure the image is in place */
+}
+
+.factor-up-image.hidden {
+  opacity: 0; /* Hide image with transition */
+  transform: translateY(-20px); /* Move image up slightly for a smooth exit */
+}
+
+.credit-score-container {
+  position: relative;
+  height: 365px; /* Set a specific height */
+  overflow: visible; /* Hide overflow */
+}
+
+
+.creditscore-img {
+  width: 100%; /* Adjusts according to the container */
+  height: auto;
+}
+
+.creditarrow-img {
+  position: absolute;
+  left: 90%; /* Move the arrow to the right */
+  transform: translateX(-50%); /* Keep it centered relative to the new left position */
+  width: 40%; /* Adjust the size as needed */
+  height: auto;
+  top: 100%; /* Adjust this value to place the arrow within the container */
+  z-index: 10; /* Ensures the arrow stays on top */
+  transition: left 0.8s ease, top 0.8s ease; /* Add a transition for smooth movement */
+}
+
+.table-container {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+table {
+  border-collapse: collapse;
+  align-items: center;
+  justify-content: center;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+#result {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #d7c026;
+}
