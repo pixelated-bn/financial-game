@@ -361,7 +361,7 @@ document.getElementById('own-link').addEventListener('click', function(event) {
       imgElement.src = `${hiddenItems1[itemNumber]}?v=${new Date().getTime()}`; // Cache-busting
       foundCount1++;
     } else {
-      imgElement.src = '../img/holdon.png'; // Replace with empty box image
+      imgElement.src = './img/holdon.png'; // Replace with empty box image
     }
   
     if (foundCount1 === 5) {
@@ -426,7 +426,7 @@ document.getElementById('own-link').addEventListener('click', function(event) {
       imgElement.src = `${hiddenItems2[itemNumber]}?v=${new Date().getTime()}`; // Cache-busting
       foundCount2++;
     } else {
-      imgElement.src = '../img/holdon.png'; // Replace with empty box image
+      imgElement.src = './img/holdon.png'; // Replace with empty box image
     }
   
     if (foundCount2 === 5) {
