@@ -344,10 +344,10 @@ document.getElementById('own-link').addEventListener('click', function(event) {
 
   const hiddenItems1 = {
     2: './img/groceries icons/green/baked1.png',
-    7: '../img/groceries icons/green/baked2.png',
-    11: '../img/groceries icons/green/baked3.png',
-    13: '../img/groceries icons/green/baked4.png',
-    15: '../img/groceries icons/green/baked5.png'
+    7: './img/groceries icons/green/baked2.png',
+    11: './img/groceries icons/green/baked3.png',
+    13: './img/groceries icons/green/baked4.png',
+    15: './img/groceries icons/green/baked5.png'
   };
   
   let foundCount1 = 0;
@@ -409,10 +409,10 @@ document.getElementById('own-link').addEventListener('click', function(event) {
 
   const hiddenItems2 = {
     1: './img/groceries icons/yellow/arts1.png',
-    6: '../img/groceries icons/yellow/arts2.png',
-    8: '../img/groceries icons/yellow/arts3.png',
-    12: '../img/groceries icons/yellow/arts4.png',
-    14: '../img/groceries icons/yellow/arts5.png'
+    6: './img/groceries icons/yellow/arts2.png',
+    8: './img/groceries icons/yellow/arts3.png',
+    12: './img/groceries icons/yellow/arts4.png',
+    14: './img/groceries icons/yellow/arts5.png'
   };
   
   let foundCount2 = 0;
