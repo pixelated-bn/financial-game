@@ -1,14 +1,3 @@
-////////////////////////////////////////
-
-document.addEventListener('DOMContentLoaded', () => {
-  const circularProgresses = document.querySelectorAll('.circular-progress');
-
-  circularProgresses.forEach(circularProgress => {
-    const progressValue = circularProgress.getAttribute('data-progress');
-    const outerRing = circularProgress.querySelector('.outer-ring');
-    outerRing.style.background = `conic-gradient(#2F668C 0% ${progressValue}%, #f5f4f4 ${progressValue}% 100%)`;
-  });
-});
 
 document.getElementById('navigate-link').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
@@ -353,6 +342,36 @@ document.getElementById('own-link').addEventListener('click', function(event) {
     targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
+  const hiddenItems1 = {
+    2: './img/groceries icons/green/baked1.png',
+    7: '../img/groceries icons/green/baked2.png',
+    11: '../img/groceries icons/green/baked3.png',
+    13: '../img/groceries icons/green/baked4.png',
+    15: '../img/groceries icons/green/baked5.png'
+  };
+  
+  let foundCount1 = 0;
+  
+  function checkItem1(itemNumber) {
+    console.log(`Checking item number: ${itemNumber}`);
+    const imgElement = document.querySelector(`img[data-item1="${itemNumber}"]`);
+  
+    if (hiddenItems1[itemNumber]) {
+      console.log(`Found item: ${hiddenItems1[itemNumber]}`);
+      imgElement.src = `${hiddenItems1[itemNumber]}?v=${new Date().getTime()}`; // Cache-busting
+      foundCount1++;
+    } else {
+      imgElement.src = '../img/holdon.png'; // Replace with empty box image
+    }
+  
+    if (foundCount1 === 5) {
+      document.getElementById('bakedresult').innerText = 'Congratulations! You found all the items!';
+      document.getElementById('game-link1').style.display = 'block'; // Display the button
+    }
+  }
+  
+
+
 
   document.getElementById('game-link1').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
@@ -386,6 +405,36 @@ document.getElementById('own-link').addEventListener('click', function(event) {
     // Scroll to the section
     targetSection.scrollIntoView({ behavior: 'smooth' });
   });
+
+
+  const hiddenItems2 = {
+    1: './img/groceries icons/yellow/arts1.png',
+    6: '../img/groceries icons/yellow/arts2.png',
+    8: '../img/groceries icons/yellow/arts3.png',
+    12: '../img/groceries icons/yellow/arts4.png',
+    14: '../img/groceries icons/yellow/arts5.png'
+  };
+  
+  let foundCount2 = 0;
+  
+  function checkItem2(itemNumber) {
+    console.log(`Checking item number: ${itemNumber}`);
+    const imgElement = document.querySelector(`img[data-item2="${itemNumber}"]`);
+  
+    if (hiddenItems2[itemNumber]) {
+      console.log(`Found item: ${hiddenItems2[itemNumber]}`);
+      imgElement.src = `${hiddenItems2[itemNumber]}?v=${new Date().getTime()}`; // Cache-busting
+      foundCount2++;
+    } else {
+      imgElement.src = '../img/holdon.png'; // Replace with empty box image
+    }
+  
+    if (foundCount2 === 5) {
+      document.getElementById('artsresult').innerText = 'Congratulations! You found all the items!';
+      document.getElementById('game-link2').style.display = 'block'; // Display the button
+    }
+  }
+  
 
 
   document.getElementById('game-link2').addEventListener('click', function(event) {
@@ -478,221 +527,3 @@ document.getElementById('own-link').addEventListener('click', function(event) {
   });
 
 ///////////////////////////////////////////////////////////////////////////
-
-  // Function to update progress circle
-  function updateCircularProgress(element, newValue) {
-        element.setAttribute('data-progress', newValue);
-        element.querySelector('.inner-circle .percentage').innerHTML = `${newValue}%<br><small style="font-size: x-small;">${element.querySelector('.inner-circle .percentage small').textContent}</small>`;
-        element.querySelector('.outer-ring').style.background = `conic-gradient(#2F668C 0% ${newValue}%, #f5f4f4 ${newValue}% 100%)`;
-    }
-
-    // Update function for wallet
-    function updateWallet(newWalletValue) {
-        document.getElementById('wallet-amount').textContent = newWalletValue;
-    }
-
-    // Add event listeners to choice cards
-    document.querySelectorAll('.choice-card').forEach(card => {
-        card.addEventListener('click', function(event) {
-            event.preventDefault();
-            const happiness = this.getAttribute('data-happiness');
-            const focus = this.getAttribute('data-focus');
-            const connection = this.getAttribute('data-connection');
-            const wallet = this.getAttribute('data-wallet');
-
-            updateCircularProgress(document.querySelector('.circular-progress:nth-child(1)'), happiness);
-            updateCircularProgress(document.querySelector('.circular-progress:nth-child(2)'), focus);
-            updateCircularProgress(document.querySelector('.circular-progress:nth-child(3)'), connection);
-            updateWallet(wallet);
-
-            // Navigate to the target section
-            const targetSection = document.querySelector(this.getAttribute('href'));
-            targetSection.classList.remove('hidden-section');
-            targetSection.classList.add('visible-section');
-
-            const currentSection = document.querySelector('.visible-section:not(#' + targetSection.id + ')');
-            currentSection.classList.remove('visible-section');
-            currentSection.classList.add('hidden-section');
-
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
-    });
-
-
-
-////////////////////////////////////////
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const words = ["INTEREST", "BILLING", "BALANCE", "PENALTY", "ANNUAL"];
-    const gridSize = 10; // 10x10 grid
-    let grid = [];
-    let selectedCells = [];
-    let foundWords = new Set();
-
-    function generatePuzzle() {
-        const wordList = document.getElementById('word-list');
-        const wordSearch = document.getElementById('word-search');
-        
-        if (!wordList || !wordSearch) {
-            console.error('Element not found');
-            return;
-        }
-
-        grid = Array.from({ length: gridSize }, () => Array(gridSize).fill(''));
-
-        // Clear previous puzzle and word list
-        wordList.innerHTML = '';
-        wordSearch.innerHTML = '';
-
-        // Place words in grid
-        words.forEach(word => placeWord(grid, word));
-
-        // Fill remaining empty cells with random letters
-        for (let i = 0; i < gridSize; i++) {
-            for (let j = 0; j < gridSize; j++) {
-                if (grid[i][j] === '') {
-                    grid[i][j] = String.fromCharCode(65 + Math.floor(Math.random() * 26));
-                }
-            }
-        }
-
-        // Render grid
-        grid.forEach((row, i) => {
-            row.forEach((cell, j) => {
-                const div = document.createElement('div');
-                div.classList.add('cell');
-                div.textContent = cell;
-                div.dataset.row = i;
-                div.dataset.col = j;
-                div.addEventListener('click', () => selectCell(i, j));
-                wordSearch.appendChild(div);
-            });
-        });
-
-        // Render word list
-        words.forEach(word => {
-            const li = document.createElement('li');
-            li.textContent = word;
-            li.classList.add('word');
-            li.dataset.word = word;
-            wordList.appendChild(li);
-        });
-
-        selectedCells = [];
-        foundWords.clear();
-    }
-
-    function placeWord(grid, word) {
-        const directions = [
-            { x: 1, y: 0 }, // right
-            { x: 0, y: 1 }, // down
-            { x: 1, y: 1 }, // diagonal down-right
-            { x: -1, y: 0 }, // left
-            { x: 0, y: -1 }, // up
-            { x: -1, y: -1 } // diagonal up-left
-        ];
-
-        function canPlaceWord(x, y, dx, dy) {
-            for (let i = 0; i < word.length; i++) {
-                const newX = x + i * dx;
-                const newY = y + i * dy;
-                if (newX < 0 || newX >= gridSize || newY < 0 || newY >= gridSize || (grid[newX][newY] !== '' && grid[newX][newY] !== word[i])) {
-                    return false;
-                }
-            }
-            return true;
-        }
-
-        function placeWordInGrid(x, y, dx, dy) {
-            for (let i = 0; i < word.length; i++) {
-                grid[x + i * dx][y + i * dy] = word[i];
-            }
-        }
-
-        for (let i = 0; i < 100; i++) {
-            const x = Math.floor(Math.random() * gridSize);
-            const y = Math.floor(Math.random() * gridSize);
-            const direction = directions[Math.floor(Math.random() * directions.length)];
-            
-            if (canPlaceWord(x, y, direction.x, direction.y)) {
-                placeWordInGrid(x, y, direction.x, direction.y);
-                return;
-            }
-        }
-    }
-
-    function selectCell(row, col) {
-        const cell = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"]`);
-        if (!cell) return;
-
-        if (cell.classList.contains('selected')) {
-            cell.classList.remove('selected');
-            selectedCells = selectedCells.filter(c => c.row !== row || c.col !== col);
-        } else {
-            cell.classList.add('selected');
-            selectedCells.push({ row, col });
-            checkForWord();
-        }
-    }
-
-    function checkForWord() {
-        const selectedLetters = selectedCells.map(({ row, col }) => grid[row][col]).join('');
-        
-        if (words.includes(selectedLetters)) {
-            foundWords.add(selectedLetters);
-            updateWordList(selectedLetters);
-            selectedCells.forEach(({ row, col }) => {
-                const cell = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"]`);
-                if (cell) {
-                    cell.classList.remove('selected');
-                    cell.classList.add('completed');
-                }
-            });
-            selectedCells = [];
-            checkIfPuzzleSolved();
-        }
-    }
-
-    function checkIfPuzzleSolved() {
-        if (foundWords.size === words.length) {
-            showModal();
-        }
-    }
-
-    function updateWordList(word) {
-        const wordItems = document.querySelectorAll('.word');
-        wordItems.forEach(item => {
-            if (item.dataset.word === word) {
-                item.classList.add('crossed-out');
-            }
-        });
-    }
-
-    function showModal() {
-        const modal = document.getElementById('modal');
-        if (modal) {
-            modal.style.display = 'block';
-        }
-    }
-
-    // Close the modal
-    function closeModal() {
-        const modal = document.getElementById('modal');
-        if (modal) {
-            modal.style.display = 'none';
-        }
-    }
-
-    // Set up the close button for the modal
-    document.querySelector('.modal .close')?.addEventListener('click', closeModal);
-    window.addEventListener('click', (event) => {
-        const modal = document.getElementById('modal');
-        if (modal && event.target === modal) {
-            closeModal();
-        }
-    });
-
-    // Initial puzzle generation
-    generatePuzzle();
-});
