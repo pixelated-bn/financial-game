@@ -287,9 +287,8 @@ html, body{
 
 .selection-card:hover {
   background-image: url('../img/selectionhover.png');
-  background-size:contain;
+  background-size:100%;
   background-position:center;
-  width: 58%;
 }
 
 .selection-card:hover::before {
