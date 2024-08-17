@@ -1,105 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CreditLit</title>
-
-<!-- Bootstrap and CSS -->
-        <!--Link for connecting to bootstrap-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
-
-        <!--Link to connect to font awesome-->
-        <!--Link to connect to CSS-->
-        <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <!-- Bootstrap and CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ 
 </head>
 <body>
- 
+
+    
     <audio id="myAudio" autoplay loop>
         <source src="./audio/game-music-loop-6-144641.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
 
    <i class="fa fa-volume-off" aria-hidden="true"  id="toggleButton" onclick="toggleAudio()" hidden></i>
+  
 
-   <div class="container" style="padding-top: 3px;">
-
-    <div class="row sticky-row">
-        <div class="col-sm-10">
-          <a class="" href="index.html" style="color: #d7c026;font-weight: bolder; text-decoration: none;"><span style="color: #3a877d; font-weight: bolder;">Credit</span>Lit</a>
-        </div>
-</div>
-
-    <div class="row">
-        <div class="col-sm-12">
-
-
-<div id="index" class="visible-section" style="padding-top: 100px;">
-
-        
-    <div class="row" style="background: none;">
-      <div class="col-sm-12" style="padding-right: 50px;">
-        <!--<h1 style="font-size:180px; color: #d7c026;font-weight: bolder;"><span style="font-size: 160px; color: #3a877d; font-weight: bolder;">Credit</span>Lit</h1>-->
-        <img src="./img/creditlit.png" class="card-img-top" style="width: 100%; height: auto; margin: 0 auto;">
-      </div>
-
-</div>
-
-<div class="row" style="background: none;">
-    <div class="col-sm-12" id="mainbtn">
-       
-        <a href="narrative" id="index-link" class="index-button"><i class="fa fa-play" aria-hidden="true"></i> Let's Play</a>
-    </div>
-   
-</div>
-
-</div>
-
-
-<div id="narrative" class="hidden-section" style="padding-top: 20px ;">
-
-
-    <div class="row">
-      
-        <div class="col-sm-12" style="padding-top: 200px; width: 50%; text-align: justify; overflow: hidden; white-space: nowrap; padding-left: 50px; padding-right: 70px;">
-            <h4 id="typewriter">
-                Credit is nothing to be afraid of but, like any other challenge in living your financial vision, will you be able to manage, mantain and monitor it so it can be of benefit to you
-            </h4>
-            <br>
-            <div class="text-right" style="padding-top: 30px;">
-                <a href="graduation.html" type="button" class="animated-button">Proceed >> </a>
+    <div class="container-fluid" style="padding-top: 3px;">
+        <div class="row sticky-row">
+            <div class="col-sm-10">
+                <img src="./img/creditlit1.png" class="card-img-top" style="width: 6%; height: auto; margin: 0 auto;">
             </div>
-            <br>
         </div>
-        
+        <div class="row" id="viewscreen">
+            <div class="col-sm-12">
+                <div id="index" class="visible-section" style="padding-top: 160px;">
+                    <div class="row" style="background: none;">
+                        <div class="col-sm-12 text-center" style="padding-right: 50px;">
+                            <a href="narrative" id="index-link">
+                                <img src="./img/creditlit1.png" class="card-img-top zoom-title" style="width: 55%; height: auto; margin: 0 auto;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="narrative" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px;">
+                    <div class="row">
+                        <div class="container" style="padding-top: 140px; width: 50%; overflow: hidden; white-space: nowrap; padding-left: 60px; padding-right: 60px;">
+                            <h3 id="typewriter">Credit is nothing to be afraid of but,<br><br>like any other challenge in living your financial vision,<br><br>will you be able to manage, mantain and monitor it<br><br> so it can be of benefit to you</h3>
+                            <br>
+                            <div class="text-center" style="padding-top: 30px;">
+                                <a href="graduation.html" class="animated-button">
+                                    <img src="./img/next1.png" class="card-img-top zoom-button" style="width: 20%; height: auto; margin: 0 auto;">
+                                </a>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      
     </div>
+    <script>
 
-  </div>
 
-
-</div>
-</div>
-</div>
-<!--
-<div id="footer">
-
-    <div class="text-center">
-      
-      <p style="vertical-align: middle;">© 2024 Copyright: CreditLit | Powered By Pixelated Enterprise</p>
-    </div>
-  
-  
-  </div>
--->
-<script>
-    const audio = document.getElementById('myAudio');
+const audio = document.getElementById('myAudio');
     const toggleButton = document.getElementById('toggleButton');
 
     // Function to check and play audio on user interaction
@@ -127,46 +88,58 @@
     document.addEventListener('DOMContentLoaded', checkAutoplay);
 
 
-    document.getElementById('index-link').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default anchor link behavior
-  
-    // Reveal the section
-    var targetSection = document.getElementById('narrative');
-    targetSection.classList.remove('hidden-section');
-    targetSection.classList.add('visible-section');
-  
-    var hideSection = document.getElementById('index');
-    hideSection.classList.remove('visible-section');
-    hideSection.classList.add('hidden-section');
-  
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
-  });
-
-
-  document.addEventListener("DOMContentLoaded", function() {
-    const text = document.getElementById('typewriter').innerText;
-    const typewriter = document.getElementById('typewriter');
-    const button = document.querySelector('.animated-button');
-    typewriter.innerText = '';
-    let index = 0;
-    const speed = 60; // Adjust typing speed in milliseconds
-
-    function type() {
-        if (index < text.length) {
-            typewriter.innerHTML += text.charAt(index);
-            index++;
-            setTimeout(type, speed);
-        } else {
-            button.style.opacity = '1'; // Fade-in button after typing is done
-        }
-    }
-
-    type();
-});
-
-
-</script>
-
+        document.addEventListener("DOMContentLoaded", function() {
+            const imageLink = document.getElementById('index-link');
+            const typewriter = document.getElementById('typewriter');
+            const button = document.querySelector('.animated-button');
+            const text = typewriter.innerText; // Store the text for typing
+            typewriter.innerText = ''; // Clear the text initially
+            let index = 0;
+            const speed = 60; // Adjust typing speed in milliseconds
+    
+            // Typewriter effect function
+            function type() {
+                if (index < text.length) {
+                    typewriter.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, speed);
+                } else {
+                    button.style.opacity = '1'; // Fade-in button after typing is done
+                }
+            }
+    
+            imageLink.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default anchor link behavior
+    
+                // Start fading out the visible section
+                const visibleSection = document.getElementById('index');
+                visibleSection.classList.add('fade-out');
+    
+                // Once the fade-out transition is complete, proceed to reveal the target section
+                visibleSection.addEventListener('transitionend', function onTransitionEnd() {
+                    // Remove event listener to avoid multiple triggers
+                    visibleSection.removeEventListener('transitionend', onTransitionEnd);
+    
+                    // Reveal the target section
+                    const targetSection = document.getElementById('narrative');
+                    targetSection.classList.remove('hidden-section');
+                    targetSection.classList.add('visible-section');
+                    targetSection.classList.add('fade-in');
+    
+                    // Hide the old section
+                    visibleSection.classList.remove('visible-section');
+                    visibleSection.classList.add('hidden-section');
+    
+                    // Scroll to the section
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+    
+                    // Start typewriter effect
+                    type();
+                }, { once: true }); // Ensures the event listener is only invoked once
+            });
+        });
+    </script>
+    
+    
 </body>
 </html>
