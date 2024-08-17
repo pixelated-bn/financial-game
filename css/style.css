@@ -289,17 +289,17 @@ html, body{
   background-image: url('../img/selectionhover.png');
   background-size:contain;
   background-position:center;
-  width: 50%;
+  width: 60%;
 }
 
 .selection-card:hover::before {
   content: '';
   position: absolute;
-  top: 20px; /* Adjust the top position as needed */
+  top: 12px; /* Adjust the top position as needed */
   left: -5%; /* Center the arrow horizontally */
   transform: translate(-50%, 50%) rotate(-90deg); /* Rotate the text */
-  width: 28px; /* Adjust the width as needed */
-  height: 28px; /* Adjust the height as needed */
+  width: 20px; /* Adjust the width as needed */
+  height: 20px; /* Adjust the height as needed */
   background-image: url('../img/arrow.png');
   background-size: contain;
   background-repeat: no-repeat;
