@@ -867,6 +867,7 @@ table img {
 
 #hangup-phone {
   padding-top: 450px;
+ z-index: 200; /* Ensure it appears above other content */
  }
 
  #open-email {
@@ -880,8 +881,8 @@ table img {
 
 
  #accept-email {
- padding-top: 480px;
-  padding-left: 580px;
+ padding-top: 430px;
+  padding-left: 460px;
   z-index: 200; /* Ensure it appears above other content */
  }
 
