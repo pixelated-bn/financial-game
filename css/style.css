@@ -232,7 +232,7 @@ html, body{
 
 .my-card2:hover {
   background-image: url('../img/cardhover.png');
-  background-size: 250px 300px;
+  background-size: 100% 300px;
   background-position: center;
   transform: scale(0.95) !important; /* Ensure the scale change on hover is applied */
   transition: transform 0.5s ease-in-out; /* Apply transition specifically to transform on hover */
@@ -857,7 +857,7 @@ table img {
 
 
 #phone-button {
- padding-top: 230px;
+ padding-top: 240px;
 }
 
 #phonebtn:hover {
@@ -866,7 +866,7 @@ table img {
 
 
 #hangup-phone {
-  padding-top: 400px;
+  padding-top: 420px;
  }
 
  #open-email {
@@ -880,8 +880,8 @@ table img {
 
 
  #accept-email {
-  padding-top: 410px;
-  padding-right: 550px;
+  padding-top: 420px;
+  padding-right: 530px;
  }
 
  #headerimg{
@@ -907,11 +907,11 @@ table img {
  
 
   #viewscreen {
-    padding-top: 100px;
+    padding-top: 70px;
   }
 
   #workforce {
-    padding-top: 150px;
+    padding-top: 100px;
   }
 
   #accept-email {
