@@ -880,10 +880,9 @@ table img {
 
 
  #accept-email {
-  padding-top: 460px;
-  padding-left: 500px;
-  position: -webkit-sticky; /* For Safari */
-  position: sticky;
+ padding-top: 520px;
+  padding-left: 630px;
+  z-index: 100; /* Ensure it appears above other content */
  }
 
  #headerimg{
@@ -917,8 +916,8 @@ table img {
   }
 
  #accept-email {
-  padding-top: 520px;
-  padding-left: 630px;
+  padding-top: 820px;
+  padding-left: 700px;
  }
   
 #headerimg{
