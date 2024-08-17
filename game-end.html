@@ -20,9 +20,17 @@
 </head>
 <body>
 
+    
+    <audio id="myAudio" autoplay loop>
+        <source src="./audio/game-music-loop-6-144641.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+   <i class="fa fa-volume-off" aria-hidden="true"  id="toggleButton" onclick="toggleAudio()" hidden></i>
+
 <div style="border: 3px solid;" id="end">
     <div class="container-fluid" style="padding-top: 100px; padding-left: 400px;">
-    <h1 class="text-center" style="font-size: 50px; color: #002151; font-weight:900;">YOU ARE OUT OF DEBT!</h1>
+    <h1 class="text-center" style="font-size: 50px; color: #3a877d; font-weight:900;">YOU ARE OUT OF DEBT!</h1>
     <h2 class="text-center" style="font-weight:lighter;">Now that's a journey!</h2>
 
 
@@ -33,12 +41,40 @@
 </div>
 
 <div class="text-right" style=" margin-left: 150px; margin-right: 130px;">
-<a href="index.html" style="font-size: 20px; vertical-align: middle; text-decoration: none; color: #000000;">Back To Home</a>
-<a href="graduation.html" class="btn btn-lg btn-light" style="font-weight: bold; background-color: #2F668C; color: #ffffff;">PLAY AGAIN</a>
+<a href="index.html" class="btn btn-lg btn-light" style="font-weight: bold; background-color: #3a877d; color: #ffffff;">PLAY AGAIN</a>
 </div>
 
 </div>
 </div>
+
+<script>
+    const audio = document.getElementById('myAudio');
+    const toggleButton = document.getElementById('toggleButton');
+
+    // Function to check and play audio on user interaction
+    function checkAutoplay() {
+        audio.play().catch(error => {
+            console.error('Autoplay error:', error);
+        });
+    }
+
+    // Function to toggle audio play and pause
+    function toggleAudio() {
+        if (audio.paused) {
+            audio.play().catch(error => {
+                console.error('Error playing audio:', error);
+            });
+            toggleButton.textContent = 'Stop Music';
+        } else {
+            audio.pause();
+            audio.currentTime = 0; // Optionally reset playback position
+            toggleButton.textContent = 'Start Music';
+        }
+    }
+
+    // Call checkAutoplay on page load
+    document.addEventListener('DOMContentLoaded', checkAutoplay);
+</script>
 
 </body>
 </html>
