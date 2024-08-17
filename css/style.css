@@ -881,7 +881,7 @@ table img {
 
  #accept-email {
  padding-top: 520px;
-  padding-left: 630px;
+  padding-left: 710px;
   z-index: 100; /* Ensure it appears above other content */
  }
 
@@ -916,8 +916,9 @@ table img {
   }
 
  #accept-email {
-  padding-top: 820px;
-  padding-left: 700px;
+  padding-top: 900px;
+  padding-left: 800px;
+  z-index: 100;
  }
   
 #headerimg{
