@@ -30,24 +30,26 @@
     <div class="container-fluid" style="padding-top: 3px;">
         <div class="row sticky-row">
             <div class="col-sm-10">
-              <a class="" href="index.html" style="color: #d7c026;font-weight: bolder; text-decoration: none;"><span style="color: #3a877d; font-weight: bolder;">Credit</span>Lit</a>
+              <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 6%; height: auto; margin: 0 auto;"></a>
             </div>
     </div>
 
 
-    
 
   
-  <div id="workforce" class="visible-section" style="padding-top: 90px;">
+  <div id="workforce" class="visible-section" style="padding-top: 170px;">
 
     <div class="row" style="background: none;">
-        <div class="col-sm-12" id="title">
+        <div class="col-sm-12 text-center" id="title">
             <!--<h1 style="font-size:180px; color: #d7c026;font-weight: bolder;"><span style="font-size: 160px; color: #3a877d; font-weight: bolder;">Work</span>Force</h1>-->
-            <img src="./img/workforce.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+            <a href="#work-narration" id="worknarration">
+            <img src="./img/workforce1.png" class="card-img-top zoom-title3" style="width: 55%; height: auto; margin: 0 auto;">
+            </a>
         </div>
  
   </div>
-<br><br>
+
+  <!--
   <div class="row">
     <div class="col-sm-12">
         <div class="text-center">
@@ -55,16 +57,18 @@
           </div>
         </div>
       </div>
-      
+      -->
   </div>
 
 
-  <div id="work-narration" class="hidden-section" style="padding-top: 20px ;">
+
+
+  <div id="work-narration" class="hidden-section" style="padding-top: 20px;">
 
 
     <div class="row">
       <div class="col-sm-12">
-        <div class="info-container">
+        <div class="info-container text-center">
           <img src="./img/narrative.png">
           <br><br><br>
           <div class="overlay-text">It's been a few days since you started your new job, and while you're still adjusting, remember that it's normal to face challenges at first. With time, you'll get the hang of it. You've got this!
@@ -82,14 +86,15 @@
 </div>
 
  
-<div class="row">
+<div class="row"> <!--container fluid row-->
+  
 
-  <div class="col-sm-2 text-center sticky-col hidden-section" id="creditmeter">
-    <aside style="padding-top: 60px;">
+  <div class="col-sm-2 text-center hidden-section" id="creditmeter">
+    <aside style="padding-top: 30px;">
         <div class="container">
             <h5 style="font-weight: bold;">CREDIT<br>SCORE</h5>
             <div class="credit-score-container" style="position: relative; width: 60%; margin: 0 auto;" data-progress="20">
-              <img src="./img/creditscore.png" class="card-img-top creditscore-img" style="width: 100%; height: auto;">
+              <img src="./img/creditscore.png" class="card-img-top creditscore-img">
               <img src="./img/creditarrow.png" class="card-img-top creditarrow-img">
           </div>
           
@@ -98,13 +103,12 @@
 </div>
 
 
-    <div class="col-sm-8">
-   <section>
+    <div class="col-sm-8 text-center" id="section"> <!-- col-sm-8 -->
+
+   <section> <!--section-->
 
 
-
-
-      <div id="workforce1" class="hidden-section" style="padding-top: 20px ;">
+      <div id="workforce1" class="hidden-section" style="padding-top: 20px;">
 
 
         <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">ITS YOUR FIRST PAYDAY!</h1>
@@ -112,34 +116,33 @@
 
 
 
-        <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px; padding-left: 50px;">
+        <div class="container">
           <div class="row">
-              <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+              <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">   
+                <a href="#saving" id="work-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="85" data-focus="70" data-connection="60" data-credit-score="5"> 
                   <div class="card my-card2" style="padding-top: 20px;">
                  
                  <br>
                 <img src="./img/saving.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                <a href="#saving" id="work-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="85" data-focus="70" data-connection="60" data-credit-score="5">
                 <div class="card-body text-center">
                   <h3 class="card-title" style="font-weight: bold;">Put into savings</h3>
-                
                 </div>
-              </a>
               </div>
+            </a>
           </div>
       
-          <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+          <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
+            <a href="#family" id="work-link3" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="85" data-focus="70" data-connection="75" data-credit-score="5"> 
               <div class="card my-card2" style="padding-top: 20px;">
                 
                  <br><br>
                 <img src="./img/treatfam.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                <a href="#family" id="work-link3" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="85" data-focus="70" data-connection="75" data-credit-score="5">
                 <div class="card-body text-center">
                   <h3 class="card-title" style="font-weight: bold;">Treat your family</h3>
            
                   </div>
-                  </a>
                 </div>
+              </a>
               </div>
       
           </div>
@@ -147,12 +150,12 @@
 
       </div>
 
-      <div id="saving" class="hidden-section" style="padding-top: 20px ;">
+      <div id="saving" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">One of the most important things you can do with your first salary is to start saving for your future. Open a savings account and put away as much money as you can each month. This will help you build up a nest egg that you can use for major purchases down the road or in case of an emergency. A good rule of thumb is to set aside 10-20% of your salary each month. If this is too difficult with your first paycheck, you can start small! What’s important is you make a habit of setting aside a portion of your paycheck regularly for your savings.
     
@@ -162,18 +165,17 @@
             </div>
             
         </div>
-        </div>
+      </div>
       
     </div>
-  
   </div>
 
-      <div id="family" class="hidden-section" style="padding-top: 20px ;">
+      <div id="family" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br>
@@ -191,12 +193,12 @@
   
   </div>
 
-      <div id="workforce-narration" class="hidden-section" style="padding-top: 20px ;">
+      <div id="workforce-narration" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br>
@@ -214,12 +216,12 @@
   
   </div>
 
-      <div id="workforce2" class="hidden-section" style="padding-top: 20px ;">
+      <div id="workforce2" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-        <div class="info-container">
+        <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text" style="font-weight: bold; font-size: large;">Signing first credit for your first big purchase - A CAR!
                 <br><br>
@@ -237,53 +239,53 @@
   
   </div>
 
-      <div id="workforce3" class="hidden-section">
+      <div id="workforce3" class="hidden-section" style="padding-top: 20px;">
 
         <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">WHICH CAR ARE YOU!</h1>
         <h3 class="text-center" style="font-weight:lighter;">What type of car would you like to buy..</h3>
 
-        <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px;">
+        <div class="container">
           <div class="row">
-              <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+              <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
+                <a href="#lemon" id="work-link7" style="text-decoration: none; color: #000000;"> 
                   <div class="card my-card2" style="padding-top: 80px;">
                  
                  <br>
                 <img src="./img/usedcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                <a href="#lemon" id="work-link7" style="text-decoration: none; color: #000000;">
                 <div class="card-body text-center">
                   <h3 class="card-title" style="font-weight: bold;">USED CAR</h3>
                 
                 </div>
-              </a>
               </div>
+            </a>
           </div>
       
-          <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+          <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">  
+            <a href="#safety" id="work-link8" style="text-decoration: none; color: #000000;">  
               <div class="card my-card2" style="padding-top: 80px;">
                 
                  <br>
                 <img src="./img/newcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                <a href="#safety" id="work-link8" style="text-decoration: none; color: #000000;">
                 <div class="card-body text-center">
                   <h3 class="card-title" style="font-weight: bold;">NEW CAR</h3>
            
                   </div>
-                  </a>
                 </div>
+              </a>
               </div>
 
-              <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+              <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
+                <a href="#dream" id="work-link9" style="text-decoration: none; color: #000000;"> 
                 <div class="card my-card2" style="padding-top: 80px;">
                   
                    <br>
                   <img src="./img/dreamcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                  <a href="#dream" id="work-link9" style="text-decoration: none; color: #000000;">
                   <div class="card-body text-center">
                     <h3 class="card-title" style="font-weight: bold;">DREAM CAR</h3>
              
                     </div>
-                    </a>
                   </div>
+                </a>
                 </div>
       
           </div>
@@ -294,12 +296,12 @@
 
 
 
-       <div id="lemon" class="hidden-section" style="padding-top: 20px ;">
+       <div id="lemon" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <br>
               <div class="overlay-text">Yes, you need to stick to a budget, but buying an extremely cheap  or used car comes with its own risks. If the car keeps breaking down, repairs can be very costly. Soon you’ve spent more on that old lemon than you would have if you’d just bought a better car from a reputable dealer in the first place.
@@ -317,12 +319,12 @@
   </div>
 
 
-      <div id="safety" class="hidden-section" style="padding-top: 20px ;">
+      <div id="safety" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br>It’s better to be safe than stylish. Unsafe cars are a big factor for road crashes and you don't need to spend a fortune to get a safe car.
@@ -339,12 +341,12 @@
   
   </div>
 
-      <div id="dream" class="hidden-section" style="padding-top: 20px ;">
+      <div id="dream" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br>You have always dream of sitting behind the wheel of a luxury car, wake up with a sense of awe and wonder - the sight of the sleek curves, the feel of the smooth leather seats, and the sound of the powerful engine roaring to life.
@@ -366,60 +368,60 @@
         <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">CHOOSE YOUR CAR!</h1>
         <h3 class="text-center" style="font-weight:lighter;">Which of these car would be yours...</h3>
        
-        <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px;">
+        <div class="container">
            <div class="row">
-               <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+               <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;"> 
+                <a href="#lemon3" id="work-link13" style="text-decoration: none; color: #000000;">   
                    <div class="card my-card" style="padding-top: 20px;">
                    <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
                    <div class="header-text">
                        <p style="font-weight: bold;">Mazda</p>
                      </div>
-                     <br><br>
+                     <br><br><br>
                  <img src="./img/usedcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                 <a href="#lemon3" id="work-link13" style="text-decoration: none; color: #000000;">
                  <div class="card-body text-center">
                    <h3 class="card-title" style="font-weight: bold;">2019 Mazda 3</h3>
                    <br><br>
                    <p style="font-weight: bold; font-size: large;">BND 23800</p>
                  </div>
-               </a>
                </div>
+              </a>
            </div>
        
-           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
+            <a href="#lemon3" id="work-link14" style="text-decoration: none; color: #000000;"> 
             <div class="card my-card" style="padding-top: 20px;">
             <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
             <div class="header-text">
                 <p style="font-weight: bold;">MG</p>
               </div>
-              <br><br>
+              <br><br><br>
           <img src="./img/usedcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-          <a href="#lemon3" id="work-link14" style="text-decoration: none; color: #000000;">
           <div class="card-body text-center">
             <h3 class="card-title" style="font-weight: bold;">2020 MG ZS</h3>
             <br><br>
             <p style="font-weight: bold; font-size: large;">BND 19800</p>
           </div>
-        </a>
         </div>
+      </a>
     </div>
        
-    <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+    <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
+      <a href="#lemon3" id="work-link15" style="text-decoration: none; color: #000000;">  
         <div class="card my-card" style="padding-top: 20px;">
         <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
         <div class="header-text">
             <p style="font-weight: bold;">KIA</p>
           </div>
-        <br><br>
+        <br><br><br>
       <img src="./img/usedcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-      <a href="#lemon3" id="work-link15" style="text-decoration: none; color: #000000;">
       <div class="card-body text-center">
         <h3 class="card-title" style="font-weight: bold;">2021 Kia Cerato EX</h3>
         <br><br>
         <p style="font-weight: bold; font-size: large;">BND 22800</p>
       </div>
-    </a>
     </div>
+  </a>
 </div>
            </div>
         </div>
@@ -431,60 +433,60 @@
         <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/Quote.png" alt="" style="width: 6%; height: 3%; vertical-align: top;">CHOOSE YOUR CAR!</h1>
         <h3 class="text-center" style="font-weight:lighter;">Which of these car would be yours...</h3>
        
-        <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px;">
+        <div class="container">
            <div class="row">
-               <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+               <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">   
+                <a href="#workforce4" id="work-link16" style="text-decoration: none; color: #000000;"> 
                    <div class="card my-card" style="padding-top: 20px;">
                    <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
                    <div class="header-text">
                        <p style="font-weight: bold;">Toyota</p>
                      </div>
-                   <br>
+                   <br><br><br>
                  <img src="./img/newcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                 <a href="#workforce4" id="work-link16" style="text-decoration: none; color: #000000;">
                  <div class="card-body text-center">
                    <h3 class="card-title" style="font-weight: bold;">Vios 1.3L Sedan</h3>
                    <br><br>
                    <p style="font-weight: bold; font-size: large;">BND 31,848</p>
                  </div>
-               </a>
                </div>
+              </a>
            </div>
        
-           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;"> 
+            <a href="#workforce4" id="work-link17" style="text-decoration: none; color: #000000;">   
             <div class="card my-card" style="padding-top: 20px;">
             <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
             <div class="header-text">
                 <p style="font-weight: bold;">KIA</p>
               </div>
-            <br>
+              <br><br><br>
           <img src="./img/newcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-          <a href="#workforce4" id="work-link17" style="text-decoration: none; color: #000000;">
           <div class="card-body text-center">
             <h3 class="card-title" style="font-weight: bold;">Kia Cerato 1.6 GL Sedan</h3>
             <br><br>
             <p style="font-weight: bold; font-size: large;">BND 31,920</p>
           </div>
-        </a>
         </div>
+      </a>
     </div>
        
-    <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+    <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">  
+      <a href="#workforce4" id="work-link18" style="text-decoration: none; color: #000000;">  
         <div class="card my-card" style="padding-top: 20px;">
         <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
         <div class="header-text">
             <p style="font-weight: bold;">Hyundai</p>
           </div>
-        <br>
+          <br><br><br>
       <img src="./img/newcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-      <a href="#workforce4" id="work-link18" style="text-decoration: none; color: #000000;">
       <div class="card-body text-center">
         <h3 class="card-title" style="font-weight: bold;">Elantra FL 1.6L Sedan</h3>
         <br><br>
         <p style="font-weight: bold; font-size: large;">BND 27,800</p>
       </div>
-    </a>
     </div>
+  </a>
 </div>
            </div>
         </div>
@@ -496,80 +498,78 @@
         <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/Quote.png" alt="" style="width: 6%; height: 3%; vertical-align: top;">CHOOSE YOUR CAR!</h1>
         <h3 class="text-center" style="font-weight:lighter;">Which of these car would be yours...</h3>
        
-        <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px;">
+        <div class="container">
            <div class="row">
-               <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+               <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
+                <a href="#workforce4" id="work-link19" style="text-decoration: none; color: #000000;">    
                    <div class="card my-card" style="padding-top: 20px;">
                    <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
                    <div class="header-text">
                        <p style="font-weight: bold;">Mercedes Benz</p>
                      </div>
-                   <br>
+                     <br><br><br>
                  <img src="./img/dreamcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                 <a href="#workforce4" id="work-link19" style="text-decoration: none; color: #000000;">
                  <div class="card-body text-center">
                    <h3 class="card-title" style="font-weight: bold;">Mercedes Benz A200 AMG</h3>
                    <br><br>
                    <p style="font-weight: bold; font-size: large;">BND 74,457</p>
                  </div>
-               </a>
                </div>
+              </a>
            </div>
        
-           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;"> 
+            <a href="#workforce4" id="work-link20" style="text-decoration: none; color: #000000;">   
             <div class="card my-card" style="padding-top: 20px;">
             <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
             <div class="header-text">
                 <p style="font-weight: bold;">BMW</p>
               </div>
-            <br>
+              <br><br><br>
           <img src="./img/dreamcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-          <a href="#workforce4" id="work-link20" style="text-decoration: none; color: #000000;">
           <div class="card-body text-center">
             <h3 class="card-title" style="font-weight: bold;">BMW 118i M SPORT</h3>
             <br><br>
             <p style="font-weight: bold; font-size: large;">BND 76,336</p>
           </div>
-        </a>
         </div>
+      </a>
     </div>
        
-    <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+    <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">   
+      <a href="#workforce4" id="work-link21" style="text-decoration: none; color: #000000;"> 
         <div class="card my-card" style="padding-top: 20px;">
         <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
         <div class="header-text">
             <p style="font-weight: bold;">Lexus</p>
           </div>
-        <br>
+          <br><br><br>
       <img src="./img/dreamcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-      <a href="#workforce4" id="work-link21" style="text-decoration: none; color: #000000;">
       <div class="card-body text-center">
         <h3 class="card-title" style="font-weight: bold;">LEXUS IS300 LUXURY</h3>
         <br><br>
         <p style="font-weight: bold; font-size: large;">BND 73,287</p>
       </div>
-    </a>
     </div>
+  </a>
 </div>
            </div>
         </div>
        </div>
 
 
-       <div id="lemon3" class="hidden-section" style="padding-top: 20px ;">
+       <div id="lemon3" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">Congratulations on your first credit!
 <br>
-                Do you know that your credit information will be reported to Credit Bureau of Brunei Darussalam Central Bank? Information on your financings - your financing approved amount, total outstanding balance and specific details of your payment behaviour whether you pay your monthly obligations on time or not. These information will affect your credit score.
-                <br>
-                From now on, keep checking your credit score. Make sure you maintain your good score. Keep it Green! Keep it Low Risk!
+                Do you know that your credit information will be reported to Credit Bureau of Brunei Darussalam Central Bank? Information on your financings - your financing approved amount, total outstanding balance and specific details of your payment behaviour whether you pay your monthly obligations on time or not. These information will affect your credit score. Keep it Green!
     
-                <div class="text-center" style="padding-top: 20px;">
+                <div class="text-center" style="padding-top: 90px;">
                 <a href="#lemon4" id="lemon-link" class="narrative-button choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="40" style="font-weight: bold; color: #ffffff;">PROCEED</a>
               </div>
             </div>
@@ -582,15 +582,14 @@
   </div>
 
 
-      <div id="lemon4" class="hidden-section" style="padding-top: 20px ;">
+      <div id="lemon4" class="hidden-section" style="padding-top: 20px;">
 
-        <h5 class="text-center" style="font-weight:lighter;">
-          <br><br>
-          After several months,your car starts requiring frequent repairs and it's becoming a financial strain, what would you do?</h5>
-
+        <br><br>
+        <h5 class="text-center" style="font-weight:lighter;">After several months,your car starts requiring frequent repairs and it's becoming a financial strain, what would you do?</h5>
 
 
-        <br>
+
+        <br><br><br>
 
 
         <div>
@@ -620,12 +619,12 @@
     
 
 
-      <div id="lemon-info1" class="hidden-section" style="padding-top: 20px ;">
+      <div id="lemon-info1" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br>Oh no, that's not a good idea! you still need to pay for the 2nd hand car and now you need to pay for another car!
@@ -642,12 +641,12 @@
   
   </div>
 
-      <div id="lemon-info2" class="hidden-section" style="padding-top: 20px ;">
+      <div id="lemon-info2" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br>
@@ -666,20 +665,18 @@
   </div>
 
 
-       <div id="workforce4" class="hidden-section" style="padding-top: 20px ;">
+       <div id="workforce4" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">Congratulations on your first credit!
 <br>
-                Do you know that your credit information will be reported to Credit Bureau of Brunei Darussalam Central Bank? Information on your financings - your financing approved amount, total outstanding balance and specific details of your payment behaviour whether you pay your monthly obligations on time or not. These information will affect your credit score.
-                <br>
-                From now on, keep checking your credit score. Make sure you maintain your good score. Keep it Green! Keep it Low Risk!
+                Do you know that your credit information will be reported to Credit Bureau of Brunei Darussalam Central Bank? Information on your financings - your financing approved amount, total outstanding balance and specific details of your payment behaviour whether you pay your monthly obligations on time or not. These information will affect your credit score. Keep it Green!
     
-                <div class="text-center" style="padding-top: 20px;">
+                <div class="text-center" style="padding-top: 90px;">
                 <a href="#workforce5" id="work-link22" class="narrative-button choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="40" style="font-weight: bold; color: #ffffff;">PROCEED</a>
               </div>
             </div>
@@ -691,42 +688,42 @@
   
   </div>
 
-      <div id="workforce5" class="hidden-section" style="padding-top: 20px ;">
+      <div id="workforce5" class="hidden-section" style="padding-top: 20px;">
 
+        <br><br>
         <h5 class="text-center" style="font-weight:lighter;">
-          <br><br>
           You've been cooped up with work that you forgot to take time for yourself. Don’t forget to celebrate and treat yourself too! What would you like to do?</h5>
 
 
 
-          <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px;">
+          <div class="container">
             <div class="row">
                 <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+                  <a href="#invest" id="invest-link" class="choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="45" style="text-decoration: none; color: #000000;">
                     <div class="card my-card2" style="padding-top: 20px;">
                    
                    <br>
                   <img src="./img/invest.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                  <a href="#invest" id="invest-link" class="choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="45" style="text-decoration: none; color: #000000;">
                   <div class="card-body text-center">
                     <h3 class="card-title" style="font-weight: bold;">Invest in yourself</h3>
                   
                   </div>
-                </a>
                 </div>
+              </a>
             </div>
         
-            <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+            <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">  
+              <a href="#workforce6" id="work-link24" class="choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="45" style="text-decoration: none; color: #000000;">  
                 <div class="card my-card2" style="padding-top: 20px;">
                   
                    <br>
                   <img src="./img/trip.png" class="card-img-top" style="width: 40%; height: auto; margin: 0 auto;">
-                  <a href="#workforce6" id="work-link24" class="choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="45" style="text-decoration: none; color: #000000;">
                   <div class="card-body text-center">
                     <h3 class="card-title" style="font-weight: bold;">Trips with friends</h3>
              
                     </div>
-                    </a>
                   </div>
+                </a>
                 </div>
         
             </div>
@@ -736,12 +733,12 @@
       </div>
 
 
-      <div id="invest" class="hidden-section" style="padding-top: 20px ;">
+      <div id="invest" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br>To mix things up and challenge yourself, you decide to register for a Spartan course in Singapore. This course is designed to build mental toughness and resilience, pushing you to your limits in a fun and dynamic way. It's a chance to test your physical and mental strength while enjoying a rewarding experience.
@@ -761,12 +758,12 @@
   </div>
 
 
-      <div id="workforce6" class="hidden-section" style="padding-top: 20px ;">
+      <div id="workforce6" class="hidden-section" style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">The next step is to set a sensible budget – what will be the total budget and how much money needed to put aside for travel, accommodation and expenses? How much emergency fund I need to have in hand to cover unexpected events?
 
@@ -792,71 +789,57 @@
         <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">CHOOSE YOUR CARD!</h1>
         <h3 class="text-center" style="font-weight:lighter;">Which one would you choose to keep maintain your lifestyle?</h3>
        
-        <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px;">
+        <div class="container">
            <div class="row">
-               <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
-                   <div class="card my-card" style="padding-top: 20px;">
-                   <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
-                   <div class="header-text">
-                       <p style="font-weight: bold;">Credit 1</p>
-                     </div>
+               <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;"> 
+                <a href="#credit" id="work-link26" style="text-decoration: none; color: #000000;">   
+                   <div class="card my-card2" style="padding-top: 20px;">
                    <br>
                  <img src="./img/creditcard.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                 <a href="#credit" id="work-link26" style="text-decoration: none; color: #000000;">
                  <div class="card-body text-center">
-                   <h3 class="card-title" style="font-weight: bold;">Credit Card with credit limit of XXXX at XX%
-                   <p style="font-weight: bold; font-size: large;">BND XXXXXX</p>
+                   <h3 class="card-title" style="font-weight: bold;">Credit Card with credit limit of XXXX at XX%</h3>
+               
                  </div>
-               </a>
                </div>
+              </a>
            </div>
        
            <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
-            <div class="card my-card" style="padding-top: 20px;">
-            <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
-            <div class="header-text">
-                <p style="font-weight: bold;">Credit 2</p>
-              </div>
+            <a href="#credit" id="work-link27" style="text-decoration: none; color: #000000;">
+            <div class="card my-card2" style="padding-top: 20px;">
             <br>
           <img src="./img/creditcard.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-          <a href="#credit" id="work-link27" style="text-decoration: none; color: #000000;">
           <div class="card-body text-center">
             <h3 class="card-title" style="font-weight: bold;">Credit Card with credit limit of XXXX at XX%</h3>
-            <br><br>
-            <p style="font-weight: bold; font-size: large;">BND XXXXXX</p>
+           
           </div>
-        </a>
         </div>
+        </a>
     </div>
        
     <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
-        <div class="card my-card" style="padding-top: 20px;">
-        <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
-        <div class="header-text">
-            <p style="font-weight: bold;">Credit 3</p>
-          </div>
+      <a href="#credit" id="work-link28" style="text-decoration: none; color: #000000;">
+        <div class="card my-card2" style="padding-top: 20px;">
         <br>
       <img src="./img/creditcard.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-      <a href="#credit" id="work-link28" style="text-decoration: none; color: #000000;">
       <div class="card-body text-center">
         <h3 class="card-title" style="font-weight: bold;">Credit Card with credit limit of XXXX at XX%</h3>
-        <br><br>
-        <p style="font-weight: bold; font-size: large;">BND XXXXXX</p>
+     
       </div>
-    </a>
     </div>
+  </a>
 </div>
            </div>
         </div>
        </div>
 
 
-       <div id="credit" class="hidden-section" style="padding-top: 20px ;">
+       <div id="credit" class="hidden-section"  style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br>
@@ -875,14 +858,13 @@
       </div>
         
 
-      <div id="game2" class="hidden-section">
+      <div id="game2" class="hidden-section"  style="padding-top: 20px;">
 
         <div class="text-center">
-          <br>
       <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;">CREDIT CARD WORD SEARCH</h1>
       <br>
       <h3 class="text-center" style="font-weight:lighter;">Find the words listed on the word search puzzle</h3>
-      
+
       </div>
      
       <div class="row">
@@ -890,11 +872,13 @@
           <div id="word-search">
       
         </div>
+        <button id="reset-button" class="index-button">Reset Game</button>
       </div>
-        <div class="col-sm-5 text-left" style="padding-right: 270px;">  
+        <div class="col-sm-5 text-left" id="wordlist">  
           <!-- <button onclick="generatePuzzle()">Generate Puzzle</button>-->
-           <br>
+           
            <div id="word-list" class="text-center"></div>
+          
           </div>
       </div>
           
@@ -920,56 +904,104 @@
       </div>
 
 
-      <div id="workforce8" class="hidden-section">
+      <div id="workforce8" class="hidden-section"  style="padding-top: 20px;">
 
         
 
         <h2 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">YOU'VE GOT A CALL!</h2>
         <h3 class="text-center" style="font-weight:lighter;">What would you do?</h3>
       <br>
-<div class="text-center">
-        <img src="./img/phone.png" class="card-img-top" style="width: 12%; height: auto; margin: 0 auto;">
+<div class="phone-call">
+        <div class="row">
+          <div class="col-sm-6 text-right" id="phone-button"> 
+            <a href="#info2" id="work-link31" class="choice-card" data-happiness="45" data-focus="40" data-connection="40" data-credit-score="90" style="text-decoration: none; color: #000000;">
+            <img src="./img/hangup.png" class="card-img-top" id="phonebtn" style="width: 10%; height: auto; margin: 0 auto;">
+          </a>
+          </div>
+          <div class="col-sm-6 text-left" id="phone-button">
+            <a href="" id="" data-toggle="modal" data-target="#phoneModal">
+              <img src="./img/answer.png" class="card-img-top" id="phonebtn" style="width: 10%; height: auto; margin: 0 auto;">
+            </a>
+          </div>
+        </div>
       </div>
-        <div>
-      
-          <br>
-          
-          <a href="#info1" id="work-link30" style="text-decoration: none; color: #000000;">
-          <div class="card selection-card">
-            <div class="card-body text-center" style="padding: 20px;">
-              <h5 class="card-text" style="font-weight:lighter;">ANSWER</h5>
-            </div>
-          </div>
-          </a>
-       <br>
-       <a href="#info2" id="work-link31" class="choice-card" data-happiness="45" data-focus="40" data-connection="40" data-credit-score="90" style="text-decoration: none; color: #000000;">
-          <div class="card selection-card">
-            <div class="card-body text-center" style="padding: 20px;">
-              <h5 class="card-text" style="font-weight:lighter;">IGNORE</h5>
-            </div>
-          </div>
-          </a>
-       
-         </div>
       
         </div>
 
 
+        <!-- Modal -->
+<div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content" style="background-color: transparent; border: none;">
+      <div class="modal-body" id="phone-answer">
+       
+        <div id="hangup-phone" class="text-center">
+        <a href="#info1" id="work-link30" style="text-decoration: none; color: #000000;">
+          <img src="./img/hangup.png" class="card-img-top" id="phonebtn" data-dismiss="modal" style="width: 10%; height: auto; margin: 0 auto;">
+          </a>
+        </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
         
            <!-- Audio Element -->
-    <audio id="notificationSound">
-      <source src="./audio/telephone-ring-old-german-w48-83246.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-  </audio>
+ 
+
+  <audio id="phone-sound" src="./audio/telephone-ring-old-german-w48-83246.mp3" preload="auto"></audio>
+
+  <audio id="phone-sound2" src="./audio/answering-machine-female-out-of-town-103769.mp3" preload="auto"></audio>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      let observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            var audio = document.getElementById('phone-sound');
+            if (audio) {
+              audio.play();
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      let target = document.getElementById('workforce8');
+      if (target) {
+        observer.observe(target);
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      let observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            var audio = document.getElementById('phone-sound2');
+            if (audio) {
+              audio.play();
+            }
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      let target = document.getElementById('phoneModal');
+      if (target) {
+        observer.observe(target);
+      }
+    });
+
+  </script>
          
 
 
-        <div id="info1" class="hidden-section">
-          <h3 class="text-center" style="font-weight:lighter;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">Hello. I am calling from credit collection about the overdue charges on a vehicle in your possession..</h2>
+        <div id="info1" class="hidden-section"  style="padding-top: 20px;">
+          <br><br><br><br>
+          <h3 class="text-center" style="font-weight:lighter;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">After hanging up on the phone call, what do you decide to do?</h2>
             <br>
-            <div class="text-center">
-                    <img src="./img/phonecall.png" class="card-img-top" style="width: 12%; height: auto; margin: 0 auto;">
-                  </div>
             <div>
           
               <br>
@@ -997,12 +1029,12 @@
 
 
         
-       <div id="info2" class="hidden-section" style="padding-top: 20px ;">
+       <div id="info2" class="hidden-section"  style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br><br>
@@ -1020,12 +1052,12 @@
       
       </div>
              
-      <div id="answer1" class="hidden-section" style="padding-top: 20px ;">
+      <div id="answer1" class="hidden-section"  style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br><br>
@@ -1044,12 +1076,12 @@
       
       </div>
 
-      <div id="answer2" class="hidden-section" style="padding-top: 20px ;">
+      <div id="answer2" class="hidden-section"  style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br><br>Oh no! Please dont delay the payment and now you are in a lot of debt.
@@ -1066,55 +1098,15 @@
       
       </div>
 
-      <div id="answer3" class="hidden-section" style="padding-top: 20px ;">
+
+
+
+      <div id="workforce10" class="hidden-section"  style="padding-top: 20px;">
 
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container">
-              <img src="./img/info.png">
-              <div class="overlay-text">You might be tempted to hang up, but the call is your opportunity to get valuable information. By asking questions, without giving any information out, you can learn where the debt came from, and you might even discover that it doesn’t belong to you.
-    
-                <div class="text-right" style="padding-top: 50px;">
-                    <a href="#workforce9" id="work-link38" class="btn btn-secondary btn-lg" style="font-weight: bold; color: #ffffff;">PROCEED</a>
-                  </div>
-                </div>
-                
-            </div>
-            </div>
-          
-        </div>
-      
-      </div>
-
-      <div id="workforce9" class="hidden-section" style="padding-top: 20px ;">
-
-
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="info-container">
-              <img src="./img/info.png">
-              <div class="overlay-text">Due to the recent suspicious call from debt collector. You have the urged to do your own self checking.
-    
-                <div class="text-right" style="padding-top: 50px;">
-                    <a href="#workforce10" id="work-link39" class="btn btn-secondary btn-lg" style="font-weight: bold; color: #ffffff;">PROCEED</a>
-                  </div>
-                </div>
-                
-            </div>
-            </div>
-          
-        </div>
-      
-      </div>
-
-
-      <div id="workforce10" class="hidden-section" style="padding-top: 20px ;">
-
-
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="info-container">
+            <div class="info-container text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br><br>
@@ -1133,9 +1125,11 @@
     </div>
   
 
-    </section>
-</div>
-<div class="col-sm-2 text-left sticky-col hidden-section" id="factormeter">
+    </section> <!--section-->
+
+</div> <!-- col-sm-8 -->
+
+<div class="col-sm-2 text-left hidden-section" id="factormeter">
   <aside style="padding-top: 60px;">
 <div class="container text-left" >
     <div class="circular-progress-container">
@@ -1143,6 +1137,7 @@
         <div class="inner-circle">
           <span class="percentage" hidden>80%</span>
           <img src="./img/happiness.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+          <span class="tooltip">Happiness</span>
         </div>
         <div class="outer-ring"></div>
       </div>
@@ -1154,6 +1149,7 @@
         <div class="inner-circle">
           <span class="percentage" hidden>70%</span>
           <img src="./img/focus.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+          <span class="tooltip">Goals</span>
         </div>
         <div class="outer-ring"></div>
       </div>
@@ -1165,6 +1161,7 @@
         <div class="inner-circle">
           <span class="percentage" hidden>60%</span>
           <img src="./img/relationship.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+          <span class="tooltip">Relationship</span>
         </div>
         <div class="outer-ring"></div>
       </div>
@@ -1173,10 +1170,11 @@
     <br><br>
       </div>
   </aside>
-</div>
-</div>
+</div> <!-- col-sm-2 -->
 
-</div>
+</div><!--container fluid row-->
+
+</div> <!--container fluid-->
 <br>
 <!--
 <div id="footer">
@@ -1192,54 +1190,53 @@
 
 <script>
 
-/*
-const audio = document.getElementById('myAudio');
-  const toggleButton = document.getElementById('toggleButton');
+document.querySelectorAll('.circular-progress-container').forEach(function(container) {
+  container.addEventListener('touchstart', function() {
+    container.classList.toggle('touch');
+  });
 
-  // Function to check and play audio on user interaction
-  function checkAutoplay() {
-      audio.play().catch(error => {
-          console.error('Autoplay error:', error);
-      });
-  }
+  // Optional: Remove 'touch' class after touch ends
+  container.addEventListener('touchend', function() {
+    container.classList.remove('touch');
+  });
+});
 
-  // Function to toggle audio play and pause
-  function toggleAudio() {
-      if (audio.paused) {
-          audio.play().catch(error => {
-              console.error('Error playing audio:', error);
-          });
-          toggleButton.textContent = 'Stop Music';
-      } else {
-          audio.pause();
-          audio.currentTime = 0; // Optionally reset playback position
-          toggleButton.textContent = 'Start Music';
-      }
-  }
-
-  // Call checkAutoplay on page load
-  document.addEventListener('DOMContentLoaded', checkAutoplay);
-*/
 
 document.getElementById('worknarration').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('workforce');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('work-narration');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
 document.getElementById('work-link1').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('work-narration');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce1');
     targetSection.classList.remove('hidden-section');
@@ -1253,17 +1250,18 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('work-narration');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link2').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
-  
+ 
+    
     // Reveal the section
     var targetSection = document.getElementById('saving');
     targetSection.classList.remove('hidden-section');
@@ -1273,13 +1271,14 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link3').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
-  
+
+    
     // Reveal the section
     var targetSection = document.getElementById('family');
     targetSection.classList.remove('hidden-section');
@@ -1289,45 +1288,62 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link4').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('saving');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce-narration');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('saving');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link5').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('family');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce-narration');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('family');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('workforcenarration').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce2');
     targetSection.classList.remove('hidden-section');
@@ -1337,13 +1353,14 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link6').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce3');
     targetSection.classList.remove('hidden-section');
@@ -1353,158 +1370,231 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to the section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link7').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('workforce3');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('lemon');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce3');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link8').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('workforce3');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('safety');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce3');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link9').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('workforce3');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('dream');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce3');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link10').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('lemon');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('lemon2');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('lemon');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link11').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('safety');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('safety2');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('safety');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link12').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('dream');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('dream2');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('dream');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
   
   document.getElementById('work-link13').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('lemon2');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('lemon3');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('lemon2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link14').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('lemon2');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('lemon3');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('lemon2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link15').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('lemon2');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('lemon3');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('lemon2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+            // Scroll to the section
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
 
   document.getElementById('lemon-link').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('lemon4');
     targetSection.classList.remove('hidden-section');
@@ -1514,14 +1604,15 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
 
   document.getElementById('lemon-link1').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('lemon-info1');
     targetSection.classList.remove('hidden-section');
@@ -1531,14 +1622,15 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
 
   document.getElementById('lemon-link2').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('lemon-info2');
     targetSection.classList.remove('hidden-section');
@@ -1548,31 +1640,40 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
 
   document.getElementById('lemon-link3').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('lemon-info2');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce5');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('lemon-info2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
 
   document.getElementById('work-link16').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce4');
     targetSection.classList.remove('hidden-section');
@@ -1582,13 +1683,14 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to the section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link17').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
-  
+ 
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce4');
     targetSection.classList.remove('hidden-section');
@@ -1598,13 +1700,14 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+           // Scroll to the section
+           targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link18').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
-  
+
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce4');
     targetSection.classList.remove('hidden-section');
@@ -1614,13 +1717,14 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to the section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link19').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
-  
+ 
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce4');
     targetSection.classList.remove('hidden-section');
@@ -1630,13 +1734,14 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to the section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link20').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce4');
     targetSection.classList.remove('hidden-section');
@@ -1646,13 +1751,14 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link21').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce4');
     targetSection.classList.remove('hidden-section');
@@ -1662,13 +1768,14 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+            // Scroll to the section
+            targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link22').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce5');
     targetSection.classList.remove('hidden-section');
@@ -1678,13 +1785,14 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+            // Scroll to the section
+            targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('invest-link').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('invest');
     targetSection.classList.remove('hidden-section');
@@ -1694,29 +1802,38 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+           // Scroll to the section
+           targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link23').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('invest');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce6');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('invest');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to the section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link24').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce6');
     targetSection.classList.remove('hidden-section');
@@ -1726,72 +1843,104 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link25').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('workforce6');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce7');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce6');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link26').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('workforce7');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('credit');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce7');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link27').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('workforce7');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('credit');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce7');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
   document.getElementById('work-link28').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('workforce7');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('credit');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce7');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+           // Scroll to the section
+           targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
 
@@ -1799,6 +1948,7 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
   document.getElementById('game-link2').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('game2');
     targetSection.classList.remove('hidden-section');
@@ -1808,25 +1958,33 @@ document.getElementById('work-link1').addEventListener('click', function(event) 
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   
   document.getElementById('work-link29').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('game2');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('workforce8');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('game2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to the section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
 
     const audio2 = document.getElementById('notificationSound');
 
@@ -1842,23 +2000,32 @@ function playSound() {
   document.getElementById('work-link30').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    var hideSection = document.getElementById('workforce8');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
     // Reveal the section
     var targetSection = document.getElementById('info1');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce8');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+            // Scroll to the section
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
   
 
   document.getElementById('work-link31').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
-  
+ 
+    
     // Reveal the section
     var targetSection = document.getElementById('info2');
     targetSection.classList.remove('hidden-section');
@@ -1868,13 +2035,14 @@ function playSound() {
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+            // Scroll to the section
+            targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   document.getElementById('work-link32').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('answer1');
     targetSection.classList.remove('hidden-section');
@@ -1884,14 +2052,15 @@ function playSound() {
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to the section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
 
   document.getElementById('work-link33').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
+    
     // Reveal the section
     var targetSection = document.getElementById('answer2');
     targetSection.classList.remove('hidden-section');
@@ -1901,8 +2070,8 @@ function playSound() {
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to the section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
 /*
@@ -1943,18 +2112,26 @@ function playSound() {
 
   document.getElementById('work-link36').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
-  
+
+    var hideSection = document.getElementById('answer1');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+
     // Reveal the section
     var targetSection = document.getElementById('workforce10');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('answer1');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-    // Scroll to the section
-    targetSection.scrollIntoView({ behavior: 'smooth' });
+          // Scroll to the section
+          targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
   });
 
 
@@ -2021,6 +2198,7 @@ function playSound() {
     let grid = [];
     let selectedCells = [];
     let foundWords = new Set();
+    let isDragging = false;
 
     function generatePuzzle() {
         const wordList = document.getElementById('word-list');
@@ -2057,7 +2235,13 @@ function playSound() {
                 div.textContent = cell;
                 div.dataset.row = i;
                 div.dataset.col = j;
-                div.addEventListener('click', () => selectCell(i, j));
+                div.addEventListener('mousedown', () => startSelecting(i, j));
+                div.addEventListener('mouseover', () => {
+                    if (isDragging) {
+                        selectCell(i, j);
+                    }
+                });
+                div.addEventListener('mouseup', () => stopSelecting());
                 wordSearch.appendChild(div);
             });
         });
@@ -2114,18 +2298,24 @@ function playSound() {
         }
     }
 
+    function startSelecting(row, col) {
+        isDragging = true;
+        selectCell(row, col);
+    }
+
     function selectCell(row, col) {
         const cell = document.querySelector(`.cell[data-row="${row}"][data-col="${col}"]`);
         if (!cell) return;
 
-        if (cell.classList.contains('selected')) {
-            cell.classList.remove('selected');
-            selectedCells = selectedCells.filter(c => c.row !== row || c.col !== col);
-        } else {
+        if (!cell.classList.contains('selected')) {
             cell.classList.add('selected');
             selectedCells.push({ row, col });
             checkForWord();
         }
+    }
+
+    function stopSelecting() {
+        isDragging = false;
     }
 
     function checkForWord() {
@@ -2161,6 +2351,21 @@ function playSound() {
         });
     }
 
+    function resetGame() {
+        generatePuzzle();
+        const wordItems = document.querySelectorAll('.word');
+        wordItems.forEach(item => {
+            item.classList.remove('crossed-out');
+        });
+    }
+
+    // Attach event listener to the reset button
+    const resetButton = document.getElementById('reset-button');
+    if (resetButton) {
+        resetButton.addEventListener('click', resetGame);
+    }
+
+
     function showModal() {
         const modal = document.getElementById('modal');
         if (modal) {
@@ -2194,6 +2399,13 @@ function playSound() {
  // Function to update circular progress and arrow
  const minValue = 10;
 const maxValue = 100;
+
+// Initialize progress on page load
+document.addEventListener('DOMContentLoaded', () => {
+    // Delay to ensure images are loaded
+    setTimeout(initProgress, 100);
+});
+
 
 function updateCircularProgress(element, newValue) {
     const previousValue = parseInt(element.getAttribute('data-progress'), 10); // Get the previous progress value
@@ -2320,11 +2532,6 @@ document.querySelectorAll('.choice-card').forEach(card => {
     });
 });
 
-// Initialize progress on page load
-document.addEventListener('DOMContentLoaded', () => {
-    // Delay to ensure images are loaded
-    setTimeout(initProgress, 100);
-});
 
 </script>
 
