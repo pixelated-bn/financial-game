@@ -252,7 +252,7 @@ html, body{
   content: '';
   position: absolute;
   top: 10px; /* Adjust the top position as needed */
-  left: 70%; /* Center the arrow horizontally */
+  left: 50%; /* Center the arrow horizontally */
   transform: translateX(-50%); /* Center the arrow horizontally */
   width: 22px; /* Adjust the width as needed */
   height: 22px; /* Adjust the height as needed */
@@ -880,8 +880,8 @@ table img {
 
 
  #accept-email {
-  padding-top: 420px;
-  padding-right: 530px;
+  padding-top: 460px;
+  padding-right: 50px;
  }
 
  #headerimg{
