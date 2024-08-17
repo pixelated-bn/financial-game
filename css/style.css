@@ -880,8 +880,8 @@ table img {
 
 
  #accept-email {
- padding-top: 520px;
-  padding-left: 710px;
+ padding-top: 500px;
+  padding-left: 680px;
   z-index: 100; /* Ensure it appears above other content */
  }
 
@@ -916,8 +916,8 @@ table img {
   }
 
  #accept-email {
-  padding-top: 900px;
-  padding-left: 800px;
+  padding-top: 940px;
+  padding-left: 700px;
   z-index: 100;
  }
   
