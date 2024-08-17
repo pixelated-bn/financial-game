@@ -28,29 +28,34 @@
 <i class="fa fa-volume-off" aria-hidden="true"  id="toggleButton" onclick="toggleAudio()" hidden></i>
 -->
 
-    <div class="container" style="padding-top: 3px;">
+    <div class="container-fluid" style="padding-top: 3px;">
         <div class="row sticky-row">
             <div class="col-sm-10">
-              <a class="" href="index.html" style="color: #d7c026;font-weight: bolder; text-decoration: none;"><span style="color: #3a877d; font-weight: bolder;">Credit</span>Lit</a>
+              <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 6%; height: auto; margin: 0 auto;"></a>
             </div>
     </div>
 
  
-<div class="row">
+<div class="row" id="viewscreen">
     <div class="col-sm-12">
    <section>
 
-    <div id="index" class="visible-section" style="padding-top: 150px;">
+    <div id="index" class="visible-section" style="padding-top: 190px;">
 
         
         <div class="row" style="background: none;">
-          <div class="col-sm-12" id="title">
+          <div class="col-sm-12 text-center" id="title">
               <!--<h1 style="font-size:180px; color: #d7c026;font-weight: bolder;"><span style="font-size: 160px; color: #3a877d; font-weight: bolder; transition: opacity 1s ease-out;">Gradua</span>tion</h1>-->
-              <img src="./img/graduation.png" class="card-img-top" style="width: 100%; height: auto; margin: 0 auto;">
+
+              <a href="#graduate" id="navigate-link">
+                <img src="./img/graduation1.png" class="card-img-top zoom-title2" style="width: 55%; height: auto; margin: 0 auto;">
+              </a>
+
           </div>
    
     </div>
 
+    <!--
     <div class="row">
       <div class="col-sm-12">
           <div class="text-center">
@@ -58,70 +63,75 @@
             </div>
           </div>
         </div>
-
+-->
     </div>
     
-<div id="graduate" class="hidden-section">
+<div id="graduate" class="hidden-section"  style="padding-top: 20px;">
 
  <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">YOU JUST GRADUATED!</h1>
  <h3 class="text-center" style="font-weight:lighter;">You have started applying for full-time job and in the meantime, you would…</h3>
 
  <div class="container">
     <div class="row" style="padding-left: 50px;">
-        <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+        <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;">
+          
+          <a href="#parttime" id="navigate-link1" style="text-decoration: none; color: #000000;"> 
+
             <div class="card my-card2" style="padding-top: 20px;">
            <br>
           <img src="./img/parttime.png" class="card-img-top" style="width: 70%; height: auto; margin: 0 auto;">
-          <a href="#parttime" id="navigate-link1" style="text-decoration: none; color: #000000;">
           <div class="card-body text-center">
             <h5 class="card-title" style="font-weight: bold;">GET A PART-TIME JOB</h5>
-          
           </div>
-        </a>
         </div>
+        
+      </a>
     </div>
 
-    <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+    <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;">    
+      
+      <a href="#family" id="navigate-link2" style="text-decoration: none; color: #000000;">
+
         <div class="card my-card2" style="padding-top: 20px;">
            <br>
           <img src="./img/family.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-          <a href="#family" id="navigate-link2" style="text-decoration: none; color: #000000;">
           <div class="card-body text-center">
             <h5 class="card-title" style="font-weight: bold;">HELP OUT SMALL FAMILY BUSINESS</h5>
      
             </div>
-            </a>
           </div>
+
+        </a>
         </div>
 
-        <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+        <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;">
+          <a href="#own" id="navigate-link3" style="text-decoration: none; color: #000000;">
             <div class="card my-card2" style="padding-top: 20px;">
                <br>
               <img src="./img/business.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-              <a href="#own" id="navigate-link3" style="text-decoration: none; color: #000000;">
               <div class="card-body text-center">
                 <h5 class="card-title" style="font-weight: bold;">OPEN SMALL HOME-BASED BUSINESS</h5>
            
                 </div>
-                </a>
               </div>
+            </a>
         </div>
     </div>
  </div>
 </div>
 
 
-<div id="parttime" class="hidden-section" style="padding-top: 20px ;">
+<div id="parttime" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
     <div class="row">
       
         <div class="col-sm-12">
-          <div class="info-container">
+          <div class="info-container text-center">
             <img src="./img/narrative.png">
             <div class="overlay-text">The benefits of part-time jobs is not just about earning some extra cash. It also extend to discovering yourself, your passions, and what you want to do in life. Working part-time gives you the freedom and independence to explore your interests and helps you become more responsible. You learn to take ownership of your actions, identify your strengths, and work on your weaknesses. And guess what? Making mistakes is totally okay because it's all about learning and growing.
   
-              <div class="text-center" style="padding-top: 120px;">
+              <div class="text-center" style="padding-top: 150px;">
                 <a href="#parttime1" id="parttime-link" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
             </div>
             </div>
@@ -134,13 +144,13 @@
   </div>
 
 
-  <div id="family" class="hidden-section" style="padding-top: 20px ;">
+  <div id="family" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
     <div class="row">
      
       <div class="col-sm-12">
-        <div class="info-container">
+        <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text">This can be beneficial for you to gain practical business experience as your parents will help pass on their knowledge and expertise, and possibly instill passion for enterpreneurship. Working in a family business can also provide you with opportunity to learn important skills such as communication, teamwork, and problem-solving. It can also give a sense of responsibility and independence, and help you develop a strong work ethic.
 
@@ -158,15 +168,15 @@
 </div>
 
 
-  <div id="own" class="hidden-section" style="padding-top: 20px ;">
+  <div id="own" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
     <div class="row">
       <div class="col-sm-12">
-        <div class="info-container">
+        <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text">
-            <br><br>
+            <br><br><br>
             Coming up with a business idea can be daunting, but it doesn’t have to be. Start by thinking about what you are passionate about and what you enjoy doing.
 
             <div class="text-center" style="padding-top: 180px;">
@@ -181,18 +191,18 @@
 
 </div>
 
-<div id="own-business" class="hidden-section" style="padding-top: 20px ;">
+<div id="own-business" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
   <div class="row">
     <div class="col-sm-12">
-      <div class="info-container">
+      <div class="info-container text-center">
         <img src="./img/narrative.png">
         <div class="overlay-text">
-          <br><br>
-          With the job market being tough these days, you started brainstorming business ideas. You came up with a list of potential ventures and focused on the top three that excite you the most and that you're truly passionate about.
+          <br><br><br>
+          Given the challenging job market, you start brainstorming for business ideas and researching current market trends to identify profitable opportunities.
 
-          <div class="text-center" style="padding-top: 160px;">
-              <a href="#own1" id="own-link" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+          <div class="text-center" style="padding-top: 180px;">
+              <a href="#game1" id="own-link" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
             </div>
           </div>
           
@@ -203,22 +213,22 @@
 
 </div>
 
-<div id="parttime1" class="hidden-section">
+<div id="parttime1" class="hidden-section"  style="padding-top: 10px;">
 
     <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">PART-TIME JOB!</h1>
     <h3 class="text-center" style="font-weight:lighter;">Which job would you choose...</h3>
    
-    <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px;">
+    <div class="container">
        <div class="row">
-           <div class="col-sm-3 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+           <div class="col-sm-6 col-md-4 col-lg-3 mb-3 hovertest" style="padding-top: 40px; margin: 5px auto;">
+            <a href="#parttime-narative" id="narrative-parttime1" style="text-decoration: none; color: #000000;"> 
                <div class="card my-card" style="padding-top: 20px;">
-               <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
+               <img src="./img/header.png" class="card-img-top" id="headerimg">
                <div class="header-text">
                 <p style="font-weight: bold;">ENGLISH TEACHER</p>
               </div>
               <br>
              <img src="./img/tuition.png" class="card-img-top" style="width: 30%; height: auto; margin: 0 auto;">
-             <a href="#parttime-narative" id="narrative-parttime1" style="text-decoration: none; color: #000000;">
              <div class="card-body text-center">
                <h5 class="card-title" style="font-weight: bold;">SMARTKID Tuition</h5>
                <small class="card-text">Looking for a passionate and dedicated english teacher</small>
@@ -226,19 +236,20 @@
             <p style="font-weight: bold; font-size: small;">$25/hour
             <br>3-5 days a week</p>
              </div>
-           </a>
            </div>
+          </a>
        </div>
    
-       <div class="col-sm-3 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+       <div class="col-sm-6 col-md-4 col-lg-3 mb-3 hovertest" style="padding-top: 40px; margin: 5px auto;">
+        
+        <a href="#parttime-narative" id="narrative-parttime2" style="text-decoration: none; color: #000000;">    
            <div class="card my-card" style="padding-top: 20px;">
-               <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
+               <img src="./img/header.png" class="card-img-top" id="headerimg">
                <div class="header-text">
                 <p style="font-weight: bold;">KITCHEN HELPER</p>
               </div>
               <br>
              <img src="./img/kitchenhelper.png" class="card-img-top" style="width: 30%; height: auto; margin: 0 auto;">
-             <a href="#parttime-narative" id="narrative-parttime2" style="text-decoration: none; color: #000000;">
              <div class="card-body text-center">
                <h5 class="card-title" style="font-weight: bold;">Kitchen Helper</h5>
                <small class="card-text"> Looking for kitchen helper with basic culinary experience, able to work in a team and enjoy working with people</small>
@@ -246,19 +257,19 @@
                <p style="font-weight: bold; font-size: small;">$400/month
                <br>9 hours of working/1hr break</p>
                </div>
-               </a>
              </div>
+            </a>
            </div>
    
-           <div class="col-sm-3 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+           <div class="col-sm-6 col-md-4 col-lg-3 mb-3 hovertest" style="padding-top: 40px; margin: 5px auto;">
+            <a href="#parttime-narative" id="narrative-parttime3" style="text-decoration: none; color: #000000;"> 
                <div class="card my-card" style="padding-top: 20px;">
-                   <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
+                   <img src="./img/header.png" class="card-img-top" id="headerimg">
                    <div class="header-text">
                     <p style="font-weight: bold;">BARISTA</p>
                   </div>
                   <br>
                  <img src="./img/barista.png" class="card-img-top" style="width: 30%; height: auto; margin: 0 auto;">
-                 <a href="#parttime-narative" id="narrative-parttime3" style="text-decoration: none; color: #000000;">
                  <div class="card-body text-center">
                    <h5 class="card-title" style="font-weight: bold;">Baristas</h5>
                    <small class="card-text">Join our team of passionate baristas and serve exceptional coffee to our customers. Gain valuable experience in a fast-paced, fun environment</small>
@@ -266,40 +277,40 @@
                    <p style="font-weight: bold; font-size: small;">$450/month
                    <br></p>
                    </div>
-                   </a>
                  </div>
+                </a>
            </div>
 
            
-           <div class="col-sm-3 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+           <div class="col-sm-6 col-md-4 col-lg-3 mb-3 hovertest" style="padding-top: 40px; margin: 5px auto;">
+            <a href="#parttime-narative" id="narrative-parttime4" style="text-decoration: none; color: #000000;"> 
             <div class="card my-card" style="padding-top: 20px;">
-                <img src="./img/header.png" class="card-img-top" style="width: 85%; height: auto; display: block;">
+                <img src="./img/header.png" class="card-img-top" id="headerimg">
                 <div class="header-text">
                   <p style="font-weight: bold;">ROAD RUNNER</p>
                 </div>
                 <br>
               <img src="./img/roadrunner.png" class="card-img-top" style="width: 40%; height: auto; margin: 0 auto;">
-              <a href="#parttime-narative" id="narrative-parttime4" style="text-decoration: none; color: #000000;">
               <div class="card-body text-center">
                 <h5 class="card-title" style="font-weight: bold;">Roadrunner</h5>
-                <small class="card-text">Roadrunner is hiring you to join our team! The fastest, most reliable and and affordable delivery service in town; using own vehicle</small>
+                <small class="card-text">Roadrunner is hiring! The fastest, most reliable and and affordable delivery service in town; using own vehicle</small>
                 <br><br>
                 <p style="font-weight: bold; font-size: small;">$800/month
                 <br>maximum of 5-hour shift</p>
                 </div>
-                </a>
               </div>
+            </a>
         </div>
        </div>
     </div>
    </div>
 
 
-   <div id="parttime-narative" class="hidden-section" style="padding-top: 20px ;">
+   <div id="parttime-narative" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
     <div class="row">
       <div class="col-sm-12">
-        <div class="info-container">
+        <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text">
             <br><br><br><br>
@@ -318,17 +329,17 @@
 </div>
 
 
-<div id="parttime-narative1" class="hidden-section" style="padding-top: 20px ;">
+<div id="parttime-narative1" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
   <div class="row">
     <div class="col-sm-12">
-      <div class="info-container">
+      <div class="info-container text-center">
         <img src="./img/narrative.png">
         <div class="overlay-text">It has been several months on your part time job. You've been doing great and getting along with your co-workers. While you’re working, you received an email notification
 
-          <div class="text-center zoom-animation" style="padding-top: 60px;">
+          <div class="text-center" style="padding-top: 60px;">
             <a href="" id="" data-toggle="modal" data-target="#exampleModal">
-              <img src="./img/notification.png" class="card-img-top" style="width: 13%; height: auto; margin: 0 auto;">
+              <img src="./img/notification.png" class="card-img-top" style="width: 15%; height: auto; margin: 0 auto;">
             </a>
           </div>
           
@@ -343,7 +354,7 @@
 
 
 
-   <div id="family1" class="hidden-section">
+   <div id="family1" class="hidden-section"  style="padding-top: 20px;">
 
     
     <h5 class="text-center" style="font-weight:lighter;">
@@ -358,46 +369,47 @@
 
     <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px; padding-left: 60px;">
       <div class="row">
-          <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+          <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;">    
+            <a href="#family-narrative" id="narrative-fam" style="text-decoration: none; color: #000000;">
               <div class="card my-card2" style="padding-top: 60px;">
              
              <br>
             <img src="./img/financing.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-            <a href="#family-narrative" id="narrative-fam" style="text-decoration: none; color: #000000;">
             <div class="card-body text-center">
               <h3 class="card-title" style="font-weight: bold;">Go for financing</h3>
             
             </div>
-          </a>
           </div>
+        </a>
       </div>
   
-      <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+      <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;">
+        
+        <a href="#saving" id="saving-link" style="text-decoration: none; color: #000000;">
           <div class="card my-card2" style="padding-top: 10px;">
             
              <br>
             <img src="./img/forkout.png" class="card-img-top" style="width: 30%; height: auto; margin: 0 auto;">
-            <a href="#saving" id="saving-link" style="text-decoration: none; color: #000000;">
             <div class="card-body text-center">
               <h3 class="card-title" style="font-weight: bold;">Fork out business savings</h3>
        
               </div>
-              </a>
             </div>
+          </a>
           </div>
 
-          <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+          <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;"> 
+            <a href="#hold" id="hold-link" style="text-decoration: none; color: #000000;">   
             <div class="card my-card2" style="padding-top: 40px;">
               
                <br>
               <img src="./img/holdon.png" class="card-img-top" style="width: 40%; height: auto; margin: 0 auto;">
-              <a href="#hold" id="hold-link" style="text-decoration: none; color: #000000;">
               <div class="card-body text-center">
                 <h3 class="card-title" style="font-weight: bold;">Hold on the thoughts</h3>
          
                 </div>
-                </a>
               </div>
+            </a>
             </div>
   
       </div>
@@ -407,12 +419,12 @@
 
 
    
-   <div id="saving" class="hidden-section" style="padding-top: 20px ;">
+   <div id="saving" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
     <div class="row">
       <div class="col-sm-12">
-      <div class="info-container">
+      <div class="info-container text-center">
         <img src="./img/narrative.png">
         <br><br>
         <div class="overlay-text">Your family’s nasi katok stall has become a huge hit. You usually open from 10 am to 10 pm, but sometimes you sell out early and have to close by 3 pm. To make sure you can stay open all day and keep customers coming, you've decided to “Fork up business savings” to stock up more. This way, you can keep your stall open from 10 am to 10 pm every day.
@@ -433,12 +445,12 @@
 
 
 
-<div id="hold" class="hidden-section" style="padding-top: 20px ;">
+<div id="hold" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
   <div class="row">
     <div class="col-sm-12">
-      <div class="info-container">
+      <div class="info-container text-center">
         <img src="./img/narrative.png">
         <br><br>
         <div class="overlay-text">You’re currently putting off some decisions because you have big plans to expand your stall in the future. For now, you’ve decided to increase your stock a bit to keep up with the demand. Even so, you know that you’ll have to close as soon as the extra stock runs out. It’s a balancing act, but you’re focused on the bigger picture and the exciting changes to come.
@@ -458,13 +470,14 @@
 </div>
 
 
-   <div id="family-narative" class="hidden-section" style="padding-top: 20px ;">
+   <div id="family-narative" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
     <div class="row">
       <div class="col-sm-12">
-        <div class="info-container">
+        <div class="info-container text-center">
           <img src="./img/narrative.png">
+          <br>
           <div class="overlay-text">Do you know that your business is required to be registered under the Registry of Companies and Business Names (ROCBN) and must at least one year in operation in Brunei to be eligible for financing?
 
             Do you also know that you are required to prepare 12 months of company statements and prepare business proposal together with all supporting documents for the required financing purpose?
@@ -472,7 +485,7 @@
             Do you also know.....insert information on movable asset can be use as collateral for your financing.....
             
 
-            <div class="text-center" style="padding-top: 120px;">
+            <div class="text-center" style="padding-top: 150px;">
               <a href="#family-narrative1" id="notify-link4" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
             </div>
           </div>
@@ -485,17 +498,17 @@
 </div>
 
 
-<div id="family-narrative1" class="hidden-section" style="padding-top: 20px ;">
+<div id="family-narrative1" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
   <div class="row">
     <div class="col-sm-12">
-      <div class="info-container">
+      <div class="info-container text-center">
         <img src="./img/narrative.png">
         <div class="overlay-text">It has been several months on helping your family nasi katok business. While you’re on your break scrolling through watching reels, you received an email notification
 
-          <div class="text-center zoom-animation" style="padding-top: 60px;">
+          <div class="text-center" style="padding-top: 60px;">
             <a href="" id="" data-toggle="modal" data-target="#exampleModal">
-              <img src="./img/notification.png" class="card-img-top" style="width: 13%; height: auto; margin: 0 auto;">
+              <img src="./img/notification.png" class="card-img-top" style="width: 15%; height: auto; margin: 0 auto;">
             </a>
           </div>
           </div>
@@ -507,65 +520,66 @@
 
 </div>
 
-   <div id="own1" class="hidden-section">
+   <div id="own1" class="hidden-section"  style="padding-top: 20px;">
 <br><br>
-    <h4 class="text-center" style="font-weight:lighter;">These are the top 3 that you think of doing, which one would you choose?</h4>
+    <h4 class="text-center" style="font-weight:lighter;">After a lot of research, these are the top 3 that you think of doing, which one would you choose?</h4>
    <br>
     <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px; padding-left: 60px;">
        <div class="row">
-           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+           <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;">
+            
+            <a href="#own-narrative1" id="narrative-own1" style="text-decoration: none; color: #000000;">
                <div class="card my-card2" style="padding-top: 20px;">
               <br>
              <img src="./img/homemade.png" class="card-img-top" style="width: 60%; height: auto; margin: 0 auto;">
-             <a href="#own-narrative1" id="narrative-own1" style="text-decoration: none; color: #000000;">
              <div class="card-body text-center">
                <h3 class="card-title" style="font-weight: bold;">Home-made bakes and desserts</h3>
              
              </div>
-           </a>
            </div>
+          </a>
        </div>
    
-       <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+       <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;"> 
+        <a href="#own-narrative2" id="narrative-own2" style="text-decoration: none; color: #000000;">   
            <div class="card my-card2" style="padding-top: 20px;">
               <br>
              <img src="./img/artscrafts.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-             <a href="#own-narrative2" id="narrative-own2" style="text-decoration: none; color: #000000;">
              <div class="card-body text-center">
                <h3 class="card-title" style="font-weight: bold;">Arts & Crafts related</h3>
         
                </div>
-               </a>
              </div>
+            </a>
            </div>
    
-           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">    
+           <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;">
+            <a href="#own-narrative3" id="narrative-own3" style="text-decoration: none; color: #000000;"> 
                <div class="card my-card2" style="padding-top: 20px;">
                   <br>
                  <img src="./img/digitalwork.png" class="card-img-top" style="width: 60%; height: auto; margin: 0 auto;">
-                 <a href="#own-narrative3" id="narrative-own3" style="text-decoration: none; color: #000000;">
                  <div class="card-body text-center">
                    <h3 class="card-title" style="font-weight: bold;">Digital-work related</h3>
               
                    </div>
-                   </a>
                  </div>
+                </a>
            </div>
        </div>
     </div>
    </div>
 
 
-   <div id="own-narative1" class="hidden-section" style="padding-top: 20px ;">
+   <div id="own-narrative1" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
     <div class="row">
      
       <div class="col-sm-12">
-        <div class="info-container">
+        <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text">
-           
+           <br>
             The majority of people enjoy sweets. Generally speaking, one of the flexible and promising small business ideas in the food industry is desserts.
 
             Benefits:
@@ -580,7 +594,7 @@
             
 
             <div class="text-center" style="padding-top: 150px;">
-              <a href="#game1" id="game-baked" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+              <a href="#aftergame" id="game-baked" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
             </div>
           </div>
           
@@ -592,19 +606,19 @@
 </div>
 
 
-<div id="own-narative2" class="hidden-section" style="padding-top: 20px ;">
+<div id="own-narrative2" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
     <div class="row">
       <div class="col-sm-12">
-        <div class="info-container">
+        <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text">
-            <br><br>
+            <br><br><br>
             Arts or crafts is an easy to start business. You have the talent, why not make something out of it. Besides you will be doing something that you enjoy doing.
 
             <div class="text-center" style="padding-top: 180px;">
-              <a href="#game2" id="game-art" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+              <a href="#aftergame" id="game-art" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
             </div>
           </div>
           
@@ -616,20 +630,21 @@
 </div>
 
 
-<div id="own-narative3" class="hidden-section" style="padding-top: 20px ;">
+<div id="own-narrative3" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
     <div class="row">
       <div class="col-sm-12">
-        <div class="info-container">
+        <div class="info-container text-center">
           <img src="./img/narrative.png">
+          <br><br>
           <div class="overlay-text">If you’re in search of easy-to-start business art ideas, create an online shop and list all digital assets you’ve created. There’s no shipping of physical products in this direct-to-consumer business model, reducing production costs.
 
             Customers can easily access your store and download purchased digital products. They could be printable artwork, digital illustrations, brushes, fonts, etc.
             
             
             <div class="text-center" style="padding-top: 150px;">
-              <a href="#game3" id="game-digital" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+              <a href="#aftergame" id="game-digital" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
             </div>
           </div>
           
@@ -641,56 +656,54 @@
 </div>
 
 
-<div id="game1" class="hidden-section" style="padding-top: 20px;">
+<div id="game1" class="hidden-section"  style="padding-top: 20px;">
   <div class="row">
       <div class="col-sm-12 text-center">
-          <h4 class="text-center" style="font-size: 48px; color: #000000; font-weight:bold;">
-              HOME-MADE BAKES AND DESSERT GAME
-          </h4>
-          <h5 class="text-center" style="font-weight:lighter;">
-              Find the item needed for Baked and Desserts!
+          <h5 class="text-center" style="font-size: 48px; color: #000000; font-weight:bold;">
+            BUSINESS IDEAS GAME
           </h5>
-        
+          <h5 class="text-center" style="font-weight:lighter;">
+              While you do your research, lets play a game! Choose any 5 businesses that are now in trend!
+              </h5>
+        <br>
 
-          <div class="table-container text-center">
+          <div class="container-fluid text-center">
               <table>
                   <tbody>
+                    <tr>
+                      <td><img src="./img/business-game/before (1).png" alt="Box" data-item1="1" onclick="checkItem1(1)"></td>
+                      <td><img src="./img/business-game/before (2).png" alt="Box" data-item1="2" onclick="checkItem1(2)"></td>
+                      <td><img src="./img/business-game/before (3).png" alt="Box" data-item1="3" onclick="checkItem1(3)"></td>
+                      <td><img src="./img/business-game/before (4).png" alt="Box" data-item1="4" onclick="checkItem1(4)"></td>
+                    </tr>
                       <tr>
-                          <td><img src="./img/groceries icons/yellow/credit (19).png" alt="Box" data-item1="1" onclick="checkItem1(1)"></td>
-                          <td><img src="./img/groceries icons/yellow/baked1.png" alt="Box" data-item1="2" onclick="checkItem1(2)"></td>
-                          <td><img src="./img/groceries icons/yellow/credit (3).png" alt="Box" data-item1="3" onclick="checkItem1(3)"></td>
-                          <td><img src="./img/groceries icons/yellow/credit (18).png" alt="Box" data-item1="4" onclick="checkItem1(4)"></td>
-                          <td><img src="./img/groceries icons/yellow/credit (5).png" alt="Box" data-item1="5" onclick="checkItem1(5)"></td>
+                        <td><img src="./img/business-game/before (5).png" alt="Box" data-item1="5" onclick="checkItem1(5)"></td>
+                          <td><img src="./img/business-game/before (6).png" alt="Box" data-item1="6" onclick="checkItem1(6)"></td>
+                          <td><img src="./img/business-game/before (7).png" alt="Box" data-item1="7" onclick="checkItem1(7)"></td>
+                          <td><img src="./img/business-game/before (8).png" alt="Box" data-item1="8" onclick="checkItem1(8)"></td>
                       </tr>
                       <tr>
-                          <td><img src="./img/groceries icons/yellow/credit (6).png" alt="Box" data-item1="6" onclick="checkItem1(6)"></td>
-                          <td><img src="./img/groceries icons/yellow/baked2.png" alt="Box" data-item1="7" onclick="checkItem1(7)"></td>
-                          <td><img src="./img/groceries icons/yellow/credit (15).png" alt="Box" data-item1="8" onclick="checkItem1(8)"></td>
-                          <td><img src="./img/groceries icons/yellow/credit (10).png" alt="Box" data-item1="9" onclick="checkItem1(9)"></td>
-                          <td><img src="./img/groceries icons/yellow/credit (11).png" alt="Box" data-item1="10" onclick="checkItem1(10)"></td>
-                      </tr>
-                      <tr>
-                          <td><img src="./img/groceries icons/yellow/baked3.png" alt="Box" data-item1="11" onclick="checkItem1(11)"></td>
-                          <td><img src="./img/groceries icons/yellow/credit (23).png" alt="Box" data-item1="12" onclick="checkItem1(12)"></td>
-                          <td><img src="./img/groceries icons/yellow/baked4.png" alt="Box" data-item1="13" onclick="checkItem1(13)"></td>
-                          <td><img src="./img/groceries icons/yellow/credit (24).png" alt="Box" data-item1="14" onclick="checkItem1(14)"></td>
-                          <td><img src="./img/groceries icons/yellow/baked5.png" alt="Box" data-item1="15" onclick="checkItem1(15)"></td>
+                        <td><img src="./img/business-game/before (9).png" alt="Box" data-item1="9" onclick="checkItem1(9)"></td>
+                        <td><img src="./img/business-game/before (10).png" alt="Box" data-item1="10" onclick="checkItem1(10)"></td>
+                          <td><img src="./img/business-game/before (11).png" alt="Box" data-item1="11" onclick="checkItem1(11)"></td>
+                          <td><img src="./img/business-game/before (12).png" alt="Box" data-item1="12" onclick="checkItem1(12)"></td>
                       </tr>
                   </tbody>
-                  <tfoot>
-                    <p id="bakedresult"></p>
-                    <a href="#aftergame" id="game-link1" class="game-button" style="font-weight: bold; color: #ffffff; display: none;">PROCEED</a></tfoot>
-                    <br>
               </table>
+              <br>
+              <p id="bakedresult"></p>
           </div>
        
+          <div class="text-center" style="padding-left: 600px;">
+            <a href="#own1" id="game-link1" class="game-button" style="font-weight: bold; color: #ffffff; display: none;">PROCEED</a>
+          </div>
       </div>
   </div>
 </div>
 
 
 
-<div id="game2" class="hidden-section" style="padding-top: 20px ;">
+<div id="game2" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
   <div class="row">
     <div class="col-sm-12 text-center">
@@ -739,7 +752,7 @@
 </div>
 
 
-<div id="game3" class="hidden-section" style="padding-top: 20px ;">
+<div id="game3" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
   <div class="row">
     <div class="col-sm-12">
@@ -766,19 +779,19 @@
 </div>
 
 
-<div id="aftergame" class="hidden-section" style="padding-top: 20px ;">
+<div id="aftergame" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
 
   <div class="row">
     <div class="col-sm-12">
-      <div class="info-container">
+      <div class="info-container text-center">
         <img src="./img/narrative.png">
         <div class="overlay-text">While you keep on brainstorming for ideas to open up your business, you received an email notification
           
           
-          <div class="text-center zoom-animation" style="padding-top: 60px;">
+          <div class="text-center" style="padding-top: 60px;">
             <a href="" id="" data-toggle="modal" data-target="#exampleModal">
-              <img src="./img/notification.png" class="card-img-top" style="width: 13%; height: auto; margin: 0 auto;">
+              <img src="./img/notification.png" class="card-img-top" style="width: 15%; height: auto; margin: 0 auto;">
             </a>
           </div>
           </div>
@@ -794,15 +807,15 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <img src="./img/email.png" class="card-img-top" style="width: 100%; height: auto; margin: 0 auto;">
-      </div>
-      <div class="modal-footer">
-        <br>
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content" style="background-color: transparent; border: none;">
+      <div class="modal-body" id="open-email">
+   
+      <div id="accept-email" class="text-center">
+      
         <a href="workforce.html" id="" class="accept-button">ACCEPT</a>
       </div>
+    </div>
     </div>
   </div>
 </div>
