@@ -726,10 +726,22 @@ html, body{
   overflow: visible; /* Hide overflow */
 }
 
-
 .creditscore-img {
-  width: 100%; /* Adjusts according to the container */
+  width: 100%;
   height: 430px;
+  opacity: 1;
+  position: relative;
+}
+
+.opacity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 210%;
+  background: linear-gradient(to bottom, rgba(243, 241, 241, 0.315) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none; /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 0.5s ease-in-out; /* Add a transition for smooth movement */
 }
 
 .creditarrow-img {
@@ -742,6 +754,7 @@ html, body{
   z-index: 10; /* Ensures the arrow stays on top */
   transition: left 0.8s ease, top 0.8s ease; /* Add a transition for smooth movement */
 }
+
 
 .table-container {
   display: inline-block;
