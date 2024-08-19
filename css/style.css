@@ -738,7 +738,7 @@ html, body{
   top: 0;
   left: 0;
   width: 100%;
-  height: 210%;
+  height: 214%;
   background: linear-gradient(to bottom, rgba(243, 241, 241, 0.315) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none; /* Ensure the overlay doesn't interfere with other elements */
   transition: opacity 0.5s ease-in-out; /* Add a transition for smooth movement */
@@ -879,7 +879,7 @@ table img {
 
 
 #hangup-phone {
-  padding-top: 440px;
+  padding-top: 460px;
  z-index: 1000; /* Ensure it appears above other content */
  }
 
