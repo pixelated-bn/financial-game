@@ -555,35 +555,34 @@ document.getElementById('own-link').addEventListener('click', function(event) {
     10: './img/business-game/after (10).png',
     11: './img/business-game/after (11).png',
     12: './img/business-game/after (12).png'
-  };
-  
-  let foundCount1 = 0;
-  let maxItems = 5; // Maximum items to be found
-  
-  function checkItem1(itemNumber) {
-    // Check if 5 items are already found
+};
+
+let foundCount1 = 0;
+let maxItems = 5; // Maximum items to be found
+
+function checkItem1(itemNumber) {
     if (foundCount1 >= maxItems) return;
-  
+
     console.log(`Checking item number: ${itemNumber}`);
     const imgElement = document.querySelector(`img[data-item1="${itemNumber}"]`);
-  
-    if (hiddenItems1[itemNumber]) {
-      console.log(`Found item: ${hiddenItems1[itemNumber]}`);
-      imgElement.src = `${hiddenItems1[itemNumber]}?v=${new Date().getTime()}`; // Cache-busting
-      foundCount1++;
-  
-      // Disable further clicks on the image
-      imgElement.onclick = null; // Remove the onclick event
-  
-      // Check if 5 items are found and show the result
-      if (foundCount1 === maxItems) {
-        document.getElementById('bakedresult').innerText = 'Congratulations! That was fun!';
-        document.getElementById('game-link1').style.display = 'block'; // Display the button
-      }
-    }
-  }
-  
 
+    if (hiddenItems1[itemNumber]) {
+        console.log(`Found item: ${hiddenItems1[itemNumber]}`);
+        imgElement.src = `${hiddenItems1[itemNumber]}?v=${new Date().getTime()}`; // Cache-busting
+        foundCount1++;
+
+        // Disable further clicks on the image
+        imgElement.onclick = null; // Remove the onclick event
+
+        // Check if 5 items are found and show the result
+        if (foundCount1 === maxItems) {
+            setTimeout(() => {
+                document.getElementById('gameresult').innerText = 'Congratulations! That was fun!';
+                document.getElementById('game-link1').style.display = 'block'; // Display the button
+            }, 700); // 2000 milliseconds = 2 seconds
+        }
+    }
+}
 
   document.getElementById('game-link1').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
