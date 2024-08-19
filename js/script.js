@@ -579,7 +579,7 @@ function checkItem1(itemNumber) {
             setTimeout(() => {
                 document.getElementById('gameresult').innerText = 'Congratulations! That was fun!';
                 document.getElementById('game-link1').style.display = 'block'; // Display the button
-            }, 700); // 2000 milliseconds = 2 seconds
+            }, 900); // 900 milliseconds = 0.9 seconds
         }
     }
 }
