@@ -2480,8 +2480,8 @@ function updateCreditArrow() {
     const arrowTop = (containerHeight - arrowHeight) * (1 - positionPercentage / 100);
     arrowElement.style.top = `${Math.max(0, Math.min(arrowTop, containerHeight - arrowHeight))}px`;
 
-    // Adjust the gradient stop position based on the arrow's top position
-    const gradientPosition = (arrowTop / containerHeight) * 100;
+   // Adjust the gradient stop position based on the arrow's top position
+    const gradientPosition = ((arrowTop + 6) / containerHeight) * 100;
     overlayElement.style.background = `linear-gradient(to bottom, rgba(243, 241, 241, 0.315) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
     
     // Ensure the overlay covers the entire container to account for possible gradient overflow
