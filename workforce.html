@@ -37,13 +37,13 @@
 
 
   
-  <div id="workforce" class="visible-section" style="padding-top: 180px;">
+  <div id="workforce" class="visible-section" style="padding-top: 170px;">
 
     <div class="row" style="background: none;">
         <div class="col-sm-12 text-center" id="title">
             <!--<h1 style="font-size:180px; color: #d7c026;font-weight: bolder;"><span style="font-size: 160px; color: #3a877d; font-weight: bolder;">Work</span>Force</h1>-->
             <a href="#work-narration" id="worknarration">
-            <img src="./img/workforce1.png" class="card-img-top zoom-title3" style="width: 40%; height: auto; margin: 0 auto;">
+            <img src="./img/workforce1.png" class="card-img-top zoom-title3" style="width: 55%; height: auto; margin: 0 auto;">
             </a>
         </div>
  
@@ -95,8 +95,10 @@
             <h5 style="font-weight: bold;">CREDIT<br>SCORE</h5>
             <div class="credit-score-container" style="position: relative; width: 60%; margin: 0 auto;" data-progress="20">
               <img src="./img/creditscore.png" class="card-img-top creditscore-img">
+              <div class="opacity-overlay"></div> <!-- New overlay div -->
               <img src="./img/creditarrow.png" class="card-img-top creditarrow-img">
           </div>
+          
           
         </div>
     </aside>
@@ -241,7 +243,7 @@
 
       <div id="workforce3" class="hidden-section" style="padding-top: 20px;">
 
-        <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">TIME TO BUY A CAR!</h1>
+        <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">WHICH CAR ARE YOU!</h1>
         <h3 class="text-center" style="font-weight:lighter;">What type of car would you like to buy..</h3>
 
         <div class="container">
@@ -430,7 +432,7 @@
 
        <div id="safety2" class="hidden-section">
 
-        <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">CHOOSE YOUR CAR!</h1>
+        <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/Quote.png" alt="" style="width: 6%; height: 3%; vertical-align: top;">CHOOSE YOUR CAR!</h1>
         <h3 class="text-center" style="font-weight:lighter;">Which of these car would be yours...</h3>
        
         <div class="container">
@@ -952,7 +954,7 @@
 
   <audio id="phone-sound" src="./audio/telephone-ring-old-german-w48-83246.mp3" preload="auto"></audio>
 
-  <audio id="phone-sound2" src="./audio/creditcall.mp3" preload="auto"></audio>
+  <audio id="phone-sound2" src="./audio/answering-machine-female-out-of-town-103769.mp3" preload="auto"></audio>
 
 
   <script>
@@ -2444,9 +2446,10 @@ function updateCircularProgress(element, newValue) {
 function updateCreditArrow() {
     const container = document.querySelector('.credit-score-container');
     const arrowElement = document.querySelector('.creditarrow-img');
+    const overlayElement = document.querySelector('.opacity-overlay');
     
-    if (!container || !arrowElement) {
-        console.error('Container or arrow element not found');
+    if (!container || !arrowElement || !overlayElement) {
+        console.error('Container, arrow element, or overlay element not found');
         return;
     }
 
@@ -2476,9 +2479,16 @@ function updateCreditArrow() {
     // Calculate the top position of the arrow
     const arrowTop = (containerHeight - arrowHeight) * (1 - positionPercentage / 100);
     arrowElement.style.top = `${Math.max(0, Math.min(arrowTop, containerHeight - arrowHeight))}px`;
+
+    // Adjust the gradient stop position based on the arrow's top position
+    const gradientPosition = (arrowTop / containerHeight) * 100;
+    overlayElement.style.background = `linear-gradient(to bottom, rgba(243, 241, 241, 0.315) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
+    
+    // Ensure the overlay covers the entire container to account for possible gradient overflow
+    overlayElement.style.height = `${containerHeight}px`;
 }
 
-// Initialize the credit arrow and progress indicators
+// Initialize the credit arrow and overlay gradient based on the initial data-progress value
 function initProgress() {
     document.querySelectorAll('.circular-progress').forEach(progress => {
         const initialValue = parseInt(progress.getAttribute('data-progress'), 10);
@@ -2489,7 +2499,6 @@ function initProgress() {
 
     updateCreditArrow(); // Initialize the credit arrow with the existing data-progress value
 }
-
 // Add event listeners to choice cards
 document.querySelectorAll('.choice-card').forEach(card => {
     card.addEventListener('click', function(event) {
