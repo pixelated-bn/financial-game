@@ -766,7 +766,7 @@ table {
   table-layout: auto; /* Adjust table to fit content width */
   width: auto; /* Table adjusts to fit its content */
   margin: 0 auto; /* Center table horizontally */
-  width: 50%; /* Adjust to desired percentage */
+  width: 48%; /* Adjust to desired percentage */
 }
 
 td {
