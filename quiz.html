@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <style>
+      * {
+     font-family: Georgia, Times, "Times New Roman", serif;
+ }
+
+ .quiz,
+ .scores {
+     margin: 50px auto 0 auto;
+     max-width: 400px;
+     padding-top: 80px;
+ }
+
+ #top {
+     color: #205e55;
+ }
+
+ .containerNew {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     height: 580px;
+     width: 50%;
+     transform: translate(-50%, -50%);
+     padding: 10px;
+ }
+
+ p {
+     margin: 15px 15px;
+ }
+
+ .landing {
+     text-align: center;
+ }
+
+ .scoresHeader {
+     position: absolute;
+     top: 15px;
+     left: 15px;
+ }
+
+ .timer {
+     position: absolute;
+     top: 15px;
+     right: 15px;
+ }
+
+ button {
+     display: inline-block;
+     margin: 10px;
+     cursor: pointer;
+     color: #fff;
+     background-color: #52865a;
+     border-radius: 5px;
+     border: 0;
+     padding: 20px;
+ }
+
+ button:hover {
+     background-color: #2a8d12;
+ }
+
+ .options button {
+     display: block;
+ }
+
+ input[type="text"] {
+     font-size: 100%;
+ }
+
+ .hide {
+     display: none;
+ }
+
+ .feedback {
+     font-style: bold;
+     font-size: 120%;
+     margin-top: 20px;
+     padding-top: 15px;
+     color: #fff;
+     border-top: 2px solid #4B0082;
+ }
+
+ ol {
+     padding-left: 15px;
+     max-height: 600px;
+     overflow: auto;
+ }
+
+ li {
+     padding: 5px;
+     list-style: decimal inside none;
+ }
+
+ li:nth-child(odd) {
+     background-color: #dfdae7;
+ }
+
+ @media screen and (max-width: 768px) {
+     .containerNew {
+         width: 80%;
+     }
+ }
+
+ @media screen and (max-width: 575px) {
+     .containerNew {
+         width: 90%;
+     }
+
+     .quiz,
+     .scores {
+         max-width: 90%;
+     }
+ }
+    </style>
+</head>
+<body>
+    <div class="containerNew">
+        <header>
+            <div class="timer">
+                <p>
+                    Time: <span id="timer">0</span>
+                </p>
+            </div>
+        </header>
+    
+        <main class="quiz">
+            <div id="quiz-start">
+                <div class="landing" id="start-screen">
+                    <h1 id="top">QUIZ GAME</h1>
+                    <h1>Coding Quiz Challenge</h1>
+                    <button id="start">Start Quiz</button>
+                    <a href="index.html" class="btn btn-md btn-warning">GO BACK</a>
+                </div>
+            </div>
+    
+            <div class="hide" id="questions">
+                <h2 id="question-words"></h2>
+                <div class="options" id="options"></div>
+            </div>
+    
+            <div class="hide" id="quiz-end">
+                <h2 id="name">Well Done</h2>
+                <p>Your final score is: <span id="score-final"></span></p>
+                <button id="submit-score" hide>Next</button>
+            </div>
+    
+            <div id="feedback" class="feedback hide"></div>
+        </main>
+    </div>
+    
+    <script>
+    let questions = [
+        {
+            prompt: "Inside which HTML element do we put the JavaScript?",
+            options: ["<div>", "<li>", "<script>", "<html>"],
+            answer: "<script>",
+        },
+        {
+            prompt: "How do you call a function named myFunction?",
+            options: ["call myFunction()", "myFunction()", "call function myFunction", "Call.myFunction"],
+            answer: "myFunction()",
+        },
+        {
+            prompt: "How does a for loop start?",
+            options: ["for (i = 0; i <= 5; i++)", "for (i = 0; i <= 5)", "for i = 1 to 5", "for (i <= 5; i++)"],
+            answer: "for (i = 0; i <= 5; i++)",
+        },
+        {
+            prompt: "In JavaScript, which of the following is a logical operator?",
+            options: ["|", "&&", "%", "/"],
+            answer: "&&",
+        },
+        {
+            prompt: "Which of the following are not the language used to code/program?",
+            options: ["malay", "php", "python", "javascript"],
+            answer: "malay",
+        },
+    ];
+    
+    let questionsEl = document.querySelector("#questions");
+    let timerEl = document.querySelector("#timer");
+    let choicesEl = document.querySelector("#options");
+    let submitBtn = document.querySelector("#submit-score");
+    let startBtn = document.querySelector("#start");
+    let nameEl = document.querySelector("#name");
+    let feedbackEl = document.querySelector("#feedback");
+    
+    let currentQuestionIndex = 0;
+    let correctAnswers = 0;
+    let time = questions.length * 15;
+    let timerId;
+    
+    function quizStart() {
+        timerId = setInterval(clockTick, 600);
+        timerEl.textContent = time;
+        document.getElementById("start-screen").classList.add("hide");
+        questionsEl.classList.remove("hide");
+        getQuestion();
+    }
+    
+    function getQuestion() {
+        let currentQuestion = questions[currentQuestionIndex];
+        document.getElementById("question-words").textContent = currentQuestion.prompt;
+        choicesEl.innerHTML = "";
+        currentQuestion.options.forEach((choice, i) => {
+            let choiceBtn = document.createElement("button");
+            choiceBtn.value = choice;
+            choiceBtn.textContent = i + 1 + ". " + choice;
+            choiceBtn.onclick = questionClick;
+            choicesEl.appendChild(choiceBtn);
+        });
+    }
+    
+    function questionClick() {
+        if (this.value === questions[currentQuestionIndex].answer) {
+            correctAnswers++;
+            feedbackEl.textContent = "Correct!";
+            feedbackEl.style.color = "green";
+        } else {
+            feedbackEl.textContent = `Wrong! The correct answer was ${questions[currentQuestionIndex].answer}.`;
+            feedbackEl.style.color = "red";
+            time -= 10; // Deduct time for wrong answer
+            if (time < 0) time = 0;
+            timerEl.textContent = time;
+        }
+        feedbackEl.classList.remove("hide");
+        setTimeout(() => feedbackEl.classList.add("hide"), 2000);
+        currentQuestionIndex++;
+        if (currentQuestionIndex === questions.length) {
+            quizEnd();
+        } else {
+            getQuestion();
+        }
+    }
+    
+    function quizEnd() {
+    clearInterval(timerId);
+    document.getElementById("quiz-end").classList.remove("hide");
+    document.getElementById("score-final").textContent = correctAnswers; // Show score based on correct answers
+
+    // Change the message based on the score
+    let nameHeader = document.getElementById("name");
+    if (correctAnswers >= 4) {
+        nameHeader.textContent = "Well Done!";
+    } else if (correctAnswers >= 0) {
+        nameHeader.textContent = "Ohh Well, You did your best!";
+    }
+    
+    questionsEl.classList.add("hide");
+}
+    
+    function clockTick() {
+        time--;
+        timerEl.textContent = time;
+        if (time <= 0) {
+            quizEnd();
+        }
+    }
+    
+    function saveHighscore() {
+        let name = nameEl.value.trim();
+        if (name !== "") {
+            let highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
+            highscores.push({ score: correctAnswers, name: name });
+            window.localStorage.setItem("highscores", JSON.stringify(highscores));
+            alert("Your Score has been Submitted");
+        }
+    }
+    
+    nameEl.onkeyup = (event) => {
+        if (event.key === "Enter") saveHighscore();
+    };
+    
+    submitBtn.onclick = saveHighscore;
+    startBtn.onclick = quizStart;
+    </script>
+
+</body>
+</html>
