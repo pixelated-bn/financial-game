@@ -10,18 +10,30 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- 
+    <style>
+        .fade-out {
+            transition: opacity 1s ease;
+            opacity: 0;
+        }
+        .fade-in {
+            transition: opacity 1s ease;
+            opacity: 1;
+        }
+        .hidden-section {
+            display: none;
+        }
+        .visible-section {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
-    
-    <audio id="myAudio" autoplay loop>
+    <!-- Background music that plays on load -->
+    <audio id="background-music" autoplay loop>
         <source src="./audio/game-music-loop-6-144641.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-
-   <i class="fa fa-volume-off" aria-hidden="true"  id="toggleButton" onclick="toggleAudio()" hidden></i>
-  
 
     <div class="container-fluid" style="padding-top: 3px;">
         <div class="row sticky-row">
@@ -37,19 +49,17 @@
                             <a href="narrative" id="index-link">
                                 <img src="./img/creditlit1.png" class="card-img-top zoom-title" style="width: 45%; height: auto; margin: 0 auto;">
                             </a>
-                                 <br><br>
-                            <a href="quiz.html" class="btn btn-md btn-warning">QUIZ GAME</a>
-                            <a href="dragndrop.html" class="btn btn-md btn-warning">DRAG AND DROP</a>
                         </div>
                     </div>
                 </div>
-                <div id="narrative" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px;">
+
+                <div id="narrative" class="hidden-section" style="padding-top: 20px;">
                     <div class="row">
                         <div class="container" style="padding-top: 140px; width: 50%; overflow: hidden; white-space: nowrap; padding-left: 60px; padding-right: 60px;">
-                            <h3 id="typewriter">Credit is nothing to be afraid of but,<br><br>like any other challenge in living your financial vision,<br><br>will you be able to manage, mantain and monitor it<br><br> so it can be of benefit to you</h3>
+                            <h3 id="typewriter">Credit is nothing to be afraid of but,<br><br>like any other challenge in living your financial vision,<br><br>will you be able to manage, maintain and monitor it<br><br> so it can be of benefit to you</h3>
                             <br>
                             <div class="text-center" style="padding-top: 30px;">
-                                <a href="graduation.html" class="animated-button">
+                                <a href="graduation.html" class="animated-button" style="opacity: 0;">
                                     <img src="./img/next1.png" class="card-img-top zoom-button" style="width: 20%; height: auto; margin: 0 auto;">
                                 </a>
                             </div>
@@ -60,46 +70,36 @@
             </div>
         </div>
     </div>
+    
     <script>
-
-
-const audio = document.getElementById('myAudio');
-    const toggleButton = document.getElementById('toggleButton');
-
-    // Function to check and play audio on user interaction
-    function checkAutoplay() {
-        audio.play().catch(error => {
-            console.error('Autoplay error:', error);
-        });
-    }
-
-    // Function to toggle audio play and pause
-    function toggleAudio() {
-        if (audio.paused) {
-            audio.play().catch(error => {
-                console.error('Error playing audio:', error);
-            });
-            toggleButton.textContent = 'Stop Music';
-        } else {
-            audio.pause();
-            audio.currentTime = 0; // Optionally reset playback position
-            toggleButton.textContent = 'Start Music';
-        }
-    }
-
-    // Call checkAutoplay on page load
-    document.addEventListener('DOMContentLoaded', checkAutoplay);
-
-
         document.addEventListener("DOMContentLoaded", function() {
+            const backgroundMusic = document.getElementById('background-music');
             const imageLink = document.getElementById('index-link');
             const typewriter = document.getElementById('typewriter');
             const button = document.querySelector('.animated-button');
             const text = typewriter.innerText; // Store the text for typing
             typewriter.innerText = ''; // Clear the text initially
             let index = 0;
-            const speed = 35; // Adjust typing speed in milliseconds
-    
+            const speed = 50; // Adjust typing speed in milliseconds
+
+            // Function to fade out music gradually
+            function fadeOutMusic(audio, duration) {
+                const fadeOutInterval = 50; // Fade out interval in milliseconds
+                const fadeOutSteps = duration / fadeOutInterval; // Calculate number of steps
+                let currentVolume = audio.volume; // Current volume
+                const volumeDecrement = currentVolume / fadeOutSteps; // Volume decrement per step
+
+                const fadeOut = setInterval(() => {
+                    if (currentVolume > 0) {
+                        currentVolume -= volumeDecrement; // Decrease volume
+                        audio.volume = Math.max(0, currentVolume); // Ensure volume doesn't go below 0
+                    } else {
+                        clearInterval(fadeOut);
+                        audio.pause(); // Pause the audio once volume is 0
+                    }
+                }, fadeOutInterval);
+            }
+
             // Typewriter effect function
             function type() {
                 if (index < text.length) {
@@ -110,39 +110,40 @@ const audio = document.getElementById('myAudio');
                     button.style.opacity = '1'; // Fade-in button after typing is done
                 }
             }
-    
+
             imageLink.addEventListener('click', function(event) {
                 event.preventDefault(); // Prevent the default anchor link behavior
-    
+
+                // Start fading out the music
+                fadeOutMusic(backgroundMusic, 2000); // Fade out over 2 seconds
+
                 // Start fading out the visible section
                 const visibleSection = document.getElementById('index');
                 visibleSection.classList.add('fade-out');
-    
+
                 // Once the fade-out transition is complete, proceed to reveal the target section
                 visibleSection.addEventListener('transitionend', function onTransitionEnd() {
                     // Remove event listener to avoid multiple triggers
                     visibleSection.removeEventListener('transitionend', onTransitionEnd);
-    
+
                     // Reveal the target section
                     const targetSection = document.getElementById('narrative');
                     targetSection.classList.remove('hidden-section');
                     targetSection.classList.add('visible-section');
                     targetSection.classList.add('fade-in');
-    
+
                     // Hide the old section
                     visibleSection.classList.remove('visible-section');
                     visibleSection.classList.add('hidden-section');
-    
+
                     // Scroll to the section
                     targetSection.scrollIntoView({ behavior: 'smooth' });
-    
+
                     // Start typewriter effect
                     type();
                 }, { once: true }); // Ensures the event listener is only invoked once
             });
         });
     </script>
-    
-    
 </body>
 </html>
