@@ -17,17 +17,46 @@
 
 </head>
 <body>
-  
-  <!--
-  <audio id="myAudio" autoplay loop>
+
+  <audio id="background-music" autoplay loop>
     <source src="./audio/game-music-loop-6-144641.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
 <i class="fa fa-volume-off" aria-hidden="true"  id="toggleButton" onclick="toggleAudio()" hidden></i>
--->
 
-    <div class="container-fluid" style="padding-top: 3px;">
+<script>
+  // Get the audio element
+  const audio = document.getElementById('background-music');
+
+  // Create an audio context
+  const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  const source = audioContext.createMediaElementSource(audio);
+  const gainNode = audioContext.createGain();
+
+  // Connect the audio source to the gain node and the destination (speakers)
+  source.connect(gainNode);
+  gainNode.connect(audioContext.destination);
+
+  // Set initial volume
+  gainNode.gain.setValueAtTime(1, audioContext.currentTime); // Max volume
+  audio.play();
+
+  // Fade out over 2 seconds
+  setTimeout(() => {
+      // Start the fade-out effect
+      gainNode.gain.setValueAtTime(1, audioContext.currentTime); // Ensure starting at max volume
+      gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 2); // Fade to 0 over 2 seconds
+
+      // Pause the audio after the fade-out duration
+      setTimeout(() => {
+          audio.pause();
+          audio.currentTime = 0; // Reset to the start if needed
+      }, 2000); // Wait for 2 seconds to let the fade-out complete
+  }, 6000); // 8000 milliseconds = 6 seconds
+</script>
+
+  
         <div class="row sticky-row">
             <div class="col-sm-10">
               <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 6%; height: auto; margin: 0 auto;"></a>
@@ -37,44 +66,36 @@
 
 
   
-  <div id="workforce" class="visible-section" style="padding-top: 180px;">
+  <div id="workforce" class="visible-section" style="padding-top: 170px;">
 
     <div class="row" style="background: none;">
         <div class="col-sm-12 text-center" id="title">
             <!--<h1 style="font-size:180px; color: #d7c026;font-weight: bolder;"><span style="font-size: 160px; color: #3a877d; font-weight: bolder;">Work</span>Force</h1>-->
             <a href="#work-narration" id="worknarration">
-            <img src="./img/workforce1.png" class="card-img-top zoom-title3" style="width: 40%; height: auto; margin: 0 auto;">
+            <img src="./img/workforce1.png" class="card-img-top zoom-title3" style="width: 46%; height: auto; margin: 0 auto;">
             </a>
         </div>
  
   </div>
 
-  <!--
-  <div class="row">
-    <div class="col-sm-12">
-        <div class="text-center">
-            <a href="#work-narration" id="worknarration" class="index-button">Proceed</a>
-          </div>
-        </div>
-      </div>
-      -->
   </div>
 
 
 
 
-  <div id="work-narration" class="container hidden-section" style="padding-top: 20px;">
+  <div id="work-narration" class="hidden-section" style="padding-top: 20px;">
 
 
     <div class="row">
       <div class="col-sm-12">
         <div class="info-container text-center">
           <img src="./img/narrative.png">
-          <br><br><br>
+          
           <div class="overlay-text">It's been a few days since you started your new job, and while you're still adjusting, remember that it's normal to face challenges at first. With time, you'll get the hang of it. You've got this!
 
-            <div class="text-center" style="padding-top: 190px;">
-              <a href="#workforce1" id="work-link1" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <div class="text-center" style="padding-top: 60px;">
+              <a href="#workforce1" id="work-link1" class="animated-button1">
+                <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
             </div>
           </div>
           
@@ -86,20 +107,18 @@
 </div>
 
  
-<div class="row"> <!--container fluid row-->
+<div> <!--container fluid row-->
   
 
   <div class="col-sm-2 text-center hidden-section" id="creditmeter">
     <aside style="padding-top: 30px;">
-        <div class="container">
+        <div class="text-center">
             <h5 style="font-weight: bold;">CREDIT<br>SCORE</h5>
             <div class="credit-score-container" style="position: relative; width: 60%; margin: 0 auto;" data-progress="20">
               <img src="./img/creditscore.png" class="card-img-top creditscore-img">
               <div class="opacity-overlay"></div> <!-- New overlay div -->
               <img src="./img/creditarrow.png" class="card-img-top creditarrow-img">
           </div>
-          
-          
         </div>
     </aside>
 </div>
@@ -157,12 +176,13 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">One of the most important things you can do with your first salary is to start saving for your future. Open a savings account and put away as much money as you can each month. This will help you build up a nest egg that you can use for major purchases down the road or in case of an emergency. A good rule of thumb is to set aside 10-20% of your salary each month. If this is too difficult with your first paycheck, you can start small! What’s important is you make a habit of setting aside a portion of your paycheck regularly for your savings.
     
-                <div class="text-center" style="padding-top: 70px;">
-                <a href="workforce-narration" id="work-link4" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 10px;">
+                <a href="workforce-narration" id="work-link4" class="animated-button1">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -177,14 +197,15 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br><br>
+         
                 When it comes to us Bruneians, it is usually an unspoken ritual to gift your parents and family something special from your first salary. Show them your gratitude by treating them to a nice lunch or dinner out.
     
-                <div class="text-center" style="padding-top: 150px;">
-                <a href="workforce-narration" id="work-link5" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 60px;">
+                <a href="workforce-narration" id="work-link5" class="animated-button1">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -200,14 +221,15 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br>
+               
                 Several months into your new job, you're feeling much better, building strong relationships with your colleagues, excelling in your role, and adapting well to the work environment. You're doing fantastic—keep up the great work!
     
-                <div class="text-center" style="padding-top: 180px;">
-                <a href="#workforce2" id="workforcenarration" class="narrative-button choice-card" data-happiness="85" data-focus="70" data-connection="85" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 60px;">
+                <a href="#workforce2" id="workforcenarration" class="choice-card" data-happiness="85" data-focus="70" data-connection="85">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -223,14 +245,15 @@
 
         <div class="row">
           <div class="col-sm-12">
-        <div class="info-container text-center">
+        <div class="info-container2 text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text" style="font-weight: bold; font-size: large;">Signing first credit for your first big purchase - A CAR!
                 <br><br>
                 Oh no! Your car needs repairs once again! This time, you decide it's not worth fixing since it's beyond repair. So, you start searching for a new vehicle to use for commuting to work. You're caught in a dilemma, unsure of which option to choose. 
     
-                <div class="text-center" style="padding-top: 130px;">
-                <a href="#workforce3" id="work-link6" class="narrative-button choice-card" data-happiness="70" data-focus="60" data-connection="70"  data-credit-score="30" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 30px;">
+                <a href="#workforce-game" id="workgame-link" class="choice-card" data-happiness="70" data-focus="60" data-connection="70" data-credit-score="30">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -241,9 +264,485 @@
   
   </div>
 
+
+  <div id="workforce-game" class="hidden-section" style="padding-top: 20px;">
+
+
+    <div class="row">
+      <div class="col-sm-12">
+    <div class="info-container2 text-center">
+      <img src="./img/narrative.png">
+      <div class="overlay-text">While waiting and deciding whats best for you. lets play some quiz. Lets Go!!
+
+            <div class="text-center" style="padding-top: 30px;">
+            <a href="#loading-quiz-game" id="loading-link3">
+              <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
+          </div>
+        </div>
+        
+    </div>
+    </div>
+  
+</div>
+
+</div>
+
+
+
+
+<div id="loading-quiz-game" class="hidden-section" style="padding-top: 20px;">
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-sm-12 text-center">
+      <div class="loader-container">
+        <div class="loader">
+          <!-- Spinner circle, rotating -->
+        </div>
+        <div class="loading-text">Loading Game..</div> <!-- Text stays in the center -->
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="text-center" style="padding-top: 160px;">
+    <a href="#game-title3" id="title-link3" class="animated-button" style="opacity: 0; transition: opacity 1s ease;">
+      <img src="./img/next1.png" class="card-img-top zoom-button" style="width: 8%; height: auto; margin: 0 auto;">
+    </a>
+  </div>
+</div>
+
+
+<div id="game-title3" class="hidden-section">
+
+  <div class="text-center" style="padding-top: 40px;">
+        <img src="./img/quiz/quiz-title.png" style="width: 50%; height: auto;">
+        
+        <div class="text-center" style="padding-top: 130px;">
+          <a href="#quiz-game" id="quizgame-link" class="start-link">start!</a>
+            </div>
+      </div>
+
+</div>
+
+
+
+<div id="quiz-game" class="hidden-section" style="padding-top: 20px;">
+
+   <!-- Add the audio element here -->
+   <audio id="game-music" loop>
+    <source src="./audio/game-music-loop-7-145285.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<div class="row quiz-progress hide" style="padding-top: 80px;">
+  <div class="col-sm-9" style="padding: 17px;">
+    <!-- Question Progress Bar -->
+    <div id="question-progress-container" >
+      <div></div>
+      <div id="question-progress-dots">
+          <!-- These dots will update dynamically -->
+      </div>
+  </div>
+  
+</div>
+  <div class="col-sm-3 text-center timer" style="padding: 5px; display: flex; align-items: center; justify-content: center;">
+    <img src="./img/quiz/timer.png" style="width: 13%; height: auto; margin-right: 5px;">
+    <p id="timer" style="margin: 0; padding: 0; font-size: 2rem;">0</p>
+    <small style="font-weight: bold; color: #35867a; position: relative; top: 5px;">s</small>
+  </div>
+</div>
+   
+        
+   
+
+    <main class="quiz">
+        <div id="quiz-start">
+            <div class="landing" id="start-screen" style="padding-top: 150px;">
+                <h1 style="color: #d7c026; font-size: 120px; font-family: balibliss-nrvav;">Quiz Game</h1>
+               
+                <h2>Lets test your Credit Score Knowledge</h2>
+                <br>
+                <a id="start" class="start-link3">Start Quiz!</a>
+            </div>
+        </div>
+
+
+
+        <audio id="click-answer" src="./audio/sound-effect.mp3"></audio>
+
+
+        <div class="hide" id="questions">
+            <h2 id="question-words"></h2>
+            <hr>
+            <div class="options" id="options"></div>
+            <br>
+
+            <div id="feedback" class="feedback hide"></div>
+            <!-- Add this inside the #quiz-game div -->
+            <a id="next-btn" class="animated-button1 hide">
+              <br>
+              <div class="vertical-line"></div>
+              <img src="./img/quiz/nextbtn.png"  style="width: 10%; height: auto; display: block; margin: 0 auto;">
+            </a>
+            
+        </div>
+
+<br>
+            <a href="#game-credit3" id="credit-link3" class="animated-button1 hide">
+              <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 13%; height: auto; margin: 0 auto;"></a>
+     
+    </main>
+
+
+</div>
+
+<script>
+  document.getElementById("start").addEventListener("click", function () {
+    // Hide the start screen
+    document.getElementById("quiz-start").classList.add("hide");
+
+    // Show the progress bar and questions section
+    document.querySelector(".quiz-progress").classList.remove("hide");
+    document.getElementById("questions").classList.remove("hide");
+  });
+</script>
+
+
+<div id="game-credit3" class="hidden-section">
+
+  <div class="text-center">
+    <img src="./img/quiz/quiz-complete.png" style="width: 30%; height: auto;">
+    
+  </div>
+
+    <div class="credit-container3 text-center" style="padding-top: 100px;">
+      <img src="./img/quiz/creditnarrative.png" style="width: 35%; height: auto;">
+      <div class="overlay-text">Phew! Never knew that's how it is for for credit score and how it works. Since that's the case, I think I know which car will I choose that fits with my current finance!
+   
+      </div>
+
+
+      <div class="hide" id="quiz-end" style="padding-top: 30px; position: relative;">
+        <img src="./img/quiz/quiz-score.png" style="width: 45%; height: auto;">
+        <h4 id="name" style="position: absolute; top: 65%; left: 50%; transform: translate(-50%, -50%); color: #35867a; font-weight: bold;">
+          Quiz Score <span id="score-final" style="margin-left: 400px;"></span>
+        </h4>
+        
+      </div>
+
+      <div class="text-center" style="padding-top: 5px;">
+        <br><br>
+      <a href="#workforce3" id="work-link6" class="start-link">continue</a>
+      </div>
+        </div>
+</div>
+
+
+
+<script>
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+   const stickyRow4 = document.querySelector(".sticky-row");
+   const targets = [document.querySelector("#game-title3"), document.querySelector("#quiz-game"), document.querySelector("#game-credit3")];
+ 
+   const observer3 = new IntersectionObserver(
+     (entries) => {
+       let shouldHideStickyRow = false;
+ 
+       // Check the visibility of each observed element
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           shouldHideStickyRow = true;
+         }
+       });
+ 
+       // Toggle the visibility of the sticky-row based on any intersecting element
+       if (shouldHideStickyRow) {
+         stickyRow4.style.display = "none";
+       } else {
+         stickyRow4.style.display = "flex"; // Or your desired display value
+       }
+     },
+     { threshold: 0.2 } // Adjust the visibility threshold as needed
+   );
+ 
+   // Observe each target element
+   targets.forEach((target) => {
+     if (target) {
+       observer3.observe(target);
+     }
+   });
+ });
+ 
+
+document.addEventListener("DOMContentLoaded", () => {
+  let questions = [
+    {
+        prompt: "A credit score is?",
+        options: [
+            "It is a monthly summary based on your credit card interest rate",
+            "A number (usually 3 digits) that reflects the likelihood of your repaying your debts on time at a given moment",
+            "It is the total credit limit you have across different lenders",
+             "It is the number of your credits"
+        ],
+        answer: "A number (usually 3 digits) that reflects the likelihood of your repaying your debts on time at a given moment",
+    },
+    {
+        prompt: "What is the Bureau Credit Score range?",
+        options: ["215-570", "350-850", "200-500", "100-300"],
+        answer: "215-570",
+    },
+    {
+        prompt: "Which of the following does a credit score mainly indicate?",
+        options: [
+            "Knowledge of consumer credit",
+            "Attitude towards consumer credit",
+            "Amount of consumer debt",
+            "Risk of not repaying loan"
+        ],
+        answer: "Risk of not repaying loan",
+    },
+    {
+        prompt: "Which of the following statement is true?",
+        options: [
+            "High income guarantees high credit score",
+            "Your credit score is set in stone and cannot be improved",
+            "Credit score is calculated based on factual information in credit report",
+            "Your credit score is based solely on your payment history"
+        ],
+        answer: "Credit score is calculated based on factual information in credit report",
+    },
+    {
+        prompt: "A credit score of 520 or more is considered ",
+        options: ["Poor", "Low Risk", "Average", "High Risk"],
+        answer: "Low Risk",
+    },
+    {
+        prompt: "What is the largest contributing factor to your credit score?",
+        options: [
+            "Mix of credit",
+            "New credit",
+            "Length of credit",
+            "Payment history"
+        ],
+        answer: "Payment history",
+    },
+    {
+        prompt: "How can you improve your credit score?",
+        options: [
+            "Make payments on time",
+            "Reduce overall debt",
+            "Limit your applications",
+            "Earn more credits"
+        ],
+        answer: "Make payments on time",
+    },
+    {
+        prompt: "How to improve Credit Score?",
+        options: [
+            "Open a large amount of credit cards in a short time period",
+            "Make sure you are paying your obligations on time every time in full payment",
+            "Keep your credit card balances low",
+             "Not using your credit"
+        ],
+        answer: "Make sure you are paying your obligations on time every time in full payment",
+    }
+]
+
+    let currentQuestionIndex = 0;
+    let correctAnswers = 0;
+    let totalQuestions = questions.length;
+    let time = 60;
+    let timerId;
+    
+    let questionsEl = document.querySelector("#questions");
+let timerEl = document.querySelector("#timer");
+let choicesEl = document.querySelector("#options");
+let submitBtn = document.querySelector("#work-link6");
+let startBtn = document.querySelector("#start");
+let nameEl = document.querySelector("#name");
+let feedbackEl = document.querySelector("#feedback");
+let nextBtn = document.querySelector("#next-btn"); // Next button reference
+
+    // Start the quiz
+
+document.querySelector("#start").onclick = function() {
+    // Start the timer with the clockTick function running every 1000ms (1 second)
+    timerId = setInterval(clockTick, 1000);  // Timer tick every second (1000ms)
+    
+    // Display the initial time
+    timerEl.textContent = time;
+
+    // Hide the start screen and show the question screen
+    document.getElementById("start-screen").classList.add("hide");
+    questionsEl.classList.remove("hide");
+    
+    // Get the first question
+    getQuestion();
+};
+
+    // Load the current question
+    function getQuestion() {
+        let currentQuestion = questions[currentQuestionIndex];
+        document.getElementById("question-words").textContent = currentQuestion.prompt;
+        choicesEl.innerHTML = "";
+        currentQuestion.options.forEach(function(choice) {
+            let choiceBtn = document.createElement("button");
+            choiceBtn.value = choice;
+            choiceBtn.textContent = choice;
+            choiceBtn.onclick = questionClick;
+            choicesEl.appendChild(choiceBtn);
+        });
+        nextBtn.classList.add("hide"); // Hide next button initially
+
+ // Update question progress bar
+ updateQuestionProgress();
+
+    }
+
+    const ansSound = document.getElementById('click-answer');
+
+   // Handle question click
+   function questionClick() {
+    // Display feedback
+    //feedbackEl.classList.remove("hide");
+
+    ansSound.currentTime = 0; // Reset the sound to the beginning
+    ansSound.play(); // Play the answer clicking effect
+
+    // Change the background color of the clicked option to green
+    this.style.backgroundColor = "#35867a";
+    this.style.color = "#ffffff"; 
+
+    // Check if the clicked option is correct or not
+    if (this.value === questions[currentQuestionIndex].answer) {
+        correctAnswers++;
+        feedbackEl.textContent = "Correct!";
+        feedbackEl.style.color = "green";
+        console.log("Correct Answers: " + correctAnswers); // Debugging step
+    } else {
+        feedbackEl.textContent = "Wrong!";
+        feedbackEl.style.color = "red";
+    }
+
+    // Show next button
+    nextBtn.classList.remove("hide");
+
+    // Disable options after answer is clicked
+    disableOptions();
+
+    // Check if all questions have been answered
+    if (currentQuestionIndex >= questions.length - 1) {
+        // If this is the last question, hide the next button and end the quiz
+        nextBtn.classList.add("hide");
+        quizEnd();
+    }
+}
+
+function disableOptions() {
+    // Disable all options to prevent further clicks after answering
+    const allOptions = document.querySelectorAll("#options button");
+    allOptions.forEach(option => {
+        option.disabled = true;
+        option.style.pointerEvents = "none"; // Make the buttons unclickable
+    });
+}
+
+// Move to the next question
+nextBtn.onclick = function() {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        getQuestion();
+        nextBtn.classList.add("hide");
+        feedbackEl.classList.add("hide");
+    } else {
+        quizEnd(); // Ensure quiz ends immediately when last question is answered
+    }
+};
+
+   // Update question progress
+   function updateQuestionProgress() {
+    let progressDots = document.getElementById("question-progress-dots");
+    progressDots.innerHTML = ""; // Clear any existing dots
+
+    for (let i = 0; i < totalQuestions; i++) {
+        let dot = document.createElement("div");
+        dot.classList.add("dot");
+
+        // Highlight active dots
+        if (i <= currentQuestionIndex) {
+            dot.classList.add("active");
+        }
+
+        progressDots.appendChild(dot);
+    }
+}
+
+
+// Timer function
+function clockTick() {
+    // Decrease the time by 1 each tick
+    time--;
+    timerEl.textContent = time;  // Update the timer display
+
+    // If the time is up, end the quiz
+    if (time <= 0) {
+      nextBtn.classList.add("hide");
+        quizEnd();
+    }
+}
+
+
+// End the quiz
+function quizEnd() {
+
+  const backgroundMusic = document.getElementById("game-music");
+  fadeOutMusic(backgroundMusic, 2000); // Fade out over 2 
+
+    clearInterval(timerId); // Stop the timer
+    console.log("Quiz has ended");
+
+    // Alert the user with the final score
+    //alert(`Quiz Over! You got ${correctAnswers} out of ${questions.length} correct.`);
+
+    // Show the final score and quiz end message
+    document.getElementById("quiz-end").classList.remove("hide");
+    document.getElementById("credit-link3").classList.remove("hide");
+
+    // Debugging step: Check the final score
+    console.log("Final score: " + correctAnswers);
+
+    // Update the score
+    document.getElementById("score-final").textContent = correctAnswers; // Show score based on correct answers
+}
+
+
+function fadeOutMusic(audio, duration) {
+    const fadeOutInterval = 50;
+    const fadeOutSteps = duration / fadeOutInterval;
+    let currentVolume = audio.volume;
+    const volumeDecrement = currentVolume / fadeOutSteps;
+  
+    const fadeOut = setInterval(() => {
+      if (currentVolume > 0) {
+        currentVolume -= volumeDecrement;
+        audio.volume = Math.max(0, currentVolume);
+      } else {
+        clearInterval(fadeOut);
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    }, fadeOutInterval);
+  }
+
+
+});
+</script>
+
+
+
       <div id="workforce3" class="hidden-section" style="padding-top: 20px;">
 
-        <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">TIME TO BUY A CAR!</h1>
+        <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">WHICH CAR ARE YOU!</h1>
         <h3 class="text-center" style="font-weight:lighter;">What type of car would you like to buy..</h3>
 
         <div class="container">
@@ -303,13 +802,14 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
-              <br>
+            
               <div class="overlay-text">Yes, you need to stick to a budget, but buying an extremely cheap  or used car comes with its own risks. If the car keeps breaking down, repairs can be very costly. Soon you’ve spent more on that old lemon than you would have if you’d just bought a better car from a reputable dealer in the first place.
     
-                <div class="text-center" style="padding-top: 180px;">
-                <a href="#lemon2" id="work-link10" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 60px;">
+                <a href="#lemon2" id="work-link10" class="animated-button1">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -326,16 +826,17 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br><br>It’s better to be safe than stylish. Unsafe cars are a big factor for road crashes and you don't need to spend a fortune to get a safe car.
     
-                <div class="text-center" style="padding-top: 180px;">
-                <a href="#safety2" id="work-link11" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 80px;">
+                <a href="#safety2" id="work-link11" class="animated-button1">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
-            
+      
         </div>
         </div>
       
@@ -348,13 +849,14 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br><br>You have always dream of sitting behind the wheel of a luxury car, wake up with a sense of awe and wonder - the sight of the sleek curves, the feel of the smooth leather seats, and the sound of the powerful engine roaring to life.
+               You have always dream of sitting behind the wheel of a luxury car, wake up with a sense of awe and wonder - the sight of the sleek curves, the feel of the smooth leather seats, and the sound of the powerful engine roaring to life.
     
-                <div class="text-center" style="padding-top: 150px;">
-                <a href="#dream2" id="work-link12" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 60px;">
+                <a href="#dream2" id="work-link12">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -565,14 +1067,15 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">Congratulations on your first credit!
 <br>
                 Do you know that your credit information will be reported to Credit Bureau of Brunei Darussalam Central Bank? Information on your financings - your financing approved amount, total outstanding balance and specific details of your payment behaviour whether you pay your monthly obligations on time or not. These information will affect your credit score. Keep it Green!
     
-                <div class="text-center" style="padding-top: 130px;">
-                <a href="#lemon4" id="lemon-link" class="narrative-button choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="40" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 80px;">
+                <a href="#lemon4" id="lemon-link" class="choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="40">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -626,13 +1129,14 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br><br>Oh no, that's not a good idea! you still need to pay for the 2nd hand car and now you need to pay for another car!
+                Oh no, that's not a good idea! you still need to pay for the 2nd hand car and now you need to pay for another car!
     
-                <div class="text-center" style="padding-top: 200px;">
-                <a href="game-over.html" id="" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 60px;">
+                <a href="game-over.html" id="" class="animated-button1">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -648,14 +1152,15 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br><br>
+               
                 You just have to keep fixing it as you still need to finish paying the car before buying a new one.
     
-                <div class="text-center" style="padding-top: 200px;">
-                <a href="workforce5" id="lemon-link3" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 60px;">
+                <a href="workforce5" id="lemon-link3" class="animated-button1">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -672,14 +1177,15 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">Congratulations on your first credit!
 <br>
                 Do you know that your credit information will be reported to Credit Bureau of Brunei Darussalam Central Bank? Information on your financings - your financing approved amount, total outstanding balance and specific details of your payment behaviour whether you pay your monthly obligations on time or not. These information will affect your credit score. Keep it Green!
     
-                <div class="text-center" style="padding-top: 130px;">
-                <a href="#workforce5" id="work-link22" class="narrative-button choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="40" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 100px;">
+                <a href="#workforce5" id="work-link22" class="choice-card" data-happiness="85" data-focus="80" data-connection="85" data-credit-score="40">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -740,15 +1246,16 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
                 <br>To mix things up and challenge yourself, you decide to register for a Spartan course in Singapore. This course is designed to build mental toughness and resilience, pushing you to your limits in a fun and dynamic way. It's a chance to test your physical and mental strength while enjoying a rewarding experience.
                 
                 
     
-                <div class="text-center" style="padding-top: 150px;">
-                <a href="#workforce6" id="work-link23" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 100px;">
+                <a href="#workforce6" id="work-link23" class="animated-button1">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -765,7 +1272,7 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">The next step is to set a sensible budget – what will be the total budget and how much money needed to put aside for travel, accommodation and expenses? How much emergency fund I need to have in hand to cover unexpected events?
 
@@ -773,8 +1280,9 @@
                 
                 
     
-                <div class="text-center" style="padding-top: 130px;">
-                <a href="#workforce7" id="work-link25" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 80px;">
+                <a href="#workforce7" id="work-link25" class="animated-button1">
+                  <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
               </div>
             </div>
             
@@ -841,14 +1349,15 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br><br>
+              
                 Congratulations on getting your first credit card! Getting a credit card has its ups and downs. If you keep track of your balance, you'll be okay. But it's really important to understand all the terms of the credit card. Now that you have known all the terms associated with credit card, let’s go over them to make sure you understand.
     
-                <div class="text-center" style="padding-top: 130px;">
-                    <a href="#game2" id="game-link2" class="narrative-button choice-card" data-happiness="85" data-focus="85" data-connection="85" data-credit-score="50" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 80px;">
+                    <a href="#loading-search-game" id="loading-link4" class="choice-card" data-happiness="85" data-focus="85" data-connection="85" data-credit-score="50">
+                      <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
                   </div>
                 </div>
                 
@@ -858,19 +1367,66 @@
         </div>
       
       </div>
-        
 
-      <div id="game2" class="hidden-section"  style="padding-top: 20px;">
 
-        <div class="text-center">
-      <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;">CREDIT CARD WORD SEARCH</h1>
-      <br>
-      <h3 class="text-center" style="font-weight:lighter;">Find the words listed on the word search puzzle</h3>
+
+      <div id="loading-search-game" class="hidden-section" style="padding-top: 20px;">
+        <div class="row" style="padding-top: 100px;">
+          <div class="col-sm-12 text-center">
+            <div class="loader-container">
+              <div class="loader">
+                <!-- Spinner circle, rotating -->
+              </div>
+              <div class="loading-text">Loading Game..</div> <!-- Text stays in the center -->
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="text-center" style="padding-top: 160px;">
+          <a href="#game-title4" id="title-link4" class="animated-button3" style="opacity: 0; transition: opacity 1s ease;">
+            <img src="./img/next1.png" class="card-img-top zoom-button" style="width: 8%; height: auto; margin: 0 auto;">
+          </a>
+        </div>
+      </div>
+
+
+      <div id="game-title4" class="hidden-section">
+
+        <div class="text-left" style="padding-top: 60px; padding-left: 150px;">
+              <img src="./img/wordsearch/wordsearch-title.png" style="width: 50%; height: auto;">
+              
+              <div class="text-left" style="padding-left: 350px;">
+                <a href="#game2" id="game-link2" class="start-link2">start!</a>
+                  </div>
+            </div>
+      
+      </div>
+      
+
+      <div id="game2" class="hidden-section">
+
+         <!-- Add the audio element here -->
+  <audio id="game-music" loop>
+    <source src="./audio/game-music-loop-7-145285.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<div class="row">
+  <div class="col-sm-5" style="padding-top: 200px; padding-right: 80px;">
+    <img src="./img/wordsearch/wordsearch-title.png" style="width: 60%; height: auto;">
+  </div>
+  <div class="col-sm-7">
+
+    <div class="text-center" style="padding-top: 70px;">
+      <h4 class="text-center" style="font-weight:normal; color: #35867a;">Find the words listed on the word search puzzle</h4>
 
       </div>
-     
+     <br>
       <div class="row">
-        <div class="col-sm-7" style="padding-left:200px;">  
+        <div class="col-sm-7" style="padding-left:140px;"> 
+          
+          <audio id="click-sound" src="./audio/sound-effect.mp3" preload="auto"></audio>
+
+
           <div id="word-search">
       
         </div>
@@ -883,27 +1439,88 @@
           
           </div>
       </div>
-          
-      
+  </div>
+</div>
+
               <!-- Modal Structure -->
               <div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                      <div class="modal-header">
-                      </div>
                       <div class="modal-body text-center">
-                     
-                        <h3>WELL DONE! please keep an eye on your credit score or you'll be in a lot of debt! You sure don't want that, do you? Good.</h3>
-    
+                     <br>
+                        <h5>WELL DONE! <br>Please keep an eye on your credit score or you'll be in a lot of debt! You sure don't want that, do you? Good.</h5>
+    <br>
                        </div>
                      
-                      <a href="#workforce8" id="work-link29" type="button" class="btn btn-md btn-light" style="font-weight: bold; background-color: #35867a; color: #ffffff;">PROCEED</a>
+                      <a href="game-credit4" id="credit-link4" type="button" class="btn btn-md btn-light" style="font-weight: bold; background-color: #35867a; color: #ffffff;">PROCEED</a>
                   </div>
               </div>
       
               </div>
     
       </div>
+
+
+
+<div id="game-credit4" class="hidden-section">
+
+  <div class="text-left" style="padding-top: 60px; padding-left: 50px;">
+
+    <img src="./img/wordsearch/game-complete.png" style="width: 38%; height: auto;">
+    
+  </div>
+
+    <div class="credit-container2 text-left" style="padding-top: 40px; padding-left: 58px;">
+      <img src="./img/wordsearch/creditnarrative.png" style="width: 35%; height: auto;">
+      <div class="text-left overlay-text" style="padding-right: 250px;">Nice! That was a simple yet fun puzzle to do. It's been a while since I did a word search puzzle!
+   
+      <div class="text-left" id="continuelink">
+        <br><br><br>
+      <a href="#workforce8" id="work-link29" class="start-link">continue</a>
+      </div>
+        </div>
+      </div>
+
+</div>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+   const stickyRow3 = document.querySelector(".sticky-row");
+   const targets = [document.querySelector("#game-title4"), document.querySelector("#game2"), document.querySelector("#game-credit4")];
+ 
+   const observer2 = new IntersectionObserver(
+     (entries) => {
+       let shouldHideStickyRow = false;
+ 
+       // Check the visibility of each observed element
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           shouldHideStickyRow = true;
+         }
+       });
+ 
+       // Toggle the visibility of the sticky-row based on any intersecting element
+       if (shouldHideStickyRow) {
+         stickyRow3.style.display = "none";
+       } else {
+         stickyRow3.style.display = "flex"; // Or your desired display value
+       }
+     },
+     { threshold: 0.2 } // Adjust the visibility threshold as needed
+   );
+ 
+   // Observe each target element
+   targets.forEach((target) => {
+     if (target) {
+       observer2.observe(target);
+     }
+   });
+ });
+ 
+ 
+ </script>
 
 
       <div id="workforce8" class="hidden-section"  style="padding-top: 20px;">
@@ -1036,14 +1653,15 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br><br><br>
+                
                 By ignoring the call, you are now in debt as it is legit a call from the bank for your overdue payment.
     
-                <div class="text-center" style="padding-top: 180px;">
-                    <a href="game-over.html" id="" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 60px;">
+                    <a href="game-over.html" id="" class="animated-button1">
+                      <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
                   </div>
                 </div>
                 
@@ -1059,15 +1677,16 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br><br><br>
+           
                 After verifying, you find out that the claim is legitimate and pay for the overdue charges.
     
             
-                <div class="text-center" style="padding-top: 180px;">
-                    <a href="#workforce10" id="work-link36" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 60px;">
+                    <a href="#workforce10" id="work-link36" class="animated-button1">
+                      <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
                   </div>
                 </div>
                 
@@ -1083,13 +1702,14 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br><br><br>Oh no! Please dont delay the payment and now you are in a lot of debt.
+               Oh no! Please dont delay the payment and now you are in a lot of debt.
     
-                <div class="text-center" style="padding-top: 180px;">
-                    <a href="game-over.html" id="" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+                <div class="text-center" style="padding-top: 60px;">
+                    <a href="game-over.html" id="" class="animated-button1">
+                      <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
                   </div>
                 </div>
                 
@@ -1108,14 +1728,15 @@
 
         <div class="row">
           <div class="col-sm-12">
-            <div class="info-container text-center">
+            <div class="info-container2 text-center">
               <img src="./img/narrative.png">
               <div class="overlay-text">
-                <br><br><br>
+             
                 Congratulation, you have successfully stay on the green side and pay off your debt!
 
-  <div class="text-center" style="padding-top: 190px;">
-                    <a href="game-end.html" id="" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+  <div class="text-center" style="padding-top: 60px;">
+                    <a href="game-end.html" class="animated-button1">
+                      <img src="./img/next2.png" class="card-img-top zoom-button1" style="width: 20%; height: auto; margin: 0 auto;"></a>
                   </div>
                 
               </div>
@@ -1176,8 +1797,6 @@
 
 </div><!--container fluid row-->
 
-</div> <!--container fluid-->
-<br>
 <!--
 <div id="footer">
 
@@ -1191,6 +1810,10 @@
 -->
 
 <script>
+
+
+
+
 
 document.querySelectorAll('.circular-progress-container').forEach(function(container) {
   container.addEventListener('touchstart', function() {
@@ -1359,6 +1982,138 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
          targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
+  document.getElementById('workgame-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('workforce-game');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('workforce2');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+
+  document.getElementById('loading-link3').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    var hideSection = document.getElementById('workforce-game');
+    hideSection.classList.add('fade-out');
+
+    // Once the fade-out transition is complete, proceed to reveal the target section
+    hideSection.addEventListener('transitionend', function onTransitionEnd() {
+        // Remove event listener to avoid multiple triggers
+        hideSection.removeEventListener('transitionend', onTransitionEnd);
+   // Reveal the section
+   var targetSection = document.getElementById('loading-quiz-game');
+   targetSection.classList.remove('hidden-section');
+   targetSection.classList.add('visible-section');
+
+      
+   var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+     // Set a timeout to make the button fade in after 5 seconds, while the loader stays visible
+  setTimeout(function() {
+    // Fade in the button by changing its opacity to 1
+    const button = document.querySelector('.animated-button');
+    button.style.opacity = '1';
+  }, 3000); // 3000 milliseconds = 3 seconds
+  
+   hideSection.classList.remove('visible-section');
+   hideSection.classList.add('hidden-section');
+ 
+  
+     // Scroll to the section
+     targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true });
+  });
+
+
+
+  document.getElementById('title-link3').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    var hideSection = document.getElementById('loading-quiz-game');
+    hideSection.classList.add('fade-out');
+
+    // Once the fade-out transition is complete, proceed to reveal the target section
+    hideSection.addEventListener('transitionend', function onTransitionEnd() {
+        // Remove event listener to avoid multiple triggers
+        hideSection.removeEventListener('transitionend', onTransitionEnd);
+   // Reveal the section
+   var targetSection = document.getElementById('game-title3');
+   targetSection.classList.remove('hidden-section');
+   targetSection.classList.add('visible-section');
+  
+   hideSection.classList.remove('visible-section');
+   hideSection.classList.add('hidden-section');
+ 
+  
+     // Scroll to the section
+     targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true });
+  });
+
+
+
+
+
+  document.getElementById('quizgame-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('quiz-game');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('game-title3');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
+
+
+      // Play background music when family quiz is visible
+      const backgroundMusic = document.getElementById('game-music');
+      backgroundMusic.play();
+
+  });
+
+
+  
+  document.getElementById('credit-link3').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('game-credit3');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('quiz-game');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
   document.getElementById('work-link6').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
@@ -1368,9 +2123,18 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('workforce2');
+    var hideSection = document.getElementById('game-credit3');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
+       
+   var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
   
           // Scroll to the section
           targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -1947,6 +2711,78 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
 
 
 
+
+  document.getElementById('loading-link4').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    var hideSection = document.getElementById('credit');
+    hideSection.classList.add('fade-out');
+
+    // Once the fade-out transition is complete, proceed to reveal the target section
+    hideSection.addEventListener('transitionend', function onTransitionEnd() {
+        // Remove event listener to avoid multiple triggers
+        hideSection.removeEventListener('transitionend', onTransitionEnd);
+   // Reveal the section
+   var targetSection = document.getElementById('loading-search-game');
+   targetSection.classList.remove('hidden-section');
+   targetSection.classList.add('visible-section');
+
+   
+   var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+     // Set a timeout to make the button fade in after 5 seconds, while the loader stays visible
+  setTimeout(function() {
+    // Fade in the button by changing its opacity to 1
+    const button = document.querySelector('.animated-button3');
+    button.style.opacity = '1';
+  }, 3000); // 3000 milliseconds = 3 seconds
+  
+   hideSection.classList.remove('visible-section');
+   hideSection.classList.add('hidden-section');
+ 
+  
+     // Scroll to the section
+     targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true });
+  });
+
+
+
+  document.getElementById('title-link4').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    var hideSection = document.getElementById('loading-search-game');
+    hideSection.classList.add('fade-out');
+
+    // Once the fade-out transition is complete, proceed to reveal the target section
+    hideSection.addEventListener('transitionend', function onTransitionEnd() {
+        // Remove event listener to avoid multiple triggers
+        hideSection.removeEventListener('transitionend', onTransitionEnd);
+   // Reveal the section
+   var targetSection = document.getElementById('game-title4');
+   targetSection.classList.remove('hidden-section');
+   targetSection.classList.add('visible-section');
+
+  
+   hideSection.classList.remove('visible-section');
+   hideSection.classList.add('hidden-section');
+ 
+  
+     // Scroll to the section
+     targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true });
+  });
+
+
+
+
+
   document.getElementById('game-link2').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
@@ -1956,19 +2792,50 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('credit');
+    var hideSection = document.getElementById('game-title4');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-        // Scroll to the section
+   // Play background music when family quiz is visible
+   const backgroundMusic = document.getElementById('game-music');
+        backgroundMusic.play();
         targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
-  
-  document.getElementById('work-link29').addEventListener('click', function(event) {
+ 
+
+
+  document.getElementById('credit-link4').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the default anchor link behavior
+
+  var hideSection = document.getElementById('game2');
+  hideSection.classList.add('fade-out');
+
+  // Once the fade-out transition is complete, proceed to reveal the target section
+  hideSection.addEventListener('transitionend', function onTransitionEnd() {
+      // Remove event listener to avoid multiple triggers
+      hideSection.removeEventListener('transitionend', onTransitionEnd);
+ // Reveal the section
+ var targetSection = document.getElementById('game-credit4');
+ targetSection.classList.remove('hidden-section');
+ targetSection.classList.add('visible-section');
+
+ hideSection.classList.remove('visible-section');
+ hideSection.classList.add('hidden-section');
+
+
+   // Scroll to the section
+   targetSection.scrollIntoView({ behavior: 'smooth' });
+  }, { once: true });
+});
+
+
+
+ 
+document.getElementById('work-link29').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
-    var hideSection = document.getElementById('game2');
+    var hideSection = document.getElementById('game-credit4');
     hideSection.classList.add('fade-out');
 
 // Once the fade-out transition is complete, proceed to reveal the target section
@@ -1983,6 +2850,14 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
   
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
   
           // Scroll to the section
           targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -1997,6 +2872,8 @@ function playSound() {
 }
 
   });
+
+
 
   
   document.getElementById('work-link30').addEventListener('click', function(event) {
@@ -2202,6 +3079,9 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
     let foundWords = new Set();
     let isDragging = false;
 
+    const audioElement = document.getElementById('game-music'); // Game music
+    const clickSound = document.getElementById('click-sound'); // Click sound effect
+
     function generatePuzzle() {
         const wordList = document.getElementById('word-list');
         const wordSearch = document.getElementById('word-search');
@@ -2333,6 +3213,9 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
                     cell.classList.add('completed');
                 }
             });
+            // Play the click sound effect when a word is found
+            clickSound.currentTime = 0; // Reset the audio to the start
+            clickSound.play(); // Play the sound
             selectedCells = [];
             checkIfPuzzleSolved();
         }
@@ -2341,6 +3224,7 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
     function checkIfPuzzleSolved() {
         if (foundWords.size === words.length) {
             showModal();
+            fadeOutAudio(2000); // Fade out audio over 2 seconds when the puzzle is solved
         }
     }
 
@@ -2359,6 +3243,13 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
         wordItems.forEach(item => {
             item.classList.remove('crossed-out');
         });
+
+// Restart the music when resetting the game
+const backgroundMusic = document.getElementById('game-music');
+  backgroundMusic.currentTime = 0; // Reset the audio to the beginning
+  backgroundMusic.volume = 1; // Ensure volume is at max
+  backgroundMusic.play(); // Play music when resetting the game
+
     }
 
     // Attach event listener to the reset button
@@ -2367,14 +3258,31 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
         resetButton.addEventListener('click', resetGame);
     }
 
-
     function showModal() {
         const modal = document.getElementById('modal');
         if (modal) {
-          modal.style.display = 'block';
-          modal.classList.add('modal-open');
+            modal.style.display = 'block';
+            modal.classList.add('modal-open');
         }
-      }
+    }
+
+    // Fade out audio over the specified duration
+    function fadeOutAudio(duration) {
+        let volume = audioElement.volume; // Get the current volume
+        const fadeOutInterval = 50; // milliseconds
+        const fadeOutStep = volume / (duration / fadeOutInterval); // Calculate the volume decrease per interval
+
+        const fadeOut = setInterval(() => {
+            if (volume > 0) {
+                volume -= fadeOutStep; // Decrease volume
+                if (volume < 0) volume = 0; // Prevent going below 0
+                audioElement.volume = volume; // Set the new volume
+            } else {
+                clearInterval(fadeOut); // Stop fading out
+                audioElement.pause(); // Pause the audio after fading out
+            }
+        }, fadeOutInterval);
+    }
 
     // Close the modal
     function closeModal() {
@@ -2396,6 +3304,7 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
     // Initial puzzle generation
     generatePuzzle();
 });
+
 
 
  // Function to update circular progress and arrow
@@ -2480,7 +3389,7 @@ function updateCreditArrow() {
     const arrowTop = (containerHeight - arrowHeight) * (1 - positionPercentage / 100);
     arrowElement.style.top = `${Math.max(0, Math.min(arrowTop, containerHeight - arrowHeight))}px`;
 
-   // Adjust the gradient stop position based on the arrow's top position
+    // Adjust the gradient stop position based on the arrow's top position
     const gradientPosition = ((arrowTop + 6) / containerHeight) * 100;
     overlayElement.style.background = `linear-gradient(to bottom, rgba(243, 241, 241, 0.315) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
     
@@ -2540,6 +3449,8 @@ document.querySelectorAll('.choice-card').forEach(card => {
         }
     });
 });
+
+
 
 
 </script>
