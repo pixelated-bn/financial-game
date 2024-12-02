@@ -16,8 +16,63 @@
         <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
         <link rel="stylesheet" href="./css/style.css">
 
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
 </head>
 <body>
+
+  <style>
+    #background-music {
+        opacity: 1;
+        transition: opacity 2s ease-out; /* Change opacity over 2 seconds */
+    }
+    #background-music.fade-out {
+        opacity: 0; /* Set opacity to 0 when fading out */
+    }
+
+</style>
+
+
+
+    <!-- Background music that plays on load -->
+    <audio id="background-music" autoplay loop>
+      <source src="./audio/game-music-loop-6-144641.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    // Get the audio element
+    const audio = document.getElementById('background-music');
+
+    // Create an audio context
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const source = audioContext.createMediaElementSource(audio);
+    const gainNode = audioContext.createGain();
+
+    // Connect the audio source to the gain node and the destination (speakers)
+    source.connect(gainNode);
+    gainNode.connect(audioContext.destination);
+
+    // Set initial volume
+    gainNode.gain.setValueAtTime(1, audioContext.currentTime); // Max volume
+    audio.play();
+
+    // Fade out over 2 seconds
+    setTimeout(() => {
+        // Start the fade-out effect
+        gainNode.gain.setValueAtTime(1, audioContext.currentTime); // Ensure starting at max volume
+        gainNode.gain.linearRampToValueAtTime(0, audioContext.currentTime + 2); // Fade to 0 over 2 seconds
+
+        // Pause the audio after the fade-out duration
+        setTimeout(() => {
+            audio.pause();
+            audio.currentTime = 0; // Reset to the start if needed
+        }, 2000); // Wait for 2 seconds to let the fade-out complete
+    }, 6000); // 8000 milliseconds = 6 seconds
+</script>
+
+
 
 <!--
   <audio id="myAudio" autoplay loop>
@@ -28,18 +83,17 @@
 <i class="fa fa-volume-off" aria-hidden="true"  id="toggleButton" onclick="toggleAudio()" hidden></i>
 -->
 
-      <div class="container-fluid" style="padding-top: 3px;">
+    
         <div class="row sticky-row">
             <div class="col-sm-10">
               <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 6%; height: auto; margin: 0 auto;"></a>
             </div>
     </div>
-  </div>
+
 
  
-  <div class="container">
-<div class="row" id="viewscreen">
-    <div class="col-sm-12">
+  <div id="viewscreen">
+
    <section>
 
     <div id="index" class="visible-section" style="padding-top: 190px;">
@@ -50,7 +104,7 @@
               <!--<h1 style="font-size:180px; color: #d7c026;font-weight: bolder;"><span style="font-size: 160px; color: #3a877d; font-weight: bolder; transition: opacity 1s ease-out;">Gradua</span>tion</h1>-->
 
               <a href="#graduate" id="navigate-link">
-                <img src="./img/graduation1.png" class="card-img-top zoom-title2" style="width: 55%; height: auto; margin: 0 auto;">
+                <img src="./img/graduation1.png" class="card-img-top zoom-title2" style="width: 48%; height: auto; margin: 0 auto;">
               </a>
 
           </div>
@@ -70,18 +124,18 @@
     
 <div id="graduate" class="hidden-section"  style="padding-top: 20px;">
 
- <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">YOU JUST GRADUATED!</h1>
+ <h1 class="text-center" style="font-size: 48px; color: #000000; font-weight:900;"><img src="./img/quote.png" alt="" style="width: 6%; height: 2%; vertical-align: top;">YOU JUST GRADUATED!</h1>
  <h3 class="text-center" style="font-weight:lighter;">You have started applying for full-time job and in the meantime, you would…</h3>
 
  <div class="container">
-    <div class="row" style="padding-left: 50px;">
+    <div class="row">
         <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;">
           
           <a href="#parttime" id="navigate-link1" style="text-decoration: none; color: #000000;"> 
 
             <div class="card my-card2" style="padding-top: 20px;">
            <br>
-          <img src="./img/parttime.png" class="card-img-top" style="width: 70%; height: auto; margin: 0 auto;">
+          <img src="./img/parttime.png" class="card-img-top" style="width: 65%; height: auto; margin: 0 auto;">
           <div class="card-body text-center">
             <h5 class="card-title" style="font-weight: bold;">GET A PART-TIME JOB</h5>
           </div>
@@ -133,8 +187,10 @@
             <img src="./img/narrative.png">
             <div class="overlay-text">The benefits of part-time jobs is not just about earning some extra cash. It also extend to discovering yourself, your passions, and what you want to do in life. Working part-time gives you the freedom and independence to explore your interests and helps you become more responsible. You learn to take ownership of your actions, identify your strengths, and work on your weaknesses. And guess what? Making mistakes is totally okay because it's all about learning and growing.
   
-              <div class="text-center" style="padding-top: 120px;">
-                <a href="#parttime1" id="parttime-link" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+              <div class="text-center" style="padding-top: 40px;">
+                <a href="#parttime1" id="parttime-link" class="animated-button1">
+                  <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;">
+              </a>
             </div>
             </div>
             
@@ -156,8 +212,10 @@
           <img src="./img/narrative.png">
           <div class="overlay-text">This can be beneficial for you to gain practical business experience as your parents will help pass on their knowledge and expertise, and possibly instill passion for enterpreneurship. Working in a family business can also provide you with opportunity to learn important skills such as communication, teamwork, and problem-solving. It can also give a sense of responsibility and independence, and help you develop a strong work ethic.
 
-            <div class="text-center" style="padding-top: 150px;">
-            <a href="#family1" id="family-link" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <div class="text-center" style="padding-top: 40px;">
+            <a href="#family1" id="family-link" class="animated-button1">
+              <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;">
+          </a>
           </div>
         </div>
         
@@ -170,7 +228,7 @@
 </div>
 
 
-  <div id="own" class="hidden-section"  style="padding-top: 20px;">
+  <div id="own" class="hidden-section" style="padding-top: 20px;">
 
 
     <div class="row">
@@ -178,11 +236,13 @@
         <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text">
-            <br><br><br>
+           
             Coming up with a business idea can be daunting, but it doesn’t have to be. Start by thinking about what you are passionate about and what you enjoy doing.
 
-            <div class="text-center" style="padding-top: 150px;">
-            <a href="#own-business" id="ownbusiness" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <div class="text-center" style="padding-top: 100px;">
+            <a href="#own-business" id="ownbusiness" class="animated-button1">
+              <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;">
+            </a>
           </div>
         </div>
         
@@ -200,11 +260,13 @@
       <div class="info-container text-center">
         <img src="./img/narrative.png">
         <div class="overlay-text">
-          <br><br><br>
+     
           Given the challenging job market, you start brainstorming for business ideas and researching current market trends to identify profitable opportunities.
 
-          <div class="text-center" style="padding-top: 150px;">
-              <a href="#game1" id="own-link" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+          <div class="text-center" style="padding-top: 80px;">
+              <a href="#loading-business-game" id="loading-link2" class="animated-button1">
+                <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;">
+                </a>
             </div>
           </div>
           
@@ -214,6 +276,41 @@
   </div>
 
 </div>
+
+
+
+<div id="loading-business-game" class="hidden-section" style="padding-top: 20px;">
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-sm-12 text-center">
+      <div class="loader-container">
+        <div class="loader">
+          <!-- Spinner circle, rotating -->
+        </div>
+        <div class="loading-text">Loading Game..</div> <!-- Text stays in the center -->
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="text-center" style="padding-top: 160px;">
+    <a href="#game-title2" id="title-link2" class="animated-button3" style="opacity: 0; transition: opacity 1s ease;">
+      <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 8%; height: auto; margin: 0 auto;">
+    </a>
+  </div>
+</div>
+
+
+<div id="game-title2" class="hidden-section">
+
+  <div class="text-center" style="padding-top: 140px;">
+        <img src="./img/business/business-title.png" style="width: 50%; height: auto;">
+        
+        <div class="text-center">
+          <a href="#game1" id="own-link" class="start-link">start!</a>
+            </div>
+      </div>
+
+</div>
+
 
 <div id="parttime1" class="hidden-section"  style="padding-top: 10px;">
 
@@ -229,15 +326,16 @@
                <div class="header-text">
                 <p style="font-weight: bold;">ENGLISH TEACHER</p>
               </div>
-              <br>
-             <img src="./img/tuition.png" class="card-img-top" style="width: 30%; height: auto; margin: 0 auto;">
-             <div class="card-body text-center">
-               <h5 class="card-title" style="font-weight: bold;">SMARTKID Tuition</h5>
+              <div class="card-body text-center">
+             <img src="./img/tuition.png" class="card-img-top" style="width: 35%; height: auto; margin: 0 auto;">
+          <br><br>
                <small class="card-text">Looking for a passionate and dedicated english teacher</small>
-            <br><br>
+        
+              </div>
+            <div class="card-footer text-center">
             <p style="font-weight: bold; font-size: small;">$25/hour
             <br>3-5 days a week</p>
-             </div>
+          </div>
            </div>
           </a>
        </div>
@@ -250,13 +348,13 @@
                <div class="header-text">
                 <p style="font-weight: bold;">KITCHEN HELPER</p>
               </div>
-              <br>
+              <div class="card-body text-center">
              <img src="./img/kitchenhelper.png" class="card-img-top" style="width: 30%; height: auto; margin: 0 auto;">
-             <div class="card-body text-center">
-               <h5 class="card-title" style="font-weight: bold;">Kitchen Helper</h5>
+             <br><br>
                <small class="card-text"> Looking for kitchen helper with basic culinary experience, able to work in a team and enjoy working with people</small>
-               <br><br>
-               <p style="font-weight: bold; font-size: small;">$400/month
+              </div>
+              <div class="card-footer text-center">
+               <p style="font-weight: bold; font-size: small;">$450/month
                <br>9 hours of working/1hr break</p>
                </div>
              </div>
@@ -270,14 +368,14 @@
                    <div class="header-text">
                     <p style="font-weight: bold;">BARISTA</p>
                   </div>
-                  <br>
-                 <img src="./img/barista.png" class="card-img-top" style="width: 30%; height: auto; margin: 0 auto;">
-                 <div class="card-body text-center">
-                   <h5 class="card-title" style="font-weight: bold;">Baristas</h5>
+                  <div class="card-body text-center">
+            <img src="./img/barista.png" class="card-img-top" style="width: 35%; height: auto; margin: 0 auto;">
+             <br><br>
                    <small class="card-text">Join our team of passionate baristas and serve exceptional coffee to our customers. Gain valuable experience in a fast-paced, fun environment</small>
-                   <br><br>
-                   <p style="font-weight: bold; font-size: small;">$450/month
-                   <br></p>
+                   </div>
+                   <div class="card-footer text-center">
+                   <p style="font-weight: bold; font-size: small;">$500/month
+                   <br>Shift</p>
                    </div>
                  </div>
                 </a>
@@ -291,12 +389,13 @@
                 <div class="header-text">
                   <p style="font-weight: bold;">ROAD RUNNER</p>
                 </div>
-                <br>
-              <img src="./img/roadrunner.png" class="card-img-top" style="width: 40%; height: auto; margin: 0 auto;">
-              <div class="card-body text-center">
-                <h5 class="card-title" style="font-weight: bold;">Roadrunner</h5>
+       
+                <div class="card-body text-center">
+            <img src="./img/roadrunner.png" class="card-img-top" style="width: 40%; height: auto; margin: 0 auto;">
+            <br><br>
                 <small class="card-text">Roadrunner is hiring! The fastest, most reliable and and affordable delivery service in town; using own vehicle</small>
-                <br><br>
+                </div>
+                <div class="card-footer text-center">
                 <p style="font-weight: bold; font-size: small;">$800/month
                 <br>maximum of 5-hour shift</p>
                 </div>
@@ -315,11 +414,13 @@
         <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text">
-            <br><br><br><br>
+            <br><br><br>
             Congratulations on being part of the team! New experience and new skill..not bad at all. You got this!
 
-            <div class="text-center" style="padding-top: 150px;">
-              <a href="#parttime-narrative1" id="notify-link1" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <div class="text-center" style="padding-top: 120px;">
+              <a href="#parttime-narrative1" id="notify-link1" class="animated-button1">
+                <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;">
+            </a>
             </div>
           </div>
           
@@ -356,7 +457,7 @@
 
 
 
-   <div id="family1" class="hidden-section"  style="padding-top: 20px;">
+   <div id="family1" class="container hidden-section"  style="padding-top: 20px;">
 
     
     <h5 class="text-center" style="font-weight:lighter;">
@@ -369,14 +470,14 @@
         What do you want to do?
     </h5>
 
-    <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px; padding-left: 60px;">
+    <div class="container" style="position: -webkit-sticky; position: sticky; padding-bottom: 3px;">
       <div class="row">
           <div class="col-sm-4 card2hover" style="padding-top: 40px; margin: 5px auto;">    
             <a href="#family-narrative" id="narrative-fam" style="text-decoration: none; color: #000000;">
               <div class="card my-card2" style="padding-top: 60px;">
              
              <br>
-            <img src="./img/financing.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
+            <img src="./img/financing.png" class="card-img-top" style="width: 54%; height: auto; margin: 0 auto;">
             <div class="card-body text-center">
               <h4 class="card-title" style="font-weight: bold;">Go for financing</h4>
             
@@ -391,7 +492,7 @@
           <div class="card my-card2" style="padding-top: 10px;">
             
              <br>
-            <img src="./img/forkout.png" class="card-img-top" style="width: 30%; height: auto; margin: 0 auto;">
+            <img src="./img/forkout.png" class="card-img-top" style="width: 28%; height: auto; margin: 0 auto;">
             <div class="card-body text-center">
               <h4 class="card-title" style="font-weight: bold;">Fork out business savings</h4>
        
@@ -405,7 +506,7 @@
             <div class="card my-card2" style="padding-top: 40px;">
               
                <br>
-              <img src="./img/holdon.png" class="card-img-top" style="width: 40%; height: auto; margin: 0 auto;">
+              <img src="./img/holdon.png" class="card-img-top" style="width: 39%; height: auto; margin: 0 auto;">
               <div class="card-body text-center">
                 <h4 class="card-title" style="font-weight: bold;">Hold on the thoughts</h4>
          
@@ -421,20 +522,21 @@
 
 
    
-   <div id="saving" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
+   <div id="saving" class="hidden-section" style="padding-top: 20px;">
 
 
     <div class="row">
       <div class="col-sm-12">
       <div class="info-container text-center">
         <img src="./img/narrative.png">
-        <br><br>
+       
         <div class="overlay-text">Your family’s nasi katok stall has become a huge hit. You usually open from 10 am to 10 pm, but sometimes you sell out early and have to close by 3 pm. To make sure you can stay open all day and keep customers coming, you've decided to “Fork up business savings” to stock up more. This way, you can keep your stall open from 10 am to 10 pm every day.
             
             
 
-            <div class="text-center" style="padding-top: 160px;">
-              <a href="#family-narrative1" id="notify-link2" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <div class="text-center" style="padding-top: 60px;">
+              <a href="#family-narrative1" id="notify-link2" class="animated-button1">
+                <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;"></a>
             </div>
           </div>
           
@@ -447,20 +549,21 @@
 
 
 
-<div id="hold" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
+<div id="hold" class="hidden-section" style="padding-top: 20px;">
 
 
   <div class="row">
     <div class="col-sm-12">
       <div class="info-container text-center">
         <img src="./img/narrative.png">
-        <br><br>
+     
         <div class="overlay-text">You’re currently putting off some decisions because you have big plans to expand your stall in the future. For now, you’ve decided to increase your stock a bit to keep up with the demand. Even so, you know that you’ll have to close as soon as the extra stock runs out. It’s a balancing act, but you’re focused on the bigger picture and the exciting changes to come.
           
           
 
-          <div class="text-center" style="padding-top: 150px;">
-            <a href="#family-narrative1" id="notify-link3" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+          <div class="text-center" style="padding-top: 60px;">
+            <a href="#family-narrative1" id="notify-link3" class="animated-button1">
+              <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;"></a>
           </div>
         </div>
         
@@ -472,7 +575,7 @@
 </div>
 
 
-   <div id="family-narative" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
+   <div id="family-narative" class="hidden-section" style="padding-top: 20px;">
 
 
     <div class="row">
@@ -487,8 +590,9 @@
             Do you also know.....insert information on movable asset can be use as collateral for your financing.....
             
 
-            <div class="text-center" style="padding-top: 120px;">
-              <a href="#family-narrative1" id="notify-link4" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <div class="text-center" style="padding-top: 60px;">
+              <a href="#family-game" id="game-linkfam" class="animated-button1">
+                <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;"></a>
             </div>
           </div>
           
@@ -500,7 +604,154 @@
 </div>
 
 
-<div id="family-narrative1" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
+<div id="family-game" class="hidden-section" style="padding-top: 20px;">
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="info-container text-center">
+        <img src="./img/narrative.png">
+        <br>
+        <div class="overlay-text">While waiting for the statement from the banks and preparing all the required documents, lets play some game. Lets Go!
+       
+
+          <div class="text-center" style="padding-top: 60px;">
+            <a href="#loading-family-game" id="loading-link" class="animated-button1">
+              <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;"></a>
+          </div>
+        </div>
+        
+    </div>
+    </div>
+  
+</div>
+
+</div>
+
+
+<div id="loading-family-game" class="hidden-section" style="padding-top: 20px;">
+  <div class="row" style="padding-top: 100px;">
+    <div class="col-sm-12 text-center">
+      <div class="loader-container">
+        <div class="loader">
+          <!-- Spinner circle, rotating -->
+        </div>
+        <div class="loading-text">Loading Game..</div> <!-- Text stays in the center -->
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="text-center" style="padding-top: 160px;">
+    <a href="#game-title1" id="title-link1" class="animated-button2" style="opacity: 0; transition: opacity 1s ease;">
+      <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 8%; height: auto; margin: 0 auto;">
+    </a>
+  </div>
+</div>
+
+
+<div id="game-title1" class="hidden-section">
+
+  <div class="text-center" style="padding-top: 230px;">
+        <img src="./img/collateral/collateral-title.png" style="width: 60%; height: auto;">
+        
+        <div class="text-center" style="padding-top: 120px;">
+          <a href="#family-quiz" id="quiz-link" class="start-link">start!</a>
+            </div>
+      </div>
+
+</div>
+
+
+<div id="family-quiz" class="hidden-section">
+
+  <!-- Add the audio element here -->
+  <audio id="game-music" loop>
+    <source src="./audio/game-music-loop-7-145285.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="drag-sound" src="./audio/sound-effect.mp3"></audio> <!-- Drag sound -->
+<audio id="drop-sound" src="./audio/sound-effect.mp3"></audio> <!-- Drop sound -->
+
+<div class="game-container">
+        <div id="items">
+          <div id="drag-items" class="color-group" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img src="./img/collateral/Collateral-1.png" draggable="true" ondragstart="drag(event)" id="drag1" class="imgs yes">
+            <img src="./img/collateral/Collateral-2.png" draggable="true" ondragstart="drag(event)" id="drag2" class="imgs yes">
+            <img src="./img/collateral/Collateral-3.png" draggable="true" ondragstart="drag(event)" id="drag3" class="imgs yes">
+            <img src="./img/collateral/NonCollateral-1.png" draggable="true" ondragstart="drag(event)" id="drag9" class="imgs no">
+            <img src="./img/collateral/Collateral-4.png" draggable="true" ondragstart="drag(event)" id="drag4" class="imgs yes">
+            <img src="./img/collateral/NonCollateral-3.png" draggable="true" ondragstart="drag(event)" id="drag11" class="imgs no">
+            <img src="./img/collateral/NonCollateral-4.png" draggable="true" ondragstart="drag(event)" id="drag12" class="imgs no">
+            <img src="./img/collateral/Collateral-7.png" draggable="true" ondragstart="drag(event)" id="drag7" class="imgs yes">
+            <img src="./img/collateral/Collateral-8.png" draggable="true" ondragstart="drag(event)" id="drag8" class="imgs yes">
+            <img src="./img/collateral/NonCollateral-2.png" draggable="true" ondragstart="drag(event)" id="drag10" class="imgs no">
+            <img src="./img/collateral/NonCollateral-5.png" draggable="true" ondragstart="drag(event)" id="drag13" class="imgs no">
+            <img src="./img/collateral/Collateral-5.png" draggable="true" ondragstart="drag(event)" id="drag5" class="imgs yes">
+            <img src="./img/collateral/Collateral-6.png" draggable="true" ondragstart="drag(event)" id="drag6" class="imgs yes">
+            <img src="./img/collateral/NonCollateral-6.png" draggable="true" ondragstart="drag(event)" id="drag14" class="imgs no">
+            <img src="./img/collateral/NonCollateral-7.png" draggable="true" ondragstart="drag(event)" id="drag15" class="imgs no">
+            <img src="./img/collateral/NonCollateral-8.png" draggable="true" ondragstart="drag(event)" id="drag16" class="imgs no">
+          </div>
+        </div>
+    </div>
+      
+    <div class="item-container2">
+      
+  <div id="container1" class="text-right" ondrop="drop(event)" ondragover="allowDrop(event)">
+        </div>
+
+        <div id="container2" class="text-left" ondrop="drop(event)" ondragover="allowDrop(event)">
+          </div>
+      
+      </div>
+    
+     
+
+
+<div class="modal fade" id="gamemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+    <div class="modal-content">
+      <div class="modal-body text-center">
+   <br>
+        <h4>Well Done! You did great!</h4>
+        <br>
+        <a href="#game-credit1" id="credit-link1" class="animated-button1">
+          <img src="./img/next2.2.png" class="card-img-top zoom-button3" data-dismiss="modal" style="width: 10%; height: auto; margin: 0 auto;"></a>
+     <br> <br>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
+<div id="game-credit1" class="hidden-section">
+
+  <div class="text-center">
+    <img src="./img/collateral/game-complete.png" style="width: 30%; height: auto;">
+    
+  </div>
+
+    <div class="credit-container text-center" style="padding-top: 130px;">
+      <img src="./img/collateral/creditnarrative.png" style="width: 35%; height: auto;">
+      <div class="overlay-text"><br><br><br><br>I did not know all of those can either be put as a collateral and cannot be as a collateral. I would need to ask the organisation for more details on this!
+   
+      <div class="text-center" style="padding-top: 70px;">
+        <br><br>
+      <a href="#family-narrative1" id="notify-link4" class="start-link">continue</a>
+      </div>
+        </div>
+      </div>
+
+</div>
+</div>
+
+
+
+<div id="family-narrative1" class="hidden-section"  style="padding-top: 20px;">
 
   <div class="row">
     <div class="col-sm-12">
@@ -533,9 +784,9 @@
             <a href="#own-narrative1" id="narrative-own1" style="text-decoration: none; color: #000000;">
                <div class="card my-card2" style="padding-top: 20px;">
               <br>
-             <img src="./img/homemade.png" class="card-img-top" style="width: 60%; height: auto; margin: 0 auto;">
+             <img src="./img/homemade.png" class="card-img-top" style="width: 67%; height: auto; margin: 0 auto;">
              <div class="card-body text-center">
-               <h3 class="card-title" style="font-weight: bold;">Home-made bakes and desserts</h3>
+               <h3 class="card-title" style="font-weight: bold;">Bakes and Desserts</h3>
              
              </div>
            </div>
@@ -546,7 +797,7 @@
         <a href="#own-narrative2" id="narrative-own2" style="text-decoration: none; color: #000000;">   
            <div class="card my-card2" style="padding-top: 20px;">
               <br>
-             <img src="./img/artscrafts.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
+             <img src="./img/artscrafts.png" class="card-img-top" style="width: 46%; height: auto; margin: 0 auto;">
              <div class="card-body text-center">
                <h3 class="card-title" style="font-weight: bold;">Arts & Crafts related</h3>
         
@@ -572,7 +823,7 @@
    </div>
 
 
-   <div id="own-narrative1" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
+   <div id="own-narrative1" class="hidden-section"  style="padding-top: 20px;">
 
 
     <div class="row">
@@ -581,7 +832,7 @@
         <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text">
-           <br>
+        
             The majority of people enjoy sweets. Generally speaking, one of the flexible and promising small business ideas in the food industry is desserts.
 
             Benefits:
@@ -595,8 +846,9 @@
             
             
 
-            <div class="text-center" style="padding-top: 130px;">
-              <a href="#aftergame" id="game-baked" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <div class="text-center" style="padding-top: 60px;">
+              <a href="#aftergame" id="game-baked" class="animated-button1">
+                <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;"></a>
             </div>
           </div>
           
@@ -608,7 +860,7 @@
 </div>
 
 
-<div id="own-narrative2" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
+<div id="own-narrative2" class="hidden-section"  style="padding-top: 20px;">
 
 
     <div class="row">
@@ -616,11 +868,12 @@
         <div class="info-container text-center">
           <img src="./img/narrative.png">
           <div class="overlay-text">
-            <br><br><br>
+        
             Arts or crafts is an easy to start business. You have the talent, why not make something out of it. Besides you will be doing something that you enjoy doing.
 
-            <div class="text-center" style="padding-top: 150px;">
-              <a href="#aftergame" id="game-art" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <div class="text-center" style="padding-top: 100px;">
+              <a href="#aftergame" id="game-art" class="animated-button1">
+                <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;"></a>
             </div>
           </div>
           
@@ -632,21 +885,22 @@
 </div>
 
 
-<div id="own-narrative3" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
+<div id="own-narrative3" class="hidden-section" style="padding-top: 20px;">
 
 
     <div class="row">
       <div class="col-sm-12">
         <div class="info-container text-center">
           <img src="./img/narrative.png">
-          <br><br>
+         
           <div class="overlay-text">If you’re in search of easy-to-start business art ideas, create an online shop and list all digital assets you’ve created. There’s no shipping of physical products in this direct-to-consumer business model, reducing production costs.
 
             Customers can easily access your store and download purchased digital products. They could be printable artwork, digital illustrations, brushes, fonts, etc.
             
             
-            <div class="text-center" style="padding-top: 120px;">
-              <a href="#aftergame" id="game-digital" class="narrative-button" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+            <div class="text-center" style="padding-top: 60px;">
+              <a href="#aftergame" id="game-digital" class="animated-button1">
+                <img src="./img/next2.2.png" class="card-img-top zoom-button3" style="width: 20%; height: auto; margin: 0 auto;"></a>
             </div>
           </div>
           
@@ -658,18 +912,24 @@
 </div>
 
 
-<div id="game1" class="hidden-section"  style="padding-top: 20px;">
-  <div class="row">
-      <div class="col-sm-12 text-center">
-          <h5 class="text-center" style="font-size: 48px; color: #000000; font-weight:bold;">
-            BUSINESS IDEAS GAME
-          </h5>
-          <h5 class="text-center" style="font-weight:lighter;">
+<div id="game1" class="hidden-section">
+
+  <!-- Add the audio element here -->
+  <audio id="game-music" loop>
+    <source src="./audio/game-music-loop-7-145285.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+<br>
+<div class="text-center">
+        <img src="./img/business/gametitle.png" style="width: 50%; height: auto;">
+          <h5 class="text-center" style="font-weight:lighter; color: #ffffff;">
               While you do your research, lets play a game! Choose any 5 businesses that are now in trend!
               </h5>
-        <br>
+</div>
+          <div class="text-center" style="padding-top: 100px;">
 
-          <div class="container text-center">
+            <audio id="click-sound" src="./audio/sound-effect.mp3" preload="auto"></audio>
+
               <table>
                   <tbody>
                     <tr>
@@ -692,97 +952,40 @@
                       </tr>
                   </tbody>
               </table>
-                <p id="gameresult"></p>
-              <div style="display: flex; justify-content: center; margin-top: 3px;">
-                  <a href="#own1" id="game-link1" class="game-button" style="font-weight: bold; color: #ffffff; display: none;">PROCEED</a>
+              
+             
+              <p id="gameresult"></p>
+              <div style="display: flex; justify-content: center; margin-top: 5px;">
+                  <a href="#game-credit2" id="credit-link2" class="game-button" style="font-weight: bold; color: #ffffff; display: none;">PROCEED</a>
               </div>
           </div>
        
-         
-      </div>
+</div>
+
+
+<div id="game-credit2" class="hidden-section">
+
+  <div class="text-center">
+    <img src="./img/business/game-complete.png" style="width: 30%; height: auto;">
+    
   </div>
-</div>
 
-
-
-
-<div id="game2" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
-
-  <div class="row">
-    <div class="col-sm-12 text-center">
-          
-          <h4 class="text-center" style="font-size: 48px; color: #000000; font-weight:bold;">ARTS AND CRAFTS GAME</h4>
-          <h5 class="text-center" style="font-weight:lighter;">
-            Find the item needed for Arts and Crafts!
-        </h5>
-
-          <br>
-          <div class="table-container text-center">
-              <table>
-                  <tbody>
-                      <tr>
-                          <td><img src="./img/groceries icons/green/arts1.png" alt="Box" data-item2="1" onclick="checkItem2(1)"></td>
-                          <td><img src="./img/groceries icons/green/baked1.png" alt="Box" data-item2="2" onclick="checkItem2(2)"></td>
-                          <td><img src="./img/groceries icons/green/creditlit-49.png" alt="Box" data-item2="3" onclick="checkItem2(3)"></td>
-                          <td><img src="./img/groceries icons/green/creditlit-51.png" alt="Box" data-item2="4" onclick="checkItem2(4)"></td>
-                          <td><img src="./img/groceries icons/green/creditlit-57.png" alt="Box" data-item2="5" onclick="checkItem2(5)"></td>
-                      </tr>
-                      <tr>
-                          <td><img src="./img/groceries icons/green/arts2.png" alt="Box" data-item2="6" onclick="checkItem2(6)"></td>
-                          <td><img src="./img/groceries icons/green/baked2.png" alt="Box" data-item2="7" onclick="checkItem2(7)"></td>
-                          <td><img src="./img/groceries icons/green/arts3.png" alt="Box" data-item2="8" onclick="checkItem2(8)"></td>
-                          <td><img src="./img/groceries icons/green/creditlit-66.png" alt="Box" data-item2="9" onclick="checkItem2(9)"></td>
-                          <td><img src="./img/groceries icons/green/creditlit-67.png" alt="Box" data-item2="10" onclick="checkItem2(10)"></td>
-                      </tr>
-                      <tr>
-                          <td><img src="./img/groceries icons/green/baked3.png" alt="Box" data-item2="11" onclick="checkItem2(11)"></td>
-                          <td><img src="./img/groceries icons/green/arts4.png" alt="Box" data-item2="12" onclick="checkItem2(12)"></td>
-                          <td><img src="./img/groceries icons/green/baked4.png" alt="Box" data-item2="13" onclick="checkItem2(13)"></td>
-                          <td><img src="./img/groceries icons/green/arts5.png" alt="Box" data-item2="14" onclick="checkItem2(14)"></td>
-                          <td><img src="./img/groceries icons/green/baked5.png" alt="Box" data-item2="15" onclick="checkItem2(15)"></td>
-                      </tr>
-                  </tbody>
-                  <tfoot>
-                    <p id="artsresult"></p>
-                    <a href="#aftergame" id="game-link2" class="game-button2" style="font-weight: bold; color: #ffffff; display: none;">PROCEED</a></tfoot>
-                    <br>
-              </table>
-          </div>
-
-</div>
-</div>
-
-</div>
-
-
-<div id="game3" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
-
-  <div class="row">
-    <div class="col-sm-12">
-          
-          <h4 class="text-center" style="font-size: 48px; color: #000000; font-weight:bold;">DIGITAL WORK GAME</h4>
-          <h5 class="text-center" style="font-weight:lighter;">
-            Find the item needed for Digital Work!
-        </h5>
-
-          <br><br>
-
-          <h3 style="text-align: center;">GAME IN PROGRESS</h3>
-
-          <br><br>
-
-          <div class="text-right" style="padding-top: 50px;">
-            <a href="#aftergame" id="game-link3" class="btn btn-secondary btn-lg" style="font-weight: bold; color: #ffffff;">PROCEED</a>
+    <div class="credit-container text-center" style="padding-top: 100px;">
+      <img src="./img/business/creditnarrative.png" style="width: 35%; height: auto;">
+      <div class="overlay-text">So, these are the 5 businesses that are currently on trend now. Hmm, I need to do some more research on those and choose one out of those five!
+   
+      <div class="text-center" style="padding-top: 60px;">
+        <br><br>
+      <a href="#own1" id="game-link1" class="start-link">continue</a>
+      </div>
+        </div>
       </div>
 
-
-</div>
-</div>
-
 </div>
 
 
-<div id="aftergame" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
+
+<div id="aftergame" class="hidden-section" style="padding-top: 20px;">
 
 
   <div class="row">
@@ -806,45 +1009,127 @@
 
 </div>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+   const stickyRow = document.querySelector(".sticky-row");
+   const targets = [document.querySelector("#game-title1"), document.querySelector("#family-quiz"), document.querySelector("#game-credit1")];
+ 
+   const observer = new IntersectionObserver(
+     (entries) => {
+       let shouldHideStickyRow = false;
+ 
+       // Check the visibility of each observed element
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           shouldHideStickyRow = true;
+         }
+       });
+ 
+       // Toggle the visibility of the sticky-row based on any intersecting element
+       if (shouldHideStickyRow) {
+         stickyRow.style.display = "none";
+       } else {
+         stickyRow.style.display = "flex"; // Or your desired display value
+       }
+     },
+     { threshold: 0.2 } // Adjust the visibility threshold as needed
+   );
+ 
+   // Observe each target element
+   targets.forEach((target) => {
+     if (target) {
+       observer.observe(target);
+     }
+   });
+ });
+ 
+ 
+ </script>
+ 
+ 
 
 
+<script>
+ document.addEventListener("DOMContentLoaded", () => {
+  const stickyRow2 = document.querySelector(".sticky-row");
+  const targets = [document.querySelector("#game-title2"), document.querySelector("#game1"), document.querySelector("#game-credit2")];
+
+  const observer2 = new IntersectionObserver(
+    (entries) => {
+      let shouldHideStickyRow = false;
+
+      // Check the visibility of each observed element
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          shouldHideStickyRow = true;
+        }
+      });
+
+      // Toggle the visibility of the sticky-row based on any intersecting element
+      if (shouldHideStickyRow) {
+        stickyRow2.style.display = "none";
+      } else {
+        stickyRow2.style.display = "flex"; // Or your desired display value
+      }
+    },
+    { threshold: 0.2 } // Adjust the visibility threshold as needed
+  );
+
+  // Observe each target element
+  targets.forEach((target) => {
+    if (target) {
+      observer2.observe(target);
+    }
+  });
+});
+
+
+</script>
+
+
+
+
+
+<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
     <div class="modal-content" id="open-email" style="background-color: transparent; border: none;">
       <div class="modal-body">
    
-      <div id="accept-email">
+        <div class="container">
+          <div class="row">
+          <div id="accept-email">
       
-        <a href="workforce.html" id="" class="accept-button">ACCEPT</a>
+            <a href="workforce.html" id="" class="accept-button">ACCEPT</a>
+          </div>
+        </div>
       </div>
+     
     </div>
     </div>
   </div>
 </div>
 
 
+
+
+
     </section>
-</div>
 
 </div>
 
-</div>
-<br>
 <!--
 <div id="footer">
 
   <div class="text-center">
     
-    <p style="vertical-align: middle;">© 2024 Copyright: CreditLit | Powered By Pixelated Enterprise</p>
+    <p style="vertical-align: middle;">BDCB: CreditLit | Powered By Pixelated Enterprise</p>
   </div>
 
 
 </div>
 -->
-<script>
 
-
-</script>
 
 
  <!-- JavaScript -->
