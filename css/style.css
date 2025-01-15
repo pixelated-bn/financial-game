@@ -227,7 +227,7 @@ html, body{
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: 300px;
+  height: 260px;
   background-position: center;
   /*background-color: transparent !important;*/
   background-color: #ffffff;
@@ -248,7 +248,7 @@ html, body{
 
 .my-card2:hover {
   background-image: url('../img/cardhover.png');
-  background-size: 100% 300px;
+  background-size: 100% 260px;
   background-position: center;
   transform: scale(0.95) !important; /* Ensure the scale change on hover is applied */
   transition: transform 0.5s ease-in-out; /* Apply transition specifically to transform on hover */
@@ -295,7 +295,7 @@ html, body{
 
 .selection-card {
   position:relative;
-  width: 50%;
+  width: 90%;
   margin: 0 auto;
   transition: background-image 0.5s ease-in-out;
 }
@@ -391,7 +391,7 @@ html, body{
   left: 50%; /* Adjust as needed */
   right: 20%; /* Adjust as needed */
   color: black; /* Adjust text color */
-  font-weight:lighter;
+  font-weight: normal;
   font-size: 17px;
   text-align: center;
   opacity: 0; /* Start hidden */
@@ -412,7 +412,7 @@ html, body{
   left: 50%; /* Adjust as needed */
   right: 20%; /* Adjust as needed */
   color: black; /* Adjust text color */
-  font-weight:lighter;
+  font-weight: normal;
   font-size: 17px;
   text-align: center;
   opacity: 0; /* Start hidden */
@@ -424,14 +424,13 @@ html, body{
   text-align: center;
   left: 50%; /* Adjust as needed */
   color: black; /* Adjust text color */
-  font-weight:lighter;
+  font-weight: normal;
   font-size: 24px;
   text-decoration: none;
 }
 
-.credit-container img {
-  width: 50%;
-  height: 550px;
+.credit-container{
+  text-align: left;
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
   animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
@@ -442,7 +441,7 @@ html, body{
   left: 50%; /* Adjust as needed */
   right: 20%; /* Adjust as needed */
   color: black; /* Adjust text color */
-  font-weight:lighter;
+  font-weight: normal;
   font-size: 17px;
   text-align: center;
   opacity: 0; /* Start hidden */
@@ -464,7 +463,7 @@ html, body{
   left: 30%; /* Adjust as needed */
   right: 28%; /* Adjust as needed */
   color: black; /* Adjust text color */
-  font-weight:lighter;
+  font-weight: normal;
   font-size: 17px;
   text-align: center;
   opacity: 0; /* Start hidden */
@@ -485,7 +484,7 @@ html, body{
   left: 0; /* Adjust as needed */
   right: 0; /* Adjust as needed */
   color: black; /* Adjust text color */
-  font-weight:lighter;
+  font-weight: normal;
   font-size: 17px;
   margin-left: 770px;
   opacity: 0; /* Start hidden */
@@ -734,6 +733,7 @@ html, body{
   overflow: hidden;
   white-space: pre-wrap; /* Allows wrapping */
   animation: blink-caret 0.15s step-end infinite;
+  font-weight: normal;
 }
 
 @keyframes blink-caret {
@@ -985,7 +985,7 @@ table img {
 }
 
 .zoom-button:hover {
-  content: url('../img/next2.png');
+  content: url('../img/next-btn2.png');
   width: 20%;
   height: auto;
 }
@@ -1214,12 +1214,12 @@ table img {
   flex-wrap: wrap; /* Allows items to wrap onto new lines */
   justify-content: center; /* Centers the items horizontally */
   align-items: flex-start; /* Aligns items to the top of the container */
-  gap: 50px; /* Optional: Adds spacing between the options */
+  gap: 30px; /* Optional: Adds spacing between the options */
 }
 
 .options button {
-  width: 340px; /* Set a fixed width for buttons */
-  height: 110px; /* Set a fixed height for buttons */
+  width: 420px; /* Set a fixed width for buttons */
+  height: 90px; /* Set a fixed height for buttons */
   margin: 2px;
 }
 
@@ -1344,8 +1344,8 @@ button:hover {
 }
 
 
-.imgs{
-width: 12%;
+.monument{
+width: 50%;
 padding-bottom: 8px;
 padding-right: 4px;
 height: auto;
@@ -1385,11 +1385,11 @@ height: auto;
 }
 
 #game-title1 {
-  position: fixed; /* Change to relative */
-  width: 100%;
-  height: 96%; /* Cover the full viewport height */
-  background-image: url('../img/collateral/collateral-background.png');
-  background-size: contain;
+  position:relative; /* Change to relative */
+  width: 100vw;
+  height: 100vh; /* Cover the full viewport height */
+  background-image: url('../img/landmark/title-bg.png');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
@@ -1400,7 +1400,7 @@ height: auto;
   position: relative; /* Change to relative */
   width: 100vw;
   height: 100vh; /* Cover the full viewport height */
-  background-image: url('../img/business/business-background.png');
+  background-image: url('../img/wedding/game-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1421,10 +1421,10 @@ height: auto;
 }
 
 #game-title4 {
-  position: relative; /* Change to relative */
+  position: absolute; /* Change to relative */
   width: 100vw;
   height: 100vh; /* Cover the full viewport height */
-  background-image: url('../img/wordsearch/wordsearch-background.png');
+  background-image: url('../img/landmark/title-bg.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1433,6 +1433,18 @@ height: auto;
 }
 
 #game1 {
+  position: relative; /* Change to relative */
+  width: 100vw;
+  height:100vh;/* Cover the full viewport height */
+  background-image: url('../img/business/business-game.png');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+#business-game {
   position: relative; /* Change to relative */
   width: 100vw;
   height:100vh;/* Cover the full viewport height */
@@ -1470,22 +1482,33 @@ height: auto;
 }
 
 #game-credit1 {
-  position: static; /* Change to relative */
+  position: relative; /* Change to relative */
   width: 100vw;
-  height:35vh;/* Cover the full viewport height */
-  background-image: url('../img/collateral/collateral-credit.png');
-  background-size:contain;
+  height:90vh;/* Cover the full viewport height */
+  background-image: url('../img/landmark/complete.png');
+  background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
-  padding: 30px;
 }
 
-#game-credit2 {
-  position: fixed; /* Change to relative */
+#game-credit2a {
+  position: relative; /* Change to relative */
   width: 100vw;
   height:100vh;/* Cover the full viewport height */
-  background-image: url('../img/business/business-credit.png');
+  background-image: url('../img/wedding/complete-bg.png');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+#game-credit2b {
+  position: relative; /* Change to relative */
+  width: 100vw;
+  height:100vh;/* Cover the full viewport height */
+  background-image: url('../img/wedding/complete-bg.png');
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1506,10 +1529,10 @@ height: auto;
 }
 
 #game-credit4 {
-  position: fixed; /* Change to relative */
+  position: relative; /* Change to relative */
   width: 100vw;
   height:100vh;/* Cover the full viewport height */
-  background-image: url('../img/wordsearch/wordsearch-credit.png');
+  background-image: url('../img/quiz/quiz-credit.png');
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1520,7 +1543,7 @@ height: auto;
 .start-link {  
   color: #3a877d;
   border: none;
-  font-size: 22px;
+  font-size: 28px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   text-decoration: none;
@@ -1537,7 +1560,7 @@ height: auto;
 .start-link2 {  
   color: #ffffff;
   border: none;
-  font-size: 22px;
+  font-size: 28px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   text-decoration: none;
@@ -1647,10 +1670,10 @@ height: auto;
 
 .vertical-line {
   position: absolute;
-  top: 530px; /* Adjust this value to control the distance from the top */
+  top: 420px; /* Adjust this value to control the distance from the top */
   left: 50%;
   width: 1px; /* Line thickness */
-  height: 35px; /* Line height */
+  height: 28px; /* Line height */
   background-color: #35867a; /* Line color */
   transform: translateX(-50%); /* Center the line horizontally */
 }
@@ -1661,3 +1684,303 @@ height: auto;
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
   animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
 }
+
+
+.choice-card {
+  text-decoration: none;
+  color: #35867a; /* Initial text color */
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* CSS for the text when hovered */
+.choice-card:hover {
+  color: #d7c026; /* Text color on hover */
+  text-decoration: none; /* Optional: if you want underline on hover */
+}
+
+.card-title {
+  font-weight: normal;
+}
+
+#name {
+  position: absolute; 
+  top: 45%; 
+  left: 35%; 
+  transform: translate(-50%, -50%); 
+  color: #35867a; 
+  font-weight: bold;
+}
+
+#score{
+  padding-top: 30px;
+  padding-left: 0;
+  padding-right: 400px;
+  position: static
+}
+
+
+#name3 {
+  position: absolute; 
+  top: 45%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  color: #35867a; 
+  font-weight: bold;
+}
+
+#wedding-game {
+  position: relative; /* Change to relative */
+  width: 100vw;
+  height:100vh;/* Cover the full viewport height */
+  background-image: url('../img/wedding/wedding-game.png');
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  position: absolute;
+  top: 70%;
+  right: 450px;
+  transform: translateY(-50%);
+}
+.card-game {
+  width: 100px;
+  height: 130px;
+  background: url('../img/wedding/card-cover.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items:center;
+  justify-content:right;
+  font-size: 24px;
+  cursor: pointer;
+  
+  border: 1px solid #d4c029;
+}
+.hidden {
+  background-color: rgb(255, 255, 255);
+}
+.card-game img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+#message {
+  position: absolute;
+  bottom: 50%;
+  right: 200px;
+  transform: translateY(-50%);
+  background: #05050500;
+  padding: 10px;
+  border: 1px solid #eaeee900;
+  border-radius: 5px;
+  font-family: 'Jersey 10', sans-serif;
+  font-size: 30px;
+  color: aquamarine;
+}
+.title-image {
+  width: 30%; /* Adjust the size as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 15%;
+  left: 30px;
+  transform: translate(30 -10%);
+}
+.timer {
+  display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  position: absolute;
+  right: 300px;
+  transform: translate(50%, -50%);
+  font-size: 40px;
+  font-weight: bold;
+  color: #35867a;
+  top: 40%;
+}
+.timer .colon {
+  width: 100px; /* Smaller width */
+  height: 50px; /* Fixed height */
+  object-fit: contain; /* Ensure the image fits within the specified dimensions */
+  margin: 0 5px; /* Adjust the margin */
+}
+.score {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 52%;
+  right: 300px;
+  transform: translate(50%, -50%);
+  background: #22a2f700;
+  padding: 10px;
+  border: 1px solid #2d03c500;
+  border-radius: 5px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #35867a;
+  background-size: cover;
+  margin: 0 auto;
+  width: 200px;
+  height: 100px;
+}
+
+
+.text-box{
+  font-size: 18px;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding: 10px;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 40%;
+  left: 10px;
+  transform: translate(5%, -10%);
+  font-family: 'Proxima Nova Bold Italic', sans-serif;
+}
+.timer-text-box{
+  font-size: 40px;
+  font-weight: bold;
+  color: #35867a;
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding: 10px;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 40%;
+  left: 10px;
+  transform: translate(5%, -10%);
+}
+
+#wedding1{
+  padding-top: 180px; 
+  padding-left: 120px;
+  
+  border: 3px solid;
+}
+
+#wedding2{
+  margin-top: 100px; 
+  padding-top: 300px;
+  padding-left: 200px;
+  
+  border: 3px solid;
+}
+
+#wedding-score1{
+  padding-left: 200px;
+  font-size: 36px;
+  color: #35867a;
+  font-weight: bold;
+  margin-top: 200px;
+}
+
+#wedd-box{
+  padding-left: 280px;
+    text-align: left;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+ 
+}
+
+#weddscore{
+  padding-top: 30px;
+  padding-left: 200px;
+    text-align: left;
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+}
+
+#name2 {
+  position: absolute; 
+  top: 73%; 
+  left: 32%; 
+  transform: translate(-50%, -50%); 
+  color: #35867a; 
+  font-weight: bold;
+  font-size: 22px;
+}
+
+#wedding-score2{
+  padding-left: 380px;
+  font-size: 24px;
+  color: #35867a;
+  font-weight: bold;
+  margin-top: 200px;
+}
+
+.location {
+  background-color: whitesmoke;
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px dotted #d4c029;
+}
+
+.monument {
+  width: 100%; /* Make sure the image takes the full width of its container */
+  max-height: 150px; /* Limit the maximum height of the images */
+  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
+  margin-bottom: 10px; /* Space between the image and location box */
+}
+
+.japan {
+  width: 100%; /* Make sure the image takes the full width of its container */
+  max-height: 150px; /* Limit the maximum height of the images */
+  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 25px; /* Space between the image and location box */
+}
+
+#vacay-box {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  margin-bottom: 20px; /* Add some space between rows */
+  width: 100%; /* Ensure they take up 100% of their container width */
+}
+
+#vacay-row {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+
+
+.item-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%; /* Ensure container takes full height */
+}
+
+.imgs {
+  width: 12%; /* Set the width relative to the container's width */
+  height: auto; /* Maintain aspect ratio */
+  padding-right: 5px;
+}
+
+
