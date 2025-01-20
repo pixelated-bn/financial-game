@@ -185,14 +185,7 @@ html, body{
     z-index: 0; /* Ensure it is below the inner circle */
   }
   
-  .factor-up-image {
-    width: 30px; /* Adjust size as needed */
-    height: auto;
-    z-index: 2; /* Make sure it's on top */
-    position: relative; /* Ensure it positions beside the circular progress */
-    transform: translateX(0px); /* Optional: Adjust position */
-  }
-  
+
 
   .my-card {
     position: relative;
@@ -354,9 +347,9 @@ html, body{
 }
 
 #section {
-  margin-left: 15%; /* Offset for creditmeter */
-  margin-right: 20%; /* Offset for factormeter */
+  margin-left: 17%; /* Offset for creditmeter */
   justify-content: center;
+  padding-right: 40px;
 }
 
 .image-container {
@@ -400,21 +393,22 @@ html, body{
 }
 
 .info-container2 img {
-  width: 60%;
-  height: 570px;
+  width: 63%;
+  height: auto;
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
   animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
 }
 
 .info-container2 .overlay-text {
-  top: 46%; /* Adjust as needed */
+  top: 40%; /* Adjust as needed */
   left: 50%; /* Adjust as needed */
-  right: 20%; /* Adjust as needed */
+  right: 10%; /* Adjust as needed */
   color: black; /* Adjust text color */
   font-weight: normal;
   font-size: 17px;
   text-align: center;
+  justify-content: center;
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
   animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
@@ -588,49 +582,21 @@ html, body{
 }
 
 
-.index-button {
-  background-color: #3a877d;    
-  color: white;
-  border: none;
-  padding: 10px 30px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  text-decoration: none;
-  border-radius: 10px;
-}
-
-.index-button:hover {
-  background-color: #d7c026;
-  transform: scale(1.1);
-  color: #fff;
-  text-decoration: none;
-
-}
-
-.index-button:active {
-  background-color: #35867a;
-  transform: scale(0.9);
-  color: #fff;
-  text-decoration: none;
-}
-
-
 .game-button {
-  background-color: #3a877d;    
+  background-color: #d7c026;    
   color: white;
   border: none;
-  padding: 10px 10px;
+  padding: 10px 30px 13px 30px;
   width: 20%;
   font-size: 18px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .game-button:hover {
-  background-color: #d7c026;
+  background-color: #35867a;
   transform: scale(0.9);
   color: #fff;
   text-decoration: none;
@@ -734,6 +700,7 @@ html, body{
   white-space: pre-wrap; /* Allows wrapping */
   animation: blink-caret 0.15s step-end infinite;
   font-weight: normal;
+  line-height: 150%;
 }
 
 @keyframes blink-caret {
@@ -741,16 +708,43 @@ html, body{
   50% { border-color: orange; }
 }
 
-.hidden-section {
+
+.hidden {
   display: none;
 }
-.visible-section {
+.visible {
   display: block;
 }
+
+.hidden-section {
+  display: none;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+}
+.visible-section {
+ opacity: 0; /* Start hidden */
+  transition: opacity 0.2s ease-in-out, background-image 0.5s ease-in-out;
+  animation: fadeIn3 0.4s ease-in-out 0.2s forwards; /* Animation with delay */
+}
+
+@keyframes fadeIn3 {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-out {
+  opacity: 0; /* Fade out effect */
+  transition: opacity 0.2s ease-in-out;
+  pointer-events: none; /* Disable interaction during fade-out */
+}
+
 .fade-out {
   opacity: 0;
   transition: opacity 1.2s ease-out;
 }
+
 .fade-in {
   opacity: 1;
   transition: opacity 1s ease-in;
@@ -813,11 +807,16 @@ html, body{
   }
 }
 
-
 .factor-up-image {
+  width: 30px; /* Adjust size as needed */
+  height: auto;
+  z-index: 2; /* Make sure it's on top */
+  position: relative; /* Ensure it positions beside the circular progress */
+  transform: translateX(0px); /* Optional: Adjust position */
   opacity: 0; /* Start with the image hidden */
   transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
 }
+
 
 .factor-up-image.visible {
   opacity: 1; /* Show image with transition */
@@ -875,7 +874,7 @@ table {
   table-layout: auto; /* Adjust table to fit content width */
   width: auto; /* Table adjusts to fit its content */
   margin: 0 auto; /* Center table horizontally */
-  width: 30%; /* Adjust to desired percentage */
+  width: 60%; /* Adjust to desired percentage */
 }
 
 td {
@@ -890,6 +889,11 @@ table img {
   width: 100%; /* Adjust to desired percentage */
   height: auto; /* Maintain aspect ratio */
 }
+
+table img:hover {
+  cursor: pointer;
+}
+
 
 #result {
   margin-top: 10px;
@@ -942,16 +946,7 @@ table img {
 }
 
 
-.animated-button {
-  opacity: 0; /* Initially hidden */
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s, opacity 1s;
-}
 
-.animated-button:hover {
-  
-  transform: scale(0.9);
-}
 
 .animated-button2 {
   opacity: 0; /* Initially hidden */
@@ -1011,10 +1006,11 @@ table img {
 .phone-call {
   background-image: url('../img/phonecall.png');
   width: 100%; /* Adjust as needed */
-  height: 50vh; /* Adjust as needed */
+  height: 60vh; /* Adjust as needed */
   background-size: contain; /* Adjust as needed (cover, contain, etc.) */
   background-position: center;
   background-repeat: no-repeat;
+  margin-top: 30px;
 }
 
 #phone-answer {
@@ -1136,19 +1132,6 @@ table img {
 }
 
 
-.index-button {
-  background-color: #3a877d;    
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  text-decoration: none;
-  border-radius: 10px;
-  margin-left: 5px;
-}
-
 #wordlist{
   padding-right: 150px;
   justify-content: center;
@@ -1197,17 +1180,6 @@ table img {
      left: 15px;
  }
 
- .timer {
-     position: relative;
-     justify-content: center;
- }
-
- #timer {
-  color:#35867a;
-  font-size: 35px;
-  font-weight: bold;
- }
-
 
  .options {
   display: flex;
@@ -1219,8 +1191,8 @@ table img {
 
 .options button {
   width: 420px; /* Set a fixed width for buttons */
-  height: 90px; /* Set a fixed height for buttons */
-  margin: 2px;
+  height: 98px; /* Set a fixed height for buttons */
+  margin: 1px;
 }
 
 .options .option-top {
@@ -1247,6 +1219,7 @@ table img {
      padding-top: 15px;
      color: #fff;
      border-top: 2px dashed #7a797a;
+     justify-content: flex-end;
  }
 
  ol {
@@ -1444,10 +1417,11 @@ height: auto;
   padding: 0;
 }
 
+/*
 #business-game {
-  position: relative; /* Change to relative */
+  position: relative; /* Change to relative 
   width: 100vw;
-  height:100vh;/* Cover the full viewport height */
+  height:100vh;/* Cover the full viewport height
   background-image: url('../img/business/business-game.png');
   background-size:cover;
   background-position: center;
@@ -1455,6 +1429,7 @@ height: auto;
   margin: 0;
   padding: 0;
 }
+*/
 
 .game-container {
   position: relative; /* Change to relative */
@@ -1481,21 +1456,24 @@ height: auto;
   padding: 0;
 }
 
+/*
 #game-credit1 {
-  position: relative; /* Change to relative */
+  position: relative; /* Change to relative 
   width: 100vw;
-  height:90vh;/* Cover the full viewport height */
+  height:90vh;/* Cover the full viewport height 
   background-image: url('../img/landmark/complete.png');
   background-size:cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
 }
+*/
 
+/*
 #game-credit2a {
-  position: relative; /* Change to relative */
+  position: relative; /* Change to relative 
   width: 100vw;
-  height:100vh;/* Cover the full viewport height */
+  height:100vh;/* Cover the full viewport height 
   background-image: url('../img/wedding/complete-bg.png');
   background-size:cover;
   background-position: center;
@@ -1503,11 +1481,13 @@ height: auto;
   margin: 0;
   padding: 0;
 }
+*/
 
+/*
 #game-credit2b {
-  position: relative; /* Change to relative */
+  position: relative; /* Change to relative 
   width: 100vw;
-  height:100vh;/* Cover the full viewport height */
+  height:100vh;/* Cover the full viewport height 
   background-image: url('../img/wedding/complete-bg.png');
   background-size:cover;
   background-position: center;
@@ -1515,11 +1495,14 @@ height: auto;
   margin: 0;
   padding: 0;
 }
+*/
 
+
+/*
 #game-credit3 {
-  position: static; /* Change to relative */
+  position: static; /* Change to relative 
   width: 100vw;
-  height:100vh;/* Cover the full viewport height */
+  height:100vh;/* Cover the full viewport height 
   background-image: url('../img/quiz/quiz-credit.png');
   background-size:cover;
   background-position: center;
@@ -1527,11 +1510,13 @@ height: auto;
   margin: 0;
   padding: 0;
 }
+*/
 
+/*
 #game-credit4 {
-  position: relative; /* Change to relative */
+  position: relative; /* Change to relative 
   width: 100vw;
-  height:100vh;/* Cover the full viewport height */
+  height:100vh;/* Cover the full viewport height 
   background-image: url('../img/quiz/quiz-credit.png');
   background-size:cover;
   background-position: center;
@@ -1539,6 +1524,7 @@ height: auto;
   margin: 0;
   padding: 0;
 }
+*/
 
 .start-link {  
   color: #3a877d;
@@ -1665,13 +1651,13 @@ height: auto;
 #question-words{
   color: #35867a;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 24px;
 }
 
 .vertical-line {
   position: absolute;
   top: 420px; /* Adjust this value to control the distance from the top */
-  left: 50%;
+  left: 49%;
   width: 1px; /* Line thickness */
   height: 28px; /* Line height */
   background-color: #35867a; /* Line color */
@@ -1689,8 +1675,8 @@ height: auto;
 .choice-card {
   text-decoration: none;
   color: #35867a; /* Initial text color */
-  font-size: 24px;
-  font-weight: normal;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* CSS for the text when hovered */
@@ -1729,25 +1715,23 @@ height: auto;
   font-weight: bold;
 }
 
+
 #wedding-game {
   position: relative; /* Change to relative */
   width: 100vw;
-  height:100vh;/* Cover the full viewport height */
-  background-image: url('../img/wedding/wedding-game.png');
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  height:100vh; 
   margin: 0;
   padding: 0;
 }
+
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 100px);
   grid-gap: 10px;
   position: absolute;
-  top: 70%;
-  right: 450px;
+  top: 65%;
+  right: 500px;
   transform: translateY(-50%);
 }
 .card-game {
@@ -1812,7 +1796,7 @@ height: auto;
   width: 100px; /* Smaller width */
   height: 50px; /* Fixed height */
   object-fit: contain; /* Ensure the image fits within the specified dimensions */
-  margin: 0 5px; /* Adjust the margin */
+  margin: 0; /* Adjust the margin */
 }
 .score {
   display: flex;
@@ -1884,12 +1868,13 @@ height: auto;
   border: 3px solid;
 }
 
+
 #wedding-score1{
-  padding-left: 200px;
-  font-size: 36px;
+  padding-left: 190px;
+  font-size: 38px;
   color: #35867a;
   font-weight: bold;
-  margin-top: 200px;
+  margin-top: 230px;
 }
 
 #wedd-box{
@@ -1984,3 +1969,435 @@ height: auto;
 }
 
 
+.index-button {
+    background-color: #d7c026;    
+    color: white;
+    border: none;
+    padding: 10px 40px 15px 40px;
+    width: 50%;
+    font-size: 24px;
+    font-weight: normal;
+    opacity: 0; /* Initially hidden */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, opacity 1s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  
+  .index-button:hover {
+    background-color: #35867a;
+    transform: scale(1.1);
+    color: #fff;
+    text-decoration: none;
+
+  }
+ 
+
+  #game-intro{
+    padding-top: 200px;
+    justify-content: center;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  .start-button {
+    background-color: #d7c026;    
+    color: white;
+    border: none;
+    padding: 12px 10px;
+    width: 18%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  
+  .start-button:hover {
+    background-color: #35867a;
+    transform: scale(0.9);
+    color: #fff;
+    text-decoration: none;
+  
+  }
+
+  #call-convo{
+    padding-top: 80px;
+  }
+
+  .phone-img{
+   width: 75%; 
+   height: auto; 
+   margin: 0 auto;
+  }
+
+  .tooltip-container {
+    position: relative;
+  }
+  
+  .tooltip-text {
+    visibility: hidden;
+    width: 140px;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 80%; /* Position above the image */
+    left: 50%;
+    margin-left: -60px; /* Adjust the tooltip to be centered */
+    opacity: 0;
+    transition: opacity 0.3s;
+    border: 1px solid #35867a;
+  }
+  
+  .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  #email-img {
+    opacity: 0; /* Start with the image hidden */
+    animation: zoomInOut 0.8s ease-in-out forwards; /* Apply animation for display */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Keyframes animation for zooming in and out */
+@keyframes zoomInOut {
+    0% {
+        transform: scale(0.8); /* Start smaller */
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1); /* Return to normal size */
+        opacity: 1; /* Ensure it stays visible */
+    }
+}
+
+
+
+/* Styling for the card */
+
+
+/* Title styling */
+#scene5a h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+/* Subtitle styling */
+#scene5a p {
+  font-style: italic;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+#scene5b h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 48px;
+  margin-top: 20px;
+}
+
+/* Subtitle styling */
+#scene5b p {
+  font-style: italic;
+  font-weight: normal;
+  color: #000000;
+  margin-bottom: 30px;
+  font-size: 26px;
+}
+
+/* Loan details styling */
+/* Loan details container */
+.loan-details{
+  text-align: center;
+}
+
+.details {
+  gap: 2px; /* Reduce the horizontal gap between label and value */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Ensures labels and values are vertically aligned */
+  margin: 5px 0;
+  max-width: 500px; /* Controls width to keep details compact */
+  margin-left: auto; /* Centers the block horizontally */
+  margin-right: auto; /* Centers the block horizontally */
+  border: 3px solid;
+}
+
+
+.label {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: right; /* Left aligns the label */
+  margin: 5px 0;
+  color: #000000;
+}
+
+.value {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left; /* Right aligns the value */
+  margin: 5px 0;
+  color: #d7c026;
+  font-style: italic;
+}
+
+.wedd-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Ensures the content is centered */
+}
+
+.between {
+  flex: 0 0 10px; /* Set a small fixed width for space */
+}
+
+
+/* Horizontal rule styling */
+#scene5a hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Monthly pay heading */
+#scene5a .monthly-pay {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* Monthly pay amount styling */
+#scene5a .amount {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  color: #d7c026;
+}
+
+#scene5b hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 20px 0;
+}
+
+/* Monthly pay heading */
+#scene5b .monthly-pay {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+/* Monthly pay amount styling */
+#scene5b .amount {
+  font-size: 36px;
+  font-weight: bold;
+  font-style: italic;
+  color: #d7c026;
+}
+
+
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.line {
+  width: 80px; /* Short line length, adjust as needed */
+  height: 2px; /* Line thickness */
+  background-color: #d7c026; /* Line color */
+}
+
+.line-text {
+  padding: 0 15px;
+  font-weight: bold; /* Optional: Makes the text bold */
+  font-size: 36px;
+}
+
+#choices-div{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-left: 230px;
+  padding-right: 230px;
+  gap: 4px;
+}
+
+#choices-col{
+  width: 40%;
+}
+
+#wedd-img{
+ width: 70%; 
+ height: auto;
+}
+
+#wedd-div{
+  padding-top: 20px;
+}
+
+#seconds{
+  color: #35867a;
+  font-size: larger;
+}
+
+#sec{
+  color: #35867a;
+  font-size: small;
+  font-weight: bolder;
+  position: relative;
+}
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-width: 900px;
+  height: 430px; /* Adjust the height as needed */
+  margin: auto;
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+
+
+
+/* Navigation Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 10px;
+  z-index: 10;
+}
+
+.slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+/* Make sure the <a> tag is the size of the card */
+.car a {
+  pointer-events: none; /* Disable clicking */
+  display: block; /* Ensure the <a> takes up the whole card */
+}
+
+/* Enable <a> tag only when the card is focused */
+.car.focus a {
+  pointer-events: auto; /* Enable clicking */
+}
+
+
+/* Other card styles */
+/* Default Card Styles */
+.car {
+  position: absolute;
+  width: 225px;
+  height: auto;
+  background: none;
+  border: 3px solid #d7c026;
+  color: white;
+  text-align: center;
+  transition: transform 0.3s ease, width 0.3s ease, z-index 0.3s, background 0.3s ease;
+  opacity: 0.6;
+}
+
+/* Ensure the image fits within the card */
+.car-image {
+  width: 222px;
+  height: auto;
+  object-fit: contain; /* Ensures the image covers the card area without distortion */
+}
+
+/* Focused Card */
+.car.focus {
+  width: 235px;
+  height: 325px;
+  transform: translateX(0) scale(1.1);
+  z-index: 3;
+  opacity: 1;
+  background-image: url('../img/cardhover.png');
+  background-size: cover; /* Adjusts the background to fill the card */
+  background-position: center; /* Centers the background image */
+  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+  margin: 20px auto;
+}
+
+
+/* Left and Right Cards Styling (same as before) */
+.car.left {
+  transform: translateX(-150px) scale(0.9);
+  z-index: 2;
+}
+
+.car.right {
+  transform: translateX(150px) scale(0.9);
+  z-index: 2;
+}
+
+/* Hidden Cards Styling (same as before) */
+.car.hidden {
+  opacity: 0;
+  z-index: 1;
+  transform: scale(0.8);
+}
+
+
+.slider-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: transparent; /* Remove background */
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.slider-btn img {
+  width: 40px; /* Adjust the size of the arrows */
+  height: 40px; /* Adjust the size of the arrows */
+}
+
+/* Left Button */
+.slider-btn.prev {
+  left: 20px; /* Adjust position for the left button */
+}
+
+/* Right Button */
+.slider-btn.next {
+  right: 20px; /* Adjust position for the right button */
+}
