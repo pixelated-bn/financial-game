@@ -56,12 +56,12 @@
   }, 6000); // 8000 milliseconds = 6 seconds
 </script>
 
-  
+  <div class="container-fluid">
         <div class="row sticky-row">
             <div class="col-sm-10"><a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 6%; height: auto; margin: 0 auto;"></a>
             </div>
     </div>
-
+  </div>
 
 
   
@@ -85,14 +85,13 @@
   <div id="narration" class="visible-section" style="padding-top: 20px;">
 
 
-        <div class="text-center" style="padding-top: 200px; padding-left: 200px; padding-right: 200px;">
-          <h3 style="font-weight: normal;">Your goal is to build and maintain a high credit score while navigating through different levels of financial decisions and challenges. Each decision on how to use credit, manage debt and keep an eye on your credit report contributes to your credit score in real life.</h3>
+        <div class="text-center" style="padding-top: 200px; padding-left: 250px; padding-right: 250px;">
+          <h3 style="font-weight: normal; justify-content: center; line-height: 140%;">Your goal is to build and maintain a high credit score while navigating through different levels of financial decisions and challenges. Each decision on how to use credit, manage debt and keep an eye on your credit report contributes to your credit score in real life.</h3>
 
-            <div class="text-center" style="padding-top: 60px;">
-              <a href="#scenario1" id="scenelink1" class="animated-button1">
-                <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 10%; height: auto; margin: 0 auto;"></a>
-            </div>
-          
+          <div style="display: flex; justify-content: center; margin-top: 50px;">
+            <a href="#scenario1" id="scenelink1" class="start-button">continue</a>
+        </div>
+
       </div>
 
 </div>
@@ -127,12 +126,12 @@
       <div id="scenario1" class="hidden-section" style="padding-top: 20px;">
 
 
-        <br>
+        <br><br>
         <h4 class="text-center" style="font-weight:normal; font-style: italic;">Let's start with a basic level of credit with B$1000 limit. Use the card for everyday purchases but avoid maxing out your limit. Pay the balance in full each month to avoid interest.</h4>
 
         <br><br>
 
-        <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you choose?</h2>
+        <h1 class="text-center" style="font-weight:bold;">What would you choose?</h1>
 
         <div class="container">
           <div class="row">
@@ -193,8 +192,7 @@
              This choice shows responsible credit usage. Your Credit Score increases by 30 points for paying off the balance on time and keeping utilization low
     
                 <div class="text-center" style="padding-top: 60px;">
-                <a href="#scenario2" id="optlink1" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">
-                  <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                <a href="#scenario2" id="optlink1"  class="game-button">continue</a>
               </div>
             </div>
             
@@ -217,8 +215,7 @@
          Your credit utilization is now over 75% (utilization = $800/$1000). You pay just the minimum ($20). Your Credit Score decreases by 20 points because high utilization and a partial payment negatively affect your score.
 
             <div class="text-center" style="padding-top: 60px;">
-            <a href="#scenario2" id="optlink2" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-              <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+            <a href="#scenario2" id="optlink2" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
           </div>
         </div>
         
@@ -241,8 +238,7 @@
          Low utilization, full payment and responsible use. Your Credit Score increases by 10 points!
 
             <div class="text-center" style="padding-top: 60px;">
-            <a href="#scenario2" id="optlink3" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="10">
-              <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+            <a href="#scenario2" id="optlink3" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="10">continue</a>
           </div>
         </div>
         
@@ -264,11 +260,53 @@
 
       
         <br>
-        <h4 class="text-center" style="font-weight: normal; font-style: italic;">You've been saving for a new car and are now ready to apply for a car loan.</h4>
+        <h4 class="text-center" style="font-weight: normal; font-style: italic;">You have been saving for a new car and now ready to apply for a car loan.</h4>
 
-        <br><br>
+        <br>
 
-        <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">Which one would you choose?</h2>
+        <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
+
+  
+        <div class="text-center" style="padding-top: 20px;">
+          <img src="./img/arrow.png" class="card-img-top" style="width: 3%; height: auto; margin: 0 auto;">
+        </div>
+        
+      
+        <div class="text-center">
+
+
+            <div class="slider-container">
+              <a class="slider-btn prev">
+                <img src="./img/select1.png" alt="Previous" />
+            </a>
+              <div class="slider">
+                <div class="car">
+                  <a href="#scene2-opt1" id="scene2-link1">
+                    <img src="./img/used.png" alt="Card 1 Image" class="car-image">
+                   
+                  </a>
+                </div>
+                <div class="car">
+                  <a href="#scene2-opt2" id="scene2-link2">
+                    <img src="./img/new.png" alt="Card 2 Image" class="car-image">
+                
+                  </a>
+                </div>
+                <div class="car">
+                  <a href="#scene2-opt3" id="scene2-link3">
+                    <img src="./img/dream.png" alt="Card 3 Image" class="car-image">
+                 
+                  </a>
+                </div>
+              </div>
+              <a class="slider-btn next">
+                <img src="./img/select2.png" alt="Next" />
+            </a>
+            </div>
+            
+          </div>
+
+<!--
 
         <div class="container">
           <div class="row">
@@ -316,8 +354,55 @@
       
           </div>
        </div>
-
+-->
       </div>
+
+      <script>
+
+const cards = document.querySelectorAll('.car');
+const nextBtn = document.querySelector('.slider-btn.next');
+const prevBtn = document.querySelector('.slider-btn.prev');
+
+let currentSlide = 2; // Start with the middle card (index 2)
+
+// Function to update card classes
+function updateCardClasses() {
+  cards.forEach((card, index) => {
+    card.classList.remove('focus', 'left', 'right', 'hidden');
+
+    if (index === currentSlide) {
+      card.classList.add('focus');
+    } else if (index === currentSlide - 1 || (currentSlide === 0 && index === cards.length - 1)) {
+      card.classList.add('left');
+    } else if (index === currentSlide + 1 || (currentSlide === cards.length - 1 && index === 0)) {
+      card.classList.add('right');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+}
+
+// Navigation Buttons
+nextBtn.addEventListener('click', () => {
+  currentSlide++;
+  if (currentSlide > cards.length - 1) {
+    currentSlide = 0;
+  }
+  updateCardClasses();
+});
+
+prevBtn.addEventListener('click', () => {
+  currentSlide--;
+  if (currentSlide < 0) {
+    currentSlide = cards.length - 1;
+  }
+  updateCardClasses();
+});
+
+// Initialize card positions
+updateCardClasses();
+
+          </script>
 
 
 
@@ -333,8 +418,7 @@
                 Yes, you need to stick to a budget, but buying an extremely cheap  or used car comes with its own risks. If the car keeps breaking down, repairs can be very costly. Soon you’ve spent more on that old lemon than you would have if you’d just bought a better car from a reputable dealer in the first place.
     
                 <div class="text-center" style="padding-top: 60px;">
-                <a href="#scenario2a" id="optlink4" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">
-                  <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                <a href="#scenario2a" id="optlink4" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
               </div>
             </div>
             
@@ -357,8 +441,7 @@
             <br><br>It’s better to be safe than stylish. Unsafe cars are a big factor for road crashes and you don't need to spend a fortune to get a safe car.
 
             <div class="text-center" style="padding-top: 60px;">
-            <a href="#scenario2a" id="optlink5" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-              <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+            <a href="#scenario2a" id="optlink5" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
           </div>
         </div>
         
@@ -381,8 +464,7 @@
             You have always dream of sitting behind the wheel of a luxury car, wake up with a sense of awe and wonder - the sight of the sleek curves, the feel of the smooth leather seats, and the sound of the powerful engine roaring to life.
 
             <div class="text-center" style="padding-top: 60px;">
-            <a href="#scenario2a" id="optlink6" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="10">
-              <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+            <a href="#scenario2a" id="optlink6" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="10">continue</a>
           </div>
         </div>
         
@@ -408,16 +490,16 @@
     
             <br><br><br>
 
-            <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+            <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
     
     
-           <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 120px; padding-right: 120px; gap: 5px;">
-            <div>
-            <a href="#scene2a-opt1" style="font-weight: normal;" id="scene2a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
+           <div class="text-center" id="choices-div">
+            <div id="choices-col">
+            <a href="#scene2a-opt1" id="scene2a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
               Apply with multiple lenders
             </a>
           </div>
-          <div>
+          <div id="choices-col">
             <a href="#scene2a-opt2" id="scene2a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
              Apply with one trusted lender
              </a>
@@ -442,8 +524,7 @@
                     Every application triggers a hard inquiry, lowering your Credit Score by 50 points temporarily due to the impact of multiple credit checks.
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario3" id="optlink7" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">
-                      <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                    <a href="#scenario3" id="optlink7" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
                   </div>
                 </div>
                 
@@ -466,8 +547,7 @@
                 <br><br>A single inquiry has minimal impact on your Credit Score, reducing it by just 5 points. Your Credit Score increases by 15 points because you secure the loan with a low-interest rate and a good repayment plan.
     
                 <div class="text-center" style="padding-top: 60px;">
-                <a href="#scenario3" id="optlink8" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                  <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                <a href="#scenario3" id="optlink8" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
               </div>
             </div>
             
@@ -492,7 +572,7 @@
 
                   <br><br>
 
-                  <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+                  <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
            
            
                   <div class="container">
@@ -539,17 +619,17 @@
 
                   <br><br><br>
 
-                  <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+                  <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
            
                   <div>
                 
-                    <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 250px; padding-right: 150px; gap: 2px;">
-                      <div>
+                    <div class="text-center" id="choices-div">
+                      <div id="choices-col">
                       <a href="#scene3a" id="scene3a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
                         Pay off full loan
                       </a>
                     </div>
-                    <div>
+                    <div id="choices-col">
                       <a href="#scene3a" id="scene3a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
                        Negotiate payment with bank
                        </a>
@@ -573,8 +653,7 @@
                       <br><br>You manage to pay off the loan or negotiate a deal, but it leaves you financially vulnerable for several years. This cause dramatically drop in your credit credit score. Eventually, you will be able to rebuild your credit score but you've learned a hard lesson about the risk of co-signing. Your relationship with Adam is still intact but it remains complicated. 
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario4" id="optlink9" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                        <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                      <a href="#scenario4" id="optlink9" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                     </div>
                   </div>
                   
@@ -628,8 +707,7 @@
                       <br><br>Learn the importance of setting boundaries when co-signing loans and make wiser financial decisions in the future. Consult with a financial advisor to fully understand the risks. Your relationship with your sibling although strained is repaired over time.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario8" id="optlink10" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                        <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                      <a href="#scenario8" id="optlink10" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                     </div>
                   </div>
                   
@@ -653,17 +731,17 @@
 
                   <br><br><br>
 
-                  <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+                  <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
            
                   <div>
                 
-                    <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 180px; padding-right: 150px; gap: 2px;">
-                      <div>
+                    <div class="text-center" id="choices-div">
+                      <div id="choices-col">
                       <a href="#scene4-opt1" id="scene4-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
                         Open a new credit card
                       </a>
                     </div>
-                    <div>
+                    <div id="choices-col">
                       <a href="#scene4-opt2" id="scene4-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
                        Keep your current cards
                        </a>
@@ -687,8 +765,7 @@
                           <br><br>Opening too many new cards or having too many inquiries can lower your score temporarily and decrease your average account age. Additionally, having multiple new accounts could indicate higher credit risk to lenders. 
               
                           <div class="text-center" style="padding-top: 60px;">
-                          <a href="#scenario8" id="optlink11" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                            <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                          <a href="#scenario8" id="optlink11" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                         </div>
                       </div>
                       
@@ -712,8 +789,7 @@
                           <br><br>Opening a new card can improve your credit mix and available credit, lowering your overall credit utilization if you dont overspend.
               
                           <div class="text-center" style="padding-top: 60px;">
-                          <a href="#scenario8" id="optlink12" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                            <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                          <a href="#scenario8" id="optlink12" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                         </div>
                       </div>
                       
@@ -759,27 +835,20 @@
               
               
                   <div class="row">
-                    <div class="col-sm-12">
-                      <div class="info-container2 text-center">
-                        <img src="./img/narrative.png">
-                        <div class="overlay-text">
+                    <div class="col-sm-12" id="game-intro">
                          
-                          <h5 class="text-center" style="font-weight: normal;">You and your friends are looking for an epic vacation trip of the lifetime. While you do your research and planning, lets play a game!</h5>
+                          <h4 class="text-center" style="font-weight: normal;">You and your friends are looking for an epic vacation trip of the lifetime. While you do your research and planning, lets play a game!</h4>
               
                           <div class="text-center" style="padding-top: 60px;">
-                          <a href="#game-title1" id="title-link1" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                            <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                          <a href="#vacation-game" id="game-link1" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                         </div>
-                      </div>
-                      
-                  </div>
                   </div>
                 
               </div>
               
               </div>
 
-
+<!--
               <div id="game-title1" class="hidden-section">
 
 
@@ -793,7 +862,7 @@
 
               
               </div>
-
+-->
 
 
               <div id="vacation-game" class="hidden-section">
@@ -807,7 +876,7 @@
               <audio id="drag-sound" src="./audio/sound-effect.mp3"></audio> <!-- Drag sound -->
               <audio id="drop-sound" src="./audio/sound-effect.mp3"></audio> <!-- Drop sound -->
               
-              <div class="container">
+              <div class="container" style="padding-top: 50px;">
                 <h4 style="color: #35867a;">Match the monument with the correct country</h4>
                 <br>
                 <div class="row" id="vacay-row">
@@ -878,6 +947,8 @@
                 <img src="./img/landmark/dubai-title.png" draggable="true" ondragstart="drag(event)" id="drag11" class="imgs dubai">
               </div>
               
+              </div>
+
               
               <div class="modal fade" id="gamemodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
@@ -886,8 +957,7 @@
                  <br>
                       <h3 style="font-weight: normal;">Well Done! You did great!</h3>
                       <br>
-                      <a href="#game-credit1" id="credit-link1" class="animated-button1">
-                        <img src="./img/next-btn1.png" class="card-img-top zoom-button" data-dismiss="modal" style="width: 20%; height: auto; margin: 0 auto;"></a>
+                      <a href="#game-credit1" id="credit-link1" class="game-button" data-dismiss="modal">continue</a>
                    <br> <br>
                   </div>
                   </div>
@@ -895,31 +965,34 @@
               </div>
               
               
-              </div>
-              
-              
-              <div id="game-credit1" class="hidden-section">
+              <div id="game-credit1" class="hidden-section" style="padding-top: 20px;">
 
-                <div class="text-center">
-                  <img src="./img/landmark/game-complete.png" style="width: 35%; height: auto;">
-                  
-                </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="info-container2 text-center">
+                      <img src="./img/narrative.png">
+                      <div class="overlay-text">
               
-                  <div class="credit-container text-center" style="padding-top: 80px;">
-                    <img src="./img/landmark/complete-narrative.png" style="width: 35%; height: auto;">
-                      <br><br>
-                      <a href="#scene8a" id="scene8alink" class="start-link">continue</a>
-                    
-                    </div>
-              
-              
+                  <br><br>It's been a while since I saw all those monuments. Going to discuss with my friends on where we are going for the trip. We would want to take a photo witht the monuments!
+
+              <div class="text-center" style="padding-top: 60px;">
+                <a href="#scene8a" id="scene8alink" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
               </div>
+            </div>
+            
+        </div>
+        </div>
+      
+    </div>
+    
+    </div>
+
 
               
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
                  const stickyRow = document.querySelector(".sticky-row");
-                 const targets = [document.querySelector("#game-title1"), document.querySelector("#game-credit1")];
+                 const targets = [document.querySelector("#vacation-game")];
                
                  const observer1 = new IntersectionObserver(
                    (entries) => {
@@ -961,17 +1034,17 @@
 
                 <br><br><br>
 
-                <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+                <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
          
                 <div>
               
-                  <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 180px; padding-right: 150px; gap: 2px;">
-                    <div>
+                  <div class="text-center" id="choices-div">
+                    <div id="choices-col">
                     <a href="#scene8a-opt1" id="scene8a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
-                      "Yolo" Keep Spending
+                     Keep Spending
                     </a>
                   </div>
-                  <div>
+                  <div id="choices-col">
                     <a href="#scene8a-opt2" id="scene8a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
                      Smart Spending
                      </a>
@@ -995,8 +1068,7 @@
                         <br><br>With the thought of being able to pay the bills off with ease once you're back at work, your credit utilization rate has skyrocketed. This means you've used up a large portion of your available credit,  and this is one of the main factors affecting your credit score. It may take years to recover financially. Your relationships with friends become strained as you struggle with the fallout. 
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario5" id="optlink14" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                          <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                        <a href="#scenario5" id="optlink14" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                       </div>
                     </div>
                     
@@ -1020,8 +1092,7 @@
                         <br><br>You pay attention to the charges piling up and decide to adjust your spending. Maybe you’ll cut back on a few activities to avoid maxing out the card. As a result, your credit score drops. The financial strain of the past vacation still lingers in your monthly budget, and you've learned that your credit card isn't an endless money source.
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario5" id="optlink15" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                          <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                        <a href="#scenario5" id="optlink15" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                       </div>
                     </div>
                     
@@ -1039,30 +1110,24 @@
                 <!--Scenario 5-->
 
                 <div id="scenario5" class="hidden-section" style="padding-top: 20px;">
-            
-            
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="info-container2 text-center">
-                        <img src="./img/narrative.png">
-                        <div class="overlay-text">
+        
                          
-                          <br>You and your partner are planning for your dream wedding but need a personal loan to cover the costs. You need to find ways to secure the loan at favorable terms and at the same time does not hurt your credit score. Lets play some game!
+                  <div class="row">
+                    <div class="col-sm-12" id="game-intro">
+                         
+                          <h4 class="text-center" style="font-weight: normal;">You and your partner are planning for your dream wedding but need a personal loan to cover the costs. You need to find ways to secure the loan at favorable terms and at the same time does not hurt your credit score. Lets play some game!</h4>
               
                           <div class="text-center" style="padding-top: 60px;">
-                          <a href="#game-title2" id="title-link2" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                            <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                          <a href="#wedding-game" id="game-link2" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                         </div>
                       </div>
-                      
+                    
                   </div>
+                  
                   </div>
-                
-              </div>
-              
-              </div>
 
 
+              <!--
               <div id="game-title2" class="hidden-section">
 
                 <div class="text-right" style="padding-top: 60px; padding-right: 150px;">
@@ -1074,15 +1139,23 @@
                 </div>
               
               </div>
-
+-->
 
 
 <div id="wedding-game" class="hidden-section">
 
+   <!-- Add the audio element here -->
+   <audio id="game-music2" loop>
+    <source src="./audio/game-music-loop-7-145285.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
+<audio id="drag-sound" src="./audio/sound-effect.mp3"></audio> <!-- Drag sound -->
+
   <div class="row">
     <div class="col-sm-5" style="padding-top: 200px; padding-right: 80px;">
-      <img src="./img/wedding/game-title.png" style="width: 70%; height: auto;">
-      <h4 class="text-center" style="font-weight:normal; color: #ffffff;">Find and match <br>the pairs of your <br>wedding items</h4>
+      <img src="./img/wedding/game-title.png" style="width: 80%; height: auto;">
+      <h4 class="text-center" style="font-weight:normal; color: #000000;">Find and match <br>the pairs of your <br>wedding items</h4>
     </div>
     <div class="col-sm-7">
   
@@ -1092,7 +1165,7 @@
          
           <div class="timer">
               <img src="./img/wedding/timer-colon.png" alt="Colon" class="colon">
-              <span id="seconds">s</span>
+              <p id="seconds">0 </p><p id="secs">s</p>
               <div class="timer-text-box">
                   TIME:
               </div>
@@ -1112,7 +1185,6 @@
     </div>
   </div>
 
-
 </div>
 
 <div class="modal fade" id="weddingmodala" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
@@ -1122,8 +1194,7 @@
    <br>
         <h3 style="font-weight: normal;">Time's Up! That was fun!</h3>
         <br>
-        <a href="#game-credit2a" id="credit-link2a" class="animated-button1">
-          <img src="./img/next-btn1.png" class="card-img-top zoom-button" data-dismiss="modal" style="width: 20%; height: auto; margin: 0 auto;"></a>
+        <a href="#game-credit2a" id="credit-link2a" class="game-button" data-dismiss="modal" style="width: 20%; height: auto; margin: 0 auto;">continue</a>
      <br> <br>
     </div>
     </div>
@@ -1137,8 +1208,7 @@
    <br>
         <h3 style="font-weight: normal;">Time's Up! That was fun!</h3>
         <br>
-        <a href="#game-credit2b" id="credit-link2b" class="animated-button1">
-          <img src="./img/next-btn1.png" class="card-img-top zoom-button" data-dismiss="modal" style="width: 20%; height: auto; margin: 0 auto;"></a>
+        <a href="#game-credit2b" id="credit-link2b" class="game-button" data-dismiss="modal" style="width: 20%; height: auto; margin: 0 auto;">continue</a>
      <br> <br>
     </div>
     </div>
@@ -1146,52 +1216,47 @@
 </div>
 
 
-<div id="game-credit2a" class="hidden-section">
+<div id="game-credit2a" class="hidden-section" style="padding-top: 20px;">
 
-  <div class="text-left" style="padding-top: 40px; padding-left: 80px;">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="info-container2 text-center">
+        <img src="./img/narrative.png">
+        <div class="overlay-text">
+
+          <br>Oh yeah! I got all the things I need for modest wedding. It's time to proceed with it and and start preparing with my future spouse!
+
+               <div class="text-center" style="padding-top: 60px;">
+                <a href="#scene5a" id="scene5a-modest" class="game-button">continue</a>
+              </div>
+            </div>
+            
+        </div>
+        </div>
       
-    <img src="./img/wedding/complete.png" style="width: 56%; height: auto;">
+    </div>
     
-  </div>
-  <div class="text-left" id="wedd-box">
-    <img src="./img/wedding/modest.png" style="width: 35%; height: auto;">
-  </div>  
-                    <div id="weddscore">
-                      <img src="./img/quiz/quiz-score.png" style="width: 47%; height: auto;">
-                      <h4 id="name2">
-                        Quiz Score <span id="wedding-score2">0</span>
-                      </h4>
-                  </div>
-             
-        <br>
-        <div class="text-left" style="padding-left: 420px; position: relative;">
-      <a href="#scene5a" id="scene5a-modest" class="start-link">continue</a>       
-  </div>
+    </div>
 
+<div id="game-credit2b" class="hidden-section" style="padding-top: 20px;">
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="info-container2 text-center">
+        <img src="./img/narrative.png">
+        <div class="overlay-text">
+
+          <br>Oh yeah! I got all the things I need for my dream wedding. It's time to proceed with it and and start preparing with my future spouse!
+                  
+          <div class="text-center" style="padding-top: 60px;">
+            <a href="#scene5b" id="scene5b-dream" class="game-button">continue</a>
+          </div>
+        </div>
+        
+    </div>
+    </div>
+  
 </div>
-
-
-<div id="game-credit2b" class="hidden-section">
-
-  <div class="text-left" style="padding-top: 40px; padding-left: 80px;">
-      
-    <img src="./img/wedding/complete.png" style="width: 56%; height: auto;">
-    
-  </div>
-  <div class="text-left" id="wedd-box">
-    <img src="./img/wedding/dream.png" style="width: 35%; height: auto;">
-  </div>
-                    <div id="weddscore">
-                      <img src="./img/quiz/quiz-score.png" style="width: 47%; height: auto;">
-                      <h4 id="name2">
-                        Quiz Score <span id="wedding-score2">0</span>
-                      </h4>
-                  </div>   
-             
-        <br>
-        <div class="text-left" style="padding-left: 420px; position: relative;">
-      <a href="#scene5b" id="scene5b-dream" class="start-link">continue</a>       
-  </div>
 
 </div>
 
@@ -1208,6 +1273,12 @@ document.addEventListener('DOMContentLoaded', () => {
   let score = 0;
   let timeLeft = 30; // 30 seconds for testing, adjust for your actual timer (e.g., 600 for 10 minutes)
   let timerInterval;
+
+  
+const dragSound2 = document.getElementById('drag-sound'); // Select the drag sound effect
+
+  
+
 
   const scoreDisplays = document.querySelectorAll('#wedding-score1, #wedding-score2'); // All elements to show score
 
@@ -1279,7 +1350,7 @@ document.addEventListener('DOMContentLoaded', () => {
       card.dataset.value = value;
 
       const img = document.createElement('img');
-      img.src = `./img/wedding/${imageMapping[value]}`;
+      img.src = `../img/wedding/${imageMapping[value]}`;
       img.style.display = 'none';
       card.appendChild(img);
 
@@ -1290,14 +1361,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Flip card function
   function flipCard() {
-      if (flippedCards.length < 2 && !this.classList.contains('hidden')) {
-          this.querySelector('img').style.display = 'block';
-          flippedCards.push(this);
-          if (flippedCards.length === 2) {
-              setTimeout(checkMatch, 500);
-          }
-      }
-  }
+
+    dragSound2.play(); // Play the drag sound effect
+
+        if (flippedCards.length < 2 && !this.classList.contains('hidden') && !flippedCards.includes(this)) {
+            this.querySelector('img').style.display = 'block';
+            flippedCards.push(this);
+            if (flippedCards.length === 2) {
+                setTimeout(checkMatch, 500);
+            }
+        }
+    }
 
   // Check for match
   function checkMatch() {
@@ -1321,15 +1395,38 @@ document.addEventListener('DOMContentLoaded', () => {
   function checkScore() {
       if (score <= 4) {
           //optionA();
+          const backgroundMusic2 = document.getElementById("game-music2");
+          fadeOutMusic(backgroundMusic2, 2000); // Fade out background music
           showModal1(); // Show the completion modal
       } else if (score >= 5) {
          // optionB();
+         const backgroundMusic2 = document.getElementById("game-music2");
+         fadeOutMusic(backgroundMusic2, 2000); // Fade out background music
          showModal2(); // Show the completion modal
       }
       // Store score in localStorage
       localStorage.setItem('score', score);
       
   }
+
+  function fadeOutMusic(audio, duration) {
+    const fadeOutInterval = 50;
+    const fadeOutSteps = duration / fadeOutInterval;
+    let currentVolume = audio.volume;
+    const volumeDecrement = currentVolume / fadeOutSteps;
+  
+    const fadeOut = setInterval(() => {
+      if (currentVolume > 0) {
+        currentVolume -= volumeDecrement;
+        audio.volume = Math.max(0, currentVolume);
+      } else {
+        clearInterval(fadeOut);
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    }, fadeOutInterval);
+  }
+  
 
   function showModal1() {
       const modal = new bootstrap.Modal(document.getElementById("weddingmodala"));
@@ -1382,7 +1479,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener("DOMContentLoaded", () => {
    const stickyRow = document.querySelector(".sticky-row");
-   const targets2 = [document.querySelector("#game-title2"), document.querySelector("#wedding-game"), document.querySelector("#game-credit2a"), document.querySelector("#game-credit2b")];
+   const targets2 = [document.querySelector("#game-title2")];
  
    const observer2 = new IntersectionObserver(
      (entries) => {
@@ -1419,37 +1516,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <div id="scene5a" class="hidden-section" style="padding-top: 20px;">
 
-                  
-      
-  <br><br><br><br>
-  <h4 class="text-center" style="font-weight: normal; font-style: italic;">You decide on a more modest wedding and want to take out a smaller personal loan for the event.</h4>
+  <div class="text-center" id="wedd-div">
+    <img src="./img/modest-wedding.png" id="wedd-img">
+  </div>
+  
+  <!--
+  <h2>MODEST WEDDING!</h2>
+  <p>
+    You decided on a more modest wedding and want to take out<br>a smaller personal loan for the big day!
+  </p>
 
-  <br><br><br>
+  <div class="loan-details">
+    <div class="row wedd-row">
+      <div class="col-sm-5 label">LOAN AMOUNT</div>
+      <div class="col-sm-2 between"></div>
+      <div class="col-sm-5 value">B$15,000</div>
+    </div>
+    <div class="row wedd-row">
+      <div class="col-sm-5 label">INTEREST RATE</div>
+      <div class="col-sm-2 between"></div>
+      <div class="col-sm-5 value">7.5% PER YEAR</div>
+    </div>
+    <div class="row wedd-row">
+      <div class="col-sm-5 label">LOAN TERM</div>
+      <div class="col-sm-2 between"></div>
+      <div class="col-sm-5 value">4 YEARS</div>
+    </div>
+  </div>
 
-  <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+  <div class="line-container">
+    <hr class="line">
+    <span class="line-text" id="monthly-pay">MONTHLY PAY</span>
+    <hr class="line">
+  </div> 
 
-
- <div>
-        
-  <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 180px; padding-right: 150px; gap: 2px;">
-    <div>
+  <div>
+  <h5 class="amount">B$363</h5>
+</div>
+-->
+     
+<div class="text-center" id="choices-div">
+  <div id="choices-col">
     <a href="#scene5a-opt1" id="scene5a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
-      Take the $15,000 loan 
+      Take the loan 
     </a>
   </div>
-  <div>
+  <div id="choices-col">
     <a href="#scene5a-opt2" id="scene5a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
-      Increase the loan to $20,000 
+      Increase loan amount
      </a>
   </div>
-  <div>
+  <div id="choices-col">
     <a href="#scene5a-opt3" id="scene5a-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
-      Postpone the wedding
+      Postpone Wedding
      </a>
   </div>
 </div>
   
- </div>
 
         </div>
 
@@ -1466,8 +1589,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <br>You take the $15,000 loan and use it for the wedding. With moderate monthly payments of approximately $363, you can comfortably manage the debt without overstraining your budget. As long as you make consistent, on-time payments, your credit score may be minimally affected. Your credit utilization won’t be too high, and your debt-to-income ratio remains manageable.
       
                   <div class="text-center" style="padding-top: 60px;">
-                  <a href="#scenario11" id="opt-link38" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                    <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                  <a href="#scenario11" id="opt-link38" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                 </div>
               </div>
               
@@ -1488,11 +1610,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <img src="./img/narrative.png">
               <div class="overlay-text">
                
-                <br>You decide to increase the loan to include additional elements for the wedding, such as a more elaborate reception or more luxurious vendors. The extra loan increases your debt load and could lead to higher monthly payments (around $484/month), straining your finances. You also run the risk of overspending and increasing your credit utilization, which could lead to a significant drop in your credit score.
+                <br>You decide to increase the loan to $20,000 include additional elements for the wedding, such as a more elaborate reception or more luxurious vendors. The extra loan increases your debt load and could lead to higher monthly payments (around $484/month), straining your finances. You also run the risk of overspending and increasing your credit utilization, which could lead to a significant drop in your credit score.
     
                 <div class="text-center" style="padding-top: 60px;">
-                <a href="#scenario11" id="opt-link39" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                  <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                <a href="#scenario11" id="opt-link39" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
               </div>
             </div>
             
@@ -1516,8 +1637,7 @@ document.addEventListener('DOMContentLoaded', () => {
               <br><br>You decide to delay the wedding and continue saving money, which allows you to avoid any loans entirely. No loan means no impact on your credit score, and you’ll also avoid the potential strain of debt after the wedding.
   
               <div class="text-center" style="padding-top: 60px;">
-              <a href="#scenario11" id="opt-link40" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+              <a href="#scenario11" id="opt-link40" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
             </div>
           </div>
           
@@ -1532,37 +1652,63 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <div id="scene5b" class="hidden-section" style="padding-top: 20px;">
 
-                  
-      
-    <br><br><br><br>
-    <h4 class="text-center" style="font-weight: normal; font-style: italic;">You and your partner have always dreamed of a lavish wedding. After calculating costs, you find that you’ll need a personal loan to cover the expenses.</h4>
+    <div class="text-center" id="wedd-div">
+      <img src="./img/dream-wedding.png" id="wedd-img">
+    </div>
+
+    <!--
+    <h2>DREAM WEDDING!</h2>
+    <p>
+      You decided on your dream wedding that you<br>have always dreamed a lavish wedding!
+    </p>
   
-    <br><br><br>
+    <div class="loan-details">
+      <div class="row wedd-row">
+        <div class="col-sm-5 label">LOAN AMOUNT</div>
+        <div class="col-sm-2 between"></div>
+        <div class="col-sm-5 value">B$40,000</div>
+      </div>
+      <div class="row wedd-row">
+        <div class="col-sm-5 label">INTEREST RATE</div>
+        <div class="col-sm-2 between"></div>
+        <div class="col-sm-5 value">7.5% PER YEAR</div>
+      </div>
+      <div class="row wedd-row">
+        <div class="col-sm-5 label">LOAN TERM</div>
+        <div class="col-sm-2 between"></div>
+        <div class="col-sm-5 value">6 YEARS</div>
+      </div>
+    </div>
   
-    <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+    <div class="line-container">
+      <hr class="line">
+      <span class="line-text" id="monthly-pay">MONTHLY PAY</span>
+      <hr class="line">
+    </div> 
   
-  
-   <div>
+    <div>
+    <h5 class="amount">B$692</h5>
+  </div>
+  -->
           
-    <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 180px; padding-right: 150px; gap: 2px;">
-      <div>
+  <div class="text-center" id="choices-div">
+    <div id="choices-col">
       <a href="#scene5b-opt1" id="scene5b-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
-        Take the $40,000 loan 
+        Take the loan 
       </a>
     </div>
-    <div>
+    <div id="choices-col">
       <a href="#scene5b-opt2" id="scene5b-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
-        Take a smaller loan of $25,000 
+        Decrease loan amount 
        </a>
     </div>
-    <div>
+    <div id="choices-col">
       <a href="#scene5b-opt3" id="scene5b-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
-        Use a credit card for the entire wedding.
+        Use Credit Card
        </a>
     </div>
   </div>
     
-   </div>
   
           </div>
   
@@ -1579,8 +1725,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <br>You get everything you want: a grand wedding, a beautiful venue, an elegant dress, and all the frills. However, you will face high monthly payments ($692/month), which could cause financial strain after the wedding. Your credit utilization increases significantly, which could lower your credit score temporarily, especially if you use a lot of your available credit to cover wedding-related costs. Also, the loan size increases your debt-to-income ratio, which can have a negative effect on your credit score.
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario11" id="opt-link41" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                      <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                    <a href="#scenario11" id="opt-link41" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                   </div>
                 </div>
                 
@@ -1604,8 +1749,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <br>You decide to trim down the wedding plans slightly (perhaps reducing the guest list, opting for a smaller venue, or cutting back on the catering). You take a smaller loan of $25,000 instead of $40,000. With a smaller loan and manageable monthly payments ($432/month), your credit score will only see a minor dip. The debt-to-income ratio remains lower, and it’s easier to make consistent, timely payments.
       
                   <div class="text-center" style="padding-top: 60px;">
-                  <a href="#scenario11" id="opt-link42" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                    <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                  <a href="#scenario11" id="opt-link42" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                 </div>
               </div>
               
@@ -1629,8 +1773,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <br><br>You decide to charge the wedding costs on a high-interest credit card, believing it will be easier to pay off over time. Using a large portion of your available credit will cause your credit utilization ratio to spike, significantly damaging your credit score. If you don’t pay off the credit card quickly, the interest charges can accumulate, adding to your debt.
     
                 <div class="text-center" style="padding-top: 60px;">
-                <a href="#scenario11" id="opt-link43" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                  <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                <a href="#scenario11" id="opt-link43" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
               </div>
             </div>
             
@@ -1656,23 +1799,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         <br><br><br>
 
-        <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+        <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
 
 
        <div>
               
-        <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 180px; padding-right: 150px; gap: 2px;">
-          <div>
+        <div class="text-center" id="choices-div">
+          <div id="choices-col">
           <a href="#scene11-opt1" id="scene11-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
             Proceed an Inquiry
           </a>
         </div>
-        <div>
+        <div id="choices-col">
           <a href="#scene11-opt2" id="scene11-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
            Proceed with multiple inquiry
            </a>
         </div>
-        <div>
+        <div id="choices-col">
           <a href="#scene11-opt3" id="scene11-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
            No inquiry (Cancel)
            </a>
@@ -1699,8 +1842,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <br><br>A hard inquiry will appear on your credit report which may cause a slight dip in your credit score
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario12" id="opt-link16" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                          <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                        <a href="#scenario12" id="opt-link16" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                       </div>
                     </div>
                     
@@ -1724,8 +1866,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <br><br>You can request multiple offers from different lenders where they perform hard inquiry to check your creditworthiness. These inquiries cause a small temporary dip in the credit score and are recorded in the credit report. However, some lenders could interpret multiple inquiries as signs of financial distress, leading them to view the applicant as a higher risk for loan approval.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario6" id="opt-link17" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                        <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                      <a href="#scenario6" id="opt-link17" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                     </div>
                   </div>
                   
@@ -1749,8 +1890,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <br><br>No inquiry is made. No impact on your credit score, but you miss out on exploring mortgage offers. This could delay your home-buying process but will keep your credit report intact for the moment.
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario12" id="opt-link18" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                      <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                    <a href="#scenario12" id="opt-link18" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                   </div>
                 </div>
                 
@@ -1776,7 +1916,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
                   <br><br>
           
-                  <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+                  <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
           
                   <div class="container">
                     <div class="row">
@@ -1840,8 +1980,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <br><br>Your credit utilization spikes, increasing it to 150%. This drastically lowers your Credit Score by 100 points due to high credit usage and potential risk of default.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario9" id="opt-link19" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                        <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                      <a href="#scenario9" id="opt-link19" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                     </div>
                   </div>
                   
@@ -1865,8 +2004,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <br><br>Your overall debt-to-income ratio increases, but the loan interest rate is lower than your credit card's. Your Credit Score drops by 10 points, but this is better than overloading your credit card.
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario9" id="opt-link20" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                      <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                    <a href="#scenario9" id="opt-link20" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                   </div>
                 </div>
                 
@@ -1890,8 +2028,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <br><br>No new debt and you don't impact your credit utilization. Your Credit Score increases by 20 points for maintaining a healthy emergency fund and avoiding unnecessary debt.
       
                   <div class="text-center" style="padding-top: 60px;">
-                  <a href="#scenario9" id="opt-link21" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                    <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                  <a href="#scenario9" id="opt-link21" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue></a>
                 </div>
               </div>
               
@@ -1913,22 +2050,22 @@ document.addEventListener('DOMContentLoaded', () => {
                                  
       
         <br><br><br><br>
-        <h4 class="text-center" style="font-weight: normal; font-style: italic;">You are given the option to request a credit limit increase.</h4>
+        <h4 class="text-center" style="font-weight: normal; font-style: italic;">You are given the option to request a credit card limit increase.</h4>
 
         <br><br><br>
 
-        <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">How will you use this opportunity?</h2>
+        <h2 class="text-center" style="font-weight:bold;">How will you use this opportunity?</h2>
 
 
        <div>
               
-        <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 180px; padding-right: 150px; gap: 2px;">
-          <div>
+        <div class="text-center" id="choices-div">
+          <div id="choices-col">
           <a href="#scene12-opt1" id="scene12-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
             Request limit increase
           </a>
         </div>
-        <div>
+          <div id="choices-col">
           <a href="#scene12-opt2" id="scene12-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
             Keep current limit
            </a>
@@ -1952,8 +2089,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <br><br>Requesting a credit limit increase can improve your credit score by reducing your utilization if you don't increase your spending
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario9" id="opt-link22" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                        <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                      <a href="#scenario9" id="opt-link22" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                     </div>
                   </div>
                   
@@ -1977,8 +2113,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <br><br>If you increase your spending along with your limit, it can still increase your utilization and hurt your score
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario9" id="opt-link23" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                      <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                    <a href="#scenario9" id="opt-link23" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                   </div>
                 </div>
                 
@@ -1995,28 +2130,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 <!--Scenario 9-->
 
                 <div id="scenario9" class="hidden-section" style="padding-top: 20px;">
-            
-            
-                  <div class="row">
-                    <div class="col-sm-12">
-                      <div class="info-container2 text-center">
-                        <img src="./img/narrative.png">
-                        <div class="overlay-text">
-                          <br><br>You want to open up a small business in a trendy but competitive urban neighborhood. Lets play some game while you brainstorm!
-              
-                          <div class="text-center" style="padding-top: 60px;">
-                          <a href="#game-title3" id="title-link3" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                            <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
-                        </div>
-                      </div>
-                      
-                  </div>
-                  </div>
-                
-              </div>
-              
-              </div>
 
+                  <div class="row">
+                    <div class="col-sm-12" id="game-intro">
+                         
+                          <h4 class="text-center" style="font-weight: normal;">You want to open up a small business in a trendy but competitive urban neighborhood. While you do your research, lets play a game!</h4>
+            
+                  <div class="text-center" style="padding-top: 60px;">
+                    <a href="#business-game" id="game-link3" class="game-button"  data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                  </div>
+                </div>
+              
+            </div>
+            
+            </div>
+
+              <!--
               <div id="game-title3" class="hidden-section">
 
                 <div class="text-center" style="padding-top: 140px;">
@@ -2028,81 +2157,133 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
               
               </div>
+              -->
 
-              <div id="business-game" class="hidden-section">
+              <div id="business-game" class="hidden-section" style="padding-top: 20px;">
 
                 <!-- Add the audio element here -->
-                <audio id="game-music" loop>
+                <audio id="game-music3" loop>
                   <source src="./audio/game-music-loop-7-145285.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
               </audio>
               <br>
               <div class="text-center">
-                      <img src="./img/business/gametitle.png" style="width: 50%; height: auto;">
-                        <h5 class="text-center" style="font-weight: normal; color: #000000;">
+                      <img src="./img/business/gametitle.png" style="width: 80%; height: auto;">
+                      <br><br>
+                        <h4 class="text-center" style="font-weight: normal; color: #000000;">
                   While you do your research, lets play a game! Choose any 5 businesses that are now in trend!
-                            </h5>
+                            </h4>
               </div>
-                        <div class="text-center" style="padding-top: 100px;">
+                        <div class="text-center" style="padding-top: 20px;">
               
                           <audio id="click-sound" src="./audio/sound-effect.mp3" preload="auto"></audio>
               
                             <table>
                                 <tbody>
                                   <tr>
-                                    <td><img src="./img/business-game/before (1).png" alt="Box" data-item1="1" onclick="checkItem1(1)"></td>
-                                    <td><img src="./img/business-game/before (2).png" alt="Box" data-item1="2" onclick="checkItem1(2)"></td>
-                                    <td><img src="./img/business-game/before (3).png" alt="Box" data-item1="3" onclick="checkItem1(3)"></td>
-                                    <td><img src="./img/business-game/before (4).png" alt="Box" data-item1="4" onclick="checkItem1(4)"></td>
-                                  </tr>
+                                    <td class="tooltip-container">
+                                        <img src="./img/business-game/before (1).png" alt="Box" data-item1="1" onclick="checkItem1(1)">
+                                        <span class="tooltip-text">Burger</span>
+                                    </td>
+                                    <td class="tooltip-container">
+                                        <img src="./img/business-game/before (2).png" alt="Box" data-item1="2" onclick="checkItem1(2)">
+                                        <span class="tooltip-text">Homemade Desserts</span>
+                                    </td>
+                                    <td class="tooltip-container">
+                                        <img src="./img/business-game/before (3).png" alt="Box" data-item1="3" onclick="checkItem1(3)">
+                                        <span class="tooltip-text">Nasi Katok</span>
+                                    </td>
+                                    <td class="tooltip-container">
+                                        <img src="./img/business-game/before (4).png" alt="Box" data-item1="4" onclick="checkItem1(4)">
+                                        <span class="tooltip-text">Night Market Grills</span>
+                                    </td>
+                                </tr>
+                                
                                     <tr>
-                                      <td><img src="./img/business-game/before (5).png" alt="Box" data-item1="5" onclick="checkItem1(5)"></td>
-                                        <td><img src="./img/business-game/before (6).png" alt="Box" data-item1="6" onclick="checkItem1(6)"></td>
-                                        <td><img src="./img/business-game/before (7).png" alt="Box" data-item1="7" onclick="checkItem1(7)"></td>
-                                        <td><img src="./img/business-game/before (8).png" alt="Box" data-item1="8" onclick="checkItem1(8)"></td>
+                                    <td class="tooltip-container">
+                                        <img src="./img/business-game/before (5).png" alt="Box" data-item1="5" onclick="checkItem1(5)">
+                                        <span class="tooltip-text">Pizza</span>
+                                      </td>
+                                      <td class="tooltip-container">
+                                        <img src="./img/business-game/before (6).png" alt="Box" data-item1="6" onclick="checkItem1(6)">
+                                        <span class="tooltip-text">Coffee Cafe</span>
+                                      </td>
+                                      <td class="tooltip-container">
+                                        <img src="./img/business-game/before (7).png" alt="Box" data-item1="7" onclick="checkItem1(7)">
+                                        <span class="tooltip-text">Runner Deliveries</span>
+                                      </td>
+                                      <td class="tooltip-container">
+                                        <img src="./img/business-game/before (8).png" alt="Box" data-item1="8" onclick="checkItem1(8)">
+                                        <span class="tooltip-text">Photography</span>
+                                      </td>
                                     </tr>
                                     <tr>
-                                      <td><img src="./img/business-game/before (9).png" alt="Box" data-item1="9" onclick="checkItem1(9)"></td>
-                                      <td><img src="./img/business-game/before (10).png" alt="Box" data-item1="10" onclick="checkItem1(10)"></td>
-                                        <td><img src="./img/business-game/before (11).png" alt="Box" data-item1="11" onclick="checkItem1(11)"></td>
-                                        <td><img src="./img/business-game/before (12).png" alt="Box" data-item1="12" onclick="checkItem1(12)"></td>
+                                      <td class="tooltip-container">
+                                        <img src="./img/business-game/before (9).png" alt="Box" data-item1="9" onclick="checkItem1(9)">
+                                        <span class="tooltip-text">Art</span>
+                                      </td>
+                                      <td class="tooltip-container">
+                                        <img src="./img/business-game/before (10).png" alt="Box" data-item1="10" onclick="checkItem1(10)">
+                                        <span class="tooltip-text">Night Market Drinks</span>
+                                      </td>
+                                      <td class="tooltip-container">
+                                        <img src="./img/business-game/before (11).png" alt="Box" data-item1="11" onclick="checkItem1(11)">
+                                        <span class="tooltip-text">Jewellery crafts</span>
+                                      </td>
+                                      <td class="tooltip-container">
+                                        <img src="./img/business-game/before (12).png" alt="Box" data-item1="12" onclick="checkItem1(12)">
+                                        <span class="tooltip-text">Tudong Hijab</span>
+                                      </td>
                                     </tr>
                                 </tbody>
                             </table>
                             
-                           
-                            <p id="gameresult" style="color: #000000;"></p>
-                            <div style="display: flex; justify-content: center; margin-top: 5px;">
-                                <a href="#game-credit3" id="credit-link3" class="game-button" style="font-weight: bold; color: #ffffff; display: none;">PROCEED</a>
-                            </div>
                         </div>
                      
               </div>
-              
-              
-              <div id="game-credit3" class="hidden-section">
-                
-              
-                <div class="text-center">
-                  <img src="./img/business/game-complete.png" style="width: 30%; height: auto;">
-                  
+              <div class="modal fade" id="gameresult" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body text-center">
+                 <br>
+                      <h3 style="font-weight: normal;">Well Done! Good Choice! You did great!</h3>
+                      <br>
+                      <a href="#game-credit3" id="credit-link3" class="game-button" data-dismiss="modal">continue</a>
+                   <br> <br>
+                  </div>
+                  </div>
                 </div>
-              
-                  <div class="credit-container text-center" style="padding-top: 120px;">
-                    <img src="./img/business/business-narrative.png" style="width: 35%; height: auto;">
-                    <div class="text-center" style="padding-top: 60px;">
-                      
-                    <a href="#scene9a" id="scene9alink" class="start-link">continue</a>
-                    </div>
-                    </div>
-              
               </div>
+              
+              
+              <div id="game-credit3" class="hidden-section" style="padding-top: 20px;">
 
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="info-container2 text-center">
+                      <img src="./img/narrative.png">
+                      <div class="overlay-text">
+
+                        
+                        <br><br>So, those are the 5 businesses that are currently on trend now. Hmm, I need to some more research on those and choose one out of those five!
+
+              
+                             <div class="text-center" style="padding-top: 60px;">
+                              <a href="#scene9a" id="scene9alink" class="game-button">continue</a>
+                            </div>
+                          </div>
+                          
+                      </div>
+                      </div>
+                    
+                  </div>
+                  
+                  </div>
               
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
                  const stickyRow = document.querySelector(".sticky-row");
-                 const targets3 = [document.querySelector("#game-title3"), document.querySelector("#business-game"), document.querySelector("#game-credit3")];
+                 const targets3 = [document.querySelector("#business-game")];
                
                  const observer3 = new IntersectionObserver(
                    (entries) => {
@@ -2146,7 +2327,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
                 <br><br><br>
         
-                <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">How would you fund your business?</h2>
+                <h2 class="text-center" style="font-weight:bold;">How would you fund your business?</h2>
         
                <div>
                 <div class="text-center" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding-top: 80px; padding-left: 50px; padding-right: 50px; gap: 30px;">
@@ -2192,8 +2373,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <br><br>No debt means no risk of default so your credit score won't be directly impacted. However, limited capital may restrict your ability to expand quickly and personal savings might be drained quickly, leaving you with fewer funds for other expenses.
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario10" id="opt-link24" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                          <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                        <a href="#scenario10" id="opt-link24" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                       </div>
                     </div>
                     
@@ -2217,8 +2397,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <br><br>When you apply for a loan, a hard inquiry on your credit report can lower your score temporarily however if you miss payments, your credit score will drop due to higher credit utilization
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario10" id="opt-link25" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                        <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                      <a href="#scenario10" id="opt-link25" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                     </div>
                   </div>
                   
@@ -2242,8 +2421,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <br><br>Since this is not a formal loan through a bank or credit institution, it typically won't affect your credit score. However, if you don't repay the loan or manage the relationship poorly, it could cause personal issues.
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario10" id="opt-link26" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                      <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                    <a href="#scenario10" id="opt-link26" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                   </div>
                 </div>
                 
@@ -2267,8 +2445,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   <br><br>If you personally guarantee  the loan or provide collateral, your personal credit may be at risk if the business defaults. Defaults or late payments could negatively affect both business and personal credit.
       
                   <div class="text-center" style="padding-top: 60px;">
-                  <a href="#scenario10" id="opt-link27" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                    <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                  <a href="#scenario10" id="opt-link27" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                 </div>
               </div>
               
@@ -2288,12 +2465,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div id="scenario10" class="hidden-section"  style="padding-top: 20px;" style="padding-top: 20px ;">
 
                           <br><br><br><br>
-                          <h4 class="text-center" style="font-weight: normal;">
-                          While you’re working, you received an email notification</h4>
-                <br>
-                          <div class="text-center" style="padding-top: 60px;">
+                         
+                          <div class="text-center" style="padding-top: 80px;">
                             <a href="" id="" data-toggle="modal" data-target="#exampleModal">
-                              <img src="./img/notification.png" class="card-img-top" style="width: 28%; height: auto; margin: 0 auto;">
+                              <img src="./img/notification.png" class="card-img-top" style="width: 26%; height: auto; margin: 0 auto;" id="email-img">
                             </a>
                           </div>
                           
@@ -2311,7 +2486,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="row">
           <div id="accept-email">
       
-            <a href="#scene10" id="scene10link" class="accept-button" data-dismiss="modal">NOTED</a>
+            <a href="#scene10" id="scene10link" class="accept-button" data-dismiss="modal">continue</a>
           </div>
         </div>
       </div>
@@ -2330,18 +2505,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   <br><br><br>
 
-  <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+  <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
 
 
  <div>
         
-  <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 180px; padding-right: 150px; gap: 2px;">
-    <div>
+  <div class="text-center" id="choices-div">
+    <div id="choices-col">
     <a href="#scene10-opt1" id="scene10-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
       Settle bills completely
     </a>
   </div>
-  <div>
+    <div id="choices-col">
     <a href="#scene10-opt2" id="scene10-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
       Ignore the bills
      </a>
@@ -2366,8 +2541,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <br><br>You pay your bills before they're due. With consistent on-time payments, your credit report is mostly clean. Small delays can still have lasting effects on your credit history and your ability to secure future loans.
 
           <div class="text-center" style="padding-top: 60px;">
-          <a href="#scenario7" id="opt-link28" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-            <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+          <a href="#scenario7" id="opt-link28" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
         </div>
       </div>
       
@@ -2391,8 +2565,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <br><br>Deciding to pay way later than due, your payment history is now marked as "late" in the eyes of your credit report. They won't cause your score to drop, but they could still harm your reputation with future lenders.
 
         <div class="text-center" style="padding-top: 60px;">
-        <a href="#scenario7" id="opt-link29" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-          <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+        <a href="#scenario7" id="opt-link29" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
       </div>
     </div>
     
@@ -2417,18 +2590,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                   <br><br><br>
                 
-                  <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+                  <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
                 
                 
                  <div>
                         
-                  <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 120px; padding-right: 120px; gap: 2px;">
-                    <div>
+                  <div class="text-center" id="choices-div">
+                    <div id="choices-col">
                     <a href="#scene7-opt1" id="scene7-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
                      Ignore any errors or fraud
                     </a>
                   </div>
-                  <div>
+                    <div id="choices-col">
                     <a href="#scene7-opt2" id="scene7-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
                       Immediately fix the errors
                      </a>
@@ -2452,8 +2625,7 @@ document.addEventListener('DOMContentLoaded', () => {
                          The mistake goes unchecked, lowering your Credit Score by 30 points. It reflects poor credit monitoring habits.
               
                           <div class="text-center" style="padding-top: 60px;">
-                          <a href="#scenario13" id="opt-link30" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">
-                            <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                          <a href="#scenario13" id="opt-link30" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
                         </div>
                       </div>
                       
@@ -2476,8 +2648,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <br><br>You successfully have an incorrect late payment removed from your report. Regularly checking and correcting errors or fraud boosts your score by removing any inaccuracies. Increase your Credit Score by 25 points.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario13" id="opt-link31" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                        <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                      <a href="#scenario13" id="opt-link31" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                     </div>
                   </div>
                   
@@ -2500,23 +2671,23 @@ document.addEventListener('DOMContentLoaded', () => {
                   
                     <br><br><br>
                   
-                    <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+                    <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
                   
                   
                    <div>
                           
-                    <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 120px; padding-right: 120px; gap: 2px;">
-                      <div>
+                    <div class="text-center" id="choices-div">
+                      <div id="choices-col">
                       <a href="#scene13-opt1" id="scene13-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
                        Inquire pending applications
                       </a>
                     </div>
-                    <div>
+                      <div id="choices-col">
                       <a href="#scene13-opt2" id="scene13-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
                         Cancel some pending applications
                        </a>
                     </div>
-                    <div>
+                      <div id="choices-col">
                       <a href="#scene13-opt3" id="scene13-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
                         Wait for finalization
                        </a>
@@ -2541,8 +2712,7 @@ document.addEventListener('DOMContentLoaded', () => {
                          No impact on your credit score, but it could help you assess whether any pending inquiries are actually affecting your ability to apply for other credit.
                 
                             <div class="text-center" style="padding-top: 60px;">
-                            <a href="#scenario15" id="opt-link32" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">
-                              <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                            <a href="#scenario15" id="opt-link32" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
                           </div>
                         </div>
                         
@@ -2565,8 +2735,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <br><br>If you cancel a pending application, there will be no hard inquiry, and the status application will be updated in the credit report. Your credit score remains unaffected because no inquiry was made.
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario15" id="opt-link33" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                          <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                        <a href="#scenario15" id="opt-link33" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                       </div>
                     </div>
                     
@@ -2589,8 +2758,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       <br><br>If you are approved, your credit utilization may increase (depending on the credit limit). If you are denied, the inquiry will remain, potentially affecting your score for a few months.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario15" id="opt-link34" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                        <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                      <a href="#scenario15" id="opt-link34" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                     </div>
                   </div>
                   
@@ -2614,18 +2782,18 @@ document.addEventListener('DOMContentLoaded', () => {
                   
                     <br><br><br>
                   
-                    <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+                    <h2 class="text-center" style="font-weight:bold;">What would you do?</h2>
                   
                   
                    <div>
                           
-                    <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 120px; padding-right: 120px; gap: 2px;">
-                      <div>
+                    <div class="text-center" id="choices-div">
+                      <div id="choices-col">
                       <a href="#scene15-opt1" id="scene15-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
                        Pay bills using savings
                       </a>
                     </div>
-                    <div>
+                      <div id="choices-col">
                       <a href="#scene15-opt2" id="scene15-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
                         Delay some payments
                        </a>
@@ -2649,8 +2817,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             You decide to pay all bills on time eventhough you'll need to dip into your savings. You make a point to prioritize your financial reputation and credit score, even at the cost of cutting back on essential expenses
                 
                             <div class="text-center" style="padding-top: 60px;">
-                            <a href="#scenario14" id="opt-link35" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">
-                              <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                            <a href="#scenario14" id="opt-link35" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
                           </div>
                         </div>
                         
@@ -2673,8 +2840,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <br><br>Deciding to let a few bills go unpaid for the next month or two, prioritizing food and shelter while you wait for your next paycheck from your part time job to arrive. Your credit score drops more significantly. You now have multiple missed payments on your credit report.
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario14" id="opt-link36" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                          <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                        <a href="#scenario14" id="opt-link36" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                       </div>
                     </div>
                     
@@ -2719,8 +2885,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         
 <br><br>
-                    <h3 class="text-center" style="font-weight: normal; font-style: italic;"><img src="./img/quote.png" alt="" style="width: 7%; height: 3%; vertical-align: top;">You've got a call! What would you do?</h3>
-                  <br>
             <div class="phone-call">
                     <div class="row">
                       <div class="col-sm-6 text-right" id="phone-button"> 
@@ -2729,7 +2893,7 @@ document.addEventListener('DOMContentLoaded', () => {
                       </a>
                       </div>
                       <div class="col-sm-6 text-left" id="phone-button">
-                        <a href="" id="" data-toggle="modal" data-target="#phoneModal">
+                        <a href="#info1" id="phone-link2">
                           <img src="./img/answer.png" class="card-img-top" id="phonebtn" style="width: 10%; height: auto; margin: 0 auto;">
                         </a>
                       </div>
@@ -2739,7 +2903,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
             
             
-                    <!-- Modal -->
+                    <!-- Modal 
             <div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
               <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                 <div class="modal-content" style="background-color: transparent; border: none;">
@@ -2754,7 +2918,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
               </div>
             </div>
-            
+            -->
             
                     
                        <!-- Audio Element -->
@@ -2798,7 +2962,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                   }, { threshold: 0.1 });
             
-                  let target6 = document.getElementById('phoneModal');
+                  let target6 = document.getElementById('info1');
                   if (target6) {
                     observer6.observe(target6);
                   }
@@ -2810,25 +2974,28 @@ document.addEventListener('DOMContentLoaded', () => {
             
                     <div id="info1" class="hidden-section"  style="padding-top: 20px;">
 
-                      <br><br><br><br>
-                      <h4 class="text-center" style="font-weight: normal; font-style: italic;">On the call, you're told that you're behind on a bill and must decide whether to work out a payment plan with the creditor.</h4>
+                      <div id="call-convo">
+                      
+                          <img src="./img/phone-convo.png" class="phone-img">
+                        
+                      </div>
+                      
+                      <br>
                     
-                      <br><br><br>
-                    
-                      <h2 class="text-center" style="font-weight:bold;"><img src="./img/quote.png" alt="" style="width: 5%; height: 3%; vertical-align: top;">What would you do?</h2>
+                      <h1 class="text-center" style="font-weight:bold;">What would you do?</h1>
                     
                     
                      <div>
                             
-                      <div class="text-center" style="display: flex; justify-content: space-between; padding-top: 80px;padding-left: 120px; padding-right: 120px; gap: 2px;">
-                        <div>
+                      <div class="text-center" id="choices-div">
+                        <div id="choices-col">
                         <a href="#answer1" id="phone-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
                          Negotiate a payment plan
                         </a>
                       </div>
-                      <div>
+                        <div id="choices-col">
                         <a href="#answer2" id="phone-link4" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
-                          Ignore the bills
+                          Ignore the bill payment
                          </a>
                       </div>
                     </div>
@@ -2851,8 +3018,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             By ignoring the call, you are now in debt as it is legit a call from the bank for your overdue payment.
 
                             <div class="text-center" style="padding-top: 60px;">
-                              <a href="#game-failed" id="phone-link7" class="animated-button1">
-                                <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                              <a href="#game-failed" id="phone-link7" class="game-button">continue</a>
                             </div>
                             </div>
                             
@@ -2876,8 +3042,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                         
                             <div class="text-center" style="padding-top: 60px;">
-                                <a href="#game-success" id="phone-link5" class="animated-button1">
-                                  <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                                <a href="#game-success" id="phone-link5" class="game-button">continue</a>
                               </div>
                             </div>
                             
@@ -2899,8 +3064,7 @@ document.addEventListener('DOMContentLoaded', () => {
                            Oh no! Ignoring the bill leads to late fees, collections, and a drop in your score due to missed payments.
 
                            <div class="text-center" style="padding-top: 60px;">
-                            <a href="#game-failed" id="phone-link6" class="animated-button1">
-                              <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                            <a href="#game-failed" id="phone-link6" class="game-button">continue</a>
                           </div>
                             </div>
                             
@@ -2924,8 +3088,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
               
                             <div class="text-center" style="padding-top: 60px;">
-                              <a href="#game-recap" id="recap-link1" class="animated-button1">
-                                <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                              <a href="#game-recap" id="recap-link1" class="game-button">continue</a>
                             </div>
                             
                           </div>
@@ -2949,8 +3112,7 @@ document.addEventListener('DOMContentLoaded', () => {
           
             
                           <div class="text-center" style="padding-top: 60px;">
-                            <a href="#game-recap" id="recap-link2" class="animated-button1">
-                              <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                            <a href="#game-recap" id="recap-link2" class="game-button">continue</a>
                           </div>
                           
                         </div>
@@ -2965,34 +3127,29 @@ document.addEventListener('DOMContentLoaded', () => {
               <div id="game-recap" class="hidden-section"  style="padding-top: 20px;">
 
 
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="info-container2 text-center">
-                      <img src="./img/narrative.png">
-                      <div class="overlay-text">
                      
-                        Now that you have gone through a series of financial challenges, let's do some quizzes to recap and reflect on your decisions!
+                <div class="row">
+                  <div class="col-sm-12" id="game-intro">
+                       
+                        <h4 class="text-center" style="font-weight: normal;">Now that you have gone through a series of financial challenges, let's do some quizzes to recap and reflect on your decisions!</h4>
         
-          
                         <div class="text-center" style="padding-top: 60px;">
-                          <a href="#game-title4" id="quiz-link" class="animated-button1">
-                            <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 30%; height: auto; margin: 0 auto;"></a>
+                          <a href="#quiz-game" id="game-link4" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
                         </div>
-                        
                       </div>
-                    </div>
                     
-                </div>
-                </div>
-              
-            </div>
-            
+                  </div>
+                  
+                  </div>
+    
+
 
                 <!--End of scenario 14-->
 
 
                    <!--Scenario 16-->
 
+                   <!--
                    <div id="game-title4" class="hidden-section">
                   
 
@@ -3007,7 +3164,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                   
                   </div>
-                  
+                  -->
                   
                   
                   <div id="quiz-game" class="hidden-section" style="padding-top: 20px;">
@@ -3032,8 +3189,6 @@ document.addEventListener('DOMContentLoaded', () => {
                   </div>
                      
                           
-                     
-                  
                       <main class="quiz">
                           <div id="quiz-start">
                               <div class="landing" id="start-screen" style="padding-top: 150px;">
@@ -3059,16 +3214,19 @@ document.addEventListener('DOMContentLoaded', () => {
             <a id="next-btn" class="animated-button1 hide">
               <br>
               <div class="vertical-line"></div>
-              <div style="padding-top: 28px;">  <img src="./img/quiz/nextbtn.png"  style="width: 8%; height: auto; display: block; margin: 0 auto;"></div>
+              <div style="padding-top: 26px;">  <img src="./img/quiz/nextbtn.png"  style="width: 8%; height: auto; display: block; margin: 0 auto;"></div>
             
             </a>
-
+            <div hidden>
+            <h4 id="quiz-end">
+              Quiz Score <span id="score-final" style="margin-left: 400px;"></span>
+            </h4>
+          </div>
             <div id="feedback" class="feedback hide"></div>
              </div>
                   
-                  <br>
-                              <a href="#game-credit4" id="credit-link4" class="animated-button1 hide">
-                                <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 10%; height: auto; margin: 0 auto;"></a>
+                  <br> <br>
+                              <a href="#game-credit4" id="credit-link4" class="game-button hide">continue</a>
                        
                       </main>
                   
@@ -3087,28 +3245,28 @@ document.addEventListener('DOMContentLoaded', () => {
                   </script>
                   
                   
-                  <div id="game-credit4" class="hidden-section">
+                  <div id="game-credit4" class="hidden-section" style="padding-top: 20px;">
 
-                    <div class="text-center">
-                      <img src="./img/quiz/quiz-complete.png" style="width: 32%; height: auto;">
-                      
-                    </div>
+                    <div class="row">
+                      <div class="col-sm-12">
+                        <div class="info-container2 text-center">
+                          <img src="./img/narrative.png">
+                          <div class="overlay-text">
+
+                            <br><br>Phew! Never knew that's how it is for credit score and how it works. That was a good recap to assist me on financial decision after this!
                   
-                      <div class="credit-container text-center" id="quiz-end" style="padding-top: 80px;">
-                        <img src="./img/quiz/quiz-narrative.png" style="width: 35%; height: auto;">
-                        <div class="text-center" style="padding-top: 50px; position: relative;">
-                          <img src="./img/quiz/quiz-score.png" style="width: 45%; height: auto;">
-                          <h4 id="name3">
-                            Quiz Score <span id="score-final" style="margin-left: 400px;"></span>
-                          </h4>
-                          <br><br>
-                          <a href="game-end.html" class="start-link">continue</a>
-                        </div>
+                                 <div class="text-center" style="padding-top: 60px;">
+                                  <a href="game-end.html" class="game-button">continue</a>
+                                </div>
+                              </div>
+                              
+                          </div>
+                          </div>
                         
-                        </div>
-                  
-                  </div>
-                  
+                      </div>
+                      
+                      </div>
+
                   
                   
                   <script>
@@ -3116,7 +3274,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   
                     document.addEventListener("DOMContentLoaded", () => {
                      const stickyRow = document.querySelector(".sticky-row");
-                     const targets4 = [document.querySelector("#game-title4"), document.querySelector("#quiz-game"), document.querySelector("#game-credit4")];
+                     const targets4 = [document.querySelector("#quiz-game")];
                    
                      const observer4 = new IntersectionObserver(
                        (entries) => {
@@ -3170,7 +3328,7 @@ document.addEventListener("DOMContentLoaded", () => {
               "To get pre-approved for loans",
               "To understand your net worth"
           ],
-          answer: "To ensure there are no mistakes or fraud affecting your score",
+          answer: "To ensure there are no mistakes or fraud affecting your score" ,
           explanation: "Regularly checking your credit report allows you to spot errors or fraudulent activity that could negatively affect your credit score."
       },
       {
@@ -3264,13 +3422,15 @@ document.addEventListener("DOMContentLoaded", () => {
   
       // Check if the clicked option is correct or not
       if (this.value === questions[currentQuestionIndex].answer) {
-          correctAnswers++;
-          feedbackEl.textContent = `Correct! Explanation: ${questions[currentQuestionIndex].explanation}.`;
-          feedbackEl.style.color = "green";
-          console.log("Correct Answers: " + correctAnswers); // Debugging step
+        feedbackEl.innerHTML = `Correct! <p> ${questions[currentQuestionIndex].explanation}.</p>`;
+        feedbackEl.style.color = "green";
+feedbackEl.style.textAlign = "left"; // Aligns text to the left
+console.log("Correct Answers: " + correctAnswers); // Debugging step
+
       } else {
-        feedbackEl.textContent = `Wrong! The answer is: ${questions[currentQuestionIndex].answer}. Explanation: ${questions[currentQuestionIndex].explanation}`;
+        feedbackEl.innerHTML = `Wrong! The answer is: ${questions[currentQuestionIndex].answer}.<br><p> ${questions[currentQuestionIndex].explanation}.</p>`;
           feedbackEl.style.color = "red";
+          feedbackEl.style.textAlign = "left"; // Aligns text to the left
       }
   
       // Show next button
@@ -3468,29 +3628,6 @@ document.querySelectorAll('.circular-progress-container').forEach(function(conta
 });
 
 
-document.getElementById('worknarration').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default anchor link behavior
-  
-    var hideSection = document.getElementById('workforce');
-    hideSection.classList.add('fade-out');
-
-// Once the fade-out transition is complete, proceed to reveal the target section
-hideSection.addEventListener('transitionend', function onTransitionEnd() {
-    // Remove event listener to avoid multiple triggers
-    hideSection.removeEventListener('transitionend', onTransitionEnd);
-    
-    // Reveal the section
-    var targetSection = document.getElementById('narration');
-    targetSection.classList.remove('hidden-section');
-    targetSection.classList.add('visible-section');
-  
-    hideSection.classList.remove('visible-section');
-    hideSection.classList.add('hidden-section');
-  
-        // Scroll to the section
-        targetSection.scrollIntoView({ behavior: 'smooth' });
-    }, { once: true }); // Ensures the event listener is only invoked once
-  });
 
 document.getElementById('scenelink1').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
@@ -3538,6 +3675,7 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
     var hideSection = document.getElementById('scenario1');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+    hideSection.classList.add('fade-out');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -3940,6 +4078,16 @@ document.getElementById('scene2-link1').addEventListener('click', function(event
     var hideSection = document.getElementById('scene3-opt2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
+    
+    
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -3997,6 +4145,15 @@ document.getElementById('scene2-link1').addEventListener('click', function(event
     var hideSection = document.getElementById('scene4-opt1');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+    
+    
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4015,6 +4172,15 @@ document.getElementById('scene2-link1').addEventListener('click', function(event
     var hideSection = document.getElementById('scene4-opt2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+    
+    
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4041,6 +4207,7 @@ document.getElementById('scene2-link1').addEventListener('click', function(event
 
 /////////////////////////////////////////////////////////
 
+/*
 document.getElementById('title-link1').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
@@ -4065,6 +4232,7 @@ document.getElementById('title-link1').addEventListener('click', function(event)
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
   });
+  */
 
   document.getElementById('game-link1').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
@@ -4075,9 +4243,10 @@ document.getElementById('title-link1').addEventListener('click', function(event)
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('game-title1');
+    var hideSection = document.getElementById('scenario8');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4224,6 +4393,7 @@ function checkCompletion() {
     var hideSection = document.getElementById('vacation-game');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4242,8 +4412,7 @@ function checkCompletion() {
     var hideSection = document.getElementById('game-credit1');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
-
-   
+     
     var targetSection = document.getElementById('creditmeter');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
@@ -4251,6 +4420,7 @@ function checkCompletion() {
     var targetSection = document.getElementById('factormeter');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
+
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4304,6 +4474,16 @@ function checkCompletion() {
     var hideSection = document.getElementById('scene8a-opt1');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
+    
+    
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4322,6 +4502,16 @@ function checkCompletion() {
     var hideSection = document.getElementById('scene8a-opt2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
+    
+    
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4329,7 +4519,7 @@ function checkCompletion() {
 
   /////////////////////////////////////////////////////////
 
-
+/*
   document.getElementById('title-link2').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
@@ -4343,17 +4533,11 @@ function checkCompletion() {
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
 
-    var targetSection = document.getElementById('creditmeter');
-    targetSection.classList.remove('visible-section');
-    targetSection.classList.add('hidden-section');
-
-    var targetSection = document.getElementById('factormeter');
-    targetSection.classList.remove('visible-section');
-    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
   });
+  */
 
   document.getElementById('game-link2').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
@@ -4364,13 +4548,21 @@ function checkCompletion() {
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
-    var hideSection = document.getElementById('game-title2');
+    var hideSection = document.getElementById('scenario5');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
 
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
+
+   
+      // Play background music when family quiz is visible
+      const backgroundMusic2 = document.getElementById('game-music2');
+      backgroundMusic2.play();
+
+
   });
 
 
@@ -4874,6 +5066,14 @@ function checkCompletion() {
     var hideSection = document.getElementById('scene6-opt1');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4891,6 +5091,14 @@ function checkCompletion() {
     var hideSection = document.getElementById('scene6-opt2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4908,6 +5116,14 @@ function checkCompletion() {
     var hideSection = document.getElementById('scene6-opt3');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4965,6 +5181,15 @@ function checkCompletion() {
     var hideSection = document.getElementById('scene12-opt1');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+    
+
+   var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4982,6 +5207,15 @@ function checkCompletion() {
     var hideSection = document.getElementById('scene12-opt2');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+    
+
+   var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -4990,7 +5224,7 @@ function checkCompletion() {
 ////////////////////////////////////////////////////////////////////
 
 
-
+/*
 document.getElementById('title-link3').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
@@ -5004,23 +5238,17 @@ document.getElementById('title-link3').addEventListener('click', function(event)
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
 
-    var targetSection = document.getElementById('creditmeter');
-    targetSection.classList.remove('visible-section');
-    targetSection.classList.add('hidden-section');
-
-    var targetSection = document.getElementById('factormeter');
-    targetSection.classList.remove('visible-section');
-    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
   });
+  */
 
   document.getElementById('game-link3').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
    
-    var hideSection = document.getElementById('game-title3');
+    var hideSection = document.getElementById('scenario9');
     hideSection.classList.add('fade-out');
 
     // Once the fade-out transition is complete, proceed to reveal the target section
@@ -5036,11 +5264,10 @@ document.getElementById('title-link3').addEventListener('click', function(event)
    hideSection.classList.remove('visible-section');
    hideSection.classList.add('hidden-section');
 
-
   
          // Play background music when family quiz is visible
-         const backgroundMusic = document.getElementById('game-music');
-         backgroundMusic.play();
+         const backgroundMusic3 = document.getElementById('game-music3');
+         backgroundMusic3.play();
          targetSection.scrollIntoView({ behavior: 'smooth' });
      }, { once: true });
  });
@@ -5064,7 +5291,7 @@ document.getElementById('title-link3').addEventListener('click', function(event)
 let foundCount1 = 0;
 let maxItems = 5; // Maximum items to be found
 const clickSound = document.getElementById('click-sound'); // Select the sound effect
-const audioElement = document.getElementById('game-music'); // Select the game music
+const audioElement = document.getElementById('game-music3'); // Select the game music
 
 function fadeOutAudio(duration) {
     let volume = audioElement.volume;
@@ -5104,17 +5331,29 @@ function checkItem1(itemNumber) {
         // Check if 5 items are found and show the result
         if (foundCount1 === maxItems) {
             setTimeout(() => {
-                document.getElementById('gameresult').innerText = 'Good Choice! That was easy!';
-                document.getElementById('credit-link3').style.display = 'block'; // Display the button
-
+              
+        showModal2();
+                //document.getElementById('gameresult').//innerText = 'Good Choice! That was easy!';
+               // document.getElementById('credit-link3').style.//display = 'block'; // Display the button
                 // Call fade out audio over 2 seconds
                 fadeOutAudio(2000);
-            }, 800); // 800 milliseconds before showing result
+            }, 200); // 800 milliseconds before showing result
         }
+        
     }
 }
 
+function showModal2() {
+    const modal = new bootstrap.Modal(document.getElementById("gameresult"));
+    modal.show();
+  }
 
+  function closeModal2() {
+    const modal = bootstrap.Modal.getInstance(document.getElementById("gameresult"));
+    if (modal) {
+      modal.hide();
+    }
+  }
 
 
   document.getElementById('credit-link3').addEventListener('click', function(event) {
@@ -5672,26 +5911,18 @@ function checkItem1(itemNumber) {
 
   document.getElementById('phone-link1').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
-  
-    var hideSection = document.getElementById('scenario14');
-    hideSection.classList.add('fade-out');
 
-// Once the fade-out transition is complete, proceed to reveal the target section
-hideSection.addEventListener('transitionend', function onTransitionEnd() {
-    // Remove event listener to avoid multiple triggers
-    hideSection.removeEventListener('transitionend', onTransitionEnd);
-    
-    // Reveal the section
-    var targetSection = document.getElementById('info2');
+        // Reveal the section
+        var targetSection = document.getElementById('info2');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
+    var hideSection = document.getElementById('scenario14');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
-            // Scroll to the section
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-    }, { once: true }); // Ensures the event listener is only invoked once
+         // Scroll to the section
+         targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
   
@@ -5836,7 +6067,7 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
     hideSection.classList.add('hidden-section');
 
     
-    var targetSection = document.getElementById('creditmeter');
+   var targetSection = document.getElementById('creditmeter');
     targetSection.classList.remove('visible-section');
     targetSection.classList.add('hidden-section');
 
@@ -5860,14 +6091,16 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
     var hideSection = document.getElementById('game-failed');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
     
-    var targetSection = document.getElementById('creditmeter');
+   var targetSection = document.getElementById('creditmeter');
     targetSection.classList.remove('visible-section');
     targetSection.classList.add('hidden-section');
 
     var targetSection = document.getElementById('factormeter');
     targetSection.classList.remove('visible-section');
     targetSection.classList.add('hidden-section');
+ 
   
           // Scroll to the section
           targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -5875,7 +6108,7 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
 
   //////////////////////////////////////////////////
 
-
+/*
   document.getElementById('quiz-link').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
@@ -5890,16 +6123,24 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
     hideSection.classList.add('hidden-section');
 
 
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('visible-section');
+    targetSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
   });
+  */
 
   document.getElementById('game-link4').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
   
    
-    var hideSection = document.getElementById('game-title4');
+    var hideSection = document.getElementById('game-recap');
     hideSection.classList.add('fade-out');
 
     // Once the fade-out transition is complete, proceed to reveal the target section
