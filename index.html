@@ -19,12 +19,6 @@
             transition: opacity 1s ease;
             opacity: 1;
         }
-        .hidden-section {
-            display: none;
-        }
-        .visible-section {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -43,7 +37,7 @@
         </div>
         <div class="row" id="viewscreen">
             <div class="col-sm-12">
-                <div id="index" class="visible-section" style="padding-top: 180px;">
+                <div id="index" class="visible" style="padding-top: 180px;">
                     <div class="row" style="background: none;">
                         <div class="col-sm-12 text-center" style="padding-right: 50px;">
                             <a href="narrative" id="index-link">
@@ -53,16 +47,16 @@
                     </div>
                 </div>
 
-                <div id="narrative" class="hidden-section" style="padding-top: 20px;">
+                <div id="narrative" class="hidden" style="padding-top: 20px;">
                     <div class="row">
                         <div class="container" style="padding-top: 180px; width: 50%; overflow: hidden; white-space: nowrap; padding-left: 60px; padding-right: 60px;">
-                            <h3 id="typewriter">Credit is nothing to be afraid of but,<br><br>like any other challenge in living your financial vision,<br><br>will you be able to manage, maintain and monitor it<br><br> so it can be of benefit to you</h3>
+                            <h3 id="typewriter">Credit is nothing to be afraid of but <br><br>like any other challenge in living your financial vision,<br><br> will you be able to manage, maintain and monitor it<br><br> so it can be of benefit to you</h3>
                             <br>
-                            <div class="text-center" style="padding-top: 30px;">
-                                <a href="game.html" class="animated-button" style="opacity: 0;">
-                                    <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 20%; height: auto; margin: 0 auto;">
-                                </a>
+
+                            <div class="text-center" style="padding-top: 40px;">
+                        <a href="game.html" class="index-button" id="index-link">continue</a>
                             </div>
+
                             <br>
                         </div>
                     </div>
@@ -76,7 +70,7 @@
             const backgroundMusic = document.getElementById('background-music');
             const imageLink = document.getElementById('index-link');
             const typewriter = document.getElementById('typewriter');
-            const button = document.querySelector('.animated-button');
+            const button = document.querySelector('.index-button');
             const text = typewriter.innerText; // Store the text for typing
             typewriter.innerText = ''; // Clear the text initially
             let index = 0;
@@ -115,7 +109,7 @@
                 event.preventDefault(); // Prevent the default anchor link behavior
 
                 // Start fading out the music
-                fadeOutMusic(backgroundMusic, 2000); // Fade out over 2 seconds
+                //fadeOutMusic(backgroundMusic, 2000); // Fade out over 2 seconds
 
                 // Start fading out the visible section
                 const visibleSection = document.getElementById('index');
@@ -128,13 +122,13 @@
 
                     // Reveal the target section
                     const targetSection = document.getElementById('narrative');
-                    targetSection.classList.remove('hidden-section');
-                    targetSection.classList.add('visible-section');
+                    targetSection.classList.remove('hidden');
+                    targetSection.classList.add('visible');
                     targetSection.classList.add('fade-in');
 
                     // Hide the old section
-                    visibleSection.classList.remove('visible-section');
-                    visibleSection.classList.add('hidden-section');
+                    visibleSection.classList.remove('visible');
+                    visibleSection.classList.add('hidden');
 
                     // Scroll to the section
                     targetSection.scrollIntoView({ behavior: 'smooth' });
