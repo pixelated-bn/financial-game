@@ -1226,6 +1226,14 @@ table img:hover {
  padding-top: 230px;
 }
 
+#phonebtn {
+  visibility: hidden; /* Start hidden */
+  opacity: 0; /* Fully transparent */
+  transition: opacity 0.1s ease-in-out;
+  animation: fadeInButton 0.1s ease-in-out 1s forwards; /* Delay of 6 seconds */
+  text-decoration: none;
+}
+
 #phonebtn:hover {
   transform: scale(1.1);
 }
