@@ -248,13 +248,12 @@
       <!--End of scenario 1-->
 
 
-      <!--Scenario 1-->
+      <!--Scenario 2-->
 
 
       <div id="scenario2" class="hidden-section" style="padding-top: 20px;">
 
       
-        <br>
         <h4 class="text-center" style="font-weight: normal; font-style: italic;">You have been saving for a new car and now ready to apply for a car loan.</h4>
 
         <br>
@@ -301,55 +300,6 @@
             
           </div>
 
-<!--
-
-        <div class="container">
-          <div class="row">
-              <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
-                <a href="#scene2-opt1" id="scene2-link1" style="text-decoration: none; color: #000000;"> 
-                  <div class="card my-card2" style="padding-top: 80px;">
-                 
-                 <br>
-                <img src="./img/usedcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                <div class="card-body text-center">
-                  <h4 class="card-title">USED CAR</h4>
-                
-                </div>
-              </div>
-            </a>
-          </div>
-      
-          <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">  
-            <a href="#scene2-opt2" id="scene2-link2" style="text-decoration: none; color: #000000;">  
-              <div class="card my-card2" style="padding-top: 80px;">
-                
-                 <br>
-                <img src="./img/newcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                <div class="card-body text-center">
-                  <h4 class="card-title">NEW CAR</h4>
-           
-                  </div>
-                </div>
-              </a>
-              </div>
-
-              <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
-                <a href="#scene2-opt3" id="scene2-link3" style="text-decoration: none; color: #000000;"> 
-                <div class="card my-card2" style="padding-top: 80px;">
-                  
-                   <br>
-                  <img src="./img/dreamcar.png" class="card-img-top" style="width: 50%; height: auto; margin: 0 auto;">
-                  <div class="card-body text-center">
-                    <h4 class="card-title">DREAM CAR</h4>
-             
-                    </div>
-                  </div>
-                </a>
-                </div>
-      
-          </div>
-       </div>
--->
       </div>
 
       <script>
@@ -992,7 +942,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
                  const stickyRow = document.querySelector(".sticky-row");
-                 const targets = [document.querySelector("#scenario8"), document.querySelector("#vacation-game")];
+                 const targets = [document.querySelector("#vacation-game")];
                
                  const observer1 = new IntersectionObserver(
                    (entries) => {
@@ -1512,7 +1462,7 @@ if (allCardsMatched()) {
 
   document.addEventListener("DOMContentLoaded", () => {
    const stickyRow = document.querySelector(".sticky-row");
-   const targets2 = [document.querySelector("#scenario5"), document.querySelector("#wedding-game")];
+   const targets2 = [document.querySelector("#wedding-game")];
  
    const observer2 = new IntersectionObserver(
      (entries) => {
@@ -5317,7 +5267,7 @@ function checkCompletion() {
 
     var hideSection = document.getElementById('factormeter');
     hideSection.classList.remove('visible-section');
-    thideSection.classList.add('hidden-section');
+    hideSection.classList.add('hidden-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
