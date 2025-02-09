@@ -1363,7 +1363,7 @@ const dragSound2 = document.getElementById('drag-sound'); // Select the drag sou
       card.dataset.value = value;
 
       const img = document.createElement('img');
-      img.src = `../img/wedding/${imageMapping[value]}`;
+      img.src = `./img/wedding/${imageMapping[value]}`;
       img.style.display = 'none';
       card.appendChild(img);
 
@@ -1486,7 +1486,7 @@ if (allCardsMatched()) {
       messageDisplay.innerHTML = '';
       
       const img = document.createElement('img');
-      img.src = '../img/wedding/dream-wedding.png';
+      img.src = './img/wedding/dream-wedding.png';
       img.alt = 'Go for dream wedding!';
       img.style.width = '35%';
       img.style.height = 'auto';
