@@ -59,7 +59,7 @@
   <div class="container-fluid">
     <div class="row sticky-row">
       <div class="col-sm-10">
-     <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;"></a>
+        <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;"></a>
       </div>
   </div>
   </div>
@@ -105,7 +105,7 @@
     <aside style="padding-top: 30px;">
         <div class="text-center">
             <h5 style="font-weight: bolder;">CREDIT<br>SCORE</h5>
-            <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;" data-progress="20">
+            <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;" data-progress="1">
               <img src="./img/creditscore.png" class="card-img-top creditscore-img">
               <div class="opacity-overlay"></div> <!-- New overlay div -->
               <img src="./img/creditarrow.png" class="card-img-top creditarrow-img">
@@ -139,7 +139,7 @@
         <div class="container">
           <div class="row">
               <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">   
-                <a href="#scene1-opt1" id="scene1-link1" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="55" data-focus="70" data-connection="50" data-credit-score="5"> 
+                <a href="#scene1-opt1" id="scene1-link1" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="60" data-connection="50" data-credit-score="5"> 
                   <div class="card my-card2">
                
                     <img src="./img/essentials.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
@@ -149,7 +149,7 @@
           </div>
 
           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
-            <a href="#scene1-opt2" id="scene1-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="75" data-focus="70" data-connection="50" data-credit-score="5"> 
+            <a href="#scene1-opt2" id="scene1-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="40" data-connection="50" data-credit-score="4"> 
               <div class="card my-card2">
             
                 <img src="./img/luxury.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
@@ -159,7 +159,7 @@
               </div>
       
           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
-            <a href="#scene1-opt3" id="scene1-link3" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="85" data-focus="70" data-connection="75" data-credit-score="5"> 
+            <a href="#scene1-opt3" id="scene1-link3" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="50" data-connection="50" data-credit-score="3"> 
               <div class="card my-card2">
              
                 <img src="./img/basic-needs.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
@@ -184,10 +184,14 @@
               <img src="./img/narrative.png">
               <div class="overlay-text">
                
-             This choice shows responsible credit usage. Your Credit Score increases by 30 points for paying off the balance on time and keeping utilization low
+                Your choice has shown a responsible
+                credit usage. This has resulted in an
+                increase in your credit score by
+                paying off the balance on time
+                and keeping your credit utilization low
     
                 <div class="text-center" style="padding-top: 60px;">
-                <a href="#scenario2" id="optlink1"  class="game-button">continue</a>
+                <a href="#scene1-tips" id="optlink1"  class="game-button">continue</a>
               </div>
             </div>
             
@@ -207,10 +211,14 @@
           <img src="./img/narrative.png">
           <div class="overlay-text">
            
-         Your credit utilization is now over 75% (utilization = $800/$1000). You pay just the minimum ($20). Your Credit Score decreases by 20 points because high utilization and a partial payment negatively affect your score.
+         Your credit utilization is now over 75% 
+         (utilization = $800/$1000).
+         With high credit utilization
+         and only paying the minimum,
+         will negatively affect your credit score.
 
             <div class="text-center" style="padding-top: 60px;">
-            <a href="#scenario2" id="optlink2" class="game-button">continue</a>
+            <a href="#scene1-tips" id="optlink2" class="game-button">continue</a>
           </div>
         </div>
         
@@ -230,16 +238,45 @@
           <img src="./img/narrative.png">
           <div class="overlay-text">
            
-         Low utilization, full payment and responsible use. Your Credit Score increases by 10 points!
+         Low utilization, full payment and
+         responsible use give positive impact
+         to your credit score.
+         
 
             <div class="text-center" style="padding-top: 60px;">
-            <a href="#scenario2" id="optlink3" class="game-button">continue</a>
+            <a href="#scene1-tips" id="optlink3" class="game-button">continue</a>
           </div>
         </div>
         
     </div>
     </div>
   
+</div>
+
+</div>
+
+
+<div id="scene1-tips" class="hidden-section" style="padding-top: 20px;">
+
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="info-container2 text-center">
+        <img src="./img/narrative.png">
+        <div class="overlay-text">
+         
+          Credit utilization is the percentage of your total available credit that you're using.
+          (What you owe/Credit Limit) x 100% = Credit Utilization ratio
+          It is an important indicator of how you manage debt and advisable to keep your credit utilization consistently low
+
+          <div class="text-center" style="padding-top: 60px;">
+          <a href="#scenario2" id="scene1narrative" class="game-button">continue</a>
+        </div>
+      </div>
+      
+  </div>
+  </div>
+
 </div>
 
 </div>
@@ -942,24 +979,29 @@ document.addEventListener("DOMContentLoaded", function () {
               <script>
                 document.addEventListener("DOMContentLoaded", () => {
                  const stickyRow = document.querySelector(".sticky-row");
+                 const footer = document.querySelector("#footer");
                  const targets = [document.querySelector("#scenario8"), document.querySelector("#vacation-game")];
                
                  const observer1 = new IntersectionObserver(
                    (entries) => {
                      let shouldHideStickyRow = false;
+                     let HideFooter = false;
                
                      // Check the visibility of each observed element
                      entries.forEach((entry) => {
                        if (entry.isIntersecting) {
                          shouldHideStickyRow = true;
+                         HideFooter = true;
                        }
                      });
                
                      // Toggle the visibility of the sticky-row based on any intersecting element
-                     if (shouldHideStickyRow) {
+                     if (shouldHideStickyRow && HideFooter) {
                        stickyRow.style.display = "none";
+                       footer.style.display = "none";
                      } else {
                        stickyRow.style.display = "flex"; // Or your desired display value
+                       footer.style.display = "block";
                      }
                    },
                    { threshold: 0.2 } // Adjust the visibility threshold as needed
@@ -1321,7 +1363,7 @@ const dragSound2 = document.getElementById('drag-sound'); // Select the drag sou
       card.dataset.value = value;
 
       const img = document.createElement('img');
-      img.src = `./img/wedding/${imageMapping[value]}`;
+      img.src = `../img/wedding/${imageMapping[value]}`;
       img.style.display = 'none';
       card.appendChild(img);
 
@@ -1426,7 +1468,7 @@ if (allCardsMatched()) {
       messageDisplay.innerHTML = '';
       
       const img = document.createElement('img');
-      img.src = '../img/wedding/modest-wedding.png';
+      img.src = './img/wedding/modest-wedding.png';
       img.alt = 'Go for modest wedding!';
       img.style.width = '35%';
       img.style.height = 'auto';
@@ -1463,27 +1505,32 @@ if (allCardsMatched()) {
   document.addEventListener("DOMContentLoaded", () => {
    const stickyRow = document.querySelector(".sticky-row");
    const targets2 = [document.querySelector("#scenario5"), document.querySelector("#wedding-game")];
- 
-   const observer2 = new IntersectionObserver(
-     (entries) => {
-       let shouldHideStickyRow = false;
- 
-       // Check the visibility of each observed element
-       entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-           shouldHideStickyRow = true;
-         }
-       });
- 
-       // Toggle the visibility of the sticky-row based on any intersecting element
-       if (shouldHideStickyRow) {
-         stickyRow.style.display = "none";
-       } else {
-         stickyRow.style.display = "flex"; // Or your desired display value
-       }
-     },
-     { threshold: 0.2 } // Adjust the visibility threshold as needed
-   );
+   const footer2 = document.querySelector("#footer");
+               
+                 const observer2 = new IntersectionObserver(
+                   (entries) => {
+                     let shouldHideStickyRow = false;
+                     let HideFooter = false;
+               
+                     // Check the visibility of each observed element
+                     entries.forEach((entry) => {
+                       if (entry.isIntersecting) {
+                         shouldHideStickyRow = true;
+                         HideFooter = true;
+                       }
+                     });
+               
+                     // Toggle the visibility of the sticky-row based on any intersecting element
+                     if (shouldHideStickyRow && HideFooter) {
+                       stickyRow.style.display = "none";
+                       footer2.style.display = "none";
+                     } else {
+                       stickyRow.style.display = "flex"; // Or your desired display value
+                       footer2.style.display = "block";
+                     }
+                   },
+                   { threshold: 0.2 } // Adjust the visibility threshold as needed
+                 );
  
    // Observe each target element
    targets2.forEach((target) => {
@@ -2273,27 +2320,32 @@ if (allCardsMatched()) {
                 document.addEventListener("DOMContentLoaded", () => {
                  const stickyRow = document.querySelector(".sticky-row");
                  const targets3 = [document.querySelector("#scenario9"), document.querySelector("#business-game")];
+                 const footer3 = document.querySelector("#footer");
                
-                 const observer3 = new IntersectionObserver(
-                   (entries) => {
-                     let shouldHideStickyRow = false;
-               
-                     // Check the visibility of each observed element
-                     entries.forEach((entry) => {
-                       if (entry.isIntersecting) {
-                         shouldHideStickyRow = true;
-                       }
-                     });
-               
-                     // Toggle the visibility of the sticky-row based on any intersecting element
-                     if (shouldHideStickyRow) {
-                       stickyRow.style.display = "none";
-                     } else {
-                       stickyRow.style.display = "flex"; // Or your desired display value
+               const observer3 = new IntersectionObserver(
+                 (entries) => {
+                   let shouldHideStickyRow = false;
+                   let HideFooter = false;
+             
+                   // Check the visibility of each observed element
+                   entries.forEach((entry) => {
+                     if (entry.isIntersecting) {
+                       shouldHideStickyRow = true;
+                       HideFooter = true;
                      }
-                   },
-                   { threshold: 0.2 } // Adjust the visibility threshold as needed
-                 );
+                   });
+             
+                   // Toggle the visibility of the sticky-row based on any intersecting element
+                   if (shouldHideStickyRow && HideFooter) {
+                     stickyRow.style.display = "none";
+                     footer3.style.display = "none";
+                   } else {
+                     stickyRow.style.display = "flex"; // Or your desired display value
+                     footer3.style.display = "block";
+                   }
+                 },
+                 { threshold: 0.2 } // Adjust the visibility threshold as needed
+               );
                
                  // Observe each target element
                  targets3.forEach((target) => {
@@ -2330,7 +2382,6 @@ if (allCardsMatched()) {
                         </div>
                       </a>
                   </div>
-                <br>
                   <!-- Second row -->
                   <div class="text-center" style="display: flex; gap: 100px;">
                    
@@ -3317,28 +3368,32 @@ if (allCardsMatched()) {
                     document.addEventListener("DOMContentLoaded", () => {
                      const stickyRow = document.querySelector(".sticky-row");
                      const targets4 = [document.querySelector("#quiz-game")];
-                   
-                     const observer4 = new IntersectionObserver(
-                       (entries) => {
-                         let shouldHideStickyRow = false;
-                   
-                         // Check the visibility of each observed element
-                         entries.forEach((entry) => {
-                           if (entry.isIntersecting) {
-                             shouldHideStickyRow = true;
-                           }
-                         });
-                   
-                         // Toggle the visibility of the sticky-row based on any intersecting element
-                         if (shouldHideStickyRow) {
-                           stickyRow.style.display = "none";
-                         } else {
-                           stickyRow.style.display = "flex"; // Or your desired display value
-                         }
-                       },
-                       { threshold: 0.2 } // Adjust the visibility threshold as needed
-                     );
-                   
+                     const footer4 = document.querySelector("#footer");
+               
+               const observer4 = new IntersectionObserver(
+                 (entries) => {
+                   let shouldHideStickyRow = false;
+                   let HideFooter = false;
+             
+                   // Check the visibility of each observed element
+                   entries.forEach((entry) => {
+                     if (entry.isIntersecting) {
+                       shouldHideStickyRow = true;
+                       HideFooter = true;
+                     }
+                   });
+             
+                   // Toggle the visibility of the sticky-row based on any intersecting element
+                   if (shouldHideStickyRow && HideFooter) {
+                     stickyRow.style.display = "none";
+                     footer4.style.display = "none";
+                   } else {
+                     stickyRow.style.display = "flex"; // Or your desired display value
+                     footer4.style.display = "block";
+                   }
+                 },
+                 { threshold: 0.2 } // Adjust the visibility threshold as needed
+               );
                      // Observe each target element
                      targets4.forEach((target) => {
                        if (target) {
@@ -3603,11 +3658,11 @@ console.log("Correct Answers: " + correctAnswers); // Debugging step
   <aside style="padding-top: 60px;">
 <div class="container text-left" >
     <div class="circular-progress-container">
-      <div class="circular-progress" data-progress="80">
+      <div class="circular-progress" data-progress="50">
         <div class="inner-circle">
-          <span class="percentage" hidden>80%</span>
+          <span class="percentage" hidden>50%</span>
           <img src="./img/happiness.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
-          <span class="tooltip">Happiness</span>
+          <span class="tooltip">HAPPINESS: Reduce financial stress,<br>making it easier to manage<br>expenses and enjoy life’s comforts</span>
         </div>
         <div class="outer-ring"></div>
       </div>
@@ -3615,11 +3670,12 @@ console.log("Correct Answers: " + correctAnswers); // Debugging step
     </div>
     <br><br><br>
     <div class="circular-progress-container">
-      <div class="circular-progress" data-progress="70">
+      <div class="circular-progress" data-progress="50">
         <div class="inner-circle">
-          <span class="percentage" hidden>70%</span>
+          <span class="percentage" hidden>50%</span>
           <img src="./img/focus.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
-          <span class="tooltip">Goals</span>
+          <span class="tooltip">GOALS: Enabling opportunities like<br>homeownership or education, helping loved<br>ones
+            move forward with their ambitions</span>
         </div>
         <div class="outer-ring"></div>
       </div>
@@ -3627,11 +3683,13 @@ console.log("Correct Answers: " + correctAnswers); // Debugging step
     </div>
     <br><br><br>
     <div class="circular-progress-container">
-      <div class="circular-progress" data-progress="60">
+      <div class="circular-progress" data-progress="50">
         <div class="inner-circle">
-          <span class="percentage" hidden>60%</span>
+          <span class="percentage" hidden>50%</span>
           <img src="./img/relationship.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
-          <span class="tooltip">Relationship</span>
+          <span class="tooltip">Relationship: Foster trust and open<br>
+            communication about finances and<br>
+            work together toward shared financial goals</span>
         </div>
         <div class="outer-ring"></div>
       </div>
@@ -3645,18 +3703,55 @@ console.log("Correct Answers: " + correctAnswers); // Debugging step
 </div><!--container fluid row-->
 
 
-<!--
+
 <div id="footer">
 
   <div class="text-center" style="display: flex; gap: 80px; justify-content: center;">
     
-    <a href="game-end.html" class="start-link">About this game</a>
-    <a href="game-end.html" class="start-link">Contact Us</a>
+    <a href="" id="" data-toggle="modal" data-target="#aboutgame" class="start-link">
+      About this game
+    </a>
+    <a href="" id="" data-toggle="modal" data-target="#contactus" class="start-link">
+      Contact Us
+    </a>
   </div>
 
 
 </div>
--->
+
+<div class="modal fade" id="aboutgame" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">About this game</h5>
+        <a type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+      </div>
+      <div class="modal-body">
+      Financial awareness game
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="contactus" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Contact Us</h5>
+        <a type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </a>
+      </div>
+      <div class="modal-body">
+Contact us at this email or number
+      </div>
+    </div>
+  </div>
+</div>
+
 <br>
 
 <script>
@@ -3768,7 +3863,7 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
   
     
     // Reveal the section
-    var targetSection = document.getElementById('scenario2');
+    var targetSection = document.getElementById('scene1-tips');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
@@ -3786,7 +3881,7 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
   
     
     // Reveal the section
-    var targetSection = document.getElementById('scenario2');
+    var targetSection = document.getElementById('scene1-tips');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
@@ -3803,11 +3898,29 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
   
     
     // Reveal the section
-    var targetSection = document.getElementById('scenario2');
+    var targetSection = document.getElementById('scene1-tips');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
     var hideSection = document.getElementById('scene1-opt3');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('scene1narrative').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario2');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene1-tips');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
@@ -6245,9 +6358,6 @@ hideSection.addEventListener('transitionend', function onTransitionEnd() {
 
 /////////////////////////////////////////////////////////////
  
- // Function to update circular progress and arrow
- const minValue = 10;
-const maxValue = 100;
 
 // Initialize progress on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -6276,28 +6386,35 @@ function updateCircularProgress(element, newValue) {
     // Update the arrow image based on value change
     const arrowImage = element.parentElement.querySelector('.factor-up-image');
     if (arrowImage) {
-        if (newValue !== previousValue) {
-            arrowImage.classList.remove('visible', 'hidden'); // Remove existing classes
-            void arrowImage.offsetWidth; // Force reflow (this resets the animation)
-
-            // Set the appropriate image based on the progress change
-            if (newValue > previousValue) {
-                arrowImage.src = './img/factor-up.png'; // Change to the upward arrow image
-            } else if (newValue < previousValue) {
-                arrowImage.src = './img/factor-down.png'; // Change to the downward arrow image
-            }
-
-            // Make the image visible
-            arrowImage.classList.add('visible');
-            
-            // Hide the image after a brief delay
-            setTimeout(() => {
-                arrowImage.classList.remove('visible');
-                arrowImage.classList.add('hidden');
-            }, 1000); // 1-second visibility duration
+        if (newValue > previousValue) {
+            arrowImage.src = './img/factor-up.png'; // Change to the upward arrow image
+        } else if (newValue < previousValue) {
+            arrowImage.src = './img/factor-down.png'; // Change to the downward arrow image;
+        } else {
+            // If values are the same, hide the arrow and return early
+            arrowImage.classList.add('hidden');
+            return;
         }
+
+        // Remove existing classes to reset animation
+        arrowImage.classList.remove('visible', 'hidden');
+        void arrowImage.offsetWidth; // Force reflow (reset animation)
+
+        // Make the image visible
+        arrowImage.classList.add('visible');
+
+        // Hide the image after a brief delay
+        setTimeout(() => {
+            arrowImage.classList.remove('visible');
+            arrowImage.classList.add('hidden');
+        }, 1000); // 1-second visibility duration
     }
 }
+
+
+ // Function to update circular progress and arrow
+ const minValue = 1;
+const maxValue = 100;
 
 
 function updateCreditArrow() {
