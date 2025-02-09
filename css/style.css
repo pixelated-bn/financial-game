@@ -190,12 +190,12 @@ h1 {
 
   .tooltip {
     position:absolute;
-  top: 20px;
+  top: 12px;
   right: calc(100% + 5px);
   z-index: 3;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  padding: 6px 12px;
+  padding: 6px 10px;
   border-radius: 4px;
   font-size: 17px;
   font-weight: 400;
@@ -568,7 +568,7 @@ h1 {
 }
 
 .info-container2 img {
-  width: 63%;
+  width: 60%;
   height: auto;
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
@@ -753,7 +753,7 @@ h1 {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height:6%;
+  height:5%;
 }
 
 
@@ -1046,7 +1046,7 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 214%;
+  height: 224%;
   background: linear-gradient(to bottom, rgba(243, 241, 241, 0.315) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none; /* Ensure the overlay doesn't interfere with other elements */
   transition: opacity 0.5s ease-in-out; /* Add a transition for smooth movement */
@@ -1058,9 +1058,9 @@ h1 {
   transform: translateX(-50%); /* Keep it centered relative to the new left position */
   width: 40%; /* Adjust the size as needed */
   height: auto;
-  top: 105%; /* Adjust this value to place the arrow within the container */
+  top: 110%; /* Adjust this value to place the arrow within the container */
   z-index: 10; /* Ensures the arrow stays on top */
-  transition: left 0.8s ease, top 0.8s ease; /* Add a transition for smooth movement */
+  transition: left 0.3s ease, top 0.3s ease; /* Add a transition for smooth movement */
 }
 
 .table-container {
@@ -1410,6 +1410,24 @@ table img:hover {
   flex: 1 1 45%; /* The same for bottom options */
 }
 
+button {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  color: #206E63;
+  font-weight: bold;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #206E63;
+  padding: 20px;
+  width: 80%;
+}
+
+button:hover {
+  background-color: #206E63;
+  color: #ffffff;
+}
+
 
  input[type="text"] {
      font-size: 100%;
@@ -1444,23 +1462,6 @@ table img:hover {
      background-color: #dfdae7;
  }
 
- button {
-  display: inline-block;
-  margin: 10px;
-  cursor: pointer;
-  color: #206E63;
-  font-weight: bold;
-  background-color: #ffffff;
-  border-radius: 5px;
-  border: 1px solid #206E63;
-  padding: 20px;
-  width: 80%;
-}
-
-button:hover {
-  background-color: #206E63;
-  color: #ffffff;
-}
 
 
 .item-container {
@@ -2522,7 +2523,7 @@ height: auto;
 #choices-div{
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-left: 230px;
   padding-right: 230px;
   gap: 4px;
