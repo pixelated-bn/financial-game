@@ -1,25 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CreditLit</title>
-    <!-- Bootstrap and CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
-    <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <style>
-        .fade-out {
-            transition: opacity 1s ease;
-            opacity: 0;
-        }
-        .fade-in {
-            transition: opacity 1s ease;
-            opacity: 1;
-        }
-    </style>
+
+<!-- Bootstrap and CSS -->
+        <!--Link for connecting to bootstrap-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
+
+        <!--Link to connect to font awesome-->
+        <!--Link to connect to CSS-->
+        <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+        <link rel="stylesheet" href="./css/style.css">
+
 </head>
 <body>
 
@@ -29,14 +24,16 @@
         Your browser does not support the audio element.
     </audio>
 
+
     <div class="container-fluid">
         <div class="row sticky-row">
-            <div class="col-sm-10">
-                <img src="./img/creditlit1.png" class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;">
-            </div>
-        </div>
-        <div class="row" id="viewscreen">
-            <div class="col-sm-12">
+          <div class="col-sm-10">
+            <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;"></a>
+          </div>
+      </div>
+      </div>
+    
+
                 <div id="index" class="visible" style="padding-top: 180px;">
                     <div class="row" style="background: none;">
                         <div class="col-sm-12 text-center" style="padding-right: 50px;">
@@ -54,45 +51,667 @@
                             <br>
 
                             <div class="text-center" style="padding-top: 40px;">
-                        <a href="game.html" class="index-button" id="index-link">continue</a>
+                        <a href="#narration" class="index-button" id="index-link2">continue</a>
                             </div>
 
                             <br>
                         </div>
                     </div>
                 </div>
+
+                <div id="narration" class="hidden" style="padding-top: 20px;">
+
+
+                    <div class="text-center" style="padding-top: 180px; padding-left: 300px; padding-right: 300px; display: inline-block; overflow: hidden;">
+                      <h3 style="font-weight: normal; justify-content: center; line-height: 140%;">Your goal is to build and maintain a high credit score while navigating through different levels of financial decisions and challenges. Each decision on how to use credit, manage debt and keep an eye on your credit report contributes to your credit score in real life.</h3>
+            
+                      <div style="display: flex; justify-content: center; margin-top: 50px;">
+                        <a href="#scenario1" id="scenelink1" class="start-button">continue</a>
+                    </div>
+            
+                  </div>
+            
             </div>
+
+
+            <div> <!--container fluid row-->
+  
+
+                <div class="col-sm-2 text-center hidden-section" id="creditmeter">
+                  <aside style="padding-top: 30px;">
+                      <div class="text-center">
+                          <h5 style="font-weight: bolder;">CREDIT<br>SCORE</h5>
+                          <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;" data-progress="1">
+                            <img src="./img/creditscore.png" class="card-img-top creditscore-img">
+                            <div class="opacity-overlay"></div> <!-- New overlay div -->
+                            <img src="./img/creditarrow.png" class="card-img-top creditarrow-img">
+                            
+                        <span class="tooltip2">Credit Score</span>
+                        </div>
+                      </div>
+                  </aside>
+              </div>
+              
+              
+                  <div class="col-sm-8 text-center" id="section"> <!-- col-sm-8 -->
+              
+                 <section> <!--section-->
+
+
+ <!--Scenario 1-->
+
+
+ <div id="scenario1" class="hidden-section" style="padding-top: 20px;">
+
+
+    <br>
+    <h4 class="text-center" style="font-weight:normal; font-style: italic;">You applied for B$1000 credit card limit for your everyday purchases.</h4>
+
+    <br>
+
+    <h1 class="text-center" style="font-weight:bolder;">What would you do?</h1>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">   
+            <a href="#scene1-opt1" id="scene1-link1" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="60" data-connection="50" data-credit-score="5"> 
+              <div class="card my-card2">
+           
+                <img src="./img/essentials.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+
+          </div>
+        </a>
+      </div>
+
+      <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
+        <a href="#scene1-opt2" id="scene1-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="40" data-connection="50" data-credit-score="4"> 
+          <div class="card my-card2">
+        
+            <img src="./img/luxury.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+
+            </div>
+          </a>
+          </div>
+  
+      <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
+        <a href="#scene1-opt3" id="scene1-link3" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="50" data-connection="50" data-credit-score="3"> 
+          <div class="card my-card2">
+         
+            <img src="./img/basic-needs.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+
+            </div>
+          </a>
+          </div>
+  
+      </div>
+   </div>
+
+  </div>
+
+
+
+  <div id="scene1-opt1" class="hidden-section" style="padding-top: 20px;">
+
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="info-container2 text-center">
+          <img src="./img/narrative.png">
+          <div class="overlay-text">
+           
+            Your choice has shown a responsible
+            credit usage. This has resulted in an
+            increase in your credit score by
+            paying off the balance on time
+            and keeping your credit utilization low
+
+            <div class="text-center" style="padding-top: 60px;">
+            <a href="#scene1-tips" id="optlink1"  class="game-button">continue</a>
+          </div>
         </div>
+        
     </div>
+    </div>
+  
+</div>
+
+</div>
+
+<div id="scene1-opt2" class="hidden-section" style="padding-top: 20px;">
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="info-container2 text-center">
+      <img src="./img/narrative.png">
+      <div class="overlay-text">
+       
+     Your credit utilization is now over 75% 
+     (utilization = $800/$1000).
+     With high credit utilization
+     and only paying the minimum,
+     will negatively affect your credit score.
+
+        <div class="text-center" style="padding-top: 60px;">
+        <a href="#scene1-tips" id="optlink2" class="game-button">continue</a>
+      </div>
+    </div>
+    
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div id="scene1-opt3" class="hidden-section" style="padding-top: 20px;">
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="info-container2 text-center">
+      <img src="./img/narrative.png">
+      <div class="overlay-text">
+       
+     Low utilization, full payment and
+     responsible use give positive impact
+     to your credit score.
+     
+
+        <div class="text-center" style="padding-top: 60px;">
+        <a href="#scene1-tips" id="optlink3" class="game-button">continue</a>
+      </div>
+    </div>
+    
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+<div id="scene1-tips" class="hidden-section" style="padding-top: 20px;">
+
+
+<div class="row">
+<div class="col-sm-12">
+  <div class="info-container2 text-center">
+    <img src="./img/narrative.png">
+    <div class="overlay-text">
+     
+      Credit utilization is the percentage of your total available credit that you're using.
+      (What you owe/Credit Limit) x 100% = Credit Utilization ratio
+      It is an important indicator of how you manage debt and advisable to keep your credit utilization consistently low
+
+      <div class="text-center" style="padding-top: 60px;">
+      <a href="#scenario2" id="scene1narrative" class="game-button">continue</a>
+    </div>
+  </div>
+  
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+  <!--End of scenario 1-->
+
+
+
+<!--Scenario 2-->
+
+
+<div id="scenario2" class="hidden-section" style="padding-top: 20px;">
+
+      
+    <h4 class="text-center" style="font-weight: normal; font-style: italic;">You have been saving for a new car and now ready to apply for a car loan.</h4>
+
+    <br>
+
+    <h1 class="text-center" style="font-weight:bold;">What would you do?</h1>
+
+
+    <div class="text-center" style="padding-top: 20px;">
+      <img src="./img/arrow.png" class="card-img-top" style="width: 3%; height: auto; margin: 0 auto;">
+    </div>
+    
+  
+    <div class="text-center">
+
+
+        <div class="slider-container">
+          <a class="slider-btn prev">
+            <img src="./img/select1.png" alt="Previous" />
+        </a>
+          <div class="slider">
+            <div class="car">
+              <a href="#scene2-opt1" id="scene2-link1">
+                <img src="./img/used.png" alt="Card 1 Image" class="car-image">
+               
+              </a>
+            </div>
+            <div class="car">
+              <a href="#scene2-opt2" id="scene2-link2">
+                <img src="./img/new.png" alt="Card 2 Image" class="car-image">
+            
+              </a>
+            </div>
+            <div class="car">
+              <a href="#scene2-opt3" id="scene2-link3">
+                <img src="./img/dream.png" alt="Card 3 Image" class="car-image">
+             
+              </a>
+            </div>
+          </div>
+          <a class="slider-btn next">
+            <img src="./img/select2.png" alt="Next" />
+        </a>
+        </div>
+        
+      </div>
+
+  </div>
+
+  <script>
+
+const cards = document.querySelectorAll('.car');
+const nextBtn = document.querySelector('.slider-btn.next');
+const prevBtn = document.querySelector('.slider-btn.prev');
+
+let currentSlide = 1; // Start with the middle card (index 2)
+
+// Function to update card classes
+function updateCardClasses() {
+cards.forEach((card, index) => {
+card.classList.remove('focus', 'left', 'right', 'hidden');
+
+if (index === currentSlide) {
+  card.classList.add('focus');
+} else if (index === currentSlide - 1 || (currentSlide === 0 && index === cards.length - 1)) {
+  card.classList.add('left');
+} else if (index === currentSlide + 1 || (currentSlide === cards.length - 1 && index === 0)) {
+  card.classList.add('right');
+} else {
+  card.classList.add('hidden');
+}
+});
+}
+
+// Navigation Buttons
+nextBtn.addEventListener('click', () => {
+currentSlide++;
+if (currentSlide > cards.length - 1) {
+currentSlide = 0;
+}
+updateCardClasses();
+});
+
+prevBtn.addEventListener('click', () => {
+currentSlide--;
+if (currentSlide < 0) {
+currentSlide = cards.length - 1;
+}
+updateCardClasses();
+});
+
+// Initialize card positions
+updateCardClasses();
+
+      </script>
+
+
+
+  <div id="scene2-opt1" class="hidden-section" style="padding-top: 20px;">
+
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="info-container2 text-center">
+          <img src="./img/narrative.png">
+          <div class="overlay-text">
+           
+            Yes, you need to stick to a budget, but buying an extremely cheap  or used car comes with its own risks. If the car keeps breaking down, repairs can be very costly. Soon you’ve spent more on that old lemon than you would have if you’d just bought a better car from a reputable dealer in the first place.
+
+            <div class="text-center" style="padding-top: 60px;">
+            <a href="#scenario2a" id="optlink4" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
+          </div>
+        </div>
+        
+    </div>
+    </div>
+  
+</div>
+
+</div>
+
+<div id="scene2-opt2" class="hidden-section" style="padding-top: 20px;">
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="info-container2 text-center">
+      <img src="./img/narrative.png">
+      <div class="overlay-text">
+       
+        <br><br>It’s better to be safe than stylish. Unsafe cars are a big factor for road crashes and you don't need to spend a fortune to get a safe car.
+
+        <div class="text-center" style="padding-top: 60px;">
+        <a href="#scenario2a" id="optlink5" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+      </div>
+    </div>
+    
+</div>
+</div>
+
+</div>
+
+</div>
+
+<div id="scene2-opt3" class="hidden-section" style="padding-top: 20px;">
+
+
+<div class="row">
+  <div class="col-sm-12">
+    <div class="info-container2 text-center">
+      <img src="./img/narrative.png">
+      <div class="overlay-text">
+       
+        You have always dream of sitting behind the wheel of a luxury car, wake up with a sense of awe and wonder - the sight of the sleek curves, the feel of the smooth leather seats, and the sound of the powerful engine roaring to life.
+
+        <div class="text-center" style="padding-top: 60px;">
+        <a href="#scenario2a" id="optlink6" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="10">continue</a>
+      </div>
+    </div>
+    
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+  <!--End of scenario 2-->
+
+
+       <!--Scenario 2a-->
+
+       <div id="scenario2a" class="hidden-section" style="padding-top: 20px;">
+
+        <br><br><br><br>
+        <h4 class="text-center" style="font-weight: normal; font-style: italic;">Now that you have decided which car you want and you're eligible for a loan, you can choose how to approach it</h4>
+
+
+
+        <br><br><br>
+
+        <h1 class="text-center" style="font-weight:bold;">What would you do?</h1>
+
+        <div>
+    
+       <div class="text-center" id="choices-div">
+        <div id="choices-col">
+        <a href="#scene2a-opt1" id="scene2a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
+          Apply with multiple lenders
+        </a>
+      </div>
+      <div id="choices-col">
+        <a href="#scene2a-opt2" id="scene2a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+         Apply with one trusted lender
+         </a>
+      </div>
+    </div>
+   
+        </div>
+      </div>
+
+
+      <div id="scene2a-opt1" class="hidden-section" style="padding-top: 20px;">
+
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="info-container2 text-center">
+              <img src="./img/narrative.png">
+              <div class="overlay-text">
+               
+                Every application triggers a hard inquiry, lowering your Credit Score by 50 points temporarily due to the impact of multiple credit checks.
+    
+                <div class="text-center" style="padding-top: 60px;">
+                    <a href="#" id="optlink7" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
+                </div>
+               
+                
+            </div>
+            
+        </div>
+        </div>
+      
+    </div>
+  
+  </div>
+
+   
+  <script>
+    // Get the 'continue' button
+    const continueButton1 = document.getElementById('optlink7');
+
+    // Function to randomize URL
+    function randomizeURL1() {
+        // Array of possible URLs
+        const gameURLs1 = ['game2.html', 'game3.html'];
+
+        // Select a random URL from the array
+        const randomURL1 = gameURLs1[Math.floor(Math.random() * gameURLs1.length)];
+
+        // Redirect the user to the randomly selected URL
+        window.location.href = randomURL1;
+    }
+
+    // Add event listener to the continue button
+    continueButton1.addEventListener('click', function(event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Randomize and redirect to the selected game page
+        randomizeURL1();
+    });
+</script>
+
+  <div id="scene2a-opt2" class="hidden-section" style="padding-top: 20px;">
+
+
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="info-container2 text-center">
+          <img src="./img/narrative.png">
+          <div class="overlay-text">
+           
+            <br><br>A single inquiry has minimal impact on your Credit Score, reducing it by just 5 points. Your Credit Score increases by 15 points because you secure the loan with a low-interest rate and a good repayment plan.
+
+            <div class="text-center" style="padding-top: 60px;">
+            <a href="#" id="optlink8" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+          </div>
+        </div>
+        
+    </div>
+    </div>
+  
+</div>
+
+</div>
+
+<script>
+    // Get the 'continue' button
+    const continueButton2 = document.getElementById('optlink8');
+
+    // Function to randomize URL
+    function randomizeURL2() {
+        // Array of possible URLs
+        const gameURLs2 = ['game2.html', 'game3.html'];
+
+        // Select a random URL from the array
+        const randomURL2 = gameURLs2[Math.floor(Math.random() * gameURLs2.length)];
+
+        // Redirect the user to the randomly selected URL
+        window.location.href = randomURL2;
+    }
+
+    // Add event listener to the continue button
+    continueButton2.addEventListener('click', function(event) {
+        // Prevent the default link behavior
+        event.preventDefault();
+
+        // Randomize and redirect to the selected game page
+        randomizeURL2();
+    });
+</script>
+
+
+            <!--End of scenario 2a-->
+
+
+
+        </section> <!--section-->
+
+</div> <!-- col-sm-8 -->
+
+<div class="col-sm-2 text-left hidden-section" id="factormeter">
+  <aside style="padding-top: 60px;">
+<div class="container text-left" >
+    <div class="circular-progress-container">
+      <div class="circular-progress" data-progress="50">
+        <div class="inner-circle">
+          <span class="percentage" hidden>50%</span>
+          <img src="./img/happiness.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+          <span class="tooltip">HAPPINESS: Reduce financial stress,<br>making it easier to manage<br>expenses and enjoy life’s comforts</span>
+        </div>
+        <div class="outer-ring"></div>
+      </div>
+      <img src="./img/factor-up.png" class="factor-up-image">
+    </div>
+    <br><br><br>
+    <div class="circular-progress-container">
+      <div class="circular-progress" data-progress="50">
+        <div class="inner-circle">
+          <span class="percentage" hidden>50%</span>
+          <img src="./img/focus.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+          <span class="tooltip">GOALS: Enabling opportunities like<br>homeownership or education, helping loved<br>ones
+            move forward with their ambitions</span>
+        </div>
+        <div class="outer-ring"></div>
+      </div>
+      <img src="./img/factor-up.png" class="factor-up-image">
+    </div>
+    <br><br><br>
+    <div class="circular-progress-container">
+      <div class="circular-progress" data-progress="50">
+        <div class="inner-circle">
+          <span class="percentage" hidden>50%</span>
+          <img src="./img/relationship.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
+          <span class="tooltip">Relationship: Foster trust and open<br>
+            communication about finances and<br>
+            work together toward shared financial goals</span>
+        </div>
+        <div class="outer-ring"></div>
+      </div>
+      <img src="./img/factor-up.png" class="factor-up-image">
+    </div>
+    <br><br>
+      </div>
+  </aside>
+</div> <!-- col-sm-2 -->
+
+</div><!--container fluid row-->
+<div id="footer">
+
+    <div class="text-center" style="display: flex; gap: 80px; justify-content: center;">
+      
+      <a href="" id="" data-toggle="modal" data-target="#aboutgame" class="start-link">
+        About this game
+      </a>
+      <a href="" id="" data-toggle="modal" data-target="#contactus" class="start-link">
+        Contact Us
+      </a>
+    </div>
+  
+  
+  </div>
+  
+  <div class="modal fade" id="aboutgame" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">About this game</h5>
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+        </div>
+        <div class="modal-body">
+        Financial awareness game
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="contactus" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Contact Us</h5>
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </a>
+        </div>
+        <div class="modal-body">
+  Contact us at this email or number
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <br>
+       
+
     
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const backgroundMusic = document.getElementById('background-music');
-            const imageLink = document.getElementById('index-link');
-            const typewriter = document.getElementById('typewriter');
-            const button = document.querySelector('.index-button');
-            const text = typewriter.innerText; // Store the text for typing
-            typewriter.innerText = ''; // Clear the text initially
-            let index = 0;
-            const speed = 50; // Adjust typing speed in milliseconds
+const imageLink = document.getElementById('index-link');
+const typewriter = document.getElementById('typewriter');
+const button = document.querySelector('.index-button');
+const text = typewriter.innerText; // Store the text for typing
+typewriter.innerText = ''; // Clear the text initially
+let index = 0;
+const speed = 50; // Adjust typing speed in milliseconds
 
-            // Function to fade out music gradually
-            function fadeOutMusic(audio, duration) {
-                const fadeOutInterval = 50; // Fade out interval in milliseconds
-                const fadeOutSteps = duration / fadeOutInterval; // Calculate number of steps
-                let currentVolume = audio.volume; // Current volume
-                const volumeDecrement = currentVolume / fadeOutSteps; // Volume decrement per step
+// Function to fade out music gradually
+function fadeOutMusic(audio, duration) {
+    const fadeOutInterval = 50; // Fade out interval in milliseconds
+    const fadeOutSteps = duration / fadeOutInterval; // Calculate number of steps
+    let currentVolume = audio.volume; // Current volume
+    const volumeDecrement = currentVolume / fadeOutSteps; // Volume decrement per step
 
-                const fadeOut = setInterval(() => {
-                    if (currentVolume > 0) {
-                        currentVolume -= volumeDecrement; // Decrease volume
-                        audio.volume = Math.max(0, currentVolume); // Ensure volume doesn't go below 0
-                    } else {
-                        clearInterval(fadeOut);
-                        audio.pause(); // Pause the audio once volume is 0
-                    }
-                }, fadeOutInterval);
-            }
+    const fadeOut = setInterval(() => {
+        if (currentVolume > 0) {
+            currentVolume -= volumeDecrement; // Decrease volume
+            audio.volume = Math.max(0, currentVolume); // Ensure volume doesn't go below 0
+        } else {
+            clearInterval(fadeOut);
+            audio.pause(); // Pause the audio once volume is 0
+        }
+    }, fadeOutInterval);
+}
+
+// Add click event listener to the continue button
+button.addEventListener('click', function () {
+    fadeOutMusic(backgroundMusic, 2000); // Fade out music over 2 seconds
+});
+
 
             // Typewriter effect function
             function type() {
@@ -138,6 +757,561 @@
                 }, { once: true }); // Ensures the event listener is only invoked once
             });
         });
-    </script>
+
+        document.getElementById('index-link2').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('narration');
+    targetSection.classList.remove('hidden');
+    targetSection.classList.add('visible');
+  
+    var hideSection = document.getElementById('narrative');
+    hideSection.classList.remove('visible');
+    hideSection.classList.add('hidden');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  
+document.querySelectorAll('.circular-progress-container').forEach(function(container) {
+  container.addEventListener('touchstart', function() {
+    container.classList.toggle('touch');
+  });
+
+  // Optional: Remove 'touch' class after touch ends
+  container.addEventListener('touchend', function() {
+    container.classList.remove('touch');
+  });
+});
+
+
+
+document.getElementById('scenelink1').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    var hideSection = document.getElementById('narration');
+    hideSection.classList.add('fade-out');
+
+// Once the fade-out transition is complete, proceed to reveal the target section
+hideSection.addEventListener('transitionend', function onTransitionEnd() {
+    // Remove event listener to avoid multiple triggers
+    hideSection.removeEventListener('transitionend', onTransitionEnd);
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario1');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+
+    var targetSection = document.getElementById('creditmeter');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+
+    var targetSection = document.getElementById('factormeter');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+    }, { once: true }); // Ensures the event listener is only invoked once
+  });
+
+  /////////////////////////////////////////////////
+
+  document.getElementById('scene1-link1').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene1-opt1');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scenario1');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+    hideSection.classList.add('fade-out');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('scene1-link2').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene1-opt2');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scenario1');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('scene1-link3').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene1-opt3');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scenario1');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('optlink1').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene1-tips');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene1-opt1');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('optlink2').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene1-tips');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene1-opt2');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  document.getElementById('optlink3').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene1-tips');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene1-opt3');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('scene1narrative').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario2');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene1-tips');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  ////////////////////////////////////////////////////////////
+
+
+document.getElementById('scene2-link1').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene2-opt1');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scenario2');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('scene2-link2').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene2-opt2');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scenario2');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('scene2-link3').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene2-opt3');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scenario2');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('optlink4').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario2a');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene2-opt1');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+
+  document.getElementById('optlink5').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario2a');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene2-opt2');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  document.getElementById('optlink6').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario2a');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene2-opt3');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  ////////////////////////////////////////////////////////////
+
+
+  document.getElementById('scene2a-link1').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene2a-opt1');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scenario2a');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('scene2a-link2').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scene2a-opt2');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scenario2a');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  /*
+  document.getElementById('optlink7').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario3');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene2a-opt1');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+  document.getElementById('optlink8').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario3');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene2a-opt2');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+*/
+
+  ///////////////////////////////////////////////////////////////
+
+
+
+// Initialize progress on page load
+document.addEventListener('DOMContentLoaded', () => {
+    // Delay to ensure images are loaded
+    setTimeout(initProgress, 100);
+});
+
+
+function updateCircularProgress(element, newValue) {
+    const previousValue = parseInt(element.getAttribute('data-progress'), 10); // Get the previous progress value
+    element.setAttribute('data-progress', newValue);
+    
+    // Update the percentage text
+    const percentageElement = element.querySelector('.inner-circle .percentage');
+    if (percentageElement) {
+        percentageElement.innerHTML = `${newValue}%`;
+        percentageElement.hidden = true; // Keep the percentage hidden
+    }
+    
+    // Update the circular progress background
+    const outerRing = element.querySelector('.outer-ring');
+    if (outerRing) {
+        outerRing.style.background = `conic-gradient(#D4C029 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
+    }
+
+    // Update the arrow image based on value change
+    const arrowImage = element.parentElement.querySelector('.factor-up-image');
+    if (arrowImage) {
+        if (newValue > previousValue) {
+            arrowImage.src = './img/factor-up.png'; // Change to the upward arrow image
+        } else if (newValue < previousValue) {
+            arrowImage.src = './img/factor-down.png'; // Change to the downward arrow image;
+        } else {
+            // If values are the same, hide the arrow and return early
+            arrowImage.classList.add('hidden');
+            return;
+        }
+
+        // Remove existing classes to reset animation
+        arrowImage.classList.remove('visible', 'hidden');
+        void arrowImage.offsetWidth; // Force reflow (reset animation)
+
+        // Make the image visible
+        arrowImage.classList.add('visible');
+
+        // Hide the image after a brief delay
+        setTimeout(() => {
+            arrowImage.classList.remove('visible');
+            arrowImage.classList.add('hidden');
+        }, 1000); // 1-second visibility duration
+    }
+}
+
+
+ // Function to update circular progress and arrow
+ const minValue = 1;
+const maxValue = 100;
+
+
+function updateCreditArrow() {
+    const container = document.querySelector('.credit-score-container');
+    const arrowElement = document.querySelector('.creditarrow-img');
+    const overlayElement = document.querySelector('.opacity-overlay');
+    
+    if (!container || !arrowElement || !overlayElement) {
+        console.error('Container, arrow element, or overlay element not found');
+        return;
+    }
+
+    const containerHeight = container.clientHeight;
+    const arrowHeight = arrowElement.clientHeight;
+    
+    // Ensure valid dimensions
+    if (containerHeight === 0 || arrowHeight === 0) {
+        console.error('Invalid container or arrow height');
+        return;
+    }
+
+    // Retrieve the credit score from the data-progress attribute
+    const creditScore = parseInt(container.getAttribute('data-progress'), 10);
+    if (isNaN(creditScore)) {
+        console.error('Invalid credit score');
+        return;
+    }
+
+    // Calculate the position percentage
+    const positionPercentage = ((creditScore - minValue) / (maxValue - minValue)) * 100;
+    if (positionPercentage < 0 || positionPercentage > 100) {
+        console.error('Position percentage out of bounds');
+        return;
+    }
+
+    // Calculate the top position of the arrow
+    const arrowTop = (containerHeight - arrowHeight) * (1 - positionPercentage / 100);
+    arrowElement.style.top = `${Math.max(0, Math.min(arrowTop, containerHeight - arrowHeight))}px`;
+
+    // Adjust the gradient stop position based on the arrow's top position
+    const gradientPosition = ((arrowTop + 6) / containerHeight) * 100;
+    overlayElement.style.background = `linear-gradient(to bottom, rgba(243, 241, 241, 0.315) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
+    
+    // Ensure the overlay covers the entire container to account for possible gradient overflow
+    overlayElement.style.height = `${containerHeight}px`;
+}
+
+// Initialize the credit arrow and overlay gradient based on the initial data-progress value
+function initProgress() {
+    document.querySelectorAll('.circular-progress').forEach(progress => {
+        const initialValue = parseInt(progress.getAttribute('data-progress'), 10);
+        if (!isNaN(initialValue)) {
+            updateCircularProgress(progress, initialValue); // Set the initial progress value
+        }
+    });
+
+    updateCreditArrow(); // Initialize the credit arrow with the existing data-progress value
+}
+// Add event listeners to choice cards
+document.querySelectorAll('.choice-card').forEach(card => {
+    card.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        // Get the progress values from the data attributes
+        const happiness = this.getAttribute('data-happiness');
+        const focus = this.getAttribute('data-focus');
+        const connection = this.getAttribute('data-connection');
+        const creditScore = this.getAttribute('data-credit-score');
+
+        // Update the circular progress elements and arrows
+        document.querySelectorAll('.circular-progress').forEach((progress, index) => {
+            const value = [happiness, focus, connection][index];
+            if (value) {
+                updateCircularProgress(progress, value);
+            }
+        });
+
+        // Update the credit arrow
+        const container = document.querySelector('.credit-score-container');
+        if (container) {
+            container.setAttribute('data-progress', creditScore);
+            updateCreditArrow();
+        }
+
+        // Navigate to the target section
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        if (targetSection) {
+            targetSection.classList.remove('hidden-section');
+            targetSection.classList.add('visible-section');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            // Animate the arrow in the target section
+            const arrow = targetSection.querySelector('.arrow');
+            if (arrow) {
+                animateArrow(arrow);
+            }
+        }
+    });
+});
+
+
+
+
+</script>
+
+
+
+
+<!-- JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+
+
 </body>
 </html>
