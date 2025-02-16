@@ -497,28 +497,39 @@ updateCardClasses();
    
   <script>
     // Get the 'continue' button
-    const continueButton1 = document.getElementById('optlink7');
+const continueButton1 = document.getElementById('optlink7');
 
-    // Function to randomize URL
-    function randomizeURL1() {
-        // Array of possible URLs
-        const gameURLs1 = ['game2.html', 'game3.html'];
+// Store the previously visited URL
+let previousURL1 = null;
 
-        // Select a random URL from the array
-        const randomURL1 = gameURLs1[Math.floor(Math.random() * gameURLs1.length)];
+// Function to randomize URL
+function randomizeURL1() {
+    // Array of possible URLs
+    const gameURLs1 = ['game2.html', 'game3.html'];
 
-        // Redirect the user to the randomly selected URL
-        window.location.href = randomURL1;
-    }
+    // Select a random URL from the array
+    let randomURL1;
+    
+    do {
+        randomURL1 = gameURLs1[Math.floor(Math.random() * gameURLs1.length)];
+    } while (randomURL1 === previousURL1); // Make sure it's not the same as the last URL
 
-    // Add event listener to the continue button
-    continueButton1.addEventListener('click', function(event) {
-        // Prevent the default link behavior
-        event.preventDefault();
+    // Store the current URL as the previous URL for the next click
+    previousURL1 = randomURL1;
 
-        // Randomize and redirect to the selected game page
-        randomizeURL1();
-    });
+    // Redirect the user to the randomly selected URL
+    window.location.href = randomURL1;
+}
+
+// Add event listener to the continue button
+continueButton1.addEventListener('click', function(event) {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Randomize and redirect to the selected game page
+    randomizeURL1();
+});
+
 </script>
 
   <div id="scene2a-opt2" class="hidden-section" style="padding-top: 20px;">
@@ -545,29 +556,40 @@ updateCardClasses();
 </div>
 
 <script>
-    // Get the 'continue' button
-    const continueButton2 = document.getElementById('optlink8');
+ // Get the 'continue' button
+const continueButton2 = document.getElementById('optlink8');
 
-    // Function to randomize URL
-    function randomizeURL2() {
-        // Array of possible URLs
-        const gameURLs2 = ['game2.html', 'game3.html'];
+// Store the previously visited URL
+let previousURL2 = null;
 
-        // Select a random URL from the array
-        const randomURL2 = gameURLs2[Math.floor(Math.random() * gameURLs2.length)];
+// Function to randomize URL
+function randomizeURL2() {
+    // Array of possible URLs
+    const gameURLs2 = ['game2.html', 'game3.html'];
 
-        // Redirect the user to the randomly selected URL
-        window.location.href = randomURL2;
-    }
+    // Select a random URL from the array
+    let randomURL2;
+    
+    do {
+        randomURL2 = gameURLs2[Math.floor(Math.random() * gameURLs2.length)];
+    } while (randomURL2 === previousURL2); // Make sure it's not the same as the last URL
 
-    // Add event listener to the continue button
-    continueButton2.addEventListener('click', function(event) {
-        // Prevent the default link behavior
-        event.preventDefault();
+    // Store the current URL as the previous URL for the next click
+    previousURL2 = randomURL2;
 
-        // Randomize and redirect to the selected game page
-        randomizeURL2();
-    });
+    // Redirect the user to the randomly selected URL
+    window.location.href = randomURL2;
+}
+
+// Add event listener to the continue button
+continueButton2.addEventListener('click', function(event) {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Randomize and redirect to the selected game page
+    randomizeURL2();
+});
+
 </script>
 
 
