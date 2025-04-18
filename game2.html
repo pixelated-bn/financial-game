@@ -3679,6 +3679,89 @@ function checkCompletion() {
 
 
 
+// 🌟 TOUCH SUPPORT 🌟
+let currentTouchItem = null;
+let originalTouchParent = null;
+
+document.querySelectorAll('.imgs').forEach(item => {
+  item.addEventListener('touchstart', handleTouchStart, false);
+  item.addEventListener('touchmove', handleTouchMove, false);
+  item.addEventListener('touchend', handleTouchEnd, false);
+});
+
+function handleTouchStart(e) {
+  currentTouchItem = e.target;
+  originalTouchParent = currentTouchItem.parentElement;
+
+  // Bring it to front
+  currentTouchItem.style.position = 'absolute';
+  currentTouchItem.style.zIndex = '1000';
+
+  dragSound.currentTime = 0;
+  dragSound.play();
+}
+
+function handleTouchMove(e) {
+  if (!currentTouchItem) return;
+
+  const touch = e.touches[0];
+  e.preventDefault();
+
+  currentTouchItem.style.left = touch.pageX - currentTouchItem.offsetWidth / 2 + 'px';
+  currentTouchItem.style.top = touch.pageY - currentTouchItem.offsetHeight / 2 + 'px';
+}
+
+function handleTouchEnd(e) {
+  if (!currentTouchItem) return;
+
+  const touch = e.changedTouches[0];
+  const dropTarget = document.elementFromPoint(touch.clientX, touch.clientY);
+  const dropContainer = dropTarget?.closest('.location');
+
+  // Reset styles
+  currentTouchItem.style.position = 'static';
+  currentTouchItem.style.zIndex = '';
+  currentTouchItem.style.left = '';
+  currentTouchItem.style.top = '';
+
+  if (dropContainer) {
+    const draggedItem = currentTouchItem;
+    const targetContainer = dropContainer;
+
+    dropSound.currentTime = 0;
+    dropSound.play();
+
+    if (
+      (draggedItem.classList.contains("italy") && targetContainer.id === "location1") ||
+      (draggedItem.classList.contains("dubai") && targetContainer.id === "location2") ||
+      (draggedItem.classList.contains("france") && targetContainer.id === "location3") ||
+      (draggedItem.classList.contains("singapore") && targetContainer.id === "location4") ||
+      (draggedItem.classList.contains("japan") && targetContainer.id === "location5") ||
+      (draggedItem.classList.contains("india") && targetContainer.id === "location6") ||
+      (draggedItem.classList.contains("egypt") && targetContainer.id === "location7")
+    ) {
+      targetContainer.appendChild(draggedItem);
+      targetContainer.style.borderColor = "#206E63";
+      targetContainer.style.backgroundColor = "whitesmoke";
+      targetContainer.style.transition = "background-color 0.3s, border-color 0.3s";
+      draggedItem.style.width = "80%";
+      draggedItem.style.height = "auto";
+    } else {
+      targetContainer.style.borderColor = "#DA1F27";
+      originalTouchParent.appendChild(draggedItem);
+    }
+
+    checkCompletion();
+  } else {
+    // Not dropped on valid location, return to original parent
+    originalTouchParent.appendChild(currentTouchItem);
+  }
+
+  currentTouchItem = null;
+  originalTouchParent = null;
+}
+
+
   
   function fadeOutMusic(audio, duration) {
     const fadeOutInterval = 50;
