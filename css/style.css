@@ -46,6 +46,13 @@ h1 {
   font-weight: bolder; /* Explicitly set the weight */
 }
 
+#cs-font{
+  font-family: 'Geomanist-Bold'; /* Name of the font */
+    src: url('./fonts/Geomanist-Bold.otf') format('opentype'); /* Format should be 'opentype' for .otf files */
+    font-weight: bold;
+    font-style: normal;
+}
+
 
   #end {
     margin: 0;
@@ -103,7 +110,7 @@ h1 {
 
   /* CSS for the text when hovered */
   .index-hover:hover {
-    color: #88C9ED; /* Text color on hover */
+    color: #206E63; /* Text color on hover */
     text-decoration: none;
   }
 
@@ -311,34 +318,37 @@ h1 {
   z-index: 1;
 }
 
+/*
 .card2hover:hover::before {
   content: '';
   position: absolute;
-  top: 10px; /* Adjust the top position as needed */
-  left: 50%; /* Center the arrow horizontally */
-  transform: translateX(-50%); /* Center the arrow horizontally */
-  width: 22px; /* Adjust the width as needed */
-  height: 22px; /* Adjust the height as needed */
+  top: 10px; /* Adjust the top position as needed 
+  left: 50%; /* Center the arrow horizontally 
+  transform: translateX(-50%); /* Center the arrow horizontally
+  width: 22px; /* Adjust the width as needed 
+  height: 22px; /* Adjust the height as needed 
   background-image: url('../img/arrow.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+*/
 
-
+/*
 .hovertest:hover::before {
   content: '';
   position: absolute;
-  top: 10px; /* Adjust the top position as needed */
-  left: 46%; /* Center the arrow horizontally */
-  transform: translateX(-50%); /* Center the arrow horizontally */
-  width: 22px; /* Adjust the width as needed */
-  height: 22px; /* Adjust the height as needed */
+  top: 10px; /* Adjust the top position as needed 
+  left: 46%; /* Center the arrow horizontally 
+  transform: translateX(-50%); /* Center the arrow horizontally 
+  width: 22px; /* Adjust the width as needed 
+  height: 22px; /* Adjust the height as needed 
   background-image: url('../img/arrow.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+*/
 
 .selection-card {
   position:relative;
@@ -355,19 +365,21 @@ h1 {
   height:50%;
 }
 
+/*
 .selection-card:hover::before {
   content: '';
   position: absolute;
-  top: 12px; /* Adjust the top position as needed */
-  left: -5%; /* Center the arrow horizontally */
-  transform: translate(-50%, 50%) rotate(-90deg); /* Rotate the text */
-  width: 20px; /* Adjust the width as needed */
-  height: 20px; /* Adjust the height as needed */
+  top: 12px; /* Adjust the top position as needed 
+  left: -5%; /* Center the arrow horizontally 
+  transform: translate(-50%, 50%) rotate(-90deg); /* Rotate the text 
+  width: 20px; /* Adjust the width as needed 
+  height: 20px; /* Adjust the height as needed 
   background-image: url('../img/arrow.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
+*/
 
 .cf-card1 {
   position:relative;
@@ -1046,10 +1058,10 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 224%;
+  height: 124%;
   background: linear-gradient(to bottom, rgba(243, 241, 241, 0.315) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none; /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 0.5s ease-in-out; /* Add a transition for smooth movement */
+  transition: opacity 5s ease-in-out; /* Add a transition for smooth movement */
 }
 
 .creditarrow-img {
@@ -1058,9 +1070,9 @@ h1 {
   transform: translateX(-50%); /* Keep it centered relative to the new left position */
   width: 40%; /* Adjust the size as needed */
   height: auto;
-  top: 110%; /* Adjust this value to place the arrow within the container */
+  top: 60%; /* Adjust this value to place the arrow within the container */
   z-index: 10; /* Ensures the arrow stays on top */
-  transition: left 0.3s ease, top 0.3s ease; /* Add a transition for smooth movement */
+  transition: left 0.2s ease, top 0.2s ease; /* Add a transition for smooth movement */
 }
 
 .table-container {
@@ -2192,6 +2204,129 @@ height: auto;
     text-decoration: none;
 
   }
+
+  #narration{
+    position: relative; /* Change to relative */
+    width: 100vw;
+    height: 100vh; /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+  }
+
+  #howto {
+    position: absolute; 
+    top: 90%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+    display: none;
+   }
+
+   #scene2-opt1{
+    position: relative; /* Change to relative */
+    width: 100vw;
+    height: 100vh; /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+  }
+
+  #car1 {
+    position: absolute; 
+    top: 90%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+    display: none;
+   }
+
+
+   #scene2-opt2{
+    position: relative; /* Change to relative */
+    width: 100vw;
+    height: 100vh; /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+  }
+
+  #car2 {
+    position: absolute; 
+    top: 90%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+    display: none;
+   }
+
+
+   #scene2-opt3{
+    position: relative; /* Change to relative */
+    width: 100vw;
+    height: 100vh; /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+  }
+
+  #car3 {
+    position: absolute; 
+    top: 90%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+    display: none;
+   }
+  
+  
+  #scene10tips{
+    position: relative; /* Change to relative */
+    width: 100vw;
+    height: 100vh; /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+  }
+
+  #tips10 {
+    position: absolute; 
+    top: 90%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+    display: none;
+   }
+
+   #scene13tips{
+    position: relative; /* Change to relative */
+    width: 100vw;
+    height: 100vh; /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+  }
+
+  #tips13 {
+    position: absolute; 
+    top: 90%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+    display: none;
+   }
  
   #scenario8{
     position: relative; /* Change to relative */
@@ -2201,6 +2336,7 @@ height: auto;
     padding: 0;
     background-size: contain;
   }
+
 
   #game1 {
     position: absolute; 
