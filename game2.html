@@ -23,7 +23,7 @@
   <div class="container-fluid">
     <div class="row sticky-row">
       <div class="col-sm-10">
-        <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;"></a>
+        <a class="" href="index2.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;"></a>
       </div>
   </div>
   </div>
@@ -35,8 +35,8 @@
   <div class="col-sm-2 text-center visible-section" id="creditmeter">
     <aside style="padding-top: 30px;">
         <div class="text-center">
-            <h5 style="font-weight: bolder;">CREDIT<br>SCORE</h5>
-            <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;" data-progress="1">
+          <h5 id="cs-font">CREDIT<br>SCORE</h5>
+            <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;" data-progress="300">
               <img src="./img/creditscore.png" class="card-img-top creditscore-img">
               <div class="opacity-overlay"></div> <!-- New overlay div -->
               <img src="./img/creditarrow.png" class="card-img-top creditarrow-img">
@@ -61,7 +61,7 @@
 
 
                   <br>
-                  <h4 class="text-center" style="font-weight: normal; font-style: italic;">Your younger sibling, Adam asks for your help in securing a loan. He wants to buy a car but don't have a strong enough credit history.</h4>
+                  <h4 class="text-center" style="font-weight: normal; font-style: italic;">Your younger sibling, Adam asks for your help in securing a loan. He wants to buy a car but don't have a strong enough credit history. So, he turns to you for support.</h4>
 
                   <br>
 
@@ -80,7 +80,7 @@
                     </div>
                 
                     <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">  
-                      <a href="#scene3-opt2" id="scene3-link2" style="text-decoration: none; color: #000000;">  
+                      <a href="#scene3-opt2" id="scene3-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="40" data-connection="40">  
                         <div class="card my-card2">
                           
                           <img src="./img/cosign-no.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
@@ -108,12 +108,12 @@
                 
                     <div class="text-center" id="choices-div">
                       <div id="choices-col">
-                      <a href="#scene3a" id="scene3a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
+                      <a href="#scene3a" id="scene3a-link1" class="choice-card" data-happiness="40" data-connection="40" data-credit-score="25">
                         Pay off full loan
                       </a>
                     </div>
                     <div id="choices-col">
-                      <a href="#scene3a" id="scene3a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+                      <a href="#scene3a" id="scene3a-link2" class="choice-card" data-happiness="40" data-connection="40" data-credit-score="25">
                        Negotiate payment with bank
                        </a>
                     </div>
@@ -136,7 +136,7 @@
                       <br><br>You manage to pay off the loan or negotiate a deal, but it leaves you financially vulnerable for several years. This cause dramatically drop in your credit credit score. Eventually, you will be able to rebuild your credit score but you've learned a hard lesson about the risk of co-signing. Your relationship with Adam is still intact but it remains complicated. 
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario4" id="optlink9" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                      <a href="#scenario4" id="optlink9" class="game-button">continue</a>
                     </div>
                   </div>
                   
@@ -190,7 +190,7 @@
                       <br><br>Learn the importance of setting boundaries when co-signing loans and make wiser financial decisions in the future. Consult with a financial advisor to fully understand the risks. Your relationship with your sibling although strained is repaired over time.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario8" id="optlink10" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                      <a href="#scenario8" id="optlink10" class="game-button">continue</a>
                     </div>
                   </div>
                   
@@ -220,12 +220,12 @@
                 
                     <div class="text-center" id="choices-div">
                       <div id="choices-col">
-                      <a href="#scene4-opt1" id="scene4-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
-                        Open a new credit card
+                      <a href="#scene4-opt1" id="scene4-link1" class="choice-card" data-focus="30" data-credit-score="20">
+                        Open a new credit card for the rewards
                       </a>
                     </div>
                     <div id="choices-col">
-                      <a href="#scene4-opt2" id="scene4-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+                      <a href="#scene4-opt2" id="scene4-link2" class="choice-card">
                        Keep your current cards
                        </a>
                     </div>
@@ -248,7 +248,7 @@
                           <br><br>Opening too many new cards or having too many inquiries can lower your score temporarily and decrease your average account age. Additionally, having multiple new accounts could indicate higher credit risk to lenders. 
               
                           <div class="text-center" style="padding-top: 60px;">
-                          <a href="#scenario8" id="optlink11" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                          <a href="#scenario8" id="optlink11" class="game-button">continue</a>
                         </div>
                       </div>
                       
@@ -272,7 +272,7 @@
                           <br><br>Opening a new card can improve your credit mix and available credit, lowering your overall credit utilization if you dont overspend.
               
                           <div class="text-center" style="padding-top: 60px;">
-                          <a href="#scenario8" id="optlink12" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                          <a href="#scenario8" id="optlink12" class="game-button">continue</a>
                         </div>
                       </div>
                       
@@ -284,45 +284,22 @@
               </div>
 
 
-<!--
-              <div id="scene4tips" class="hidden-section" style="padding-top: 20px;">
-    
-    
-                <div class="row">
-                  <div class="col-sm-12">
-                    <div class="info-container2 text-center" style="padding-top: 40px;">
-                    
-                      <h3 style="font-weight: bold;">Tips</h3>
-                      <hr><br>
-                      <h4>If you decide to accept the offer, you must manage the new card's balance carefully, ensuring payments are on time and credit utilization stays low.</h4>
-                        <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario8" id="optlink13" class="choice-card" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">
-                          <img src="./img/next-btn1.png" class="card-img-top zoom-button" style="width: 10%; height: auto; margin: 0 auto;"></a>
-                      </div>
-                    
-                </div>
-                </div>
-              
-            </div>
-            
-            </div>
--->
-
 
                 <!--End of scenario 4-->
 
+                
 
                 <!--Scenario 8-->
 
      
-<div id="scenario8" class="text-center hidden-section" style="padding-top: 50px;">
+<div id="scenario8" class="text-center hidden-section" style="padding-top: 20px;">
   <video id="scenario-video1" style="width: 100%; height: auto; display: block;">
       <source src="./video/travel.mp4" type="video/mp4">
   </video>
 
   <!-- Continue button (hidden initially) -->
-  <div id="game1" class="text-center">
-      <a href="#vacation-game" id="game-link1" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+  <div id="game1" class="text-center" style="padding-top: 20px;">
+      <a href="#vacation-game" id="game-link1" class="game-button">continue</a>
   </div>
 </div>
 
@@ -472,10 +449,12 @@ document.addEventListener("DOMContentLoaded", function () {
                       <img src="./img/narrative.png">
                       <div class="overlay-text">
               
-                  <br><br>It's been a while since I saw all those monuments. Going to discuss with my friends on where we are going for the trip. We would want to take a photo witht the monuments!
+                  <br><br>Whether it's stunning views, amazing food, or thrilling activities, these destinations have it all. Now, to fully equip yourselves for this journey, it's time to prep your
+                  resources, load up your 'travel funds' and finalize the details so you can
+                  enjoy the ultimate getaway you've been waiting for!
 
               <div class="text-center" style="padding-top: 60px;">
-                <a href="#scene8a" id="scene8alink" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                <a href="#scene8a" id="scene8alink" class="game-button">continue</a>
               </div>
             </div>
             
@@ -544,13 +523,13 @@ document.addEventListener("DOMContentLoaded", function () {
               
                   <div class="text-center" id="choices-div">
                     <div id="choices-col">
-                    <a href="#scene8a-opt1" id="scene8a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
-                     Keep Spending
+                    <a href="#scene8a-opt1" id="scene8a-link1" class="choice-card" data-happiness="25" data-connection="30" data-credit-score="10">
+                     Enjoy the trip - the bills can wait!
                     </a>
                   </div>
                   <div id="choices-col">
-                    <a href="#scene8a-opt2" id="scene8a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
-                     Smart Spending
+                    <a href="#scene8a-opt2" id="scene8a-link2" class="choice-card" data-happiness="25" data-connection="30" data-credit-score="18">
+                     Time to tighten the belt and cut back – keep your bills in line!
                      </a>
                   </div>
                 </div>
@@ -569,10 +548,10 @@ document.addEventListener("DOMContentLoaded", function () {
                       <img src="./img/narrative.png">
                       <div class="overlay-text">
                        
-                        <br><br>With the thought of being able to pay the bills off with ease once you're back at work, your credit utilization rate has skyrocketed. This means you've used up a large portion of your available credit,  and this is one of the main factors affecting your credit score. It may take years to recover financially. Your relationships with friends become strained as you struggle with the fallout. 
+                        <br><br>Your credit utilization rate has skyrocketed. This means you've used up a large portion of your available credit,  and this is one of the main factors affecting your credit score. It may take years to recover financially. Your relationships with friends become strained as you struggle with the fallout. 
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario5" id="optlink14" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                        <a href="#scenario5" id="optlink14" class="game-button">continue</a>
                       </div>
                     </div>
                     
@@ -593,10 +572,10 @@ document.addEventListener("DOMContentLoaded", function () {
                       <img src="./img/narrative.png">
                       <div class="overlay-text">
                        
-                        <br><br>You pay attention to the charges piling up and decide to adjust your spending. Maybe you’ll cut back on a few activities to avoid maxing out the card. As a result, your credit score drops. The financial strain of the past vacation still lingers in your monthly budget, and you've learned that your credit card isn't an endless money source.
+                        <br><br>The financial strain of the past vacation still lingers in your monthly budget, and you've learned that your credit card isn't an endless money source.
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario5" id="optlink15" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                        <a href="#scenario5" id="optlink15" class="game-button">continue</a>
                       </div>
                     </div>
                     
@@ -621,7 +600,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   
                     <!-- Continue button (hidden initially) -->
                     <div id="game2" class="text-center">
-                        <a href="#wedding-game" id="game-link2" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                        <a href="#wedding-game" id="game-link2" class="game-button">continue</a>
                     </div>
                   </div>
                   
@@ -749,7 +728,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="./img/narrative.png">
         <div class="overlay-text">
 
-          <br>Oh yeah! I got all the things I need for modest wedding. It's time to proceed with it and and start preparing with my future spouse!
+          <br>I’ve got everything I need for my modest wedding. Now, it’s time to start planning and making it all come to life!
 
                <div class="text-center" style="padding-top: 60px;">
                 <a href="#scene5a" id="scene5a-modest" class="game-button">continue</a>
@@ -771,7 +750,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <img src="./img/narrative.png">
         <div class="overlay-text">
 
-          <br>Oh yeah! I got all the things I need for my dream wedding. It's time to proceed with it and and start preparing with my future spouse!
+          <br>I’ve got everything I need for my dream wedding. Now, it’s time to start planning and making it all come to life!
                   
           <div class="text-center" style="padding-top: 60px;">
             <a href="#scene5b" id="scene5b-dream" class="game-button">continue</a>
@@ -1099,17 +1078,17 @@ if (allCardsMatched()) {
      
 <div class="text-center" id="choices-div">
   <div id="choices-col">
-    <a href="#scene5a-opt1" id="scene5a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
+    <a href="#scene5a-opt1" id="scene5a-link1" class="choice-card" data-happiness="80" data-focus="80" data-connection="80" data-credit-score="8">
       Take the loan 
     </a>
   </div>
   <div id="choices-col">
-    <a href="#scene5a-opt2" id="scene5a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+    <a href="#scene5a-opt2" id="scene5a-link2" class="choice-card" data-happiness="80" data-focus="80" data-connection="80" data-credit-score="5">
       Increase loan amount
      </a>
   </div>
   <div id="choices-col">
-    <a href="#scene5a-opt3" id="scene5a-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+    <a href="#scene5a-opt3" id="scene5a-link3" class="choice-card" data-happiness="16" data-focus="16" data-connection="16">
       Postpone Wedding
      </a>
   </div>
@@ -1131,7 +1110,7 @@ if (allCardsMatched()) {
                   <br>You take the $15,000 loan and use it for the wedding. With moderate monthly payments of approximately $363, you can comfortably manage the debt without overstraining your budget. As long as you make consistent, on-time payments, your credit score may be minimally affected. Your credit utilization won’t be too high, and your debt-to-income ratio remains manageable.
       
                   <div class="text-center" style="padding-top: 60px;">
-                  <a href="#scenario11" id="opt-link38" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                  <a href="#scenario11" id="opt-link38" class="game-button">continue</a>
                 </div>
               </div>
               
@@ -1152,10 +1131,10 @@ if (allCardsMatched()) {
               <img src="./img/narrative.png">
               <div class="overlay-text">
                
-                <br>You decide to increase the loan to $20,000 include additional elements for the wedding, such as a more elaborate reception or more luxurious vendors. The extra loan increases your debt load and could lead to higher monthly payments (around $484/month), straining your finances. You also run the risk of overspending and increasing your credit utilization, which could lead to a significant drop in your credit score.
+                <br>You decide to increase the loan to B$20,000 to include additional elements for the wedding, such as a more elaborate reception or more luxurious vendors. The extra loan increases your debt load and could lead to higher monthly payments (around B$502/month), straining your finances. You also run the risk of overspending and increasing your credit utilization, which could lead to a significant drop in your credit score.
     
                 <div class="text-center" style="padding-top: 60px;">
-                <a href="#scenario11" id="opt-link39" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                <a href="#scenario11" id="opt-link39" class="game-button">continue</a>
               </div>
             </div>
             
@@ -1179,7 +1158,7 @@ if (allCardsMatched()) {
               <br><br>You decide to delay the wedding and continue saving money, which allows you to avoid any loans entirely. No loan means no impact on your credit score, and you’ll also avoid the potential strain of debt after the wedding.
   
               <div class="text-center" style="padding-top: 60px;">
-              <a href="#scenario11" id="opt-link40" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+              <a href="#scenario11" id="opt-link40" class="game-button">continue</a>
             </div>
           </div>
           
@@ -1198,54 +1177,20 @@ if (allCardsMatched()) {
       <img src="./img/dream-wedding.png" id="wedd-img">
     </div>
 
-    <!--
-    <h2>DREAM WEDDING!</h2>
-    <p>
-      You decided on your dream wedding that you<br>have always dreamed a lavish wedding!
-    </p>
-  
-    <div class="loan-details">
-      <div class="row wedd-row">
-        <div class="col-sm-5 label">LOAN AMOUNT</div>
-        <div class="col-sm-2 between"></div>
-        <div class="col-sm-5 value">B$40,000</div>
-      </div>
-      <div class="row wedd-row">
-        <div class="col-sm-5 label">INTEREST RATE</div>
-        <div class="col-sm-2 between"></div>
-        <div class="col-sm-5 value">7.5% PER YEAR</div>
-      </div>
-      <div class="row wedd-row">
-        <div class="col-sm-5 label">LOAN TERM</div>
-        <div class="col-sm-2 between"></div>
-        <div class="col-sm-5 value">6 YEARS</div>
-      </div>
-    </div>
-  
-    <div class="line-container">
-      <hr class="line">
-      <span class="line-text" id="monthly-pay">MONTHLY PAY</span>
-      <hr class="line">
-    </div> 
-  
-    <div>
-    <h5 class="amount">B$692</h5>
-  </div>
-  -->
           
   <div class="text-center" id="choices-div">
     <div id="choices-col">
-      <a href="#scene5b-opt1" id="scene5b-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
+      <a href="#scene5b-opt1" id="scene5b-link1" class="choice-card" data-happiness="80" data-focus="80" data-connection="80" data-credit-score="5">
         Take the loan 
       </a>
     </div>
     <div id="choices-col">
-      <a href="#scene5b-opt2" id="scene5b-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+      <a href="#scene5b-opt2" id="scene5b-link2" class="choice-card" data-happiness="80" data-focus="80" data-connection="80" data-credit-score="8">
         Decrease loan amount 
        </a>
     </div>
     <div id="choices-col">
-      <a href="#scene5b-opt3" id="scene5b-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+      <a href="#scene5b-opt3" id="scene5b-link3" class="choice-card" data-happiness="12" data-focus="80" data-connection="80" data-credit-score="3">
         Use Credit Card
        </a>
     </div>
@@ -1264,10 +1209,10 @@ if (allCardsMatched()) {
                   <img src="./img/narrative.png">
                   <div class="overlay-text">
                    
-                    <br>You get everything you want: a grand wedding, a beautiful venue, an elegant dress, and all the frills. However, you will face high monthly payments ($692/month), which could cause financial strain after the wedding. Your credit utilization increases significantly, which could lower your credit score temporarily, especially if you use a lot of your available credit to cover wedding-related costs. Also, the loan size increases your debt-to-income ratio, which can have a negative effect on your credit score.
+                    <br>You get everything you want: a grand wedding, a beautiful venue, an elegant dress, and all the frills. However, you will face high monthly payments, which could cause financial strain after the wedding. Your credit utilization increases significantly, which could lower your credit score temporarily, especially if you use a lot of your available credit to cover wedding-related costs. Also, the loan size increases your debt-to-income ratio, which can have a negative effect on your credit score.
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario11" id="opt-link41" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                    <a href="#scenario11" id="opt-link41" class="game-button">continue</a>
                   </div>
                 </div>
                 
@@ -1288,10 +1233,10 @@ if (allCardsMatched()) {
                 <img src="./img/narrative.png">
                 <div class="overlay-text">
                  
-                  <br>You decide to trim down the wedding plans slightly (perhaps reducing the guest list, opting for a smaller venue, or cutting back on the catering). You take a smaller loan of $25,000 instead of $40,000. With a smaller loan and manageable monthly payments ($432/month), your credit score will only see a minor dip. The debt-to-income ratio remains lower, and it’s easier to make consistent, timely payments.
+                  <br>You decide to trim down the wedding plans slightly (perhaps reducing the guest list, opting for a smaller venue, or cutting back on the catering). You take a smaller loan of B$25,000 instead of B$40,000. With a smaller loan and manageable monthly payments (B$439/month), your credit score will only see a minor dip. The debt-to-income ratio remains lower, and it’s easier to make consistent, timely payments.
       
                   <div class="text-center" style="padding-top: 60px;">
-                  <a href="#scenario11" id="opt-link42" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                  <a href="#scenario11" id="opt-link42" class="game-button">continue</a>
                 </div>
               </div>
               
@@ -1315,7 +1260,7 @@ if (allCardsMatched()) {
                 <br><br>You decide to charge the wedding costs on a high-interest credit card, believing it will be easier to pay off over time. Using a large portion of your available credit will cause your credit utilization ratio to spike, significantly damaging your credit score. If you don’t pay off the credit card quickly, the interest charges can accumulate, adding to your debt.
     
                 <div class="text-center" style="padding-top: 60px;">
-                <a href="#scenario11" id="opt-link43" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                <a href="#scenario11" id="opt-link43" class="game-button">continue</a>
               </div>
             </div>
             
@@ -1337,7 +1282,7 @@ if (allCardsMatched()) {
                   
       
         <br>
-        <h4 class="text-center" style="font-weight: normal; font-style: italic;">You visit the Consumer Fair expo where various banks and lenders present their loan products. You ask for information and submits applications to secure the best mortgage rate. However, an inquiry is needed to be done on your credit report.</h4>
+        <h4 class="text-center" style="font-weight: normal; font-style: italic;">You visit the Home Showcase event where various banks present their loan products.<br>You decided to purchase a cozy house with a large backyard, ensuring your family would have a place to grow, laugh, and make countless memories.<br>You ask for information and submits applications to secure the best mortgage rate. Enquiries on your credit report will be made as part of loan application process.</h4>
 
         <br>
 
@@ -1347,19 +1292,19 @@ if (allCardsMatched()) {
       
           <br>
           
-          <a href="#scene11-opt1" id="scene11-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90" style="text-decoration: none; color: #000000;">
+          <a href="#scene11-opt1" id="scene11-link1" class="choice-card" data-happiness="85" data-focus="85" data-connection="85" data-credit-score="2" style="text-decoration: none; color: #000000;">
           <div class="card cf-card1">
             <img src="./img/cf-green1.png" class="card-img-top" style="width: 100%; height: auto; margin: 0 auto;">
           </div>
           </a>
        <br>
-       <a href="#scene11-opt2" id="scene11-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45" style="text-decoration: none; color: #000000;">
+       <a href="#scene11-opt2" id="scene11-link2" class="choice-card" data-happiness="85" data-focus="85" data-connection="85" data-credit-score="2" style="text-decoration: none; color: #000000;">
           <div class="card cf-card2">
             <img src="./img/cf-green2.png" class="card-img-top" style="width: 100%; height: auto; margin: 0 auto;">
           </div>
           </a>
           <br>
-          <a href="#scene11-opt3" id="scene11-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45" style="text-decoration: none; color: #000000;">
+          <a href="#scene11-opt3" id="scene11-link3" class="choice-card" data-happiness="70" data-focus="70" style="text-decoration: none; color: #000000;">
              <div class="card cf-card3">
               <img src="./img/cf-green3.png" class="card-img-top" style="width: 100%; height: auto; margin: 0 auto;">
              </div>
@@ -1388,7 +1333,7 @@ if (allCardsMatched()) {
                         <br><br>A hard inquiry will appear on your credit report which may cause a slight dip in your credit score
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario12" id="opt-link16" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                        <a href="#scenario12" id="opt-link16" class="game-button">continue</a>
                       </div>
                     </div>
                     
@@ -1409,10 +1354,10 @@ if (allCardsMatched()) {
                     <img src="./img/narrative.png">
                     <div class="overlay-text">
                      
-                      <br><br>You can request multiple offers from different lenders where they perform hard inquiry to check your creditworthiness. These inquiries cause a small temporary dip in the credit score and are recorded in the credit report. However, some lenders could interpret multiple inquiries as signs of financial distress, leading them to view the applicant as a higher risk for loan approval.
+                      <br><br>You can request multiple offers from different lenders where they perform hard inquiry to check your creditworthiness. These inquiries cause a small temporary dip in the credit score and are recorded in the credit report.<br><br>However, some lenders could interpret multiple inquiries as signs of financial distress, leading them to view the applicant as a higher risk for loan approval.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario6" id="opt-link17" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                      <a href="#scenario6" id="opt-link17" class="game-button">continue</a>
                     </div>
                   </div>
                   
@@ -1436,7 +1381,7 @@ if (allCardsMatched()) {
                     <br><br>No inquiry is made. No impact on your credit score, but you miss out on exploring mortgage offers. This could delay your home-buying process but will keep your credit report intact for the moment.
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario12" id="opt-link18" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                    <a href="#scenario12" id="opt-link18" class="game-button">continue</a>
                   </div>
                 </div>
                 
@@ -1457,7 +1402,8 @@ if (allCardsMatched()) {
                 <div id="scenario6" class="hidden-section" style="padding-top: 20px;">
 
 
-                  <h4 class="text-center" style="font-weight: normal; font-style: italic;">An unexpected expense arises, your car broke down and you need to decide how to pay it. Emergency Expense: B$1,500 Make the best choice for how to cover the cost without hurting your credit score.</h4>
+                  <h4 class="text-center" style="font-weight: normal; font-style: italic;">An unexpected expense arises, your car broke down and you need to decide how to pay it.</h4>
+                  <h4 class="text-center" style="font-weight: normal; font-style: italic;">Emergency Expense: B$1,500</h4></h4>
           
                   <br>
           
@@ -1466,7 +1412,7 @@ if (allCardsMatched()) {
                   <div class="container">
                     <div class="row">
                         <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
-                          <a href="#scene6-opt1" id="scene6-link1" style="text-decoration: none; color: #000000;"> 
+                          <a href="#scene6-opt1" id="scene6-link1" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="65" data-focus="65" data-credit-score="1"> 
                             <div class="card my-card2">
                            
                            <br>
@@ -1476,7 +1422,7 @@ if (allCardsMatched()) {
                     </div>
                 
                     <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">  
-                      <a href="#scene6-opt2" id="scene6-link2" style="text-decoration: none; color: #000000;">  
+                      <a href="#scene6-opt2" id="scene6-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="65" data-focus="65" data-credit-score="1">  
                         <div class="card my-card2">
                           
                            <br>
@@ -1486,7 +1432,7 @@ if (allCardsMatched()) {
                         </div>
           
                         <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
-                          <a href="#scene6-opt3" id="scene6-link3" style="text-decoration: none; color: #000000;"> 
+                          <a href="#scene6-opt3" id="scene6-link3" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="65" data-focus="88"> 
                           <div class="card my-card2">
                             
                              <br>
@@ -1510,10 +1456,10 @@ if (allCardsMatched()) {
                     <img src="./img/narrative.png">
                     <div class="overlay-text">
                      
-                      <br><br>Your credit utilization spikes, increasing it to 150%. This drastically lowers your Credit Score by 100 points due to high credit usage and potential risk of default.
+                      <br><br>Your credit utilization spikes. This drastically lowers your Credit Score due to high credit usage and potential risk of default.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario9" id="opt-link19" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                      <a href="#scenario9" id="opt-link19" class="game-button">continue</a>
                     </div>
                   </div>
                   
@@ -1534,10 +1480,10 @@ if (allCardsMatched()) {
                   <img src="./img/narrative.png">
                   <div class="overlay-text">
                    
-                    <br><br>Your overall debt-to-income ratio increases, but the loan interest rate is lower than your credit card's. Your Credit Score drops by 10 points, but this is better than overloading your credit card.
+                    <br><br>Your overall debt-to-income ratio increases, but the loan interest rate is lower than your credit card's. Your Credit Score drops, but this is better than overloading your credit card.
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario9" id="opt-link20" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                    <a href="#scenario9" id="opt-link20" class="game-button">continue</a>
                   </div>
                 </div>
                 
@@ -1558,10 +1504,10 @@ if (allCardsMatched()) {
                 <img src="./img/narrative.png">
                 <div class="overlay-text">
                  
-                  <br><br>No new debt and you don't impact your credit utilization. Your Credit Score increases by 20 points for maintaining a healthy emergency fund and avoiding unnecessary debt.
+                  <br><br>No new debt and you don't impact your credit utilization. You have shown a healthy financial standing by maintaining a reasonable emergency fund and avoided unnecessary debt.
       
                   <div class="text-center" style="padding-top: 60px;">
-                  <a href="#scenario9" id="opt-link21" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                  <a href="#scenario9" id="opt-link21" class="game-button">continue</a>
                 </div>
               </div>
               
@@ -1593,13 +1539,13 @@ if (allCardsMatched()) {
       
           <br><br>
           
-          <a href="#scene12-opt1" id="scene12-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90" style="text-decoration: none; color: #000000;">
+          <a href="#scene12-opt1" id="scene12-link1" class="choice-card" data-happiness="88" data-credit-score="50" style="text-decoration: none; color: #000000;">
           <div class="card limit1">
             <img src="./img/limit-green1.png" class="card-img-top" style="width: 100%; height: auto; margin: 0 auto;">
           </div>
           </a>
        <br>
-       <a href="#scene12-opt2" id="scene12-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45" style="text-decoration: none; color: #000000;">
+       <a href="#scene12-opt2" id="scene12-link2" class="choice-card" data-happiness="88" style="text-decoration: none; color: #000000;">
           <div class="card limit2">
             <img src="./img/limit-green2.png" class="card-img-top" style="width: 100%; height: auto; margin: 0 auto;">
           </div>
@@ -1621,7 +1567,7 @@ if (allCardsMatched()) {
                       <br><br>Requesting a credit limit increase can improve your credit score by reducing your utilization if you don't increase your spending
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario9" id="opt-link22" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                      <a href="#scenario9" id="opt-link22" class="game-button">continue</a>
                     </div>
                   </div>
                   
@@ -1645,7 +1591,7 @@ if (allCardsMatched()) {
                     <br><br>If you increase your spending along with your limit, it can still increase your utilization and hurt your score
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario9" id="opt-link23" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                    <a href="#scenario9" id="opt-link23" class="game-button">continue</a>
                   </div>
                 </div>
                 
@@ -1668,8 +1614,8 @@ if (allCardsMatched()) {
               </video>
             
               <!-- Continue button (hidden initially) -->
-              <div id="game3" class="text-center">
-                  <a href="#business-game" id="game-link3" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+              <div id="game3" class="text-center" style="padding-top: 80px;">
+                  <a href="#business-game" id="game-link3" class="game-button">continue</a>
               </div>
             </div>
             
@@ -1719,7 +1665,8 @@ if (allCardsMatched()) {
               <div class="text-center">
                       <br>
                         <h4 class="text-center" style="font-weight: bold; color: #206E63;">
-                  While you do your research, lets play a game! Choose any 5 businesses that are now in trend!
+                          Choose 5 trendy businesses to explore and find the one matches your passion, skills and what you think the market needs.
+                          Let's see which business is your perfect fit. 
                             </h4>
               </div>
                         <div class="text-center" style="padding-top: 20px;">
@@ -1813,7 +1760,9 @@ if (allCardsMatched()) {
                       <div class="overlay-text">
 
                         
-                        <br><br>So, those are the 5 businesses that are currently on trend now. Hmm, I need to some more research on those and choose one out of those five!
+                        <br><br>Awesome job! You've found your perfect business match!
+                        This opportunity aligns perfectly with your passion, skills,
+                        and market demand. Ready to take the next step?
 
               
                              <div class="text-center" style="padding-top: 60px;">
@@ -1885,11 +1834,11 @@ if (allCardsMatched()) {
                 <div style="display: flex; flex-direction: column; align-items: center; gap: 5px;">
                   <!-- First row -->
                   <div class="text-center" style="display: flex; gap: 100px;">
-                      <a href="#scene9a-opt1" id="scene9a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
+                      <a href="#scene9a-opt1" id="scene9a-link1" class="choice-card" data-happiness="60" data-focus="90">
                         <div class="fund1">
                         </div>
                       </a>
-                      <a href="#scene9a-opt2" id="scene9a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+                      <a href="#scene9a-opt2" id="scene9a-link2" class="choice-card" data-happiness="60" data-focus="90" data-credit-score="42">
                         <div class="fund2">
                         </div>
                       </a>
@@ -1897,11 +1846,11 @@ if (allCardsMatched()) {
                   <!-- Second row -->
                   <div class="text-center" style="display: flex; gap: 100px;">
                    
-                      <a href="#scene9a-opt3" id="scene9a-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
+                      <a href="#scene9a-opt3" id="scene9a-link3" class="choice-card" data-happiness="90" data-focus="90" data-connection="50">
                         <div class="fund3">
                         </div>
                       </a>
-                      <a href="#scene9a-opt4" id="scene9a-link4" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+                      <a href="#scene9a-opt4" id="scene9a-link4" class="choice-card" data-happiness="60" data-focus="60">
                         <div class="fund4">
                         </div>
                       </a>
@@ -1922,10 +1871,10 @@ if (allCardsMatched()) {
                       <img src="./img/narrative.png">
                       <div class="overlay-text">
                        
-                        <br><br>No debt means no risk of default so your credit score won't be directly impacted. However, limited capital may restrict your ability to expand quickly and personal savings might be drained quickly, leaving you with fewer funds for other expenses.
+                        <br><br>No debt means no risk of default, so your credit score won't be directly impacted. However, limited capital may restrict your ability to expand quickly, and personal savings might be drained quickly, leaving you with fewer funds for other expenses.
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario10" id="opt-link24" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                        <a href="#scenario10" id="opt-link24" class="game-button">continue</a>
                       </div>
                     </div>
                     
@@ -1946,10 +1895,10 @@ if (allCardsMatched()) {
                     <img src="./img/narrative.png">
                     <div class="overlay-text">
                      
-                      <br><br>When you apply for a loan, a hard inquiry on your credit report can lower your score temporarily however if you miss payments, your credit score will drop due to higher credit utilization
+                      <br><br>When you apply for a loan, an inquiry on your credit report can lower your score temporarily however if you miss payments, your credit score will drop due to higher credit utilization
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario10" id="opt-link25" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                      <a href="#scenario10" id="opt-link25" class="game-button">continue</a>
                     </div>
                   </div>
                   
@@ -1973,7 +1922,7 @@ if (allCardsMatched()) {
                     <br><br>Since this is not a formal loan through a bank or credit institution, it typically won't affect your credit score. However, if you don't repay the loan or manage the relationship poorly, it could cause personal issues.
         
                     <div class="text-center" style="padding-top: 60px;">
-                    <a href="#scenario10" id="opt-link26" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                    <a href="#scenario10" id="opt-link26" class="game-button">continue</a>
                   </div>
                 </div>
                 
@@ -1994,10 +1943,11 @@ if (allCardsMatched()) {
                 <img src="./img/narrative.png">
                 <div class="overlay-text">
                  
-                  <br><br>If you personally guarantee  the loan or provide collateral, your personal credit may be at risk if the business defaults. Defaults or late payments could negatively affect both business and personal credit.
+                  <br><br>Applying for business loan might require for personal guarantees or collateral. 
+                  If you personally guarantee  the loan or provide collateral, your personal credit may be at risk if the business defaults. Defaults or late payments could negatively affect both business and personal credit.
       
                   <div class="text-center" style="padding-top: 60px;">
-                  <a href="#scenario10" id="opt-link27" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                  <a href="#scenario10" id="opt-link27" class="game-button">continue</a>
                 </div>
               </div>
               
@@ -2064,13 +2014,13 @@ if (allCardsMatched()) {
         
   <div class="text-center" id="choices-div">
     <div id="choices-col">
-    <a href="#scene10-opt1" id="scene10-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
-      Settle bills completely
+    <a href="#scene10-opt1" id="scene10-link1" class="choice-card" data-happiness="95">
+      Settle bills on-time
     </a>
   </div>
     <div id="choices-col">
-    <a href="#scene10-opt2" id="scene10-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
-      Ignore the bills
+    <a href="#scene10-opt2" id="scene10-link2" class="choice-card" data-happiness="50" data-focus="50">
+      Ignore the bills for now
      </a>
   </div>
 </div>
@@ -2090,10 +2040,10 @@ if (allCardsMatched()) {
         <img src="./img/narrative.png">
         <div class="overlay-text">
          
-          <br><br>You pay your bills before they're due. With consistent on-time payments, your credit report is mostly clean. Small delays can still have lasting effects on your credit history and your ability to secure future loans.
+          <br><br>With consistent on-time payments, your credit report is mostly clean. Small delays can still have lasting effects on your credit history and your ability to secure future loans.
 
           <div class="text-center" style="padding-top: 60px;">
-          <a href="#scenario7" id="opt-link28" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+          <a href="#scene10tips" id="opt-link28" class="game-button">continue</a>
         </div>
       </div>
       
@@ -2114,10 +2064,10 @@ if (allCardsMatched()) {
       <img src="./img/narrative.png">
       <div class="overlay-text">
        
-        <br><br>Deciding to pay way later than due, your payment history is now marked as "late" in the eyes of your credit report. They won't cause your score to drop, but they could still harm your reputation with future lenders.
+        <br><br>You've decided to delay your payment which causes your payment history is now marked as "late" in the eyes of your credit report. They won't cause your score to drop, but they could still harm your reputation with future lenders.
 
         <div class="text-center" style="padding-top: 60px;">
-        <a href="#scenario7" id="opt-link29" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+        <a href="#scene10tips" id="opt-link29" class="game-button">continue</a>
       </div>
     </div>
     
@@ -2127,6 +2077,96 @@ if (allCardsMatched()) {
 </div>
 
 </div>
+
+<div id="scene10tips" class="text-center hidden-section">
+  <video id="tips10-info" style="width: 100%; height: auto; display: block;">
+      <source src="./video/10tips.mp4" type="video/mp4">
+  </video>
+
+  <!-- Continue button (hidden initially) -->
+  <div id="tips10" class="text-center" style="padding-top: 20px;">
+      <a href="#scenario7" id="tip10-link" class="game-button">continue</a>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("tips10-info");
+  const scenario10Div = document.getElementById("scene10tips");
+  const continueBtn = document.getElementById("tips10");
+
+  const observer_tip1 = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              video.play(); // Play video when div is visible
+
+              // Show button after 5 seconds
+              setTimeout(() => {
+                  continueBtn.style.display = "block";
+              }, 4000);
+
+              // OR Show button when the video is about to finish
+              video.addEventListener("timeupdate", function () {
+                  if (video.currentTime >= video.duration - 2) { // Show button 2 seconds before the end
+                      continueBtn.style.display = "block";
+                  }
+              });
+          } else {
+              video.pause(); // Pause video when div is out of view (optional)
+              continueBtn.style.display = "none"; // Hide button again if video is not playing
+          }
+      });
+  }, { threshold: 0.5 }); // Adjust threshold for when the video should start
+
+  observer_tip1.observe(scenario10Div);
+});
+</script>
+
+          <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                 const stickyRow = document.querySelector(".sticky-row");
+                 const footer = document.querySelector("#footer");
+                 const targets = [document.querySelector("#scene10tips")];
+               
+                 const tip_observer1 = new IntersectionObserver(
+                   (entries) => {
+                     let shouldHideStickyRow = false;
+                     let HideFooter = false;
+               
+                     // Check the visibility of each observed element
+                     entries.forEach((entry) => {
+                       if (entry.isIntersecting) {
+                         shouldHideStickyRow = true;
+                         HideFooter = true;
+                       }
+                     });
+               
+                     // Toggle the visibility of the sticky-row based on any intersecting element
+                     if (shouldHideStickyRow && HideFooter) {
+                       stickyRow.style.display = "none";
+                       footer.style.display = "none";
+                     } else {
+                       stickyRow.style.display = "flex"; // Or your desired display value
+                       footer.style.display = "block";
+                     }
+                   },
+                   { threshold: 0.2 } // Adjust the visibility threshold as needed
+                 );
+               
+                 // Observe each target element
+                 targets.forEach((target) => {
+                   if (target) {
+                    tip_observer1.observe(target);
+                   }
+                 });
+               });
+               
+               
+               </script>
+
+            
+            
+
 
 
                 <!--End of scenario 10-->
@@ -2138,7 +2178,7 @@ if (allCardsMatched()) {
                 <div id="scenario7" class="hidden-section" style="padding-top: 20px;">
 
                   <br><br><br><br>
-                  <h4 class="text-center" style="font-weight: normal; font-style: italic;">After a few months of managing your credit, you check your credit report for any errors or fraudulent activity. There's a possibility of an error that could hurt your score</h4>
+                  <h4 class="text-center" style="font-weight: normal; font-style: italic;">After a few months of managing your credit, you decided to check your credit report and found incorrect information reported regarding your payment behaviour.</h4>
                 
                   <br><br><br>
                 
@@ -2149,12 +2189,12 @@ if (allCardsMatched()) {
                         
                   <div class="text-center" id="choices-div">
                     <div id="choices-col">
-                    <a href="#scene7-opt1" id="scene7-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
+                    <a href="#scene7-opt1" id="scene7-link1" class="choice-card" data-happiness="50" data-focus="50" data-credit-score="1">
                      Ignore any errors or fraud
                     </a>
                   </div>
                     <div id="choices-col">
-                    <a href="#scene7-opt2" id="scene7-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+                    <a href="#scene7-opt2" id="scene7-link2" class="choice-card" data-happiness="98" data-focus="98" data-credit-score="55">
                       Immediately fix the errors
                      </a>
                   </div>
@@ -2174,10 +2214,10 @@ if (allCardsMatched()) {
                         <img src="./img/narrative.png">
                         <div class="overlay-text">
                          
-                         The mistake goes unchecked, lowering your Credit Score by 30 points. It reflects poor credit monitoring habits.
+                         The mistake goes unchecked, lowering your Credit Score. It reflects poor credit monitoring habits.
               
                           <div class="text-center" style="padding-top: 60px;">
-                          <a href="#scenario13" id="opt-link30" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
+                          <a href="#scenario13" id="opt-link30" class="game-button">continue</a>
                         </div>
                       </div>
                       
@@ -2197,10 +2237,10 @@ if (allCardsMatched()) {
                     <img src="./img/narrative.png">
                     <div class="overlay-text">
                      
-                      <br><br>You successfully have an incorrect late payment removed from your report. Regularly checking and correcting errors or fraud boosts your score by removing any inaccuracies. Increase your Credit Score by 25 points.
+                      <br><br>You successfully have an incorrect late payment removed from your report. Regularly checking and correcting errors or fraud boosts your score by removing any inaccuracies.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario13" id="opt-link31" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                      <a href="#scenario13" id="opt-link31" class="game-button">continue</a>
                     </div>
                   </div>
                   
@@ -2219,7 +2259,7 @@ if (allCardsMatched()) {
                    <div id="scenario13" class="hidden-section" style="padding-top: 20px;">
 
                     <br><br><br><br>
-                    <h4 class="text-center" style="font-weight: normal; font-style: italic;">You've applied for a new credit card, a car loan and a mortgage in the past two months. All of these applications are pending and you're getting worried about how they will impact your credit report and score.</h4>
+                    <h4 class="text-center" style="font-weight: normal; font-style: italic;">You've applied for a new credit card, a car loan and a mortgage in the past two months. All of these applications are pending and you're getting worried about how they will impact your credit report and credit score.</h4>
                   
                     <br><br><br>
                   
@@ -2230,18 +2270,19 @@ if (allCardsMatched()) {
                           
                     <div class="text-center" id="choices-div">
                       <div id="choices-col">
-                      <a href="#scene13-opt1" id="scene13-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
-                       Inquire pending applications
+                      <a href="#scene13-opt1" id="scene13-link1" class="choice-card" data-happiness="99">
+                       Inquire about your pending applications
                       </a>
                     </div>
                       <div id="choices-col">
-                      <a href="#scene13-opt2" id="scene13-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+                      <a href="#scene13-opt2" id="scene13-link2" class="choice-card" data-happiness="99" data-credit-score="45">
                         Cancel some pending applications
                        </a>
                     </div>
                       <div id="choices-col">
-                      <a href="#scene13-opt3" id="scene13-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
-                        Wait for finalization
+                      <a href="#scene13-opt3" id="scene13-link3" class="choice-card" data-happiness="50" data-credit-score="8">
+                        Wait for pending decisions
+                        to be finalised
                        </a>
                     </div>
                   </div>
@@ -2261,10 +2302,16 @@ if (allCardsMatched()) {
                           <img src="./img/narrative.png">
                           <div class="overlay-text">
                            
-                         No impact on your credit score, but it could help you assess whether any pending inquiries are actually affecting your ability to apply for other credit.
+                            Inquiring about your own pending
+                            applications will not affect your credit score,
+                            this includes checking your pending
+                            applications or simply reviewing your
+                            credit report. So, feel free to check your
+                            credit report as it is a safe way to stay informed
+                            about your credit activity!
                 
                             <div class="text-center" style="padding-top: 60px;">
-                            <a href="#scenario15" id="opt-link32" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
+                            <a href="#scene13tips" id="opt-link32" class="game-button">continue</a>
                           </div>
                         </div>
                         
@@ -2284,10 +2331,15 @@ if (allCardsMatched()) {
                       <img src="./img/narrative.png">
                       <div class="overlay-text">
                        
-                        <br><br>If you cancel a pending application, there will be no hard inquiry, and the status application will be updated in the credit report. Your credit score remains unaffected because no inquiry was made.
+                        <br><br>With multiple pending applications,
+                        you decided to cancel some of them,
+                        your status of application will be updated
+                        in the credit report, which could help improve
+                        your score if you were concerned about
+                        too many inquiries. However, the impact isn't immediate.
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario15" id="opt-link33" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                        <a href="#scene13tips" id="opt-link33" class="game-button">continue</a>
                       </div>
                     </div>
                     
@@ -2307,10 +2359,14 @@ if (allCardsMatched()) {
                     <img src="./img/narrative.png">
                     <div class="overlay-text">
                      
-                      <br><br>If you are approved, your credit utilization may increase (depending on the credit limit). If you are denied, the inquiry will remain, potentially affecting your score for a few months.
+                      <br><br>While waiting for decisions, 
+                      you could face a slight drop in your credit score,
+                       especially with multiple pending
+                       applications and they were made in a short period
+                       of time.
           
                       <div class="text-center" style="padding-top: 60px;">
-                      <a href="#scenario15" id="opt-link34" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                      <a href="#scene13tips" id="opt-link34" class="game-button">continue</a>
                     </div>
                   </div>
                   
@@ -2320,6 +2376,94 @@ if (allCardsMatched()) {
           </div>
           
           </div>
+
+
+          <div id="scene13tips" class="text-center hidden-section">
+            <video id="tips13-info" style="width: 100%; height: auto; display: block;">
+                <source src="./video/13tips.mp4" type="video/mp4">
+            </video>
+          
+            <!-- Continue button (hidden initially) -->
+            <div id="tips13" class="text-center" style="padding-top: 20px;">
+                <a href="#scenario15" id="tip13-link" class="game-button">continue</a>
+            </div>
+          </div>
+          
+          <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const video = document.getElementById("tips13-info");
+            const scenario13Div = document.getElementById("scene13tips");
+            const continueBtn = document.getElementById("tips13");
+          
+            const observer_tip2 = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        video.play(); // Play video when div is visible
+          
+                        // Show button after 5 seconds
+                        setTimeout(() => {
+                            continueBtn.style.display = "block";
+                        }, 4000);
+          
+                        // OR Show button when the video is about to finish
+                        video.addEventListener("timeupdate", function () {
+                            if (video.currentTime >= video.duration - 2) { // Show button 2 seconds before the end
+                                continueBtn.style.display = "block";
+                            }
+                        });
+                    } else {
+                        video.pause(); // Pause video when div is out of view (optional)
+                        continueBtn.style.display = "none"; // Hide button again if video is not playing
+                    }
+                });
+            }, { threshold: 0.5 }); // Adjust threshold for when the video should start
+          
+            observer_tip2.observe(scenario13Div);
+          });
+          </script>
+          
+                    <script>
+                          document.addEventListener("DOMContentLoaded", () => {
+                           const stickyRow = document.querySelector(".sticky-row");
+                           const footer = document.querySelector("#footer");
+                           const targets = [document.querySelector("#scene13tips")];
+                         
+                           const tip_observer2 = new IntersectionObserver(
+                             (entries) => {
+                               let shouldHideStickyRow = false;
+                               let HideFooter = false;
+                         
+                               // Check the visibility of each observed element
+                               entries.forEach((entry) => {
+                                 if (entry.isIntersecting) {
+                                   shouldHideStickyRow = true;
+                                   HideFooter = true;
+                                 }
+                               });
+                         
+                               // Toggle the visibility of the sticky-row based on any intersecting element
+                               if (shouldHideStickyRow && HideFooter) {
+                                 stickyRow.style.display = "none";
+                                 footer.style.display = "none";
+                               } else {
+                                 stickyRow.style.display = "flex"; // Or your desired display value
+                                 footer.style.display = "block";
+                               }
+                             },
+                             { threshold: 0.2 } // Adjust the visibility threshold as needed
+                           );
+                         
+                           // Observe each target element
+                           targets.forEach((target) => {
+                             if (target) {
+                              tip_observer2.observe(target);
+                             }
+                           });
+                         });
+                         
+                         
+                         </script>
+
 
                 <!--End of scenario 13-->
 
@@ -2339,7 +2483,7 @@ if (allCardsMatched()) {
                     <div class="container">
                       <div class="row">
                           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
-                            <a href="#scene15-opt1" id="scene15-link1" style="text-decoration: none; color: #000000;"> 
+                            <a href="#scene15-opt1" id="scene15-link1" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="50" data-focus="50" data-credit-score="55"> 
                               <div class="card my-card2">
                              
                             <img src="./img/emergency.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
@@ -2348,7 +2492,7 @@ if (allCardsMatched()) {
                       </div>
                   
                       <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">  
-                        <a href="#scene15-opt2" id="scene15-link2" style="text-decoration: none; color: #000000;">  
+                        <a href="#scene15-opt2" id="scene15-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="50" data-focus="50" data-credit-score="10">  
                           <div class="card my-card2">
                             
                             <img src="./img/delay.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
@@ -2371,10 +2515,10 @@ if (allCardsMatched()) {
                           <img src="./img/narrative.png">
                           <div class="overlay-text">
                            
-                            You decide to pay all bills on time eventhough you'll need to dip into your savings. You make a point to prioritize your financial reputation and credit score, even at the cost of cutting back on essential expenses
+                            You make a point to prioritize your financial reputation and credit score, even at the cost of cutting back on essential expenses
                 
                             <div class="text-center" style="padding-top: 60px;">
-                            <a href="#scenario14" id="opt-link35" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
+                            <a href="#scenario14" id="opt-link35" class="game-button">continue</a>
                           </div>
                         </div>
                         
@@ -2394,10 +2538,10 @@ if (allCardsMatched()) {
                       <img src="./img/narrative.png">
                       <div class="overlay-text">
                        
-                        <br><br>Deciding to let a few bills go unpaid for the next month or two, prioritizing food and shelter while you wait for your next paycheck from your part time job to arrive. Your credit score drops more significantly. You now have multiple missed payments on your credit report.
+                        <br><br>Deciding to let a few bills go unpaid for the next month or two, prioritizing on food and shelter. Your credit score drops more significantly. You now have multiple missed payments on your credit report.
             
                         <div class="text-center" style="padding-top: 60px;">
-                        <a href="#scenario14" id="opt-link36" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+                        <a href="#scenario14" id="opt-link36" class="game-button">continue</a>
                       </div>
                     </div>
                     
@@ -2445,7 +2589,7 @@ if (allCardsMatched()) {
             <div class="phone-call">
                     <div class="row">
                       <div class="col-sm-6 text-right" id="phone-button"> 
-                        <a href="#info2" id="phone-link1" class="choice-card" data-happiness="45" data-focus="40" data-connection="40" data-credit-score="90" style="text-decoration: none; color: #000000;">
+                        <a href="#info2" id="phone-link1" class="choice-card" data-happiness="35" data-focus="35" data-connection="30" data-credit-score="10" style="text-decoration: none; color: #000000;">
                         <img src="./img/hangup.png" class="card-img-top" id="phonebtn" style="width: 10%; height: auto; margin: 0 auto;">
                       </a>
                       </div>
@@ -2551,12 +2695,12 @@ if (allCardsMatched()) {
                             
                       <div class="text-center" id="choices-div">
                         <div id="choices-col">
-                        <a href="#answer1" id="phone-link3" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
+                        <a href="#answer1" id="phone-link3" class="choice-card" data-happiness="70" data-focus="70" data-credit-score="65">
                          Negotiate a payment plan
                         </a>
                       </div>
                         <div id="choices-col">
-                        <a href="#answer2" id="phone-link4" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
+                        <a href="#answer2" id="phone-link4" class="choice-card" data-happiness="35" data-focus="35" data-credit-score="10">
                           Ignore the bill payment
                          </a>
                       </div>
@@ -2623,7 +2767,7 @@ if (allCardsMatched()) {
                         <div class="info-container2 text-center">
                           <img src="./img/narrative.png">
                           <div class="overlay-text">
-                           Oh no! Ignoring the bill leads to late fees, collections, and a drop in your score due to missed payments.
+                           Ignoring the bill leads to late fees, collections, and a drop in your score due to missed payments.
 
                            <div class="text-center" style="padding-top: 60px;">
                             <a href="#game-failed" id="phone-link6" class="game-button">continue</a>
@@ -2646,7 +2790,9 @@ if (allCardsMatched()) {
                           <img src="./img/narrative.png">
                           <div class="overlay-text">
                          
-                            Well done for making a good decision and staying on the green side and pay off your debt! Be wise out there!
+                            Nice work! You tackled every challenge,
+ made smart money moves, and kept
+ your credit score shining - financial victory unlocked!
             
               
                             <div class="text-center" style="padding-top: 60px;">
@@ -2670,7 +2816,9 @@ if (allCardsMatched()) {
                         <img src="./img/narrative.png">
                         <div class="overlay-text">
                        
-                          It's okay! Try harder next time. Thankfully, it's only in the game. Be more aware out there!
+                          Your credit score took a hit this time, but every
+ choice taught you something - gear up and try
+ again to level up your financial game!
           
             
                           <div class="text-center" style="padding-top: 60px;">
@@ -2941,26 +3089,26 @@ document.addEventListener("DOMContentLoaded", () => {
           explanation: "Regularly checking your credit report allows you to spot errors or fraudulent activity that could negatively affect your credit score"
       },
       {
-          prompt: "3.	Which of the following is an example of a “hard inquiry” on your credit report?",
+          prompt: "3.	Which of the following is the most important factor in determining your credit score?",
           options: [
-          "A lender checking your credit before approving a loan",
-              "Asking for a free credit report",
-              "Paying off a credit card",
-              "Inquiring about a loan but not applying for it"
+          "Length of credit history",
+              "Types of credit used",
+              "Recent inquiries",
+              "Payment history"
           ],
-          answer: "A lender checking your credit before approving a loan",
-          explanation: "A 'hard inquiry' occurs when a lender checks your credit score to assess you and check your creditworthiness"
+          answer: "Payment history",
+          explanation: "Payment history is the most important factor, accounting for 35% of your Bureau Credit Score. Consistently making on-time payments is crucial for maintaining a good score."
       },
       {
-          prompt: "4.	Which of these behaviors can help you maintain a healthy credit score?",
+          prompt: "Which of the following can help protect your credit score?",
           options: [
-              "Paying your bills on time",
-              "Keeping your credit utilization under 30%",
-              "Diversifying your credit accounts",
-              "All of the above"
+              "Making timely payments",
+              "Using more than 50% of your credit limit regularly",
+              "Frequently opening new credit cards",
+              "Ignoring your credit report"
           ],
-          answer: "All of the above",
-          explanation: "All of these behaviors contribute to a healthy credit score. Timely bill payments, responsible credit utilization and diversifying credit types shows that you're financially responsible"
+          answer: "Making timely payments",
+          explanation: "The best way to protect and improve your credit score is to make payments on time. Timely payments have the most significant impact on your score and can keep you from falling into debt."
       }
   ]
   
@@ -3199,7 +3347,7 @@ console.log("Correct Answers: " + correctAnswers); // Debugging step
         <div class="inner-circle">
           <span class="percentage" hidden>50%</span>
           <img src="./img/relationship.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
-          <span class="tooltip">Relationship: Foster trust and open<br>
+          <span class="tooltip">RELATIONSHIP: Foster trust and open<br>
             communication about finances and<br>
             work together toward shared financial goals</span>
         </div>
@@ -3215,7 +3363,7 @@ console.log("Correct Answers: " + correctAnswers); // Debugging step
 </div><!--container fluid row-->
 
 
-
+<!--
 <div id="footer">
 
   <div class="text-center" style="display: flex; gap: 80px; justify-content: center;">
@@ -3230,6 +3378,7 @@ console.log("Correct Answers: " + correctAnswers); // Debugging step
 
 
 </div>
+-->
 
 <div class="modal fade" id="aboutgame" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -3678,7 +3827,6 @@ function checkCompletion() {
 }
 
 
-
 // 🌟 TOUCH SUPPORT 🌟
 let currentTouchItem = null;
 let originalTouchParent = null;
@@ -3760,6 +3908,7 @@ function handleTouchEnd(e) {
   currentTouchItem = null;
   originalTouchParent = null;
 }
+
 
 
   
@@ -5021,11 +5170,19 @@ function showModal2() {
   
     
     // Reveal the section
-    var targetSection = document.getElementById('scenario7');
+    var targetSection = document.getElementById('scene10tips');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
     var hideSection = document.getElementById('scene10-opt1');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('creditmeter');
+   hideSection.classList.remove('visible-section');
+   hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('factormeter');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
@@ -5039,11 +5196,19 @@ function showModal2() {
   
     
     // Reveal the section
-    var targetSection = document.getElementById('scenario7');
+    var targetSection = document.getElementById('scene10tips');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
     var hideSection = document.getElementById('scene10-opt2');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('creditmeter');
+   hideSection.classList.remove('visible-section');
+   hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('factormeter');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
@@ -5051,6 +5216,30 @@ function showModal2() {
         targetSection.scrollIntoView({ behavior: 'smooth' });
   });
 
+  document.getElementById('tip10-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario7');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene10tips');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('creditmeter');
+   hideSection.classList.remove('hidden-section');
+   hideSection.classList.add('visible-section');
+
+    var hideSection = document.getElementById('factormeter');
+    hideSection.classList.remove('hidden-section');
+    hideSection.classList.add('visible-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
 
   ///////////////////////////////////////////////////////
 
@@ -5183,11 +5372,19 @@ function showModal2() {
   
     
     // Reveal the section
-    var targetSection = document.getElementById('scenario15');
+    var targetSection = document.getElementById('scene13tips');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
     var hideSection = document.getElementById('scene13-opt1');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('creditmeter');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('factormeter');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
@@ -5200,11 +5397,19 @@ function showModal2() {
   
     
     // Reveal the section
-    var targetSection = document.getElementById('scenario15');
+    var targetSection = document.getElementById('scene13tips');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
     var hideSection = document.getElementById('scene13-opt2');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('creditmeter');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('factormeter');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
   
@@ -5217,13 +5422,47 @@ function showModal2() {
   
     
     // Reveal the section
-    var targetSection = document.getElementById('scenario15');
+    var targetSection = document.getElementById('scene13tips');
     targetSection.classList.remove('hidden-section');
     targetSection.classList.add('visible-section');
   
     var hideSection = document.getElementById('scene13-opt3');
     hideSection.classList.remove('visible-section');
     hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('creditmeter');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('factormeter');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+  
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+  });
+
+
+  document.getElementById('tip13-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default anchor link behavior
+  
+    
+    // Reveal the section
+    var targetSection = document.getElementById('scenario15');
+    targetSection.classList.remove('hidden-section');
+    targetSection.classList.add('visible-section');
+  
+    var hideSection = document.getElementById('scene13tips');
+    hideSection.classList.remove('visible-section');
+    hideSection.classList.add('hidden-section');
+
+    var hideSection = document.getElementById('creditmeter');
+    hideSection.classList.remove('hidden-section');
+    hideSection.classList.add('visible-section');
+
+    var hideSection = document.getElementById('factormeter');
+    hideSection.classList.remove('hidden-section');
+    hideSection.classList.add('visible-section');
   
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
