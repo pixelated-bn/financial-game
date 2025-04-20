@@ -59,20 +59,176 @@
                     </div>
                 </div>
 
+
+                <div id="narration" class="hidden text-center">
+                  <video id="instruction" style="width: 100%; height: 100%; display: block;">
+                      <source src="./video/about-game.mp4" type="video/mp4">
+                  </video>
+                
+                    <!-- Continue button (hidden initially) -->
+  <div id="howto" class="text-center" style="padding-top: 10px;">
+    <a href="#scenario1" id="scenelink1" class="game-button">continue</a>
+</div>
+</div>
+                  
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const video = document.getElementById("instruction");
+                    const instructionDiv = document.getElementById("narration");
+                    const continueBtn = document.getElementById("howto");
+                  
+                    const observer_howto = new IntersectionObserver(entries => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                video.play(); // Play video when div is visible
+                  
+                                // Show button after 5 seconds
+                                setTimeout(() => {
+                                    continueBtn.style.display = "block";
+                                }, 17000);
+                  
+                                // OR Show button when the video is about to finish
+                                video.addEventListener("timeupdate", function () {
+                                    if (video.currentTime >= video.duration - 2) { // Show button 2 seconds before the end
+                                        continueBtn.style.display = "block";
+                                    }
+                                });
+                            } else {
+                                video.pause(); // Pause video when div is out of view (optional)
+                                continueBtn.style.display = "none"; // Hide button again if video is not playing
+                            }
+                        });
+                    }, { threshold: 0.5 }); // Adjust threshold for when the video should start
+                  
+                    observer_howto.observe(instructionDiv);
+                  });
+                  </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+   const stickyRow = document.querySelector(".sticky-row");
+   const targets = [document.querySelector("narration")];
+ 
+   const howto_observer = new IntersectionObserver(
+     (entries) => {
+       let shouldHideStickyRow = false;
+ 
+       // Check the visibility of each observed element
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           shouldHideStickyRow = true;
+         }
+       });
+ 
+       // Toggle the visibility of the sticky-row based on any intersecting element
+       if (shouldHideStickyRow) {
+         stickyRow.style.display = "none";
+       } else {
+         stickyRow.style.display = "flex"; // Or your desired display value
+       }
+     },
+     { threshold: 0.2 } // Adjust the visibility threshold as needed
+   );
+ 
+   // Observe each target element
+   targets.forEach((target) => {
+     if (target) {
+      howto_observer.observe(target);
+     }
+   });
+ });
+ 
+ 
+ </script>
+
+                  <!--
+
+                <div class="modal fade" id="startbtn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                      <div class="modal-body text-center">
+                   <br>
+                        <h3 style="font-weight: normal;">Now Lets Play!</h3>
+                        <br>
+                        <a href="#scenario1" id="scenelink1" class="game-button" data-dismiss="modal">continue</a>
+                     <br> <br>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+
+                <script>
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const video = document.getElementById("instruction");
+                    const scenarioDiv = document.getElementById("narration");
+                    const startBtn = document.getElementById("startbtn");
+                  
+                    const observergame1 = new IntersectionObserver(entries => {
+                      entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                          video.play(); // Play the video when the div is visible
+                  
+                          // Wait for the video to end, then show modal after 3 seconds
+                          video.addEventListener("ended", () => {
+                            setTimeout(() => {
+                              $('#startbtn').modal('show'); // Show the modal after 3 seconds
+                            }, 3000);
+                          });
+                        } else {
+                          video.pause(); // Optional: Pause video when not visible
+                        }
+                      });
+                    }, { threshold: 0.5 });
+                  
+                    observergame1.observe(scenarioDiv);
+                  });
+                  
+                  // Sticky row hide/show logic
+                  document.addEventListener("DOMContentLoaded", () => {
+                    const stickyRow = document.querySelector(".sticky-row");
+                    const targets = [document.querySelector("#narration")];
+                  
+                    const observer1 = new IntersectionObserver(
+                      (entries) => {
+                        let shouldHideStickyRow = false;
+                  
+                        entries.forEach((entry) => {
+                          if (entry.isIntersecting) {
+                            shouldHideStickyRow = true;
+                          }
+                        });
+                  
+                        stickyRow.style.display = shouldHideStickyRow ? "none" : "flex";
+                      },
+                      { threshold: 0.2 }
+                    );
+                  
+                    targets.forEach((target) => {
+                      if (target) {
+                        observer1.observe(target);
+                      }
+                    });
+                  });
+                  </script>
+                  
+-->
+
+<!--
                 <div id="narration" class="hidden" style="padding-top: 20px;">
 
 
                     <div class="text-center" style="padding-top: 180px; padding-left: 300px; padding-right: 300px; display: inline-block; overflow: hidden;">
                       <h3 style="font-weight: normal; justify-content: center; line-height: 140%;">Your goal is to build and maintain a high credit score while navigating through different levels of financial decisions and challenges. Each decision on how to use credit, manage debt and keep an eye on your credit report contributes to your credit score in real life.</h3>
             
-                      <div style="display: flex; justify-content: center; margin-top: 50px;">
+                      <div style="display: flex; justify-content: center; margin-top: 5px;">
                         <a href="#scenario1" id="scenelink1" class="start-button">continue</a>
                     </div>
             
                   </div>
             
             </div>
-
+-->
 
             <div> <!--container fluid row-->
   
@@ -80,8 +236,8 @@
                 <div class="col-sm-2 text-center hidden-section" id="creditmeter">
                   <aside style="padding-top: 30px;">
                       <div class="text-center">
-                          <h5 style="font-weight: bolder;">CREDIT<br>SCORE</h5>
-                          <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;" data-progress="1">
+                          <h5 id="cs-font">CREDIT<br>SCORE</h5>
+                          <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;" data-progress="300">
                             <img src="./img/creditscore.png" class="card-img-top creditscore-img">
                             <div class="opacity-overlay"></div> <!-- New overlay div -->
                             <img src="./img/creditarrow.png" class="card-img-top creditarrow-img">
@@ -93,7 +249,7 @@
               </div>
               
               
-                  <div class="col-sm-8 text-center" id="section"> <!-- col-sm-8 -->
+                  <div class="col-sm-8 text-center" id="section"><!-- col-sm-8 -->
               
                  <section> <!--section-->
 
@@ -114,7 +270,7 @@
     <div class="container">
       <div class="row">
           <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">   
-            <a href="#scene1-opt1" id="scene1-link1" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="60" data-connection="50" data-credit-score="5"> 
+            <a href="#scene1-opt1" id="scene1-link1" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="60" data-credit-score="48"> 
               <div class="card my-card2">
            
                 <img src="./img/essentials.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
@@ -124,7 +280,7 @@
       </div>
 
       <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
-        <a href="#scene1-opt2" id="scene1-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="40" data-connection="50" data-credit-score="4"> 
+        <a href="#scene1-opt2" id="scene1-link2" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="45" data-credit-score="28"> 
           <div class="card my-card2">
         
             <img src="./img/luxury.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
@@ -134,7 +290,7 @@
           </div>
   
       <div class="col-sm-4 hovertest" style="padding-top: 40px; margin: 5px auto;">
-        <a href="#scene1-opt3" id="scene1-link3" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-focus="50" data-connection="50" data-credit-score="3"> 
+        <a href="#scene1-opt3" id="scene1-link3" style="text-decoration: none; color: #000000;" class="choice-card" data-happiness="60" data-credit-score="45"> 
           <div class="card my-card2">
          
             <img src="./img/basic-needs.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
@@ -234,25 +390,13 @@
 <div id="scene1-tips" class="hidden-section" style="padding-top: 20px;">
 
 
-<div class="row">
-<div class="col-sm-12">
-  <div class="info-container2 text-center">
-    <img src="./img/narrative.png">
-    <div class="overlay-text">
      
-      Credit utilization is the percentage of your total available credit that you're using.
-      (What you owe/Credit Limit) x 100% = Credit Utilization ratio
-      It is an important indicator of how you manage debt and advisable to keep your credit utilization consistently low
-
-      <div class="text-center" style="padding-top: 60px;">
+      <div class="text-center" id="wedd-div">
+        <img src="./img/credit_util.png" id="wedd-img">
+      </div>
+      <div class="text-center" style="padding-top: 10px;">
       <a href="#scenario2" id="scene1narrative" class="game-button">continue</a>
     </div>
-  </div>
-  
-</div>
-</div>
-
-</div>
 
 </div>
 
@@ -267,16 +411,17 @@
 <div id="scenario2" class="hidden-section" style="padding-top: 20px;">
 
       
-    <h4 class="text-center" style="font-weight: normal; font-style: italic;">You have been saving for a new car and now ready to apply for a car loan.</h4>
+    <h4 class="text-center" style="font-weight: normal; font-style: italic;">You’ve been saving for a new car and are now ready to apply for a car loan.</h4>
 
     <br>
 
     <h1 class="text-center" style="font-weight:bold;">What would you do?</h1>
 
-
+<!--
     <div class="text-center" style="padding-top: 20px;">
       <img src="./img/arrow.png" class="card-img-top" style="width: 3%; height: auto; margin: 0 auto;">
     </div>
+    -->
     
   
     <div class="text-center">
@@ -288,19 +433,19 @@
         </a>
           <div class="slider">
             <div class="car">
-              <a href="#scene2-opt1" id="scene2-link1">
+              <a href="#scene2-opt1" id="scene2-link1" class="choice-card" data-happiness="70">
                 <img src="./img/used.png" alt="Card 1 Image" class="car-image">
                
               </a>
             </div>
             <div class="car">
-              <a href="#scene2-opt2" id="scene2-link2">
+              <a href="#scene2-opt2" id="scene2-link2" class="choice-card" data-happiness="70">
                 <img src="./img/new.png" alt="Card 2 Image" class="car-image">
             
               </a>
             </div>
             <div class="car">
-              <a href="#scene2-opt3" id="scene2-link3">
+              <a href="#scene2-opt3" id="scene2-link3" class="choice-card" data-happiness="70" data-focus="60">
                 <img src="./img/dream.png" alt="Card 3 Image" class="car-image">
              
               </a>
@@ -364,6 +509,10 @@ updateCardClasses();
 
 
 
+
+
+<!--
+
   <div id="scene2-opt1" class="hidden-section" style="padding-top: 20px;">
 
 
@@ -376,7 +525,7 @@ updateCardClasses();
             Yes, you need to stick to a budget, but buying an extremely cheap  or used car comes with its own risks. If the car keeps breaking down, repairs can be very costly. Soon you’ve spent more on that old lemon than you would have if you’d just bought a better car from a reputable dealer in the first place.
 
             <div class="text-center" style="padding-top: 60px;">
-            <a href="#scenario2a" id="optlink4" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
+            <a href="#scenario2a" id="optlink4" class="game-button">continue</a>
           </div>
         </div>
         
@@ -384,8 +533,95 @@ updateCardClasses();
     </div>
   
 </div>
-
 </div>
+-->
+
+
+<div id="scene2-opt1" class="hidden-section">
+  <video id="car-video1" style="width: 100%; height: auto; display: block;">
+      <source src="./video/used-car.mp4" type="video/mp4">
+  </video>
+
+  <!-- Continue button (hidden initially) -->
+  <div id="car1" class="text-center">
+      <a href="#scenario2a" id="optlink4" class="game-button">continue</a>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("car-video1");
+    const car1Div = document.getElementById("scene2-opt1");
+    const continueBtn = document.getElementById("car1");
+  
+    const car1 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play(); // Play video when div is visible
+  
+                // Show button after 5 seconds
+                setTimeout(() => {
+                    continueBtn.style.display = "block";
+                }, 5000);
+  
+                // OR Show button when the video is about to finish
+                video.addEventListener("timeupdate", function () {
+                    if (video.currentTime >= video.duration - 2) { // Show button 2 seconds before the end
+                        continueBtn.style.display = "block";
+                    }
+                });
+            } else {
+                video.pause(); // Pause video when div is out of view (optional)
+                continueBtn.style.display = "none"; // Hide button again if video is not playing
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust threshold for when the video should start
+  
+    car1.observe(car1Div);
+  });
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+   const stickyRow = document.querySelector(".sticky-row");
+   const targetscar1 = [document.querySelector("#scene2-opt1")];
+               
+                 const observercar1 = new IntersectionObserver(
+                   (entries) => {
+                     let shouldHideStickyRow = false;
+               
+                     // Check the visibility of each observed element
+                     entries.forEach((entry) => {
+                       if (entry.isIntersecting) {
+                         shouldHideStickyRow = true;
+                       }
+                     });
+               
+                     // Toggle the visibility of the sticky-row based on any intersecting element
+                     if (shouldHideStickyRow) {
+                       stickyRow.style.display = "none";
+                     } else {
+                       stickyRow.style.display = "flex"; // Or your desired display value
+                     }
+                   },
+                   { threshold: 0.2 } // Adjust the visibility threshold as needed
+                 );
+ 
+   // Observe each target element
+   targetscar1.forEach((target) => {
+     if (target) {
+      observercar1.observe(target);
+     }
+   });
+ });
+ 
+
+
+  </script>
+  
+
+
+<!--
 
 <div id="scene2-opt2" class="hidden-section" style="padding-top: 20px;">
 
@@ -399,7 +635,7 @@ updateCardClasses();
         <br><br>It’s better to be safe than stylish. Unsafe cars are a big factor for road crashes and you don't need to spend a fortune to get a safe car.
 
         <div class="text-center" style="padding-top: 60px;">
-        <a href="#scenario2a" id="optlink5" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+        <a href="#scenario2a" id="optlink5" class="game-button">continue</a>
       </div>
     </div>
     
@@ -409,7 +645,92 @@ updateCardClasses();
 </div>
 
 </div>
+-->
 
+<div id="scene2-opt2" class="hidden-section">
+  <video id="car-video2" style="width: 100%; height: auto; display: block;">
+      <source src="./video/new-car.mp4" type="video/mp4">
+  </video>
+
+  <!-- Continue button (hidden initially) -->
+  <div id="car2" class="text-center">
+      <a href="#scenario2a" id="optlink5" class="game-button">continue</a>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("car-video2");
+    const car2Div = document.getElementById("scene2-opt2");
+    const continueBtn = document.getElementById("car2");
+  
+    const car2 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play(); // Play video when div is visible
+  
+                // Show button after 5 seconds
+                setTimeout(() => {
+                    continueBtn.style.display = "block";
+                }, 5000);
+  
+                // OR Show button when the video is about to finish
+                video.addEventListener("timeupdate", function () {
+                    if (video.currentTime >= video.duration - 2) { // Show button 2 seconds before the end
+                        continueBtn.style.display = "block";
+                    }
+                });
+            } else {
+                video.pause(); // Pause video when div is out of view (optional)
+                continueBtn.style.display = "none"; // Hide button again if video is not playing
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust threshold for when the video should start
+  
+    car2.observe(car2Div);
+  });
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+   const stickyRow = document.querySelector(".sticky-row");
+   const targetscar2 = [document.querySelector("#scene2-opt2")];
+               
+                 const observercar2 = new IntersectionObserver(
+                   (entries) => {
+                     let shouldHideStickyRow = false;
+               
+                     // Check the visibility of each observed element
+                     entries.forEach((entry) => {
+                       if (entry.isIntersecting) {
+                         shouldHideStickyRow = true;
+                       }
+                     });
+               
+                     // Toggle the visibility of the sticky-row based on any intersecting element
+                     if (shouldHideStickyRow) {
+                       stickyRow.style.display = "none";
+                     } else {
+                       stickyRow.style.display = "flex"; // Or your desired display value
+                     }
+                   },
+                   { threshold: 0.2 } // Adjust the visibility threshold as needed
+                 );
+ 
+   // Observe each target element
+   targetscar2.forEach((target) => {
+     if (target) {
+      observercar2.observe(target);
+     }
+   });
+ });
+ 
+
+
+  </script>
+
+
+<!--
 <div id="scene2-opt3" class="hidden-section" style="padding-top: 20px;">
 
 
@@ -422,7 +743,7 @@ updateCardClasses();
         You have always dream of sitting behind the wheel of a luxury car, wake up with a sense of awe and wonder - the sight of the sleek curves, the feel of the smooth leather seats, and the sound of the powerful engine roaring to life.
 
         <div class="text-center" style="padding-top: 60px;">
-        <a href="#scenario2a" id="optlink6" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="10">continue</a>
+        <a href="#scenario2a" id="optlink6" class="game-button">continue</a>
       </div>
     </div>
     
@@ -432,6 +753,90 @@ updateCardClasses();
 </div>
 
 </div>
+-->
+
+
+<div id="scene2-opt3" class="hidden-section">
+  <video id="car-video3" style="width: 100%; height: auto; display: block;">
+      <source src="./video/luxury-car.mp4" type="video/mp4">
+  </video>
+
+  <!-- Continue button (hidden initially) -->
+  <div id="car3" class="text-center">
+      <a href="#scenario2a" id="optlink6" class="game-button">continue</a>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("car-video3");
+    const car3Div = document.getElementById("scene2-opt3");
+    const continueBtn = document.getElementById("car3");
+  
+    const car3 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play(); // Play video when div is visible
+  
+                // Show button after 5 seconds
+                setTimeout(() => {
+                    continueBtn.style.display = "block";
+                }, 5000);
+  
+                // OR Show button when the video is about to finish
+                video.addEventListener("timeupdate", function () {
+                    if (video.currentTime >= video.duration - 2) { // Show button 2 seconds before the end
+                        continueBtn.style.display = "block";
+                    }
+                });
+            } else {
+                video.pause(); // Pause video when div is out of view (optional)
+                continueBtn.style.display = "none"; // Hide button again if video is not playing
+            }
+        });
+    }, { threshold: 0.5 }); // Adjust threshold for when the video should start
+  
+    car3.observe(car3Div);
+  });
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+   const stickyRow = document.querySelector(".sticky-row");
+   const targetscar3 = [document.querySelector("#scene2-opt3")];
+               
+                 const observercar3 = new IntersectionObserver(
+                   (entries) => {
+                     let shouldHideStickyRow = false;
+               
+                     // Check the visibility of each observed element
+                     entries.forEach((entry) => {
+                       if (entry.isIntersecting) {
+                         shouldHideStickyRow = true;
+                       }
+                     });
+               
+                     // Toggle the visibility of the sticky-row based on any intersecting element
+                     if (shouldHideStickyRow) {
+                       stickyRow.style.display = "none";
+                     } else {
+                       stickyRow.style.display = "flex"; // Or your desired display value
+                     }
+                   },
+                   { threshold: 0.2 } // Adjust the visibility threshold as needed
+                 );
+ 
+   // Observe each target element
+   targetscar3.forEach((target) => {
+     if (target) {
+      observercar3.observe(target);
+     }
+   });
+ });
+ 
+
+
+  </script>
 
 
   <!--End of scenario 2-->
@@ -454,13 +859,17 @@ updateCardClasses();
     
        <div class="text-center" id="choices-div">
         <div id="choices-col">
-        <a href="#scene2a-opt1" id="scene2a-link1" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="90">
-          Apply with multiple lenders
+        <a href="#scene2a-opt1" id="scene2a-link1" class="choice-card" data-happiness="75" data-focus="40"data-credit-score="10">
+          Apply for a loan from
+          multiple lenders in the
+          same week
         </a>
       </div>
       <div id="choices-col">
-        <a href="#scene2a-opt2" id="scene2a-link2" class="choice-card" data-happiness="55" data-focus="50" data-connection="50" data-credit-score="45">
-         Apply with one trusted lender
+        <a href="#scene2a-opt2" id="scene2a-link2" class="choice-card" data-happiness="75" data-focus="40" data-credit-score="52">
+         Apply for a loan with
+         one trusted lender and
+         wait for a decision
          </a>
       </div>
     </div>
@@ -478,10 +887,12 @@ updateCardClasses();
               <img src="./img/narrative.png">
               <div class="overlay-text">
                
-                Every application triggers a hard inquiry, lowering your Credit Score by 50 points temporarily due to the impact of multiple credit checks.
+                Every application triggers a hard inquiry, 
+lowering your credit score temporarily
+ due to the impact of multiple credit checks.
     
                 <div class="text-center" style="padding-top: 60px;">
-                    <a href="#" id="optlink7" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="20">continue</a>
+                    <a href="#" id="optlink7" class="game-button">continue</a>
                 </div>
                
                 
@@ -541,10 +952,12 @@ continueButton1.addEventListener('click', function(event) {
           <img src="./img/narrative.png">
           <div class="overlay-text">
            
-            <br><br>A single inquiry has minimal impact on your Credit Score, reducing it by just 5 points. Your Credit Score increases by 15 points because you secure the loan with a low-interest rate and a good repayment plan.
+            <br><br>A single inquiry has minimal impact on your credit score.
+            If you secure the loan with a low-interest rate and
+            a good repayment plan, this helps improve your credit score.
 
             <div class="text-center" style="padding-top: 60px;">
-            <a href="#" id="optlink8" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+            <a href="#" id="optlink8" class="game-button">continue</a>
           </div>
         </div>
         
@@ -592,6 +1005,48 @@ continueButton2.addEventListener('click', function(event) {
 
 </script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+   const footer = document.querySelector("#footer");
+   const targets = [document.querySelector("#narration"), document.querySelector("#scenario1"), document.querySelector("#scene1-opt1"),
+   document.querySelector("#scene1-opt2"), document.querySelector("#scene1-opt3"), document.querySelector("#scene1-tips"),
+   document.querySelector("#scenario2"), document.querySelector("#scene2-opt1"),
+   document.querySelector("#scene2-opt1"), document.querySelector("#scene2-opt2"),
+   document.querySelector("#scene2-opt3"), document.querySelector("#scenario2a"),
+   document.querySelector("#scene2a-opt1"), document.querySelector("#scene2a-opt2")];
+ 
+   const observer1 = new IntersectionObserver(
+     (entries) => {
+       let HideFooter = false;
+ 
+       // Check the visibility of each observed element
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           HideFooter = true;
+         }
+       });
+ 
+       // Toggle the visibility of the sticky-row based on any intersecting element
+       if (HideFooter) {
+         footer.style.display = "none";
+       } else {
+         footer.style.display = "block";
+       }
+     },
+     { threshold: 0.2 } // Adjust the visibility threshold as needed
+   );
+ 
+   // Observe each target element
+   targets.forEach((target) => {
+     if (target) {
+       observer1.observe(target);
+     }
+   });
+ });
+ 
+ 
+ </script>
+
 
             <!--End of scenario 2a-->
 
@@ -634,7 +1089,7 @@ continueButton2.addEventListener('click', function(event) {
         <div class="inner-circle">
           <span class="percentage" hidden>50%</span>
           <img src="./img/relationship.png" class="card-img-top" style="width: 90%; height: auto; margin: 0 auto;">
-          <span class="tooltip">Relationship: Foster trust and open<br>
+          <span class="tooltip">RELATIONSHIP: Foster trust and open<br>
             communication about finances and<br>
             work together toward shared financial goals</span>
         </div>
