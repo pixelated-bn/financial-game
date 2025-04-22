@@ -2879,11 +2879,11 @@ height: auto;
  
   @media (max-width: 870px) {
     #index{
-      padding-top: 60px;
+      padding-top: 30px;
     }
     #footer {
       position: fixed;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       width: 100%;
       height:5%;
     }
