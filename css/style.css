@@ -2970,6 +2970,11 @@ height: auto;
         padding: 15px;
       }
 
+         .my-card2:hover {
+        background-size: 100% 140px;
+      }
+
+
       .circular-progress-container {
         padding-bottom: 25px;
       }
