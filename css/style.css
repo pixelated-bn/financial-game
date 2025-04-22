@@ -2876,8 +2876,140 @@ height: auto;
 
 
   /* Breakpoints for index page*/
+
+  @media (min-width: 700px) {
+    #index{
+      padding-top: 40px;
+    }
+    #footer {
+      position: fixed;
+      margin-bottom: 8px;
+      width: 100%;
+      height:5%;
+    }
+    #narrative-style{
+      padding-top: 5px; 
+      width: 70%; 
+      overflow: hidden; 
+      white-space: nowrap; 
+      padding-left: 5px; 
+      padding-right: 10px;
+    }
+    #typewriter {
+      font-size: 20px;
+      }
+
+   .index-button{
+          background-color: #D4C029;    
+          color: white;
+          border: none;
+          padding: 10px 40px 15px 40px;
+          width: 30%;
+          font-size: 18px;
+          font-weight: normal;
+          opacity: 0; /* Initially hidden */
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.3s, opacity 1s;
+          text-decoration: none;
+          border-radius: 4px;
+        
+      }
+
+      #creditmeter {
+        position: fixed;
+        top: 15px; /* Distance from the top */
+        left: 0; /* Stick to the left */
+        width: 20%; /* Adjust width */
+        z-index: 1000; /* Ensure it’s above other content */
+      }
+
+      #factormeter {
+        position: fixed;
+        top: 8px; /* Distance from the top */
+        right: 18px; /* Stick to the right */
+        width: 20%; /* Adjust width */
+        z-index: 1000; /* Ensure it’s above other content */
+      }
+
+      #cs-font{
+          font-size: 10px;
+      }
+      .credit-score-container {
+        position: relative;
+        height: 190px; /* Set a specific height */
+        overflow: visible; /* Hide overflow */
+      }
+      .creditscore-img {
+        width: 94%;
+        height: auto;
+        opacity: 1;
+        position: relative;
+      }
+
+      .hidden-section {
+        padding-top: 5px;
+      }
+
+      #title-text{
+        font-size: small;
+      }
+
+      h1{
+        font-size: small;
+      }
+
+      .hovertest{
+        padding-top: 10px;
+        margin: 0;
+      }
+
+      .my-card2 {
+        width: 90%;
+        height: 145px;
+        background-position: center;
+        padding: 15px;
+      }
+
+      .my-card2:hover {
+        background-size: 100% 140px;
+      }
+
+      .circular-progress-container {
+        padding-bottom: 25px;
+      }
+
+      .circular-progress {
+        width: 53px; /* Outer ring size */
+        height: 53px;
+        margin-right: 10px; /* Space between the circle and the factor image */
+      }
+
+      .inner-circle {
+        width: 80%; /* Inner circle size */
+        height: 80%;
+        background-color: #FCF8EA; /* Inner circle color */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1; /* Ensure it is above the outer ring */
+      }
+
+      .factor-up-image {
+        width: 14px; /* Adjust size as needed */
+        height: auto;
+        z-index: 2; /* Make sure it's on top */
+        position: relative; /* Ensure it positions beside the circular progress */
+        transform: translateX(0px); /* Optional: Adjust position */
+        opacity: 0; /* Start with the image hidden */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
+        bottom: 3px;
+      }
+    
+  }
  
-  @media (min-width: 750px) {
+  @media (min-width: 800px) {
     #index{
       padding-top: 50px;
     }
@@ -2970,10 +3102,9 @@ height: auto;
         padding: 15px;
       }
 
-         .my-card2:hover {
-        background-size: 100% 140px;
+      .my-card2:hover {
+        background-size: 100% 150px;
       }
-
 
       .circular-progress-container {
         padding-bottom: 25px;
