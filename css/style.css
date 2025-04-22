@@ -2878,7 +2878,7 @@ height: auto;
     }
     #footer {
       position: fixed;
-      margin-bottom: 8px;
+      bottom: 0;
       width: 100%;
       height:5%;
     }
