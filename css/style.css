@@ -2874,16 +2874,16 @@ height: auto;
  
   @media (min-width: 800px) {
     #index{
-      padding-top: 90px;
+      padding-top: 70px;
     }
     #footer {
       position: fixed;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
       width: 100%;
       height:5%;
     }
     #narrative-style{
-      padding-top: 10px; 
+      padding-top: 5px; 
       width: 70%; 
       overflow: hidden; 
       white-space: nowrap; 
