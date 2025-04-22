@@ -3097,13 +3097,13 @@ height: auto;
 
       .my-card2 {
         width: 90%;
-        height: 150px;
+        height: 160px;
         background-position: center;
         padding: 15px;
       }
 
       .my-card2:hover {
-        background-size: 100% 158px;
+        background-size: 100% 155px;
       }
 
       .circular-progress-container {
