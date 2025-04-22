@@ -2879,11 +2879,11 @@ height: auto;
  
   @media (min-width: 750px) {
     #index{
-      padding-top: 30px;
+      padding-top: 50px;
     }
     #footer {
       position: fixed;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
       width: 100%;
       height:5%;
     }
@@ -2936,11 +2936,11 @@ height: auto;
       }
       .credit-score-container {
         position: relative;
-        height: 200px; /* Set a specific height */
+        height: 190px; /* Set a specific height */
         overflow: visible; /* Hide overflow */
       }
       .creditscore-img {
-        width: 100%;
+        width: 94%;
         height: auto;
         opacity: 1;
         position: relative;
@@ -2951,11 +2951,11 @@ height: auto;
       }
 
       #title-text{
-        font-size: smaller;
+        font-size: small;
       }
 
       h1{
-        font-size: smaller;
+        font-size: small;
       }
 
       .hovertest{
@@ -2965,7 +2965,7 @@ height: auto;
 
       .my-card2 {
         width: 90%;
-        height: 130px;
+        height: 145px;
         background-position: center;
         padding: 15px;
       }
@@ -2975,14 +2975,14 @@ height: auto;
       }
 
       .circular-progress {
-        width: 50px; /* Outer ring size */
-        height: 50px;
+        width: 53px; /* Outer ring size */
+        height: 53px;
         margin-right: 10px; /* Space between the circle and the factor image */
       }
 
       .inner-circle {
-        width: 75%; /* Inner circle size */
-        height: 75%;
+        width: 80%; /* Inner circle size */
+        height: 80%;
         background-color: #FCF8EA; /* Inner circle color */
         border-radius: 50%;
         display: flex;
@@ -2993,7 +2993,7 @@ height: auto;
       }
 
       .factor-up-image {
-        width: 13px; /* Adjust size as needed */
+        width: 14px; /* Adjust size as needed */
         height: auto;
         z-index: 2; /* Make sure it's on top */
         position: relative; /* Ensure it positions beside the circular progress */
