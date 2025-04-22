@@ -2877,7 +2877,7 @@ height: auto;
 
   /* Breakpoints for index page*/
  
-  @media (max-width: 870px) {
+  @media (min-width: 750px) {
     #index{
       padding-top: 30px;
     }
