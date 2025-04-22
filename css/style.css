@@ -66,6 +66,10 @@ h1 {
   padding-right: 60px;
 }
 
+.hovertest{
+  padding-top: 20px;
+  margin: 5px auto;
+}
 
   #end {
     margin: 0;
@@ -164,6 +168,7 @@ h1 {
     align-items: center;
     justify-content: flex-start; /* Align items horizontally */
     position: relative;
+    padding-bottom: 80px;
   }
   
   .circular-progress {
@@ -253,7 +258,6 @@ h1 {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: conic-gradient(#28d84e 0%, #0eb809 0%, #f5f4f4 0% 100%);
     position: absolute;
     z-index: 0; /* Ensure it is below the inner circle */
   }
@@ -549,7 +553,7 @@ h1 {
 #section {
   margin-left: 17%; /* Offset for creditmeter */
   justify-content: center;
-  padding-right: 40px;
+  padding-right: 30px;
 }
 
 .image-container {
@@ -932,6 +936,7 @@ h1 {
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
   animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  padding-top: 20px;
 }
 .visible-section {
  opacity: 0; /* Start hidden */
@@ -1054,7 +1059,7 @@ h1 {
 
 .credit-score-container {
   position: relative;
-  height: 365px; /* Set a specific height */
+  height: 435px; /* Set a specific height */
   overflow: visible; /* Hide overflow */
 }
 
@@ -2869,10 +2874,10 @@ height: auto;
 
 }
 
- /* Breakpoints for index page*/
- /* Breakpoints for index page*/
+
+  /* Breakpoints for index page*/
  
-  @media (min-width: 800px) {
+  @media (max-width: 870px) {
     #index{
       padding-top: 60px;
     }
@@ -2908,6 +2913,94 @@ height: auto;
           text-decoration: none;
           border-radius: 4px;
         
+      }
+
+      #creditmeter {
+        position: fixed;
+        top: 15px; /* Distance from the top */
+        left: 0; /* Stick to the left */
+        width: 20%; /* Adjust width */
+        z-index: 1000; /* Ensure it’s above other content */
+      }
+
+      #factormeter {
+        position: fixed;
+        top: 8px; /* Distance from the top */
+        right: 18px; /* Stick to the right */
+        width: 20%; /* Adjust width */
+        z-index: 1000; /* Ensure it’s above other content */
+      }
+
+      #cs-font{
+          font-size: 10px;
+      }
+      .credit-score-container {
+        position: relative;
+        height: 200px; /* Set a specific height */
+        overflow: visible; /* Hide overflow */
+      }
+      .creditscore-img {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        position: relative;
+      }
+
+      .hidden-section {
+        padding-top: 5px;
+      }
+
+      #title-text{
+        font-size: smaller;
+      }
+
+      h1{
+        font-size: smaller;
+      }
+
+      .hovertest{
+        padding-top: 10px;
+        margin: 0;
+      }
+
+      .my-card2 {
+        width: 90%;
+        height: 130px;
+        background-position: center;
+        padding: 15px;
+      }
+
+      .circular-progress-container {
+        padding-bottom: 25px;
+      }
+
+      .circular-progress {
+        width: 50px; /* Outer ring size */
+        height: 50px;
+        margin-right: 10px; /* Space between the circle and the factor image */
+      }
+
+      .inner-circle {
+        width: 75%; /* Inner circle size */
+        height: 75%;
+        background-color: #FCF8EA; /* Inner circle color */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1; /* Ensure it is above the outer ring */
+      }
+
+      .factor-up-image {
+        width: 13px; /* Adjust size as needed */
+        height: auto;
+        z-index: 2; /* Make sure it's on top */
+        position: relative; /* Ensure it positions beside the circular progress */
+        transform: translateX(0px); /* Optional: Adjust position */
+        opacity: 0; /* Start with the image hidden */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
+        bottom: 3px;
       }
     
   }
@@ -2959,4 +3052,4 @@ height: auto;
     }
   }
   
- 
+  
