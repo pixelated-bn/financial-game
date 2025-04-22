@@ -2855,3 +2855,54 @@ height: auto;
   text-decoration: none;
 
 }
+
+
+  /* Breakpoints for index page*/
+  @media (min-width: 600px) {
+    #index{
+      padding-top: 80px;
+    }
+  }
+  @media (min-width: 700px) {
+    #index{
+      padding-top: 80px;
+    }
+    #footer {
+      position: fixed;
+      margin-bottom: 15px;
+      width: 100%;
+      height:5%;
+    }
+  }
+  @media (min-width: 800px) {
+    #index{
+      padding-top: 90px;
+    }
+    #footer {
+      position: fixed;
+      margin-bottom: 15px;
+      width: 100%;
+      height:5%;
+    }
+    
+  }
+  @media (min-width: 900px) {
+    #index{
+      padding-top: 90px;
+    }
+  }
+  @media (min-width: 1000px) {
+    #index{
+      padding-top: 280px;
+    }
+  }
+  @media (min-width: 1300px) {
+    #index{
+      padding-top: 350px;
+    }
+  }
+  @media (min-width: 1800px) and (min-height: 1080px) {
+    #index{
+      padding-top: 350px;
+    }
+  }
