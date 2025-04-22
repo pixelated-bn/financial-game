@@ -2870,22 +2870,8 @@ height: auto;
 }
 
  /* Breakpoints for index page*/
-  @media (min-width: 600px) {
-    #index{
-      padding-top: 80px;
-    }
-  }
-  @media (min-width: 700px) {
-    #index{
-      padding-top: 80px;
-    }
-    #footer {
-      position: fixed;
-      margin-bottom: 15px;
-      width: 100%;
-      height:5%;
-    }
-  }
+ /* Breakpoints for index page*/
+ 
   @media (min-width: 800px) {
     #index{
       padding-top: 90px;
@@ -2905,25 +2891,62 @@ height: auto;
       padding-right: 15px;
     }
     #typewriter {
-    font-size: 20px;
-    }
+      font-size: 22px;
+      }
+
+   .index-button{
+          background-color: #D4C029;    
+          color: white;
+          border: none;
+          padding: 10px 40px 15px 40px;
+          width: 30%;
+          font-size: 18px;
+          font-weight: normal;
+          opacity: 0; /* Initially hidden */
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.3s, opacity 1s;
+          text-decoration: none;
+          border-radius: 4px;
+        
+      }
     
   }
   @media screen and (min-height: 400px) and (min-width: 900px) and (orientation: landscape)   {
     #index{
       padding-top: 90px;
     }
+
   }
 
   @media screen and (min-height: 700px) and (min-width: 1000px) and (orientation: landscape)   {
     #index{
-      padding-top: 250px;
+      padding-top: 200px;
     }
+    #narrative-style{
+      padding-top: 160px; 
+      width: 50%; 
+      overflow: hidden; 
+      white-space: nowrap; 
+      padding-left: 65px; 
+      padding-right: 60px;
+    }
+
+    #typewriter {
+      font-size: 30px;
+      }
   }
 
   @media screen and (min-height: 1000px) and (min-width: 1200px) and (orientation: landscape)   {
     #index{
       padding-top: 380px;
+    }
+    #narrative-style{
+      padding-top: 160px; 
+      width: 50%; 
+      overflow: hidden; 
+      white-space: nowrap; 
+      padding-left: 65px; 
+      padding-right: 60px;
     }
   }
 
@@ -2935,6 +2958,5 @@ height: auto;
      font-size: 10px;
     }
   }
-  
   
  
