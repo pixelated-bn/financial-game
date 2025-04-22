@@ -53,6 +53,18 @@ h1 {
     font-style: normal;
 }
 
+#index{
+  padding-top: 180px;
+}
+
+#narrative-style{
+  padding-top: 160px; 
+  width: 50%; 
+  overflow: hidden; 
+  white-space: nowrap; 
+  padding-left: 65px; 
+  padding-right: 60px;
+}
 
 
   #end {
@@ -2857,5 +2869,72 @@ height: auto;
 
 }
 
+ /* Breakpoints for index page*/
+  @media (min-width: 600px) {
+    #index{
+      padding-top: 80px;
+    }
+  }
+  @media (min-width: 700px) {
+    #index{
+      padding-top: 80px;
+    }
+    #footer {
+      position: fixed;
+      margin-bottom: 15px;
+      width: 100%;
+      height:5%;
+    }
+  }
+  @media (min-width: 800px) {
+    #index{
+      padding-top: 90px;
+    }
+    #footer {
+      position: fixed;
+      margin-bottom: 15px;
+      width: 100%;
+      height:5%;
+    }
+    #narrative-style{
+      padding-top: 50px; 
+      width: 70%; 
+      overflow: hidden; 
+      white-space: nowrap; 
+      padding-left: 10px; 
+      padding-right: 15px;
+    }
+    #typewriter {
+    font-size: 20px;
+    }
+    
+  }
+  @media screen and (min-height: 400px) and (min-width: 900px) and (orientation: landscape)   {
+    #index{
+      padding-top: 90px;
+    }
+  }
 
+  @media screen and (min-height: 700px) and (min-width: 1000px) and (orientation: landscape)   {
+    #index{
+      padding-top: 250px;
+    }
+  }
+
+  @media screen and (min-height: 1000px) and (min-width: 1200px) and (orientation: landscape)   {
+    #index{
+      padding-top: 380px;
+    }
+  }
+
+  @media screen and (min-height: 1300px) and (min-width: 3000px) and (orientation: landscape) {
+    #index {
+      padding-top: 430px;
+    }
+    .start-link {
+     font-size: 10px;
+    }
+  }
+  
+  
  
