@@ -3154,9 +3154,9 @@ height: auto;
     
   }
 
-  @media (min-width: 900px) and (max-width: 1500px) {
+  @media (min-width: 900px) and (max-width: 1400px) {
     #index{
-      padding-top: 50px;
+      padding-top: 90px;
     }
     #footer {
       position: fixed;
