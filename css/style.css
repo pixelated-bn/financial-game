@@ -3283,6 +3283,34 @@ height: auto;
         transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
         bottom: 3px;
       }
+
+          .monument{
+        width:40%;
+        padding-bottom: 8px;
+        padding-right: 4px;
+        height: auto;
+        }
+        #vacation{
+          padding-top: 10px;
+        }
+        .location {
+          width: 150px;
+          height: 42px;
+          padding: 10px;
+        }
+
+        #title-items{
+          padding-top: 5px;
+        }
+        #vacay-box {
+          margin-bottom: 10px; /* Add some space between rows */
+          width: 100%; /* Ensure they take up 100% of their container width */
+        }
+        .imgs {
+          width: 10%; /* Set the width relative to the container's width */
+          height: auto; /* Maintain aspect ratio */
+        }
+        
     
   }
   
