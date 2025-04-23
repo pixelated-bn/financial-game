@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <audio id="drag-sound" src="./audio/sound-effect.mp3"></audio> <!-- Drag sound -->
               <audio id="drop-sound" src="./audio/sound-effect.mp3"></audio> <!-- Drop sound -->
               
-              <div class="container" style="padding-top: 50px;">
+              <div class="container" id="vacation">
                 <h4 style="color: #206E63; font-weight: bold;">Match the monument with the correct country!</h4>
                 <br>
                 <div class="row" id="vacay-row">
@@ -3732,72 +3732,59 @@ document.getElementById('title-link1').addEventListener('click', function(event)
   });
 
 
-  const dragSound = document.getElementById('drag-sound'); // Select the drag sound effect
-  const dropSound = document.getElementById('drop-sound'); // Select the drop sound effect
+  const dragSound = document.getElementById('drag-sound');
+const dropSound = document.getElementById('drop-sound');
 
-  
-  function allowDrop(ev) {
-    ev.preventDefault(); // Allow the drop action
-
-
-  }
-  
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id); // Store the dragged item's ID
-
-      // Play the drag sound
-  dragSound.currentTime = 0; // Reset the sound to the beginning
-  dragSound.play(); // Play the drag sound effect
-
-  }
-  
-  function drop(ev) {
-  dropSound.currentTime = 0; // Reset the sound to the beginning
-  dropSound.play(); // Play the drop sound effect
-
-  ev.preventDefault(); // Prevent default drop behavior
-  const data = ev.dataTransfer.getData("text"); // Get the ID of the dragged item
-  const draggedItem = document.getElementById(data); // Reference the dragged item
-  const targetContainer = ev.target.closest("div"); // Get the drop target container
-
-  // Check if the item is correct for the target location
-  if (
-    (draggedItem.classList.contains("italy") && targetContainer.id === "location1") ||
-    (draggedItem.classList.contains("dubai") && targetContainer.id === "location2") ||
-    (draggedItem.classList.contains("france") && targetContainer.id === "location3") ||
-    (draggedItem.classList.contains("singapore") && targetContainer.id === "location4") ||
-    (draggedItem.classList.contains("japan") && targetContainer.id === "location5") ||
-    (draggedItem.classList.contains("india") && targetContainer.id === "location6") ||
-    (draggedItem.classList.contains("egypt") && targetContainer.id === "location7")
-  ) {
-    targetContainer.appendChild(draggedItem); // Move the item to the correct container
-
-       // Change the background color of the target container when the item is dropped
-       //targetContainer.style.backgroundColor = "#35867a"; // Set a success color (green-ish, for example)
-    targetContainer.style.borderColor = "#206E63"; // Optional: Change border color as well (green for success)
-    targetContainer.style.backgroundColor = "whitesmoke";
-
-    // Optional: Add a transition for smoother color change
-    targetContainer.style.transition = "background-color 0.3s, border-color 0.3s";
-
-    // Change the width of the dropped item (optional, change this to your desired width)
-    draggedItem.style.width = "80%"; // Example: Adjust the width to 80%
-    draggedItem.style.height = "auto"; // Optional: Adjust the height to auto if you want to maintain aspect ratio
-  } else {
-   
-
-// Change the background color of the target container when the item is dropped
-//targetContainer.style.backgroundColor = "#35867a"; // Set a success color (green-ish, for example)
-targetContainer.style.borderColor = "#DA1F27"; // Optional: Change border color as well (green for success)
-//targetContainer.style.backgroundColor = "#DA1F27";
-    // Incorrect drop, return the item to its original position (or ignore it)
-    const originalParent = document.getElementById(data).closest(".item-box");
-    originalParent.appendChild(draggedItem); // Return the dragged item to its original position
-  }
-
-  checkCompletion(); // Check if the game is complete
+function allowDrop(ev) {
+  ev.preventDefault();
 }
 
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+  dragSound.currentTime = 0;
+  dragSound.play();
+}
+
+function drop(ev) {
+  dropSound.currentTime = 0;
+  dropSound.play();
+
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  const draggedItem = document.getElementById(data);
+  const targetContainer = ev.target.closest("div");
+
+  if (isCorrectMatch(draggedItem, targetContainer)) {
+    placeItemCorrectly(draggedItem, targetContainer);
+  } else {
+    targetContainer.style.borderColor = "#DA1F27";
+    const originalParent = draggedItem.closest(".item-box");
+    originalParent.appendChild(draggedItem);
+  }
+
+  checkCompletion();
+}
+
+function isCorrectMatch(item, container) {
+  return (
+    (item.classList.contains("italy") && container.id === "location1") ||
+    (item.classList.contains("dubai") && container.id === "location2") ||
+    (item.classList.contains("france") && container.id === "location3") ||
+    (item.classList.contains("singapore") && container.id === "location4") ||
+    (item.classList.contains("japan") && container.id === "location5") ||
+    (item.classList.contains("india") && container.id === "location6") ||
+    (item.classList.contains("egypt") && container.id === "location7")
+  );
+}
+
+function placeItemCorrectly(item, container) {
+  container.appendChild(item);
+  container.style.borderColor = "#206E63";
+  container.style.backgroundColor = "whitesmoke";
+  container.style.transition = "background-color 0.3s, border-color 0.3s";
+  item.style.width = "80%";
+  item.style.height = "auto";
+}
 
 function checkCompletion() {
   const correctMatches = [
@@ -3810,22 +3797,18 @@ function checkCompletion() {
     { location: "location7", class: "egypt" }
   ];
 
-  // Check if every location contains the correct item
   const allCorrect = correctMatches.every(match => {
     const locationElement = document.getElementById(match.location);
-    // Make sure the correct item with the class is in the location
     const draggedItem = locationElement.querySelector(`img.${match.class}`);
-    return draggedItem !== null; // If the correct item is inside the location
+    return draggedItem !== null;
   });
 
-  // If all items are correct, show the modal
   if (allCorrect) {
     const backgroundMusic = document.getElementById("game-music");
-    fadeOutMusic(backgroundMusic, 2000); // Fade out background music
-    showModal(); // Show the modal when game is complete
+    fadeOutMusic(backgroundMusic, 2000);
+    showModal();
   }
 }
-
 
 // 🌟 TOUCH SUPPORT 🌟
 let currentTouchItem = null;
@@ -3841,9 +3824,9 @@ function handleTouchStart(e) {
   currentTouchItem = e.target;
   originalTouchParent = currentTouchItem.parentElement;
 
-  // Bring it to front
-  currentTouchItem.style.position = 'absolute';
+  currentTouchItem.style.position = 'fixed';
   currentTouchItem.style.zIndex = '1000';
+  currentTouchItem.style.pointerEvents = 'none'; // Prevent touch interference
 
   dragSound.currentTime = 0;
   dragSound.play();
@@ -3867,82 +3850,63 @@ function handleTouchEnd(e) {
   const dropContainer = dropTarget?.closest('.location');
 
   // Reset styles
-  currentTouchItem.style.position = 'static';
+  currentTouchItem.style.position = '';
   currentTouchItem.style.zIndex = '';
+  currentTouchItem.style.pointerEvents = '';
   currentTouchItem.style.left = '';
   currentTouchItem.style.top = '';
 
+  const draggedItem = currentTouchItem;
+
   if (dropContainer) {
-    const draggedItem = currentTouchItem;
-    const targetContainer = dropContainer;
-
-    dropSound.currentTime = 0;
-    dropSound.play();
-
-    if (
-      (draggedItem.classList.contains("italy") && targetContainer.id === "location1") ||
-      (draggedItem.classList.contains("dubai") && targetContainer.id === "location2") ||
-      (draggedItem.classList.contains("france") && targetContainer.id === "location3") ||
-      (draggedItem.classList.contains("singapore") && targetContainer.id === "location4") ||
-      (draggedItem.classList.contains("japan") && targetContainer.id === "location5") ||
-      (draggedItem.classList.contains("india") && targetContainer.id === "location6") ||
-      (draggedItem.classList.contains("egypt") && targetContainer.id === "location7")
-    ) {
-      targetContainer.appendChild(draggedItem);
-      targetContainer.style.borderColor = "#206E63";
-      targetContainer.style.backgroundColor = "whitesmoke";
-      targetContainer.style.transition = "background-color 0.3s, border-color 0.3s";
-      draggedItem.style.width = "80%";
-      draggedItem.style.height = "auto";
+    if (isCorrectMatch(draggedItem, dropContainer)) {
+      placeItemCorrectly(draggedItem, dropContainer);
+      dropSound.currentTime = 0;
+      dropSound.play();
     } else {
-      targetContainer.style.borderColor = "#DA1F27";
+      dropContainer.style.borderColor = "#DA1F27";
       originalTouchParent.appendChild(draggedItem);
     }
-
-    checkCompletion();
   } else {
-    // Not dropped on valid location, return to original parent
-    originalTouchParent.appendChild(currentTouchItem);
+    originalTouchParent.appendChild(draggedItem);
   }
 
   currentTouchItem = null;
   originalTouchParent = null;
+
+  checkCompletion();
 }
 
+function fadeOutMusic(audio, duration) {
+  const fadeOutInterval = 50;
+  const fadeOutSteps = duration / fadeOutInterval;
+  let currentVolume = audio.volume;
+  const volumeDecrement = currentVolume / fadeOutSteps;
 
-
-  
-  function fadeOutMusic(audio, duration) {
-    const fadeOutInterval = 50;
-    const fadeOutSteps = duration / fadeOutInterval;
-    let currentVolume = audio.volume;
-    const volumeDecrement = currentVolume / fadeOutSteps;
-  
-    const fadeOut = setInterval(() => {
-      if (currentVolume > 0) {
-        currentVolume -= volumeDecrement;
-        audio.volume = Math.max(0, currentVolume);
-      } else {
-        clearInterval(fadeOut);
-        audio.pause();
-        audio.currentTime = 0;
-      }
-    }, fadeOutInterval);
-  }
-  
-  
-  function showModal() {
-    const modal = new bootstrap.Modal(document.getElementById("gamemodal"));
-    modal.show();
-  }
-  
-  function closeModal() {
-    const modal = bootstrap.Modal.getInstance(document.getElementById("gamemodal"));
-    if (modal) {
-      modal.hide();
+  const fadeOut = setInterval(() => {
+    if (currentVolume > 0) {
+      currentVolume -= volumeDecrement;
+      audio.volume = Math.max(0, currentVolume);
+    } else {
+      clearInterval(fadeOut);
+      audio.pause();
+      audio.currentTime = 0;
     }
+  }, fadeOutInterval);
+}
+
+function showModal() {
+  const modal = new bootstrap.Modal(document.getElementById("gamemodal"));
+  modal.show();
+}
+
+function closeModal() {
+  const modal = bootstrap.Modal.getInstance(document.getElementById("gamemodal"));
+  if (modal) {
+    modal.hide();
   }
-  
+}
+
 
   document.getElementById('credit-link1').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the default anchor link behavior
