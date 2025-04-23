@@ -2885,7 +2885,7 @@ height: auto;
 
   /* Breakpoints for index page*/
 
-  @media (min-width: 700px) and (max-width: 799px) and (orientation: landscape)  {
+  @media (max-width: 700px) {
     #index{
       padding-top: 40px;
     }
@@ -3017,9 +3017,9 @@ height: auto;
     
   }
  
- @media (min-width: 800px) and (max-width: 899px) {
+  @media (max-width: 800px) {
     #index{
-      padding-top: 500px;
+      padding-top: 40px;
     }
     #footer {
       position: fixed;
@@ -3149,9 +3149,9 @@ height: auto;
     
   }
 
-  @media screen and (max-width: 1000px) and (max-height: 500px)  {
+  @media screen and (max-width: 1000px)  {
     #index{
-      padding-top: 30vh;
+      padding-top: 100px;
     }
     #footer {
       position: fixed;
