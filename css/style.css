@@ -3165,7 +3165,7 @@ height: auto;
       height:5%;
     }
     #narrative-style{
-      padding-top: 5vh;
+      padding-top: 15vh;
       width: 60%; 
       overflow: hidden; 
       white-space: nowrap; 
@@ -3192,8 +3192,7 @@ height: auto;
         border-radius: 4px;
       
     }
-
-            #creditmeter {
+       #creditmeter {
         position: fixed;
         top: 60px; /* Distance from the top */
         left: 0; /* Stick to the left */
@@ -3203,7 +3202,7 @@ height: auto;
 
       #factormeter {
         position: fixed;
-        top: 60px; /* Distance from the top */
+        top: 50px; /* Distance from the top */
         right: 18px; /* Stick to the right */
         width: 20%; /* Adjust width */
         z-index: 1000; /* Ensure it’s above other content */
@@ -3214,7 +3213,7 @@ height: auto;
       }
       .credit-score-container {
         position: relative;
-        height: 265px; /* Set a specific height */
+        height: 285px; /* Set a specific height */
         overflow: visible; /* Hide overflow */
         border: 3px solid black;
       }
@@ -3234,7 +3233,7 @@ height: auto;
       }
 
       h1{
-        font-size:medium;
+        font-size:large;
       }
 
       .hovertest{
@@ -3244,7 +3243,7 @@ height: auto;
 
       .my-card2 {
         width: 100%;
-        height: 215px;
+        height: 220px;
         background-position: center;
         padding: 15px;
       }
@@ -3254,18 +3253,18 @@ height: auto;
       }
 
       .circular-progress-container {
-        padding-bottom: 40px;
+        padding-bottom: 50px;
       }
 
       .circular-progress {
-        width: 70px; /* Outer ring size */
-        height: 70px;
+        width: 80px; /* Outer ring size */
+        height: 80px;
         margin-right: 10px; /* Space between the circle and the factor image */
       }
 
       .inner-circle {
-        width: 80%; /* Inner circle size */
-        height: 80%;
+        width: 85%; /* Inner circle size */
+        height: 85%;
         background-color: #FCF8EA; /* Inner circle color */
         border-radius: 50%;
         display: flex;
@@ -3276,7 +3275,7 @@ height: auto;
       }
 
       .factor-up-image {
-        width: 20px; /* Adjust size as needed */
+        width: 22px; /* Adjust size as needed */
         height: auto;
         z-index: 2; /* Make sure it's on top */
         position: relative; /* Ensure it positions beside the circular progress */
@@ -3285,4 +3284,6 @@ height: auto;
         transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
         bottom: 3px;
       }
+    
   }
+  
