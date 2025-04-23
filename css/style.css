@@ -67,7 +67,7 @@ h1 {
 }
 
 .hovertest{
-  padding-top: 20px;
+  padding-top: 30px;
   margin: 5px auto;
 }
 
@@ -536,7 +536,7 @@ h1 {
 
 #creditmeter {
   position: fixed;
-  top: 90px; /* Distance from the top */
+  top: 70px; /* Distance from the top */
   left: 0; /* Stick to the left */
   width: 20%; /* Adjust width */
   z-index: 1000; /* Ensure it’s above other content */
@@ -544,7 +544,7 @@ h1 {
 
 #factormeter {
   position: fixed;
-  top: 60px; /* Distance from the top */
+  top: 50px; /* Distance from the top */
   right: 0; /* Stick to the right */
   width: 20%; /* Adjust width */
   z-index: 1000; /* Ensure it’s above other content */
@@ -936,7 +936,13 @@ h1 {
 }
 
 #title-text{
-  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+#qs-text{
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .hidden-section {
@@ -944,7 +950,6 @@ h1 {
   opacity: 0; /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
   animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
-  padding-top: 20px;
 }
 .visible-section {
  opacity: 0; /* Start hidden */
@@ -2883,7 +2888,7 @@ height: auto;
 }
 
 
-   /* Breakpoints for index page*/
+  /* Breakpoints for index page*/
 
   @media (min-width: 700px) and (max-width: 799px) {
     #index{
@@ -3019,7 +3024,7 @@ height: auto;
  
   @media (min-width: 800px) and (max-width: 899px) {
     #index{
-      padding-top: 40px;
+      padding-top: 50px;
     }
     #footer {
       position: fixed;
@@ -3149,7 +3154,7 @@ height: auto;
     
   }
 
-  @media (min-width: 900px) and (max-width: 1000px) {
+  @media (min-width: 900px) and (max-width: 1500px) {
     #index{
       padding-top: 50px;
     }
