@@ -3248,7 +3248,7 @@ height: auto;
       }
 
       .my-card2:hover {
-        background-size: 100% 230px;
+        background-size: 100% 240px;
       }
 
       .circular-progress-container {
@@ -3262,8 +3262,8 @@ height: auto;
       }
 
       .inner-circle {
-        width: 85%; /* Inner circle size */
-        height: 85%;
+        width: 83%; /* Inner circle size */
+        height: 83%;
         background-color: #FCF8EA; /* Inner circle color */
         border-radius: 50%;
         display: flex;
@@ -3274,7 +3274,7 @@ height: auto;
       }
 
       .factor-up-image {
-        width: 22px; /* Adjust size as needed */
+        width: 24px; /* Adjust size as needed */
         height: auto;
         z-index: 2; /* Make sure it's on top */
         position: relative; /* Ensure it positions beside the circular progress */
