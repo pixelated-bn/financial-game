@@ -1072,7 +1072,7 @@ h1 {
 
 .credit-score-container {
   position: relative;
-  height: 435px; /* Set a specific height */
+  height: 418px; /* Set a specific height */
   overflow: visible; /* Hide overflow */
 }
 
@@ -2949,7 +2949,7 @@ height: auto;
       }
       .credit-score-container {
         position: relative;
-        height: 190px; /* Set a specific height */
+        height: 180px; /* Set a specific height */
         overflow: visible; /* Hide overflow */
       }
       .creditscore-img {
@@ -3081,7 +3081,7 @@ height: auto;
       }
       .credit-score-container {
         position: relative;
-        height: 190px; /* Set a specific height */
+        height: 180px; /* Set a specific height */
         overflow: visible; /* Hide overflow */
       }
       .creditscore-img {
@@ -3213,7 +3213,7 @@ height: auto;
       }
       .credit-score-container {
         position: relative;
-        height: 290px; /* Set a specific height */
+        height: 280px; /* Set a specific height */
         overflow: visible; /* Hide overflow */
       }
       .creditscore-img {
