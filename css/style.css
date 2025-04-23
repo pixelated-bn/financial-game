@@ -2883,9 +2883,9 @@ height: auto;
 }
 
 
-  /* Breakpoints for index page*/
+   /* Breakpoints for index page*/
 
-  @media (max-width: 700px) {
+  @media (min-width: 700px) and (max-width: 799px) {
     #index{
       padding-top: 40px;
     }
@@ -3017,7 +3017,7 @@ height: auto;
     
   }
  
-  @media (max-width: 800px) {
+  @media (min-width: 800px) and (max-width: 899px) {
     #index{
       padding-top: 40px;
     }
@@ -3149,9 +3149,9 @@ height: auto;
     
   }
 
-  @media screen and (max-width: 1000px)  {
+  @media (min-width: 900px) and (max-width: 1000px) {
     #index{
-      padding-top: 100px;
+      padding-top: 50px;
     }
     #footer {
       position: fixed;
