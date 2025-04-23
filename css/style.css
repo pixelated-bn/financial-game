@@ -536,7 +536,7 @@ h1 {
 
 #creditmeter {
   position: fixed;
-  top: 60px; /* Distance from the top */
+  top: 90px; /* Distance from the top */
   left: 0; /* Stick to the left */
   width: 20%; /* Adjust width */
   z-index: 1000; /* Ensure it’s above other content */
@@ -929,6 +929,14 @@ h1 {
 }
 .visible {
   display: block;
+}
+
+#car1, #car2, #car3{
+  padding-bottom: 50px;
+}
+
+#title-text{
+  padding-top: 20px;
 }
 
 .hidden-section {
@@ -2877,7 +2885,7 @@ height: auto;
 
   /* Breakpoints for index page*/
 
-  @media (min-width: 700px) {
+  @media (min-width: 700px) and (max-width: 799px) and (orientation: landscape)  {
     #index{
       padding-top: 40px;
     }
@@ -3009,9 +3017,9 @@ height: auto;
     
   }
  
-  @media (min-width: 800px) {
+  @media (min-width: 800px) and (max-width: 899px) and (orientation: landscape)  {
     #index{
-      padding-top: 50px;
+      padding-top: 500px;
     }
     #footer {
       position: fixed;
@@ -3097,13 +3105,13 @@ height: auto;
 
       .my-card2 {
         width: 90%;
-        height: 160px;
+        height: 148px;
         background-position: center;
         padding: 15px;
       }
 
       .my-card2:hover {
-        background-size: 100% 155px;
+        background-size: 100% 150px;
       }
 
       .circular-progress-container {
@@ -3140,52 +3148,43 @@ height: auto;
       }
     
   }
-  @media screen and (min-height: 400px) and (min-width: 900px) and (orientation: landscape)   {
+
+  @media screen and (max-width: 1000px) and (max-height: 600px)  {
     #index{
-      padding-top: 90px;
+      padding-top: 28vh;
     }
-
-  }
-
-  @media screen and (min-height: 700px) and (min-width: 1000px) and (orientation: landscape)   {
-    #index{
-      padding-top: 200px;
+    #footer {
+      position: fixed;
+      margin-bottom: 8px;
+      width: 100%;
+      height:5%;
     }
     #narrative-style{
-      padding-top: 160px; 
-      width: 50%; 
+      padding-top: 25vh;
+      width: 60%; 
       overflow: hidden; 
       white-space: nowrap; 
-      padding-left: 65px; 
-      padding-right: 60px;
+      padding-left: 20px; 
+      padding-right: 25px;
     }
-
     #typewriter {
-      font-size: 30px;
+      font-size: 22px;
+      
       }
-  }
 
-  @media screen and (min-height: 1000px) and (min-width: 1200px) and (orientation: landscape)   {
-    #index{
-      padding-top: 380px;
-    }
-    #narrative-style{
-      padding-top: 160px; 
-      width: 50%; 
-      overflow: hidden; 
-      white-space: nowrap; 
-      padding-left: 65px; 
-      padding-right: 60px;
-    }
-  }
-
-  @media screen and (min-height: 1300px) and (min-width: 3000px) and (orientation: landscape) {
-    #index {
-      padding-top: 430px;
-    }
-    .start-link {
-     font-size: 10px;
+      .index-button{
+        background-color: #D4C029;    
+        color: white;
+        border: none;
+        padding: 10px 40px 15px 40px;
+        width: 30%;
+        font-size: 18px;
+        font-weight: normal;
+        opacity: 0; /* Initially hidden */
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s, opacity 1s;
+        text-decoration: none;
+        border-radius: 4px;
+      
     }
   }
-  
-  
