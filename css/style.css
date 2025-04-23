@@ -3192,4 +3192,97 @@ height: auto;
         border-radius: 4px;
       
     }
+
+            #creditmeter {
+        position: fixed;
+        top: 60px; /* Distance from the top */
+        left: 0; /* Stick to the left */
+        width: 20%; /* Adjust width */
+        z-index: 1000; /* Ensure it’s above other content */
+      }
+
+      #factormeter {
+        position: fixed;
+        top: 60px; /* Distance from the top */
+        right: 18px; /* Stick to the right */
+        width: 20%; /* Adjust width */
+        z-index: 1000; /* Ensure it’s above other content */
+      }
+
+      #cs-font{
+          font-size: 16px;
+      }
+      .credit-score-container {
+        position: relative;
+        height: 265px; /* Set a specific height */
+        overflow: visible; /* Hide overflow */
+        border: 3px solid black;
+      }
+      .creditscore-img {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        position: relative;
+      }
+
+      .hidden-section {
+        padding-top: 5px;
+      }
+
+      #title-text{
+        font-size: medium;
+      }
+
+      h1{
+        font-size:medium;
+      }
+
+      .hovertest{
+        padding-top: 20px;
+        margin: 0;
+      }
+
+      .my-card2 {
+        width: 100%;
+        height: 215px;
+        background-position: center;
+        padding: 15px;
+      }
+
+      .my-card2:hover {
+        background-size: 100% 205px;
+      }
+
+      .circular-progress-container {
+        padding-bottom: 40px;
+      }
+
+      .circular-progress {
+        width: 70px; /* Outer ring size */
+        height: 70px;
+        margin-right: 10px; /* Space between the circle and the factor image */
+      }
+
+      .inner-circle {
+        width: 80%; /* Inner circle size */
+        height: 80%;
+        background-color: #FCF8EA; /* Inner circle color */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1; /* Ensure it is above the outer ring */
+      }
+
+      .factor-up-image {
+        width: 20px; /* Adjust size as needed */
+        height: auto;
+        z-index: 2; /* Make sure it's on top */
+        position: relative; /* Ensure it positions beside the circular progress */
+        transform: translateX(0px); /* Optional: Adjust position */
+        opacity: 0; /* Start with the image hidden */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
+        bottom: 3px;
+      }
   }
