@@ -3089,7 +3089,7 @@ height: auto;
       }
       
       #info{
-        font-size: 20px;
+        font-size: 25px;
        }
 
       #info-icon{
@@ -3121,7 +3121,7 @@ height: auto;
       }
 
     .info-container2 img {
-          width: 45%;
+          width: 50%;
           height: auto;
           opacity: 0; /* Start hidden */
           transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
@@ -3129,9 +3129,9 @@ height: auto;
         }
         
         .info-container2 .overlay-text {
-          top: 40%; /* Adjust as needed */
+          top: 20%; /* Adjust as needed */
           left: 52%; /* Adjust as needed */
-          right: 13%; /* Adjust as needed */
+          right: 14%; /* Adjust as needed */
           color: black; /* Adjust text color */
           font-weight: normal;
           font-size: 12px;
@@ -3151,7 +3151,7 @@ height: auto;
   background-color: #D4C029;    
   color: white;
   border: none;
-  padding: 6px 10px 8px 10px;
+  padding: 8px 10px 8px 10px;
   width: 13%;
   font-size: 12px;
   cursor: pointer;
