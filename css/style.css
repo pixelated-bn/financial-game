@@ -3069,6 +3069,57 @@ height: auto;
         transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
         bottom: 3px;
       }
+
+              #narration{
+        position: relative; /* Change to relative */
+        width: 100vw;
+        height: 100vh; /* Cover the full viewport height */
+        margin: 0;
+        padding: 0;
+        background-size: contain;
+        padding-left: 100px;
+        padding-top: 30px; 
+      }
+
+      #instruction{
+        width: 70%;
+        height: 70%;
+        display: block;
+      }
+      
+      #info{
+        font-size: 18px;
+       }
+
+      #info-icon{
+        padding-left: 20px;
+      }
+
+      #howto {
+        position: absolute; 
+        top: 80%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        opacity: 0; /* Fully transparent */
+        transition: opacity 0.2s ease-in-out;
+        animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+        display: none;
+       }
+
+       .howto-button {
+        background-color: #D4C029;    
+        color: white;
+        border: none;
+        padding: 6px 10px 8px 10px;
+        width: 13%;
+        font-size: 12px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+
+
     
   }
  
