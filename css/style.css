@@ -3009,9 +3009,6 @@ height: auto;
         position: relative;
       }
 
-      .hidden-section {
-        padding-top: 5px;
-      }
 
       #title-text{
         font-size: small;
@@ -3242,10 +3239,7 @@ height: auto;
         position: relative;
       }
 
-      .hidden-section {
-        padding-top: 5px;
-      }
-
+    
       #title-text{
         font-size: small;
       }
@@ -3372,10 +3366,6 @@ height: auto;
         height: auto;
         opacity: 1;
         position: relative;
-      }
-
-      .hidden-section {
-        padding-top: 5px;
       }
 
       #title-text{
