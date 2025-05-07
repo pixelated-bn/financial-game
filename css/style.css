@@ -545,7 +545,7 @@ h1 {
   top: 0;
   background-color:unset; /* Optional: set a background color */
   z-index: 1000; /* Ensure it stays on top of other content */
-  padding: 1px; /* Optional: add some padding */
+  padding: 5px; /* Optional: add some padding */
   cursor: default;
 }
 
@@ -2988,7 +2988,7 @@ height: auto;
 
       #factormeter {
         position: fixed;
-        top: 8px; /* Distance from the top */
+        top: 4px; /* Distance from the top */
         right: 18px; /* Stick to the right */
         width: 20%; /* Adjust width */
         z-index: 1000; /* Ensure it’s above other content */
@@ -3038,7 +3038,7 @@ height: auto;
       }
 
       .circular-progress-container {
-        padding-bottom: 25px;
+        padding-bottom: 20px;
       }
 
       .circular-progress {
