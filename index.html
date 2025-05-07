@@ -906,7 +906,48 @@ continueButton2.addEventListener('click', function(event) {
  });
  
  
+ document.addEventListener("DOMContentLoaded", () => {
+   const info = document.querySelector("#info");
+   const targets = [document.querySelector("#scenario1"), document.querySelector("#scene1-opt1"),
+   document.querySelector("#scene1-opt2"), document.querySelector("#scene1-opt3"), document.querySelector("#scene1-tips"),
+   document.querySelector("#scenario2"), document.querySelector("#scene2-opt1"),
+   document.querySelector("#scene2-opt1"), document.querySelector("#scene2-opt2"),
+   document.querySelector("#scene2-opt3"), document.querySelector("#scenario2a"),
+   document.querySelector("#scene2a-opt1"), document.querySelector("#scene2a-opt2")];
+ 
+   const observer1 = new IntersectionObserver(
+     (entries) => {
+       let HideInfo = true;
+ 
+       // Check the visibility of each observed element
+       entries.forEach((entry) => {
+         if (entry.isIntersecting) {
+           HideInfo = false;
+         }
+       });
+ 
+       // Toggle the visibility of the sticky-row based on any intersecting element
+       if (HideInfo) {
+         info.style.display = "none";
+       } else {
+         info.style.display = "block";
+       }
+     },
+     { threshold: 0.2 } // Adjust the visibility threshold as needed
+   );
+ 
+   // Observe each target element
+   targets.forEach((target) => {
+     if (target) {
+       observer1.observe(target);
+     }
+   });
+ });
+ 
+ 
+
  </script>
+
 
 
             <!--End of scenario 2a-->
