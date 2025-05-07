@@ -3077,22 +3077,22 @@ height: auto;
         margin: 0;
         padding: 0;
         background-size: contain;
-        padding-left: 100px;
+        padding-left: 180px;
         padding-top: 30px; 
       }
 
       #instruction{
-        width: 70%;
-        height: 70%;
+        width: 80%;
+        height: 80%;
         display: block;
       }
       
       #info{
-        font-size: 18px;
+        font-size: 30px;
        }
 
       #info-icon{
-        padding-left: 20px;
+        padding-left: 80px;
       }
 
       #howto {
