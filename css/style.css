@@ -3098,13 +3098,14 @@ height: auto;
         
       }
 
-         #narration{
+       #narration{
         position: relative; /* Change to relative */
         width: 100vw;
-        height: 80vh; /* Cover the full viewport height */
+        height: 70vh; /* Cover the full viewport height */
         margin: 0;
         padding: 0;
         background-size: contain;
+        padding-top: 10px; 
       }
     
       #howto {
@@ -3122,9 +3123,9 @@ height: auto;
         background-color: #D4C029;    
         color: white;
         border: none;
-        padding: 10px 20px 13px 20px;
-        width: 15%;
-        font-size: 14px;
+        padding: 6px 10px 8px 10px;
+        width: 13%;
+        font-size: 12px;
         cursor: pointer;
         transition: background-color 0.3s, transform 0.3s;
         text-decoration: none;
