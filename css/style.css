@@ -545,7 +545,7 @@ h1 {
   top: 0;
   background-color:unset; /* Optional: set a background color */
   z-index: 1000; /* Ensure it stays on top of other content */
-  padding: 10px; /* Optional: add some padding */
+  padding: 1px; /* Optional: add some padding */
   cursor: default;
 }
 
@@ -3028,13 +3028,13 @@ height: auto;
 
       .my-card2 {
         width: 90%;
-        height: 145px;
+        height: 130px;
         background-position: center;
         padding: 15px;
       }
 
       .my-card2:hover {
-        background-size: 100% 140px;
+        background-size: 100% 125px;
       }
 
       .circular-progress-container {
