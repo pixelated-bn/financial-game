@@ -3077,7 +3077,7 @@ height: auto;
         margin: 0;
         padding: 0;
         background-size: contain;
-        padding-left: 100px;
+        padding-left: 80px;
         padding-top: 30px; 
       }
 
@@ -3097,7 +3097,7 @@ height: auto;
 
       #howto {
         position: absolute; 
-        top: 90%; 
+        top: 83%; 
         left: 50%; 
         transform: translate(-50%, -50%);
         opacity: 0; /* Fully transparent */
