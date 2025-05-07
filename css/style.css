@@ -53,6 +53,16 @@ h1 {
     font-style: normal;
 }
 
+#info{
+ font-size: 40px;
+ color: #206E63;
+}
+
+#info:hover {
+  color:#D4C029; /* Text color on hover */
+  text-decoration: none;
+}
+
 #index{
   padding-top: 180px;
 }
@@ -785,6 +795,34 @@ h1 {
   height:5%;
 }
 
+
+.howto-button {
+  background-color: #D4C029;    
+  color: white;
+  border: none;
+  padding: 10px 30px 13px 30px;
+  width: 20%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.howto-button:hover {
+  background-color: #206E63;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.howto-button:active {
+  background-color: #206E63;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+}
 
 .game-button {
   background-color: #D4C029;    
@@ -3059,6 +3097,40 @@ height: auto;
           border-radius: 4px;
         
       }
+
+         #narration{
+        position: relative; /* Change to relative */
+        width: 100vw;
+        height: 80vh; /* Cover the full viewport height */
+        margin: 0;
+        padding: 0;
+        background-size: contain;
+      }
+    
+      #howto {
+        position: absolute; 
+        top: 90%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        opacity: 0; /* Fully transparent */
+        transition: opacity 0.2s ease-in-out;
+        animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+        display: none;
+       }
+
+       .howto-button {
+        background-color: #D4C029;    
+        color: white;
+        border: none;
+        padding: 10px 20px 13px 20px;
+        width: 15%;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        text-decoration: none;
+        border-radius: 4px;
+      }
+
 
       #creditmeter {
         position: fixed;
