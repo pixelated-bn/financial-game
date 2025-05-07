@@ -9,7 +9,8 @@
 <!-- Bootstrap and CSS -->
         <!--Link for connecting to bootstrap-->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"> 
-
+<!-- Boxicons CDN Link -->
+<link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
         <!--Link to connect to font awesome-->
         <!--Link to connect to CSS-->
         <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
@@ -25,15 +26,40 @@
     </audio>
 
 
-    <div class="container-fluid">
+   <div class="container-fluid">
         <div class="row sticky-row">
           <div class="col-sm-10">
-            <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;"></a>
+            <a class="" href="index2.html" style="text-decoration: none;"><img src="./img/creditlit.png" class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;"></a>
           </div>
+          <div class="col-sm-2" style="padding-left: 180px;"> <a href="" id="" data-toggle="modal" data-target="#info-game" class="start-link">
+            <i class='bx bx-info-circle' id="info"></i></a>
+          </div>
+          
       </div>
+
+
+      <div class="modal fade" id="info-game" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-center" id="exampleModalLongTitle">About Creditlit</h5>
+              <a type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </a>
+            </div>
+            <div class="modal-body">
+              <div class="embed-responsive embed-responsive-16by9">
+                <video class="embed-responsive-item" controls muted>
+                  <source src="./video/about-game.mp4" type="video/mp4">
+                </video>
+              </div>
+              
+            </div>
+          </div>
+        </div>
       </div>
     
-
                 <div id="index" class="visible">
                     <div class="row" style="background: none;">
                         <div class="col-sm-12 text-center" style="padding-right: 50px;">
@@ -60,14 +86,14 @@
                 </div>
 
 
-                <div id="narration" class="hidden text-center">
+                  <div id="narration" class="hidden">
                   <video id="instruction" style="width: 100%; height: 100%; display: block;">
                       <source src="./video/about-game.mp4" type="video/mp4">
                   </video>
                 
                     <!-- Continue button (hidden initially) -->
-  <div id="howto" class="text-center" style="padding-top: 10px;">
-    <a href="#scenario1" id="scenelink1" class="game-button">continue</a>
+  <div id="howto" class="text-center">
+    <a href="#scenario1" id="scenelink1" class="howto-button">continue</a>
 </div>
 </div>
                   
@@ -103,41 +129,32 @@
                   
                     observer_howto.observe(instructionDiv);
                   });
-                  </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-   const stickyRow = document.querySelector(".sticky-row");
-   const targets = [document.querySelector("narration")];
- 
-   const howto_observer = new IntersectionObserver(
-     (entries) => {
-       let shouldHideStickyRow = false;
- 
-       // Check the visibility of each observed element
-       entries.forEach((entry) => {
-         if (entry.isIntersecting) {
-           shouldHideStickyRow = true;
-         }
-       });
- 
-       // Toggle the visibility of the sticky-row based on any intersecting element
-       if (shouldHideStickyRow) {
-         stickyRow.style.display = "none";
-       } else {
-         stickyRow.style.display = "flex"; // Or your desired display value
-       }
-     },
-     { threshold: 0.2 } // Adjust the visibility threshold as needed
-   );
- 
-   // Observe each target element
-   targets.forEach((target) => {
-     if (target) {
-      howto_observer.observe(target);
-     }
-   });
- });
+                  // Sticky row hide/show logic
+       document.addEventListener("DOMContentLoaded", () => {
+                    const stickyRow = document.querySelector(".sticky-row");
+                    const targets = [document.querySelector("#narration")];
+                  
+                    const howto_observer = new IntersectionObserver(
+                      (entries) => {
+                        let shouldHideStickyRow = false;
+                  
+                        entries.forEach((entry) => {
+                          if (entry.isIntersecting) {
+                            shouldHideStickyRow = true;
+                          }
+                        });
+                  
+                        stickyRow.style.display = shouldHideStickyRow ? "none" : "flex";
+                      },
+                      { threshold: 0.2 }
+                    );
+                  
+                    targets.forEach((target) => {
+                      if (target) {
+                        howto_observer.observe(target);
+                      }
+                    });
+                  });
  
  
  </script>
@@ -555,40 +572,6 @@ updateCardClasses();
   });
 
 
-  document.addEventListener("DOMContentLoaded", () => {
-   const stickyRow = document.querySelector(".sticky-row");
-   const targetscar1 = [document.querySelector("#scene2-opt1")];
-               
-                 const observercar1 = new IntersectionObserver(
-                   (entries) => {
-                     let shouldHideStickyRow = false;
-               
-                     // Check the visibility of each observed element
-                     entries.forEach((entry) => {
-                       if (entry.isIntersecting) {
-                         shouldHideStickyRow = true;
-                       }
-                     });
-               
-                     // Toggle the visibility of the sticky-row based on any intersecting element
-                     if (shouldHideStickyRow) {
-                       stickyRow.style.display = "none";
-                     } else {
-                       stickyRow.style.display = "flex"; // Or your desired display value
-                     }
-                   },
-                   { threshold: 0.2 } // Adjust the visibility threshold as needed
-                 );
- 
-   // Observe each target element
-   targetscar1.forEach((target) => {
-     if (target) {
-      observercar1.observe(target);
-     }
-   });
- });
- 
-
 
   </script>
   
@@ -637,41 +620,6 @@ updateCardClasses();
   
     car2.observe(car2Div);
   });
-
-
-  document.addEventListener("DOMContentLoaded", () => {
-   const stickyRow = document.querySelector(".sticky-row");
-   const targetscar2 = [document.querySelector("#scene2-opt2")];
-               
-                 const observercar2 = new IntersectionObserver(
-                   (entries) => {
-                     let shouldHideStickyRow = false;
-               
-                     // Check the visibility of each observed element
-                     entries.forEach((entry) => {
-                       if (entry.isIntersecting) {
-                         shouldHideStickyRow = true;
-                       }
-                     });
-               
-                     // Toggle the visibility of the sticky-row based on any intersecting element
-                     if (shouldHideStickyRow) {
-                       stickyRow.style.display = "none";
-                     } else {
-                       stickyRow.style.display = "flex"; // Or your desired display value
-                     }
-                   },
-                   { threshold: 0.2 } // Adjust the visibility threshold as needed
-                 );
- 
-   // Observe each target element
-   targetscar2.forEach((target) => {
-     if (target) {
-      observercar2.observe(target);
-     }
-   });
- });
- 
 
 
   </script>
@@ -747,40 +695,6 @@ updateCardClasses();
     car3.observe(car3Div);
   });
 
-
-  document.addEventListener("DOMContentLoaded", () => {
-   const stickyRow = document.querySelector(".sticky-row");
-   const targetscar3 = [document.querySelector("#scene2-opt3")];
-               
-                 const observercar3 = new IntersectionObserver(
-                   (entries) => {
-                     let shouldHideStickyRow = false;
-               
-                     // Check the visibility of each observed element
-                     entries.forEach((entry) => {
-                       if (entry.isIntersecting) {
-                         shouldHideStickyRow = true;
-                       }
-                     });
-               
-                     // Toggle the visibility of the sticky-row based on any intersecting element
-                     if (shouldHideStickyRow) {
-                       stickyRow.style.display = "none";
-                     } else {
-                       stickyRow.style.display = "flex"; // Or your desired display value
-                     }
-                   },
-                   { threshold: 0.2 } // Adjust the visibility threshold as needed
-                 );
- 
-   // Observe each target element
-   targetscar3.forEach((target) => {
-     if (target) {
-      observercar3.observe(target);
-     }
-   });
- });
- 
 
 
   </script>
@@ -1066,7 +980,7 @@ continueButton2.addEventListener('click', function(event) {
   </div>
   
   <div class="modal fade" id="aboutgame" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLongTitle">About this game</h5>
@@ -1075,8 +989,12 @@ continueButton2.addEventListener('click', function(event) {
           </a>
         </div>
         <div class="modal-body">
-        Financial awareness game
-  
+          <div class="embed-responsive embed-responsive-16by9">
+            <video class="embed-responsive-item" controls muted>
+              <source src="./video/about-game.mp4" type="video/mp4">
+            </video>
+          </div>
+          
         </div>
       </div>
     </div>
