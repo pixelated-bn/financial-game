@@ -3077,22 +3077,22 @@ height: auto;
         margin: 0;
         padding: 0;
         background-size: contain;
-        padding-left: 180px;
+        padding-left: 150px;
         padding-top: 30px; 
       }
 
       #instruction{
-        width: 80%;
-        height: 80%;
+        width: 90%;
+        height: 90%;
         display: block;
       }
       
       #info{
-        font-size: 30px;
+        font-size: 20px;
        }
 
       #info-icon{
-        padding-left: 80px;
+        padding-left: 60px;
       }
 
       #howto {
@@ -3179,11 +3179,11 @@ height: auto;
       }
       
       #info{
-        font-size: 15px;
+        font-size: 13px;
        }
 
       #info-icon{
-        padding-left: 20px;
+        padding-left: 10px;
       }
 
       #howto {
