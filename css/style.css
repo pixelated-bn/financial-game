@@ -3098,7 +3098,7 @@ height: auto;
 
       #howto {
         position: absolute; 
-        top: 85%; 
+        top: 83%; 
         left: 50%; 
         transform: translate(-50%, -50%);
         opacity: 0; /* Fully transparent */
@@ -3121,7 +3121,7 @@ height: auto;
       }
 
     .info-container2 img {
-          width: 50%;
+          width: 53%;
           height: auto;
           opacity: 0; /* Start hidden */
           transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
@@ -3129,8 +3129,8 @@ height: auto;
         }
         
         .info-container2 .overlay-text {
-          top: 20%; /* Adjust as needed */
-          left: 52%; /* Adjust as needed */
+          top: 28%; /* Adjust as needed */
+          left: 50%; /* Adjust as needed */
           right: 14%; /* Adjust as needed */
           color: black; /* Adjust text color */
           font-weight: normal;
@@ -3143,7 +3143,7 @@ height: auto;
         }
         
       #info-button{
-        padding-top: 10px;
+        padding-top: 20px;
       }
 
             
