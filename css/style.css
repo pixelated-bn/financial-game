@@ -3125,6 +3125,19 @@ height: auto;
   text-decoration: none;
   border-radius: 4px;
 }
+
+         .grid {
+  top: 15%;
+  left: 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
     
   }
  
