@@ -3320,7 +3320,7 @@ height: auto;
     
   }
 
-  @media (min-width: 900px) and (max-width: 1200px) {
+  @media (min-width: 900px) and (max-width: 999px) {
     #index{
       padding-top: 110px;
     }
@@ -3473,6 +3473,17 @@ height: auto;
           height: auto; /* Maintain aspect ratio */
         }
         
-    
+    .grid {
+  top: 10%;
+  left: 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
   }
   
