@@ -3304,6 +3304,19 @@ height: auto;
         transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
         bottom: 3px;
       }
+
+   .grid {
+  top: 15%;
+  left: 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
     
   }
 
