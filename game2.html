@@ -4774,33 +4774,34 @@ function fadeOutAudio(duration) {
 function checkItem1(itemNumber) {
     if (foundCount1 >= maxItems) return;
 
-    // Play the click sound
-    clickSound.currentTime = 0; // Reset the sound to the beginning
-    clickSound.play(); // Play the sound effect
+    // Play click sound
+    clickSound.currentTime = 0;
+    clickSound.play();
 
-    console.log(`Checking item number: ${itemNumber}`);
     const imgElement = document.querySelector(`img[data-item1="${itemNumber}"]`);
 
     if (hiddenItems1[itemNumber]) {
-        console.log(`Found item: ${hiddenItems1[itemNumber]}`);
-        imgElement.src = `${hiddenItems1[itemNumber]}?v=${new Date().getTime()}`; // Cache-busting
         foundCount1++;
 
-        // Disable further clicks on the image
-        imgElement.onclick = null; // Remove the onclick event
+        // Disable further clicks
+        imgElement.onclick = null;
 
-        // Check if 5 items are found and show the result
+        // Change the image and trigger a fade-in (if needed)
+        imgElement.style.opacity = 0; // Set transparent
+        setTimeout(() => {
+            imgElement.src = hiddenItems1[itemNumber];
+            imgElement.onload = () => {
+                imgElement.style.opacity = 1; // Fade in once loaded
+            };
+        }, 50); // Small delay for transition to take effect
+
+        // Show result if max items found
         if (foundCount1 === maxItems) {
             setTimeout(() => {
-              
-        showModal2();
-                //document.getElementById('gameresult').//innerText = 'Good Choice! That was easy!';
-               // document.getElementById('credit-link3').style.//display = 'block'; // Display the button
-                // Call fade out audio over 2 seconds
+                showModal2();
                 fadeOutAudio(2000);
-            }, 200); // 800 milliseconds before showing result
+            }, 700);
         }
-        
     }
 }
 
