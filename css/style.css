@@ -3532,7 +3532,13 @@ height: auto;
 }
 
      #car1, #car2, #car3{
-  padding-bottom: 100px;
+  padding-bottom: 300px;
 }
+
+      #instruction{
+        width: 70%;
+        height: 70%;
+        display: block;
+      }
 
  }
