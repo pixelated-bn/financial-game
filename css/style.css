@@ -2014,19 +2014,23 @@ height: auto;
   font-weight: bold;
 }
 
+#wedding-box {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 100px;
+  padding-left: 100px;
+}
 
 .grid {
-  top: 32%;
-  left: 10%;
   display: grid;
   grid-template-columns: repeat(4, 100px);
-  grid-gap: 10px;
-  position:relative;
-  align-items:center;
-  justify-content:center;
-  transform: translateY(-50%);
-  z-index: 1000;
+  gap: 10px;
+  /* Centering handled by parent */
+  /* Removed top, left, and transform */
 }
+
 .card-game {
   width: 100px;
   height: 130px;
