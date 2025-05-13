@@ -67,16 +67,15 @@ h1 {
   padding-left: 180px;
 }
 
- #info-button{
-        padding-top: 60px;
-      }
+#info-button{
+  padding-top: 60px;
+}
 
 #instruction{
-        width: 100%;
-        height: 100%;
-        display: block;
-      }
-    
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 
 #index{
   padding-top: 180px;
@@ -89,6 +88,14 @@ h1 {
   white-space: nowrap; 
   padding-left: 65px; 
   padding-right: 60px;
+}
+
+#vacation{
+  padding-top: 50px;
+}
+
+#title-items{
+  padding-top: 10px;
 }
 
 .hovertest{
@@ -810,7 +817,6 @@ h1 {
   height:5%;
 }
 
-
 .howto-button {
   background-color: #D4C029;    
   color: white;
@@ -838,6 +844,7 @@ h1 {
   color: #fff;
   text-decoration: none;
 }
+
 
 .game-button {
   background-color: #D4C029;    
@@ -1004,6 +1011,7 @@ h1 {
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
   animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
 }
+
 .visible-section {
  opacity: 0; /* Start hidden */
   transition: opacity 0.2s ease-in-out, background-image 0.5s ease-in-out;
@@ -1125,14 +1133,14 @@ h1 {
 
 .credit-score-container {
   position: relative;
-  height: 418px; /* Set a specific height */
+  height: 435px; /* Set a specific height */
   overflow: visible; /* Hide overflow */
 }
 
 
 .creditscore-img {
   width: 100%;
-  height: 430px;
+  height: 450px;
   opacity: 1;
   position: relative;
 }
@@ -1142,8 +1150,8 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 124%;
-  background: linear-gradient(to bottom, rgba(243, 241, 241, 0.315) 50%, rgba(0, 0, 0, 0) 50%);
+  height: 105%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none; /* Ensure the overlay doesn't interfere with other elements */
   transition: opacity 5s ease-in-out; /* Add a transition for smooth movement */
 }
@@ -1154,7 +1162,7 @@ h1 {
   transform: translateX(-50%); /* Keep it centered relative to the new left position */
   width: 40%; /* Adjust the size as needed */
   height: auto;
-  top: 60%; /* Adjust this value to place the arrow within the container */
+  top: 51%; /* Adjust this value to place the arrow within the container */
   z-index: 10; /* Ensures the arrow stays on top */
   transition: left 0.2s ease, top 0.2s ease; /* Add a transition for smooth movement */
 }
@@ -2001,16 +2009,9 @@ height: auto;
 }
 
 
-#wedding-game {
-  position: relative; /* Change to relative */
-  width: 100vw;
-  height:100vh; 
-  margin: 0;
-  padding: 0;
-}
-
-
 .grid {
+  top: 32%;
+  left: 10%;
   display: grid;
   grid-template-columns: repeat(4, 100px);
   grid-gap: 10px;
@@ -2018,6 +2019,7 @@ height: auto;
   align-items:center;
   justify-content:center;
   transform: translateY(-50%);
+  z-index: 1000;
 }
 .card-game {
   width: 100px;
@@ -2041,6 +2043,11 @@ height: auto;
   object-fit: cover;
   display: none;
 }
+
+.card-game.flipped img {
+  transform: rotateY(180deg); /* Flip the image on the Y-axis */
+}
+
 #message {
   position: absolute;
   bottom: 50%;
@@ -2065,42 +2072,19 @@ height: auto;
   transform: translate(30 -10%);
 }
 .timer {
-  display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  position: absolute;
-  right: 408px;
-  transform: translate(50%, -50%);
   font-size: 40px;
   font-weight: bold;
   color: #206E63;
-  top: 30%;
 }
 .timer .colon {
-  width: 100px; /* Smaller width */
-  height: 55px; /* Fixed height */
-  object-fit: contain; /* Ensure the image fits within the specified dimensions */
-  margin: 0; /* Adjust the margin */
+  width: auto; /* Smaller width */
+  height: 50px; /* Fixed height */
+  margin-right: 10px;
 }
 .score {
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  top: 40%;
-  right: 430px;
-  transform: translate(50%, -50%);
-  background: #22a2f700;
-  padding: 10px;
-  border: 1px solid #2d03c500;
-  border-radius: 5px;
   font-size: 40px;
   font-weight: bolder;
   color: #206E63;
-  background-size: cover;
-  margin: 0 auto;
-  width: 200px;
-  height: 100px;
 }
 
 
@@ -2120,16 +2104,9 @@ height: auto;
   transform: translate(5%, -10%);
 }
 .timer-text-box{
-  display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
-  position: absolute;
-  right: 450px;
-  transform: translate(50%, -50%);
   font-size: 40px;
   font-weight: bold;
   color: #206E63;
-  top: 20%;
 }
 
 #wedding1{
@@ -2149,21 +2126,15 @@ height: auto;
 
 
 #wedding-score1{
-  padding-left: 590px;
   font-size: 42px;
   color: #206E63;
   font-family: 'Geomanist-Bold', sans-serif; /* Use bold font for headings */
   font-weight: bolder; /* Explicitly set the weight */
-  margin-top: 210px;
+      text-align: left;
 }
 
 #wedd-box{
-  padding-left: 280px;
-    text-align: left;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
- 
+  padding-top: 100px;
 }
 
 #weddscore{
@@ -2328,7 +2299,6 @@ height: auto;
     animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
     display: none;
    }
-
 
    #scene2-opt2{
     position: relative; /* Change to relative */
@@ -2769,7 +2739,6 @@ height: auto;
   font-family: 'Geomanist-Bold', sans-serif; /* Use bold font for headings */
   font-weight: bolder; /* Explicitly set the weight */
   font-size: 52px;
-  padding-top: 20px;
 }
 
 #secs{
@@ -2777,7 +2746,6 @@ height: auto;
   font-size: 32px;
   font-family: 'Geomanist-Bold', sans-serif; /* Use bold font for headings */
   font-weight: bolder; /* Explicitly set the weight */
-  padding-top: 30px;
 }
 
 /* Slider Container */
@@ -2939,8 +2907,6 @@ height: auto;
   text-decoration: none;
 
 }
-
-
   /* Breakpoints for index page*/
 
   @media (min-width: 700px) and (max-width: 799px) {
