@@ -3335,7 +3335,7 @@ height: auto;
 
   @media (min-width: 900px) and (max-width: 999px) {
     #index{
-      padding-top: 110px;
+      padding-top: 210px;
     }
     #footer {
       position: fixed;
@@ -3485,7 +3485,23 @@ height: auto;
           width: 10%; /* Set the width relative to the container's width */
           height: auto; /* Maintain aspect ratio */
         }
-        
+
+        .grid {
+  top: 10%;
+  left: 10%;
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-gap: 10px;
+  position:relative;
+  align-items:center;
+  justify-content:center;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+     #car1, #car2, #car3{
+  padding-bottom: 100px;
+}
  
   }
   
