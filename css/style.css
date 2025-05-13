@@ -3473,7 +3473,12 @@ height: auto;
           height: auto; /* Maintain aspect ratio */
         }
         
-    .grid {
+ 
+  }
+  
+ @media (min-width: 1000px) and (max-width: 1100px) {
+
+   .grid {
   top: 10%;
   left: 10%;
   display: grid;
@@ -3485,5 +3490,5 @@ height: auto;
   transform: translateY(-50%);
   z-index: 1000;
 }
-  }
-  
+
+ }
