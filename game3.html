@@ -4764,14 +4764,8 @@ function checkItem1(itemNumber) {
         // Disable further clicks
         imgElement.onclick = null;
 
-        // Change the image and trigger a fade-in (if needed)
-        imgElement.style.opacity = 0; // Set transparent
-        setTimeout(() => {
-            imgElement.src = hiddenItems1[itemNumber];
-            imgElement.onload = () => {
-                imgElement.style.opacity = 1; // Fade in once loaded
-            };
-        }, 5); // Small delay for transition to take effect
+        // Directly change the image source
+        imgElement.src = hiddenItems1[itemNumber];
 
         // Show result if max items found
         if (foundCount1 === maxItems) {
