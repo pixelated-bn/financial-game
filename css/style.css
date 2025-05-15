@@ -3345,7 +3345,7 @@ height: auto;
 
   @media (min-width: 900px) and (max-width: 999px) {
     #index{
-      padding-top: 100px;
+      padding-top: 80px;
     }
     #footer {
       position: fixed;
@@ -3541,10 +3541,5 @@ height: auto;
   padding-bottom: 300px;
 }
 
-      #instruction{
-        width: 70%;
-        height: 70%;
-        display: block;
-      }
 
  }
