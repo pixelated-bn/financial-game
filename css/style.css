@@ -3522,7 +3522,7 @@ height: auto;
   
  @media (min-width: 1000px) and (max-width: 1200px) {
  #index{
-      padding-top: 100px;
+      padding-top: 120px;
     }
       #instruction{
         width: 100%;
@@ -3530,7 +3530,7 @@ height: auto;
         display: block;
       }
       #narrative-style{
-      padding-top: 15vh;
+      padding-top: 30vh;
       width: 70%; 
       overflow: hidden; 
       white-space: nowrap; 
@@ -3576,7 +3576,7 @@ height: auto;
 
       #howto {
     position: absolute; 
-    top: 80%; 
+    top: 90%; 
     left: 50%; 
     transform: translate(-50%, -50%);
     opacity: 0; /* Fully transparent */
