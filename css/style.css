@@ -3345,7 +3345,7 @@ height: auto;
 
   @media (min-width: 900px) and (max-width: 999px) {
     #index{
-      padding-top: 210px;
+      padding-top: 180px;
     }
     #footer {
       position: fixed;
