@@ -3521,7 +3521,9 @@ height: auto;
   }
   
  @media (min-width: 1000px) and (max-width: 1200px) {
-
+ #index{
+      padding-top: 100px;
+    }
    .grid {
   top: 10%;
   left: 10%;
