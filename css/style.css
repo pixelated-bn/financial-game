@@ -3749,8 +3749,8 @@ height: auto;
 
 /* Focused Card */
 .car.focus {
-    width: 153px;
-  height: 228px;
+    width: 160px;
+  height: 230px;
       transform: translateX(0) scale(1.1);
   z-index: 3;
   opacity: 1;
@@ -3762,7 +3762,7 @@ height: auto;
 }
 
 .slider-btn {
-  top: 30%;
+  top: 40%;
 }
 
      .slider-container {
