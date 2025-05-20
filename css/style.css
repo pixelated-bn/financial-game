@@ -3576,7 +3576,7 @@ height: auto;
 
       #howto {
     position: absolute; 
-    top: 85%; 
+    top: 83%; 
     left: 50%; 
     transform: translate(-50%, -50%);
     opacity: 0; /* Fully transparent */
@@ -3585,5 +3585,128 @@ height: auto;
     display: none;
    }
 
+  #info{
+          font-size: 28px;
+         }
+  
+        #info-icon{
+          padding-left: 60px;
+        }
 
+  #creditmeter {
+        position: fixed;
+        top: 60px; /* Distance from the top */
+        left: 0; /* Stick to the left */
+        width: 20%; /* Adjust width */
+        z-index: 1000; /* Ensure it’s above other content */
+      }
+
+      #factormeter {
+        position: fixed;
+        top: 50px; /* Distance from the top */
+        right: 18px; /* Stick to the right */
+        width: 20%; /* Adjust width */
+        z-index: 1000; /* Ensure it’s above other content */
+      }
+
+      #cs-font{
+          font-size: 16px;
+      }
+      .credit-score-container {
+        position: relative;
+        height: 280px; /* Set a specific height */
+        overflow: visible; /* Hide overflow */
+      }
+      .creditscore-img {
+        width: 100%;
+        height: auto;
+        opacity: 1;
+        position: relative;
+      }
+
+      #title-text{
+        font-size: large;
+      }
+
+      h1{
+        font-size:x-large;
+      }
+
+      .hovertest{
+        padding-top: 20px;
+        margin: 0;
+      }
+
+      .my-card2 {
+        width: 100%;
+        height: 250px;
+        background-position: center;
+        padding: 15px;
+      }
+
+      .my-card2:hover {
+        background-size: 100% 240px;
+      }
+
+      .circular-progress-container {
+        padding-bottom: 50px;
+      }
+
+      .circular-progress {
+        width: 80px; /* Outer ring size */
+        height: 80px;
+        margin-right: 10px; /* Space between the circle and the factor image */
+      }
+
+      .inner-circle {
+        width: 83%; /* Inner circle size */
+        height: 83%;
+        background-color: #FCF8EA; /* Inner circle color */
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        z-index: 1; /* Ensure it is above the outer ring */
+      }
+
+      .factor-up-image {
+        width: 24px; /* Adjust size as needed */
+        height: auto;
+        z-index: 2; /* Make sure it's on top */
+        position: relative; /* Ensure it positions beside the circular progress */
+        transform: translateX(0px); /* Optional: Adjust position */
+        opacity: 0; /* Start with the image hidden */
+        transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
+        bottom: 3px;
+      }
+
+          .monument{
+        width:40%;
+        padding-bottom: 8px;
+        padding-right: 4px;
+        height: auto;
+        }
+        #vacation{
+          padding-top: 10px;
+        }
+        .location {
+          width: 150px;
+          height: 42px;
+          padding: 10px;
+        }
+
+        #title-items{
+          padding-top: 5px;
+        }
+        #vacay-box {
+          margin-bottom: 10px; /* Add some space between rows */
+          width: 100%; /* Ensure they take up 100% of their container width */
+        }
+        .imgs {
+          width: 10%; /* Set the width relative to the container's width */
+          height: auto; /* Maintain aspect ratio */
+        }
+
+     
  }
