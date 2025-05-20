@@ -3750,7 +3750,7 @@ height: auto;
 /* Focused Card */
 .car.focus {
     width: 155px;
-  height: 235px;
+  height: 232px;
       transform: translateX(0) scale(1.1);
   z-index: 3;
   opacity: 1;
