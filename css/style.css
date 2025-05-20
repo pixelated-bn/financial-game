@@ -3571,7 +3571,7 @@ height: auto;
 }
 
      #car1, #car2, #car3{
-  padding-bottom: 200px;
+  padding-bottom: 210px;
 }
 
       #howto {
@@ -3590,7 +3590,7 @@ height: auto;
          }
   
         #info-icon{
-          padding-left: 90px;
+          padding-left: 120px;
         }
 
   #creditmeter {
@@ -3709,7 +3709,7 @@ height: auto;
         }
 
       .info-container2 img {
-          width: 57%;
+          width: 64%;
           height: auto;
           opacity: 0; /* Start hidden */
           transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
@@ -3722,7 +3722,7 @@ height: auto;
           right: 14%; /* Adjust as needed */
           color: black; /* Adjust text color */
           font-weight: normal;
-          font-size: 10px;
+          font-size: 12px;
           text-align: center;
           justify-content: center;
           opacity: 0; /* Start hidden */
@@ -3731,24 +3731,25 @@ height: auto;
         }
         
       #info-button{
-        padding-top: 10px;
+        padding-top: 25px;
       }
 
      .car {
-  width: 130px;
-  height: 90%;
+  width: 140px;
+  height: auto;
   background: none;
 }
 
 /* Ensure the image fits within the card */
 .car-image {
-  width: 90%;
+  width: 135px;
   height: auto;
   object-fit: contain; /* Ensures the image covers the card area without distortion */
 }
 
 /* Focused Card */
 .car.focus {
-   background-size: 100% 125px;
+    width: 153px;
+  height: 240px;
 }
  }
