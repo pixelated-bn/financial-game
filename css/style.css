@@ -3749,8 +3749,8 @@ height: auto;
 
 /* Focused Card */
 .car.focus {
-    width: 160px;
-  height: 235px;
+    width: 170px;
+  height: 255px;
       transform: translateX(0) scale(1.1);
   z-index: 3;
   opacity: 1;
