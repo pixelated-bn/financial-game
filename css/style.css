@@ -3571,7 +3571,7 @@ height: auto;
 }
 
      #car1, #car2, #car3{
-  padding-bottom: 210px;
+  padding-bottom: 230px;
 }
 
       #howto {
@@ -3716,8 +3716,8 @@ height: auto;
           animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
         }
         
-        .info-container2 .overlay-text {
-          top: 20%; /* Adjust as needed */
+     .info-container2 .overlay-text {
+          top: 25%; /* Adjust as needed */
           left: 50%; /* Adjust as needed */
           right: 14%; /* Adjust as needed */
           color: black; /* Adjust text color */
@@ -3728,10 +3728,11 @@ height: auto;
           opacity: 0; /* Start hidden */
           transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
           animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+          bottom: 10px;
         }
         
       #info-button{
-        padding-top: 80px;
+        padding-top: 100px;
       }
 
      .car {
@@ -3750,7 +3751,7 @@ height: auto;
 /* Focused Card */
 .car.focus {
     width: 160px;
-  height: 255px;
+  height: 207px;
       transform: translateX(0) scale(1.1);
   z-index: 3;
   opacity: 1;
