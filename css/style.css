@@ -3717,7 +3717,7 @@ height: auto;
         }
         
         .info-container2 .overlay-text {
-          top: 28%; /* Adjust as needed */
+          top: 20%; /* Adjust as needed */
           left: 50%; /* Adjust as needed */
           right: 14%; /* Adjust as needed */
           color: black; /* Adjust text color */
@@ -3731,25 +3731,30 @@ height: auto;
         }
         
       #info-button{
-        padding-top: 25px;
+        padding-top: 5px;
       }
 
      .car {
-  width: 140px;
+  width: 145px;
   height: auto;
   background: none;
 }
 
 /* Ensure the image fits within the card */
 .car-image {
-  width: 135px;
+  width: 140px;
   height: auto;
   object-fit: contain; /* Ensures the image covers the card area without distortion */
 }
 
 /* Focused Card */
 .car.focus {
-    width: 153px;
-  height: 240px;
+    width: 160px;
+  height: 230px;
 }
+
+.slider-btn {
+  top: 30%;
+}
+     
  }
