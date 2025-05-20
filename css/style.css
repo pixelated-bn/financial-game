@@ -3742,15 +3742,15 @@ height: auto;
 
 /* Ensure the image fits within the card */
 .car-image {
-  width: 140px;
+  width: 138px;
   height: auto;
   object-fit: contain; /* Ensures the image covers the card area without distortion */
 }
 
 /* Focused Card */
 .car.focus {
-    width: 170px;
-  height: 255px;
+    width: 160px;
+  height: 240px;
       transform: translateX(0) scale(1.1);
   z-index: 3;
   opacity: 1;
