@@ -3571,7 +3571,7 @@ height: auto;
 }
 
      #car1, #car2, #car3{
-  padding-bottom: 230px;
+  padding-bottom: 240px;
 }
 
       #howto {
@@ -3717,7 +3717,7 @@ height: auto;
         }
         
      .info-container2 .overlay-text {
-          top: 25%; /* Adjust as needed */
+          top: 30%; /* Adjust as needed */
           left: 50%; /* Adjust as needed */
           right: 14%; /* Adjust as needed */
           color: black; /* Adjust text color */
@@ -3728,11 +3728,11 @@ height: auto;
           opacity: 0; /* Start hidden */
           transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
           animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
-          bottom: 10px;
+          bottom: 20px;
         }
         
       #info-button{
-        padding-top: 100px;
+        padding-top: 120px;
       }
 
      .car {
