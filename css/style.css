@@ -3749,8 +3749,8 @@ height: auto;
 
 /* Focused Card */
 .car.focus {
-    width: 170px;
-  height: 230px;
+    width: 150px;
+  height: 220px;
 }
 
 .slider-btn {
@@ -3763,8 +3763,8 @@ height: auto;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  max-width: 780px;
-  height: 360px; /* Adjust the height as needed */
+  max-width: 730px;
+  height: 320px; /* Adjust the height as needed */
   margin: auto;
 }
      
