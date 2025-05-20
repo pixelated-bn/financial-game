@@ -3731,7 +3731,7 @@ height: auto;
         }
         
       #info-button{
-        padding-top: 40px;
+        padding-top: 80px;
       }
 
      .car {
@@ -3749,7 +3749,7 @@ height: auto;
 
 /* Focused Card */
 .car.focus {
-    width: 158px;
+    width: 170px;
   height: 230px;
 }
 
@@ -3763,8 +3763,8 @@ height: auto;
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  max-width: 800px;
-  height: 380px; /* Adjust the height as needed */
+  max-width: 780px;
+  height: 360px; /* Adjust the height as needed */
   margin: auto;
 }
      
