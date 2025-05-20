@@ -3728,11 +3728,10 @@ height: auto;
           opacity: 0; /* Start hidden */
           transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
           animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
-          bottom: 20px;
         }
         
       #info-button{
-        padding-top: 120px;
+        padding-top: 80px;
       }
 
      .car {
@@ -3786,5 +3785,21 @@ height: auto;
   transform: translateX(110px) scale(0.9);
   z-index: 2;
 }
+     #choices-div{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-left: 80px;
+  padding-right: 80px;
+  gap: 5px;
+}
+
+.choice-card {
+  text-decoration: none;
+  color: #206E63; /* Initial text color */
+  font-size: 16px;
+  font-weight: bold;
+}
+   
      
  }
