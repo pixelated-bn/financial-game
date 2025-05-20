@@ -3546,9 +3546,9 @@ height: auto;
         background-color: #D4C029;    
         color: white;
         border: none;
-        padding: 10px 40px 15px 40px;
-        width: 18%;
-        font-size: 18px;
+       padding: 10px 25px 12px 25px;
+ width: 15%;
+  font-size: 14px;
         font-weight: normal;
         opacity: 0; /* Initially hidden */
         cursor: pointer;
@@ -3571,7 +3571,7 @@ height: auto;
 }
 
      #car1, #car2, #car3{
-  padding-bottom: 240px;
+  padding-bottom: 230px;
 }
 
       #howto {
@@ -3716,8 +3716,8 @@ height: auto;
           animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
         }
         
-     .info-container2 .overlay-text {
-          top: 30%; /* Adjust as needed */
+        .info-container2 .overlay-text {
+          top: 25%; /* Adjust as needed */
           left: 50%; /* Adjust as needed */
           right: 14%; /* Adjust as needed */
           color: black; /* Adjust text color */
@@ -3785,7 +3785,8 @@ height: auto;
   transform: translateX(110px) scale(0.9);
   z-index: 2;
 }
-     #choices-div{
+
+#choices-div{
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
@@ -3813,5 +3814,21 @@ height: auto;
   text-decoration: none;
   border-radius: 4px;
 }
+
+ #game1 {
+    top: 75%;
+   }
+
+    #game2 {
+    top: 75%;
+   }
+
+     #game3 {
+    top: 75%;
+   }
+
+    #game4 {
+    top: 75%;
+   }
      
  }
