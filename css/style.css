@@ -3855,6 +3855,36 @@ height: auto;
 #location7 {
   margin-left: 10px;
 }
-    
+
+     #wedding-box {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 460px;
+  padding-left: 10px;
+  padding-right: 80px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  gap: 4px;
+  /* Centering handled by parent */
+  /* Removed top, left, and transform */
+}
+
+.card-game {
+  width: 90px;
+  height: 115px;
+  background: url('../img/wedding/card-cover.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items:center;
+  justify-content:right;
+  font-size: 24px;
+  cursor: pointer;
+  border: 1px solid #D4C029;
+}
      
  }
