@@ -3886,6 +3886,13 @@ height: auto;
   cursor: pointer;
   border: 1px solid #D4C029;
 }
-     
+
+ table {
+  border-collapse: collapse;
+  table-layout: auto; /* Adjust table to fit content width */
+  width: auto; /* Table adjusts to fit its content */
+  margin: 0 auto; /* Center table horizontally */
+  width: 60%; /* Adjust to desired percentage */
+}
      
  }
