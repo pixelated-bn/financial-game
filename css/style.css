@@ -3828,7 +3828,7 @@ height: auto;
    }
 
     #game4 {
-    top: 75%;
+    top: 70%;
    }
 
      .monument {
@@ -3895,14 +3895,55 @@ height: auto;
   width: 60%; /* Adjust to desired percentage */
 }
 
-     .fund1, .fund2, .fund3, .fund4 {
+.fund1, .fund2, .fund3, .fund4 {
   margin: 0 auto;
-  width: 100px; /* Adjust the width as needed */
-  height: 100px; /* Adjust the height as needed */
+  width: 120px; /* Adjust the width as needed */
+  height: 120px; /* Adjust the height as needed */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
  /*  transition: transform 0.1s ease; Smooth transition for scaling */
+}
+
+ #accept-email {
+  padding-top: 420px;
+  padding-left: 590px;
+ }
+
+  #tips10 {
+    position: absolute; 
+    top: 73%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+    display: none;
+   }
+
+    #tips13 {
+    position: absolute; 
+    top: 75%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
+    display: none;
+   }
+
+   #phone-button {
+ padding-top: 250px;
+}
+
+.phone-call {
+  background-image: url('../img/phonecall.png');
+  width: 100%; /* Adjust as needed */
+  height: 60vh; /* Adjust as needed */
+  background-size: contain; /* Adjust as needed (cover, contain, etc.) */
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 60px;
 }
      
  }
