@@ -3688,7 +3688,7 @@ height: auto;
         height: auto;
         }
         #vacation{
-          padding-top: 10px;
+          padding-top: 30px;
         }
         .location {
           width: 150px;
@@ -3893,6 +3893,16 @@ height: auto;
   width: auto; /* Table adjusts to fit its content */
   margin: 0 auto; /* Center table horizontally */
   width: 60%; /* Adjust to desired percentage */
+}
+
+     .fund1, .fund2, .fund3, .fund4 {
+  margin: 0 auto;
+  width: 100px; /* Adjust the width as needed */
+  height: 100px; /* Adjust the height as needed */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ /*  transition: transform 0.1s ease; Smooth transition for scaling */
 }
      
  }
