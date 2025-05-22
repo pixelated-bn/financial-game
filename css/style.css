@@ -2201,14 +2201,14 @@ height: auto;
   margin-bottom: 10px; /* Space between the image and location box */
 }
 
-.japan {
+.japan1 {
   width: 100%; /* Make sure the image takes the full width of its container */
   max-height: 150px; /* Limit the maximum height of the images */
   object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
   margin: 24px; /* Space between the image and location box */
 }
 
-.egypt {
+.egypt1 {
   width: 100%; /* Make sure the image takes the full width of its container */
   max-height: 150px; /* Limit the maximum height of the images */
   object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
@@ -3846,10 +3846,15 @@ height: auto;
 }
 
 .egypt1 {
-  width: 92%; /* Make sure the image takes the full width of its container */
+  width: 95%; /* Make sure the image takes the full width of its container */
   max-height: 150px; /* Limit the maximum height of the images */
   object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 8px; /* Space between the image and location box */
+  margin: 10px; /* Space between the image and location box */
 }
+
+#location7 {
+  margin-left: 10px;
+}
+    
      
  }
