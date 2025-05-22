@@ -3830,5 +3830,26 @@ height: auto;
     #game4 {
     top: 75%;
    }
+
+     .monument {
+  width: 70%; /* Make sure the image takes the full width of its container */
+  max-height: 100px; /* Limit the maximum height of the images */
+  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
+  margin-bottom: 10px; /* Space between the image and location box */
+}
+
+.japan1 {
+  width: 100%; /* Make sure the image takes the full width of its container */
+  max-height: 100px; /* Limit the maximum height of the images */
+  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 14px; /* Space between the image and location box */
+}
+
+.egypt1 {
+  width: 92%; /* Make sure the image takes the full width of its container */
+  max-height: 150px; /* Limit the maximum height of the images */
+  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 8px; /* Space between the image and location box */
+}
      
  }
