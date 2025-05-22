@@ -3856,27 +3856,27 @@ height: auto;
   margin-left: 10px;
 }
 
-     #wedding-box {
+#wedding-box {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 460px;
+  padding-top: 220px;
   padding-left: 10px;
-  padding-right: 80px;
+  padding-right: 20px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 90px);
-  gap: 4px;
+  grid-template-columns: repeat(4, 70px);
+  gap: 3px;
   /* Centering handled by parent */
   /* Removed top, left, and transform */
 }
 
 .card-game {
-  width: 90px;
-  height: 115px;
+  width: 70px;
+  height: 90px;
   background: url('../img/wedding/card-cover.png') no-repeat center center;
   background-size: cover;
   display: flex;
@@ -3886,5 +3886,6 @@ height: auto;
   cursor: pointer;
   border: 1px solid #D4C029;
 }
+     
      
  }
