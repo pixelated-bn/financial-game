@@ -2801,153 +2801,230 @@ document.addEventListener("DOMContentLoaded", function () {
                   -->
 
 
-                  <div id="quiz-game" class="hidden-section">
+                <div id="quiz-game" class="hidden-section">
+<video id="scenario-video4" autoplay muted playsinline style="width: 100%; height: auto; display: block;">
 
-                    <video id="scenario-video4" style="width: 100%; height: auto; display: block;">
-                      <source src="./video/quiz.mp4" type="video/mp4">
-                  </video>
-                
-                  
-                     <!-- Add the audio element here -->
-                     <audio id="game-music" loop>
-                      <source src="./audio/game-music-loop-7-145285.mp3" type="audio/mpeg">
-                      Your browser does not support the audio element.
-                  </audio>
-                  
-                  <div class="row quiz-progress hide" style="padding-top: 30px;">
-                    <div class="col-sm-12" style="padding: 17px;">
-                      <!-- Question Progress Bar -->
-                      <div id="question-progress-container" >
-                        <div></div>
-                        <div id="question-progress-dots">
-                            <!-- These dots will update dynamically -->
-                        </div>
-                    </div>
-                    
-                  </div>
-                  </div>
-                     
-                          
-                      <main class="quiz">
-                          <div id="quiz-start">
-                              <div class="landing" id="start-screen" style="padding-top: 250px;">
+    <source src="./video/quiz.mp4" type="video/mp4">
+  </video>
 
-    <!-- Continue button (hidden initially) -->
-    <div id="game4" class="text-center">
-      <a id="start" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+  <div class="row quiz-progress hide" style="padding-top: 40px;">
+    <div class="col-sm-12" style="padding-top: 10px;">
+      <div id="question-progress-container">
+        <div></div>
+        <div id="question-progress-dots"></div>
+      </div>
+    </div>
   </div>
 
-                              </div>
-                          </div>
-                  
-                  
-                  
-                          <audio id="click-answer" src="./audio/sound-effect.mp3"></audio>
-                  
-                  
-                          <div class="hide" id="questions">
-                              <h2 id="question-words"></h2>
-                              <hr>
-                              <div class="options" id="options"></div>
-                             
-            <!-- Add this inside the #quiz-game div -->
-            <a id="next-btn" class="animated-button1 hide">
-              <br>
-              <div class="vertical-line"></div>
-              <div style="padding-top: 26px;">  <img src="./img/quiz/nextbtn.png"  style="width: 8%; height: auto; display: block; margin: 0 auto;"></div>
-            
-            </a>
-            <div hidden>
-            <h4 id="quiz-end">
-              Quiz Score <span id="score-final" style="margin-left: 400px;"></span>
-            </h4>
+  <main class="quiz">
+    <div id="quiz-start">
+      <div class="landing" id="start-screen" style="padding-top: 250px;">
+        <div id="game4" class="text-center">
+          <a id="start" class="game-button" data-happiness="85" data-focus="70" data-connection="85" data-credit-score="3">continue</a>
+        </div>
+      </div>
+    </div>
+
+    <audio id="click-answer" src="./audio/sound-effect.mp3"></audio>
+
+    <div class="hide" id="questions">
+      <h2 id="question-words"></h2>
+      <hr>
+      <div class="options" id="options"></div>
+
+      <a id="next-btn" class="animated-button1 hide">
+        <br>
+        <div class="vertical-line"></div>
+        <div id="nextbtn-div">
+          <img src="./img/quiz/nextbtn.png" id="quiz-next">
+        </div>
+      </a>
+
+      <div hidden>
+        <h4 id="quiz-end">
+          Quiz Score <span id="score-final" style="margin-left: 400px;"></span>
+        </h4>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+
+    <br><br>
+    <a href="#game-credit4" id="credit-link4" class="game-button hide">continue</a>
+  </main>
+</div>
+
+<div id="game-credit4" class="hidden-section">
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="info-container2 text-center">
+        <img src="./img/narrative.png">
+        <div class="overlay-text">
+          <br><br>
+          Phew! Never knew that's how it is for credit score and how it works. That was a good recap to assist me on financial decision after this!
+          <div class="text-center" id="info-button">
+            <a href="game-end.html" class="game-button">continue</a>
           </div>
-            <div id="feedback" class="feedback hide"></div>
-             </div>
-                  
-                  <br> <br>
-                              <a href="#game-credit4" id="credit-link4" class="game-button hide">continue</a>
-                       
-                      </main>
-                  
-                  
-                  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-                  <script>
-                    document.addEventListener("DOMContentLoaded", function () {
-                        const video = document.getElementById("scenario-video4");
-                        const scenarioDiv = document.getElementById("quiz-game");
-                        const continueBtn = document.getElementById("game4");
-                        const gameLink = document.getElementById("start");
-                    
-                        const observergame4 = new IntersectionObserver(entries => {
-                            entries.forEach(entry => {
-                                if (entry.isIntersecting) {
-                                    video.play(); // Play video when div is visible
-                                    continueBtn.style.display = "none"; // Hide button while playing
-                    
-                                    // Show button when video is about to finish
-                                    video.addEventListener("timeupdate", function () {
-                                        if (video.currentTime >= video.duration - 2) { // 2 seconds before end
-                                            continueBtn.style.display = "block";
-                                        }
-                                    });
-                                } else {
-                                    video.pause(); // Pause video when out of view
-                                    continueBtn.style.display = "none"; // Hide button if video restarts
-                                }
-                            });
-                        }, { threshold: 0.5 });
-                    
-                        observergame4.observe(scenarioDiv);
-                    
-                        // Hide video when "Continue" button is clicked
-                        gameLink.addEventListener("click", function () {
-                            video.style.display = "none";
-                        });
-                    });
-                    </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const video = document.getElementById("scenario-video4");
+  const continueBtn = document.getElementById("game4");
+  const gameLink = document.getElementById("start");
+  const quizStart = document.getElementById("quiz-start");
+  const questionsEl = document.getElementById("questions");
+  const optionsEl = document.getElementById("options");
+  const feedbackEl = document.getElementById("feedback");
+  const nextBtn = document.getElementById("next-btn");
+  const scoreFinal = document.getElementById("score-final");
+  const quizEndMsg = document.getElementById("quiz-end");
+  const creditLink = document.getElementById("credit-link4");
+  const answerSound = document.getElementById("click-answer");
 
-                  
-                  <script>
-                    document.getElementById("start").addEventListener("click", function () {
-                      // Hide the start screen
-                      document.getElementById("quiz-start").classList.add("hide");
-                  
-                      // Show the progress bar and questions section
-                      document.querySelector(".quiz-progress").classList.remove("hide");
-                      document.getElementById("questions").classList.remove("hide");
-                    });
-                  </script>
-                  
-                  
-                  <div id="game-credit4" class="hidden-section" style="padding-top: 20px;">
+  const questions = [
+    {
+      prompt: "1. What is the best way to improve your credit score over time?",
+      options: ["Opening new credit cards regularly", "Paying bills on time and reducing debt", "Applying for mortgage every year", "Earn more credits"],
+      answer: "Paying bills on time and reducing debt",
+      explanation: "Consistently paying your bills on time and reducing outstanding debt are key actions to improve and maintain a healthy credit score."
+    },
+    {
+      prompt: "2. Why is it important to regularly check your credit report?",
+      options: ["To increase your credit score automatically", "To get pre-approved for loans", "To ensure there are no mistakes or fraud affecting your score", "To understand your net worth"],
+      answer: "To ensure there are no mistakes or fraud affecting your score",
+      explanation: "Regularly checking your credit report allows you to spot errors or fraudulent activity that could negatively affect your credit score."
+    },
+    {
+      prompt: "3. Which of the following is the most important factor in determining your credit score?",
+      options: ["Length of credit history", "Types of credit used", "Recent inquiries", "Payment history"],
+      answer: "Payment history",
+      explanation: "Payment history is the most important factor, accounting for 35% of your credit score. Consistently making on-time payments is crucial."
+    },
+    {
+      prompt: "4. Which of the following can help protect your credit score?",
+      options: ["Making timely payments", "Using more than 50% of your credit limit regularly", "Frequently opening new credit cards", "Ignoring your credit report"],
+      answer: "Making timely payments",
+      explanation: "The best way to protect and improve your credit score is to make payments on time. Timely payments have the most significant impact."
+    }
+  ];
 
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="info-container2 text-center">
-                          <img src="./img/narrative.png">
-                          <div class="overlay-text">
+  let currentQuestionIndex = 0;
+  let correctAnswers = 0;
 
-                            <br><br>Phew! Never knew that's how it is for credit score and how it works. That was a good recap to assist me on financial decision after this!
-                  
-                                 <div class="text-center" style="padding-top: 60px;">
-                                  <a href="game-end.html" class="game-button">continue</a>
-                                </div>
-                              </div>
-                              
-                          </div>
-                          </div>
-                        
-                      </div>
-                      
-                      </div>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        video.play();
+        continueBtn.style.display = "none";
+        video.addEventListener("timeupdate", () => {
+          if (video.currentTime >= video.duration - 2) {
+            continueBtn.style.display = "block";
+          }
+        });
+      } else {
+        video.pause();
+        continueBtn.style.display = "none";
+      }
+    });
+  }, { threshold: 0.5 });
 
-                  
-                  
-                  <script>
-                  
-                  
+  observer.observe(document.getElementById("quiz-game"));
+
+  gameLink.addEventListener("click", () => {
+    video.style.display = "none";
+    quizStart.classList.add("hide");
+    questionsEl.classList.remove("hide");
+    document.querySelector(".quiz-progress").classList.remove("hide");
+    showQuestion();
+  });
+
+  function showQuestion() {
+    const q = questions[currentQuestionIndex];
+    document.getElementById("question-words").textContent = q.prompt;
+    optionsEl.innerHTML = "";
+    feedbackEl.classList.add("hide");
+    nextBtn.classList.add("hide");
+
+    q.options.forEach(option => {
+      const btn = document.createElement("button");
+      btn.textContent = option;
+      btn.value = option;
+      btn.onclick = handleAnswer;
+      optionsEl.appendChild(btn);
+    });
+
+    updateProgress();
+  }
+
+  function handleAnswer(e) {
+    const selected = e.target;
+    const q = questions[currentQuestionIndex];
+    feedbackEl.classList.remove("hide");
+   answerSound.currentTime = 0;
+answerSound.play().catch((err) => {
+  console.warn("Sound blocked by autoplay policy:", err);
+});
+
+
+    if (selected.value === q.answer) {
+      feedbackEl.innerHTML = `Correct! <p>${q.explanation}</p>`;
+      feedbackEl.style.color = "#206E63";
+      correctAnswers++;
+    } else {
+      feedbackEl.innerHTML = `Wrong! The correct answer is: <strong>${q.answer}</strong>.<p>${q.explanation}</p>`;
+      feedbackEl.style.color = "#DA1F27";
+    }
+
+    selected.style.backgroundColor = "#206E63";
+    selected.style.color = "#fff";
+    disableOptions();
+    nextBtn.classList.remove("hide");
+
+    if (currentQuestionIndex >= questions.length - 1) {
+      nextBtn.classList.add("hide");
+      endQuiz();
+    }
+  }
+
+  function disableOptions() {
+    optionsEl.querySelectorAll("button").forEach(btn => {
+      btn.disabled = true;
+      btn.style.pointerEvents = "none";
+    });
+  }
+
+  nextBtn.addEventListener("click", () => {
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      showQuestion();
+    } else {
+      endQuiz();
+    }
+  });
+
+  function updateProgress() {
+    const dotsContainer = document.getElementById("question-progress-dots");
+    dotsContainer.innerHTML = "";
+    for (let i = 0; i < questions.length; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      if (i <= currentQuestionIndex) dot.classList.add("active");
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function endQuiz() {
+    quizEndMsg.classList.remove("hide");
+    creditLink.classList.remove("hide");
+    scoreFinal.textContent = correctAnswers;
+  }
+});
+
                     document.addEventListener("DOMContentLoaded", () => {
                      const stickyRow = document.querySelector(".sticky-row");
                      const targets4 = [document.querySelector("#quiz-game")];
@@ -2984,250 +3061,9 @@ document.addEventListener("DOMContentLoaded", function () {
                        }
                      });
                    });
-                   
+                </script>
                   
-                
-document.addEventListener("DOMContentLoaded", () => {
-    let questions = [
-      {
-          prompt: "1. What is the best way to improve your credit score over time?",
-          options: [
-              "Opening new credit cards regularly",
-              "Paying bills on time and reducing debt",
-              "Applying for mortgage every year",
-               "Earn more credits"
-          ],
-          answer: "Paying bills on time and reducing debt",
-          explanation: "Consistently paying your bills on time and reducing outstanding debt are key actions to improve and maintain a healthy credit score"
-      },
-      {
-          prompt: "2. Why is it important to regularly check your credit report?",
-          options: [
-              "To increase your credit score automatically",
-              "To get pre-approved for loans",
-              "To ensure there are no mistakes or fraud affecting your score",
-              "To understand your net worth"
-          ],
-          answer: "To ensure there are no mistakes or fraud affecting your score" ,
-          explanation: "Regularly checking your credit report allows you to spot errors or fraudulent activity that could negatively affect your credit score"
-      },
-      {
-          prompt: "3.	Which of the following is the most important factor in determining your credit score?",
-          options: [
-          "Length of credit history",
-              "Types of credit used",
-              "Recent inquiries",
-              "Payment history"
-          ],
-          answer: "Payment history",
-          explanation: "Payment history is the most important factor, accounting for 35% of your Bureau Credit Score. Consistently making on-time payments is crucial for maintaining a good score."
-      },
-      {
-          prompt: "Which of the following can help protect your credit score?",
-          options: [
-              "Making timely payments",
-              "Using more than 50% of your credit limit regularly",
-              "Frequently opening new credit cards",
-              "Ignoring your credit report"
-          ],
-          answer: "Making timely payments",
-          explanation: "The best way to protect and improve your credit score is to make payments on time. Timely payments have the most significant impact on your score and can keep you from falling into debt."
-      }
-  ]
-  
-      let currentQuestionIndex = 0;
-      let correctAnswers = 0;
-      let totalQuestions = questions.length;
-      //let time = 50;
-      //let timerId;
-      
-      let questionsEl = document.querySelector("#questions");
-  let timerEl = document.querySelector("#timer");
-  let choicesEl = document.querySelector("#options");
-  let submitBtn = document.querySelector("#work-link6");
-  let startBtn = document.querySelector("#start");
-  let nameEl = document.querySelector("#name");
-  let feedbackEl = document.querySelector("#feedback");
-  let nextBtn = document.querySelector("#next-btn"); // Next button reference
-  
-      // Start the quiz
-  
-  document.querySelector("#start").onclick = function() {
-      // Start the timer with the clockTick function running every 1000ms (1 second)
-      //timerId = setInterval(clockTick, 1000);  // Timer tick every second (1000ms)
-      
-      // Display the initial time
-      //timerEl.textContent = time;
-  
-      // Hide the start screen and show the question screen
-      document.getElementById("start-screen").classList.add("hide");
-      questionsEl.classList.remove("hide");
-      
-      // Get the first question
-      getQuestion();
-  };
-  
-      // Load the current question
-      function getQuestion() {
-          let currentQuestion = questions[currentQuestionIndex];
-          document.getElementById("question-words").textContent = currentQuestion.prompt;
-          choicesEl.innerHTML = "";
-          currentQuestion.options.forEach(function(choice) {
-              let choiceBtn = document.createElement("button");
-              choiceBtn.value = choice;
-              choiceBtn.textContent = choice;
-              choiceBtn.onclick = questionClick;
-              choicesEl.appendChild(choiceBtn);
-          });
-          nextBtn.classList.add("hide"); // Hide next button initially
-  
-   // Update question progress bar
-   updateQuestionProgress();
-  
-      }
-  
-      const ansSound = document.getElementById('click-answer');
-  
-     // Handle question click
-     function questionClick() {
-      // Display feedback
-      feedbackEl.classList.remove("hide");
-  
-      ansSound.currentTime = 0; // Reset the sound to the beginning
-      ansSound.play(); // Play the answer clicking effect
-  
-      // Change the background color of the clicked option to green
-      this.style.backgroundColor = "#206E63";
-      this.style.color = "#ffffff"; 
-  
-      // Check if the clicked option is correct or not
-      if (this.value === questions[currentQuestionIndex].answer) {
-        feedbackEl.innerHTML = `Correct! <p> ${questions[currentQuestionIndex].explanation}.</p>`;
-        feedbackEl.style.color = "#206E63";
-feedbackEl.style.textAlign = "left"; // Aligns text to the left
-console.log("Correct Answers: " + correctAnswers); // Debugging step
 
-      } else {
-        feedbackEl.innerHTML = `Wrong! The answer is: ${questions[currentQuestionIndex].answer}.<br><p> ${questions[currentQuestionIndex].explanation}.</p>`;
-          feedbackEl.style.color = "#DA1F27";
-          feedbackEl.style.textAlign = "left"; // Aligns text to the left
-      }
-  
-      // Show next button
-      nextBtn.classList.remove("hide");
-  
-      // Disable options after answer is clicked
-      disableOptions();
-  
-      // Check if all questions have been answered
-      if (currentQuestionIndex >= questions.length - 1) {
-          // If this is the last question, hide the next button and end the quiz
-          nextBtn.classList.add("hide");
-          quizEnd();
-      }
-  }
-  
-  function disableOptions() {
-      // Disable all options to prevent further clicks after answering
-      const allOptions = document.querySelectorAll("#options button");
-      allOptions.forEach(option => {
-          option.disabled = true;
-          option.style.pointerEvents = "none"; // Make the buttons unclickable
-      });
-  }
-  
-  // Move to the next question
-  nextBtn.onclick = function() {
-      currentQuestionIndex++;
-      if (currentQuestionIndex < questions.length) {
-          getQuestion();
-          nextBtn.classList.add("hide");
-          feedbackEl.classList.add("hide");
-      } else {
-          quizEnd(); // Ensure quiz ends immediately when last question is answered
-      }
-  };
-  
-     // Update question progress
-     function updateQuestionProgress() {
-      let progressDots = document.getElementById("question-progress-dots");
-      progressDots.innerHTML = ""; // Clear any existing dots
-  
-      for (let i = 0; i < totalQuestions; i++) {
-          let dot = document.createElement("div");
-          dot.classList.add("dot");
-  
-          // Highlight active dots
-          if (i <= currentQuestionIndex) {
-              dot.classList.add("active");
-          }
-  
-          progressDots.appendChild(dot);
-      }
-  }
-  
-  /*
-  // Timer function
-  function clockTick() {
-      // Decrease the time by 1 each tick
-      time--;
-      timerEl.textContent = time;  // Update the timer display
-  
-      // If the time is up, end the quiz
-      if (time <= 0) {
-        nextBtn.classList.add("hide");
-          quizEnd();
-      }
-  }
-  */
-  
-  // End the quiz
-  function quizEnd() {
-  
-    const backgroundMusic = document.getElementById("game-music");
-    fadeOutMusic(backgroundMusic, 2000); // Fade out over 2 
-  
-      //clearInterval(timerId); // Stop the timer
-      //console.log("Quiz has ended");
-  
-      // Alert the user with the final score
-      //alert(`Quiz Over! You got ${correctAnswers} out of ${questions.length} correct.`);
-  
-      // Show the final score and quiz end message
-      document.getElementById("quiz-end").classList.remove("hide");
-      document.getElementById("credit-link4").classList.remove("hide");
-  
-      // Debugging step: Check the final score
-      console.log("Final score: " + correctAnswers);
-  
-      // Update the score
-      document.getElementById("score-final").textContent = correctAnswers; // Show score based on correct answers
-  }
-  
-  
-  function fadeOutMusic(audio, duration) {
-      const fadeOutInterval = 50;
-      const fadeOutSteps = duration / fadeOutInterval;
-      let currentVolume = audio.volume;
-      const volumeDecrement = currentVolume / fadeOutSteps;
-    
-      const fadeOut = setInterval(() => {
-        if (currentVolume > 0) {
-          currentVolume -= volumeDecrement;
-          audio.volume = Math.max(0, currentVolume);
-        } else {
-          clearInterval(fadeOut);
-          audio.pause();
-          audio.currentTime = 0;
-        }
-      }, fadeOutInterval);
-    }
-  
-  
-  });
-                  </script>
-                  
-                  
 
                 <!--End of scenario 16-->
 
