@@ -1557,7 +1557,9 @@ button:hover {
      color: #fff;
      border-top: 2px dashed #7a797a;
      justify-content: flex-end;
+  text-align: left;
  }
+
 
  ol {
      padding-left: 15px;
@@ -1947,10 +1949,22 @@ height: auto;
   border-color: #206E63;
 }
 
+#quiz-next{
+  width: 7%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#nextbtn-div{
+  padding-top: 26px;
+}
+
 #question-words{
   color: #206E63;
   font-weight: bold;
   font-size: 24px;
+  text-align: left;
 }
 
 .vertical-line {
@@ -3945,5 +3959,81 @@ height: auto;
   background-repeat: no-repeat;
   margin-top: 60px;
 }
+
+     #question-words{
+  color: #206E63;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+ .options {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto new lines */
+  justify-content: center; /* Centers the items horizontally */
+  align-items: flex-start; /* Aligns items to the top of the container */
+  gap: 20px; /* Optional: Adds spacing between the options */
+}
+
+.options button {
+  width: 470px; /* Set a fixed width for buttons */
+  height: 65px; /* Set a fixed height for buttons */
+  margin: 1px;
+}
+
+.vertical-line {
+  position: absolute;
+  top: 320px; /* Adjust this value to control the distance from the top */
+  left: 50%;
+  width: 1px; /* Line thickness */
+  height: 24px; /* Line height */
+  background-color: #206E63; /* Line color */
+  transform: translateX(-50%); /* Center the line horizontally */
+}
+
+
+
+.options .option-top {
+  flex: 1 1 5%; /* This makes the top options take up 45% of the width, adjust as needed */
+}
+
+.options .option-bottom {
+  flex: 1 1 60%; /* The same for bottom options */
+}
+
+button {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+  color: #206E63;
+  font-weight: bold;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #206E63;
+  padding: 20px;
+  width: 80%;
+}
+
+#quiz-next{
+  width: 5%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#nextbtn-div{
+  padding-top: 10px;
+}
+
+.feedback {
+     font-style: bold;
+     font-size: 100%;
+     margin-top: 20px;
+     padding-top: 15px;
+     color: #fff;
+     border-top: 2px dashed #7a797a;
+     justify-content: flex-end;
+  text-align: left;
+ }
+
      
  }
