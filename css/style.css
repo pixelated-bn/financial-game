@@ -1,122 +1,146 @@
-html, body{
-    margin: 0;
-    padding: 0;
-    overflow: hidden; /* Prevent scrolling */
-    width: 100%; /* Ensure full width */
-    height: 100%; /* Ensure full height */
-    background-image: url('../img/background.png');
-    scroll-behavior: smooth;
-    background-size: cover; /* Default to cover */
-    background-position:center;
-    background-repeat: no-repeat;
-    font-family: 'Geomanist-Regular', sans-serif; /* Default font for the body */
-  }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* Prevent scrolling */
+  width: 100%;
+  /* Ensure full width */
+  height: 100%;
+  /* Ensure full height */
+  background-image: url('../img/background.png');
+  scroll-behavior: smooth;
+  background-size: cover;
+  /* Default to cover */
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Geomanist-Regular', sans-serif;
+  /* Default font for the body */
+}
 
-  @font-face {
-    font-family: 'Geomanist-Black'; /* Name of the font */
-    src: url('./fonts/Geomanist-Black.otf') format('opentype'); /* Format should be 'opentype' for .otf files */
-    font-weight: normal; /* Define the weight for this font file */
-    font-style: normal; /* Define the style for this font file */
+@font-face {
+  font-family: 'Geomanist-Black';
+  /* Name of the font */
+  src: url('./fonts/Geomanist-Black.otf') format('opentype');
+  /* Format should be 'opentype' for .otf files */
+  font-weight: normal;
+  /* Define the weight for this font file */
+  font-style: normal;
+  /* Define the style for this font file */
 }
 
 
 @font-face {
-  font-family: 'Geomanist-Regular'; /* Name of the font */
-  src: url('./fonts/Geomanist-Regular.otf') format('opentype'); /* Format should be 'opentype' for .otf files */
+  font-family: 'Geomanist-Regular';
+  /* Name of the font */
+  src: url('./fonts/Geomanist-Regular.otf') format('opentype');
+  /* Format should be 'opentype' for .otf files */
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geomanist-Bold'; /* Name of the font */
-  src: url('./fonts/Geomanist-Bold.otf') format('opentype'); /* Format should be 'opentype' for .otf files */
+  font-family: 'Geomanist-Bold';
+  /* Name of the font */
+  src: url('./fonts/Geomanist-Bold.otf') format('opentype');
+  /* Format should be 'opentype' for .otf files */
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Geomanist-Regular-Italic'; /* Name of the font */
-  src: url('./fonts/Geomanist-Regular-Italic.otf') format('opentype'); /* Format should be 'opentype' for .otf files */
+  font-family: 'Geomanist-Regular-Italic';
+  /* Name of the font */
+  src: url('./fonts/Geomanist-Regular-Italic.otf') format('opentype');
+  /* Format should be 'opentype' for .otf files */
   font-weight: normal;
   font-style: italic;
 }
 
 h1 {
-  font-family: 'Geomanist-Bold', sans-serif; /* Use bold font for headings */
-  font-weight: bolder; /* Explicitly set the weight */
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
 }
 
-#cs-font{
-  font-family: 'Geomanist-Bold'; /* Name of the font */
-    src: url('./fonts/Geomanist-Bold.otf') format('opentype'); /* Format should be 'opentype' for .otf files */
-    font-weight: bold;
-    font-style: normal;
+#cs-font {
+  font-family: 'Geomanist-Bold';
+  /* Name of the font */
+  src: url('./fonts/Geomanist-Bold.otf') format('opentype');
+  /* Format should be 'opentype' for .otf files */
+  font-weight: bold;
+  font-style: normal;
 }
 
-#info{
- font-size: 40px;
- color: #206E63;
+#info {
+  font-size: 40px;
+  color: #206E63;
 }
 
 #info:hover {
-  color:#D4C029; /* Text color on hover */
+  color: #D4C029;
+  /* Text color on hover */
   text-decoration: none;
 }
 
-#info-icon{
+#info-icon {
   padding-left: 180px;
 }
 
-#info-button{
+#info-button {
   padding-top: 60px;
 }
 
-#instruction{
+#instruction {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-#car-video1, #car-video2, #car-video3{
+#car-video1,
+#car-video2,
+#car-video3 {
   width: 100%;
   height: 97%;
   display: block;
 }
 
-#index{
+#index {
   padding-top: 180px;
 }
 
-#narrative-style{
-  padding-top: 160px; 
-  width: 50%; 
-  overflow: hidden; 
-  white-space: nowrap; 
-  padding-left: 65px; 
+#narrative-style {
+  padding-top: 160px;
+  width: 50%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-left: 65px;
   padding-right: 60px;
 }
 
-#vacation{
-  padding-top: 50px;
+#vacation {
+  padding-top: 40px;
 }
 
-#title-items{
+#title-items {
   padding-top: 10px;
 }
 
-.hovertest{
+.hovertest {
   padding-top: 30px;
   margin: 5px auto;
 }
 
-  #end {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-image: url('../img/gameend.png');
-    background-size: cover; /* Default to cover */
-    background-position:center;
-    background-repeat: no-repeat;
+#end {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: url('../img/gameend.png');
+  background-size: cover;
+  /* Default to cover */
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #gameover {
@@ -124,120 +148,138 @@ h1 {
   padding: 0;
   height: 100%;
   background-image: url('../img/gameover.png');
-  background-size: cover; /* Default to cover */
-  background-position:center;
+  background-size: cover;
+  /* Default to cover */
+  background-position: center;
   background-repeat: no-repeat;
 }
 
-  #title {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    background: none;
-  }
+#title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  background: none;
+}
 
-  #mainbtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
-    background: none;
-  }
+#mainbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+  background: none;
+}
 
-  #history{
-    position: relative; /* Position the text relative to this container */
-    background-image: url(../img/history.png);
-    background-size: cover; /* Optional: to cover the container with the background image */
-    background-position: center; /* Optional: to center the background image */
-    width: auto;
-    height: auto;
-    color: white; /* Text color */
-    padding-left: 45px;
-    padding-top: 7px;
-  }
+#history {
+  position: relative;
+  /* Position the text relative to this container */
+  background-image: url(../img/history.png);
+  background-size: cover;
+  /* Optional: to cover the container with the background image */
+  background-position: center;
+  /* Optional: to center the background image */
+  width: auto;
+  height: auto;
+  color: white;
+  /* Text color */
+  padding-left: 45px;
+  padding-top: 7px;
+}
 
-  .index-hover {
-    text-decoration: none;
-    color: #D4C029;
-    font-weight: bolder;
-  }
+.index-hover {
+  text-decoration: none;
+  color: #D4C029;
+  font-weight: bolder;
+}
 
-  /* CSS for the text when hovered */
-  .index-hover:hover {
-    color: #206E63; /* Text color on hover */
-    text-decoration: none;
-  }
+/* CSS for the text when hovered */
+.index-hover:hover {
+  color: #206E63;
+  /* Text color on hover */
+  text-decoration: none;
+}
 
-  .hover-text {
-    vertical-align: middle;
-    font-size: 26px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #ffffff; /* Default text color */
-  }
+.hover-text {
+  vertical-align: middle;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+  /* Default text color */
+}
 
-  /* CSS for the text when hovered */
-  .hover-text:hover {
-    color: #88C9ED; /* Text color on hover */
-    text-decoration: none;
-  }
+/* CSS for the text when hovered */
+.hover-text:hover {
+  color: #88C9ED;
+  /* Text color on hover */
+  text-decoration: none;
+}
 
-  .overlay-text {
-    position: absolute;
-    top: 9%; /* Position the text at the vertical center */
-    left: 30%; /* Position the text at the horizontal center */
-    transform: translate(-50%, -50%); /* Center the text both horizontally and vertically */
-    color: white; /* Text color */
-    padding-top: 120px;
-  }
-
-
-  .header-text {
-    position: absolute;
-    top: 6%; /* Position the text at the vertical center */
-    left: 5%; /* Position the text at the horizontal center */
-    color: white; /* Text color */
-  }
+.overlay-text {
+  position: absolute;
+  top: 10%;
+  /* Position the text at the vertical center */
+  left: 30%;
+  /* Position the text at the horizontal center */
+  transform: translate(-50%, -50%);
+  /* Center the text both horizontally and vertically */
+  color: white;
+  /* Text color */
+  padding-top: 170px;
+}
 
 
-  .circular-progress-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start; /* Align items horizontally */
-    position: relative;
-    padding-bottom: 80px;
-  }
-  
-  .circular-progress {
-    width: 100px; /* Outer ring size */
-    height: 100px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 10px; /* Space between the circle and the factor image */
-  }
+.header-text {
+  position: absolute;
+  top: 6%;
+  /* Position the text at the vertical center */
+  left: 5%;
+  /* Position the text at the horizontal center */
+  color: white;
+  /* Text color */
+}
 
-  
-  .circular-progress:hover .tooltip,
-  .circular-progress-container.touch .tooltip {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(0.9);
-  }
 
-  .credit-score-container:hover .tooltip2,
-  .credit-score-container.touch .tooltip2 {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(0.9);
-  }
+.circular-progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* Align items horizontally */
+  position: relative;
+  padding-bottom: 80px;
+}
 
-  .tooltip2 {
-    position:absolute;
+.circular-progress {
+  width: 100px;
+  /* Outer ring size */
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  /* Space between the circle and the factor image */
+}
+
+
+.circular-progress:hover .tooltip,
+.circular-progress-container.touch .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(0.9);
+}
+
+.credit-score-container:hover .tooltip2,
+.credit-score-container.touch .tooltip2 {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(0.9);
+}
+
+.tooltip2 {
+  position: absolute;
   top: 20px;
- left: calc(100% + 1px);
+  left: calc(100% + 1px);
   z-index: 3;
   background: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -249,10 +291,10 @@ h1 {
   white-space: nowrap;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
-  }
+}
 
-  .tooltip {
-    position:absolute;
+.tooltip {
+  position: absolute;
   top: 12px;
   right: calc(100% + 5px);
   z-index: 3;
@@ -266,68 +308,78 @@ h1 {
   white-space: nowrap;
   visibility: hidden;
   transition: opacity 0.3s, visibility 0.3s;
-  }
+}
 
-  .tooltip-arrow {
-    border-top-color: #000000; /* Change arrow color */
-  }
-  
-  .inner-circle {
-    width: 80%; /* Inner circle size */
-    height: 80%;
-    background-color: #FCF8EA; /* Inner circle color */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1; /* Ensure it is above the outer ring */
-  }
-  
-  .percentage {
-    font-size: 22px;
-    font-weight: bold;
-    color: white; /* Text color */
-    vertical-align: middle;
-    line-height: 60%;
-  }
-  
-  .outer-ring {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 0; /* Ensure it is below the inner circle */
-  }
-  
+.tooltip-arrow {
+  border-top-color: #000000;
+  /* Change arrow color */
+}
+
+.inner-circle {
+  width: 80%;
+  /* Inner circle size */
+  height: 80%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
 
 
-  .my-card {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 390px;
-    background-position: center;
-    /*background-color: transparent !important;*/
-    background-color: #ffffff;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
+
+.my-card {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 390px;
+  background-position: center;
+  /*background-color: transparent !important;*/
+  background-color: #ffffff;
+  opacity: 0;
+  /* Start hidden */
+  transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
 
 
 .my-card .card-content {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
 .my-card:hover {
   background-image: url('../img/cardhover.png');
   background-size: 100% 390px;
   background-position: center;
-  transform: scale(0.95) !important; /* Ensure the scale change on hover is applied */
-  transition: transform 0.5s ease-in-out; /* Apply transition specifically to transform on hover */
+  transform: scale(0.95) !important;
+  /* Ensure the scale change on hover is applied */
+  transition: transform 0.5s ease-in-out;
+  /* Apply transition specifically to transform on hover */
 }
 
 
@@ -340,9 +392,11 @@ h1 {
   padding: 15px;
   /*background-color: transparent !important;*/
   background-color: #FCF8EA;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);
 }
 
@@ -350,6 +404,7 @@ h1 {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -359,8 +414,10 @@ h1 {
   background-image: url('../img/cardhover.png');
   background-size: 100% 317px;
   background-position: center;
-  transform: scale(0.95) !important; /* Ensure the scale change on hover is applied */
-  transition: transform 0.5s ease-in-out; /* Apply transition specifically to transform on hover */
+  transform: scale(0.95) !important;
+  /* Ensure the scale change on hover is applied */
+  transition: transform 0.5s ease-in-out;
+  /* Apply transition specifically to transform on hover */
 }
 
 .my-card2 ::before {
@@ -406,7 +463,7 @@ h1 {
 */
 
 .selection-card {
-  position:relative;
+  position: relative;
   width: 60%;
   margin: 0 auto;
   transition: background-image 0.5s ease-in-out;
@@ -415,9 +472,9 @@ h1 {
 
 .selection-card:hover {
   background-image: url('../img/selectionhover.png');
-  background-size:100%;
-  background-position:center;
-  height:50%;
+  background-size: 100%;
+  background-position: center;
+  height: 50%;
 }
 
 /*
@@ -437,7 +494,7 @@ h1 {
 */
 
 .cf-card1 {
-  position:relative;
+  position: relative;
   width: 55%;
   margin: 0 auto;
   transition: background-image 0.5s ease-in-out;
@@ -445,12 +502,13 @@ h1 {
 }
 
 .cf-card1:hover {
-  content: url('../img/cf-yellow1.png'); /* Change this path to your hover image */
+  content: url('../img/cf-yellow1.png');
+  /* Change this path to your hover image */
   transform: scale(1.06);
 }
 
 .cf-card2 {
-  position:relative;
+  position: relative;
   width: 55%;
   margin: 0 auto;
   transition: background-image 0.5s ease-in-out;
@@ -458,12 +516,13 @@ h1 {
 }
 
 .cf-card2:hover {
-  content: url('../img/cf-yellow2.png'); /* Change this path to your hover image */
+  content: url('../img/cf-yellow2.png');
+  /* Change this path to your hover image */
   transform: scale(1.06);
 }
 
 .cf-card3 {
-  position:relative;
+  position: relative;
   width: 55%;
   margin: 0 auto;
   transition: background-image 0.5s ease-in-out;
@@ -471,13 +530,14 @@ h1 {
 }
 
 .cf-card3:hover {
-  content: url('../img/cf-yellow3.png'); /* Change this path to your hover image */
+  content: url('../img/cf-yellow3.png');
+  /* Change this path to your hover image */
   transform: scale(1.06);
 }
 
 
 .limit1 {
-  position:relative;
+  position: relative;
   width: 55%;
   margin: 0 auto;
   transition: background-image 0.5s ease-in-out;
@@ -485,12 +545,13 @@ h1 {
 }
 
 .limit1:hover {
-  content: url('../img/limit-yellow1.png'); /* Change this path to your hover image */
+  content: url('../img/limit-yellow1.png');
+  /* Change this path to your hover image */
   transform: scale(1.06);
 }
 
 .limit2 {
-  position:relative;
+  position: relative;
   width: 55%;
   margin: 0 auto;
   transition: background-image 0.5s ease-in-out;
@@ -498,7 +559,8 @@ h1 {
 }
 
 .limit2:hover {
-  content: url('../img/limit-yellow2.png'); /* Change this path to your hover image */
+  content: url('../img/limit-yellow2.png');
+  /* Change this path to your hover image */
   transform: scale(1.06);
 }
 
@@ -508,14 +570,19 @@ h1 {
   transition: background-image 0.5s ease-in-out;
 }
 
-.fund1, .fund2, .fund3, .fund4 {
+.fund1,
+.fund2,
+.fund3,
+.fund4 {
   margin: 0 auto;
-  width: 180px; /* Adjust the width as needed */
-  height: 180px; /* Adjust the height as needed */
+  width: 180px;
+  /* Adjust the width as needed */
+  height: 180px;
+  /* Adjust the height as needed */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
- /*  transition: transform 0.1s ease; Smooth transition for scaling */
+  /*  transition: transform 0.1s ease; Smooth transition for scaling */
 }
 
 .fund1 {
@@ -537,59 +604,76 @@ h1 {
 /* Hover effects */
 .fund1:hover {
   background-image: url('../img/fund-yellow1.png');
-  transform: scale(1.05); /* Slightly scale up without affecting layout */
+  transform: scale(1.05);
+  /* Slightly scale up without affecting layout */
 }
 
 .fund2:hover {
   background-image: url('../img/fund-yellow2.png');
-  transform: scale(1.05); /* Slightly scale up without affecting layout */
+  transform: scale(1.05);
+  /* Slightly scale up without affecting layout */
 }
 
 .fund3:hover {
   background-image: url('../img/fund-yellow3.png');
-  transform: scale(1.05); /* Slightly scale up without affecting layout */
+  transform: scale(1.05);
+  /* Slightly scale up without affecting layout */
 }
 
 .fund4:hover {
   background-image: url('../img/fund-yellow4.png');
-  transform: scale(1.05); /* Slightly scale up without affecting layout */
+  transform: scale(1.05);
+  /* Slightly scale up without affecting layout */
 }
 
 
 .sticky-row {
-  position: -webkit-sticky; /* For Safari */
+  position: -webkit-sticky;
+  /* For Safari */
   position: sticky;
   top: 0;
-  background-color:unset; /* Optional: set a background color */
-  z-index: 1000; /* Ensure it stays on top of other content */
-  padding: 5px; /* Optional: add some padding */
+  background-color: unset;
+  /* Optional: set a background color */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
+  padding: 5px;
+  /* Optional: add some padding */
   cursor: default;
 }
 
 .sticky-col {
-  position: fixed; 
+  position: fixed;
   top: 0;
   z-index: 1000;
 }
 
 #creditmeter {
   position: fixed;
-  top: 70px; /* Distance from the top */
-  left: 0; /* Stick to the left */
-  width: 20%; /* Adjust width */
-  z-index: 1000; /* Ensure it’s above other content */
+  top: 70px;
+  /* Distance from the top */
+  left: 0;
+  /* Stick to the left */
+  width: 20%;
+  /* Adjust width */
+  z-index: 1000;
+  /* Ensure it’s above other content */
 }
 
 #factormeter {
   position: fixed;
-  top: 50px; /* Distance from the top */
-  right: 0; /* Stick to the right */
-  width: 20%; /* Adjust width */
-  z-index: 1000; /* Ensure it’s above other content */
+  top: 50px;
+  /* Distance from the top */
+  right: 0;
+  /* Stick to the right */
+  width: 20%;
+  /* Adjust width */
+  z-index: 1000;
+  /* Ensure it’s above other content */
 }
 
 #section {
-  margin-left: 17%; /* Offset for creditmeter */
+  margin-left: 17%;
+  /* Offset for creditmeter */
   justify-content: center;
   padding-right: 30px;
 }
@@ -597,146 +681,200 @@ h1 {
 .image-container {
   position: relative;
   display: inline-block;
-  width: 65%; /* Same width as the image */
+  width: 65%;
+  /* Same width as the image */
 }
+
 .image-container img {
   width: 100%;
   height: auto;
 }
+
 .image-container .overlay-text {
   position: absolute;
-  top: 45%; /* Adjust as needed */
-  left: 50%; /* Adjust as needed */
-  transform: translate(-50%, -50%) rotate(-35deg); /* Rotate the text */
-  color: black; /* Adjust text color */
-  font-weight: bolder; /* Adjust text style */
+  top: 45%;
+  /* Adjust as needed */
+  left: 50%;
+  /* Adjust as needed */
+  transform: translate(-50%, -50%) rotate(-35deg);
+  /* Rotate the text */
+  color: black;
+  /* Adjust text color */
+  font-weight: bolder;
+  /* Adjust text style */
   font-size: 36px;
 }
 
 .info-container img {
   width: 38%;
   height: auto;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 .info-container .overlay-text {
-  top: 46%; /* Adjust as needed */
-  left: 50%; /* Adjust as needed */
-  right: 20%; /* Adjust as needed */
-  color: black; /* Adjust text color */
+  top: 46%;
+  /* Adjust as needed */
+  left: 50%;
+  /* Adjust as needed */
+  right: 20%;
+  /* Adjust as needed */
+  color: black;
+  /* Adjust text color */
   font-weight: normal;
   font-size: 17px;
   text-align: center;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 1s ease-in-out, background-image 1s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 .info-container2 img {
   width: 60%;
   height: auto;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
+  padding-top: 26px;
 }
 
 .info-container2 .overlay-text {
-  top: 40%; /* Adjust as needed */
-  left: 50%; /* Adjust as needed */
-  right: 10%; /* Adjust as needed */
-  color: black; /* Adjust text color */
+  top: 40%;
+  /* Adjust as needed */
+  left: 50%;
+  /* Adjust as needed */
+  right: 10%;
+  /* Adjust as needed */
+  color: black;
+  /* Adjust text color */
   font-weight: normal;
   font-size: 17px;
   text-align: center;
   justify-content: center;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 .info-container .overlay-button {
   text-align: center;
-  left: 50%; /* Adjust as needed */
-  color: black; /* Adjust text color */
+  left: 50%;
+  /* Adjust as needed */
+  color: black;
+  /* Adjust text color */
   font-weight: normal;
   font-size: 24px;
   text-decoration: none;
 }
 
-.credit-container{
+.credit-container {
   text-align: left;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 .credit-container .overlay-text {
-  top: 52%; /* Adjust as needed */
-  left: 50%; /* Adjust as needed */
-  right: 20%; /* Adjust as needed */
-  color: black; /* Adjust text color */
+  top: 52%;
+  /* Adjust as needed */
+  left: 50%;
+  /* Adjust as needed */
+  right: 20%;
+  /* Adjust as needed */
+  color: black;
+  /* Adjust text color */
   font-weight: normal;
   font-size: 17px;
   text-align: center;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 1s ease-in-out, background-image 1s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 
 .credit-container2 img {
   width: 50%;
   height: 550px;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 .credit-container2 .overlay-text {
-  top: 58%; /* Adjust as needed */
-  left: 30%; /* Adjust as needed */
-  right: 28%; /* Adjust as needed */
-  color: black; /* Adjust text color */
+  top: 58%;
+  /* Adjust as needed */
+  left: 30%;
+  /* Adjust as needed */
+  right: 28%;
+  /* Adjust as needed */
+  color: black;
+  /* Adjust text color */
   font-weight: normal;
   font-size: 17px;
   text-align: center;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 1s ease-in-out, background-image 1s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 .credit-container3 img {
   width: 80%;
   height: 550px;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 .credit-container3 .overlay-text {
-  top: 41%; /* Adjust as needed */
-  left: 0; /* Adjust as needed */
-  right: 0; /* Adjust as needed */
-  color: black; /* Adjust text color */
+  top: 41%;
+  /* Adjust as needed */
+  left: 0;
+  /* Adjust as needed */
+  right: 0;
+  /* Adjust as needed */
+  color: black;
+  /* Adjust text color */
   font-weight: normal;
   font-size: 17px;
   margin-left: 770px;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 1s ease-in-out, background-image 1s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
   width: 48%;
   text-align: center;
 }
 
 
 .arrow {
-  width: 15px; 
-  height: 0; 
-  background-color: #000; /* Color of the arrow */
-  margin: 0 auto; /* Center the arrow horizontally */
-  display: none; /* Hide by default */
+  width: 15px;
+  height: 0;
+  background-color: #000;
+  /* Color of the arrow */
+  margin: 0 auto;
+  /* Center the arrow horizontally */
+  display: none;
+  /* Hide by default */
   transition: height 2s, transform 2s;
 }
 
@@ -745,7 +883,8 @@ h1 {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 10px solid #000; /* Color of the arrow head */
+  border-top: 10px solid #000;
+  /* Color of the arrow head */
   margin: 0 auto;
   opacity: 0;
   transition: opacity 1s;
@@ -788,43 +927,47 @@ h1 {
 }
 
 .modal-open {
-  overflow: hidden; /* Prevent scrolling of the background */
-  pointer-events: none; /* Disable all pointer events on the body */
+  overflow: hidden;
+  /* Prevent scrolling of the background */
+  pointer-events: none;
+  /* Disable all pointer events on the body */
 }
 
 /* Modal Styles */
 #modal {
-  display: none; 
-  position: fixed; 
-  z-index: 2000; 
+  display: none;
+  position: fixed;
+  z-index: 2000;
   left: 0;
   top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: hidden; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #modal-content {
   background-color: #fefefe;
-  margin: 15% auto; 
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; 
-  z-index: 1051; /* Ensure the modal content is above the backdrop */
-  pointer-events: auto; /* Re-enable pointer events for the modal content */
+  width: 80%;
+  z-index: 1051;
+  /* Ensure the modal content is above the backdrop */
+  pointer-events: auto;
+  /* Re-enable pointer events for the modal content */
 }
 
 #footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  height:5%;
+  height: 5%;
 }
 
 .howto-button {
-  background-color: #D4C029;    
+  background-color: #D4C029;
   color: white;
   border: none;
   padding: 10px 30px 13px 30px;
@@ -853,7 +996,7 @@ h1 {
 
 
 .game-button {
-  background-color: #D4C029;    
+  background-color: #D4C029;
   color: white;
   border: none;
   padding: 10px 30px 13px 30px;
@@ -882,7 +1025,7 @@ h1 {
 
 
 .game-button2 {
-  background-color: #D4C029;    
+  background-color: #D4C029;
   color: white;
   border: none;
   padding: 15px 30px;
@@ -910,7 +1053,7 @@ h1 {
 
 
 .narrative-button {
-  background-color: #D4C029;    
+  background-color: #D4C029;
   color: white;
   border: none;
   padding: 15px 30px;
@@ -937,23 +1080,28 @@ h1 {
 
 
 .accept-button {
-  background-color: #D4C029;    
+  background-color: #D4C029;
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 14px;
   cursor: pointer;
-  visibility: hidden; /* Start hidden */
-  opacity: 0; /* Fully transparent */
+  visibility: hidden;
+  /* Start hidden */
+  opacity: 0;
+  /* Fully transparent */
   transition: opacity 0.3s ease-in-out;
-  animation: fadeInButton 0.3s ease-in-out 3s forwards; /* Delay of 6 seconds */
+  animation: fadeInButton 0.3s ease-in-out 3s forwards;
+  /* Delay of 6 seconds */
   text-decoration: none;
 }
 
 @keyframes fadeInButton {
   to {
-    visibility: visible; /* Make visible at the end */
-    opacity: 1; /* Fully opaque */
+    visibility: visible;
+    /* Make visible at the end */
+    opacity: 1;
+    /* Fully opaque */
   }
 }
 
@@ -978,50 +1126,65 @@ h1 {
 #typewriter {
   display: inline-block;
   overflow: hidden;
-  white-space: pre-wrap; /* Allows wrapping */
+  white-space: pre-wrap;
+  /* Allows wrapping */
   animation: blink-caret 0.15s step-end infinite;
   font-weight: normal;
   line-height: 150%;
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent; }
-  50% { border-color: #D4C029; }
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: #D4C029;
+  }
 }
 
 
 .hidden {
   display: none;
 }
+
 .visible {
   display: block;
 }
 
-#car1, #car2, #car3{
-  padding-bottom: 250px;
+#car1,
+#car2,
+#car3 {
+  padding-bottom: 270px;
 }
 
-#title-text{
+#title-text {
   padding-bottom: 20px;
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
-#qs-text{
+#qs-text {
   padding-bottom: 10px;
   padding-top: 10px;
 }
 
 .hidden-section {
   display: none;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 .visible-section {
- opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.2s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn3 0.4s ease-in-out 0.2s forwards; /* Animation with delay */
+  animation: fadeIn3 0.4s ease-in-out 0.2s forwards;
+  /* Animation with delay */
 }
 
 @keyframes fadeIn3 {
@@ -1031,15 +1194,13 @@ h1 {
 }
 
 .fade-out {
-  opacity: 0; /* Fade out effect */
+  opacity: 0;
+  /* Fade out effect */
   transition: opacity 0.2s ease-in-out;
-  pointer-events: none; /* Disable interaction during fade-out */
+  pointer-events: none;
+  /* Disable interaction during fade-out */
 }
 
-.fade-out {
-  opacity: 0;
-  transition: opacity 1.2s ease-out;
-}
 
 .fade-in {
   opacity: 1;
@@ -1076,71 +1237,101 @@ h1 {
   0% {
     transform: scale(0.7);
   }
+
   50% {
-    transform: scale(0.9); /* Zoom in */
+    transform: scale(0.9);
+    /* Zoom in */
   }
+
   100% {
-    transform: scale(0.7); /* Zoom out */
+    transform: scale(0.7);
+    /* Zoom out */
   }
 }
 
 .zoom-animation {
-  visibility: hidden; /* Initially hidden */
-  animation: zoomInOut 2s infinite; /* Animation duration and infinite repetition */
-  animation-delay: 5s; /* Delay the animation for 5 seconds */
-  animation-fill-mode: forwards; /* Keeps the final state after the animation ends */
+  visibility: hidden;
+  /* Initially hidden */
+  animation: zoomInOut 2s infinite;
+  /* Animation duration and infinite repetition */
+  animation-delay: 5s;
+  /* Delay the animation for 5 seconds */
+  animation-fill-mode: forwards;
+  /* Keeps the final state after the animation ends */
 }
 
 .zoom-animation img {
-  visibility: visible; /* Make image visible when the animation starts */
-  opacity: 0; /* Start with opacity 0 */
-  animation: fadeIn 0s 5s forwards, zoomInOut 2s infinite 5s; /* 0s fadeIn delay, 5s total delay before animation */
+  visibility: visible;
+  /* Make image visible when the animation starts */
+  opacity: 0;
+  /* Start with opacity 0 */
+  animation: fadeIn 0s 5s forwards, zoomInOut 2s infinite 5s;
+  /* 0s fadeIn delay, 5s total delay before animation */
 }
 
 @keyframes fadeIn {
   to {
-    opacity: 1; /* Fade in to full opacity */
+    opacity: 1;
+    /* Fade in to full opacity */
   }
 }
 
 .factor-up-image {
-  width: 28px; /* Adjust size as needed */
+  width: 28px;
+  /* Adjust size as needed */
   height: auto;
-  z-index: 2; /* Make sure it's on top */
-  position: relative; /* Ensure it positions beside the circular progress */
-  transform: translateX(0px); /* Optional: Adjust position */
-  opacity: 0; /* Start with the image hidden */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
+  z-index: 2;
+  /* Make sure it's on top */
+  position: relative;
+  /* Ensure it positions beside the circular progress */
+  transform: translateX(0px);
+  /* Optional: Adjust position */
+  opacity: 0;
+  /* Start with the image hidden */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* Apply transition effects */
   bottom: 7px;
 }
 
 
 .factor-up-image.visible {
-  opacity: 1; /* Show image with transition */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
+  opacity: 1;
+  /* Show image with transition */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  /* Apply transition effects */
 }
 
 .factor-up-image.hidden {
-  opacity: 0; /* Hide image with transition */
-  transition: opacity 0.5s ease; /* Smooth fade-out transition */
-  animation: fadeOutButton 0.7s ease-in-out forwards; /* Smooth fade-out over 0.7s */
+  opacity: 0;
+  /* Hide image with transition */
+  transition: opacity 0.5s ease;
+  /* Smooth fade-out transition */
+  animation: fadeOutButton 0.7s ease-in-out forwards;
+  /* Smooth fade-out over 0.7s */
 }
 
 @keyframes fadeOutButton {
   0% {
-    visibility: visible; /* Start visible */
-    opacity: 1; /* Fully opaque */
+    visibility: visible;
+    /* Start visible */
+    opacity: 1;
+    /* Fully opaque */
   }
+
   100% {
-    visibility: hidden; /* Hidden at the end */
-    opacity: 0; /* Fully transparent */
+    visibility: hidden;
+    /* Hidden at the end */
+    opacity: 0;
+    /* Fully transparent */
   }
 }
 
 .credit-score-container {
   position: relative;
-  height: 435px; /* Set a specific height */
-  overflow: visible; /* Hide overflow */
+  height: 435px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
 }
 
 
@@ -1158,19 +1349,27 @@ h1 {
   width: 100%;
   height: 105%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none; /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out; /* Add a transition for smooth movement */
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
 }
 
 .creditarrow-img {
   position: absolute;
-  left: 90%; /* Move the arrow to the right */
-  transform: translateX(-50%); /* Keep it centered relative to the new left position */
-  width: 40%; /* Adjust the size as needed */
+  left: 90%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 40%;
+  /* Adjust the size as needed */
   height: auto;
-  top: 51%; /* Adjust this value to place the arrow within the container */
-  z-index: 10; /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease; /* Add a transition for smooth movement */
+  top: 51%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
 }
 
 .table-container {
@@ -1180,23 +1379,33 @@ h1 {
 
 table {
   border-collapse: collapse;
-  table-layout: auto; /* Adjust table to fit content width */
-  width: auto; /* Table adjusts to fit its content */
-  margin: 0 auto; /* Center table horizontally */
-  width: 70%; /* Adjust to desired percentage */
+  table-layout: auto;
+  /* Adjust table to fit content width */
+  width: auto;
+  /* Table adjusts to fit its content */
+  margin: 0 auto;
+  /* Center table horizontally */
+  width: 70%;
+  /* Adjust to desired percentage */
 }
 
 td {
   border: 1px solid #ddd;
-  padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
-  text-align: center; /* Optional: Center align images if needed */
+  padding: 0;
+  /* Remove padding */
+  margin: 0;
+  /* Remove margin */
+  text-align: center;
+  /* Optional: Center align images if needed */
 }
 
 table img {
-  display: block; /* Remove extra space below images */
-  width: 100%; /* Adjust to desired percentage */
-  height: auto; /* Maintain aspect ratio */
+  display: block;
+  /* Remove extra space below images */
+  width: 100%;
+  /* Adjust to desired percentage */
+  height: auto;
+  /* Maintain aspect ratio */
 }
 
 table img:hover {
@@ -1218,22 +1427,31 @@ table img:hover {
 
 @keyframes easeInOutLoop {
   0% {
-      transform: scale(1); /* Start at original size */
-      opacity: 1; /* Fully visible */
+    transform: scale(1);
+    /* Start at original size */
+    opacity: 1;
+    /* Fully visible */
   }
+
   50% {
-      transform: scale(1.05); /* Slightly enlarged */
-      opacity: 0.8; /* Slightly faded */
+    transform: scale(1.05);
+    /* Slightly enlarged */
+    opacity: 0.8;
+    /* Slightly faded */
   }
+
   100% {
-      transform: scale(1); /* Return to original size */
-      opacity: 1; /* Fully visible */
+    transform: scale(1);
+    /* Return to original size */
+    opacity: 1;
+    /* Fully visible */
   }
 }
 
 
 .zoom-title:hover {
-  content: url('../img/creditlit2.png'); /* Change this path to your hover image */
+  content: url('../img/creditlit2.png');
+  /* Change this path to your hover image */
 }
 
 .zoom-title2 {
@@ -1242,7 +1460,8 @@ table img:hover {
 }
 
 .zoom-title2:hover {
-  content: url('../img/graduation2.png'); /* Change this path to your hover image */
+  content: url('../img/graduation2.png');
+  /* Change this path to your hover image */
 }
 
 .zoom-title3 {
@@ -1251,31 +1470,34 @@ table img:hover {
 }
 
 .zoom-title3:hover {
-  content: url('../img/workforce2.png'); /* Change this path to your hover image */
+  content: url('../img/workforce2.png');
+  /* Change this path to your hover image */
 }
 
 
 
 
 .animated-button2 {
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
+  /* Initially hidden */
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, opacity 1s;
 }
 
 .animated-button2:hover {
-  
+
   transform: scale(0.9);
 }
 
 .animated-button3 {
-  opacity: 0; /* Initially hidden */
+  opacity: 0;
+  /* Initially hidden */
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s, opacity 1s;
 }
 
 .animated-button3:hover {
-  
+
   transform: scale(0.9);
 }
 
@@ -1284,7 +1506,7 @@ table img:hover {
 }
 
 .animated-button1:hover {
-  
+
   transform: scale(0.9);
 }
 
@@ -1314,33 +1536,42 @@ table img:hover {
 
 .phone-call {
   background-image: url('../img/phonecall.png');
-  width: 100%; /* Adjust as needed */
-  height: 60vh; /* Adjust as needed */
-  background-size: contain; /* Adjust as needed (cover, contain, etc.) */
+  width: 100%;
+  /* Adjust as needed */
+  height: 60vh;
+  /* Adjust as needed */
+  background-size: contain;
+  /* Adjust as needed (cover, contain, etc.) */
   background-position: center;
   background-repeat: no-repeat;
-  margin-top: 30px;
+  margin-top: 80px;
 }
 
 #phone-answer {
   background-image: url('../img/answerphone.png');
-  width: 100%; /* Adjust as needed */
-  height: 85vh; /* Adjust as needed */
-  background-size: contain; /* Adjust as needed (cover, contain, etc.) */
+  width: 100%;
+  /* Adjust as needed */
+  height: 85vh;
+  /* Adjust as needed */
+  background-size: contain;
+  /* Adjust as needed (cover, contain, etc.) */
   background-position: center;
   background-repeat: no-repeat;
 }
 
 
 #phone-button {
- padding-top: 290px;
+  padding-top: 290px;
 }
 
 #phonebtn {
-  visibility: hidden; /* Start hidden */
-  opacity: 0; /* Fully transparent */
+  visibility: hidden;
+  /* Start hidden */
+  opacity: 0;
+  /* Fully transparent */
   transition: opacity 0.1s ease-in-out;
-  animation: fadeInButton 0.1s ease-in-out 1s forwards; /* Delay of 6 seconds */
+  animation: fadeInButton 0.1s ease-in-out 1s forwards;
+  /* Delay of 6 seconds */
   text-decoration: none;
   width: 5%;
   height: auto;
@@ -1353,44 +1584,51 @@ table img:hover {
 
 #hangup-phone {
   padding-top: 450px;
- }
+}
 
- #open-email {
+#open-email {
   background-image: url('../img/email.png');
-  width: 100%; /* Adjust as needed */
-  height: 90vh; /* Adjust as needed */
-  background-size: contain; /* Adjust as needed (cover, contain, etc.) */
+  width: 100%;
+  /* Adjust as needed */
+  height: 90vh;
+  /* Adjust as needed */
+  background-size: contain;
+  /* Adjust as needed (cover, contain, etc.) */
   background-position: center;
   background-repeat: no-repeat;
 }
 
 
- #accept-email {
+#accept-email {
   padding-top: 430px;
   padding-left: 620px;
- }
+}
 
- #headerimg{
+#headerimg {
   width: 85%;
   height: auto;
 }
 
-#wordlist{
+#wordlist {
   padding-right: 150px;
   padding-top: 50px;
 }
 
 #word-list {
-  padding: 10px; /* Padding around the code */
-  overflow: auto; /* Scrollbar if code overflows */
-  white-space: pre-wrap; /* Preserve whitespace and line breaks */
-  margin: 20px; /* Margin around the container */
+  padding: 10px;
+  /* Padding around the code */
+  overflow: auto;
+  /* Scrollbar if code overflows */
+  white-space: pre-wrap;
+  /* Preserve whitespace and line breaks */
+  margin: 20px;
+  /* Margin around the container */
   color: #206E63;
   font-weight: bold;
 }
 
- @media (min-width: 820px) and (max-width: 1180px) {
- 
+@media (min-width: 820px) and (max-width: 1180px) {
+
 
   #viewscreen {
     padding-top: 6px;
@@ -1403,124 +1641,153 @@ table img:hover {
   #accept-email {
     padding-top: 500px;
     padding-right: 630px;
-   }
-  
-#headerimg{
-  width: 80%;
-  height: auto;
-  margin: 0 0px;
+  }
+
+  #headerimg {
+    width: 80%;
+    height: auto;
+    margin: 0 0px;
+  }
+
+  .header-text {
+    position: absolute;
+    top: 6%;
+    /* Position the text at the vertical center */
+    left: 4%;
+    /* Position the text at the horizontal center */
+    color: white;
+    /* Text color */
+  }
+
+  .card-text {
+    margin: 2px;
+  }
+
+  .my-card {
+    position: relative;
+    overflow: hidden;
+    width: 110%;
+    height: 390px;
+    background-position: center;
+    background-color: transparent !important;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  .my-card:hover {
+    background-image: url('../img/cardhover.png');
+    background-size: 100% 400px;
+    background-position: center;
+    transform: scale(0.95) !important;
+    /* Ensure the scale change on hover is applied */
+    transition: transform 0.5s ease-in-out;
+    /* Apply transition specifically to transform on hover */
+  }
+
+  .my-card2:hover {
+    background-image: url('../img/cardhover.png');
+    background-size: 100% 300px;
+    background-position: center;
+    transform: scale(0.95) !important;
+    /* Ensure the scale change on hover is applied */
+    transition: transform 0.5s ease-in-out;
+    /* Apply transition specifically to transform on hover */
+  }
+
+
+  #wordlist {
+    padding-right: 150px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #phone-button {
+    padding-top: 300px;
+  }
+
+  #hangup-phone {
+    padding-top: 520px;
+  }
+
 }
 
-.header-text {
+
+.quiz,
+.scores {
+  margin: 30px auto 0 auto;
+  max-width: 1000px;
+}
+
+#top {
+  color: #206E63;
+}
+
+.containerNew {
   position: absolute;
-  top: 6%; /* Position the text at the vertical center */
-  left: 4%; /* Position the text at the horizontal center */
-  color: white; /* Text color */
-}
-
-.card-text {
-  margin: 2px;
-}
-
-.my-card {
-  position: relative;
-  overflow: hidden;
-  width: 110%;
-  height: 390px;
-  background-position: center;
-  background-color: transparent !important;
-  opacity: 0; /* Start hidden */
-  transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
-}
-
-.my-card:hover {
-  background-image: url('../img/cardhover.png');
-  background-size: 100% 400px;
-  background-position: center;
-  transform: scale(0.95) !important; /* Ensure the scale change on hover is applied */
-  transition: transform 0.5s ease-in-out; /* Apply transition specifically to transform on hover */
-}
-
-.my-card2:hover {
-  background-image: url('../img/cardhover.png');
-  background-size: 100% 300px;
-  background-position: center;
-  transform: scale(0.95) !important; /* Ensure the scale change on hover is applied */
-  transition: transform 0.5s ease-in-out; /* Apply transition specifically to transform on hover */
+  top: 50%;
+  left: 50%;
+  height: 580px;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
 }
 
 
-#wordlist{
-  padding-right: 150px;
-  justify-content: center;
-  align-items: center;
+.landing {
+  text-align: center;
 }
 
-#phone-button {
-  padding-top: 300px;
- }
-
- #hangup-phone {
-  padding-top: 520px;
- }
-
- }
+.scoresHeader {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
 
 
- .quiz,
- .scores {
-     margin: 30px auto 0 auto;
-     max-width: 1000px;
- }
-
- #top {
-     color: #206E63;
- }
-
- .containerNew {
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     height: 580px;
-     width: 50%;
-     transform: translate(-50%, -50%);
-     padding: 10px;
- }
-
-
- .landing {
-     text-align: center;
- }
-
- .scoresHeader {
-     position: absolute;
-     top: 15px;
-     left: 15px;
- }
-
-
- .options {
+.options {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap onto new lines */
-  justify-content: center; /* Centers the items horizontally */
-  align-items: flex-start; /* Aligns items to the top of the container */
-  gap: 30px; /* Optional: Adds spacing between the options */
+  flex-wrap: wrap;
+  /* Allows items to wrap onto new lines */
+  justify-content: center;
+  /* Centers the items horizontally */
+  align-items: flex-start;
+  /* Aligns items to the top of the container */
+  gap: 30px;
+  /* Optional: Adds spacing between the options */
 }
 
 .options button {
-  width: 440px; /* Set a fixed width for buttons */
-  height: 100px; /* Set a fixed height for buttons */
+  width: 440px;
+  /* Set a fixed width for buttons */
+  height: 100px;
+  /* Set a fixed height for buttons */
   margin: 1px;
 }
 
 .options .option-top {
-  flex: 1 1 45%; /* This makes the top options take up 45% of the width, adjust as needed */
+  flex: 1 1 45%;
+  /* This makes the top options take up 45% of the width, adjust as needed */
 }
 
 .options .option-bottom {
-  flex: 1 1 45%; /* The same for bottom options */
+  flex: 1 1 45%;
+  /* The same for bottom options */
 }
+
+#quiz-next {
+  width: 7%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#nextbtn-div {
+  padding-top: 26px;
+}
+
 
 button {
   display: inline-block;
@@ -1541,40 +1808,39 @@ button:hover {
 }
 
 
- input[type="text"] {
-     font-size: 100%;
- }
+input[type="text"] {
+  font-size: 100%;
+}
 
- .hide {
-     display: none;
- }
+.hide {
+  display: none;
+}
 
- .feedback {
-     font-style: bold;
-     font-size: 120%;
-     margin-top: 20px;
-     padding-top: 15px;
-     color: #fff;
-     border-top: 2px dashed #7a797a;
-     justify-content: flex-end;
+.feedback {
+  font-style: bold;
+  font-size: 120%;
+  margin-top: 20px;
+  padding-top: 15px;
+  color: #fff;
+  border-top: 2px dashed #7a797a;
+  justify-content: flex-end;
   text-align: left;
- }
+}
 
+ol {
+  padding-left: 15px;
+  max-height: 600px;
+  overflow: auto;
+}
 
- ol {
-     padding-left: 15px;
-     max-height: 600px;
-     overflow: auto;
- }
+li {
+  padding: 5px;
+  list-style: decimal inside none;
+}
 
- li {
-     padding: 5px;
-     list-style: decimal inside none;
- }
-
- li:nth-child(odd) {
-     background-color: #dfdae7;
- }
+li:nth-child(odd) {
+  background-color: #dfdae7;
+}
 
 
 
@@ -1599,7 +1865,7 @@ button:hover {
 
 #container1 {
   background-image: url('../img/collateral/Collateral-Box.png');
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 360px;
   height: 180px;
@@ -1608,7 +1874,7 @@ button:hover {
 
 #container2 {
   background-image: url('../img/collateral/NonCollateral-Box.png');
-  background-size:contain;
+  background-size: contain;
   background-repeat: no-repeat;
   width: 360px;
   height: 180px;
@@ -1618,14 +1884,14 @@ button:hover {
 
 
 #items {
- padding-top: 30px;
- padding-left: 150px;
- justify-content: center;
- display:grid;
- padding-right: 150px;
+  padding-top: 30px;
+  padding-left: 150px;
+  justify-content: center;
+  display: grid;
+  padding-right: 150px;
 }
 
-#drag-items{
+#drag-items {
   padding-bottom: 16px;
 }
 
@@ -1639,50 +1905,68 @@ button:hover {
 }
 
 
-.monument{
-width: 50%;
-padding-bottom: 8px;
-padding-right: 4px;
-height: auto;
+.monument {
+  width: 50%;
+  padding-bottom: 8px;
+  padding-right: 4px;
+  height: auto;
 }
 
 .loader-container {
-  position: relative; /* Allows us to position elements inside it */
+  position: relative;
+  /* Allows us to position elements inside it */
   display: flex;
-  justify-content: center; /* Horizontally center the loader and text */
-  align-items: center;     /* Vertically center */
+  justify-content: center;
+  /* Horizontally center the loader and text */
+  align-items: center;
+  /* Vertically center */
   padding-top: 150px;
 }
 
 /* The rotating circle */
 .loader {
-  border: 20px solid #206E63; 
-  border-top: 20px solid #D4C029; /* Blue */
+  border: 20px solid #206E63;
+  border-top: 20px solid #D4C029;
+  /* Blue */
   border-radius: 50%;
   width: 300px;
   height: 300px;
-  animation: spin 5s linear infinite; /* Infinite spinning animation */
-  position: absolute; /* This makes it stay in place while the text is centered */
+  animation: spin 5s linear infinite;
+  /* Infinite spinning animation */
+  position: absolute;
+  /* This makes it stay in place while the text is centered */
 }
 
 /* Text that stays in the center of the circle */
 .loading-text {
-  position: absolute;  /* Absolute positioning inside the container */
-  color: #000000;        /* Text color */
-  font-size: 18px;     /* Adjust text size */
-  font-weight: bold;   /* Make text bold */
-  z-index: 1;          /* Ensure the text stays above the spinner */
+  position: absolute;
+  /* Absolute positioning inside the container */
+  color: #000000;
+  /* Text color */
+  font-size: 18px;
+  /* Adjust text size */
+  font-weight: bold;
+  /* Make text bold */
+  z-index: 1;
+  /* Ensure the text stays above the spinner */
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #game-title1 {
-  position:relative; /* Change to relative */
+  position: relative;
+  /* Change to relative */
   width: 100vw;
-  height: 100vh; /* Cover the full viewport height */
+  height: 100vh;
+  /* Cover the full viewport height */
   background-image: url('../img/landmark/title-bg.png');
   background-size: cover;
   background-position: center;
@@ -1692,9 +1976,11 @@ height: auto;
 }
 
 #game-title2 {
-  position: relative; /* Change to relative */
+  position: relative;
+  /* Change to relative */
   width: 100vw;
-  height: 100vh; /* Cover the full viewport height */
+  height: 100vh;
+  /* Cover the full viewport height */
   background-image: url('../img/wedding/game-bg.png');
   background-size: cover;
   background-position: center;
@@ -1704,9 +1990,11 @@ height: auto;
 }
 
 #game-title3 {
-  position: relative; /* Change to relative */
+  position: relative;
+  /* Change to relative */
   width: 100vw;
-  height: 100vh; /* Cover the full viewport height */
+  height: 100vh;
+  /* Cover the full viewport height */
   background-image: url('../img/quiz/quiz-background.png');
   background-size: cover;
   background-position: center;
@@ -1716,9 +2004,11 @@ height: auto;
 }
 
 #game-title4 {
-  position: absolute; /* Change to relative */
+  position: absolute;
+  /* Change to relative */
   width: 100vw;
-  height: 100vh; /* Cover the full viewport height */
+  height: 100vh;
+  /* Cover the full viewport height */
   background-image: url('../img/landmark/title-bg.png');
   background-size: cover;
   background-position: center;
@@ -1744,11 +2034,13 @@ height: auto;
 */
 
 .game-container {
-  position: relative; /* Change to relative */
+  position: relative;
+  /* Change to relative */
   width: 100%;
-  height:58vh;/* Cover the full viewport height */
+  height: 58vh;
+  /* Cover the full viewport height */
   background-image: url('../img/collateral/collateral-game1.png');
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0;
@@ -1827,7 +2119,7 @@ height: auto;
 }
 */
 
-.start-link {  
+.start-link {
   color: #206E63;
   border: none;
   font-size: 18px;
@@ -1844,7 +2136,7 @@ height: auto;
 
 }
 
-.start-link2 {  
+.start-link2 {
   color: #ffffff;
   border: none;
   font-size: 18px;
@@ -1861,7 +2153,7 @@ height: auto;
 
 }
 
-.start-link3 {  
+.start-link3 {
   color: #206E63;
   border: none;
   font-size: 22px;
@@ -1884,18 +2176,23 @@ height: auto;
 }
 
 #question-progress {
-  height: 10px; /* Adjust height if needed */
-  width: 100%; 
-  background-color: #ffffff; /* Background of the progress bar */
-  border-radius: 5px; /* Rounded corners for the progress bar */
+  height: 10px;
+  /* Adjust height if needed */
+  width: 100%;
+  background-color: #ffffff;
+  /* Background of the progress bar */
+  border-radius: 5px;
+  /* Rounded corners for the progress bar */
   position: relative;
 }
 
 /* Progress bar active line */
 #question-progress .active {
-  background-color: #206E63; /* Active color for the progress bar line */
+  background-color: #206E63;
+  /* Active color for the progress bar line */
   border-radius: 5px;
-  transition: width 0.5s ease-in-out; /* Smooth transition for width change */
+  transition: width 0.5s ease-in-out;
+  /* Smooth transition for width change */
 }
 
 /* Container for the progress bar */
@@ -1904,63 +2201,65 @@ height: auto;
   width: 100%;
   height: 25px;
   display: flex;
-  align-items: center; /* Center content vertically */
+  align-items: center;
+  /* Center content vertically */
 }
 
 /* The line behind the dots */
-#question-progress-container > div:first-child {
+#question-progress-container>div:first-child {
   position: absolute;
   width: 100%;
-  height: 4px; /* Thickness of the line */
-  background-color: #e0e0e0; /* Line color */
+  height: 4px;
+  /* Thickness of the line */
+  background-color: #e0e0e0;
+  /* Line color */
   top: 50%;
-  transform: translateY(-50%); /* Center the line vertically */
-  z-index: 1; /* Place it behind the dots */
+  transform: translateY(-50%);
+  /* Center the line vertically */
+  z-index: 1;
+  /* Place it behind the dots */
 }
 
 /* Container for the dots */
 #question-progress-dots {
   display: flex;
-  justify-content: space-between; /* Spread dots evenly */
+  justify-content: space-between;
+  /* Spread dots evenly */
   width: 100%;
   position: relative;
-  z-index: 2; /* Place it above the line */
+  z-index: 2;
+  /* Place it above the line */
 }
 
 /* Individual dots */
 #question-progress-dots .dot {
   width: 15px;
   height: 15px;
-  background-color: #c0bdbd; /* Inactive dot color */
-  border-radius: 50%; /* Make dots circular */
-  border: 2px solid #c0bdbd; /* Matches dot color */
+  background-color: #c0bdbd;
+  /* Inactive dot color */
+  border-radius: 50%;
+  /* Make dots circular */
+  border: 2px solid #c0bdbd;
+  /* Matches dot color */
   transition: background-color 0.3s ease, border-color 0.3s ease;
-  position: relative; /* Needed for layering adjustments */
+  position: relative;
+  /* Needed for layering adjustments */
 }
 
 /* Active dots */
 #question-progress-dots .dot.active {
-  background-color: #206E63; /* Active dot color */
+  background-color: #206E63;
+  /* Active dot color */
   border-color: #206E63;
 }
 
-#question-progress-container > div:first-child.active {
-  background-color: #206E63; /* Active dot color */
+#question-progress-container>div:first-child.active {
+  background-color: #206E63;
+  /* Active dot color */
   border-color: #206E63;
 }
 
-#quiz-next{
-  width: 7%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-#nextbtn-div{
-  padding-top: 26px;
-}
-
-#question-words{
+#question-words {
   color: #206E63;
   font-weight: bold;
   font-size: 24px;
@@ -1969,33 +2268,43 @@ height: auto;
 
 .vertical-line {
   position: absolute;
-  top: 440px; /* Adjust this value to control the distance from the top */
+  top: 410px;
+  /* Adjust this value to control the distance from the top */
   left: 50%;
-  width: 1px; /* Line thickness */
-  height: 28px; /* Line height */
-  background-color: #206E63; /* Line color */
-  transform: translateX(-50%); /* Center the line horizontally */
+  width: 1px;
+  /* Line thickness */
+  height: 28px;
+  /* Line height */
+  background-color: #206E63;
+  /* Line color */
+  transform: translateX(-50%);
+  /* Center the line horizontally */
 }
 
 
-#quiz-end{
-  opacity: 0; /* Start hidden */
+#quiz-end {
+  opacity: 0;
+  /* Start hidden */
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-  animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 
 .choice-card {
   text-decoration: none;
-  color: #206E63; /* Initial text color */
+  color: #206E63;
+  /* Initial text color */
   font-size: 20px;
   font-weight: bold;
 }
 
 /* CSS for the text when hovered */
 .choice-card:hover {
-  color: #D4C029; /* Text color on hover */
-  text-decoration: none; /* Optional: if you want underline on hover */
+  color: #D4C029;
+  /* Text color on hover */
+  text-decoration: none;
+  /* Optional: if you want underline on hover */
 }
 
 .card-title {
@@ -2003,15 +2312,15 @@ height: auto;
 }
 
 #name {
-  position: absolute; 
-  top: 45%; 
-  left: 35%; 
-  transform: translate(-50%, -50%); 
-  color: #206E63; 
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  color: #206E63;
   font-weight: bold;
 }
 
-#score{
+#score {
   padding-top: 30px;
   padding-left: 0;
   padding-right: 400px;
@@ -2020,11 +2329,11 @@ height: auto;
 
 
 #name3 {
-  position: absolute; 
-  top: 45%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  color: #206E63; 
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #206E63;
   font-weight: bold;
 }
 
@@ -2051,16 +2360,17 @@ height: auto;
   background: url('../img/wedding/card-cover.png') no-repeat center center;
   background-size: cover;
   display: flex;
-  align-items:center;
-  justify-content:right;
+  align-items: center;
+  justify-content: right;
   font-size: 24px;
   cursor: pointer;
-  
   border: 1px solid #D4C029;
 }
+
 .hidden {
   background-color: rgb(255, 255, 255);
 }
+
 .card-game img {
   width: 100%;
   height: 100%;
@@ -2069,7 +2379,8 @@ height: auto;
 }
 
 .card-game.flipped img {
-  transform: rotateY(180deg); /* Flip the image on the Y-axis */
+  transform: rotateY(180deg);
+  /* Flip the image on the Y-axis */
 }
 
 #message {
@@ -2084,9 +2395,12 @@ height: auto;
   font-size: 30px;
   color: #206E63;
 }
+
 .title-image {
-  width: 30%; /* Adjust the size as needed */
-  height: auto; /* Maintain aspect ratio */
+  width: 30%;
+  /* Adjust the size as needed */
+  height: auto;
+  /* Maintain aspect ratio */
   display: flex;
   position: absolute;
   justify-content: center;
@@ -2095,16 +2409,21 @@ height: auto;
   left: 30px;
   transform: translate(30 -10%);
 }
+
 .timer {
   font-size: 40px;
   font-weight: bold;
   color: #206E63;
 }
+
 .timer .colon {
-  width: auto; /* Smaller width */
-  height: 50px; /* Fixed height */
+  width: auto;
+  /* Smaller width */
+  height: 50px;
+  /* Fixed height */
   margin-right: 10px;
 }
+
 .score {
   font-size: 40px;
   font-weight: bolder;
@@ -2112,7 +2431,7 @@ height: auto;
 }
 
 
-.text-box{
+.text-box {
   font-size: 18px;
   color: white;
   border: 2px solid rgba(255, 255, 255, 0);
@@ -2127,60 +2446,65 @@ height: auto;
   left: 10px;
   transform: translate(5%, -10%);
 }
-.timer-text-box{
+
+.timer-text-box {
   font-size: 40px;
   font-weight: bold;
   color: #206E63;
 }
 
-#wedding1{
-  padding-top: 180px; 
+#wedding1 {
+  padding-top: 180px;
   padding-left: 120px;
-  
+
   border: 3px solid;
 }
 
-#wedding2{
-  margin-top: 100px; 
+#wedding2 {
+  margin-top: 100px;
   padding-top: 300px;
   padding-left: 200px;
-  
+
   border: 3px solid;
 }
 
 
-#wedding-score1{
+#wedding-score1 {
   font-size: 42px;
   color: #206E63;
-  font-family: 'Geomanist-Bold', sans-serif; /* Use bold font for headings */
-  font-weight: bolder; /* Explicitly set the weight */
-      text-align: left;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+  text-align: left;
 }
 
-#wedd-box{
+#wedd-box {
   padding-top: 100px;
 }
 
-#weddscore{
+#weddscore {
   padding-top: 30px;
   padding-left: 200px;
-    text-align: left;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+  text-align: left;
+  opacity: 0;
+  /* Start hidden */
+  transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+  animation: fadeIn2 1s ease-in-out 0.8s forwards;
+  /* Animation with delay */
 }
 
 #name2 {
-  position: absolute; 
-  top: 73%; 
-  left: 32%; 
-  transform: translate(-50%, -50%); 
-  color: #206E63; 
+  position: absolute;
+  top: 73%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  color: #206E63;
   font-weight: bold;
   font-size: 22px;
 }
 
-#wedding-score2{
+#wedding-score2 {
   padding-left: 380px;
   font-size: 24px;
   color: #206E63;
@@ -2209,33 +2533,49 @@ height: auto;
 }
 
 .monument {
-  width: 100%; /* Make sure the image takes the full width of its container */
-  max-height: 150px; /* Limit the maximum height of the images */
-  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
-  margin-bottom: 10px; /* Space between the image and location box */
+  width: 100%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 150px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin-bottom: 10px;
+  /* Space between the image and location box */
 }
 
 .japan1 {
-  width: 100%; /* Make sure the image takes the full width of its container */
-  max-height: 150px; /* Limit the maximum height of the images */
-  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 24px; /* Space between the image and location box */
+  width: 100%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 150px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 24px;
+  /* Space between the image and location box */
 }
 
 .egypt1 {
-  width: 100%; /* Make sure the image takes the full width of its container */
-  max-height: 150px; /* Limit the maximum height of the images */
-  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 8px; /* Space between the image and location box */
+  width: 100%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 150px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 8px;
+  /* Space between the image and location box */
 }
 
 
 #vacay-box {
   display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  margin-bottom: 20px; /* Add some space between rows */
-  width: 100%; /* Ensure they take up 100% of their container width */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
+  margin-bottom: 20px;
+  /* Add some space between rows */
+  width: 100%;
+  /* Ensure they take up 100% of their container width */
 }
 
 #vacay-row {
@@ -2251,336 +2591,391 @@ height: auto;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 100%; /* Ensure container takes full height */
+  height: 100%;
+  /* Ensure container takes full height */
 }
 
 .imgs {
-  width: 12%; /* Set the width relative to the container's width */
-  height: auto; /* Maintain aspect ratio */
+  width: 12%;
+  /* Set the width relative to the container's width */
+  height: auto;
+  /* Maintain aspect ratio */
 }
 
 
 .index-button {
-    background-color: #D4C029;    
-    color: white;
-    border: none;
-    padding: 10px 40px 15px 40px;
-    width: 50%;
-    font-size: 24px;
-    font-weight: normal;
-    opacity: 0; /* Initially hidden */
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, opacity 1s;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-
-  
-  .index-button:hover {
-    background-color: #206E63;
-    transform: scale(1.1);
-    color: #fff;
-    text-decoration: none;
-
-  }
-
-  #narration{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
-
-  #howto {
-    position: absolute; 
-    top: 90%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
-
-   #scene2-opt1{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
-
-  #car1 {
-    position: absolute; 
-    top: 90%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
-
-   #scene2-opt2{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
-
-  #car2 {
-    position: absolute; 
-    top: 90%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
+  background-color: #D4C029;
+  color: white;
+  border: none;
+  padding: 10px 40px 15px 40px;
+  width: 50%;
+  font-size: 24px;
+  font-weight: normal;
+  opacity: 0;
+  /* Initially hidden */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, opacity 1s;
+  text-decoration: none;
+  border-radius: 4px;
+}
 
 
-   #scene2-opt3{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
+.index-button:hover {
+  background-color: #206E63;
+  transform: scale(1.1);
+  color: #fff;
+  text-decoration: none;
 
-  #car3 {
-    position: absolute; 
-    top: 90%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
-  
-  
-  #scene10tips{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
+}
 
-  #tips10 {
-    position: absolute; 
-    top: 90%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
+#narration {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
 
-   #scene13tips{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
+#howto {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
 
-  #tips13 {
-    position: absolute; 
-    top: 90%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
- 
-  #scenario8{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
+#scene2-opt1 {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
 
+#car1 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
 
-  #game1 {
-    position: absolute; 
-    top: 90%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
+#scene2-opt2 {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
 
-   #scenario5{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
-
-  #game2 {
-    position: absolute; 
-    top: 90%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
+#car2 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
 
 
-   #scenario9{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
+#scene2-opt3 {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
 
-  #game3 {
-    position: absolute; 
-    top: 85%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
-
-   #quiz-game{
-    position: relative; /* Change to relative */
-    width: 100vw;
-    height: 100vh; /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-  }
-
-  .quiz-progress{
-    padding-left: 250px;
-    padding-right: 250px;
-    padding-top: 100px;
-  }
-
-  #game4 {
-    position: absolute; 
-    top: 85%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
-    opacity: 0; /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-    display: none;
-   }
+#car3 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
 
 
-  #game-intro{
-    position:relative; /* Change to relative */
-    width: 100%;
-    height: 100vh; /* Cover the full viewport height */
-    background-image: url('../video/business.mp4');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-  }
+#scene10tips {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
 
-  .start-button {
-    background-color: #D4C029;    
-    color: white;
-    border: none;
-    padding: 12px 10px;
-    width: 18%;
-    font-size: 24px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  .start-button:hover {
-    background-color: #206E63;
-    transform: scale(0.9);
-    color: #fff;
-    text-decoration: none;
-  
-  }
+#tips10 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
 
-  #call-convo{
-    padding-top: 80px;
-  }
+#scene13tips {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
 
-  .phone-img{
-   width: 75%; 
-   height: auto; 
-   margin: 0 auto;
-  }
+#tips13 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
 
-  .tooltip-container {
-    position: relative;
-  }
-  
-  .tooltip-text {
-    visibility: hidden;
-    width: 150px;
-    background-color: #ffffff;
-    color: #000000;
-    text-align: center;
-    border-radius: 2px;
-    padding: 5px;
-    position: absolute;
-    z-index: 1;
-    bottom: 85%; /* Position above the image */
-    left: 40%;
-    margin-left: -60px; /* Adjust the tooltip to be centered */
-    opacity: 0;
-    transition: opacity 0.3s;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .tooltip-container:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-  }
-  
-  #email-img {
-    opacity: 0; /* Start with the image hidden */
-    animation: zoomInOut 0.8s ease-in-out forwards; /* Apply animation for display */
-    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+#scenario8 {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
+
+
+#game1 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+
+#scenario5 {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
+
+#game2 {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+
+
+#scenario9 {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
+
+#game3 {
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+
+#quiz-game {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
+
+.quiz-progress {
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 100px;
+}
+
+#game4 {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+
+
+#game-intro {
+  position: relative;
+  /* Change to relative */
+  width: 100%;
+  height: 100vh;
+  /* Cover the full viewport height */
+  background-image: url('../video/business.mp4');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.start-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+  padding: 12px 10px;
+  width: 18%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.start-button:hover {
+  background-color: #206E63;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+
+}
+
+#call-convo {
+  padding-top: 80px;
+}
+
+.phone-img {
+  width: 75%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.tooltip-container {
+  position: relative;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 150px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  border-radius: 2px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 85%;
+  /* Position above the image */
+  left: 40%;
+  margin-left: -60px;
+  /* Adjust the tooltip to be centered */
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+#email-img {
+  opacity: 0;
+  /* Start with the image hidden */
+  animation: zoomInOut 0.8s ease-in-out forwards;
+  /* Apply animation for display */
+  transition: transform 0.3s ease-in-out;
+  /* Smooth transition for hover effect */
 }
 
 /* Keyframes animation for zooming in and out */
 @keyframes zoomInOut {
-    0% {
-        transform: scale(0.8); /* Start smaller */
-        opacity: 0;
-    }
-    100% {
-        transform: scale(1); /* Return to normal size */
-        opacity: 1; /* Ensure it stays visible */
-    }
+  0% {
+    transform: scale(0.8);
+    /* Start smaller */
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    /* Return to normal size */
+    opacity: 1;
+    /* Ensure it stays visible */
+  }
 }
 
 
@@ -2625,19 +3020,24 @@ height: auto;
 
 /* Loan details styling */
 /* Loan details container */
-.loan-details{
+.loan-details {
   text-align: center;
 }
 
 .details {
-  gap: 2px; /* Reduce the horizontal gap between label and value */
+  gap: 2px;
+  /* Reduce the horizontal gap between label and value */
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Ensures labels and values are vertically aligned */
+  align-items: center;
+  /* Ensures labels and values are vertically aligned */
   margin: 5px 0;
-  max-width: 500px; /* Controls width to keep details compact */
-  margin-left: auto; /* Centers the block horizontally */
-  margin-right: auto; /* Centers the block horizontally */
+  max-width: 500px;
+  /* Controls width to keep details compact */
+  margin-left: auto;
+  /* Centers the block horizontally */
+  margin-right: auto;
+  /* Centers the block horizontally */
   border: 3px solid;
 }
 
@@ -2645,7 +3045,8 @@ height: auto;
 .label {
   font-size: 22px;
   font-weight: bold;
-  text-align: right; /* Left aligns the label */
+  text-align: right;
+  /* Left aligns the label */
   margin: 5px 0;
   color: #000000;
 }
@@ -2653,7 +3054,8 @@ height: auto;
 .value {
   font-size: 22px;
   font-weight: bold;
-  text-align: left; /* Right aligns the value */
+  text-align: left;
+  /* Right aligns the value */
   margin: 5px 0;
   color: #D4C029;
   font-style: italic;
@@ -2662,11 +3064,13 @@ height: auto;
 .wedd-row {
   display: flex;
   align-items: center;
-  justify-content: center; /* Ensures the content is centered */
+  justify-content: center;
+  /* Ensures the content is centered */
 }
 
 .between {
-  flex: 0 0 10px; /* Set a small fixed width for space */
+  flex: 0 0 10px;
+  /* Set a small fixed width for space */
 }
 
 
@@ -2725,18 +3129,22 @@ height: auto;
 }
 
 .line {
-  width: 80px; /* Short line length, adjust as needed */
-  height: 2px; /* Line thickness */
-  background-color: #D4C029; /* Line color */
+  width: 80px;
+  /* Short line length, adjust as needed */
+  height: 2px;
+  /* Line thickness */
+  background-color: #D4C029;
+  /* Line color */
 }
 
 .line-text {
   padding: 0 15px;
-  font-weight: bold; /* Optional: Makes the text bold */
+  font-weight: bold;
+  /* Optional: Makes the text bold */
   font-size: 36px;
 }
 
-#choices-div{
+#choices-div {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
@@ -2745,31 +3153,35 @@ height: auto;
   gap: 4px;
 }
 
-#choices-col{
+#choices-col {
   width: 40%;
 }
 
-#wedd-img{
- width: 70%; 
- height: auto;
+#wedd-img {
+  width: 70%;
+  height: auto;
 }
 
-#wedd-div{
+#wedd-div {
   padding-top: 20px;
 }
 
-#seconds{
+#seconds {
   color: #206E63;
-  font-family: 'Geomanist-Bold', sans-serif; /* Use bold font for headings */
-  font-weight: bolder; /* Explicitly set the weight */
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
   font-size: 52px;
 }
 
-#secs{
+#secs {
   color: #206E63;
   font-size: 32px;
-  font-family: 'Geomanist-Bold', sans-serif; /* Use bold font for headings */
-  font-weight: bolder; /* Explicitly set the weight */
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
 }
 
 /* Slider Container */
@@ -2780,7 +3192,8 @@ height: auto;
   align-items: center;
   overflow: hidden;
   max-width: 850px;
-  height: 430px; /* Adjust the height as needed */
+  height: 430px;
+  /* Adjust the height as needed */
   margin: auto;
 }
 
@@ -2819,13 +3232,16 @@ height: auto;
 
 /* Make sure the <a> tag is the size of the card */
 .car a {
-  pointer-events: none; /* Disable clicking */
-  display: block; /* Ensure the <a> takes up the whole card */
+  pointer-events: none;
+  /* Disable clicking */
+  display: block;
+  /* Ensure the <a> takes up the whole card */
 }
 
 /* Enable <a> tag only when the card is focused */
 .car.focus a {
-  pointer-events: auto; /* Enable clicking */
+  pointer-events: auto;
+  /* Enable clicking */
 }
 
 
@@ -2847,7 +3263,8 @@ height: auto;
 .car-image {
   width: 228px;
   height: auto;
-  object-fit: contain; /* Ensures the image covers the card area without distortion */
+  object-fit: contain;
+  /* Ensures the image covers the card area without distortion */
 }
 
 /* Focused Card */
@@ -2858,9 +3275,12 @@ height: auto;
   z-index: 3;
   opacity: 1;
   background-image: url('../img/cardhover.png');
-  background-size: cover; /* Adjusts the background to fill the card */
-  background-position: center; /* Centers the background image */
-  background-repeat: no-repeat; /* Ensures the image doesn't repeat */
+  background-size: cover;
+  /* Adjusts the background to fill the card */
+  background-position: center;
+  /* Centers the background image */
+  background-repeat: no-repeat;
+  /* Ensures the image doesn't repeat */
   margin: 20px auto;
 }
 
@@ -2888,7 +3308,8 @@ height: auto;
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
-  background: transparent; /* Remove background */
+  background: transparent;
+  /* Remove background */
   border: none;
   cursor: pointer;
   padding: 10px;
@@ -2896,22 +3317,26 @@ height: auto;
 }
 
 .slider-btn img {
-  width: 40px; /* Adjust the size of the arrows */
-  height: 40px; /* Adjust the size of the arrows */
+  width: 40px;
+  /* Adjust the size of the arrows */
+  height: 40px;
+  /* Adjust the size of the arrows */
 }
 
 /* Left Button */
 .slider-btn.prev {
-  left: 20px; /* Adjust position for the left button */
+  left: 20px;
+  /* Adjust position for the left button */
 }
 
 /* Right Button */
 .slider-btn.next {
-  right: 20px; /* Adjust position for the right button */
+  right: 20px;
+  /* Adjust position for the right button */
 }
 
 .game-end {
-  background-color: #206E63;  
+  background-color: #206E63;
   color: white;
   border: none;
   padding: 10px 30px 13px 30px;
@@ -2925,30 +3350,29 @@ height: auto;
 }
 
 .game-end:hover {
-  background-color: #D4C029; 
+  background-color: #D4C029;
   transform: scale(0.9);
   color: #fff;
   text-decoration: none;
 
 }
 
-#end-div{
+#end-div {
   padding-top: 170px;
 }
 
-#end-body{
-   padding-top: 40px;
-   padding-bottom: 5px;
-   padding-left: 350px;
-   padding-right: 350px;
+#end-body {
+  padding-top: 40px;
+  padding-bottom: 5px;
+  padding-left: 350px;
+  padding-right: 350px;
 }
 
-#end-button{
-   margin-left: 150px;
-   margin-right: 130px;
-   padding-top: 30px;
+#end-button {
+  margin-left: 150px;
+  margin-right: 130px;
+  padding-top: 30px;
 }
-
 
 
   /* Breakpoints for index page*/
@@ -3748,15 +4172,16 @@ height: auto;
           opacity: 0; /* Start hidden */
           transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
           animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
+          padding-top: 25px;
         }
         
         .info-container2 .overlay-text {
-          top: 25%; /* Adjust as needed */
+          top: 34%; /* Adjust as needed */
           left: 50%; /* Adjust as needed */
           right: 14%; /* Adjust as needed */
           color: black; /* Adjust text color */
           font-weight: normal;
-          font-size: 12px;
+          font-size: 11px;
           text-align: center;
           justify-content: center;
           opacity: 0; /* Start hidden */
@@ -3967,7 +4392,7 @@ height: auto;
    }
 
    #phone-button {
- padding-top: 250px;
+ padding-top: 270px;
 }
 
 .phone-call {
