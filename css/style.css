@@ -3470,7 +3470,7 @@ li:nth-child(odd) {
   #title-text {
     font-size:13px;
   padding-bottom: 8px;
-  padding-top: 8px;
+  padding-top: 4px;
 }
 
   h1 {
@@ -3498,10 +3498,10 @@ li:nth-child(odd) {
   }
 
   .circular-progress {
-    width: 53px;
+    width: 48px;
     /* Outer ring size */
-    height: 53px;
-    margin-right: 10px;
+    height: 48px;
+    margin-right: 11px;
     /* Space between the circle and the factor image */
   }
 
@@ -3591,21 +3591,22 @@ li:nth-child(odd) {
   }
 
   .info-container2 img {
-    width: 45%;
+    width: 55%;
     height: auto;
     opacity: 0;
     /* Start hidden */
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
+     padding-top: 5px;
   }
 
   .info-container2 .overlay-text {
-    top: 25%;
+    top: 14%;
     /* Adjust as needed */
-    left: 52%;
+    left: 50%;
     /* Adjust as needed */
-    right: 13%;
+    right: 15%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
@@ -3621,7 +3622,7 @@ li:nth-child(odd) {
   }
 
   #info-button {
-    padding-top: 10px;
+    padding-top: 40px;
   }
 
 
@@ -3641,7 +3642,7 @@ li:nth-child(odd) {
    #car1,
   #car2,
   #car3 {
-    padding-bottom: 120px;
+    padding-bottom: 150px;
   }
 
   #car-video1,
@@ -3653,7 +3654,7 @@ li:nth-child(odd) {
 }
 
 .car {
-    width: 125px;
+    width: 105px;
     height: auto;
     background: none;
   }
