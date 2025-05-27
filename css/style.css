@@ -3377,8 +3377,8 @@ li:nth-child(odd) {
 
   /* Breakpoints for index page*/
 
-  @media (min-width: 700px) and (max-width: 799px) {
- #index {
+@media (min-width: 700px) and (max-width: 799px) {
+  #index {
     padding-top: 60px;
   }
 
@@ -3455,13 +3455,17 @@ li:nth-child(odd) {
     overflow: visible;
     /* Hide overflow */
   }
-    
-      .creditscore-img {
-        width: 94%;
-        height: auto;
-        opacity: 1;
-        position: relative;
-      }
+
+  .creditscore-img {
+    width: 94%;
+    height: auto;
+    opacity: 1;
+    position: relative;
+  }
+
+  .hidden-section {
+    padding-top: 5px;
+  }
 
   #title-text {
     font-size:13px;
@@ -3469,162 +3473,269 @@ li:nth-child(odd) {
   padding-top: 8px;
 }
 
-      h1{
-        font-size: small;
-      }
-
-      .hovertest{
-        padding-top: 10px;
-        margin: 0;
-      }
-
-      .my-card2 {
-        width: 90%;
-        height: 130px;
-        background-position: center;
-        padding: 15px;
-      }
-
-      .my-card2:hover {
-        background-size: 100% 125px;
-      }
-
-      .circular-progress-container {
-        padding-bottom: 20px;
-      }
-
-      .circular-progress {
-        width: 53px; /* Outer ring size */
-        height: 53px;
-        margin-right: 10px; /* Space between the circle and the factor image */
-      }
-
-      .inner-circle {
-        width: 80%; /* Inner circle size */
-        height: 80%;
-        background-color: #FCF8EA; /* Inner circle color */
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        z-index: 1; /* Ensure it is above the outer ring */
-      }
-
-      .factor-up-image {
-        width: 14px; /* Adjust size as needed */
-        height: auto;
-        z-index: 2; /* Make sure it's on top */
-        position: relative; /* Ensure it positions beside the circular progress */
-        transform: translateX(0px); /* Optional: Adjust position */
-        opacity: 0; /* Start with the image hidden */
-        transition: opacity 0.5s ease, transform 0.5s ease; /* Apply transition effects */
-        bottom: 3px;
-      }
-
-              #narration{
-        position: relative; /* Change to relative */
-        width: 100vw;
-        height: 100vh; /* Cover the full viewport height */
-        margin: 0;
-        padding: 0;
-        background-size: contain;
-        padding-left: 70px;
-        padding-top: 30px; 
-      }
-
-      #instruction{
-        width: 90%;
-        height: 90%;
-        display: block;
-      }
-      
-      #info{
-        font-size: 25px;
-       }
-
-      #info-icon{
-        padding-left: 70px;
-      }
-
-      #howto {
-        position: absolute; 
-        top: 83%; 
-        left: 50%; 
-        transform: translate(-50%, -50%);
-        opacity: 0; /* Fully transparent */
-        transition: opacity 0.2s ease-in-out;
-        animation: fadeInButton 0.2s ease-in-out 2s forwards; /* Delay of 6 seconds */
-        display: none;
-       }
-
-       .howto-button {
-        background-color: #D4C029;    
-        color: white;
-        border: none;
-        padding: 6px 10px 8px 10px;
-        width: 13%;
-        font-size: 12px;
-        cursor: pointer;
-        transition: background-color 0.3s, transform 0.3s;
-        text-decoration: none;
-        border-radius: 4px;
-      }
-
-    .info-container2 img {
-          width: 53%;
-          height: auto;
-          opacity: 0; /* Start hidden */
-          transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-          animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
-        }
-        
-        .info-container2 .overlay-text {
-          top: 28%; /* Adjust as needed */
-          left: 50%; /* Adjust as needed */
-          right: 14%; /* Adjust as needed */
-          color: black; /* Adjust text color */
-          font-weight: normal;
-          font-size: 12px;
-          text-align: center;
-          justify-content: center;
-          opacity: 0; /* Start hidden */
-          transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-          animation: fadeIn2 1s ease-in-out 0.8s forwards; /* Animation with delay */
-        }
-        
-      #info-button{
-        padding-top: 20px;
-      }
-
-            
-.game-button {
-  background-color: #D4C029;    
-  color: white;
-  border: none;
-  padding: 8px 10px 8px 10px;
-  width: 13%;
-  font-size: 12px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-         .grid {
-  top: 15%;
-  left: 10%;
-  display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-gap: 10px;
-  position:relative;
-  align-items:center;
-  justify-content:center;
-  transform: translateY(-50%);
-  z-index: 1000;
-}
-    
+  h1 {
+    font-size: small;
   }
+
+  .hovertest {
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  .my-card2 {
+    width: 90%;
+    height: 130px;
+    background-position: center;
+    padding: 15px;
+  }
+
+  .my-card2:hover {
+    background-size: 100% 125px;
+  }
+
+  .circular-progress-container {
+    padding-bottom: 25px;
+  }
+
+  .circular-progress {
+    width: 53px;
+    /* Outer ring size */
+    height: 53px;
+    margin-right: 10px;
+    /* Space between the circle and the factor image */
+  }
+
+  .inner-circle {
+    width: 80%;
+    /* Inner circle size */
+    height: 80%;
+    background-color: #FCF8EA;
+    /* Inner circle color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    /* Ensure it is above the outer ring */
+  }
+
+  .factor-up-image {
+    width: 12px;
+    /* Adjust size as needed */
+    height: auto;
+    z-index: 2;
+    /* Make sure it's on top */
+    position: relative;
+    /* Ensure it positions beside the circular progress */
+    transform: translateX(0px);
+    /* Optional: Adjust position */
+    opacity: 0;
+    /* Start with the image hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Apply transition effects */
+    bottom: 3px;
+  }
+
+  #narration {
+    position: relative;
+    /* Change to relative */
+    width: 100vw;
+    height: 100vh;
+    /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    padding-left: 70px;
+    padding-top: 30px;
+  }
+
+  #instruction {
+    width: 90%;
+    height: 90%;
+    display: block;
+  }
+
+  #info {
+    font-size: 28px;
+  }
+
+  #info-icon {
+    padding-left: 70px;
+  }
+
+  #howto {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards;
+    /* Delay of 6 seconds */
+    display: none;
+  }
+
+  .howto-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 6px 10px 8px 10px;
+    width: 13%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  .info-container2 img {
+    width: 45%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  .info-container2 .overlay-text {
+    top: 25%;
+    /* Adjust as needed */
+    left: 52%;
+    /* Adjust as needed */
+    right: 13%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 9px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  #info-button {
+    padding-top: 10px;
+  }
+
+
+  .game-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 6px 10px 8px 10px;
+    width: 13%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+   #car1,
+  #car2,
+  #car3 {
+    padding-bottom: 120px;
+  }
+
+  #car-video1,
+#car-video2,
+#car-video3 {
+  width: 100%;
+  height: 92%;
+  display: block;
+}
+
+.car {
+    width: 125px;
+    height: auto;
+    background: none;
+  }
+
+  /* Ensure the image fits within the card */
+  .car-image {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    /* Ensures the image covers the card area without distortion */
+  }
+
+  /* Focused Card */
+  .car.focus {
+    width: 120px;
+    height: 150px;
+    transform: translateX(0) scale(1.1);
+    z-index: 3;
+    opacity: 1;
+    background-image: url('../img/cardhover.png');
+    background-size: cover;
+    /* Adjusts the background to fill the card */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Ensures the image doesn't repeat */
+    margin: 20px auto;
+  }
+
+  .slider-btn {
+    top: 40%;
+  }
+
+
+  .slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+  .slider-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 770px;
+    height: 180px;
+    /* Adjust the height as needed */
+    margin: auto;
+  }
+
+  .car.left {
+    transform: translateX(-70px) scale(0.9);
+    z-index: 2;
+  }
+
+  .car.right {
+    transform: translateX(70px) scale(0.9);
+    z-index: 2;
+  }
+
+  .choice-card {
+    text-decoration: none;
+    color: #206E63;
+    /* Initial text color */
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+   #choices-div {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 5px;
+  }
+
+
+}
  
   @media (min-width: 800px) and (max-width: 899px) {
     #index{
