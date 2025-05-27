@@ -4222,6 +4222,11 @@ li:nth-child(odd) {
         font-size: large;
       }
 
+     #title-text2 {
+    font-size:large;
+  padding-top: 120px;
+}
+
       h1{
         font-size:x-large;
       }
