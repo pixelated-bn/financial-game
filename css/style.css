@@ -3463,10 +3463,11 @@ li:nth-child(odd) {
         position: relative;
       }
 
-
-      #title-text{
-        font-size: small;
-      }
+  #title-text {
+    font-size:13px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
 
       h1{
         font-size: small;
@@ -3543,7 +3544,7 @@ li:nth-child(odd) {
        }
 
       #info-icon{
-        padding-left: 60px;
+        padding-left: 70px;
       }
 
       #howto {
