@@ -3378,7 +3378,7 @@ li:nth-child(odd) {
   /* Breakpoints for index page*/
 
   @media (min-width: 700px) and (max-width: 799px) {
-  #index {
+ #index {
     padding-top: 60px;
   }
 
@@ -3420,30 +3420,42 @@ li:nth-child(odd) {
   }
 
 
-      #creditmeter {
-        position: fixed;
-        top: 15px; /* Distance from the top */
-        left: 0; /* Stick to the left */
-        width: 20%; /* Adjust width */
-        z-index: 1000; /* Ensure it’s above other content */
-      }
+  #creditmeter {
+    position: fixed;
+    top: 15px;
+    /* Distance from the top */
+    left: 0;
+    /* Stick to the left */
+    width: 20%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
 
-      #factormeter {
-        position: fixed;
-        top: 4px; /* Distance from the top */
-        right: 18px; /* Stick to the right */
-        width: 20%; /* Adjust width */
-        z-index: 1000; /* Ensure it’s above other content */
-      }
+  #factormeter {
+    position: fixed;
+    top: 5px;
+    /* Distance from the top */
+    right: 18px;
+    /* Stick to the right */
+    width: 20%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
 
-      #cs-font{
-          font-size: 10px;
-      }
-      .credit-score-container {
-        position: relative;
-        height: 180px; /* Set a specific height */
-        overflow: visible; /* Hide overflow */
-      }
+  #cs-font {
+    font-size: 10px;
+  }
+
+  .credit-score-container {
+    position: relative;
+    height: 142px;
+    /* Set a specific height */
+    overflow: visible;
+    /* Hide overflow */
+  }
+    
       .creditscore-img {
         width: 94%;
         height: auto;
