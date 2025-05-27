@@ -3378,42 +3378,46 @@ li:nth-child(odd) {
   /* Breakpoints for index page*/
 
   @media (min-width: 700px) and (max-width: 799px) {
-    #index{
-      padding-top: 40px;
-    }
-    #footer {
-      position: fixed;
-      margin-bottom: 8px;
-      width: 100%;
-      height:5%;
-    }
-    #narrative-style{
-      padding-top: 5px; 
-      width: 70%; 
-      overflow: hidden; 
-      white-space: nowrap; 
-      padding-left: 5px; 
-      padding-right: 10px;
-    }
-    #typewriter {
-      font-size: 20px;
-      }
+  #index {
+    padding-top: 60px;
+  }
 
-   .index-button{
-          background-color: #D4C029;    
-          color: white;
-          border: none;
-          padding: 10px 40px 15px 40px;
-          width: 30%;
-          font-size: 18px;
-          font-weight: normal;
-          opacity: 0; /* Initially hidden */
-          cursor: pointer;
-          transition: background-color 0.3s, transform 0.3s, opacity 1s;
-          text-decoration: none;
-          border-radius: 4px;
-        
-      }
+  #footer {
+    position: fixed;
+    margin-bottom: 9px;
+    width: 100%;
+    height: 5%;
+  }
+
+  #narrative-style {
+    padding-top: 25px;
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  #typewriter {
+    font-size: 15px;
+  }
+
+  .index-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 9px 20px 10px 20px;
+    width: 30%;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0;
+    /* Initially hidden */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, opacity 1s;
+    text-decoration: none;
+    border-radius: 4px;
+
+  }
 
 
       #creditmeter {
