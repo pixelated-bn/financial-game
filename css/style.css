@@ -1165,6 +1165,25 @@ h1 {
   padding-top: 40px;
 }
 
+   #title-text2 {
+  padding-bottom: 20px;
+  padding-top: 120px;
+}
+
+  #util-img {
+  width: 80%;
+  height: auto;
+}
+
+#util-div {
+  padding-top: 20px;
+}
+
+#util-btn {
+  padding-bottom: 28px;
+}
+
+
 #qs-text {
   padding-bottom: 10px;
   padding-top: 10px;
@@ -3742,6 +3761,19 @@ li:nth-child(odd) {
     gap: 5px;
   }
 
+    #util-img {
+  width: 60%;
+  height: auto;
+}
+
+#util-div {
+  padding-top: 20px;
+}
+
+#util-btn {
+  padding-bottom: 28px;
+}
+
 
 }
  
@@ -4222,8 +4254,8 @@ li:nth-child(odd) {
         font-size: large;
       }
 
-     #title-text2 {
-    font-size:large;
+   #title-text2 {
+  padding-bottom: 20px;
   padding-top: 120px;
 }
 
@@ -4638,5 +4670,19 @@ button {
    margin-right: 130px;
    padding-top: 20px;
 }
+
+     #util-img {
+  width: 80%;
+  height: auto;
+}
+
+#util-div {
+  padding-top: 20px;
+}
+
+#util-btn {
+  padding-bottom: 28px;
+}
+
      
  }
