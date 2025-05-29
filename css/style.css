@@ -3761,13 +3761,13 @@ li:nth-child(odd) {
     gap: 5px;
   }
 
-    #util-img {
-  width: 60%;
+#util-img {
+  width: 55%;
   height: auto;
 }
 
 #util-div {
-  padding-top: 20px;
+  padding-top: 28px;
 }
 
 #util-btn {
