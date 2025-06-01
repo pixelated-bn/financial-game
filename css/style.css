@@ -748,7 +748,7 @@ h1 {
   transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
   animation: fadeIn2 1s ease-in-out 0.8s forwards;
   /* Animation with delay */
-  padding-top: 26px;
+  padding-top: 15px;
 }
 
 .info-container2 .overlay-text {
