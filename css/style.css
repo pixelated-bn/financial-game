@@ -3520,7 +3520,7 @@ li:nth-child(odd) {
   }
 
      #game-desc1 {
-    font-size:8px;
+    font-size:11px;
   padding-top: 5px;
   padding-bottom: 5px;
   }
@@ -3652,11 +3652,11 @@ li:nth-child(odd) {
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
-     padding-top: 18px;
+     padding-top: 16px;
   }
 
   .info-container2 .overlay-text {
-    top: 16%;
+    top: 17%;
     /* Adjust as needed */
     left: 50%;
     /* Adjust as needed */
@@ -3821,7 +3821,7 @@ li:nth-child(odd) {
 .monument {
   width: 100%;
   /* Make sure the image takes the full width of its container */
-  max-height: 39px;
+  max-height: 45px;
   /* Limit the maximum height of the images */
   object-fit: contain;
   /* Ensures that the image is resized to fit within the box without distortion */
@@ -3842,24 +3842,24 @@ li:nth-child(odd) {
 }
 
 .japan1 {
-  width: 62%;
+  width: 67%;
   /* Make sure the image takes the full width of its container */
   max-height: 27px;
   /* Limit the maximum height of the images */
   object-fit: contain;
   /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 8px;
+  margin: 11px;
   /* Space between the image and location box */
 }
 
 .egypt1 {
-  width: 47%;
+  width: 55%;
   /* Make sure the image takes the full width of its container */
   max-height: 50px;
   /* Limit the maximum height of the images */
   object-fit: contain;
   /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 5px;
+  margin: 6px;
   /* Space between the image and location box */
 }
 
