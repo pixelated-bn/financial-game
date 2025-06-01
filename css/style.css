@@ -2524,7 +2524,7 @@ li:nth-child(odd) {
 }
 
 #wedd-box {
-  padding-top: 100px;
+  margin-top: 50px;
 }
 
 #weddscore {
@@ -3859,7 +3859,7 @@ li:nth-child(odd) {
 .monument {
   width: 100%;
   /* Make sure the image takes the full width of its container */
-  max-height: 45px;
+  max-height: 50px;
   /* Limit the maximum height of the images */
   object-fit: contain;
   /* Ensures that the image is resized to fit within the box without distortion */
@@ -3880,24 +3880,24 @@ li:nth-child(odd) {
 }
 
 .japan1 {
-  width: 67%;
+  width: 80%;
   /* Make sure the image takes the full width of its container */
-  max-height: 27px;
+  max-height: 30px;
   /* Limit the maximum height of the images */
   object-fit: contain;
   /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 11px;
+  margin: 12px;
   /* Space between the image and location box */
 }
 
 .egypt1 {
-  width: 55%;
+  width: 70%;
   /* Make sure the image takes the full width of its container */
   max-height: 50px;
   /* Limit the maximum height of the images */
   object-fit: contain;
   /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 6px;
+  margin: 4px;
   /* Space between the image and location box */
 }
 
@@ -3927,15 +3927,20 @@ li:nth-child(odd) {
     /* Maintain aspect ratio */
   }
 
+  
     #wedding-box {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 10px;
     padding-left: 70px;
     padding-right: 0px;
+    padding-bottom: 160px;
   }
+
+  #wedd-box {
+  margin-top: 10px;
+}
 
   .grid {
     display: grid;
@@ -3966,8 +3971,9 @@ li:nth-child(odd) {
     /* Table adjusts to fit its content */
     margin: 0 auto;
     /* Center table horizontally */
-    width: 60%;
+    width: 50%;
     /* Adjust to desired percentage */
+    padding-top: 20px;
   }
 
   .tooltip-text {
@@ -4147,7 +4153,7 @@ li:nth-child(odd) {
   }
 
     #phone-button {
-    padding-top: 120px;
+    padding-top: 135px;
   }
 
   .phone-call {
@@ -4176,7 +4182,7 @@ li:nth-child(odd) {
 .quiz-progress {
   padding-left: 100px;
   padding-right: 100px;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 #questions{
@@ -4212,7 +4218,7 @@ li:nth-child(odd) {
 
   .vertical-line {
     position: absolute;
-    top: 186px;
+    top: 200px;
     /* Adjust this value to control the distance from the top */
     left: 51%;
     width: 1px;
