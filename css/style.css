@@ -112,6 +112,20 @@ h1 {
   display: block;
 }
 
+  #util-img {
+  width: 80%;
+  height: auto;
+}
+
+#util-div {
+  padding-top: 20px;
+}
+
+#util-btn {
+  padding-bottom: 28px;
+}
+
+
 #index {
   padding-top: 180px;
 }
@@ -1180,20 +1194,6 @@ h1 {
   padding-bottom: 20px;
   padding-top: 40px;
 }
-
-  #util-img {
-  width: 80%;
-  height: auto;
-}
-
-#util-div {
-  padding-top: 20px;
-}
-
-#util-btn {
-  padding-bottom: 28px;
-}
-
 
 #qs-text {
   padding-bottom: 10px;
@@ -2591,7 +2591,7 @@ li:nth-child(odd) {
   /* Limit the maximum height of the images */
   object-fit: contain;
   /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 8px;
+  margin: 5px;
   /* Space between the image and location box */
 }
 
@@ -3641,7 +3641,7 @@ li:nth-child(odd) {
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
-     padding-top: 5px;
+     padding-top: 10px;
   }
 
   .info-container2 .overlay-text {
@@ -3801,6 +3801,84 @@ li:nth-child(odd) {
   padding-bottom: 28px;
 }
 
+  
+#vacation {
+  padding-top: 10px;
+  width: 420px;
+}
+
+.monument {
+  width: 100%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 35px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin-bottom: 3px;
+  /* Space between the image and location box */
+}
+
+.location {
+  background-color: whitesmoke;
+  width: 100px;
+  height: 22px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px dotted #D4C029;
+}
+
+.japan1 {
+  width: 60%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 25px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 7px;
+  /* Space between the image and location box */
+}
+
+.egypt1 {
+  width: 45%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 50px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 2px;
+  /* Space between the image and location box */
+}
+
+#location7 {
+  margin-left: 0px;
+   width: 100px;
+  height: 22px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+ #title-items {
+    padding-top: 2px;
+  }
+
+    #vacay-box {
+    margin-bottom: 7px;
+    /* Add some space between rows */
+    width: 100%;
+    /* Ensure they take up 100% of their container width */
+  }
+
+   .imgs {
+    width: 10%;
+    /* Set the width relative to the container's width */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+}
 
 }
  
@@ -4286,6 +4364,10 @@ li:nth-child(odd) {
   padding-top: 120px;
 }
 
+    #title-text3 {
+ font-size: large;
+}
+
       h1{
         font-size:x-large;
       }
@@ -4497,19 +4579,27 @@ li:nth-child(odd) {
   margin-bottom: 10px; /* Space between the image and location box */
 }
 
-.japan1 {
-  width: 100%; /* Make sure the image takes the full width of its container */
-  max-height: 100px; /* Limit the maximum height of the images */
-  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 14px; /* Space between the image and location box */
-}
+ .japan1 {
+    width: 100%;
+    /* Make sure the image takes the full width of its container */
+    max-height: 100px;
+    /* Limit the maximum height of the images */
+    object-fit: contain;
+    /* Ensures that the image is resized to fit within the box without distortion */
+    margin: 13px;
+    /* Space between the image and location box */
+  }
 
-.egypt1 {
-  width: 95%; /* Make sure the image takes the full width of its container */
-  max-height: 150px; /* Limit the maximum height of the images */
-  object-fit: contain; /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 10px; /* Space between the image and location box */
-}
+  .egypt1 {
+    width: 95%;
+    /* Make sure the image takes the full width of its container */
+    max-height: 150px;
+    /* Limit the maximum height of the images */
+    object-fit: contain;
+    /* Ensures that the image is resized to fit within the box without distortion */
+    margin: 5px;
+    /* Space between the image and location box */
+  }
 
 #location7 {
   margin-left: 10px;
