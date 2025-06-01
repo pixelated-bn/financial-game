@@ -3636,7 +3636,7 @@ li:nth-child(odd) {
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
-     padding-top: 40px;
+     padding-top: 18px;
   }
 
   .info-container1 .overlay-text {
@@ -4174,7 +4174,7 @@ li:nth-child(odd) {
 .quiz-progress {
   padding-left: 100px;
   padding-right: 100px;
-  padding-top: 40px;
+  padding-top: 55px;
 }
 
 #questions{
