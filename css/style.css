@@ -3642,7 +3642,7 @@ li:nth-child(odd) {
   .info-container1 .overlay-text {
     top: 25%;
     /* Adjust as needed */
-    left: 50%;
+    left: 49%;
     /* Adjust as needed */
     right: 10%;
     /* Adjust as needed */
@@ -3671,7 +3671,7 @@ li:nth-child(odd) {
   }
 
   .info-container2 .overlay-text {
-    top: 17%;
+    top: 18%;
     /* Adjust as needed */
     left: 50%;
     /* Adjust as needed */
@@ -3680,7 +3680,7 @@ li:nth-child(odd) {
     color: black;
     /* Adjust text color */
     font-weight: normal;
-    font-size: 8px;
+    font-size: 7px;
     text-align: center;
     justify-content: center;
     opacity: 0;
@@ -3723,19 +3723,11 @@ li:nth-child(odd) {
 }
 
  #scenario-video1, #scenario-video2,
-  #scenario-video4 {
+ #scenario-video3, #scenario-video4 {
   width: 100%;
  height: 99%;
   display: block;
 }
-
- #scenario-video3 {
-  width: 100%;
- height: auto;
-  display: block;
-}
-
-
 
    #game1 {
     padding-bottom: 100px;
@@ -3969,7 +3961,7 @@ li:nth-child(odd) {
     /* Table adjusts to fit its content */
     margin: 0 auto;
     /* Center table horizontally */
-    width: 50%;
+    width: 57%;
     /* Adjust to desired percentage */
     padding-top: 20px;
   }
