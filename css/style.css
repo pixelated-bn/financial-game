@@ -779,7 +779,7 @@ h1 {
 .info-container1 .overlay-text {
   top: 40%;
   /* Adjust as needed */
-  left: 50%;
+  left: 49%;
   /* Adjust as needed */
   right: 10%;
   /* Adjust as needed */
@@ -3642,7 +3642,7 @@ li:nth-child(odd) {
   .info-container1 .overlay-text {
     top: 25%;
     /* Adjust as needed */
-    left: 50%;
+    left: 48%;
     /* Adjust as needed */
     right: 10%;
     /* Adjust as needed */
@@ -3726,6 +3726,12 @@ li:nth-child(odd) {
  #scenario-video3, #scenario-video4 {
   width: 100%;
  height: 99%;
+  display: block;
+}
+
+ #scenario-video4 {
+  width: 100%;
+ height: auto;
   display: block;
 }
 
@@ -4210,7 +4216,7 @@ li:nth-child(odd) {
 
   .vertical-line {
     position: absolute;
-    top: 220px;
+    top: 235px;
     /* Adjust this value to control the distance from the top */
     left: 51%;
     width: 1px;
@@ -4975,7 +4981,7 @@ li:nth-child(odd) {
   .info-container1 .overlay-text {
     top: 34%;
     /* Adjust as needed */
-    left: 50%;
+    left: 49%;
     /* Adjust as needed */
     right: 14%;
     /* Adjust as needed */
