@@ -5401,5 +5401,413 @@ li:nth-child(odd) {
   padding-bottom: 28px;
 }
 
+}
+
+@media (min-width: 1920px) and (max-width: 2000px) {
+   #index {
+    padding-top: 340px;
+  }
+
+  #footer {
+    position: fixed;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 5%;
+  }
+
+  #footer a{
+    font-size: 28px;
+  }
+
+  #narrative-style {
+    padding-top: 28vh;
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 25px;
+    padding-right: 45px;
+  }
+
+  #typewriter {
+    font-size: 40px;
+
+  }
+
+  .index-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 20px 60px 25px 60px;
+    width: 20%;
+    font-size: 32px;
+    font-weight: normal;
+    opacity: 0;
+    /* Initially hidden */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, opacity 1s;
+    text-decoration: none;
+    border-radius: 4px;
+
+  }
+
+
+.howto-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+ padding: 20px 60px 25px 60px;
+  width: 20%;
+  font-size: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+#howto {
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+
+#info {
+  font-size: 60px;
+  color: #206E63;
+}
+
+
+#info-icon {
+  padding-left: 200px;
+}
+
+ #creditmeter {
+    position: fixed;
+    top: 150px;
+    /* Distance from the top */
+    left: 0;
+    /* Stick to the left */
+    width: 20%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+    .credit-score-container {
+    position: relative;
+    height: 620px;
+    /* Set a specific height */
+    overflow: visible;
+    /* Hide overflow */
+  }
+
+  .creditscore-img {
+  width: 130%;
+  height: 650px;
+  opacity: 1;
+  position: relative;
+}
+
+.creditarrow-img {
+  position: absolute;
+  left: 110%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 70%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 51%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+.opacity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130%;
+  height: 107%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+#cs-font {
+    font-size: 35px;
+    padding-left: 45px;
+  }
+
+  
+  #factormeter {
+    position: fixed;
+    top: 190px;
+    /* Distance from the top */
+    right: 18px;
+    /* Stick to the right */
+    width: 20%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+
+
+.circular-progress-container {
+    padding-bottom: 130px;
+    width: 300px;
+  }
+
+  .circular-progress {
+    width: 120px;
+    /* Outer ring size */
+    height: 120px;
+    margin-right: 30px;
+    /* Space between the circle and the factor image */
+  }
+
+  .inner-circle {
+    width: 100%;
+    /* Inner circle size */
+    height: 100%;
+    background-color: #FCF8EA;
+    /* Inner circle color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    /* Ensure it is above the outer ring */
+  }
+
+  .outer-ring {
+  width: 130%;
+  height: 130%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+
+  .factor-up-image {
+    width: 50px;
+    /* Adjust size as needed */
+    height: auto;
+    z-index: 2;
+    /* Make sure it's on top */
+    position: relative;
+    /* Ensure it positions beside the circular progress */
+    transform: translateX(0px);
+    /* Optional: Adjust position */
+    opacity: 0;
+    /* Start with the image hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Apply transition effects */
+    bottom: 3px;
+  }
+
+
+  #title-text {
+    font-size: 37px;
+  padding-bottom: 50px;
+  padding-top: 120px;
+}
+
+h1 {
+    font-size: 52px;
+  }
+
+   .hovertest {
+    padding-top: 50px;
+    margin: 0;
+  }
+
+  .my-card2 {
+    width: 90%;
+    height: 420px;
+    background-position: center;
+    padding: 15px;
+  }
+
+  .my-card2:hover {
+    background-size: 100% 410px;
+  }
+
+    .info-container2 img {
+    width: 70%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+     padding-top: 50px;
+  }
+
+  .info-container2 .overlay-text {
+    top: 45%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    right: 5%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 28px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  #info-button {
+    padding-top: 55px;
+  }
+
+    .game-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+  padding: 20px 60px 25px 60px;
+  width: 30%;
+  font-size: 32px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+
+    #util-img {
+  width: 80%;
+  height: auto;
+}
+
+#util-div {
+  padding-top: 80px;
+}
+
+#util-btn {
+  padding-bottom: 28px;
+}
+
+
+.car {
+    width: 310px;
+    height: auto;
+    background: none;
+  }
+
+  /* Ensure the image fits within the card */
+  .car-image {
+    width: 300px;
+    height: auto;
+    object-fit: contain;
+    /* Ensures the image covers the card area without distortion */
+  }
+
+  /* Focused Card */
+  .car.focus {
+    width: 320px;
+    height: 440px;
+    transform: translateX(0) scale(1.1);
+    z-index: 3;
+    opacity: 1;
+    background-image: url('../img/cardhover.png');
+    background-size: cover;
+    /* Adjusts the background to fill the card */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Ensures the image doesn't repeat */
+    margin: 20px auto;
+  }
+
+  .slider-btn {
+    top: 50%;
+  }
+
+
+  .slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+  .slider-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 900px;
+    height: 520px;
+    /* Adjust the height as needed */
+    margin: auto;
+  }
+
+  .car.left {
+    transform: translateX(-170px) scale(0.9);
+    z-index: 2;
+  }
+
+  .car.right {
+    transform: translateX(160px) scale(0.9);
+    z-index: 2;
+  }
+
+     #car1,
+  #car2,
+  #car3 {
+    padding-bottom: 400px;
+  }
+
+    #title-text2 {
+  padding-top: 300px;
+      font-size: 37px;
+}
+
+  #choices-div {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 120px;
+    padding-right: 120px;
+    gap: 3px;
+  }
+
+  .choice-card {
+    text-decoration: none;
+    color: #206E63;
+    /* Initial text color */
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+    #title-text3 {
+  font-size: 35px;
+  padding-bottom: 50px;
+  padding-top: 100px;
+}
+
 
 }
