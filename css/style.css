@@ -4523,7 +4523,7 @@ li:nth-child(odd) {
 
 @media (min-width: 900px) and (max-width: 999px) {
   #index {
-    padding-top: 110px;
+    padding-top: 60px;
   }
 
   #footer {
