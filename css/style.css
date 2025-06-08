@@ -5789,9 +5789,9 @@ h1 {
   #choices-div {
     display: flex;
     justify-content: space-between;
-    padding-top: 10px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-top: 30px;
+    padding-left: 160px;
+    padding-right: 160px;
     gap: 3px;
   }
 
@@ -5809,5 +5809,467 @@ h1 {
   padding-top: 100px;
 }
 
+
+  #game1, #game2,
+  #game3, #game4 {
+    top: 76%;
+  }
+
+#game-desc1 {
+    font-size:40px;
+  padding-bottom: 25px;
+  padding-top: 35px;
+  }
+
+  #vacation {
+  width: 1500px;
+ margin-top: 25px;
+}
+
+#vacay-row {
+  padding-top: 50px;
+}
+
+.monument {
+  width: 100%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 200px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin-bottom: 10px;
+  /* Space between the image and location box */
+}
+
+.location {
+  background-color: whitesmoke;
+  width: 260px;
+  height: 65px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px dotted #D4C029;
+}
+
+.japan1 {
+  width: 100%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 150px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 40px;
+  /* Space between the image and location box */
+}
+
+.egypt1 {
+  width: 100%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 190px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 14px;
+  /* Space between the image and location box */
+}
+
+#location7 {
+  margin-right: 40px;
+}
+
+#title-items {
+  padding-top: 30px;
+}
+
+.imgs {
+  width: 15%;
+  /* Set the width relative to the container's width */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+    .info-container1 img {
+    width: 70%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+     padding-top: 120px;
+  }
+
+  .info-container1 .overlay-text {
+    top: 45%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    right: 5%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 28px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+      #wedding-box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-bottom: 220px;
+  }
+
+  #wedd-box {
+  margin-top: 10px;
+}
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 160px);
+    gap: 5px;
+    /* Centering handled by parent */
+    /* Removed top, left, and transform */
+  }
+
+   .card-game {
+    width: 160px;
+    height: 190px;
+    background: url('../img/wedding/card-cover.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #D4C029;
+  }
+
+    .timer-text-box {
+  font-size: 60px;
+  font-weight: bold;
+  color: #206E63;
+}
+
+.timer {
+  font-size: 10px;
+  font-weight: bold;
+  color: #206E63;
+}
+
+.timer .colon {
+  width: auto;
+  /* Smaller width */
+  height: 80px;
+  /* Fixed height */
+  margin-right: 10px;
+}
+
+#seconds {
+  color: #206E63;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+  font-size: 68px;
+}
+
+#secs {
+  color: #206E63;
+  font-size: 50px;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+}
+
+.score {
+  font-size: 60px;
+  font-weight: bolder;
+  color: #206E63;
+}
+
+#wedding-score1 {
+  font-size: 68px;
+  color: #206E63;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+  text-align: left;
+}
+
+#wedd-img {
+  width: 75%;
+  height: auto;
+}
+
+#wedd-div {
+  padding-top: 80px;
+}
+
+  table {
+    border-collapse: collapse;
+    table-layout: auto;
+    /* Adjust table to fit content width */
+    width: auto;
+    /* Table adjusts to fit its content */
+    margin: 0 auto;
+    /* Center table horizontally */
+    width: 78%;
+    /* Adjust to desired percentage */
+    padding-top: 40px;
+  }
+
+    .tooltip-text {
+  visibility: hidden;
+  width: 270px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  border-radius: 2px;
+  padding: 10px;
+  position: absolute;
+  z-index: 1;
+  bottom: 85%;
+  /* Position above the image */
+  left: 40%;
+  margin-left: -60px;
+  /* Adjust the tooltip to be centered */
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  font-size: 28px;
+}
+
+.fund1,
+  .fund2,
+  .fund3,
+  .fund4 {
+    margin: 0 auto;
+    width: 250px;
+    /* Adjust the width as needed */
+    height: 250px;
+    /* Adjust the height as needed */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*  transition: transform 0.1s ease; Smooth transition for scaling */
+  }
+
+      #email-div{
+    padding-top: 350px;
+  }
+
+  #open-email {
+  background-image: url('../img/email.png');
+  width: 130%;
+  /* Adjust as needed */
+  height: 90vh;
+  /* Adjust as needed */
+  background-size: contain;
+  /* Adjust as needed (cover, contain, etc.) */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+    #accept-email {
+    padding-top: 680px;
+    padding-left: 780px;
+  }
+
+  .accept-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+  padding: 20px 34px;
+  font-size: 24px;
+  cursor: pointer;
+  visibility: hidden;
+  /* Start hidden */
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeInButton 0.3s ease-in-out 3s forwards;
+  /* Delay of 6 seconds */
+  text-decoration: none;
+}
+
+#tips10, #tips13 {
+   top: 76%;
+    left: 50%;
+}
+
+#title-text4 {
+     font-size: 35px;
+  padding-bottom: 50px;
+  padding-top: 270px;
+  }
+
+   #phone-button {
+    padding-top: 470px;
+  }
+
+  .phone-call {
+    height: 65vh;
+    margin-top: 100px;
+  }
+
+  #call-convo {
+  padding-top: 180px;
+}
+
+.phone-img {
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.quiz-progress {
+  padding-top: 80px;
+}
+
+#question-progress-dots .dot {
+  width: 35px;
+  height: 35px;
+}
+
+.quiz{
+position:absolute;
+}
+
+#questions{
+  padding-top: 40px;
+  width: 1600px;
+  margin-left: 150px;
+}
+
+#question-words {
+    color: #206E63;
+    font-weight: bold;
+    font-size: 38px;
+    padding-left: 30px;
+  }
+
+    .options {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap onto new lines */
+    justify-content: center;
+    /* Centers the items horizontally */
+    align-items: flex-start;
+    /* Aligns items to the top of the container */
+    gap: 18px;
+    /* Optional: Adds spacing between the options */
+    font-size: 28px;
+  }
+
+  .options button {
+    width: 750px;
+    /* Set a fixed width for buttons */
+    height: 120px;
+    /* Set a fixed height for buttons */
+    padding: 5px;
+  }
+
+    .vertical-line {
+    position: absolute;
+    top: 400px;
+    /* Adjust this value to control the distance from the top */
+    left: 95%;
+    width: 1px;
+    /* Line thickness */
+    height: 58px;
+    /* Line height */
+    background-color: #206E63;
+    /* Line color */
+    transform: translateX(-50%);
+    /* Center the line horizontally */
+  }
+
+  #quiz-next {
+    width: 8%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #nextbtn-div {
+    padding-top: 70px;
+  }
+
+  .feedback {
+    font-style: bold;
+    font-size: 100%;
+    margin-top: 30px;
+    padding-top: 5px;
+    margin-right: 20px;
+    color: #fff;
+    border-top: 2px dashed #7a797a;
+    justify-content: flex-end;
+    text-align: left;
+    font-size: 32px;
+    padding: 15px;
+    margin-bottom: 80px;
+  }
+
+  #credit-link4{
+ margin-left: 820px;
+  }
+
+    #end-div {
+    padding-top: 260px;
+  }
+
+  #end-body {
+    padding-top: 30px;
+    padding-bottom: 5px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  #end-button {
+    margin-left: 150px;
+    margin-right: 130px;
+    padding-top: 60px;
+  }
+
+    #end-text{
+    font-size: 38px;
+  }
+
+  .game-end {
+  background-color: #206E63;
+  color: white;
+  border: none;
+  padding: 26px 40px 28px 40px;
+  width: 60%;
+  font-size: 34px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+#credit-end{
+  font-size: 58px;
+}
+
+#credit-end2{
+  font-size: 52px;
+}
 
 }
