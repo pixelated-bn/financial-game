@@ -5811,8 +5811,13 @@ h1 {
 
 
   #game1, #game2,
-  #game3, #game4 {
-    top: 76%;
+  #game3{
+    top: 78%;
+  }
+
+  #game4 {
+    top: 70%;
+    position: fixed;
   }
 
 #game-desc1 {
@@ -6137,6 +6142,10 @@ h1 {
   margin: 0 auto;
 }
 
+.quiz{
+  position: absolute;
+}
+
 .quiz-progress {
   padding-top: 80px;
 }
@@ -6146,9 +6155,6 @@ h1 {
   height: 35px;
 }
 
-.quiz{
-position:absolute;
-}
 
 #questions{
   padding-top: 40px;
