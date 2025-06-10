@@ -4523,37 +4523,36 @@ li:nth-child(odd) {
 
 @media (min-width: 900px) and (max-width: 999px) {
   #index {
-    padding-top: 60px;
+    padding-top: 80px;
   }
 
   #footer {
     position: fixed;
-    margin-bottom: 8px;
+    margin-bottom: 9px;
     width: 100%;
     height: 5%;
   }
 
   #narrative-style {
-    padding-top: 15vh;
-    width: 60%;
+    padding-top: 55px;
+    width: 70%;
     overflow: hidden;
     white-space: nowrap;
-    padding-left: 15px;
-    padding-right: 20px;
+    padding-left: 35px;
+    padding-right: 60px;
   }
 
   #typewriter {
-    font-size: 22px;
-
+    font-size: 15px;
   }
 
   .index-button {
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 10px 40px 15px 40px;
-    width: 18%;
-    font-size: 18px;
+    padding: 9px 20px 10px 20px;
+    width: 30%;
+    font-size: 14px;
     font-weight: normal;
     opacity: 0;
     /* Initially hidden */
@@ -4564,9 +4563,88 @@ li:nth-child(odd) {
 
   }
 
+    #howto {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards;
+    /* Delay of 6 seconds */
+    display: none;
+  }
+
+  .howto-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 6px 10px 8px 10px;
+    width: 13%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+    #info {
+    font-size: 28px;
+  }
+
+  #info-icon {
+    padding-left: 90px;
+  }
+
+   .hidden-section {
+    padding-top: 5px;
+  }
+
+ #title-text {
+    font-size:13px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+ #title-text2 {
+    font-size:13px;
+  padding-bottom: 8px;
+  padding-top: 60px;
+}
+
+  #title-text3 {
+    font-size:10px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  }
+
+   #title-text4 {
+    font-size:10px;
+  padding-bottom: 8px;
+  padding-top: 40px;
+  }
+
+    h1 {
+    font-size: small;
+  }
+
+    .game-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 6px 10px 8px 10px;
+    width: 13%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
   #creditmeter {
     position: fixed;
-    top: 60px;
+    top: 24px;
     /* Distance from the top */
     left: 0;
     /* Stick to the left */
@@ -4576,81 +4654,55 @@ li:nth-child(odd) {
     /* Ensure it’s above other content */
   }
 
-  #factormeter {
-    position: fixed;
-    top: 50px;
-    /* Distance from the top */
-    right: 18px;
-    /* Stick to the right */
-    width: 20%;
-    /* Adjust width */
-    z-index: 1000;
-    /* Ensure it’s above other content */
-  }
-
+  
   #cs-font {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .credit-score-container {
     position: relative;
-    height: 280px;
+    height: 200px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
   }
 
   .creditscore-img {
-    width: 100%;
+    width: 90%;
     height: auto;
     opacity: 1;
     position: relative;
   }
 
-  .hidden-section {
-    padding-top: 5px;
+  #factormeter {
+    position: fixed;
+    top: 20px;
+    /* Distance from the top */
+    right: 37px;
+    /* Stick to the right */
+    width: 40%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
   }
 
-  #title-text {
-    font-size: large;
-  }
-
-  h1 {
-    font-size: x-large;
-  }
-
-  .hovertest {
-    padding-top: 20px;
-    margin: 0;
-  }
-
-  .my-card2 {
-    width: 100%;
-    height: 250px;
-    background-position: center;
-    padding: 15px;
-  }
-
-  .my-card2:hover {
-    background-size: 100% 240px;
-  }
 
   .circular-progress-container {
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 
   .circular-progress {
-    width: 80px;
+    width: 53px;
     /* Outer ring size */
-    height: 80px;
+    height: 53px;
     margin-right: 10px;
     /* Space between the circle and the factor image */
   }
 
   .inner-circle {
-    width: 83%;
+    width: 80%;
     /* Inner circle size */
-    height: 83%;
+    height: 80%;
     background-color: #FCF8EA;
     /* Inner circle color */
     border-radius: 50%;
@@ -4663,7 +4715,7 @@ li:nth-child(odd) {
   }
 
   .factor-up-image {
-    width: 24px;
+    width: 14px;
     /* Adjust size as needed */
     height: auto;
     z-index: 2;
@@ -4679,41 +4731,196 @@ li:nth-child(odd) {
     bottom: 3px;
   }
 
-  .monument {
-    width: 40%;
-    padding-bottom: 8px;
-    padding-right: 4px;
-    height: auto;
-  }
-
-  #vacation {
+  .hovertest {
     padding-top: 10px;
+    margin: 0;
   }
 
-  .location {
-    width: 150px;
-    height: 42px;
-    padding: 10px;
+  .my-card2 {
+    width: 90%;
+    height: 165px;
+    background-position: center;
+    padding: 15px;
   }
 
-  #title-items {
-    padding-top: 5px;
+  .my-card2:hover {
+    background-size: 100% 158px;
   }
 
-  #vacay-box {
-    margin-bottom: 10px;
-    /* Add some space between rows */
-    width: 100%;
-    /* Ensure they take up 100% of their container width */
-  }
-
-  .imgs {
-    width: 10%;
-    /* Set the width relative to the container's width */
+      .info-container1 img {
+    width: 55%;
     height: auto;
-    /* Maintain aspect ratio */
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+     padding-top: 20px;
   }
 
+  .info-container1 .overlay-text {
+    top: 25%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    right: 10%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 8px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  .info-container2 img {
+    width: 53%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+     padding-top: 10px;
+  }
+
+  .info-container2 .overlay-text {
+    top: 17%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    right: 15%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 8px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  #info-button {
+    padding-top: 25px;
+  }
+
+    #util-img {
+  width: 57%;
+  height: auto;
+}
+
+#util-div {
+  padding-top: 17px;
+}
+
+#util-btn {
+  padding-bottom: 28px;
+}
+
+.car {
+    width: 105px;
+    height: auto;
+    background: none;
+  }
+
+  /* Ensure the image fits within the card */
+  .car-image {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    /* Ensures the image covers the card area without distortion */
+  }
+
+  /* Focused Card */
+  .car.focus {
+    width: 130px;
+    height: 160px;
+    transform: translateX(0) scale(1.1);
+    z-index: 3;
+    opacity: 1;
+    background-image: url('../img/cardhover.png');
+    background-size: cover;
+    /* Adjusts the background to fill the card */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Ensures the image doesn't repeat */
+    margin: 20px auto;
+  }
+
+  .slider-btn {
+    top: 40%;
+  }
+
+
+  .slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+  .slider-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 770px;
+    height: 180px;
+    /* Adjust the height as needed */
+    margin: auto;
+  }
+
+  .car.left {
+    transform: translateX(-70px) scale(0.9);
+    z-index: 2;
+  }
+
+  .car.right {
+    transform: translateX(70px) scale(0.9);
+    z-index: 2;
+  }
+
+     #car1,
+  #car2,
+  #car3 {
+    padding-bottom: 123px;
+  }
+
+  #car-video1,
+#car-video2,
+#car-video3 {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+  .choice-card {
+    text-decoration: none;
+    color: #206E63;
+    /* Initial text color */
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+   #choices-div {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+    gap: 3px;
+  }
 
 }
 
