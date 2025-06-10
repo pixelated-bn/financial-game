@@ -6126,7 +6126,7 @@ li:nth-child(odd) {
   }
 
      #accept-email {
-    padding-top: 550px;
+    padding-top: 520px;
     padding-left: 600px;
   }
 
@@ -6135,7 +6135,7 @@ li:nth-child(odd) {
   color: white;
   border: none;
   padding: 10px 24px;
-  font-size: 22px;
+  font-size: 20px;
   cursor: pointer;
   visibility: hidden;
   /* Start hidden */
@@ -6175,13 +6175,28 @@ li:nth-child(odd) {
   }
 
   .quiz-progress {
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
- #nextbtn-div {
-    padding-top: 40px;
+  .vertical-line {
+    position: absolute;
+    top: 440px;
+    /* Adjust this value to control the distance from the top */
+    left: 50%;
+    width: 1px;
+    /* Line thickness */
+    height: 35px;
+    /* Line height */
+    background-color: #206E63;
+    /* Line color */
+    transform: translateX(-50%);
+    /* Center the line horizontally */
   }
 
+ #nextbtn-div {
+    padding-top: 35px;
+  }
+  
   }
 
 @media (min-width: 1920px) and (max-width: 2000px) {
