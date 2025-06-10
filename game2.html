@@ -3638,7 +3638,7 @@
       });
 
 
-      const dragSound = document.getElementById('drag-sound');
+     const dragSound = document.getElementById('drag-sound');
       const dropSound = document.getElementById('drop-sound');
 
       function allowDrop(ev) {
@@ -3651,25 +3651,27 @@
         dragSound.play();
       }
 
-      function drop(ev) {
-        dropSound.currentTime = 0;
-        dropSound.play();
+function drop(ev) {
+  dropSound.currentTime = 0;
+  dropSound.play();
 
-        ev.preventDefault();
-        const data = ev.dataTransfer.getData("text");
-        const draggedItem = document.getElementById(data);
-        const targetContainer = ev.target.closest("div");
+  ev.preventDefault();
+  const data = ev.dataTransfer.getData("text");
+  const draggedItem = document.getElementById(data);
+  const targetContainer = ev.target.closest("div");
 
-        if (isCorrectMatch(draggedItem, targetContainer)) {
-          placeItemCorrectly(draggedItem, targetContainer);
-        } else {
-          targetContainer.style.borderColor = "#DA1F27";
-          const originalParent = draggedItem.closest(".item-box");
-          originalParent.appendChild(draggedItem);
-        }
+  if (isCorrectMatch(draggedItem, targetContainer)) {
+    placeItemCorrectly(draggedItem, targetContainer);
+  } else {
+    targetContainer.style.borderColor = "#DA1F27";
 
-        checkCompletion();
-      }
+    // ✅ Reset to original draggable area to avoid overlap
+    document.getElementById("title-items").appendChild(draggedItem);
+  }
+
+  checkCompletion();
+}
+
 
       function isCorrectMatch(item, container) {
         return (
@@ -3716,72 +3718,85 @@
         }
       }
 
-      // 🌟 TOUCH SUPPORT 🌟
-      let currentTouchItem = null;
-      let originalTouchParent = null;
+// 🌟 TOUCH SUPPORT 🌟
+let currentTouchItem = null;
+let originalTouchParent = null;
 
-      document.querySelectorAll('.imgs').forEach(item => {
-        item.addEventListener('touchstart', handleTouchStart, false);
-        item.addEventListener('touchmove', handleTouchMove, false);
-        item.addEventListener('touchend', handleTouchEnd, false);
-      });
+document.querySelectorAll('.imgs').forEach(item => {
+  item.addEventListener('touchstart', handleTouchStart, { passive: false });
+  item.addEventListener('touchmove', handleTouchMove, { passive: false });
+  item.addEventListener('touchend', handleTouchEnd, false);
+});
 
-      function handleTouchStart(e) {
-        currentTouchItem = e.target;
-        originalTouchParent = currentTouchItem.parentElement;
+function handleTouchStart(e) {
+  e.preventDefault(); // Prevent default ghost behavior
 
-        currentTouchItem.style.position = 'fixed';
-        currentTouchItem.style.zIndex = '1000';
-        currentTouchItem.style.pointerEvents = 'none'; // Prevent touch interference
+  currentTouchItem = e.target;
+  originalTouchParent = currentTouchItem.parentElement;
 
-        dragSound.currentTime = 0;
-        dragSound.play();
-      }
+  // Move to body to avoid layout duplication
+  document.body.appendChild(currentTouchItem);
 
-      function handleTouchMove(e) {
-        if (!currentTouchItem) return;
+  currentTouchItem.style.position = 'fixed';
+  currentTouchItem.style.zIndex = '1000';
+  currentTouchItem.style.pointerEvents = 'none'; // Avoid interference
 
-        const touch = e.touches[0];
-        e.preventDefault();
+  const touch = e.touches[0];
+  currentTouchItem.style.left = touch.pageX - currentTouchItem.offsetWidth / 2 + 'px';
+  currentTouchItem.style.top = touch.pageY - currentTouchItem.offsetHeight / 2 + 'px';
 
-        currentTouchItem.style.left = touch.pageX - currentTouchItem.offsetWidth / 2 + 'px';
-        currentTouchItem.style.top = touch.pageY - currentTouchItem.offsetHeight / 2 + 'px';
-      }
+  dragSound.currentTime = 0;
+  dragSound.play();
+}
 
-      function handleTouchEnd(e) {
-        if (!currentTouchItem) return;
+function handleTouchMove(e) {
+  if (!currentTouchItem) return;
 
-        const touch = e.changedTouches[0];
-        const dropTarget = document.elementFromPoint(touch.clientX, touch.clientY);
-        const dropContainer = dropTarget?.closest('.location');
+  const touch = e.touches[0];
+  e.preventDefault();
 
-        // Reset styles
-        currentTouchItem.style.position = '';
-        currentTouchItem.style.zIndex = '';
-        currentTouchItem.style.pointerEvents = '';
-        currentTouchItem.style.left = '';
-        currentTouchItem.style.top = '';
+  currentTouchItem.style.left = touch.pageX - currentTouchItem.offsetWidth / 2 + 'px';
+  currentTouchItem.style.top = touch.pageY - currentTouchItem.offsetHeight / 2 + 'px';
+}
 
-        const draggedItem = currentTouchItem;
+function handleTouchEnd(e) {
+  if (!currentTouchItem) return;
 
-        if (dropContainer) {
-          if (isCorrectMatch(draggedItem, dropContainer)) {
-            placeItemCorrectly(draggedItem, dropContainer);
-            dropSound.currentTime = 0;
-            dropSound.play();
-          } else {
-            dropContainer.style.borderColor = "#DA1F27";
-            originalTouchParent.appendChild(draggedItem);
-          }
-        } else {
-          originalTouchParent.appendChild(draggedItem);
-        }
+  const touch = e.changedTouches[0];
+  const dropTarget = document.elementFromPoint(touch.clientX, touch.clientY);
+  const dropContainer = dropTarget?.closest('.location');
 
-        currentTouchItem = null;
-        originalTouchParent = null;
+  const draggedItem = currentTouchItem;
 
-        checkCompletion();
-      }
+  // Reset styles
+  draggedItem.style.position = '';
+  draggedItem.style.zIndex = '';
+  draggedItem.style.pointerEvents = '';
+  draggedItem.style.left = '';
+  draggedItem.style.top = '';
+
+  if (dropContainer) {
+    if (isCorrectMatch(draggedItem, dropContainer)) {
+      placeItemCorrectly(draggedItem, dropContainer);
+      dropSound.currentTime = 0;
+      dropSound.play();
+    } else {
+      dropContainer.style.borderColor = "#DA1F27";
+      // ✅ Reset to original draggable area
+      document.getElementById("title-items").appendChild(draggedItem);
+    }
+  } else {
+    // Drop outside any location — return to original
+    document.getElementById("title-items").appendChild(draggedItem);
+  }
+
+  currentTouchItem = null;
+  originalTouchParent = null;
+
+  checkCompletion();
+}
+
+
 
       function fadeOutMusic(audio, duration) {
         const fadeOutInterval = 50;
