@@ -6812,7 +6812,7 @@ li:nth-child(odd) {
 
 }
 
-@media (min-width: 1600px) and (max-width: 1700px) {
+@media (min-width: 1520px) and (max-width: 1700px) {
    #car1,
   #car2,
   #car3 {
