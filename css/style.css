@@ -6098,6 +6098,92 @@ li:nth-child(odd) {
 
 }
 
+@media (min-width: 1500px) and (max-width: 1700px) {
+   #car1,
+  #car2,
+  #car3 {
+    padding-bottom: 350px;
+  }
+
+     #game1, #game2,
+   #game3, #game4 {
+    padding-bottom: 300px;
+  }
+
+     #game-desc1 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  }
+
+     #wedding-box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 130px;
+    padding-right: 0px;
+    padding-bottom: 210px;
+  }
+
+     #accept-email {
+    padding-top: 550px;
+    padding-left: 600px;
+  }
+
+    .accept-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 22px;
+  cursor: pointer;
+  visibility: hidden;
+  /* Start hidden */
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeInButton 0.3s ease-in-out 3s forwards;
+  /* Delay of 6 seconds */
+  text-decoration: none;
+}
+
+#tips10, #tips13 {
+   top: 75%;
+    left: 50%;
+}
+
+   #title-text2 {
+  padding-bottom: 20px;
+  padding-top: 170px;
+}
+
+     #phone-button {
+    padding-top: 340px;
+  }
+
+    .phone-call {
+    background-image: url('../img/phonecall.png');
+    width: 100%;
+    /* Adjust as needed */
+    height: 60vh;
+    /* Adjust as needed */
+    background-size: contain;
+    /* Adjust as needed (cover, contain, etc.) */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+  }
+
+  .quiz-progress {
+  padding-top: 50px;
+}
+
+ #nextbtn-div {
+    padding-top: 40px;
+  }
+
+  }
+
 @media (min-width: 1920px) and (max-width: 2000px) {
    #index {
     padding-top: 340px;
