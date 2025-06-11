@@ -4315,13 +4315,13 @@ li:nth-child(odd) {
 
   #footer {
     position: fixed;
-    margin-bottom: 33px;
+    margin-bottom: 29px;
     width: 100%;
     height: 5%;
   }
 
   #narrative-style {
-    padding-top: 20px;
+    padding-top: 18px;
     width: 70%;
     overflow: hidden;
     white-space: nowrap;
@@ -4508,7 +4508,7 @@ li:nth-child(odd) {
 
   #instruction {
     width: 100%;
-    height: 87%;
+    height: 86%;
     display: block;
   }
 
@@ -4650,7 +4650,7 @@ li:nth-child(odd) {
 
  #game1, #game2,
    #game3, #game4 {
-    padding-bottom: 78px;
+    padding-bottom: 84px;
   }
 
 .car {
@@ -5050,7 +5050,7 @@ li:nth-child(odd) {
   }
 
     #phone-button {
-    padding-top: 135px;
+    padding-top: 148px;
   }
 
   .phone-call {
@@ -5214,6 +5214,8 @@ li:nth-child(odd) {
 }
 
 }
+
+
 
 @media (min-width: 900px) and (max-width: 999px) {
   #index {
