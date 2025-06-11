@@ -7789,3 +7789,937 @@ h1 {
 }
 
 }
+
+@media not all and (min-resolution:.001dpcm) { 
+  @supports (-webkit-appearance:none) {
+    @media (min-device-width: 800px) and (max-device-width: 899px){
+      /* Safari-specific fixes here */
+
+ #index {
+    padding-top: 60px;
+  }
+
+  #footer {
+    position: fixed;
+    margin-bottom: 12px;
+    width: 100%;
+    height: 5%;
+  }
+
+  #narrative-style {
+    padding-top: 25px;
+    width: 70%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  #typewriter {
+    font-size: 15px;
+  }
+
+  .index-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 9px 20px 10px 20px;
+    width: 30%;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0;
+    /* Initially hidden */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, opacity 1s;
+    text-decoration: none;
+    border-radius: 4px;
+
+  }
+
+
+  #creditmeter {
+    position: fixed;
+    top: 15px;
+    /* Distance from the top */
+    left: 0;
+    /* Stick to the left */
+    width: 20%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #factormeter {
+    position: fixed;
+    top: 6px;
+    /* Distance from the top */
+    right: 37px;
+    /* Stick to the right */
+    width: 40%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #cs-font {
+    font-size: 10px;
+  }
+
+  .credit-score-container {
+    position: relative;
+    height: 142px;
+    /* Set a specific height */
+    overflow: visible;
+    /* Hide overflow */
+  }
+
+  .creditscore-img {
+    width: 94%;
+    height: auto;
+    opacity: 1;
+    position: relative;
+  }
+
+  .hidden-section {
+    padding-top: 5px;
+  }
+
+  #title-text {
+    font-size:13px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+ #title-text2 {
+    font-size:13px;
+  padding-bottom: 8px;
+  padding-top: 40px;
+}
+
+  #title-text3 {
+    font-size:10px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  }
+
+   #title-text4 {
+    font-size:10px;
+  padding-bottom: 8px;
+  padding-top: 40px;
+  }
+
+   #game-desc1 {
+    font-size:11px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  }
+
+  h1 {
+    font-size: small;
+  }
+
+  .hovertest {
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  .my-card2 {
+    width: 90%;
+    height: 130px;
+    background-position: center;
+    padding: 15px;
+  }
+
+  .my-card2:hover {
+    background-size: 100% 125px;
+  }
+
+  .circular-progress-container {
+    padding-bottom: 25px;
+    width: 75px;
+  }
+
+  .circular-progress {
+    width: 48px;
+    /* Outer ring size */
+    height: 48px;
+    margin-right: 5px;
+    /* Space between the circle and the factor image */
+  }
+
+  .inner-circle {
+    width: 80%;
+    /* Inner circle size */
+    height: 80%;
+    background-color: #FCF8EA;
+    /* Inner circle color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    /* Ensure it is above the outer ring */
+  }
+
+  .factor-up-image {
+    width: 12px;
+    /* Adjust size as needed */
+    height: auto;
+    z-index: 2;
+    /* Make sure it's on top */
+    position: relative;
+    /* Ensure it positions beside the circular progress */
+    transform: translateX(0px);
+    /* Optional: Adjust position */
+    opacity: 0;
+    /* Start with the image hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Apply transition effects */
+    bottom: 3px;
+  }
+
+  #narration {
+    position: relative;
+    /* Change to relative */
+    width: 100vw;
+    height: 100vh;
+    /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    padding-left: 70px;
+    padding-top: 30px;
+  }
+
+  #instruction {
+    width: 90%;
+    height: 90%;
+    display: block;
+  }
+
+  #info {
+    font-size: 28px;
+  }
+
+  #info-icon {
+    padding-left: 70px;
+  }
+
+  #howto {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards;
+    /* Delay of 6 seconds */
+    display: none;
+  }
+
+  .howto-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 6px 10px 8px 10px;
+    width: 13%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+    .info-container1 img {
+    width: 55%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+     padding-top: 20px;
+  }
+
+  .info-container1 .overlay-text {
+    top: 25%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    right: 10%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 8px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  .info-container2 img {
+    width: 55%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+     padding-top: 10px;
+  }
+
+  .info-container2 .overlay-text {
+    top: 17%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    right: 15%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 8px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  #info-button {
+    padding-top: 25px;
+  }
+
+
+  .game-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 6px 10px 8px 10px;
+    width: 13%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+   #car1,
+  #car2,
+  #car3 {
+    padding-bottom: 150px;
+  }
+
+  #car-video1,
+#car-video2,
+#car-video3 {
+  width: 100%;
+  height: 92%;
+  display: block;
+}
+
+ #scenario-video1, #scenario-video2,
+ #scenario-video4 {
+  width: 100%;
+ height: 99%;
+  display: block;
+}
+
+ #scenario-video3 {
+  width: 100%;
+ height: auto;
+  display: block;
+}
+
+
+
+   #game1 {
+    padding-bottom: 100px;
+  }
+
+    #game2 {
+    top: 75%;
+  }
+
+  #game3 {
+    top: 80%;
+  }
+
+  #game4 {
+    top: 70%;
+  }
+
+
+.car {
+    width: 105px;
+    height: auto;
+    background: none;
+  }
+
+  /* Ensure the image fits within the card */
+  .car-image {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    /* Ensures the image covers the card area without distortion */
+  }
+
+  /* Focused Card */
+  .car.focus {
+    width: 120px;
+    height: 150px;
+    transform: translateX(0) scale(1.1);
+    z-index: 3;
+    opacity: 1;
+    background-image: url('../img/cardhover.png');
+    background-size: cover;
+    /* Adjusts the background to fill the card */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Ensures the image doesn't repeat */
+    margin: 20px auto;
+  }
+
+  .slider-btn {
+    top: 40%;
+  }
+
+
+  .slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+  .slider-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 770px;
+    height: 180px;
+    /* Adjust the height as needed */
+    margin: auto;
+  }
+
+  .car.left {
+    transform: translateX(-70px) scale(0.9);
+    z-index: 2;
+  }
+
+  .car.right {
+    transform: translateX(70px) scale(0.9);
+    z-index: 2;
+  }
+
+  .choice-card {
+    text-decoration: none;
+    color: #206E63;
+    /* Initial text color */
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+   #choices-div {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 5px;
+  }
+
+  #util-img {
+  width: 55%;
+  height: auto;
+}
+
+#util-div {
+  padding-top: 28px;
+}
+
+#util-btn {
+  padding-bottom: 28px;
+}
+
+#vacation {
+  padding-top: 10px;
+  width: 420px;
+}
+
+.monument {
+  width: 100%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 50px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin-bottom: 3px;
+  /* Space between the image and location box */
+}
+
+.location {
+  background-color: whitesmoke;
+  width: 100px;
+  height: 22px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px dotted #D4C029;
+}
+
+.japan1 {
+  width: 80%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 30px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 12px;
+  /* Space between the image and location box */
+}
+
+.egypt1 {
+  width: 70%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 50px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 4px;
+  /* Space between the image and location box */
+}
+
+#location7 {
+  margin-left: 0px;
+   width: 100px;
+  height: 22px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+ #title-items {
+    padding-top: 2px;
+  }
+
+    #vacay-box {
+    margin-bottom: 7px;
+    /* Add some space between rows */
+    width: 100%;
+    /* Ensure they take up 100% of their container width */
+  }
+
+   .imgs {
+    width: 10%;
+    /* Set the width relative to the container's width */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  
+    #wedding-box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 70px;
+    padding-right: 0px;
+    padding-bottom: 160px;
+  }
+
+  #wedd-box {
+  margin-top: 10px;
+}
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    gap: 3px;
+    /* Centering handled by parent */
+    /* Removed top, left, and transform */
+  }
+
+  .card-game {
+    width: 40px;
+    height: 50px;
+    background: url('../img/wedding/card-cover.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #D4C029;
+  }
+
+  table {
+    border-collapse: collapse;
+    table-layout: auto;
+    /* Adjust table to fit content width */
+    width: auto;
+    /* Table adjusts to fit its content */
+    margin: 0 auto;
+    /* Center table horizontally */
+    width: 50%;
+    /* Adjust to desired percentage */
+    padding-top: 20px;
+  }
+
+  .tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  border-radius: 2px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 85%;
+  /* Position above the image */
+  left: 40%;
+  margin-left: -60px;
+  /* Adjust the tooltip to be centered */
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  font-size: 9px;
+}
+
+  .timer-text-box {
+  font-size: 20px;
+  font-weight: bold;
+  color: #206E63;
+}
+
+.timer {
+  font-size: 40px;
+  font-weight: bold;
+  color: #206E63;
+}
+
+.timer .colon {
+  width: auto;
+  /* Smaller width */
+  height: 18px;
+  /* Fixed height */
+  margin-right: 10px;
+}
+
+#seconds {
+  color: #206E63;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+  font-size: 22px;
+}
+
+#secs {
+  color: #206E63;
+  font-size: 15px;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+}
+
+.score {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #206E63;
+}
+
+#wedding-score1 {
+  font-size: 22px;
+  color: #206E63;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+  text-align: left;
+}
+
+
+.text-box {
+  font-size: 18px;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding: 10px;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 40%;
+  left: 10px;
+  transform: translate(5%, -10%);
+}
+
+#wedd-img {
+  width: 57%;
+  height: auto;
+}
+
+#wedd-div {
+  padding-top: 3px;
+}
+
+.fund1,
+  .fund2,
+  .fund3,
+  .fund4 {
+    margin: 0 auto;
+    width: 68px;
+    /* Adjust the width as needed */
+    height: 68px;
+    /* Adjust the height as needed */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*  transition: transform 0.1s ease; Smooth transition for scaling */
+  }
+
+    #email-div{
+    padding-top: 70px;
+  }
+
+
+    #accept-email {
+    padding-top: 160px;
+    padding-left: 310px;
+  }
+
+  
+.accept-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  font-size: 10px;
+  cursor: pointer;
+  visibility: hidden;
+  /* Start hidden */
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeInButton 0.3s ease-in-out 3s forwards;
+  /* Delay of 6 seconds */
+  text-decoration: none;
+}
+
+ #tips10 {
+    position: absolute;
+    top: 76%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards;
+    /* Delay of 6 seconds */
+    display: none;
+  }
+
+  #tips13 {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards;
+    /* Delay of 6 seconds */
+    display: none;
+  }
+
+  #tips10-info, #tips13-info{
+   width: 100%;
+   height: 98%;
+   display: block;
+  }
+
+    #phone-button {
+    padding-top: 135px;
+  }
+
+  .phone-call {
+    background-image: url('../img/phonecall.png');
+    width: 100%;
+    /* Adjust as needed */
+    height: 60vh;
+    /* Adjust as needed */
+    background-size: contain;
+    /* Adjust as needed (cover, contain, etc.) */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+  }
+
+  #call-convo {
+  padding-top: 15px;
+}
+
+.phone-img {
+  width: 65%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.quiz-progress {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 55px;
+}
+
+#questions{
+  padding-left: 15px;
+}
+
+ #question-words {
+    color: #206E63;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap onto new lines */
+    justify-content: center;
+    /* Centers the items horizontally */
+    align-items: flex-start;
+    /* Aligns items to the top of the container */
+    gap: 10px;
+    /* Optional: Adds spacing between the options */
+    font-size: 9px;
+  }
+
+  .options button {
+    width: 320px;
+    /* Set a fixed width for buttons */
+    height: 30px;
+    /* Set a fixed height for buttons */
+    padding: 5px;
+  }
+
+  .vertical-line {
+    position: absolute;
+    top: 235px;
+    /* Adjust this value to control the distance from the top */
+    left: 51%;
+    width: 1px;
+    /* Line thickness */
+    height: 14px;
+    /* Line height */
+    background-color: #206E63;
+    /* Line color */
+    transform: translateX(-50%);
+    /* Center the line horizontally */
+  }
+
+
+
+  .options .option-top {
+    flex: 1 1 5%;
+    /* This makes the top options take up 45% of the width, adjust as needed */
+  }
+
+  .options .option-bottom {
+    flex: 1 1 60%;
+    /* The same for bottom options */
+  }
+
+  button {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    color: #206E63;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #206E63;
+    padding: 20px;
+    width: 80%;
+  }
+
+  #quiz-next {
+    width: 4%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #nextbtn-div {
+    padding-top: 0px;
+  }
+
+  .feedback {
+    font-style: bold;
+    font-size: 100%;
+    margin-top: 5px;
+    padding-top: 5px;
+    margin-right: 20px;
+    color: #fff;
+    border-top: 2px dashed #7a797a;
+    justify-content: flex-end;
+    text-align: left;
+    font-size: 9px;
+  }
+
+ 
+  #end-div {
+    padding-top: 40px;
+  }
+
+  #end-body {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  #end-text{
+    font-size: 12px;
+  }
+
+  #end-button {
+    margin-left: 130px;
+    margin-right: 130px;
+    padding-top: 5px;
+  }
+
+.game-end {
+  background-color: #206E63;
+  color: white;
+  border: none;
+  padding: 6px 10px 8px 10px;
+  width: 20%;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+
+    }
+  }
+}
+
