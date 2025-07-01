@@ -64,6 +64,39 @@ h1 {
   /* Explicitly set the weight */
 }
 
+@keyframes ringPulse {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.outer-ring.pulse {
+  animation: ringPulse 0.9s ease-out; /* Slowed from 0.5s to 0.8s */
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.inner-circle.pulse {
+  animation: ringPulse 0.9s ease-out; /* Slowed from 0.5s to 0.8s */
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+
+#home{
+height: 33px;
+width: auto;
+}
+
 #cs-font {
   font-family: 'Geomanist-Bold';
   /* Name of the font */
@@ -74,7 +107,7 @@ h1 {
 }
 
 #info {
-  font-size: 40px;
+  font-size: 30px;
   color: #206E63;
 }
 
@@ -662,12 +695,12 @@ h1 {
   position: -webkit-sticky;
   /* For Safari */
   position: sticky;
-  top: 0;
+  top: 15px;
   background-color: unset;
   /* Optional: set a background color */
   z-index: 1000;
   /* Ensure it stays on top of other content */
-  padding: 5px;
+  padding: 18px;
   /* Optional: add some padding */
   cursor: default;
 }
@@ -1023,9 +1056,11 @@ h1 {
 
 #footer {
   position: fixed;
-  bottom: 0;
+  bottom: 10px;
   width: 100%;
   height: 5%;
+  justify-content: center;
+  padding-right: 60px;
 }
 
 .howto-button {
@@ -1108,6 +1143,34 @@ h1 {
 
 .game-button2:active {
   background-color: #D4C029;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+}
+
+.game-button3 {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+  padding: 10px 30px 13px 30px;
+  width: 20%;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.game-button3:hover {
+  background-color: #206E63;
+  transform: scale(0.9);
+  color: #fff;
+  text-decoration: none;
+
+}
+
+.game-button3:active {
+  background-color: #206E63;
   transform: scale(0.9);
   color: #fff;
   text-decoration: none;
@@ -3388,12 +3451,406 @@ li:nth-child(odd) {
 }
 
 
+
+#summary-div{
+  padding-top: 5px;
+}
+
+
+.result-container {
+  height: 110px;
+  width: 435px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+
+.result-img {
+  width: 480px;
+  height: 100%;
+  opacity: 1;
+  position: relative;
+}
+
+.opacity-overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 53%;
+  height: 200%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img {
+  position: absolute;
+  left: 60%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 68%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+.result-container3 {
+  height: 110px;
+  width: 435px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+
+.result-img3 {
+  width: 480px;
+  height: 100%;
+  opacity: 1;
+  position: relative;
+}
+
+.opacity-overlay3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 53%;
+  height: 200%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img3 {
+    position: absolute;
+  left: 60%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 68%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+
+.result-desc{
+  padding-top: 120px;
+  padding-left: 180px;
+  padding-right: 200px;
+}
+
+#result-button {
+  padding-top: 10px;
+}
+
+#mood-container{
+  margin-top: 50px;
+  height: 80px;
+  width: 600px;
+}
+
+.inner-circle2 {
+  width: 80%;
+  /* Inner circle size */
+  height: 80%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring2 {
+  width: 105%;
+  height: 105%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.circular-progress2 {
+   width: 100px;
+  /* Outer ring size */
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress-container2 {
+   align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 20px;
+  padding-right: 50px;
+}
+
+.inner-circle3 {
+  width: 80%;
+  /* Inner circle size */
+  height: 80%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring3 {
+  width: 105%;
+  height: 105%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.circular-progress3 {
+  width: 100px;
+  /* Outer ring size */
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress-container3 {
+   align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 20px;
+  padding-right: 50px;
+}
+
+
+.result-container4 {
+  height: 110px;
+  width: 435px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  padding-top: 10px;
+}
+
+
+.result-img4 {
+  width: 480px;
+  height: 100%;
+  opacity: 1;
+  position: relative;
+}
+
+.opacity-overlay4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 202%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img4 {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 68%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+
+#result-text{
+  position: absolute;
+   font-size: 15px;
+   font-weight: bold;
+  color: #000000;
+  width: 160px;
+  left: 5%;
+  transform: translateX(-45%);
+}
+
+.inner-circle4 {
+  width: 80%;
+  /* Inner circle size */
+  height: 80%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage4 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring4 {
+  width: 105%;
+  height: 105%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.circular-progress4 {
+  width: 100px;
+  /* Outer ring size */
+  height: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress-container4 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 20px;
+  padding-right: 50px;
+}
+
+.result-desc4{
+  padding-top: 120px;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+
+#result-button4 {
+  padding-top: 10px;
+}
+
+#mood-container4{
+  height: 80px;
+  width: 600px;
+  margin-top: 50px;
+}
+
+#risk{
+  margin-top: 20px;
+}
+
+
+#risk-img{
+ width: 30%;
+ height: auto;
+ margin: 0;
+
+}
+
+#factortext{
+   color: #206E63;
+   font-style: italic;
+   padding-top: 18px;
+   padding-right: 20px;
+}
+
+
 /* Breakpoints for index page*/
 
 @media (min-width: 700px) and (max-width: 799px) {
   #index {
     padding-top: 60px;
   }
+
+  .sticky-row {
+  position: -webkit-sticky;
+  /* For Safari */
+  position: sticky;
+  background-color: unset;
+  /* Optional: set a background color */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
+  padding-top: 2px;
+  /* Optional: add some padding */
+  cursor: default;
+}
+
+  #home{
+height: 13px;
+width: auto;
+}
+
+#info {
+  font-size: 10px;
+  color: #206E63;
+}
 
   #footer {
     position: fixed;
@@ -3594,13 +4051,6 @@ li:nth-child(odd) {
     display: block;
   }
 
-  #info {
-    font-size: 28px;
-  }
-
-  #info-icon {
-    padding-left: 70px;
-  }
 
   #howto {
     position: absolute;
@@ -4305,6 +4755,282 @@ li:nth-child(odd) {
   text-decoration: none;
   border-radius: 4px;
 }
+
+
+#game-success{
+  margin-top: 0px;
+}
+
+#summary-div{
+  height: 110px;
+}
+
+#risk{
+  margin-top: 0;
+}
+
+#risk-img{
+ width: 20%;
+ height: auto;
+
+}
+
+.result-container {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden; /* Optional, to clip anything outside */
+}
+
+.result-container3 {
+  position: absolute;
+  width: 100px;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden; /* Optional, to clip anything outside */
+}
+
+.result-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  object-fit: cover; /* Adjusts image scaling */
+}
+
+.result-img3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45%;
+  object-fit: cover; /* Adjusts image scaling */
+}
+
+.opacity-overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 101%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.opacity-overlay3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 101%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 25%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img3 {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 25%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+
+#result-text{
+  position: absolute;
+   font-size: 7px;
+   font-weight: bold;
+  color: #000000;
+  width: 160px;
+  left: 4%;
+  transform: translateX(-50%);
+}
+
+.inner-circle2 {
+  width: 40%;
+  /* Inner circle size */
+  height: 40%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.inner-circle3 {
+  width: 40%;
+  /* Inner circle size */
+  height: 40%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.percentage3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring2 {
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.outer-ring3 {
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.circular-progress2 {
+  width: 50px;
+  /* Outer ring size */
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress3 {
+  width: 50px;
+  /* Outer ring size */
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress-container2 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 0px;
+  padding-right: 1px;
+  width: 80px;
+  height: 70px;
+}
+
+.circular-progress-container3 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 0px;
+  padding-right: 1px;
+  width: 80px;
+  height: 70px;
+}
+
+.result-desc{
+  padding-top: 2px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#resulttext{
+  font-size: 8px;
+}
+
+#result-button{
+  padding-top: 0px;
+}
+
+#mood-container{
+  height: 70px;
+  width: 300px;
+  margin-top: 0;
+}
+
+#factortext{
+   color: #206E63;
+   font-style: italic;
+   padding-top: 0px;
+   padding-right: 30px;
+   padding-left: 15px;
+   font-size: 8px;
+}
+
+  .game-button3 {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 4px 8px 6px 8px;
+    width: 13%;
+    font-size: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
 
 }
 
@@ -7771,4 +8497,3 @@ h1 {
 }
 
 }
-
