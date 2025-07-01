@@ -23,18 +23,18 @@
 <body>
 
 
-  <div class="container-fluid">
-    <div class="row sticky-row">
-      <div class="col-sm-10">
-        <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png"
-            class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;"></a>
-      </div>
-      <div class="col-sm-2" id="info-icon"> <a href="" id="" data-toggle="modal" data-target="#info-game"
-          class="start-link">
-          <i class='bx bx-info-circle' id="info"></i></a>
-      </div>
+ <div class="container-fluid">
+     <div class="row sticky-row" style="display: flex; align-items: center; gap: 10px;">
+  <a href="index2.html" style="text-decoration: none;">
+    <img src="./img/creditlit.png" style="height: 33px; width: auto;">
+  </a>
 
-    </div>
+  <a href="#" data-toggle="modal" data-target="#info-game" class="start-link" style="display: flex; align-items: center;">
+    <i class='bx bx-info-circle' id="info"></i>
+  </a>
+</div>
+
+</div>
 
 
     <div class="modal fade" id="info-game" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -70,7 +70,7 @@
           <div class="text-center">
             <h5 id="cs-font">CREDIT<br>SCORE</h5>
             <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;"
-              data-progress="300">
+              data-progress2="300">
               <img src="./img/creditscore.png" class="card-img-top creditscore-img">
               <div class="opacity-overlay"></div> <!-- New overlay div -->
               <img src="./img/creditarrow.png" class="card-img-top creditarrow-img">
@@ -2845,56 +2845,163 @@
           <!--End of scenario 15-->
 
 
+                <div id="game-success" class="hidden-section">
 
-          <div id="game-success" class="hidden-section" style="padding-top: 20px;">
-
-
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="info-container2 text-center">
-                  <img src="./img/narrative.png">
-                  <div class="overlay-text">
-
-                    Nice work! You tackled every challenge,
-                    made smart money moves, and kept
-                    your credit score shining - financial victory unlocked!
-
-
-                    <div class="text-center" style="padding-top: 60px;">
-                      <a href="#quiz-game" id="recap-link1" class="game-button">continue</a>
-                    </div>
-
-                  </div>
+             <div class="text-center" id="summary-div">
+          <h1 id="cs-font" style="color: #206E63;">GAME SUMMARY</h1>
+               <!--
+               <h2 id="risk">MEDIUM RISK</h2>
+               -->
+                <div id="risk">
+                <img src="./img/low.png" class="card-img-top" id="risk-img">
                 </div>
+            <div class="result-container" style="position: relative; width: 50%; margin: 0 auto;" data-progress2="300">
+              <img src="./img/result.png" class="card-img-top result-img">
+              <div class="opacity-overlay2"></div> <!-- New overlay div -->
+  <div class="resultarrow-img">
+              <img src="./img/resultarrow.png" class="card-img-top">
+<div id="result-text">You're Here!</div>
+</div>
+            </div>
+            </div>
+             
+       
+          <div class="container" id="mood-container">
+            <div class="row">
 
+
+                <div class=" col-sm-4 circular-progress-container2">
+              <div class="circular-progress2" data-progress="50">
+                <div class="inner-circle2">
+                  <span class="percentage2" hidden>50%</span>
+                  <img src="./img/happiness.png" class="card-img-top" style="width: 80%; height: auto; margin: 0 auto;">
+                </div>
+                <div class="outer-ring2"></div>
               </div>
+              <h5 id="factortext">Happiness</h5>
+            </div>
+         
+               <div class=" col-sm-4 circular-progress-container2">
+              <div class="circular-progress2" data-progress="50">
+                <div class="inner-circle2">
+                  <span class="percentage2" hidden>50%</span>
+                  <img src="./img/focus.png" class="card-img-top" style="width: 80%; height: auto; margin: 0 auto;">
+                </div>
+                <div class="outer-ring2"></div>
+              </div>
+              <h5 id="factortext">Life Goal</h5>
+            </div>
+
+             <div class=" col-sm-4 circular-progress-container2">
+              <div class="circular-progress2" data-progress="50">
+                <div class="inner-circle2">
+                  <span class="percentage2" hidden>50%</span>
+                  <img src="./img/relationship.png" class="card-img-top" style="width: 80%; height: auto; margin: 0 auto;">
+                </div>
+                <div class="outer-ring2"></div>
+              </div>
+              <h5 id="factortext">Relationship</h5>
             </div>
 
           </div>
+          </div>
+   
+         
+                  <div class="result-desc">
 
-          <div id="game-failed" class="hidden-section" style="padding-top: 20px;">
-
-
-            <div class="row">
-              <div class="col-sm-12">
-                <div class="info-container2 text-center">
-                  <img src="./img/narrative.png">
-                  <div class="overlay-text">
-
-                    Your credit score took a hit this time, but every
-                    choice taught you something - gear up and try
-                    again to level up your financial game!
+                    <h5 id="resulttext">Nice work! You tackled every challenge, made smart money moves, and kept your credit score shining -
+                    financial victory unlocked!</h5>
 
 
-                    <div class="text-center" style="padding-top: 60px;">
-                      <a href="#quiz-game" id="recap-link2" class="game-button">continue</a>
-                    </div>
 
                   </div>
-                </div>
 
-              </div>
+                  
+                    <div class="text-center" id="result-button">
+                    <a href="#quiz-game" id="recap-link1" class="game-button">continue</a>
+                    </div>
+
+          </div>
+
+
+  <div id="game-failed" class="hidden-section">
+
+          
+             <div class="text-center" id="summary-div">
+            <h1 id="cs-font" style="color: #206E63;">GAME SUMMARY</h1>
+               <!--
+               <h2 id="risk">MEDIUM RISK</h2>
+               -->
+             <div id="risk">
+                <img src="./img/veryhigh.png" class="card-img-top" id="risk-img">
+                </div>
+            <div class="result-container3" style="position: relative; width: 50%; margin: 0 auto;" data-progress2="300">
+              <img src="./img/result.png" class="card-img-top result-img3">
+              <div class="opacity-overlay3"></div> <!-- New overlay div -->
+                <div class="resultarrow-img3">
+              <img src="./img/resultarrow.png" class="card-img-top">
+<div id="result-text">You're Here!</div>
+</div>
             </div>
+            </div>
+             
+       
+          <div class="container" id="mood-container">
+            <div class="row">
+
+
+                <div class=" col-sm-4 circular-progress-container3">
+              <div class="circular-progress3" data-progress="50">
+                <div class="inner-circle3">
+                  <span class="percentage3" hidden>50%</span>
+                  <img src="./img/happiness.png" class="card-img-top" style="width: 80%; height: auto; margin: 0 auto;">
+                </div>
+                <div class="outer-ring3"></div>
+              </div>
+              <h5 id="factortext">Happiness</h5>
+            </div>
+         
+               <div class=" col-sm-4 circular-progress-container3">
+              <div class="circular-progress3" data-progress="50">
+                <div class="inner-circle3">
+                  <span class="percentage3" hidden>50%</span>
+                  <img src="./img/focus.png" class="card-img-top" style="width: 80%; height: auto; margin: 0 auto;">
+                </div>
+                <div class="outer-ring3"></div>
+              </div>
+              <h5 id="factortext">Life Goal</h5>
+            </div>
+
+             <div class=" col-sm-4 circular-progress-container3">
+              <div class="circular-progress3" data-progress="50">
+                <div class="inner-circle3">
+                  <span class="percentage3" hidden>50%</span>
+                  <img src="./img/relationship.png" class="card-img-top" style="width: 80%; height: auto; margin: 0 auto;">
+                </div>
+                <div class="outer-ring3"></div>
+              </div>
+              <h5 id="factortext">Relationship</h5>
+            </div>
+
+          </div>
+          </div>
+   
+         
+                  <div class="result-desc">
+
+                    <h5 id="resulttext">Your credit score took a hit this time, but every
+                    choice taught you something - gear up and try
+                    again to level up your financial game!</h5>
+
+
+
+                  </div>
+
+                  
+                    <div class="text-center" id="result-button">
+                        <a href="#quiz-game" id="recap-link2" class="game-button">continue</a>
+                    </div>
+
 
           </div>
 
@@ -3604,7 +3711,8 @@
 
       });
 
- const dragSound = document.getElementById('drag-sound');
+
+     const dragSound = document.getElementById('drag-sound');
       const dropSound = document.getElementById('drop-sound');
 
       function allowDrop(ev) {
@@ -5351,6 +5459,14 @@ function handleTouchEnd(e) {
         hideSection.classList.remove('visible-section');
         hideSection.classList.add('hidden-section');
 
+        var hideSection = document.getElementById('creditmeter');
+        hideSection.classList.remove('visible-section');
+        hideSection.classList.add('hidden-section');
+
+        var hideSection = document.getElementById('factormeter');
+        hideSection.classList.remove('visible-section');
+        hideSection.classList.add('hidden-section');
+
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
       });
@@ -5365,6 +5481,14 @@ function handleTouchEnd(e) {
         targetSection.classList.add('visible-section');
 
         var hideSection = document.getElementById('scene15-opt2');
+        hideSection.classList.remove('visible-section');
+        hideSection.classList.add('hidden-section');
+
+        var hideSection = document.getElementById('creditmeter');
+        hideSection.classList.remove('visible-section');
+        hideSection.classList.add('hidden-section');
+
+        var hideSection = document.getElementById('factormeter');
         hideSection.classList.remove('visible-section');
         hideSection.classList.add('hidden-section');
 
@@ -5511,13 +5635,6 @@ function handleTouchEnd(e) {
         hideSection.classList.add('hidden-section');
 
 
-        var hideSection = document.getElementById('creditmeter');
-        hideSection.classList.remove('visible-section');
-        hideSection.classList.add('hidden-section');
-
-        var hideSection = document.getElementById('factormeter');
-        hideSection.classList.remove('visible-section');
-        hideSection.classList.add('hidden-section');
 
         // Play background music when family quiz is visible
         const backgroundMusic = document.getElementById('game-music');
@@ -5539,14 +5656,6 @@ function handleTouchEnd(e) {
         hideSection.classList.remove('visible-section');
         hideSection.classList.add('hidden-section');
 
-
-        var hideSection = document.getElementById('creditmeter');
-        hideSection.classList.remove('visible-section');
-        hideSection.classList.add('hidden-section');
-
-        var hideSection = document.getElementById('factormeter');
-        hideSection.classList.remove('visible-section');
-        hideSection.classList.add('hidden-section');
 
         // Play background music when family quiz is visible
         const backgroundMusic = document.getElementById('game-music');
@@ -5638,7 +5747,7 @@ function handleTouchEnd(e) {
       /////////////////////////////////////////////////////////////
 
 
-      // Initialize progress on page load
+ // Initialize progress on page load
       document.addEventListener('DOMContentLoaded', () => {
         // Delay to ensure images are loaded
         setTimeout(initProgress, 100);
@@ -5657,6 +5766,7 @@ function handleTouchEnd(e) {
         }
 
         const outerRing = element.querySelector('.outer-ring');
+    const innercirc = element.querySelector('.inner-circle');
         if (outerRing) {
           // Define the original gradient
           const originalGradient = `conic-gradient(#D4C029 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
@@ -5671,8 +5781,12 @@ function handleTouchEnd(e) {
           // Temporarily set color if value changed
           if (tempColor) {
             outerRing.style.background = tempColor;
-
-            setTimeout(() => {
+  // ✨ Add pulse effect
+    outerRing.classList.add('pulse');
+     innercirc.classList.add('pulse');
+    setTimeout(() => {
+      outerRing.classList.remove('pulse');
+       innercirc.classList.remove('pulse');
               outerRing.style.background = originalGradient;
             }, 1000); // Duration matches the arrow visibility
           } else {
@@ -5703,6 +5817,74 @@ function handleTouchEnd(e) {
       }
 
 
+      function updateCircularProgress2(element, newValue) {
+  const previousValue = parseInt(element.getAttribute('data-progress'), 10);
+  element.setAttribute('data-progress', newValue);
+
+  // Update percentage text
+  const percentageElement = element.querySelector('.inner-circle2 .percentage2');
+  if (percentageElement) {
+    percentageElement.innerHTML = `${newValue}%`;
+    percentageElement.hidden = true;
+  }
+
+  const outerRing = element.querySelector('.outer-ring2');
+  if (outerRing) {
+    const originalGradient = `conic-gradient(#D4C029 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
+
+    let tempColor;
+    if (newValue > previousValue) {
+      tempColor = `conic-gradient(#206E63 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
+    } else if (newValue < previousValue) {
+      tempColor = `conic-gradient(#DA1F27 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
+    }
+
+    if (tempColor) {
+      outerRing.style.background = tempColor;
+      setTimeout(() => {
+        outerRing.style.background = originalGradient;
+      }, 1000);
+    } else {
+      outerRing.style.background = originalGradient;
+    }
+  }
+}
+
+      function updateCircularProgress3(element, newValue) {
+  const previousValue = parseInt(element.getAttribute('data-progress'), 10);
+  element.setAttribute('data-progress', newValue);
+
+  // Update percentage text
+  const percentageElement = element.querySelector('.inner-circle3 .percentage3');
+  if (percentageElement) {
+    percentageElement.innerHTML = `${newValue}%`;
+    percentageElement.hidden = true;
+  }
+
+  const outerRing = element.querySelector('.outer-ring3');
+  if (outerRing) {
+    const originalGradient = `conic-gradient(#D4C029 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
+
+    let tempColor;
+    if (newValue > previousValue) {
+      tempColor = `conic-gradient(#206E63 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
+    } else if (newValue < previousValue) {
+      tempColor = `conic-gradient(#DA1F27 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
+    }
+
+    if (tempColor) {
+      outerRing.style.background = tempColor;
+      setTimeout(() => {
+        outerRing.style.background = originalGradient;
+      }, 1000);
+    } else {
+      outerRing.style.background = originalGradient;
+    }
+  }
+}
+
+
+
       // Function to update circular progress and arrow
       const minValue = 1;
       const maxValue = 100;
@@ -5728,7 +5910,7 @@ function handleTouchEnd(e) {
         }
 
         // Retrieve the credit score from the data-progress attribute
-        const creditScore = parseInt(container.getAttribute('data-progress'), 10);
+        const creditScore = parseInt(container.getAttribute('data-progress2'), 10);
         if (isNaN(creditScore)) {
           console.error('Invalid credit score');
           return;
@@ -5747,67 +5929,211 @@ function handleTouchEnd(e) {
 
         // Adjust the gradient stop position based on the arrow's top position
         const gradientPosition = ((arrowTop + 6) / containerHeight) * 100;
-        overlayElement.style.background = `linear-gradient(to bottom, rgba(243, 241, 241, 0.315) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
+        overlayElement.style.background = `linear-gradient(to bottom, rgba(252, 252, 252, 0.486) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
 
         // Ensure the overlay covers the entire container to account for possible gradient overflow
         overlayElement.style.height = `${containerHeight}px`;
       }
 
+
+
+       function updateResultArrow() {
+ const gameSuccess = document.getElementById('game-success');
+  const container = document.querySelector('.result-container');
+  const arrowElement = document.querySelector('.resultarrow-img');
+  const overlayElement = document.querySelector('.opacity-overlay2');
+
+  if (!container || !arrowElement || !overlayElement || !gameSuccess) {
+    console.error('Required element(s) not found.');
+    return;
+  }
+
+  // Save original inline styles
+  const originalStyle = {
+    display: gameSuccess.style.display,
+    visibility: gameSuccess.style.visibility
+  };
+
+  // Temporarily make the section visible off-screen for layout calculations
+  gameSuccess.style.display = 'block';
+  gameSuccess.style.visibility = 'hidden';
+
+  // Measure dimensions
+  const containerWidth = container.clientWidth;
+  const arrowWidth = arrowElement.clientWidth;
+
+  // Restore original styles
+  gameSuccess.style.display = originalStyle.display;
+ gameSuccess.style.visibility = originalStyle.visibility;
+
+  if (containerWidth === 0 || arrowWidth === 0) {
+    console.error('Invalid container or arrow width');
+    return;
+  }
+
+  // Get credit score
+  const creditScore = parseInt(container.getAttribute('data-progress2'), 10);
+
+
+  if (isNaN(creditScore)) {
+    console.error('Invalid credit score');
+    return;
+  }
+
+  // Calculate arrow position
+  const positionPercentage = ((creditScore - minValue) / (maxValue - minValue)) * 100;
+  const arrowLeft = (containerWidth - arrowWidth) * (1 - positionPercentage / 100);
+
+  arrowElement.style.left = `${Math.max(0, Math.min(arrowLeft, containerWidth - arrowWidth))}px`;
+
+  // Apply gradient to overlay
+  const gradientPosition = (arrowLeft / containerWidth) * 100;
+  overlayElement.style.background = `linear-gradient(to right, rgba(252, 252, 252, 0.486) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
+  overlayElement.style.width = `${containerWidth}px`;
+}
+
+
+ function updateResultArrow2() {
+  const gameFailed = document.getElementById('game-failed');
+  const container = document.querySelector('.result-container3');
+  const arrowElement = document.querySelector('.resultarrow-img3');
+  const overlayElement = document.querySelector('.opacity-overlay3');
+
+  if (!container || !arrowElement || !overlayElement || !gameFailed) {
+    console.error('Required element(s) not found.');
+    return;
+  }
+
+  // Save original inline styles
+  const originalStyle = {
+    display: gameFailed.style.display,
+    visibility: gameFailed.style.visibility
+  };
+
+  // Temporarily make the section visible off-screen for layout calculations
+  gameFailed.style.display = 'block';
+  gameFailed.style.visibility = 'hidden';
+
+  // Measure dimensions
+  const containerWidth = container.clientWidth;
+  const arrowWidth = arrowElement.clientWidth;
+
+  // Restore original styles
+  gameFailed.style.display = originalStyle.display;
+  gameFailed.style.visibility = originalStyle.visibility;
+
+  if (containerWidth === 0 || arrowWidth === 0) {
+    console.error('Invalid container or arrow width');
+    return;
+  }
+
+  // Get credit score
+  const creditScore = parseInt(container.getAttribute('data-progress2'), 10);
+
+
+  if (isNaN(creditScore)) {
+    console.error('Invalid credit score');
+    return;
+  }
+
+  // Calculate arrow position
+  const positionPercentage = ((creditScore - minValue) / (maxValue - minValue)) * 100;
+  const arrowLeft = (containerWidth - arrowWidth) * (1 - positionPercentage / 100);
+
+  arrowElement.style.left = `${Math.max(0, Math.min(arrowLeft, containerWidth - arrowWidth))}px`;
+
+  // Apply gradient to overlay
+  const gradientPosition = (arrowLeft / containerWidth) * 100;
+  overlayElement.style.background = `linear-gradient(to right, rgba(252, 252, 252, 0.486) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
+  overlayElement.style.width = `${containerWidth}px`;
+}
+
       // Initialize the credit arrow and overlay gradient based on the initial data-progress value
-      function initProgress() {
-        document.querySelectorAll('.circular-progress').forEach(progress => {
-          const initialValue = parseInt(progress.getAttribute('data-progress'), 10);
-          if (!isNaN(initialValue)) {
-            updateCircularProgress(progress, initialValue); // Set the initial progress value
-          }
-        });
+function initProgress() {
+  document.querySelectorAll('.circular-progress').forEach(progress => {
+    const initialValue = parseInt(progress.getAttribute('data-progress'), 10);
+    if (!isNaN(initialValue)) {
+      updateCircularProgress(progress, initialValue);
+    }
+  });
 
-        updateCreditArrow(); // Initialize the credit arrow with the existing data-progress value
-      }
+  document.querySelectorAll('.circular-progress2').forEach(progress => {
+    const initialValue = parseInt(progress.getAttribute('data-progress'), 10);
+    if (!isNaN(initialValue)) {
+      updateCircularProgress2(progress, initialValue);
+    }
+  });
+
+    document.querySelectorAll('.circular-progress3').forEach(progress => {
+    const initialValue = parseInt(progress.getAttribute('data-progress'), 10);
+    if (!isNaN(initialValue)) {
+      updateCircularProgress3(progress, initialValue);
+    }
+  });
+
+  updateCreditArrow();
+  updateResultArrow();
+  updateResultArrow2();
+}
+
+
       // Add event listeners to choice cards
-      document.querySelectorAll('.choice-card').forEach(card => {
-        card.addEventListener('click', function (event) {
-          event.preventDefault();
+   document.querySelectorAll('.choice-card').forEach(card => {
+  card.addEventListener('click', function (event) {
+    event.preventDefault();
 
-          // Get the progress values from the data attributes
-          const happiness = this.getAttribute('data-happiness');
-          const focus = this.getAttribute('data-focus');
-          const connection = this.getAttribute('data-connection');
-          const creditScore = this.getAttribute('data-credit-score');
+    const happiness = this.getAttribute('data-happiness');
+    const focus = this.getAttribute('data-focus');
+    const connection = this.getAttribute('data-connection');
+    const creditScore = this.getAttribute('data-credit-score');
+    //const resultScore = this.getAttribute('data-result-score'); // Add this attribute to your cards
 
-          // Update the circular progress elements and arrows
-          document.querySelectorAll('.circular-progress').forEach((progress, index) => {
-            const value = [happiness, focus, connection][index];
-            if (value) {
-              updateCircularProgress(progress, value);
-            }
-          });
+    document.querySelectorAll('.circular-progress').forEach((progress, index) => {
+      const value = [happiness, focus, connection][index];
+      if (value) updateCircularProgress(progress, value);
+    });
 
-          // Update the credit arrow
-          const container = document.querySelector('.credit-score-container');
-          if (container) {
-            container.setAttribute('data-progress', creditScore);
-            updateCreditArrow();
-          }
+    document.querySelectorAll('.circular-progress2').forEach((progress, index) => {
+      const value = [happiness, focus, connection][index];
+      if (value) updateCircularProgress2(progress, value);
+    });
 
-          // Navigate to the target section
-          const targetSection = document.querySelector(this.getAttribute('href'));
-          if (targetSection) {
-            targetSection.classList.remove('hidden-section');
-            targetSection.classList.add('visible-section');
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+      document.querySelectorAll('.circular-progress3').forEach((progress, index) => {
+      const value = [happiness, focus, connection][index];
+      if (value) updateCircularProgress3(progress, value);
+    });
 
-            // Animate the arrow in the target section
-            const arrow = targetSection.querySelector('.arrow');
-            if (arrow) {
-              animateArrow(arrow);
-            }
-          }
-        });
-      });
+    const creditContainer = document.querySelector('.credit-score-container');
+    if (creditContainer) {
+      creditContainer.setAttribute('data-progress2', creditScore);
+      updateCreditArrow('.credit-score-container', '.creditarrow-img', '.opacity-overlay');
+    }
 
+   
+    const resultContainer = document.querySelector('.result-container');
+    if (resultContainer) {
+      resultContainer.setAttribute('data-progress2', creditScore);
+      updateResultArrow('.result-container', '.resultarrow-img', '.opacity-overlay2');
+    }
 
+       const resultContainer3 = document.querySelector('.result-container3');
+    if (resultContainer3) {
+      resultContainer3.setAttribute('data-progress2', creditScore);
+      updateResultArrow2('.result-container3', '.resultarrow-img3', '.opacity-overlay3');
+    }
+    
 
+    const targetSection = document.querySelector(this.getAttribute('href'));
+    if (targetSection) {
+      targetSection.classList.remove('hidden-section');
+      targetSection.classList.add('visible-section');
+      targetSection.scrollIntoView({ behavior: 'smooth' });
+
+      const arrow = targetSection.querySelector('.arrow');
+      if (arrow) animateArrow(arrow);
+    }
+  });
+});
 
     </script>
 
