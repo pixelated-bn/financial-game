@@ -3837,7 +3837,7 @@ li:nth-child(odd) {
   /* Optional: set a background color */
   z-index: 1000;
   /* Ensure it stays on top of other content */
-  padding-top: 2px;
+  padding-top: 3px;
   /* Optional: add some padding */
   cursor: default;
 }
@@ -4776,37 +4776,33 @@ width: auto;
 }
 
 .result-container {
-  position: absolute;
-  width: 100px;
-  height: 60px;
-  margin: 0 auto;
-  overflow: hidden; /* Optional, to clip anything outside */
+  height: 70px;
+  width: 426px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
 }
 
 .result-container3 {
-  position: absolute;
-  width: 100px;
-  height: 60px;
-  margin: 0 auto;
-  overflow: hidden; /* Optional, to clip anything outside */
+  height: 70px;
+  width: 426px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
 }
 
 .result-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 45%;
-  object-fit: cover; /* Adjusts image scaling */
+ width: 226px;
+  height: 65%;
+  opacity: 1;
+  position: relative;
 }
 
 .result-img3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 45%;
-  object-fit: cover; /* Adjusts image scaling */
+  width: 226px;
+  height: 65%;
+  opacity: 1;
+  position: relative;
 }
 
 .opacity-overlay2 {
@@ -4814,7 +4810,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 101%;
+  height: 65%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -4823,11 +4819,11 @@ width: auto;
 }
 
 .opacity-overlay3 {
-  position: absolute;
+   position: absolute;
   top: 0;
   left: 0;
   width: 51%;
-  height: 101%;
+  height: 65%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -4844,7 +4840,7 @@ width: auto;
   width: 3%;
   /* Adjust the size as needed */
   height: auto;
-  top: 25%;
+  top: 35%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -4861,7 +4857,7 @@ width: auto;
   width: 3%;
   /* Adjust the size as needed */
   height: auto;
-  top: 25%;
+  top: 35%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
