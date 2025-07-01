@@ -3843,12 +3843,12 @@ li:nth-child(odd) {
 }
 
   #home{
-height: 15px;
+height: 17px;
 width: auto;
 }
 
 #info {
-  font-size: 13px;
+  font-size: 15px;
   color: #206E63;
 }
 
@@ -4792,14 +4792,14 @@ width: auto;
 }
 
 .result-img {
- width: 226px;
+ width: 210px;
   height: 65%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
-  width: 226px;
+  width: 210px;
   height: 65%;
   opacity: 1;
   position: relative;
