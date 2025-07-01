@@ -30,15 +30,15 @@
 
 
   <div class="container-fluid">
-    <div class="row sticky-row">
-      <div class="col-sm-10">
-        <a class="" href="index.html" style="text-decoration: none;"><img src="./img/creditlit.png"
-            class="card-img-top" style="width: 8%; height: auto; margin: 0 auto;"></a>
-      </div>
-      <div class="col-sm-2" id="info-icon"> <a href="" id="" data-toggle="modal" data-target="#info-game"
-          class="start-link">
-          <i class='bx bx-info-circle' id="info"></i></a>
-      </div>
+    <div class="row sticky-row" style="display: flex; align-items: center; gap: 10px;">
+  <a href="index.html" style="text-decoration: none;">
+    <img src="./img/creditlit.png" style="height: 33px; width: auto;">
+  </a>
+
+  <a href="#" data-toggle="modal" data-target="#info-game" class="start-link" style="display: flex; align-items: center;">
+    <i class='bx bx-info-circle' id="info"></i>
+  </a>
+</div>
 
     </div>
 
@@ -422,7 +422,7 @@
           </div>
 
 
-         <div id="scene1-tips" class="hidden-section">
+          <div id="scene1-tips" class="hidden-section">
 
 
 
@@ -1015,20 +1015,20 @@
       </div> <!-- col-sm-2 -->
 
     </div><!--container fluid row-->
-    <div id="footer">
+  <div id="footer">
 
-      <div class="text-center" style="display: flex; gap: 80px; justify-content: center;">
+  <div class="text-center" style="display: flex; gap: 80px; justify-content: center;">
+    
+    <a href="" id="" data-toggle="modal" data-target="#aboutgame" class="start-link">
+      About this game
+    </a>
+    <a href="" id="" data-toggle="modal" data-target="#contactus" class="start-link">
+      Contact Us
+    </a>
+  </div>
 
-        <a href="" id="" data-toggle="modal" data-target="#aboutgame" class="start-link">
-          About this game
-        </a>
-        <a href="" id="" data-toggle="modal" data-target="#contactus" class="start-link">
-          Contact Us
-        </a>
-      </div>
 
-
-    </div>
+</div>
 
     <div class="modal fade" id="aboutgame" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
       aria-hidden="true">
@@ -1553,28 +1553,33 @@
         }
 
         const outerRing = element.querySelector('.outer-ring');
-        if (outerRing) {
-          // Define the original gradient
-          const originalGradient = `conic-gradient(#D4C029 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
+    const innercirc = element.querySelector('.inner-circle');
+  if (outerRing) {
+  const originalGradient = `conic-gradient(#D4C029 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
 
-          let tempColor;
-          if (newValue > previousValue) {
-            tempColor = `conic-gradient(#206E63 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`; // Green for up
-          } else if (newValue < previousValue) {
-            tempColor = `conic-gradient(#DA1F27 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`; // Red for down
-          }
+  let tempColor;
+  if (newValue > previousValue) {
+    tempColor = `conic-gradient(#206E63 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`; // Green
+  } else if (newValue < previousValue) {
+    tempColor = `conic-gradient(#DA1F27 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`; // Red
+  }
 
-          // Temporarily set color if value changed
-          if (tempColor) {
-            outerRing.style.background = tempColor;
+  if (tempColor) {
+    outerRing.style.background = tempColor;
 
-            setTimeout(() => {
-              outerRing.style.background = originalGradient;
-            }, 1000); // Duration matches the arrow visibility
-          } else {
-            outerRing.style.background = originalGradient;
-          }
-        }
+    // ✨ Add pulse effect
+    outerRing.classList.add('pulse');
+     innercirc.classList.add('pulse');
+    setTimeout(() => {
+      outerRing.classList.remove('pulse');
+       innercirc.classList.remove('pulse');
+      outerRing.style.background = originalGradient;
+    }, 1000); // same as arrow duration
+  } else {
+    outerRing.style.background = originalGradient;
+  }
+}
+
 
         const arrowImage = element.parentElement.querySelector('.factor-up-image');
         if (arrowImage) {
