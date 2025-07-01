@@ -3843,12 +3843,12 @@ li:nth-child(odd) {
 }
 
   #home{
-height: 10px;
+height: 15px;
 width: auto;
 }
 
 #info {
-  font-size: 14px;
+  font-size: 13px;
   color: #206E63;
 }
 
