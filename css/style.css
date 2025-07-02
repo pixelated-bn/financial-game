@@ -7133,7 +7133,7 @@ width: auto;
   border-radius: 4px;
 }
 
-  
+
 #game-success{
   margin-top: 0px;
 }
@@ -7349,7 +7349,7 @@ width: auto;
   align-items: center;
   justify-content: center;
   /* Align items horizontally */
-  padding-top: 5px;
+  padding-top: 20px;
   padding-right: 1px;
   width: 80px;
   height: 70px;
@@ -7407,13 +7407,36 @@ width: auto;
     border-radius: 4px;
   }
 
-
 }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   #index {
     padding-top: 130px;
   }
+
+      .sticky-row {
+  position: -webkit-sticky;
+  /* For Safari */
+  position: sticky;
+  background-color: unset;
+  /* Optional: set a background color */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
+  padding-top: 10px;
+  /* Optional: add some padding */
+  cursor: default;
+}
+
+  #home{
+height: 26px;
+width: auto;
+}
+
+#info {
+  font-size: 24px;
+  color: #206E63;
+}
+
 
   #instruction {
     width: 100%;
@@ -7482,14 +7505,6 @@ width: auto;
     animation: fadeInButton 0.2s ease-in-out 2s forwards;
     /* Delay of 6 seconds */
     display: none;
-  }
-
-  #info {
-    font-size: 28px;
-  }
-
-  #info-icon {
-    padding-left: 120px;
   }
 
   #creditmeter {
@@ -8094,6 +8109,282 @@ width: auto;
   padding-bottom: 28px;
 }
 
+
+#game-success{
+  margin-top: 0px;
+}
+
+#summary-div{
+  height: 110px;
+}
+
+#risk{
+  margin-top: 20px;
+}
+
+#risk-img{
+ width: 28%;
+ height: auto;
+
+}
+
+.result-container {
+ height: 110px;
+  width: 500px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+.result-container3 {
+ height: 110px;
+  width: 500px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+.result-img {
+   width: 360px;
+  height: 90%;
+  opacity: 1;
+  position: relative;
+}
+
+.result-img3 {
+  width: 360px;
+  height: 90%;
+  opacity: 1;
+  position: relative;
+}
+
+.opacity-overlay2 {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 86%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.opacity-overlay3 {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 86%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 4%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 57%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img3 {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 4%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 57%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+
+#result-text{
+  position: absolute;
+   font-size: 14px;
+   font-weight: bold;
+  color: #000000;
+  width: 160px;
+  left: 4%;
+  transform: translateX(-50%);
+}
+
+.inner-circle2 {
+  width: 70%;
+  /* Inner circle size */
+  height: 70%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.inner-circle3 {
+   width: 70%;
+  /* Inner circle size */
+  height: 70%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.percentage3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring2 {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.outer-ring3 {
+   width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.circular-progress2 {
+   width: 90px;
+  /* Outer ring size */
+  height: 90px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress3 {
+    width: 90px;
+  /* Outer ring size */
+  height: 90px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress-container2 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+ padding-top: 100px;
+  padding-left: 40px;
+  width: 100px;
+  height: 70px;
+}
+
+.circular-progress-container3 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 100px;
+  padding-left: 40px;
+  width: 100px;
+  height: 70px;
+}
+
+.result-desc{
+  padding-top: 180px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+#resulttext{
+  font-size: 14px;
+}
+
+#result-button{
+  padding-top: 10px;
+}
+
+#mood-container{
+  height: 70px;
+  width: 580px;
+  margin-top: 0;
+}
+
+#factortext{
+   color: #206E63;
+   font-style: italic;
+   padding-top: 15px;
+   padding-right: 6px;
+   padding-left: 10px;
+   font-size: 14px;
+}
+
+  .game-button3 {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 10px 18px 12px 18px;
+    width: 18%;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+
+  
 }
 
 @media (min-width: 1400px) and (max-width: 1510px) {
