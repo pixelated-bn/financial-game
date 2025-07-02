@@ -4776,31 +4776,31 @@ width: auto;
 }
 
 .result-container {
-  height: 70px;
-  width: 426px;
+  height: 80px;
+  width: 435px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
 }
 
 .result-container3 {
-  height: 70px;
-  width: 426px;
+ height: 80px;
+  width: 435px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
 }
 
 .result-img {
- width: 210px;
-  height: 65%;
+  width: 230px;
+  height: 58%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
-  width: 210px;
-  height: 65%;
+ width: 230px;
+  height: 58%;
   opacity: 1;
   position: relative;
 }
@@ -4810,7 +4810,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 65%;
+  height: 56%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -4823,7 +4823,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 65%;
+  height: 56%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -4840,7 +4840,7 @@ width: auto;
   width: 3%;
   /* Adjust the size as needed */
   height: auto;
-  top: 35%;
+  top: 32%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -4857,7 +4857,7 @@ width: auto;
   width: 3%;
   /* Adjust the size as needed */
   height: auto;
-  top: 35%;
+  top: 32%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -4988,8 +4988,8 @@ width: auto;
 
 .result-desc{
   padding-top: 2px;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 #resulttext{
@@ -5034,6 +5034,31 @@ width: auto;
   #index {
     padding-top: 80px;
   }
+
+  
+    .sticky-row {
+  position: -webkit-sticky;
+  /* For Safari */
+  position: sticky;
+  background-color: unset;
+  /* Optional: set a background color */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
+  padding-top: 3px;
+  /* Optional: add some padding */
+  cursor: default;
+}
+
+  #home{
+height: 17px;
+width: auto;
+}
+
+#info {
+  font-size: 15px;
+  color: #206E63;
+}
+
 
   #footer {
     position: fixed;
@@ -5232,14 +5257,6 @@ width: auto;
     width: 100%;
     height: 86%;
     display: block;
-  }
-
-  #info {
-    font-size: 28px;
-  }
-
-  #info-icon {
-    padding-left: 70px;
   }
 
   #howto {
@@ -5935,6 +5952,279 @@ width: auto;
   border-radius: 4px;
 }
 
+
+#game-success{
+  margin-top: 0px;
+}
+
+#summary-div{
+  height: 110px;
+}
+
+#risk{
+  margin-top: 0;
+}
+
+#risk-img{
+ width: 20%;
+ height: auto;
+
+}
+
+.result-container {
+  height: 80px;
+  width: 435px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+}
+
+.result-container3 {
+ height: 80px;
+  width: 435px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+}
+
+.result-img {
+  width: 230px;
+  height: 58%;
+  opacity: 1;
+  position: relative;
+}
+
+.result-img3 {
+ width: 230px;
+  height: 58%;
+  opacity: 1;
+  position: relative;
+}
+
+.opacity-overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 56%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.opacity-overlay3 {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 56%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 32%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img3 {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 32%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+
+#result-text{
+  position: absolute;
+   font-size: 7px;
+   font-weight: bold;
+  color: #000000;
+  width: 160px;
+  left: 4%;
+  transform: translateX(-50%);
+}
+
+.inner-circle2 {
+  width: 40%;
+  /* Inner circle size */
+  height: 40%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.inner-circle3 {
+  width: 40%;
+  /* Inner circle size */
+  height: 40%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.percentage3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring2 {
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.outer-ring3 {
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.circular-progress2 {
+  width: 50px;
+  /* Outer ring size */
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress3 {
+  width: 50px;
+  /* Outer ring size */
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress-container2 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 0px;
+  padding-right: 1px;
+  width: 80px;
+  height: 70px;
+}
+
+.circular-progress-container3 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 0px;
+  padding-right: 1px;
+  width: 80px;
+  height: 70px;
+}
+
+.result-desc{
+  padding-top: 2px;
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+#resulttext{
+  font-size: 8px;
+}
+
+#result-button{
+  padding-top: 0px;
+}
+
+#mood-container{
+  height: 70px;
+  width: 300px;
+  margin-top: 0;
+}
+
+#factortext{
+   color: #206E63;
+   font-style: italic;
+   padding-top: 0px;
+   padding-right: 30px;
+   padding-left: 15px;
+   font-size: 8px;
+}
+
+  .game-button3 {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 4px 8px 6px 8px;
+    width: 13%;
+    font-size: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  
 }
 
 
@@ -5943,6 +6233,30 @@ width: auto;
   #index {
     padding-top: 80px;
   }
+
+     .sticky-row {
+  position: -webkit-sticky;
+  /* For Safari */
+  position: sticky;
+  background-color: unset;
+  /* Optional: set a background color */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
+  padding-top: 4px;
+  /* Optional: add some padding */
+  cursor: default;
+}
+
+  #home{
+height: 20px;
+width: auto;
+}
+
+#info {
+  font-size: 18px;
+  color: #206E63;
+}
+
 
   #footer {
     position: fixed;
@@ -6005,14 +6319,6 @@ width: auto;
     transition: background-color 0.3s, transform 0.3s;
     text-decoration: none;
     border-radius: 4px;
-  }
-
-    #info {
-    font-size: 28px;
-  }
-
-  #info-icon {
-    padding-left: 90px;
   }
 
    .hidden-section {
@@ -6826,6 +7132,280 @@ width: auto;
   text-decoration: none;
   border-radius: 4px;
 }
+
+  
+#game-success{
+  margin-top: 0px;
+}
+
+#summary-div{
+  height: 110px;
+}
+
+#risk{
+  margin-top: 0;
+}
+
+#risk-img{
+ width: 20%;
+ height: auto;
+
+}
+
+.result-container {
+  height: 88px;
+  width: 435px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+.result-container3 {
+  height: 88px;
+  width: 435px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+.result-img {
+  width: 290px;
+  height: 70%;
+  opacity: 1;
+  position: relative;
+}
+
+.result-img3 {
+  width: 290px;
+  height: 70%;
+  opacity: 1;
+  position: relative;
+}
+
+.opacity-overlay2 {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 68%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.opacity-overlay3 {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 68%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 43%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img3 {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 43%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+
+#result-text{
+  position: absolute;
+   font-size: 9px;
+   font-weight: bold;
+  color: #000000;
+  width: 160px;
+  left: 4%;
+  transform: translateX(-50%);
+}
+
+.inner-circle2 {
+  width: 50%;
+  /* Inner circle size */
+  height: 50%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.inner-circle3 {
+  width: 50%;
+  /* Inner circle size */
+  height: 50%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.percentage3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring2 {
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.outer-ring3 {
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.circular-progress2 {
+  width: 60px;
+  /* Outer ring size */
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress3 {
+  width: 60px;
+  /* Outer ring size */
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress-container2 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 5px;
+  padding-right: 1px;
+  width: 80px;
+  height: 70px;
+}
+
+.circular-progress-container3 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 20px;
+  padding-right: 1px;
+  width: 80px;
+  height: 70px;
+}
+
+.result-desc{
+  padding-top: 30px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+#resulttext{
+  font-size: 8px;
+}
+
+#result-button{
+  padding-top: 0px;
+}
+
+#mood-container{
+  height: 70px;
+  width: 300px;
+  margin-top: 0;
+}
+
+#factortext{
+   color: #206E63;
+   font-style: italic;
+   padding-top: 0px;
+   padding-right: 30px;
+   padding-left: 20px;
+   font-size: 8px;
+}
+
+  .game-button3 {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 4px 8px 6px 8px;
+    width: 13%;
+    font-size: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
 
 
 }
