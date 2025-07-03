@@ -8493,6 +8493,29 @@ width: auto;
     padding-top: 340px;
   }
 
+        .sticky-row {
+  position: -webkit-sticky;
+  /* For Safari */
+  position: sticky;
+  background-color: unset;
+  /* Optional: set a background color */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
+  padding-top: 20px;
+  /* Optional: add some padding */
+  cursor: default;
+}
+
+  #home{
+height: 42px;
+width: auto;
+}
+
+#info {
+  font-size: 40px;
+  color: #206E63;
+}
+
   #footer {
     position: fixed;
     margin-bottom: 8px;
@@ -8560,16 +8583,6 @@ width: auto;
   animation: fadeInButton 0.2s ease-in-out 2s forwards;
   /* Delay of 6 seconds */
   display: none;
-}
-
-#info {
-  font-size: 60px;
-  color: #206E63;
-}
-
-
-#info-icon {
-  padding-left: 200px;
 }
 
  #creditmeter {
@@ -9362,5 +9375,280 @@ h1 {
 #credit-end2{
   font-size: 52px;
 }
+
+  #summary-div{
+  height: 110px;
+}
+
+#risk{
+  margin-top: 50px;
+}
+
+#risk-img{
+ width: 30%;
+ height: auto;
+
+}
+
+.result-container {
+  height: 150px;
+  width: 620px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+
+.result-img {
+   width: 640px;
+  height: 100%;
+  opacity: 1;
+  position: relative;
+}
+
+.opacity-overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 53%;
+  height: 200%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img {
+    position: absolute;
+  left: 60%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 4%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 60%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+.result-container3 {
+  height: 150px;
+  width: 620px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+
+.result-img3 {
+  width: 640px;
+  height: 100%;
+  opacity: 1;
+  position: relative;
+}
+
+.opacity-overlay3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 53%;
+  height: 200%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.resultarrow-img3 {
+    position: absolute;
+  left: 60%;
+  /* Move the arrow to the right */
+  transform: translateX(-80%);
+  /* Keep it centered relative to the new left position */
+  width: 4%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 60%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+
+.inner-circle2 {
+   width: 100%;
+  /* Inner circle size */
+  height: 100%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring2 {
+ width: 125%;
+  height: 125%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.circular-progress2 {
+  width: 120px;
+  /* Outer ring size */
+  height: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress-container2 {
+    align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 20px;
+  padding-left: 80px;
+   width: 300px;
+  height: 70px;
+}
+
+.inner-circle3 {
+  width: 100%;
+  /* Inner circle size */
+  height: 100%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+.percentage3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring3 {
+  width: 125%;
+  height: 125%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+.circular-progress3 {
+  width: 120px;
+  /* Outer ring size */
+  height: 120px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  /* Space between the circle and the factor image */
+}
+
+.circular-progress-container3 {
+   align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 20px;
+  padding-left: 80px;
+   width: 300px;
+  height: 70px;
+}
+
+
+.result-desc{
+  padding-top: 180px;
+  padding-left: 180px;
+  padding-right: 200px;
+}
+
+#result-button {
+  padding-top: 50px;
+}
+
+#mood-container{
+  margin-top: 270px;
+  height: 80px;
+  width: 900px;
+}
+
+
+#result-text{
+  position: absolute;
+   font-size: 24px;
+   font-weight: bold;
+  color: #000000;
+  width: 160px;
+  left: 5%;
+  transform: translateX(-45%);
+}
+
+#resulttext{
+  font-size: 32px;
+}
+
+#factortext{
+   color: #206E63;
+   font-style: italic;
+   padding-top: 40px;
+   padding-right: 36px;
+   padding-left: 0px;
+   font-size: 24px;
+}
+
+  .game-button3 {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 20px 40px 22px 40px;
+    width: 24%;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+
 
 }
