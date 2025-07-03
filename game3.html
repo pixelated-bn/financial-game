@@ -712,28 +712,28 @@
             document.addEventListener("DOMContentLoaded", () => {
               const stickyRow = document.querySelector(".sticky-row");
               const targets2 = [document.querySelector("#scenario5"), document.querySelector("#wedding-game"), document.querySelector("#game-credit2a"), document.querySelector("#game-credit2b")];
-              const footer2 = document.querySelector("#footer");
+              //const footer2 = document.querySelector("#footer");
 
               const observer2 = new IntersectionObserver(
                 (entries) => {
                   let shouldHideStickyRow = false;
-                  let HideFooter = false;
+                  //let HideFooter = false;
 
                   // Check the visibility of each observed element
                   entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                       shouldHideStickyRow = true;
-                      HideFooter = true;
+                      //HideFooter = true;
                     }
                   });
 
                   // Toggle the visibility of the sticky-row based on any intersecting element
-                  if (shouldHideStickyRow && HideFooter) {
+                  if (shouldHideStickyRow) {
                     stickyRow.style.display = "none";
-                    footer2.style.display = "none";
+                    //footer2.style.display = "none";
                   } else {
                     stickyRow.style.display = "flex"; // Or your desired display value
-                    footer2.style.display = "block";
+                    //footer2.style.display = "block";
                   }
                 },
                 { threshold: 0.2 } // Adjust the visibility threshold as needed
@@ -1401,29 +1401,29 @@
           <script>
             document.addEventListener("DOMContentLoaded", () => {
                   const stickyRow = document.querySelector(".sticky-row");
-              const footer = document.querySelector("#footer");
+              //const footer = document.querySelector("#footer");
               const targets = [document.querySelector("#scenario8"), document.querySelector("#vacation-game"), document.querySelector("#game-credit1")];
 
               const observer1 = new IntersectionObserver(
                 (entries) => {
                   let shouldHideStickyRow = false;
-                  let HideFooter = false;
+                  //let HideFooter = false;
 
                   // Check the visibility of each observed element
                   entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                       shouldHideStickyRow = true;
-                      HideFooter = true;
+                      //HideFooter = true;
                     }
                   });
 
                   // Toggle the visibility of the sticky-row based on any intersecting element
-                  if (shouldHideStickyRow && HideFooter) {
+                  if (shouldHideStickyRow) {
                     stickyRow.style.display = "none";
-                    footer.style.display = "none";
+                    //footer.style.display = "none";
                   } else {
                     stickyRow.style.display = "flex"; // Or your desired display value
-                    footer.style.display = "block";
+                    //footer.style.display = "block";
                   }
                 },
                 { threshold: 0.2 } // Adjust the visibility threshold as needed
@@ -1707,28 +1707,28 @@
             document.addEventListener("DOMContentLoaded", () => {
                const stickyRow = document.querySelector(".sticky-row");
               const targets3 = [document.querySelector("#scenario9"), document.querySelector("#business-game"), document.querySelector("#game-credit3")];
-              const footer3 = document.querySelector("#footer");
+              //const footer3 = document.querySelector("#footer");
 
               const observer3 = new IntersectionObserver(
                 (entries) => {
                   let shouldHideStickyRow = false;
-                  let HideFooter = false;
+                  //let HideFooter = false;
 
                   // Check the visibility of each observed element
                   entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                       shouldHideStickyRow = true;
-                      HideFooter = true;
+                      //HideFooter = true;
                     }
                   });
 
                   // Toggle the visibility of the sticky-row based on any intersecting element
-                  if (shouldHideStickyRow && HideFooter) {
+                  if (shouldHideStickyRow) {
                     stickyRow.style.display = "none";
-                    footer3.style.display = "none";
+                    //footer3.style.display = "none";
                   } else {
                     stickyRow.style.display = "flex"; // Or your desired display value
-                    footer3.style.display = "block";
+                    //footer3.style.display = "block";
                   }
                 },
                 { threshold: 0.2 } // Adjust the visibility threshold as needed
@@ -2064,29 +2064,29 @@
           <script>
             document.addEventListener("DOMContentLoaded", () => {
               const stickyRow = document.querySelector(".sticky-row");
-              const footer = document.querySelector("#footer");
+              //const footer = document.querySelector("#footer");
               const targets = [document.querySelector("#scene10tips")];
 
               const tip_observer1 = new IntersectionObserver(
                 (entries) => {
                   let shouldHideStickyRow = false;
-                  let HideFooter = false;
+                  //let HideFooter = false;
 
                   // Check the visibility of each observed element
                   entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                       shouldHideStickyRow = true;
-                      HideFooter = true;
+                      //HideFooter = true;
                     }
                   });
 
                   // Toggle the visibility of the sticky-row based on any intersecting element
-                  if (shouldHideStickyRow && HideFooter) {
+                  if (shouldHideStickyRow) {
                     stickyRow.style.display = "none";
-                    footer.style.display = "none";
+                    //footer.style.display = "none";
                   } else {
                     stickyRow.style.display = "flex"; // Or your desired display value
-                    footer.style.display = "block";
+                    //footer.style.display = "block";
                   }
                 },
                 { threshold: 0.2 } // Adjust the visibility threshold as needed
@@ -2504,29 +2504,29 @@
           <script>
             document.addEventListener("DOMContentLoaded", () => {
               const stickyRow = document.querySelector(".sticky-row");
-              const footer = document.querySelector("#footer");
+              //const footer = document.querySelector("#footer");
               const targets = [document.querySelector("#scene13tips")];
 
               const tip_observer2 = new IntersectionObserver(
                 (entries) => {
                   let shouldHideStickyRow = false;
-                  let HideFooter = false;
+                  //let HideFooter = false;
 
                   // Check the visibility of each observed element
                   entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                       shouldHideStickyRow = true;
-                      HideFooter = true;
+                      //HideFooter = true;
                     }
                   });
 
                   // Toggle the visibility of the sticky-row based on any intersecting element
-                  if (shouldHideStickyRow && HideFooter) {
+                  if (shouldHideStickyRow) {
                     stickyRow.style.display = "none";
-                    footer.style.display = "none";
+                    //footer.style.display = "none";
                   } else {
                     stickyRow.style.display = "flex"; // Or your desired display value
-                    footer.style.display = "block";
+                    //footer.style.display = "block";
                   }
                 },
                 { threshold: 0.2 } // Adjust the visibility threshold as needed
@@ -3256,28 +3256,28 @@
             document.addEventListener("DOMContentLoaded", () => {
                 const stickyRow = document.querySelector(".sticky-row");
               const targets4 = [document.querySelector("#quiz-game"), document.querySelector("#game-credit4")];
-              const footer4 = document.querySelector("#footer");
+              //const footer4 = document.querySelector("#footer");
 
               const observer4 = new IntersectionObserver(
                 (entries) => {
                   let shouldHideStickyRow = false;
-                  let HideFooter = false;
+                  //let HideFooter = false;
 
                   // Check the visibility of each observed element
                   entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                       shouldHideStickyRow = true;
-                      HideFooter = true;
+                      //HideFooter = true;
                     }
                   });
 
                   // Toggle the visibility of the sticky-row based on any intersecting element
-                  if (shouldHideStickyRow && HideFooter) {
+                  if (shouldHideStickyRow) {
                     stickyRow.style.display = "none";
-                    footer4.style.display = "none";
+                    //footer4.style.display = "none";
                   } else {
                     stickyRow.style.display = "flex"; // Or your desired display value
-                    footer4.style.display = "block";
+                    //footer4.style.display = "block";
                   }
                 },
                 { threshold: 0.2 } // Adjust the visibility threshold as needed
