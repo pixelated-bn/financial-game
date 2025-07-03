@@ -29,7 +29,7 @@
   </audio>
 
 
-   <div class="container-fluid">
+ <div class="container-fluid">
      <div class="row sticky-row" style="display: flex; align-items: center; gap: 10px;">
   <a href="index.html" style="text-decoration: none;">
     <img src="./img/creditlit.png" id="home">
@@ -264,7 +264,7 @@
           <div class="text-center">
             <h5 id="cs-font">CREDIT<br>SCORE</h5>
             <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;"
-              data-progress="300">
+              data-progress2="300">
               <img src="./img/creditscore.png" class="card-img-top creditscore-img">
               <div class="opacity-overlay"></div> <!-- New overlay div -->
               <img src="./img/creditarrow.png" class="card-img-top creditarrow-img">
@@ -1630,7 +1630,7 @@
         }
 
         // Retrieve the credit score from the data-progress attribute
-        const creditScore = parseInt(container.getAttribute('data-progress'), 10);
+        const creditScore = parseInt(container.getAttribute('data-progress2'), 10);
         if (isNaN(creditScore)) {
           console.error('Invalid credit score');
           return;
@@ -1688,7 +1688,7 @@
           // Update the credit arrow
           const container = document.querySelector('.credit-score-container');
           if (container) {
-            container.setAttribute('data-progress', creditScore);
+            container.setAttribute('data-progress2', creditScore);
             updateCreditArrow();
           }
 
