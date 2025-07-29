@@ -35,7 +35,7 @@
     <img src="./img/creditlit.png" id="home">
   </a>
 
-  <a href="#" data-toggle="modal" data-target="#info-game" class="start-link" style="display: flex; align-items: center;">
+  <a href="#" data-toggle="modal" data-target="#info-game"  style="display: flex; align-items: center;">
     <i class='bx bx-info-circle' id="info"></i>
   </a>
 </div>
@@ -55,12 +55,13 @@
             </a>
           </div>
           <div class="modal-body">
-            <div class="embed-responsive embed-responsive-16by9">
-              <video class="embed-responsive-item" controls muted>
-                <source src="./video/about-game.mp4" type="video/mp4">
-              </video>
-            </div>
 
+           <img src="./img/about1.png" class="card-img-top"
+              style="width: 100%; height: auto; margin: 0 auto;">
+              <br><br>
+               <img src="./img/about2.png" class="card-img-top"
+              style="width: 100%; height: auto; margin: 0 auto;">
+         
           </div>
         </div>
       </div>
@@ -85,7 +86,7 @@
           <br>
 
           <div class="text-center" style="padding-top: 20px;">
-            <a href="#narration" class="index-button" id="index-link2">continue</a>
+            <a href="#narration1" class="index-button" id="index-link2">continue</a>
           </div>
 
           <br>
@@ -94,55 +95,85 @@
     </div>
 
 
-    <div id="narration" class="hidden">
-      <video id="instruction">
-        <source src="./video/about-game.mp4" type="video/mp4">
+    <div id="narration1" class="hidden">
+      <video id="instruction1">
+        <source src="./video/aboutgame-1.mp4" type="video/mp4">
       </video>
 
       <!-- Continue button (hidden initially) -->
-      <div id="howto" class="text-center">
-        <a href="#scenario1" id="scenelink1" class="howto-button">continue</a>
+      <div id="howto-1" class="text-center">
+        <a href="#narration2" id="scenelink1" class="howto-button">continue</a>
+      </div>
+    </div>
+
+     <div id="narration2" class="hidden">
+      <video id="instruction2">
+        <source src="./video/aboutgame-2.mp4" type="video/mp4">
+      </video>
+
+      <!-- Continue button (hidden initially) -->
+      <div id="howto-2" class="text-center">
+        <a href="#narration3" id="scenelink2" class="howto-button">continue</a>
+      </div>
+    </div>
+
+     <div id="narration3" class="hidden">
+      <video id="instruction3">
+        <source src="./video/aboutgame-3.mp4" type="video/mp4">
+      </video>
+
+      <!-- Continue button (hidden initially) -->
+      <div id="howto-3" class="text-center">
+        <a href="#scenario1" id="scenelink3" class="howto-button">continue</a>
       </div>
     </div>
 
 
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const video = document.getElementById("instruction");
-        const instructionDiv = document.getElementById("narration");
-        const continueBtn = document.getElementById("howto");
+    document.addEventListener("DOMContentLoaded", function () {
+  function setupVideoObserver(videoId, divId, btnId) {
+    const video1 = document.getElementById(videoId);
+    const instructionDiv1 = document.getElementById(divId);
+    const continueBtn1 = document.getElementById(btnId);
 
-        const observer_howto = new IntersectionObserver(entries => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              video.play(); // Play video when div is visible
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          video1.play();
 
-              // Show button after 5 seconds
-              setTimeout(() => {
-                continueBtn.style.display = "block";
-              }, 17000);
+          // Show button after 8 seconds
+          setTimeout(() => {
+            continueBtn1.style.display = "block";
+          }, 8000);
 
-              // OR Show button when the video is about to finish
-              video.addEventListener("timeupdate", function () {
-                if (video.currentTime >= video.duration - 2) { // Show button 2 seconds before the end
-                  continueBtn.style.display = "block";
-                }
-              });
-            } else {
-              video.pause(); // Pause video when div is out of view (optional)
-              continueBtn.style.display = "none"; // Hide button again if video is not playing
+          // Show button when the video is about to finish
+          video1.addEventListener("timeupdate", function showButtonNearEnd() {
+            if (video1.currentTime >= video1.duration - 2) {
+              continueBtn1.style.display = "block";
+              video1.removeEventListener("timeupdate", showButtonNearEnd); // Prevent repeated triggers
             }
           });
-        }, { threshold: 0.5 }); // Adjust threshold for when the video should start
-
-        observer_howto.observe(instructionDiv);
+        } else {
+          video1.pause();
+          continueBtn1.style.display = "none";
+        }
       });
+    }, { threshold: 0.5 });
+
+    observer.observe(instructionDiv1);
+  }
+
+  // Setup all three videos
+  setupVideoObserver("instruction1", "narration1", "howto-1");
+  setupVideoObserver("instruction2", "narration2", "howto-2");
+  setupVideoObserver("instruction3", "narration3", "howto-3");
+});
 
 
       // Sticky row hide/show logic
       document.addEventListener("DOMContentLoaded", () => {
         const stickyRow = document.querySelector(".sticky-row");
-        const targets = [document.querySelector("#narration")];
+        const targets = [document.querySelector("#narration1"), document.querySelector("#narration2"), document.querySelector("#narration3")];
 
         const howto_observer = new IntersectionObserver(
           (entries) => {
@@ -168,93 +199,7 @@
 
     </script>
 
-    <!--
 
-                <div class="modal fade" id="startbtn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
-                    <div class="modal-content">
-                      <div class="modal-body text-center">
-                   <br>
-                        <h3 style="font-weight: normal;">Now Lets Play!</h3>
-                        <br>
-                        <a href="#scenario1" id="scenelink1" class="game-button" data-dismiss="modal">continue</a>
-                     <br> <br>
-                    </div>
-                    </div>
-                  </div>
-                </div>
-
-                <script>
-                  document.addEventListener("DOMContentLoaded", function () {
-                    const video = document.getElementById("instruction");
-                    const scenarioDiv = document.getElementById("narration");
-                    const startBtn = document.getElementById("startbtn");
-                  
-                    const observergame1 = new IntersectionObserver(entries => {
-                      entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                          video.play(); // Play the video when the div is visible
-                  
-                          // Wait for the video to end, then show modal after 3 seconds
-                          video.addEventListener("ended", () => {
-                            setTimeout(() => {
-                              $('#startbtn').modal('show'); // Show the modal after 3 seconds
-                            }, 3000);
-                          });
-                        } else {
-                          video.pause(); // Optional: Pause video when not visible
-                        }
-                      });
-                    }, { threshold: 0.5 });
-                  
-                    observergame1.observe(scenarioDiv);
-                  });
-                  
-                  // Sticky row hide/show logic
-                  document.addEventListener("DOMContentLoaded", () => {
-                    const stickyRow = document.querySelector(".sticky-row");
-                    const targets = [document.querySelector("#narration")];
-                  
-                    const observer1 = new IntersectionObserver(
-                      (entries) => {
-                        let shouldHideStickyRow = false;
-                  
-                        entries.forEach((entry) => {
-                          if (entry.isIntersecting) {
-                            shouldHideStickyRow = true;
-                          }
-                        });
-                  
-                        stickyRow.style.display = shouldHideStickyRow ? "none" : "flex";
-                      },
-                      { threshold: 0.2 }
-                    );
-                  
-                    targets.forEach((target) => {
-                      if (target) {
-                        observer1.observe(target);
-                      }
-                    });
-                  });
-                  </script>
-                  
--->
-
-    <!--
-                <div id="narration" class="hidden" style="padding-top: 20px;">
-
-
-                    <div class="text-center" style="padding-top: 180px; padding-left: 300px; padding-right: 300px; display: inline-block; overflow: hidden;">
-                      <h3 style="font-weight: normal; justify-content: center; line-height: 140%;">Your goal is to build and maintain a high credit score while navigating through different levels of financial decisions and challenges. Each decision on how to use credit, manage debt and keep an eye on your credit report contributes to your credit score in real life.</h3>
-            
-                      <div style="display: flex; justify-content: center; margin-top: 5px;">
-                        <a href="#scenario1" id="scenelink1" class="start-button">continue</a>
-                    </div>
-            
-                  </div>
-            
-            </div>
--->
 
     <div> <!--container fluid row-->
 
@@ -287,8 +232,7 @@
           <div id="scenario1" class="hidden-section">
 
 
-            <h4 class="text-center" style="font-weight:normal; font-style: italic;" id="title-text">You applied for
-              B$1000 credit card limit for your everyday purchases.</h4>
+            <h4 class="text-center" style="font-weight:normal; font-style: italic;" id="title-text">You're starting out with a B$1,000 credit limit. It's your first step into the world of credit.</h4>
 
 
 
@@ -300,7 +244,7 @@
               <div class="row">
                 <div class="col-sm-4 hovertest">
                   <a href="#scene1-opt1" id="scene1-link1" style="text-decoration: none; color: #000000;"
-                    class="choice-card" data-happiness="55" data-focus="55" data-credit-score="53">
+                    class="choice-card" data-happiness="53" data-focus="52" data-connection="51" data-credit-score="53">
                     <div class="card my-card2">
 
                       <img src="./img/essentials.png" class="card-img-top"
@@ -312,7 +256,7 @@
 
                 <div class="col-sm-4 hovertest">
                   <a href="#scene1-opt2" id="scene1-link2" style="text-decoration: none; color: #000000;"
-                    class="choice-card" data-happiness="55" data-focus="45" data-credit-score="45">
+                    class="choice-card" data-happiness="51" data-focus="47" data-connection="48" data-credit-score="43">
                     <div class="card my-card2">
 
                       <img src="./img/luxury.png" class="card-img-top"
@@ -324,7 +268,7 @@
 
                 <div class="col-sm-4 hovertest">
                   <a href="#scene1-opt3" id="scene1-link3" style="text-decoration: none; color: #000000;"
-                    class="choice-card" data-happiness="55" data-credit-score="50">
+                    class="choice-card" data-happiness="52" data-focus="52" data-connection="51" data-credit-score="53">
                     <div class="card my-card2">
 
                       <img src="./img/basic-needs.png" class="card-img-top"
@@ -350,11 +294,7 @@
                   <img src="./img/narrative.png">
                   <div class="overlay-text">
 
-                    Your choice has shown a responsible
-                    credit usage. This has resulted in an
-                    increase in your credit score by
-                    paying off the balance on time
-                    and keeping your credit utilization low
+                    You used your card wisely and paid it off fully. Great for your score and financial habits.
 
                     <div class="text-center" id="info-button">
                       <a href="#scene1-tips" id="optlink1" class="game-button">continue</a>
@@ -377,11 +317,7 @@
                   <img src="./img/narrative.png">
                   <div class="overlay-text">
 
-                    Your credit utilization is now over 75%
-                    (utilization = $800/$1000).
-                    With high credit utilization
-                    and only paying the minimum,
-                    will negatively affect your credit score.
+                    New gadgets made you happy, but your credit and long-term goals took a hit.
 
                     <div class="text-center" id="info-button">
                       <a href="#scene1-tips" id="optlink2" class="game-button">continue</a>
@@ -404,9 +340,7 @@
                   <img src="./img/narrative.png">
                   <div class="overlay-text">
 
-                    Low utilization, full payment and
-                    responsible use give positive impact
-                    to your credit score.
+                    A small, smart spend paid off quickly. Your score and discipline improved.
 
 
                     <div class="text-center" id="info-button">
@@ -446,19 +380,11 @@
           <div id="scenario2" class="hidden-section">
 
 
-            <h4 class="text-center" style="font-weight: normal; font-style: italic;" id="title-text">You’ve been saving
-              for a new car and are now ready to apply for a car loan.</h4>
+            <h4 class="text-center" style="font-weight: normal; font-style: italic;" id="title-text">You’re ready for your new car - let's make it happen!</h4>
 
 
 
-            <h1 class="text-center" style="font-weight:bold;">What would you do?</h1>
-
-            <!--
-    <div class="text-center" style="padding-top: 20px;">
-      <img src="./img/arrow.png" class="card-img-top" style="width: 3%; height: auto; margin: 0 auto;">
-    </div>
-    -->
-
+            <h1 class="text-center" style="font-weight:bold;">What would you choose?</h1>
 
             <div class="text-center">
 
@@ -469,19 +395,19 @@
                 </a>
                 <div class="slider">
                   <div class="car">
-                    <a href="#scene2-opt1" id="scene2-link1" class="choice-card" data-happiness="60">
+                    <a href="#scene2-opt1" id="scene2-link1" class="choice-card" data-happiness="55">
                       <img src="./img/used.png" alt="Card 1 Image" class="car-image">
 
                     </a>
                   </div>
                   <div class="car">
-                    <a href="#scene2-opt2" id="scene2-link2" class="choice-card" data-happiness="60">
+                    <a href="#scene2-opt2" id="scene2-link2" class="choice-card" data-happiness="55">
                       <img src="./img/new.png" alt="Card 2 Image" class="car-image">
 
                     </a>
                   </div>
                   <div class="car">
-                    <a href="#scene2-opt3" id="scene2-link3" class="choice-card" data-happiness="60" data-focus="60">
+                    <a href="#scene2-opt3" id="scene2-link3" class="choice-card" data-happiness="55" data-focus="54">
                       <img src="./img/dream.png" alt="Card 3 Image" class="car-image">
 
                     </a>
@@ -644,32 +570,6 @@
           </script>
 
 
-          <!--
-<div id="scene2-opt3" class="hidden-section" style="padding-top: 20px;">
-
-
-<div class="row">
-  <div class="col-sm-12">
-    <div class="info-container2 text-center">
-      <img src="./img/narrative.png">
-      <div class="overlay-text">
-       
-        You have always dream of sitting behind the wheel of a luxury car, wake up with a sense of awe and wonder - the sight of the sleek curves, the feel of the smooth leather seats, and the sound of the powerful engine roaring to life.
-
-        <div class="text-center" style="padding-top: 60px;">
-        <a href="#scenario2a" id="optlink6" class="game-button">continue</a>
-      </div>
-    </div>
-    
-</div>
-</div>
-
-</div>
-
-</div>
--->
-
-
           <div id="scene2-opt3" class="hidden-section">
             <video id="car-video3">
               <source src="./video/luxury-car.mp4" type="video/mp4">
@@ -726,8 +626,7 @@
           <div id="scenario2a" class="hidden-section">
 
 
-            <h4 class="text-center" style="font-weight: normal; font-style: italic;" id="title-text2">Now that you have
-              decided which car you want and you're eligible for a loan, you can choose how to approach it</h4>
+            <h4 class="text-center" style="font-weight: normal; font-style: italic;" id="title-text2">You've found the car you want. Now it's time to apply for a loan</h4>
 
 
 
@@ -737,19 +636,14 @@
 
               <div class="text-center" id="choices-div">
                 <div id="choices-col">
-                  <a href="#scene2a-opt1" id="scene2a-link1" class="choice-card" data-happiness="65" data-focus="42"
-                    data-credit-score="42">
-                    Apply for a loan from
-                    multiple lenders in the
-                    same week
+                  <a href="#scene2a-opt1" id="scene2a-link1" class="choice-card" data-happiness="57" data-focus="55" data-connection="47"
+                    data-credit-score="41">
+                    Apply to a few banks at once to get the best deal
                   </a>
                 </div>
                 <div id="choices-col">
-                  <a href="#scene2a-opt2" id="scene2a-link2" class="choice-card" data-happiness="65" data-focus="42"
-                    data-credit-score="55">
-                    Apply for a loan with
-                    one trusted lender and
-                    wait for a decision
+                  <a href="#scene2a-opt2" id="scene2a-link2" class="choice-card" data-happiness="53" data-connection="53" data-credit-score="55">
+                   Stick with one bank and see what they offer
                   </a>
                 </div>
               </div>
@@ -767,9 +661,7 @@
                   <img src="./img/narrative.png">
                   <div class="overlay-text">
 
-                    Every application triggers a hard inquiry,
-                    lowering your credit score temporarily
-                    due to the impact of multiple credit checks.
+                    You felt confident comparing offers - but juggling the applications added a bit of stress to your week.
 
                     <div class="text-center" id="info-button">
                       <a href="#" id="optlink7" class="game-button">continue</a>
@@ -832,9 +724,7 @@
                   <img src="./img/narrative.png">
                   <div class="overlay-text">
 
-                    A single inquiry has minimal impact on your credit score.
-                    If you secure the loan with a low-interest rate and
-                    a good repayment plan, this helps improve your credit score.
+                   You avoided credit dings, but now you're wondering if that rate was really the best one.
 
                     <div class="text-center" id="info-button">
                       <a href="#" id="optlink8" class="game-button">continue</a>
@@ -888,7 +778,9 @@
           <script>
             document.addEventListener("DOMContentLoaded", () => {
               const footer = document.querySelector("#footer");
-              const targets = [document.querySelector("#narration"), document.querySelector("#scenario1"), document.querySelector("#scene1-opt1"),
+              const targets = [document.querySelector("#narrative"), document.querySelector("#narration1"),
+               document.querySelector("#narration2"), document.querySelector("#narration3"),
+              document.querySelector("#scenario1"), document.querySelector("#scene1-opt1"),
               document.querySelector("#scene1-opt2"), document.querySelector("#scene1-opt3"), document.querySelector("#scene1-tips"),
               document.querySelector("#scenario2"), document.querySelector("#scene2-opt1"),
               document.querySelector("#scene2-opt1"), document.querySelector("#scene2-opt2"),
@@ -1017,7 +909,7 @@
     </div><!--container fluid row-->
   <div id="footer">
 
-  <div class="text-center" style="display: flex; gap: 80px; justify-content: center;">
+  <div class="text-center" style="display: flex; gap: 50px; justify-content: center;">
     
     <a href="" id="" data-toggle="modal" data-target="#aboutgame" class="start-link">
       About this game
@@ -1041,12 +933,15 @@
             </a>
           </div>
           <div class="modal-body">
-            <div class="embed-responsive embed-responsive-16by9">
-              <video class="embed-responsive-item" controls muted>
-                <source src="./video/about-game.mp4" type="video/mp4">
-              </video>
-            </div>
+           <div class="modal-body">
 
+           <img src="./img/about1.png" class="card-img-top"
+              style="width: 100%; height: auto; margin: 0 auto;">
+              <br><br>
+               <img src="./img/about2.png" class="card-img-top"
+              style="width: 100%; height: auto; margin: 0 auto;">
+         
+          </div>
           </div>
         </div>
       </div>
@@ -1158,11 +1053,45 @@
 
 
         // Reveal the section
-        var targetSection = document.getElementById('narration');
+        var targetSection = document.getElementById('narration1');
         targetSection.classList.remove('hidden');
         targetSection.classList.add('visible');
 
         var hideSection = document.getElementById('narrative');
+        hideSection.classList.remove('visible');
+        hideSection.classList.add('hidden');
+
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+
+         document.getElementById('scenelink1').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+
+
+        // Reveal the section
+        var targetSection = document.getElementById('narration2');
+        targetSection.classList.remove('hidden');
+        targetSection.classList.add('visible');
+
+        var hideSection = document.getElementById('narration1');
+        hideSection.classList.remove('visible');
+        hideSection.classList.add('hidden');
+
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+
+         document.getElementById('scenelink2').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+
+
+        // Reveal the section
+        var targetSection = document.getElementById('narration3');
+        targetSection.classList.remove('hidden');
+        targetSection.classList.add('visible');
+
+        var hideSection = document.getElementById('narration2');
         hideSection.classList.remove('visible');
         hideSection.classList.add('hidden');
 
@@ -1184,10 +1113,10 @@
 
 
 
-      document.getElementById('scenelink1').addEventListener('click', function (event) {
+      document.getElementById('scenelink3').addEventListener('click', function (event) {
         event.preventDefault(); // Prevent the default anchor link behavior
 
-        var hideSection = document.getElementById('narration');
+        var hideSection = document.getElementById('narration3');
         hideSection.classList.add('fade-out');
 
         // Once the fade-out transition is complete, proceed to reveal the target section
@@ -1616,7 +1545,7 @@
         const overlayElement = document.querySelector('.opacity-overlay');
 
         if (!container || !arrowElement || !overlayElement) {
-          console.error('Container, arrow element, or overlay element not found');
+          console.log('Container, arrow element, or overlay element not found');
           return;
         }
 
@@ -1625,21 +1554,21 @@
 
         // Ensure valid dimensions
         if (containerHeight === 0 || arrowHeight === 0) {
-          console.error('Invalid container or arrow height');
+          console.log('No container or arrow height specified');
           return;
         }
 
         // Retrieve the credit score from the data-progress attribute
         const creditScore = parseInt(container.getAttribute('data-progress2'), 10);
         if (isNaN(creditScore)) {
-          console.error('Invalid credit score');
+          console.log('No credit score specified');
           return;
         }
 
         // Calculate the position percentage
         const positionPercentage = ((creditScore - minValue) / (maxValue - minValue)) * 100;
         if (positionPercentage < 0 || positionPercentage > 100) {
-          console.error('Position percentage out of bounds');
+          console.log('Position percentage out of bounds');
           return;
         }
 
@@ -1649,7 +1578,7 @@
 
         // Adjust the gradient stop position based on the arrow's top position
         const gradientPosition = ((arrowTop + 6) / containerHeight) * 100;
-        overlayElement.style.background = `linear-gradient(to bottom, rgba(243, 241, 241, 0.315) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
+        overlayElement.style.background = `linear-gradient(to bottom, rgba(252, 252, 252, 0.486) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
 
         // Ensure the overlay covers the entire container to account for possible gradient overflow
         overlayElement.style.height = `${containerHeight}px`;
