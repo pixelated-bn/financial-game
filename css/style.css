@@ -4128,6 +4128,36 @@ width: auto;
     position: relative;
   }
 
+  .opacity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.creditarrow-img {
+  position: absolute;
+  left: 90%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 40%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 59%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
   .hidden-section {
     padding-top: 5px;
   }
