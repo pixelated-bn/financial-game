@@ -4029,7 +4029,7 @@ width: auto;
 
   #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 86%;
+  top: 88%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -4179,7 +4179,7 @@ width: auto;
   }
 
   .my-card2:hover {
-    background-size: 100% 125px;
+    background-size: 100% 128px;
   }
 
   .circular-progress-container {
