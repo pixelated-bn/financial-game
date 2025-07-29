@@ -4285,11 +4285,11 @@ width: auto;
   }
 
   .info-container1 .overlay-text {
-    top: 25%;
+    top: 20%;
     /* Adjust as needed */
-    left: 49%;
+    left: 52%;
     /* Adjust as needed */
-    right: 10%;
+    right: 17%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
@@ -4316,11 +4316,11 @@ width: auto;
   }
 
   .info-container2 .overlay-text {
-    top: 25%;
+  top: 20%;
     /* Adjust as needed */
-    left: 50%;
+    left: 52%;
     /* Adjust as needed */
-    right: 15%;
+    right: 17%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
@@ -5239,7 +5239,7 @@ width: auto;
       position: relative;
       transition: opacity 0.5s ease;
       opacity: 1;
-      padding-top: 70px;
+      padding-top: 100px;
     }
 
     #mainImage {
@@ -5649,11 +5649,11 @@ width: auto;
   }
 
   .info-container1 .overlay-text {
-    top: 25%;
+     top: 20%;
     /* Adjust as needed */
-    left: 50%;
+    left: 52%;
     /* Adjust as needed */
-    right: 10%;
+    right: 17%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
@@ -5680,11 +5680,11 @@ width: auto;
   }
 
   .info-container2 .overlay-text {
-    top: 25%;
+    top: 20%;
     /* Adjust as needed */
-    left: 50%;
+    left: 52%;
     /* Adjust as needed */
-    right: 15%;
+    right: 17%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
