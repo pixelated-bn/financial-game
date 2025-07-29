@@ -4115,10 +4115,11 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 142px;
+    height: 152px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
+    border: 3px solid black;
   }
 
   .creditscore-img {
