@@ -4274,7 +4274,7 @@ width: auto;
   }
 
     .info-container1 img {
-    width: 55%;
+    width: 50%;
     height: auto;
     opacity: 0;
     /* Start hidden */
@@ -4305,7 +4305,7 @@ width: auto;
   }
 
   .info-container2 img {
-    width: 55%;
+    width: 50%;
     height: auto;
     opacity: 0;
     /* Start hidden */
@@ -4316,7 +4316,7 @@ width: auto;
   }
 
   .info-container2 .overlay-text {
-    top: 18%;
+    top: 25%;
     /* Adjust as needed */
     left: 50%;
     /* Adjust as needed */
@@ -5426,7 +5426,7 @@ width: auto;
 
   #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 86%;
+  top: 88%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -5569,13 +5569,13 @@ width: auto;
 
   .my-card2 {
     width: 90%;
-    height: 145px;
+    height: 130px;
     background-position: center;
     padding: 15px;
   }
 
   .my-card2:hover {
-    background-size: 100% 140px;
+    background-size: 100% 128px;
   }
 
   .circular-progress-container {
