@@ -4150,7 +4150,7 @@ width: auto;
   width: 40%;
   /* Adjust the size as needed */
   height: auto;
-  top: 50%;
+  top:63%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
