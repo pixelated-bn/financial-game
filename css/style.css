@@ -5308,7 +5308,7 @@ width: auto;
 
 @media (min-width: 800px) and (max-width: 899px) {
   #index {
-    padding-top: 40px;
+    padding-top: 30px;
   }
 
     .sticky-row {
@@ -5332,6 +5332,35 @@ width: auto;
 #info {
   font-size: 15px;
   color: #206E63;
+}
+
+#narration1, #narration2, #narration3 {
+ padding-top: 6px;
+}
+
+   #instruction1, #instruction3  {
+    width: 100%;
+    height: 88%;
+    display: block;
+  }
+
+   #instruction2 {
+    width: 100%;
+    height: 80%;
+    display: block;
+  }
+
+  #howto-1, #howto-2, #howto-3 {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
 }
 
 #footer {
@@ -5466,13 +5495,13 @@ width: auto;
 
   .my-card2 {
     width: 90%;
-    height: 140px;
+    height: 145px;
     background-position: center;
     padding: 15px;
   }
 
   .my-card2:hover {
-    background-size: 100% 135px;
+    background-size: 100% 140px;
   }
 
   .circular-progress-container {
@@ -5520,39 +5549,7 @@ width: auto;
     bottom: 3px;
   }
 
-  #narration {
-    position: relative;
-    /* Change to relative */
-    width: 100vw;
-    height: 100vh;
-    /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-    padding-left: 30px;
-    padding-top: 30px;
-  }
-
- #instruction1, #instruction2, #instruction3  {
-    width: 100%;
-    height: 94%;
-    display: block;
-  }
-
-
-  #howto {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards;
-    /* Delay of 6 seconds */
-    display: none;
-  }
-
+ 
   .howto-button {
     background-color: #D4C029;
     color: white;
@@ -5567,7 +5564,7 @@ width: auto;
   }
 
     .info-container1 img {
-    width: 55%;
+    width: 50%;
     height: auto;
     opacity: 0;
     /* Start hidden */
@@ -5598,18 +5595,18 @@ width: auto;
   }
 
   .info-container2 img {
-    width: 55%;
+    width: 50%;
     height: auto;
     opacity: 0;
     /* Start hidden */
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
-     padding-top: 10px;
+     padding-top: 15px;
   }
 
   .info-container2 .overlay-text {
-    top: 17%;
+    top: 25%;
     /* Adjust as needed */
     left: 50%;
     /* Adjust as needed */
@@ -6522,7 +6519,7 @@ width: auto;
       position: relative;
       transition: opacity 0.5s ease;
       opacity: 1;
-      padding-top: 70px;
+      padding-top: 100px;
     }
 
     #mainImage {
