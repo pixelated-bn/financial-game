@@ -8352,7 +8352,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 .creditarrow-img {
   position: absolute;
-  left: 108%;
+  left: 85%;
   /* Move the arrow to the right */
   transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
@@ -8965,14 +8965,14 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 }
 
 .result-img {
-   width: 365px;
+   width: 370px;
   height: 90%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
-  width: 365px;
+  width: 370px;
   height: 90%;
   opacity: 1;
   position: relative;
@@ -11123,6 +11123,7 @@ h1 {
     }
 
 }
+
 
 
 
