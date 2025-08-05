@@ -8142,7 +8142,7 @@ width: auto;
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   #index {
-    padding-top: 130px;
+    padding-top: 120px;
   }
 
      .sticky-row {
@@ -8160,7 +8160,7 @@ width: auto;
 
 #footer {
   position: fixed;
-  bottom: 190px;
+  bottom: 150px;
   width: 100%;
   height: 5%;
   justify-content: center;
@@ -11078,6 +11078,7 @@ h1 {
     }
 
 }
+
 
 
 
