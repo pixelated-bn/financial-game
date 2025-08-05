@@ -8402,7 +8402,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   }
 
   .my-card2:hover {
-    background-size: 100% 240px;
+    background-size: 100% 245px;
   }
 
   .circular-progress-container {
@@ -11123,6 +11123,7 @@ h1 {
     }
 
 }
+
 
 
 
