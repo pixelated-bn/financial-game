@@ -8160,7 +8160,7 @@ width: auto;
 
 #footer {
   position: fixed;
-  bottom: 130px;
+  bottom: 150px;
   width: 100%;
   height: 5%;
   justify-content: center;
@@ -11078,6 +11078,7 @@ h1 {
     }
 
 }
+
 
 
 
