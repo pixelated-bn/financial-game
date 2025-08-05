@@ -8142,7 +8142,7 @@ width: auto;
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   #index {
-    padding-top: 120px;
+    padding-top: 10px;
   }
 
      .sticky-row {
@@ -11078,6 +11078,7 @@ h1 {
     }
 
 }
+
 
 
 
