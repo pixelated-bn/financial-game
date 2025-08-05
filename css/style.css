@@ -1602,7 +1602,7 @@ width: auto;
 
 .credit-score-container {
   position: relative;
-  height: 435px;
+  height: 425px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
@@ -1621,7 +1621,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 100%;
-  height: 105%;
+  height: 108%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -1638,7 +1638,7 @@ width: auto;
   width: 40%;
   /* Adjust the size as needed */
   height: auto;
-  top: 51%;
+  top: 52%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -2333,6 +2333,23 @@ li:nth-child(odd) {
 }
 
 .start-link:hover {
+  transform: scale(0.9);
+  color: #D4C029;
+  text-decoration: none;
+
+}
+
+.contact {
+  color: #206E63;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact:hover {
   transform: scale(0.9);
   color: #D4C029;
   text-decoration: none;
@@ -3568,7 +3585,7 @@ li:nth-child(odd) {
 }
 
 #end-div {
-  padding-top: 170px;
+  padding-top: 150px;
 }
 
 #end-body {
@@ -3602,7 +3619,7 @@ li:nth-child(odd) {
 
 
 .result-img {
-  width: 480px;
+  width: 505px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -3623,9 +3640,9 @@ li:nth-child(odd) {
 
 .resultarrow-img {
   position: absolute;
-  left: 60%;
+  left: 75%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
@@ -3649,7 +3666,7 @@ li:nth-child(odd) {
 
 
 .result-img3 {
-  width: 480px;
+  width: 505px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -3670,9 +3687,9 @@ li:nth-child(odd) {
 
 .resultarrow-img3 {
     position: absolute;
-  left: 60%;
+  left: 75%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
@@ -3963,7 +3980,7 @@ li:nth-child(odd) {
 
 @media (min-width: 700px) and (max-width: 799px) {
   #index {
-    padding-top: 40px;
+    padding-top: 30px;
   }
 
   .sticky-row {
@@ -3989,7 +4006,7 @@ width: auto;
   color: #206E63;
 }
 
- #narration1 {
+#narration1 {
 
     position: relative;
     /* Change to relative */
@@ -4039,7 +4056,6 @@ width: auto;
   /* Delay of 6 seconds */
   display: none;
 }
-  
 
 #footer {
   position: fixed;
@@ -4115,20 +4131,20 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 163px;
+    height: 142px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
   }
 
   .creditscore-img {
-    width: 94%;
+    width: 100%;
     height: 120%;
     opacity: 1;
     position: relative;
   }
 
-  .opacity-overlay {
+.opacity-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -4150,7 +4166,7 @@ width: auto;
   width: 40%;
   /* Adjust the size as needed */
   height: auto;
-  top:58%;
+  top: 59%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -4304,7 +4320,7 @@ width: auto;
   }
 
     .info-container1 img {
-    width: 50%;
+    width: 55%;
     height: auto;
     opacity: 0;
     /* Start hidden */
@@ -4315,11 +4331,11 @@ width: auto;
   }
 
   .info-container1 .overlay-text {
-    top: 20%;
+    top: 25%;
     /* Adjust as needed */
-    left: 50%;
+    left: 49%;
     /* Adjust as needed */
-    right: 17%;
+    right: 10%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
@@ -4335,7 +4351,7 @@ width: auto;
   }
 
   .info-container2 img {
-    width: 50%;
+    width: 55%;
     height: auto;
     opacity: 0;
     /* Start hidden */
@@ -4346,11 +4362,11 @@ width: auto;
   }
 
   .info-container2 .overlay-text {
-  top: 20%;
+    top: 18%;
     /* Adjust as needed */
     left: 50%;
     /* Adjust as needed */
-    right: 17%;
+    right: 15%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
@@ -4995,13 +5011,13 @@ width: auto;
 }
 
 #risk-img{
- width: 20%;
+ width: 30%;
  height: auto;
 
 }
 
 .result-container {
-  height: 80px;
+ height: 85px;
   width: 435px;
   /* Set a specific height */
   overflow: visible;
@@ -5009,7 +5025,7 @@ width: auto;
 }
 
 .result-container3 {
- height: 80px;
+   height: 85px;
   width: 435px;
   /* Set a specific height */
   overflow: visible;
@@ -5017,17 +5033,16 @@ width: auto;
 }
 
 .result-img {
-  width: 230px;
-  height: 58%;
+ width: 238px;
+  height: 60%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
- width: 230px;
-  height: 58%;
+ width: 238px;
+  height: 60%;
   opacity: 1;
-  position: relative;
 }
 
 .opacity-overlay2 {
@@ -5035,7 +5050,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 56%;
+  height: 58%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -5048,7 +5063,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 56%;
+  height: 58%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -5060,12 +5075,12 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
   height: auto;
-  top: 32%;
+  top: 35%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -5077,12 +5092,12 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
   height: auto;
-  top: 32%;
+  top: 35%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -5175,7 +5190,7 @@ width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 17px;
   /* Space between the circle and the factor image */
 }
 
@@ -5187,7 +5202,7 @@ width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 17px;
   /* Space between the circle and the factor image */
 }
 
@@ -5213,7 +5228,7 @@ width: auto;
 
 .result-desc{
   padding-top: 2px;
-  padding-left: 70px;
+  padding-left: 90px;
   padding-right: 70px;
 }
 
@@ -5235,8 +5250,8 @@ width: auto;
    color: #206E63;
    font-style: italic;
    padding-top: 0px;
-   padding-right: 30px;
-   padding-left: 15px;
+   padding-right: 20px;
+   padding-left: 20px;
    font-size: 8px;
 }
 
@@ -5456,7 +5471,7 @@ width: auto;
 
   #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 88%;
+  top: 86%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -5466,7 +5481,7 @@ width: auto;
   /* Delay of 6 seconds */
   display: none;
 }
-  
+
 #footer {
   position: fixed;
   bottom: 80px;
@@ -5541,14 +5556,14 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 163px;
+    height: 142px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
   }
 
   .creditscore-img {
-    width: 94%;
+    width: 100%;
     height: 120%;
     opacity: 1;
     position: relative;
@@ -5576,13 +5591,14 @@ width: auto;
   width: 40%;
   /* Adjust the size as needed */
   height: auto;
-  top:58%;
+  top: 59%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
   transition: left 0.2s ease, top 0.2s ease;
   /* Add a transition for smooth movement */
 }
+
   .hidden-section {
     padding-top: 5px;
   }
@@ -5628,13 +5644,13 @@ width: auto;
 
   .my-card2 {
     width: 90%;
-    height: 130px;
+    height: 145px;
     background-position: center;
     padding: 15px;
   }
 
   .my-card2:hover {
-    background-size: 100% 128px;
+    background-size: 100% 140px;
   }
 
   .circular-progress-container {
@@ -5708,11 +5724,11 @@ width: auto;
   }
 
   .info-container1 .overlay-text {
-     top: 20%;
+    top: 25%;
     /* Adjust as needed */
     left: 50%;
     /* Adjust as needed */
-    right: 17%;
+    right: 10%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
@@ -5739,11 +5755,11 @@ width: auto;
   }
 
   .info-container2 .overlay-text {
-    top: 20%;
+    top: 25%;
     /* Adjust as needed */
     left: 50%;
     /* Adjust as needed */
-    right: 17%;
+    right: 15%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
@@ -6378,13 +6394,13 @@ width: auto;
 }
 
 #risk-img{
- width: 20%;
+ width: 30%;
  height: auto;
 
 }
 
 .result-container {
-  height: 80px;
+  height: 85px;
   width: 435px;
   /* Set a specific height */
   overflow: visible;
@@ -6392,7 +6408,7 @@ width: auto;
 }
 
 .result-container3 {
- height: 80px;
+ height: 85px;
   width: 435px;
   /* Set a specific height */
   overflow: visible;
@@ -6400,17 +6416,16 @@ width: auto;
 }
 
 .result-img {
-  width: 230px;
-  height: 58%;
+ width: 238px;
+  height: 60%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
- width: 230px;
-  height: 58%;
+ width: 238px;
+  height: 60%;
   opacity: 1;
-  position: relative;
 }
 
 .opacity-overlay2 {
@@ -6418,7 +6433,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 56%;
+  height: 58%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -6431,7 +6446,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 56%;
+  height: 58%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -6443,12 +6458,12 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
   height: auto;
-  top: 32%;
+  top: 35%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -6460,12 +6475,12 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
   height: auto;
-  top: 32%;
+  top: 35%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -6558,7 +6573,7 @@ width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 17px;
   /* Space between the circle and the factor image */
 }
 
@@ -6570,7 +6585,7 @@ width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  margin-left: 17px;
   /* Space between the circle and the factor image */
 }
 
@@ -6596,7 +6611,7 @@ width: auto;
 
 .result-desc{
   padding-top: 2px;
-  padding-left: 70px;
+  padding-left: 90px;
   padding-right: 70px;
 }
 
@@ -6618,8 +6633,8 @@ width: auto;
    color: #206E63;
    font-style: italic;
    padding-top: 0px;
-   padding-right: 30px;
-   padding-left: 15px;
+   padding-right: 20px;
+   padding-left: 20px;
    font-size: 8px;
 }
 
@@ -6938,7 +6953,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 200px;
+    height: 180px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -6950,6 +6965,36 @@ width: auto;
     opacity: 1;
     position: relative;
   }
+
+  .opacity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 112%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.creditarrow-img {
+  position: absolute;
+  left: 90%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 40%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 55%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
 
   #factormeter {
     position: fixed;
@@ -7700,7 +7745,7 @@ width: auto;
 }
 
 #risk-img{
- width: 20%;
+ width: 30%;
  height: auto;
 
 }
@@ -7724,15 +7769,15 @@ width: auto;
 }
 
 .result-img {
-  width: 290px;
-  height: 70%;
+ width: 305px;
+  height: 72%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
-  width: 290px;
-  height: 70%;
+  width: 305px;
+  height: 72%;
   opacity: 1;
   position: relative;
 }
@@ -7767,7 +7812,7 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
@@ -7784,7 +7829,7 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
@@ -8208,7 +8253,7 @@ width: auto;
     /* Distance from the top */
     left: 0;
     /* Stick to the left */
-    width: 20%;
+    width: 30%;
     /* Adjust width */
     z-index: 1000;
     /* Ensure it’s above other content */
@@ -8227,23 +8272,55 @@ width: auto;
   }
 
   #cs-font {
-    font-size: 16px;
+    font-size: 18px;
+    text-align: center;
   }
 
   .credit-score-container {
     position: relative;
-    height: 278px;
+    height: 270px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
   }
 
-  .creditscore-img {
-    width: 100%;
-    height: auto;
-    opacity: 1;
-    position: relative;
-  }
+.creditscore-img {
+  width: 80px;
+  height: 310px;
+  opacity: 1;
+  position: relative;
+}
+
+
+.opacity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125%;
+  height: 118%;
+background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.creditarrow-img {
+  position: absolute;
+  left: 108%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 44%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 57%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
 
   #title-text {
     font-size: large;
@@ -8819,7 +8896,7 @@ width: auto;
 }
 
 #risk-img{
- width: 28%;
+ width: 40%;
  height: auto;
 
 }
@@ -8850,7 +8927,7 @@ width: auto;
 }
 
 .result-img3 {
-  width: 360px;
+  width: 350px;
   height: 90%;
   opacity: 1;
   position: relative;
@@ -8886,7 +8963,7 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
@@ -8903,7 +8980,7 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
@@ -9113,7 +9190,7 @@ width: auto;
     .slider-container2 {
       position: relative;
       width: 540px;
-      margin: 15px auto 0;
+      margin: 10px auto 0;
       height: 50px;
     }
 
@@ -9154,7 +9231,7 @@ width: auto;
 
     .thumbnails img {
       width: 100%;
-      height: 70px;
+      height: 60px;
       cursor: pointer;
       transition: transform 0.3s ease, border-color 0.3s ease;
       border-radius: 6px;
@@ -9221,7 +9298,7 @@ width: auto;
     padding-bottom: 350px;
   }
 
-     #instruction1, #instruction3  {
+   #instruction1, #instruction3  {
     width: 100%;
     height: 90%;
     display: block;
@@ -9253,6 +9330,83 @@ width: auto;
   height: 5%;
   justify-content: center;
   padding-right: 10px;
+}
+
+
+
+  #creditmeter {
+    position: fixed;
+    top: 60px;
+    /* Distance from the top */
+    left: 0;
+    /* Stick to the left */
+    width: 30%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #factormeter {
+    position: fixed;
+    top: 50px;
+    /* Distance from the top */
+    right: 18px;
+    /* Stick to the right */
+    width: 20%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #cs-font {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .credit-score-container {
+     position: relative;
+    height: 380px;
+    /* Set a specific height */
+    overflow: visible;
+    /* Hide overflow */
+  }
+
+.creditscore-img {
+  width: 100px;
+  height: 430px;
+  opacity: 1;
+  position: relative;
+}
+
+
+.opacity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125%;
+  height: 118%;
+background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.creditarrow-img {
+  position: absolute;
+  left: 103%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 44%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 57%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
 }
 
      #game1, #game2,
@@ -9362,7 +9516,7 @@ width: auto;
 }
 
 #risk-img{
- width: 28%;
+ width: 40%;
  height: auto;
 
 }
@@ -9386,15 +9540,15 @@ width: auto;
 }
 
 .result-img {
-   width: 360px;
-  height: 90%;
+  width: 490px;
+  height: 100%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
-  width: 360px;
-  height: 90%;
+  width: 490px;
+  height: 100%;
   opacity: 1;
   position: relative;
 }
@@ -9404,7 +9558,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 86%;
+  height: 95%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -9412,12 +9566,13 @@ width: auto;
   /* Add a transition for smooth movement */
 }
 
+
 .opacity-overlay3 {
    position: absolute;
   top: 0;
   left: 0;
   width: 51%;
-  height: 86%;
+  height: 95%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -9429,7 +9584,7 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
@@ -9446,7 +9601,7 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
@@ -9462,7 +9617,7 @@ width: auto;
 
 #result-text{
   position: absolute;
-   font-size: 14px;
+   font-size: 16px;
    font-weight: bold;
   color: #000000;
   width: 160px;
@@ -9581,23 +9736,23 @@ width: auto;
 }
 
 .result-desc{
-  padding-top: 180px;
+  padding-top: 200px;
   padding-left: 150px;
   padding-right: 150px;
 }
 
 #resulttext{
-  font-size: 14px;
+  font-size: 20px;
 }
 
 #result-button{
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 #mood-container{
   height: 70px;
   width: 580px;
-  margin-top: 0;
+  margin-top: 60px;
 }
 
 #factortext{
@@ -9740,7 +9895,7 @@ width: auto;
 
     .credit-score-container {
     position: relative;
-    height: 620px;
+    height: 570px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -10527,7 +10682,7 @@ h1 {
 }
 
 #risk-img{
- width: 30%;
+ width: 45%;
  height: auto;
 
 }
@@ -10543,7 +10698,7 @@ h1 {
 
 
 .result-img {
-   width: 640px;
+  width: 700px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -10566,7 +10721,7 @@ h1 {
     position: absolute;
   left: 60%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
@@ -10590,7 +10745,7 @@ h1 {
 
 
 .result-img3 {
-  width: 640px;
+  width: 700px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -10613,7 +10768,7 @@ h1 {
     position: absolute;
   left: 60%;
   /* Move the arrow to the right */
-  transform: translateX(-80%);
+  transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
