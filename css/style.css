@@ -8177,11 +8177,56 @@ width: auto;
   color: #206E63;
 }
 
+  #narration1 {
+
+    position: relative;
+    /* Change to relative */
+    width: 100vw;
+    height: 90vh;
+    /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    padding-left: 10px;
+    padding-top: 20px;
+
+
+}
+
+#narration2, #narration3 {
+
+    position: relative;
+    /* Change to relative */
+    width: 100vw;
+    height: 80vh;
+    /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+    padding-left: 10px;
+
+
+}
+
   #instruction1, #instruction2, #instruction3  {
     width: 100%;
     height: 90%;
     display: block;
   }
+
+    #howto-1, #howto-2, #howto-3 {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+
 
   #narrative-style {
     padding-top: 23vh;
@@ -11078,6 +11123,7 @@ h1 {
     }
 
 }
+
 
 
 
