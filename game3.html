@@ -172,7 +172,7 @@ This game is developed to raise awareness and empower individuals to make inform
                     You cleared the debt to protect your family, but your credit and savings took a big hit.
 
                     <div class="text-center" id="info-button">
-                      <a href="#scenario4" id="optlink9a" class="game-button">continue</a>
+                      <a href="#scene3tips" id="optlink9a" class="game-button">continue</a>
                     </div>
                   </div>
 
@@ -195,7 +195,7 @@ This game is developed to raise awareness and empower individuals to make inform
                     You negotiated with the bank to manage the damage - it's not ideal, but you stayed in control.
 
                     <div class="text-center" id="info-button">
-                      <a href="#scenario4" id="optlink9b" class="game-button">continue</a>
+                      <a href="#scene3tips" id="optlink9b" class="game-button">continue</a>
                     </div>
                   </div>
 
@@ -205,6 +205,95 @@ This game is developed to raise awareness and empower individuals to make inform
             </div>
 
           </div>
+
+
+  <div id="scene3tips" class="text-center hidden-section">
+            <video id="tips3-info">
+              <source src="./video/3tips.mp4" type="video/mp4">
+            </video>
+
+            <!-- Continue button (hidden initially) -->
+            <div id="tips3" class="text-center">
+              <a href="#scenario4" id="tip3-link" class="game-button">continue</a>
+            </div>
+          </div>
+
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const video = document.getElementById("tips3-info");
+              const scenario13Div = document.getElementById("scene3tips");
+              const continueBtn = document.getElementById("tips3");
+
+              const observer_tip2 = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    video.play(); // Play video when div is visible
+
+                    // Show button after 5 seconds
+                    setTimeout(() => {
+                      continueBtn.style.display = "block";
+                    }, 4000);
+
+                    // OR Show button when the video is about to finish
+                    video.addEventListener("timeupdate", function () {
+                      if (video.currentTime >= video.duration - 2) { // Show button 2 seconds before the end
+                        continueBtn.style.display = "block";
+                      }
+                    });
+                  } else {
+                    video.pause(); // Pause video when div is out of view (optional)
+                    continueBtn.style.display = "none"; // Hide button again if video is not playing
+                  }
+                });
+              }, { threshold: 0.5 }); // Adjust threshold for when the video should start
+
+              observer_tip2.observe(scenario13Div);
+            });
+      
+            document.addEventListener("DOMContentLoaded", () => {
+              const stickyRow = document.querySelector(".sticky-row");
+              //const footer = document.querySelector("#footer");
+              const targets = [document.querySelector("#scene3tips")];
+
+              const tip_observer2 = new IntersectionObserver(
+                (entries) => {
+                  let shouldHideStickyRow = false;
+                  //let HideFooter = false;
+
+                  // Check the visibility of each observed element
+                  entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                      shouldHideStickyRow = true;
+                      //HideFooter = true;
+                    }
+                  });
+
+                  // Toggle the visibility of the sticky-row based on any intersecting element
+                  if (shouldHideStickyRow) {
+                    stickyRow.style.display = "none";
+                    //footer.style.display = "none";
+                  } else {
+                    stickyRow.style.display = "flex"; // Or your desired display value
+                    //footer.style.display = "block";
+                  }
+                },
+                { threshold: 0.2 } // Adjust the visibility threshold as needed
+              );
+
+              // Observe each target element
+              targets.forEach((target) => {
+                if (target) {
+                  tip_observer2.observe(target);
+                }
+              });
+            });
+
+
+          </script>
+
+
+
 
           <div id="scene3-opt2" class="hidden-section">
 
@@ -3454,13 +3543,19 @@ const updateThumbPosition = (index) => {
       document.getElementById('optlink9a').addEventListener('click', function (event) {
         event.preventDefault(); // Prevent the default anchor link behavior
 
-
-        // Reveal the section
-        var targetSection = document.getElementById('scenario4');
+      var targetSection = document.getElementById('scene3tips');
         targetSection.classList.remove('hidden-section');
         targetSection.classList.add('visible-section');
 
         var hideSection = document.getElementById('scene3a-1');
+        hideSection.classList.remove('visible-section');
+        hideSection.classList.add('hidden-section');
+
+           var hideSection = document.getElementById('creditmeter');
+        hideSection.classList.remove('visible-section');
+        hideSection.classList.add('hidden-section');
+
+        var hideSection = document.getElementById('factormeter');
         hideSection.classList.remove('visible-section');
         hideSection.classList.add('hidden-section');
 
@@ -3471,15 +3566,48 @@ const updateThumbPosition = (index) => {
           document.getElementById('optlink9b').addEventListener('click', function (event) {
         event.preventDefault(); // Prevent the default anchor link behavior
 
-
-        // Reveal the section
-        var targetSection = document.getElementById('scenario4');
+    // Reveal the section
+        var targetSection = document.getElementById('scene3tips');
         targetSection.classList.remove('hidden-section');
         targetSection.classList.add('visible-section');
 
         var hideSection = document.getElementById('scene3a-2');
         hideSection.classList.remove('visible-section');
         hideSection.classList.add('hidden-section');
+
+           var hideSection = document.getElementById('creditmeter');
+        hideSection.classList.remove('visible-section');
+        hideSection.classList.add('hidden-section');
+
+        var hideSection = document.getElementById('factormeter');
+        hideSection.classList.remove('visible-section');
+        hideSection.classList.add('hidden-section');
+
+        // Scroll to the section
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+
+
+           document.getElementById('tip3-link').addEventListener('click', function (event) {
+        event.preventDefault(); // Prevent the default anchor link behavior
+
+
+        // Reveal the section
+        var targetSection = document.getElementById('scenario4');
+        targetSection.classList.remove('hidden-section');
+        targetSection.classList.add('visible-section');
+
+        var hideSection = document.getElementById('scene3tips');
+        hideSection.classList.remove('visible-section');
+        hideSection.classList.add('hidden-section');
+
+            var hideSection = document.getElementById('creditmeter');
+        hideSection.classList.remove('hidden-section');
+        hideSection.classList.add('visible-section');
+
+        var hideSection = document.getElementById('factormeter');
+        hideSection.classList.remove('hidden-section');
+        hideSection.classList.add('visible-section');
 
         // Scroll to the section
         targetSection.scrollIntoView({ behavior: 'smooth' });
