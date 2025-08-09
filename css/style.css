@@ -5634,13 +5634,13 @@ width: auto;
 
   .my-card2 {
     width: 90%;
-    height: 147px;
+    height: 148px;
     background-position: center;
     padding: 15px;
   }
 
   .my-card2:hover {
-    background-size: 100% 150px;
+    background-size: 100% 151px;
   }
 
   .circular-progress-container {
@@ -5785,7 +5785,7 @@ width: auto;
    #car1,
   #car2,
   #car3 {
-    padding-bottom: 150px;
+    padding-bottom: 170px;
   }
 
   #car-video1,
@@ -5806,7 +5806,7 @@ width: auto;
 
  #game1, #game2,
    #game3, #game4 {
-    padding-bottom: 84px;
+    padding-bottom: 93px;
   }
 
 .car {
@@ -11145,6 +11145,7 @@ h1 {
     }
 
 }
+
 
 
 
