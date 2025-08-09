@@ -826,7 +826,6 @@ width: auto;
   position: -webkit-sticky;
   /* For Safari */
   position: sticky;
-  top: 15px;
   background-color: unset;
   /* Optional: set a background color */
   z-index: 1000;
@@ -2946,7 +2945,7 @@ li:nth-child(odd) {
 }
 
 
-#scene10tips {
+#scene10tips, #scene13tips, #scene3tips {
   position: relative;
   /* Change to relative */
   width: 100vw;
@@ -2957,7 +2956,7 @@ li:nth-child(odd) {
   background-size: contain;
 }
 
-#tips10 {
+#tips10, #tips13, #tips3 {
   position: absolute;
   top: 90%;
   left: 50%;
@@ -2970,31 +2969,8 @@ li:nth-child(odd) {
   display: none;
 }
 
-#scene13tips {
-  position: relative;
-  /* Change to relative */
-  width: 100vw;
-  height: 100vh;
-  /* Cover the full viewport height */
-  margin: 0;
-  padding: 0;
-  background-size: contain;
-}
 
-#tips13 {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  /* Fully transparent */
-  transition: opacity 0.2s ease-in-out;
-  animation: fadeInButton 0.2s ease-in-out 2s forwards;
-  /* Delay of 6 seconds */
-  display: none;
-}
-
-  #tips10-info, #tips13-info{
+  #tips10-info, #tips13-info, #tips3-info{
    width: 100%;
    height: auto;
    display: block;
@@ -3991,7 +3967,7 @@ li:nth-child(odd) {
   /* Optional: set a background color */
   z-index: 1000;
   /* Ensure it stays on top of other content */
-  padding-top: 2px;
+  padding: 5px;
   /* Optional: add some padding */
   cursor: default;
 }
@@ -4814,9 +4790,9 @@ width: auto;
     display: none;
   }
 
-  #tips13 {
+  #tips13, #tips3 {
     position: absolute;
-    top: 75%;
+    top: 82%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -4827,10 +4803,17 @@ width: auto;
     display: none;
   }
 
-  #tips10-info, #tips13-info{
+  #tips10-info{
    width: 100%;
    height: 98%;
    display: block;
+  }
+
+  #tips13-info, #tips3-info {
+   width: 85%;
+   height: auto;
+   display: block;
+   position: relative;
   }
 
     #phone-button {
@@ -6196,9 +6179,9 @@ width: auto;
     display: none;
   }
 
-  #tips13 {
+  #tips13, #tips3 {
     position: absolute;
-    top: 75%;
+    top: 90%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -6209,10 +6192,17 @@ width: auto;
     display: none;
   }
 
-  #tips10-info, #tips13-info{
+  #tips10-info{
    width: 100%;
    height: 98%;
    display: block;
+  }
+
+   #tips13-info, #tips3-info{
+   width: 85%;
+   height: auto;
+   display: block;
+   position: relative;
   }
 
     #phone-button {
@@ -7547,9 +7537,9 @@ width: auto;
     display: none;
   }
 
-  #tips13 {
+  #tips13, #tips3 {
     position: absolute;
-    top: 75%;
+    top: 87%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -7560,10 +7550,18 @@ width: auto;
     display: none;
   }
 
-  #tips10-info, #tips13-info{
+  #tips10-info{
    width: 100%;
    height: 100%;
    display: block;
+  }
+
+  
+   #tips13-info, #tips3-info{
+   width: 80%;
+   height: auto;
+   display: block;
+   position: relative;
   }
 
       #phone-button {
@@ -8177,7 +8175,7 @@ width: auto;
   color: #206E63;
 }
 
-  #narration1 {
+#narration1 {
 
     position: relative;
     /* Change to relative */
@@ -8226,7 +8224,6 @@ width: auto;
   /* Delay of 6 seconds */
   display: none;
 }
-
 
   #narrative-style {
     padding-top: 23vh;
@@ -8772,7 +8769,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     display: none;
   }
 
-  #tips13 {
+  #tips13, #tips3 {
     position: absolute;
     top: 75%;
     left: 50%;
@@ -8785,11 +8782,20 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     display: none;
   }
 
-  #tips10-info, #tips13-info{
+  #tips10-info{
    width: 100%;
    height: auto;
    display: block;
   }
+
+  
+   #tips13-info, #tips3-info{
+   width: 100%;
+   height: auto;
+   display: block;
+   position: relative;
+  }
+
 
   #phone-button {
     padding-top: 270px;
@@ -9828,7 +9834,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 @media (min-width: 1920px) and (max-width: 2000px) {
    #index {
-    padding-top: 340px;
+    padding-top: 360px;
   }
 
       .sticky-row {
@@ -9852,6 +9858,39 @@ width: auto;
 #info {
   font-size: 40px;
   color: #206E63;
+}
+
+#instruction1, #instruction2, #instruction3 {
+  width: 100%;
+  height: 96%;
+  display: block;
+}
+
+#howto-1, #howto-2, #howto-3 {
+  position: absolute;
+  top: 97%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+
+
+.howto-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+ padding: 20px 60px 25px 60px;
+  width: 20%;
+  font-size: 32px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
 }
 
 
@@ -9900,31 +9939,6 @@ width: auto;
   }
 
 
-.howto-button {
-  background-color: #D4C029;
-  color: white;
-  border: none;
- padding: 20px 60px 25px 60px;
-  width: 20%;
-  font-size: 32px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-#howto {
-  position: absolute;
-  top: 93%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  /* Fully transparent */
-  transition: opacity 0.2s ease-in-out;
-  animation: fadeInButton 0.2s ease-in-out 2s forwards;
-  /* Delay of 6 seconds */
-  display: none;
-}
 
  #creditmeter {
     position: fixed;
@@ -9955,7 +9969,7 @@ width: auto;
 
 .creditarrow-img {
   position: absolute;
-  left: 110%;
+  left: 120%;
   /* Move the arrow to the right */
   transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
@@ -10532,6 +10546,7 @@ h1 {
     #accept-email {
     padding-top: 680px;
     padding-left: 780px;
+    position: fixed;
   }
 
   .accept-button {
@@ -10743,7 +10758,7 @@ h1 {
 
 
 .result-img {
-  width: 708px;
+  width: 650px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -10790,7 +10805,7 @@ h1 {
 
 
 .result-img3 {
-  width: 708px;
+  width: 650px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -11123,21 +11138,3 @@ h1 {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
