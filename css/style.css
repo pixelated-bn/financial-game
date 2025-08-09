@@ -5546,7 +5546,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 170px;
+    height: 140px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -11147,6 +11147,7 @@ h1 {
     }
 
 }
+
 
 
 
