@@ -5423,7 +5423,7 @@ width: auto;
     position: relative;
     /* Change to relative */
     width: 100vw;
-    height: 80vh;
+    height: 90vh;
     /* Cover the full viewport height */
     margin: 0;
     padding: 0;
@@ -5435,7 +5435,7 @@ width: auto;
 
    #instruction1,  #instruction2, #instruction3 {
     width: 100%;
-    height: 75%;
+    height: 85%;
     display: block;
   }
 
@@ -5621,7 +5621,7 @@ width: auto;
   }
 
   .my-card2:hover {
-    background-size: 100% 140px;
+    background-size: 100% 150px;
   }
 
   .circular-progress-container {
@@ -11126,6 +11126,7 @@ h1 {
     }
 
 }
+
 
 
 
