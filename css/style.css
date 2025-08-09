@@ -3954,9 +3954,9 @@ li:nth-child(odd) {
 
 /* Breakpoints for index page*/
 
-@media (min-width: 700px) and (max-width: 799px) {
+@media (min-width: 700px) and (max-width: 779px) {
   #index {
-    padding-top: 30px;
+    padding-top: 40px;
   }
 
   .sticky-row {
@@ -4792,7 +4792,7 @@ width: auto;
 
   #tips13, #tips3 {
     position: absolute;
-    top: 78%;
+    top: 73%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -5016,14 +5016,14 @@ width: auto;
 }
 
 .result-img {
- width: 265px;
+ width: 263px;
   height: 60%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
- width: 265px;
+ width: 263px;
   height: 60%;
   opacity: 1;
 }
@@ -5386,7 +5386,7 @@ width: auto;
 
 }
 
-@media (min-width: 800px) and (max-width: 899px) {
+@media (min-width: 780px) and (max-width: 899px) {
   #index {
     padding-top: 30px;
   }
@@ -6181,7 +6181,7 @@ width: auto;
 
   #tips13, #tips3 {
     position: absolute;
-    top: 78%;
+    top: 73%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -6406,14 +6406,14 @@ width: auto;
 }
 
 .result-img {
- width: 265px;
+ width: 270px;
   height: 60%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
- width: 265px;
+ width: 270px;
   height: 60%;
   opacity: 1;
 }
@@ -11138,4 +11138,5 @@ h1 {
     }
 
 }
+
 
