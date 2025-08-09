@@ -5376,7 +5376,7 @@ width: auto;
 
 @media (min-width: 780px) and (max-width: 899px) {
   #index {
-    padding-top: 30px;
+    padding-top: 40px;
   }
 
     .sticky-row {
@@ -5518,7 +5518,7 @@ width: auto;
 
   #creditmeter {
     position: fixed;
-    top: 15px;
+    top: 18px;
     /* Distance from the top */
     left: 0;
     /* Stick to the left */
@@ -5546,7 +5546,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 142px;
+    height: 148px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -5641,7 +5641,7 @@ width: auto;
   }
 
   .my-card2:hover {
-    background-size: 100% 153px;
+    background-size: 100% 150px;
   }
 
   .circular-progress-container {
@@ -6411,6 +6411,7 @@ width: auto;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
+  border: 3px solid black;
 }
 
 .result-img {
@@ -6422,7 +6423,7 @@ width: auto;
 
 .result-img3 {
  width: 280px;
-  height: 57%;
+  height: 56%;
   opacity: 1;
 }
 
@@ -11146,6 +11147,7 @@ h1 {
     }
 
 }
+
 
 
 
