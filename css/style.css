@@ -5518,7 +5518,7 @@ width: auto;
 
   #creditmeter {
     position: fixed;
-    top: 20px;
+    top: 24px;
     /* Distance from the top */
     left: 0;
     /* Stick to the left */
@@ -5555,7 +5555,7 @@ width: auto;
 
   .creditscore-img {
     width: 90%;
-    height: 110%;
+    height: 115%;
     opacity: 1;
     position: relative;
   }
@@ -11147,6 +11147,7 @@ h1 {
     }
 
 }
+
 
 
 
