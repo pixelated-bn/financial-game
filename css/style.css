@@ -5433,9 +5433,15 @@ width: auto;
 
 }
 
+    #instruction1 {
+    width: 100%;
+    height: 90%;
+    display: block;
+  }
+
    #instruction1,  #instruction2, #instruction3 {
     width: 100%;
-    height: 85%;
+    height: 83%;
     display: block;
   }
 
@@ -5614,14 +5620,14 @@ width: auto;
   }
 
   .my-card2 {
-    width: 90%;
+    width: 95%;
     height: 145px;
     background-position: center;
     padding: 15px;
   }
 
   .my-card2:hover {
-    background-size: 100% 150px;
+    background-size: 100% 143px;
   }
 
   .circular-progress-container {
@@ -11126,6 +11132,7 @@ h1 {
     }
 
 }
+
 
 
 
