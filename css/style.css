@@ -3956,7 +3956,7 @@ li:nth-child(odd) {
 
 @media (min-width: 700px) and (max-width: 779px) {
   #index {
-    padding-top: 40px;
+    padding-top: 50px;
   }
 
   .sticky-row {
@@ -4378,7 +4378,7 @@ width: auto;
    #car1,
   #car2,
   #car3 {
-    padding-bottom: 150px;
+    padding-bottom: 180px;
   }
 
   #car-video1,
@@ -4396,20 +4396,8 @@ width: auto;
   display: block;
 }
 
-   #game1 {
+   #game1, #game2, #game3, #game4 {
     padding-bottom: 100px;
-  }
-
-    #game2 {
-    top: 75%;
-  }
-
-  #game3 {
-    top: 80%;
-  }
-
-  #game4 {
-    top: 70%;
   }
 
 
@@ -5016,14 +5004,14 @@ width: auto;
 }
 
 .result-img {
- width: 263px;
+ width: 260px;
   height: 60%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
- width: 263px;
+ width: 260px;
   height: 60%;
   opacity: 1;
 }
@@ -11138,5 +11126,6 @@ h1 {
     }
 
 }
+
 
 
