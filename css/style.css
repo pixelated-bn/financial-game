@@ -6410,18 +6410,17 @@ width: auto;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
-  border: 3px solid black;
 }
 
 .result-img {
- width: 275px;
+ width: 277px;
   height: 60%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
- width: 275px;
+ width: 277px;
   height: 60%;
   opacity: 1;
 }
@@ -11146,6 +11145,7 @@ h1 {
     }
 
 }
+
 
 
 
