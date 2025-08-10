@@ -8158,7 +8158,7 @@ width: auto;
   /* Optional: set a background color */
   z-index: 1000;
   /* Ensure it stays on top of other content */
-  padding-top: 10px;
+  padding-top: 20px;
   /* Optional: add some padding */
   cursor: default;
 }
@@ -11151,6 +11151,7 @@ h1 {
     }
 
 }
+
 
 
 
