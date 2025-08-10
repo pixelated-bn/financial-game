@@ -8158,7 +8158,7 @@ width: auto;
   /* Optional: set a background color */
   z-index: 1000;
   /* Ensure it stays on top of other content */
-  padding-top: 15px;
+  padding-top: 18px;
   /* Optional: add some padding */
   cursor: default;
 }
@@ -8502,7 +8502,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
-    padding-top: 30px;
+    padding-top: 35px;
   }
 
   .info-container1 .overlay-text {
@@ -8533,7 +8533,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
-    padding-top: 30px;
+    padding-top: 35px;
   }
 
   .info-container2 .overlay-text {
@@ -11151,6 +11151,7 @@ h1 {
     }
 
 }
+
 
 
 
