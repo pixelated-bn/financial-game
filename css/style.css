@@ -8813,7 +8813,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   }
 
   .quiz-progress {
-  padding-top: 80px;
+  padding-top: 30px;
 }
   
   #question-words {
@@ -11140,6 +11140,7 @@ h1 {
     }
 
 }
+
 
 
 
