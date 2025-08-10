@@ -8239,7 +8239,7 @@ width: auto;
 }
 
   #narrative-style {
-    padding-top: 23vh;
+    padding-top: 16vh;
     width: 70%;
     overflow: hidden;
     white-space: nowrap;
@@ -8924,11 +8924,11 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 }
 
 #util-div {
-  padding-top: 35px;
+  padding-top: 45px;
 }
 
 #util-btn {
-  padding-bottom: 32px;
+  padding-bottom: 38px;
 }
 
 
@@ -11137,6 +11137,7 @@ h1 {
     }
 
 }
+
 
 
 
