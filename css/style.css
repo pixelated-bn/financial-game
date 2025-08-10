@@ -4834,7 +4834,7 @@ width: auto;
 .quiz-progress {
   padding-left: 100px;
   padding-right: 100px;
-  padding-top: 55px;
+  padding-top: 15px;
 }
 
 #questions{
@@ -4870,7 +4870,7 @@ width: auto;
 
   .vertical-line {
     position: absolute;
-    top: 235px;
+    top: 205px;
     /* Adjust this value to control the distance from the top */
     left: 51%;
     width: 1px;
@@ -5005,14 +5005,14 @@ width: auto;
 }
 
 .result-img {
- width: 260px;
+ width: 258px;
   height: 60%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
- width: 260px;
+ width: 258px;
   height: 60%;
   opacity: 1;
 }
@@ -5215,7 +5215,7 @@ width: auto;
 #mood-container{
   height: 70px;
   width: 300px;
-  margin-top: 0;
+  margin-top: 30px;
 }
 
 #factortext{
@@ -11146,6 +11146,7 @@ h1 {
     }
 
 }
+
 
 
 
