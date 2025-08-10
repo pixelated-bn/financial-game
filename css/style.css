@@ -8647,23 +8647,9 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     border-radius: 4px;
   }
 
-  #game1 {
-    top: 75%;
+  #game1, #game2, #game3, #game4 {
+    top: 73%;
   }
-
-  #game2 {
-    top: 75%;
-  }
-
-  #game3 {
-    top: 80%;
-  }
-
-  #game4 {
-    top: 70%;
-  }
-
-
 
   .monument {
     width: 70%;
@@ -8933,16 +8919,16 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   }
 
   #util-img {
-  width: 80%;
+  width: 75%;
   height: auto;
 }
 
 #util-div {
-  padding-top: 20px;
+  padding-top: 35px;
 }
 
 #util-btn {
-  padding-bottom: 28px;
+  padding-bottom: 32px;
 }
 
 
@@ -11151,6 +11137,7 @@ h1 {
     }
 
 }
+
 
 
 
