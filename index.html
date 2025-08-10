@@ -173,7 +173,7 @@ This game is developed to raise awareness and empower individuals to make inform
       // Sticky row hide/show logic
       document.addEventListener("DOMContentLoaded", () => {
         const stickyRow = document.querySelector(".sticky-row");
-        const targets = [document.querySelector("#narration1"), document.querySelector("#narration2"), document.querySelector("#narration3")];
+        const targets = [document.querySelector("#narration1"), document.querySelector("#narration2"), document.querySelector("#narration3"),   document.querySelector("#scene1-tips")];
 
         const howto_observer = new IntersectionObserver(
           (entries) => {
@@ -818,8 +818,10 @@ This game is developed to raise awareness and empower individuals to make inform
 
             // Sticky row hide/show logic
             document.addEventListener("DOMContentLoaded", () => {
-              const stickyRow = document.querySelector("#info");
-              const targets = [document.querySelector("#index")];
+              const stickyRow = [document.querySelector("#info"), document.querySelector("#home")];
+              const targets = [document.querySelector("#index"), document.querySelector("#narrative"),
+              document.querySelector("#narration"), document.querySelector("#scene1-tips"), document.querySelector("#scene2-opt1"), document.querySelector("#scene2-opt2"),
+              document.querySelector("#scene2-opt3")];
 
               const info_observer = new IntersectionObserver(
                 (entries) => {
@@ -839,36 +841,6 @@ This game is developed to raise awareness and empower individuals to make inform
               targets.forEach((target) => {
                 if (target) {
                   info_observer.observe(target);
-                }
-              });
-            });
-
-
-                    // Sticky row hide/show logic
-            document.addEventListener("DOMContentLoaded", () => {
-             const stickyRow = document.querySelector(".sticky-row");
-              const targets = [document.querySelector("#narrative"),
-              document.querySelector("#narration"), document.querySelector("#scene1-tips"), document.querySelector("#scene2-opt1"), document.querySelector("#scene2-opt2"),
-              document.querySelector("#scene2-opt3")];
-
-              const logo_observer = new IntersectionObserver(
-                (entries) => {
-                  let shouldHideStickyRow = false;
-
-                  entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                      shouldHideStickyRow = true;
-                    }
-                  });
-
-                  stickyRow.style.display = shouldHideStickyRow ? "none" : "flex";
-                },
-                { threshold: 0.2 }
-              );
-
-              targets.forEach((target) => {
-                if (target) {
-                  logo_observer.observe(target);
                 }
               });
             });
