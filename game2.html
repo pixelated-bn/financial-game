@@ -3077,49 +3077,7 @@ const updateThumbPosition = (index) => {
           </div>
 
 
-             <script>
-
-  document.addEventListener("DOMContentLoaded", () => {
-              const stickyRow = document.querySelector(".sticky-row");
-              const summary = [document.querySelector("#game-success"), document.querySelector("#game-failed")];
-              //const footer4 = document.querySelector("#footer");
-
-              const sum_observer = new IntersectionObserver(
-                (entries) => {
-                  let shouldHideStickyRow = false;
-                  //let HideFooter = false;
-
-                  // Check the visibility of each observed element
-                  entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                      shouldHideStickyRow = true;
-                      //HideFooter = true;
-                    }
-                  });
-
-                  // Toggle the visibility of the sticky-row based on any intersecting element
-                  if (shouldHideStickyRow) {
-                    stickyRow.style.display = "none";
-                    //footer4.style.display = "none";
-                  } else {
-                    stickyRow.style.display = "flex"; // Or your desired display value
-                    //footer4.style.display = "block";
-                  }
-                },
-                { threshold: 0.2 } // Adjust the visibility threshold as needed
-              );
-              // Observe each target element
-              summary.forEach((target) => {
-                if (target) {
-                  sum_observer.observe(target);
-                }
-              });
-            });
-
-          </script>
-
-
-
+       
           <!--End of scenario 14-->
 
           <!--Scenario 16-->
@@ -3354,7 +3312,7 @@ const updateThumbPosition = (index) => {
 
             document.addEventListener("DOMContentLoaded", () => {
               const stickyRow = document.querySelector(".sticky-row");
-              const targets4 = [document.querySelector("#quiz-game"), document.querySelector("#game-credit4")];
+              const targets4 = [document.querySelector("#game-success"), document.querySelector("#game-failed"), document.querySelector("#quiz-game"), document.querySelector("#game-credit4")];
               //const footer4 = document.querySelector("#footer");
 
               const observer4 = new IntersectionObserver(
@@ -6385,4 +6343,3 @@ function initProgress() {
 </body>
 
 </html>
-
