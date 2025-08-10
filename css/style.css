@@ -8945,7 +8945,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 }
 
 #risk{
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 #risk-img{
@@ -8960,7 +8960,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 .result-container3 {
@@ -8969,19 +8969,19 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
-  margin-top: 120px;
+  margin-top: 80px;
 }
 
 .result-img {
    width: 380px;
-  height: 90%;
+  height: 75%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
   width: 380px;
-  height: 90%;
+  height: 75%;
   opacity: 1;
   position: relative;
 }
@@ -11140,6 +11140,7 @@ h1 {
     }
 
 }
+
 
 
 
