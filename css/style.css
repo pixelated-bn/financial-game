@@ -8243,7 +8243,7 @@ width: auto;
     width: 70%;
     overflow: hidden;
     white-space: nowrap;
-    padding-left: 18px;
+    padding-left: 20px;
     padding-right: 20px;
   }
 
@@ -8604,7 +8604,6 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     max-width: 730px;
     height: 320px;
     /* Adjust the height as needed */
-    margin: auto;
   }
 
   .car.left {
@@ -8924,11 +8923,11 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 }
 
 #util-div {
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 #util-btn {
-  padding-bottom: 38px;
+  padding-bottom: 40px;
 }
 
 
@@ -11137,6 +11136,7 @@ h1 {
     }
 
 }
+
 
 
 
