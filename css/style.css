@@ -4975,7 +4975,7 @@ width: auto;
 
 #summary-div{
   height: 110px;
-   padding-top: 10px;
+   padding-top: 20px;
 }
 
 #risk{
@@ -6385,7 +6385,7 @@ width: auto;
 
 #summary-div{
   height: 110px;
-   padding-top: 10px;
+   padding-top: 20px;
 }
 
 #risk{
@@ -7745,7 +7745,7 @@ width: auto;
 
 #summary-div{
   height: 110px;
-   padding-top: 10px;
+   padding-top: 20px;
 }
 
 #risk{
@@ -8945,6 +8945,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 #summary-div{
   height: 110px;
+    padding-top: 30px;
 }
 
 #risk{
@@ -9565,6 +9566,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 #summary-div{
   height: 110px;
+    padding-top: 40px;
 }
 
 #risk{
@@ -10740,6 +10742,7 @@ h1 {
 
 #summary-div{
   height: 110px;
+    padding-top: 80px;
 }
 
 #risk{
@@ -11143,6 +11146,7 @@ h1 {
     }
 
 }
+
 
 
 
