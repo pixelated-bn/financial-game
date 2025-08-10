@@ -6243,7 +6243,7 @@ width: auto;
 .quiz-progress {
   padding-left: 100px;
   padding-right: 100px;
-  padding-top: 25px;
+  padding-top: 20px;
 }
 
 #questions{
@@ -6279,7 +6279,7 @@ width: auto;
 
   .vertical-line {
     position: absolute;
-    top: 235px;
+    top: 215px;
     /* Adjust this value to control the distance from the top */
     left: 51%;
     width: 1px;
@@ -6625,7 +6625,7 @@ width: auto;
 #mood-container{
   height: 70px;
   width: 300px;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 #factortext{
@@ -11146,6 +11146,7 @@ h1 {
     }
 
 }
+
 
 
 
