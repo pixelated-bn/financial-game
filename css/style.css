@@ -4489,7 +4489,7 @@ width: auto;
 }
 
 #util-div {
-  padding-top: 35px;
+  padding-top: 40px;
 }
 
 #util-btn {
@@ -5897,7 +5897,7 @@ width: auto;
 }
 
 #util-div {
-  padding-top: 35px;
+  padding-top: 40px;
 }
 
 #util-btn {
@@ -7138,7 +7138,7 @@ width: auto;
 }
 
 #util-div {
-  padding-top: 25px;
+  padding-top: 35px;
 }
 
 #util-btn {
@@ -8812,6 +8812,10 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     margin-top: 60px;
   }
 
+  .quiz-progress {
+  padding-top: 80px;
+}
+  
   #question-words {
     color: #206E63;
     font-weight: bold;
@@ -8923,7 +8927,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 }
 
 #util-div {
-  padding-top: 20px;
+  padding-top: 35px;
 }
 
 #util-btn {
@@ -11136,6 +11140,7 @@ h1 {
     }
 
 }
+
 
 
 
