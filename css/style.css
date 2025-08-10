@@ -8213,15 +8213,21 @@ width: auto;
 
 }
 
-  #instruction1, #instruction2, #instruction3  {
+  #instruction1 {
     width: 100%;
-    height: 98%;
+    height: 96%;
+    display: block;
+  }
+
+   #instruction2, #instruction3  {
+    width: 100%;
+    height: 90%;
     display: block;
   }
 
     #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 92%;
+  top: 89%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -11145,6 +11151,7 @@ h1 {
     }
 
 }
+
 
 
 
