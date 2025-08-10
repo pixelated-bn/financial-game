@@ -4870,7 +4870,7 @@ width: auto;
 
   .vertical-line {
     position: absolute;
-    top: 200px;
+    top: 198px;
     /* Adjust this value to control the distance from the top */
     left: 51%;
     width: 1px;
@@ -6279,7 +6279,7 @@ width: auto;
 
   .vertical-line {
     position: absolute;
-    top: 200px;
+    top: 198px;
     /* Adjust this value to control the distance from the top */
     left: 51%;
     width: 1px;
@@ -7599,12 +7599,11 @@ width: auto;
   height: auto;
   margin: 0 auto;
 }
-
-
+  
 .quiz-progress {
   padding-left: 100px;
   padding-right: 100px;
-  padding-top: 25px;
+  padding-top: 16px;
 }
 
 #questions{
@@ -7641,7 +7640,7 @@ width: auto;
 
   .vertical-line {
     position: absolute;
-    top: 205px;
+    top: 198px;
     /* Adjust this value to control the distance from the top */
     left: 50%;
     width: 1px;
@@ -7749,7 +7748,7 @@ width: auto;
 }
 
 #risk{
-  margin-top: 0;
+  margin-top: 10px;
 }
 
 #risk-img{
@@ -7777,15 +7776,15 @@ width: auto;
 }
 
 .result-img {
- width: 330px;
-  height: 72%;
+ width: 280px;
+  height: 60%;
   opacity: 1;
   position: relative;
 }
 
 .result-img3 {
-  width: 330px;
-  height: 72%;
+  width: 280px;
+  height: 60%;
   opacity: 1;
   position: relative;
 }
@@ -7985,10 +7984,10 @@ width: auto;
   padding-top: 0px;
 }
 
-#mood-container{
+  #mood-container{
   height: 70px;
   width: 300px;
-  margin-top: 0;
+  margin-top: 35px;
 }
 
 #factortext{
@@ -9570,7 +9569,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 }
 
 #risk{
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 #risk-img{
@@ -9810,7 +9809,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 #mood-container{
   height: 70px;
   width: 580px;
-  margin-top: 60px;
+  margin-top: 86px;
 }
 
 #factortext{
@@ -11146,6 +11145,7 @@ h1 {
     }
 
 }
+
 
 
 
