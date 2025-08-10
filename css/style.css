@@ -4870,7 +4870,7 @@ width: auto;
 
   .vertical-line {
     position: absolute;
-    top: 205px;
+    top: 200px;
     /* Adjust this value to control the distance from the top */
     left: 51%;
     width: 1px;
@@ -11146,6 +11146,7 @@ h1 {
     }
 
 }
+
 
 
 
