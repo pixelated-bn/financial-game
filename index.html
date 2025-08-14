@@ -244,7 +244,7 @@ This game is developed to raise awareness and empower individuals to make inform
               <div class="row">
                 <div class="col-sm-4 hovertest">
                   <a href="#scene1-opt1" id="scene1-link1" style="text-decoration: none; color: #000000;"
-                    class="choice-card" data-happiness="53" data-focus="52" data-connection="51" data-credit-score="53">
+                    class="choice-card" data-happiness="53" data-focus="52" data-connection="51" data-credit-score="+6">
                     <div class="card my-card2">
 
                       <img src="./img/essentials.png" class="card-img-top"
@@ -256,7 +256,7 @@ This game is developed to raise awareness and empower individuals to make inform
 
                 <div class="col-sm-4 hovertest">
                   <a href="#scene1-opt2" id="scene1-link2" style="text-decoration: none; color: #000000;"
-                    class="choice-card" data-happiness="51" data-focus="47" data-connection="48" data-credit-score="43">
+                    class="choice-card" data-happiness="51" data-focus="47" data-connection="48" data-credit-score="-6">
                     <div class="card my-card2">
 
                       <img src="./img/luxury.png" class="card-img-top"
@@ -268,7 +268,7 @@ This game is developed to raise awareness and empower individuals to make inform
 
                 <div class="col-sm-4 hovertest">
                   <a href="#scene1-opt3" id="scene1-link3" style="text-decoration: none; color: #000000;"
-                    class="choice-card" data-happiness="52" data-focus="52" data-connection="51" data-credit-score="53">
+                    class="choice-card" data-happiness="52" data-focus="52" data-connection="51" data-credit-score="+6">
                     <div class="card my-card2">
 
                       <img src="./img/basic-needs.png" class="card-img-top"
@@ -637,12 +637,12 @@ This game is developed to raise awareness and empower individuals to make inform
               <div class="text-center" id="choices-div">
                 <div id="choices-col">
                   <a href="#scene2a-opt1" id="scene2a-link1" class="choice-card" data-happiness="57" data-focus="55" data-connection="47"
-                    data-credit-score="41">
+                    data-credit-score="-7">
                     Apply to a few banks at once to get the best deal
                   </a>
                 </div>
                 <div id="choices-col">
-                  <a href="#scene2a-opt2" id="scene2a-link2" class="choice-card" data-happiness="53" data-connection="53" data-credit-score="55">
+                  <a href="#scene2a-opt2" id="scene2a-link2" class="choice-card" data-happiness="53" data-connection="53" data-credit-score="+7">
                    Stick with one bank and see what they offer
                   </a>
                 </div>
@@ -1549,57 +1549,44 @@ birokredit@bdcb.gov.bn
         }
       }
 
+      
+let minScore = 0;
+let maxScore = 100;
+let currentCreditScore = 50;
 
+function updateCreditArrow() {
+  const container = document.querySelector('.credit-score-container');
+  const arrow = document.querySelector('.creditarrow-img');
+  const overlay = document.querySelector('.opacity-overlay');
 
-      // Function to update circular progress and arrow
-      const minValue = 1;
-      const maxValue = 100;
+  if (!container || !arrow || !overlay) return;
 
+  const containerHeight = container.clientHeight;
+  const arrowHeight = arrow.clientHeight;
 
-      function updateCreditArrow() {
-        const container = document.querySelector('.credit-score-container');
-        const arrowElement = document.querySelector('.creditarrow-img');
-        const overlayElement = document.querySelector('.opacity-overlay');
-
-        if (!container || !arrowElement || !overlayElement) {
-          console.log('Container, arrow element, or overlay element not found');
-          return;
-        }
-
-        const containerHeight = container.clientHeight;
-        const arrowHeight = arrowElement.clientHeight;
-
-        // Ensure valid dimensions
-        if (containerHeight === 0 || arrowHeight === 0) {
-          console.log('No container or arrow height specified');
-          return;
-        }
-
-        // Retrieve the credit score from the data-progress attribute
-        const creditScore = parseInt(container.getAttribute('data-progress2'), 10);
-        if (isNaN(creditScore)) {
+let currentCreditScore = parseInt(container.getAttribute('data-progress2'), 10);
+        if (isNaN(currentCreditScore)) {
           console.log('No credit score specified');
           return;
         }
 
-        // Calculate the position percentage
-        const positionPercentage = ((creditScore - minValue) / (maxValue - minValue)) * 100;
-        if (positionPercentage < 0 || positionPercentage > 100) {
+  // ✅ Correct mapping using min/max
+  const positionPercentage = ((currentCreditScore - minScore) / (maxScore - minScore)) * 100;
+   if (positionPercentage < 0 || positionPercentage > 100) {
           console.log('Position percentage out of bounds');
           return;
         }
 
-        // Calculate the top position of the arrow
-        const arrowTop = (containerHeight - arrowHeight) * (1 - positionPercentage / 100);
-        arrowElement.style.top = `${Math.max(0, Math.min(arrowTop, containerHeight - arrowHeight))}px`;
+  // Calculate arrow top position
+  const arrowTop = (containerHeight - arrowHeight) * (1 - positionPercentage / 100);
+     arrow.style.top = `${Math.max(0, Math.min(arrowTop, containerHeight - arrowHeight))}px`;
 
-        // Adjust the gradient stop position based on the arrow's top position
-        const gradientPosition = ((arrowTop + 6) / containerHeight) * 100;
-        overlayElement.style.background = `linear-gradient(to bottom, rgba(252, 252, 252, 0.486) ${gradientPosition}%, rgba(0, 0, 0, 0) ${gradientPosition}%)`;
+  // Update overlay gradient
+  const gradientPosition = ((arrowTop + 6) / containerHeight) * 100;
+  overlay.style.background = `linear-gradient(to bottom, rgba(252,252,252,0.486) ${gradientPosition}%, rgba(0,0,0,0) ${gradientPosition}%)`;
+  overlay.style.height = `${containerHeight}px`;
+}
 
-        // Ensure the overlay covers the entire container to account for possible gradient overflow
-        overlayElement.style.height = `${containerHeight}px`;
-      }
 
       // Initialize the credit arrow and overlay gradient based on the initial data-progress value
       function initProgress() {
@@ -1612,6 +1599,9 @@ birokredit@bdcb.gov.bn
 
         updateCreditArrow(); // Initialize the credit arrow with the existing data-progress value
       }
+
+
+
       // Add event listeners to choice cards
       document.querySelectorAll('.choice-card').forEach(card => {
         card.addEventListener('click', function (event) {
@@ -1622,6 +1612,7 @@ birokredit@bdcb.gov.bn
           const focus = this.getAttribute('data-focus');
           const connection = this.getAttribute('data-connection');
           const creditScore = this.getAttribute('data-credit-score');
+          const change = parseInt(this.getAttribute('data-credit-score'), 10) || 0;
 
           // Update the circular progress elements and arrows
           document.querySelectorAll('.circular-progress').forEach((progress, index) => {
@@ -1631,12 +1622,15 @@ birokredit@bdcb.gov.bn
             }
           });
 
-          // Update the credit arrow
-          const container = document.querySelector('.credit-score-container');
-          if (container) {
-            container.setAttribute('data-progress2', creditScore);
-            updateCreditArrow();
-          }
+       currentCreditScore += change;
+    currentCreditScore = Math.max(1, Math.min(100, currentCreditScore));
+
+    // Update container attribute and arrow
+    const container = document.querySelector('.credit-score-container');
+    if (container) {
+      container.setAttribute('data-progress2', currentCreditScore);
+      updateCreditArrow();
+    }
 
           // Navigate to the target section
           const targetSection = document.querySelector(this.getAttribute('href'));
