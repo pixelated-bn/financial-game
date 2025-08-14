@@ -860,7 +860,7 @@ width: auto;
 
 #factormeter {
   position: fixed;
-  top: 50px;
+  top: 70px;
   /* Distance from the top */
   right: 0;
   /* Stick to the right */
@@ -1606,7 +1606,7 @@ width: auto;
 
   .credit-score-container {
   position: relative;
-  height: 455px;
+  height: 480px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
@@ -1615,7 +1615,7 @@ width: auto;
 
 .creditscore-img {
   width: 100%;
-  height: 450px;
+  height: 475px;
   opacity: 1;
   position: relative;
 }
@@ -3600,7 +3600,7 @@ li:nth-child(odd) {
 
 
 .result-img {
-  width: 477px;
+  width: 490px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -9293,19 +9293,23 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
 @media (min-width: 1400px) and (max-width: 1510px) {
+   #index {
+    padding-top: 120px;
+  }
+  
    #car1,
   #car2,
   #car3 {
     padding-bottom: 350px;
   }
 
-   #instruction1, #instruction3  {
+   #instruction1  {
     width: 100%;
-    height: 90%;
+    height: 93%;
     display: block;
   }
 
-   #instruction2 {
+   #instruction2, #instruction3 {
     width: 100%;
     height: 86%;
     display: block;
@@ -9349,7 +9353,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
   #factormeter {
     position: fixed;
-    top: 50px;
+    top: 80px;
     /* Distance from the top */
     right: 18px;
     /* Stick to the right */
@@ -9366,7 +9370,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
   .credit-score-container {
      position: relative;
-    height: 450px;
+    height: 485px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -9374,7 +9378,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 .creditscore-img {
   width: 100px;
-  height: 445px;
+  height: 480px;
   opacity: 1;
   position: relative;
 }
@@ -9385,7 +9389,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   top: 0;
   left: 0;
   width: 125%;
-  height: 140%;
+  height: 100%;
 background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -9402,7 +9406,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   width: 44%;
   /* Adjust the size as needed */
   height: auto;
-  top: 57%;
+  top: 49%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -9530,7 +9534,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
 .result-img {
-  width: 440px;
+  width: 448px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -10898,3 +10902,4 @@ h1 {
     }
 
 }
+
