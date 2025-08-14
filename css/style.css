@@ -9836,7 +9836,6 @@ width: auto;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
-    border: 3px solid black;
   }
 
   .creditscore-img {
@@ -10920,6 +10919,7 @@ h1 {
     }
 
 }
+
 
 
 
