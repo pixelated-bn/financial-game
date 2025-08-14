@@ -535,10 +535,15 @@ width: auto;
 .outer-ring {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   position: absolute;
   z-index: 0;
   /* Ensure it is below the inner circle */
+    border-radius: 50%; /* keeps the circle round */
+  background: conic-gradient(
+    #206E63 0% 50%,    /* progress part */
+    #FCF8EA 50% 100%   /* rest of circle */
+  );
+  transition: background 0.5s ease;
 }
 
 
@@ -1599,9 +1604,9 @@ width: auto;
   }
 }
 
-.credit-score-container {
+  .credit-score-container {
   position: relative;
-  height: 425px;
+  height: 455px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
@@ -1620,7 +1625,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 100%;
-  height: 108%;
+  height: 100%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -1637,7 +1642,7 @@ width: auto;
   width: 40%;
   /* Adjust the size as needed */
   height: auto;
-  top: 52%;
+  top: 49%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -3561,7 +3566,7 @@ li:nth-child(odd) {
 }
 
 #end-div {
-  padding-top: 150px;
+  padding-top: 130px;
 }
 
 #end-body {
@@ -3595,7 +3600,7 @@ li:nth-child(odd) {
 
 
 .result-img {
-  width: 505px;
+  width: 477px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -3631,52 +3636,6 @@ li:nth-child(odd) {
   /* Add a transition for smooth movement */
 }
 
-.result-container3 {
-  height: 110px;
-  width: 435px;
-  /* Set a specific height */
-  overflow: visible;
-  /* Hide overflow */
-  margin-top: 120px;
-}
-
-
-.result-img3 {
-  width: 505px;
-  height: 100%;
-  opacity: 1;
-  position: relative;
-}
-
-.opacity-overlay3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 53%;
-  height: 200%;
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-  /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out;
-  /* Add a transition for smooth movement */
-}
-
-.resultarrow-img3 {
-    position: absolute;
-  left: 75%;
-  /* Move the arrow to the right */
-  transform: translateX(-50%);
-  /* Keep it centered relative to the new left position */
-  width: 3%;
-  /* Adjust the size as needed */
-  height: auto;
-  top: 68%;
-  /* Adjust this value to place the arrow within the container */
-  z-index: 10;
-  /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease;
-  /* Add a transition for smooth movement */
-}
 
 #resulttext{
   font-size: 19px;
@@ -3744,59 +3703,6 @@ li:nth-child(odd) {
 }
 
 .circular-progress-container2 {
-   align-items: center;
-  justify-content: center;
-  /* Align items horizontally */
-  padding-top: 20px;
-  padding-right: 50px;
-}
-
-.inner-circle3 {
-  width: 80%;
-  /* Inner circle size */
-  height: 80%;
-  background-color: #FCF8EA;
-  /* Inner circle color */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  /* Ensure it is above the outer ring */
-}
-
-.percentage3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  /* Text color */
-  vertical-align: middle;
-  line-height: 60%;
-}
-
-.outer-ring3 {
-  width: 105%;
-  height: 105%;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  /* Ensure it is below the inner circle */
-}
-
-.circular-progress3 {
-  width: 100px;
-  /* Outer ring size */
-  height: 100px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  /* Space between the circle and the factor image */
-}
-
-.circular-progress-container3 {
    align-items: center;
   justify-content: center;
   /* Align items horizontally */
@@ -4107,7 +4013,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 142px;
+    height: 150px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -4115,7 +4021,7 @@ width: auto;
 
   .creditscore-img {
     width: 100%;
-    height: 120%;
+    height: 100%;
     opacity: 1;
     position: relative;
   }
@@ -4125,7 +4031,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 100%;
-  height: 120%;
+  height: 100%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -4142,7 +4048,7 @@ width: auto;
   width: 40%;
   /* Adjust the size as needed */
   height: auto;
-  top: 59%;
+  top: 61%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -4969,9 +4875,7 @@ width: auto;
 }
 
 
-#game-success{
-  margin-top: 0px;
-}
+
 
 #summary-div{
   height: 110px;
@@ -4990,48 +4894,22 @@ width: auto;
 
 .result-container {
  height: 85px;
-  width: 435px;
-  /* Set a specific height */
-  overflow: visible;
-  /* Hide overflow */
-}
-
-.result-container3 {
-   height: 85px;
-  width: 435px;
+  width: 415px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
 }
 
 .result-img {
- width: 258px;
+ width: 200px;
   height: 60%;
   opacity: 1;
   position: relative;
 }
 
-.result-img3 {
- width: 258px;
-  height: 60%;
-  opacity: 1;
-}
 
 .opacity-overlay2 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 51%;
-  height: 58%;
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-  /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out;
-  /* Add a transition for smooth movement */
-}
-
-.opacity-overlay3 {
-   position: absolute;
   top: 0;
   left: 0;
   width: 51%;
@@ -5060,22 +4938,6 @@ width: auto;
   /* Add a transition for smooth movement */
 }
 
-.resultarrow-img3 {
-  position: absolute;
- left: 54%;
-  /* Move the arrow to the right */
-  transform: translateX(-50%);
-  /* Keep it centered relative to the new left position */
-  width: 3%;
-  /* Adjust the size as needed */
-  height: auto;
-  top: 35%;
-  /* Adjust this value to place the arrow within the container */
-  z-index: 10;
-  /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease;
-  /* Add a transition for smooth movement */
-}
 
 
 #result-text{
@@ -5103,20 +4965,7 @@ width: auto;
   /* Ensure it is above the outer ring */
 }
 
-.inner-circle3 {
-  width: 40%;
-  /* Inner circle size */
-  height: 40%;
-  background-color: #FCF8EA;
-  /* Inner circle color */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  /* Ensure it is above the outer ring */
-}
+
 
 .percentage2 {
   font-size: 22px;
@@ -5127,14 +4976,6 @@ width: auto;
   line-height: 60%;
 }
 
-.percentage3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  /* Text color */
-  vertical-align: middle;
-  line-height: 60%;
-}
 
 .outer-ring2 {
   width: 55%;
@@ -5145,14 +4986,6 @@ width: auto;
   /* Ensure it is below the inner circle */
 }
 
-.outer-ring3 {
-  width: 55%;
-  height: 55%;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  /* Ensure it is below the inner circle */
-}
 
 .circular-progress2 {
   width: 50px;
@@ -5166,17 +4999,6 @@ width: auto;
   /* Space between the circle and the factor image */
 }
 
-.circular-progress3 {
-  width: 50px;
-  /* Outer ring size */
-  height: 50px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 17px;
-  /* Space between the circle and the factor image */
-}
 
 .circular-progress-container2 {
   align-items: center;
@@ -5188,15 +5010,7 @@ width: auto;
   height: 70px;
 }
 
-.circular-progress-container3 {
-  align-items: center;
-  justify-content: center;
-  /* Align items horizontally */
-  padding-top: 0px;
-  padding-right: 1px;
-  width: 80px;
-  height: 70px;
-}
+
 
 .result-desc{
   padding-top: 2px;
@@ -5547,7 +5361,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 160px;
+    height: 180px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -5555,7 +5369,7 @@ width: auto;
 
   .creditscore-img {
     width: 90%;
-    height: 117%;
+    height: 100%;
     opacity: 1;
     position: relative;
   }
@@ -5582,7 +5396,7 @@ width: auto;
   width: 40%;
   /* Adjust the size as needed */
   height: auto;
-  top: 59%;
+  top: 61%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -6379,10 +6193,6 @@ width: auto;
 
 
 
-#game-success{
-  margin-top: 0px;
-}
-
 #summary-div{
   height: 110px;
    padding-top: 20px;
@@ -6400,32 +6210,22 @@ width: auto;
 
 .result-container {
   height: 85px;
-  width: 435px;
+  width: 315px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
 }
 
-.result-container3 {
- height: 85px;
-  width: 415px;
-  /* Set a specific height */
-  overflow: visible;
-  /* Hide overflow */
-}
+
 
 .result-img {
- width: 280px;
+ width: 230px;
   height: 60%;
   opacity: 1;
   position: relative;
 }
 
-.result-img3 {
- width: 280px;
-  height: 60%;
-  opacity: 1;
-}
+
 
 .opacity-overlay2 {
   position: absolute;
@@ -6440,18 +6240,6 @@ width: auto;
   /* Add a transition for smooth movement */
 }
 
-.opacity-overlay3 {
-   position: absolute;
-  top: 0;
-  left: 0;
-  width: 51%;
-  height: 58%;
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-  /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out;
-  /* Add a transition for smooth movement */
-}
 
 .resultarrow-img {
   position: absolute;
@@ -6470,22 +6258,6 @@ width: auto;
   /* Add a transition for smooth movement */
 }
 
-.resultarrow-img3 {
-  position: absolute;
- left: 54%;
-  /* Move the arrow to the right */
-  transform: translateX(-50%);
-  /* Keep it centered relative to the new left position */
-  width: 3%;
-  /* Adjust the size as needed */
-  height: auto;
-  top: 35%;
-  /* Adjust this value to place the arrow within the container */
-  z-index: 10;
-  /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease;
-  /* Add a transition for smooth movement */
-}
 
 
 #result-text{
@@ -6513,20 +6285,6 @@ width: auto;
   /* Ensure it is above the outer ring */
 }
 
-.inner-circle3 {
-  width: 40%;
-  /* Inner circle size */
-  height: 40%;
-  background-color: #FCF8EA;
-  /* Inner circle color */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  /* Ensure it is above the outer ring */
-}
 
 .percentage2 {
   font-size: 22px;
@@ -6537,14 +6295,6 @@ width: auto;
   line-height: 60%;
 }
 
-.percentage3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  /* Text color */
-  vertical-align: middle;
-  line-height: 60%;
-}
 
 .outer-ring2 {
   width: 55%;
@@ -6555,14 +6305,7 @@ width: auto;
   /* Ensure it is below the inner circle */
 }
 
-.outer-ring3 {
-  width: 55%;
-  height: 55%;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  /* Ensure it is below the inner circle */
-}
+
 
 .circular-progress2 {
   width: 50px;
@@ -6576,17 +6319,7 @@ width: auto;
   /* Space between the circle and the factor image */
 }
 
-.circular-progress3 {
-  width: 50px;
-  /* Outer ring size */
-  height: 50px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 17px;
-  /* Space between the circle and the factor image */
-}
+
 
 .circular-progress-container2 {
   align-items: center;
@@ -6598,15 +6331,6 @@ width: auto;
   height: 70px;
 }
 
-.circular-progress-container3 {
-  align-items: center;
-  justify-content: center;
-  /* Align items horizontally */
-  padding-top: 0px;
-  padding-right: 1px;
-  width: 80px;
-  height: 70px;
-}
 
 .result-desc{
   padding-top: 2px;
@@ -6952,15 +6676,15 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 180px;
+    height: 192px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
   }
 
   .creditscore-img {
-    width: 90%;
-    height: auto;
+   width: 90%;
+    height: 100%;
     opacity: 1;
     position: relative;
   }
@@ -6970,7 +6694,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 100%;
-  height: 112%;
+  height: 128%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -6997,7 +6721,7 @@ width: auto;
 
   #factormeter {
     position: fixed;
-    top: 20px;
+    top: 10px;
     /* Distance from the top */
     right: 37px;
     /* Stick to the right */
@@ -7738,10 +7462,6 @@ width: auto;
 }
 
 
-#game-success{
-  margin-top: 0px;
-}
-
 #summary-div{
   height: 110px;
    padding-top: 20px;
@@ -7766,28 +7486,16 @@ width: auto;
   margin-top: 120px;
 }
 
-.result-container3 {
-  height: 88px;
-  width: 435px;
-  /* Set a specific height */
-  overflow: visible;
-  /* Hide overflow */
-  margin-top: 120px;
-}
+
 
 .result-img {
- width: 280px;
-  height: 60%;
+ width: 270px;
+  height: 68%;
   opacity: 1;
   position: relative;
 }
 
-.result-img3 {
-  width: 280px;
-  height: 60%;
-  opacity: 1;
-  position: relative;
-}
+
 
 .opacity-overlay2 {
    position: absolute;
@@ -7802,18 +7510,7 @@ width: auto;
   /* Add a transition for smooth movement */
 }
 
-.opacity-overlay3 {
-   position: absolute;
-  top: 0;
-  left: 0;
-  width: 51%;
-  height: 68%;
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-  /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out;
-  /* Add a transition for smooth movement */
-}
+
 
 .resultarrow-img {
   position: absolute;
@@ -7832,22 +7529,6 @@ width: auto;
   /* Add a transition for smooth movement */
 }
 
-.resultarrow-img3 {
-  position: absolute;
- left: 54%;
-  /* Move the arrow to the right */
-  transform: translateX(-50%);
-  /* Keep it centered relative to the new left position */
-  width: 3%;
-  /* Adjust the size as needed */
-  height: auto;
-  top: 43%;
-  /* Adjust this value to place the arrow within the container */
-  z-index: 10;
-  /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease;
-  /* Add a transition for smooth movement */
-}
 
 
 #result-text{
@@ -7875,20 +7556,7 @@ width: auto;
   /* Ensure it is above the outer ring */
 }
 
-.inner-circle3 {
-  width: 50%;
-  /* Inner circle size */
-  height: 50%;
-  background-color: #FCF8EA;
-  /* Inner circle color */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  /* Ensure it is above the outer ring */
-}
+
 
 .percentage2 {
   font-size: 22px;
@@ -7899,14 +7567,6 @@ width: auto;
   line-height: 60%;
 }
 
-.percentage3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  /* Text color */
-  vertical-align: middle;
-  line-height: 60%;
-}
 
 .outer-ring2 {
   width: 65%;
@@ -7917,14 +7577,6 @@ width: auto;
   /* Ensure it is below the inner circle */
 }
 
-.outer-ring3 {
-  width: 65%;
-  height: 65%;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  /* Ensure it is below the inner circle */
-}
 
 .circular-progress2 {
   width: 60px;
@@ -7938,17 +7590,7 @@ width: auto;
   /* Space between the circle and the factor image */
 }
 
-.circular-progress3 {
-  width: 60px;
-  /* Outer ring size */
-  height: 60px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-  /* Space between the circle and the factor image */
-}
+
 
 .circular-progress-container2 {
   align-items: center;
@@ -7960,15 +7602,7 @@ width: auto;
   height: 70px;
 }
 
-.circular-progress-container3 {
-  align-items: center;
-  justify-content: center;
-  /* Align items horizontally */
-  padding-top: 20px;
-  padding-right: 1px;
-  width: 80px;
-  height: 70px;
-}
+
 
 .result-desc{
   padding-top: 30px;
@@ -8335,7 +7969,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 270px;
+    height: 316px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -8354,7 +7988,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 125%;
-  height: 118%;
+  height: 108%;
 background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -8364,7 +7998,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 .creditarrow-img {
   position: absolute;
-  left: 88%;
+  left: 112%;
   /* Move the arrow to the right */
   transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
@@ -8938,10 +8572,6 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
 
-#game-success{
-  margin-top: 0px;
-}
-
 #summary-div{
   height: 110px;
     padding-top: 30px;
@@ -8966,28 +8596,16 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   margin-top: 80px;
 }
 
-.result-container3 {
- height: 110px;
-  width: 500px;
-  /* Set a specific height */
-  overflow: visible;
-  /* Hide overflow */
-  margin-top: 80px;
-}
+
 
 .result-img {
-   width: 380px;
+   width: 300px;
   height: 75%;
   opacity: 1;
   position: relative;
 }
 
-.result-img3 {
-  width: 380px;
-  height: 75%;
-  opacity: 1;
-  position: relative;
-}
+
 
 .opacity-overlay2 {
    position: absolute;
@@ -9002,37 +8620,8 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Add a transition for smooth movement */
 }
 
-.opacity-overlay3 {
-   position: absolute;
-  top: 0;
-  left: 0;
-  width: 51%;
-  height: 86%;
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-  /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out;
-  /* Add a transition for smooth movement */
-}
 
 .resultarrow-img {
-  position: absolute;
- left: 54%;
-  /* Move the arrow to the right */
-  transform: translateX(-50%);
-  /* Keep it centered relative to the new left position */
-  width: 4%;
-  /* Adjust the size as needed */
-  height: auto;
-  top: 57%;
-  /* Adjust this value to place the arrow within the container */
-  z-index: 10;
-  /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease;
-  /* Add a transition for smooth movement */
-}
-
-.resultarrow-img3 {
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
@@ -9075,20 +8664,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Ensure it is above the outer ring */
 }
 
-.inner-circle3 {
-   width: 70%;
-  /* Inner circle size */
-  height: 70%;
-  background-color: #FCF8EA;
-  /* Inner circle color */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  /* Ensure it is above the outer ring */
-}
+
 
 .percentage2 {
   font-size: 22px;
@@ -9099,14 +8675,6 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   line-height: 60%;
 }
 
-.percentage3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  /* Text color */
-  vertical-align: middle;
-  line-height: 60%;
-}
 
 .outer-ring2 {
   width: 95%;
@@ -9117,14 +8685,6 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Ensure it is below the inner circle */
 }
 
-.outer-ring3 {
-   width: 95%;
-  height: 95%;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  /* Ensure it is below the inner circle */
-}
 
 .circular-progress2 {
    width: 90px;
@@ -9138,33 +8698,12 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Space between the circle and the factor image */
 }
 
-.circular-progress3 {
-    width: 90px;
-  /* Outer ring size */
-  height: 90px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-  /* Space between the circle and the factor image */
-}
 
 .circular-progress-container2 {
   align-items: center;
   justify-content: center;
   /* Align items horizontally */
  padding-top: 100px;
-  padding-left: 40px;
-  width: 100px;
-  height: 70px;
-}
-
-.circular-progress-container3 {
-  align-items: center;
-  justify-content: center;
-  /* Align items horizontally */
-  padding-top: 100px;
   padding-left: 40px;
   width: 100px;
   height: 70px;
@@ -9347,8 +8886,8 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 }
 
-@media (min-width: 1400px) and (max-width: 1510px) {
-   #car1,
+@media (min-width: 1280px) and (max-width: 1399px) {
+  #car1,
   #car2,
   #car3 {
     padding-bottom: 350px;
@@ -9559,10 +9098,6 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
   
 
-#game-success{
-  margin-top: 0px;
-}
-
 #summary-div{
   height: 110px;
     padding-top: 40px;
@@ -9587,14 +9122,6 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   margin-top: 120px;
 }
 
-.result-container3 {
- height: 110px;
-  width: 500px;
-  /* Set a specific height */
-  overflow: visible;
-  /* Hide overflow */
-  margin-top: 120px;
-}
 
 .result-img {
   width: 520px;
@@ -9603,12 +9130,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   position: relative;
 }
 
-.result-img3 {
-  width: 520px;
-  height: 100%;
-  opacity: 1;
-  position: relative;
-}
+
 
 .opacity-overlay2 {
    position: absolute;
@@ -9624,18 +9146,6 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 }
 
 
-.opacity-overlay3 {
-   position: absolute;
-  top: 0;
-  left: 0;
-  width: 51%;
-  height: 95%;
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-  /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out;
-  /* Add a transition for smooth movement */
-}
 
 .resultarrow-img {
   position: absolute;
@@ -9654,22 +9164,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Add a transition for smooth movement */
 }
 
-.resultarrow-img3 {
-  position: absolute;
- left: 54%;
-  /* Move the arrow to the right */
-  transform: translateX(-50%);
-  /* Keep it centered relative to the new left position */
-  width: 4%;
-  /* Adjust the size as needed */
-  height: auto;
-  top: 57%;
-  /* Adjust this value to place the arrow within the container */
-  z-index: 10;
-  /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease;
-  /* Add a transition for smooth movement */
-}
+
 
 
 #result-text{
@@ -9697,31 +9192,9 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Ensure it is above the outer ring */
 }
 
-.inner-circle3 {
-   width: 70%;
-  /* Inner circle size */
-  height: 70%;
-  background-color: #FCF8EA;
-  /* Inner circle color */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  /* Ensure it is above the outer ring */
-}
+
 
 .percentage2 {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  /* Text color */
-  vertical-align: middle;
-  line-height: 60%;
-}
-
-.percentage3 {
   font-size: 22px;
   font-weight: bold;
   color: white;
@@ -9739,14 +9212,6 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Ensure it is below the inner circle */
 }
 
-.outer-ring3 {
-   width: 95%;
-  height: 95%;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  /* Ensure it is below the inner circle */
-}
 
 .circular-progress2 {
    width: 90px;
@@ -9760,17 +9225,6 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Space between the circle and the factor image */
 }
 
-.circular-progress3 {
-    width: 90px;
-  /* Outer ring size */
-  height: 90px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-  /* Space between the circle and the factor image */
-}
 
 .circular-progress-container2 {
   align-items: center;
@@ -9782,15 +9236,405 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   height: 70px;
 }
 
-.circular-progress-container3 {
+
+.result-desc{
+  padding-top: 200px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+#resulttext{
+  font-size: 20px;
+}
+
+#result-button{
+  padding-top: 20px;
+}
+
+#mood-container{
+  height: 70px;
+  width: 580px;
+  margin-top: 100px;
+}
+
+#factortext{
+   color: #206E63;
+   font-style: italic;
+   padding-top: 15px;
+   padding-right: 6px;
+   padding-left: 10px;
+   font-size: 14px;
+}
+
+  .game-button3 {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 10px 18px 12px 18px;
+    width: 18%;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+
+
+}
+
+
+
+@media (min-width: 1400px) and (max-width: 1510px) {
+   #car1,
+  #car2,
+  #car3 {
+    padding-bottom: 350px;
+  }
+
+   #instruction1, #instruction3  {
+    width: 100%;
+    height: 90%;
+    display: block;
+  }
+
+   #instruction2 {
+    width: 100%;
+    height: 86%;
+    display: block;
+  }
+
+  #howto-1, #howto-2, #howto-3 {
+  position: absolute;
+  top: 81%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+
+  #footer {
+  position: fixed;
+  bottom: 240px;
+  width: 100%;
+  height: 5%;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+
+
+  #creditmeter {
+    position: fixed;
+    top: 60px;
+    /* Distance from the top */
+    left: 0;
+    /* Stick to the left */
+    width: 30%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #factormeter {
+    position: fixed;
+    top: 50px;
+    /* Distance from the top */
+    right: 18px;
+    /* Stick to the right */
+    width: 20%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #cs-font {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .credit-score-container {
+     position: relative;
+    height: 436px;
+    /* Set a specific height */
+    overflow: visible;
+    /* Hide overflow */
+  }
+
+.creditscore-img {
+  width: 100px;
+  height: 430px;
+  opacity: 1;
+  position: relative;
+}
+
+
+.opacity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125%;
+  height: 135%;
+background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.creditarrow-img {
+  position: absolute;
+  left: 90%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 44%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 57%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+     #game1, #game2,
+   #game3, #game4 {
+    padding-bottom: 300px;
+  }
+
+     #game-desc1 {
+  padding-top: 20px;
+  padding-bottom: 5px;
+  }
+
+     #wedding-box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 130px;
+    padding-right: 0px;
+    padding-bottom: 210px;
+  }
+
+     #accept-email {
+    padding-top: 520px;
+    padding-left: 600px;
+  }
+
+    .accept-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  font-size: 20px;
+  cursor: pointer;
+  visibility: hidden;
+  /* Start hidden */
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeInButton 0.3s ease-in-out 3s forwards;
+  /* Delay of 6 seconds */
+  text-decoration: none;
+}
+
+#tips10, #tips13 {
+   top: 75%;
+    left: 50%;
+}
+
+   #title-text2 {
+  padding-bottom: 20px;
+  padding-top: 130px;
+}
+
+     #phone-button {
+    padding-top: 340px;
+  }
+
+    .phone-call {
+    background-image: url('../img/phonecall.png');
+    width: 100%;
+    /* Adjust as needed */
+    height: 60vh;
+    /* Adjust as needed */
+    background-size: contain;
+    /* Adjust as needed (cover, contain, etc.) */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+  }
+
+  .quiz-progress {
+  padding-top: 80px;
+}
+
+  .vertical-line {
+    position: absolute;
+    top: 440px;
+    /* Adjust this value to control the distance from the top */
+    left: 50%;
+    width: 1px;
+    /* Line thickness */
+    height: 35px;
+    /* Line height */
+    background-color: #206E63;
+    /* Line color */
+    transform: translateX(-50%);
+    /* Center the line horizontally */
+  }
+
+ #nextbtn-div {
+    padding-top: 35px;
+  }
+
+  
+
+#summary-div{
+  height: 110px;
+    padding-top: 40px;
+}
+
+#risk{
+  margin-top: 30px;
+}
+
+#risk-img{
+ width: 40%;
+ height: auto;
+
+}
+
+.result-container {
+ height: 110px;
+  width: 500px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+
+.result-img {
+  width: 430px;
+  height: 100%;
+  opacity: 1;
+  position: relative;
+}
+
+
+
+.opacity-overlay2 {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 95%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+
+
+.resultarrow-img {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 4%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 57%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+
+
+
+#result-text{
+  position: absolute;
+   font-size: 16px;
+   font-weight: bold;
+  color: #000000;
+  width: 160px;
+  left: 4%;
+  transform: translateX(-50%);
+}
+
+.inner-circle2 {
+  width: 70%;
+  /* Inner circle size */
+  height: 70%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+
+
+.percentage2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring2 {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+
+.circular-progress2 {
+   width: 90px;
+  /* Outer ring size */
+  height: 90px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+
+.circular-progress-container2 {
   align-items: center;
   justify-content: center;
   /* Align items horizontally */
-  padding-top: 100px;
+ padding-top: 100px;
   padding-left: 40px;
   width: 100px;
   height: 70px;
 }
+
 
 .result-desc{
   padding-top: 200px;
@@ -9960,7 +9804,7 @@ width: auto;
 
     .credit-score-container {
     position: relative;
-    height: 570px;
+    height: 656px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -9975,14 +9819,14 @@ width: auto;
 
 .creditarrow-img {
   position: absolute;
-  left: 120%;
+  left: 110%;
   /* Move the arrow to the right */
   transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 70%;
   /* Adjust the size as needed */
   height: auto;
-  top: 51%;
+  top: 47%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -9995,7 +9839,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 130%;
-  height: 107%;
+  height: 150%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -10745,7 +10589,7 @@ h1 {
 }
 
 #risk{
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 #risk-img{
@@ -10765,7 +10609,7 @@ h1 {
 
 
 .result-img {
-  width: 650px;
+  width: 620px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -10801,52 +10645,7 @@ h1 {
   /* Add a transition for smooth movement */
 }
 
-.result-container3 {
-  height: 150px;
-  width: 620px;
-  /* Set a specific height */
-  overflow: visible;
-  /* Hide overflow */
-  margin-top: 120px;
-}
 
-
-.result-img3 {
-  width: 650px;
-  height: 100%;
-  opacity: 1;
-  position: relative;
-}
-
-.opacity-overlay3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 53%;
-  height: 200%;
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-  /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out;
-  /* Add a transition for smooth movement */
-}
-
-.resultarrow-img3 {
-    position: absolute;
-  left: 60%;
-  /* Move the arrow to the right */
-  transform: translateX(-50%);
-  /* Keep it centered relative to the new left position */
-  width: 4%;
-  /* Adjust the size as needed */
-  height: auto;
-  top: 60%;
-  /* Adjust this value to place the arrow within the container */
-  z-index: 10;
-  /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease;
-  /* Add a transition for smooth movement */
-}
 
 
 .inner-circle2 {
@@ -10904,60 +10703,6 @@ h1 {
   height: 70px;
 }
 
-.inner-circle3 {
-  width: 100%;
-  /* Inner circle size */
-  height: 100%;
-  background-color: #FCF8EA;
-  /* Inner circle color */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  /* Ensure it is above the outer ring */
-}
-
-.percentage3 {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  /* Text color */
-  vertical-align: middle;
-  line-height: 60%;
-}
-
-.outer-ring3 {
-  width: 125%;
-  height: 125%;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  /* Ensure it is below the inner circle */
-}
-
-.circular-progress3 {
-  width: 120px;
-  /* Outer ring size */
-  height: 120px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 10px;
-  /* Space between the circle and the factor image */
-}
-
-.circular-progress-container3 {
-   align-items: center;
-  justify-content: center;
-  /* Align items horizontally */
-  padding-top: 20px;
-  padding-left: 80px;
-   width: 300px;
-  height: 70px;
-}
 
 
 .result-desc{
@@ -11145,59 +10890,4 @@ h1 {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
