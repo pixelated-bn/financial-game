@@ -9699,7 +9699,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 @media (min-width: 1920px) and (max-width: 2000px) {
    #index {
-    padding-top: 340px;
+    padding-top: 300px;
   }
 
       .sticky-row {
@@ -9727,13 +9727,13 @@ width: auto;
 
 #instruction1, #instruction2, #instruction3 {
   width: 100%;
-  height: 98%;
+  height: auto;
   display: block;
 }
 
 #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 98%;
+  top: 93%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -9819,15 +9819,16 @@ width: auto;
 
     .credit-score-container {
     position: relative;
-    height: 656px;
+    height: 675px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
+    border: 3px solid black;
   }
 
   .creditscore-img {
   width: 130%;
-  height: 650px;
+  height: 670px;
   opacity: 1;
   position: relative;
 }
@@ -9841,7 +9842,7 @@ width: auto;
   width: 70%;
   /* Adjust the size as needed */
   height: auto;
-  top: 47%;
+  top: 48%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -9854,7 +9855,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 130%;
-  height: 150%;
+  height: 100%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -10411,7 +10412,7 @@ h1 {
     #accept-email {
     padding-top: 680px;
     padding-left: 780px;
-    position: fixed;
+    position: sticky;
   }
 
   .accept-button {
@@ -10555,11 +10556,11 @@ h1 {
   }
 
     #end-div {
-    padding-top: 260px;
+    padding-top: 240px;
   }
 
   #end-body {
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 5px;
     padding-left: 150px;
     padding-right: 150px;
@@ -10568,12 +10569,12 @@ h1 {
   #end-button {
     margin-left: 150px;
     margin-right: 130px;
-    padding-top: 60px;
+    padding-top: 40px;
   }
 
     #end-text{
-    font-size: 38px;
-    padding-bottom: 10px;
+    font-size: 30px;
+    padding-bottom: 5px;
   }
 
   .game-end {
@@ -10609,7 +10610,7 @@ h1 {
 }
 
 #risk-img{
- width: 45%;
+ width: 40%;
  height: auto;
 
 }
@@ -10620,13 +10621,13 @@ h1 {
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
-  margin-top: 120px;
+  margin-top: 140px;
 }
 
 
 .result-img {
-  width: 620px;
-  height: 100%;
+  width: 630px;
+  height: 95%;
   opacity: 1;
   position: relative;
 }
@@ -10732,7 +10733,7 @@ h1 {
 }
 
 #mood-container{
-  margin-top: 270px;
+  margin-top: 360px;
   height: 80px;
   width: 900px;
 }
@@ -10906,5 +10907,4 @@ h1 {
     }
 
 }
-
 
