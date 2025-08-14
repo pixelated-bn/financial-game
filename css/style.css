@@ -9729,22 +9729,23 @@ width: auto;
   position: relative;
   /* Change to relative */
   width: 100%;
-  height: auto;
+  height: 100%;
   /* Cover the full viewport height */
   margin: 0;
   padding: 0;
-  background-size: cover;
+  background-size: contain;
 }
 
 #instruction1, #instruction2, #instruction3 {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
+  background-size: contain;
 }
 
 #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 93%;
+  top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -10918,5 +10919,6 @@ h1 {
     }
 
 }
+
 
 
