@@ -7976,7 +7976,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 316px;
+    height: 326px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -7984,7 +7984,7 @@ width: auto;
 
 .creditscore-img {
   width: 80px;
-  height: 310px;
+  height: 320px;
   opacity: 1;
   position: relative;
 }
@@ -7995,7 +7995,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 125%;
-  height: 108%;
+  height: 100%;
 background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -8005,14 +8005,14 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 .creditarrow-img {
   position: absolute;
-  left: 112%;
+  left: 100%;
   /* Move the arrow to the right */
   transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 44%;
   /* Adjust the size as needed */
   height: auto;
-  top: 57%;
+  top: 49%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -8439,7 +8439,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
   #phone-button {
-    padding-top: 270px;
+    padding-top: 240px;
   }
 
   .phone-call {
@@ -8452,7 +8452,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     /* Adjust as needed (cover, contain, etc.) */
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 60px;
+    margin-top: 40px;
   }
 
   .quiz-progress {
@@ -8548,11 +8548,15 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   }
 
   #end-div {
-    padding-top: 100px;
+    padding-top: 60px;
+  }
+
+  #end-text{
+    font-size: 18px;
   }
 
   #end-body {
-    padding-top: 30px;
+    padding-top: 28px;
     padding-bottom: 5px;
     padding-left: 150px;
     padding-right: 150px;
@@ -8561,7 +8565,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   #end-button {
     margin-left: 150px;
     margin-right: 130px;
-    padding-top: 20px;
+    padding-top: 18px;
   }
 
   #util-img {
@@ -8606,8 +8610,8 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
 .result-img {
-   width: 300px;
-  height: 75%;
+   width: 310px;
+  height: 73%;
   opacity: 1;
   position: relative;
 }
