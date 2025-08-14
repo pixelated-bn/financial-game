@@ -3857,6 +3857,10 @@ li:nth-child(odd) {
    padding-right: 20px;
 }
 
+#end-text{
+  padding-bottom: 20px;
+}
+
 
 /* Breakpoints for index page*/
 
@@ -4013,7 +4017,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 150px;
+    height: 190px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -4840,7 +4844,7 @@ width: auto;
 
  
   #end-div {
-    padding-top: 40px;
+    padding-top: 30px;
   }
 
   #end-body {
@@ -4852,6 +4856,7 @@ width: auto;
 
   #end-text{
     font-size: 12px;
+    padding-bottom: 5px;
   }
 
   #end-button {
@@ -4901,7 +4906,7 @@ width: auto;
 }
 
 .result-img {
- width: 200px;
+ width: 240px;
   height: 60%;
   opacity: 1;
   position: relative;
@@ -5361,7 +5366,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 180px;
+    height: 190px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -5531,9 +5536,9 @@ width: auto;
   .info-container1 .overlay-text {
     top: 25%;
     /* Adjust as needed */
-    left: 50%;
+    left: 49%;
     /* Adjust as needed */
-    right: 10%;
+    right: 16%;
     /* Adjust as needed */
     color: black;
     /* Adjust text color */
@@ -6157,7 +6162,7 @@ width: auto;
 
  
   #end-div {
-    padding-top: 60px;
+    padding-top: 30px;
   }
 
   #end-body {
@@ -6169,6 +6174,7 @@ width: auto;
 
   #end-text{
     font-size: 12px;
+    padding-bottom: 5px;
   }
 
   #end-button {
@@ -6219,7 +6225,7 @@ width: auto;
 
 
 .result-img {
- width: 230px;
+ width: 240px;
   height: 60%;
   opacity: 1;
   position: relative;
@@ -7427,7 +7433,7 @@ width: auto;
   }
 
     #end-div {
-    padding-top: 70px;
+    padding-top: 30px;
   }
 
   #end-body {
@@ -7439,6 +7445,7 @@ width: auto;
 
   #end-text{
     font-size: 12px;
+    padding-bottom: 5px;
   }
 
   #end-button {
@@ -8960,7 +8967,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
   .credit-score-container {
      position: relative;
-    height: 380px;
+    height: 450px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -8968,7 +8975,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 .creditscore-img {
   width: 100px;
-  height: 430px;
+  height: 445px;
   opacity: 1;
   position: relative;
 }
@@ -9124,7 +9131,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
 .result-img {
-  width: 520px;
+  width: 440px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -9359,7 +9366,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
   .credit-score-container {
      position: relative;
-    height: 436px;
+    height: 450px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -9367,7 +9374,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 .creditscore-img {
   width: 100px;
-  height: 430px;
+  height: 445px;
   opacity: 1;
   position: relative;
 }
@@ -9378,7 +9385,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   top: 0;
   left: 0;
   width: 125%;
-  height: 135%;
+  height: 140%;
 background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -9523,7 +9530,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
 .result-img {
-  width: 430px;
+  width: 440px;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -10558,6 +10565,7 @@ h1 {
 
     #end-text{
     font-size: 38px;
+    padding-bottom: 10px;
   }
 
   .game-end {
@@ -10890,4 +10898,3 @@ h1 {
     }
 
 }
-
