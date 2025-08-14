@@ -9725,6 +9725,17 @@ width: auto;
   color: #206E63;
 }
 
+#narration1, #narration2, #narration3 {
+  position: relative;
+  /* Change to relative */
+  width: 100vw;
+  height: 100vh;
+  /* Cover the full viewport height */
+  margin: 0;
+  padding: 0;
+  background-size: contain;
+}
+
 #instruction1, #instruction2, #instruction3 {
   width: 100%;
   height: auto;
@@ -10020,7 +10031,7 @@ h1 {
 }
 
 #util-div {
-  padding-top: 100px;
+  padding-top: 150px;
 }
 
 #util-btn {
@@ -10411,7 +10422,7 @@ h1 {
 
     #accept-email {
     padding-top: 680px;
-    padding-left: 780px;
+    padding-left: 800px;
     position: sticky;
   }
 
@@ -10556,7 +10567,7 @@ h1 {
   }
 
     #end-div {
-    padding-top: 240px;
+    padding-top: 260px;
   }
 
   #end-body {
