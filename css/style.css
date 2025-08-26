@@ -83,14 +83,13 @@ h1 {
 
     .main-display {
       width: 700px;
-      height: 350px;
+      height: 345px;
       margin: 0 auto 40px;
       display: flex;
       align-items: center;
       justify-content: center;
       background-size: cover;
       background-position: center;
-      color: #ecee71;
       font-weight: bold;
       font-size: 1.2rem;
       position: relative;
@@ -110,105 +109,37 @@ h1 {
       opacity: 0;
     }
 
-    .slider-container2 {
-      position: relative;
-      width: 590px;
-      margin: 15px auto 0;
-      height: 50px;
-    }
 
-    .slider-track {
-      position: absolute;
-      top: 3px;
-      left: 0;
-      right: 0;
-      height: 8px;
-      background: #206E63;
-      border-radius: 2px;
-    }
+   .thumbnails {
+  display: flex;
+  gap: 20px; /* spacing between thumbnails */
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-    .slider-thumb {
-      position: absolute;
-      top: 8px;
-      width: 30px;
-      height: 30px;
-         background-image: url('../img/resultarrow.png');
-    background-size: contain;
-    /* Adjusts the background to fill the card */
-    background-position: center;
-    /* Centers the background image */
-    background-repeat: no-repeat;
-      transition: left 0.4s ease;
-      transform: none;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .thumbnails {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 3px;
-      width: 680px;
-      margin: 0 auto;
-    }
-
-    .thumbnails img {
+    .thumbnail-wrapper img {
       width: 100%;
       height: 80px;
       cursor: pointer;
       transition: transform 0.3s ease, border-color 0.3s ease;
       border-radius: 6px;
       user-select: none;
+  margin-bottom: 20px;
     }
 
-    .thumbnails img.active {
+    .thumbnail-wrapper img.active {
       transform: scale(1.25);
       border: 3px solid #D4C029;
     }
 
-    input[type="range"] {
-      position: absolute;
-      top: 15px;
-      left: 0;
-      width: 580px;
-      height: 20px;
-      background: transparent;
-      -webkit-appearance: none;
-      appearance: none;
-      pointer-events: auto;
-      z-index: 3;
-      margin: 0;
-      cursor: pointer;
-    }
+.thumbnail-wrapper {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer; /* Makes it clear it’s clickable */
+  position: relative;
+}
 
-    input[type="range"]::-webkit-slider-runnable-track {
-      background: transparent;
-      height: 4px;
-    }
 
-    input[type="range"]::-moz-range-track {
-      background: transparent;
-      height: 4px;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      margin-top: -8px;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-moz-range-thumb {
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
 
 .outer-ring.pulse {
   animation: ringPulse 0.9s ease-out; /* Slowed from 0.5s to 0.8s */
@@ -256,10 +187,37 @@ width: auto;
   padding-top: 60px;
 }
 
+
+
 #instruction1, #instruction2, #instruction3 {
-  width: 100%;
-  height: 96%;
+   width: 100%;
+  height: 100%;
   display: block;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+#narration1, #narration2, #narration3 {
+ position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#howto-1, #howto-2, #howto-3 {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
 }
 
 #car-video1,
@@ -296,16 +254,22 @@ width: auto;
 }
 
 #index {
-  padding-top: 180px;
+  padding-top: 150px;
 }
 
+#narrative{
+ padding-top: 80px; 
+}
+
+
 #narrative-style {
-  padding-top: 160px;
+  padding-top: 150px;
   width: 50%;
   overflow: hidden;
   white-space: nowrap;
   padding-left: 65px;
   padding-right: 60px;
+  padding-bottom: 100px;
 }
 
 #vacation {
@@ -535,18 +499,27 @@ width: auto;
 .outer-ring {
   width: 100%;
   height: 100%;
+  border-radius: 50%;
   position: absolute;
   z-index: 0;
   /* Ensure it is below the inner circle */
-    border-radius: 50%; /* keeps the circle round */
-  background: conic-gradient(
-    #206E63 0% 50%,    /* progress part */
-    #FCF8EA 50% 100%   /* rest of circle */
-  );
-  transition: background 0.5s ease;
 }
 
 
+.outer-ring svg {
+  width: 100%;
+  height: 100%;
+}
+
+.outer-ring2 svg {
+  width: 100%;
+  height: 100%;
+}
+
+
+.progress-circle, .progress-circle2 {
+  transition: stroke-dashoffset 0.5s ease;
+}
 
 .my-card {
   position: relative;
@@ -1202,7 +1175,7 @@ width: auto;
   background-color: #D4C029;
   color: white;
   border: none;
-  padding: 10px 30px 13px 30px;
+  padding: 13px 30px 13px 30px;
   width: 20%;
   font-size: 18px;
   cursor: pointer;
@@ -1287,7 +1260,7 @@ width: auto;
   background-color: #D4C029;
   color: white;
   border: none;
-  padding: 10px 30px 13px 30px;
+  padding: 13px 30px 13px 30px;
   width: 20%;
   font-size: 18px;
   cursor: pointer;
@@ -1606,7 +1579,7 @@ width: auto;
 
   .credit-score-container {
   position: relative;
-  height: 480px;
+  height: 450px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
@@ -1615,7 +1588,7 @@ width: auto;
 
 .creditscore-img {
   width: 100%;
-  height: 475px;
+  height: 445px;
   opacity: 1;
   position: relative;
 }
@@ -1625,7 +1598,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 101%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -2831,9 +2804,9 @@ li:nth-child(odd) {
   background-color: #D4C029;
   color: white;
   border: none;
-  padding: 10px 40px 15px 40px;
+  padding: 15px 40px 15px 40px;
   width: 50%;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: normal;
   opacity: 0;
   /* Initially hidden */
@@ -2852,29 +2825,7 @@ li:nth-child(odd) {
 
 }
 
-#narration1, #narration2, #narration3 {
-  position: relative;
-  /* Change to relative */
-  width: 100vw;
-  height: 100vh;
-  /* Cover the full viewport height */
-  margin: 0;
-  padding: 0;
-  background-size: contain;
-}
 
-#howto-1, #howto-2, #howto-3 {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  /* Fully transparent */
-  transition: opacity 0.2s ease-in-out;
-  animation: fadeInButton 0.2s ease-in-out 2s forwards;
-  /* Delay of 6 seconds */
-  display: none;
-}
 
 #scene2-opt1 {
   position: relative;
@@ -3075,7 +3026,7 @@ li:nth-child(odd) {
 
 #game4 {
   position: absolute;
-  top: 85%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -3547,7 +3498,7 @@ li:nth-child(odd) {
   background-color: #206E63;
   color: white;
   border: none;
-  padding: 10px 30px 13px 30px;
+  padding: 13px 30px 13px 30px;
   width: 20%;
   font-size: 18px;
   font-weight: bold;
@@ -3590,8 +3541,8 @@ li:nth-child(odd) {
 
 
 .result-container {
-  height: 110px;
-  width: 435px;
+  position: relative;
+  width: 450px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
@@ -3600,8 +3551,8 @@ li:nth-child(odd) {
 
 
 .result-img {
-  width: 490px;
-  height: 100%;
+  width: 440px;
+  height: 95%;
   opacity: 1;
   position: relative;
 }
@@ -3623,7 +3574,7 @@ li:nth-child(odd) {
   position: absolute;
   left: 75%;
   /* Move the arrow to the right */
-  transform: translateX(-50%);
+  transform: translateX(-20%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
@@ -3866,7 +3817,7 @@ li:nth-child(odd) {
 
 @media (min-width: 700px) and (max-width: 779px) {
   #index {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   .sticky-row {
@@ -3877,7 +3828,7 @@ li:nth-child(odd) {
   /* Optional: set a background color */
   z-index: 1000;
   /* Ensure it stays on top of other content */
-  padding: 5px;
+  padding: 8px;
   /* Optional: add some padding */
   cursor: default;
 }
@@ -3892,47 +3843,16 @@ width: auto;
   color: #206E63;
 }
 
-#narration1 {
-
-    position: relative;
-    /* Change to relative */
-    width: 100vw;
-    height: 90vh;
-    /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-    padding-left: 10px;
-    padding-top: 20px;
-
-
-}
-
-#narration2, #narration3 {
-
-    position: relative;
-    /* Change to relative */
-    width: 100vw;
-    height: 80vh;
-    /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-    padding-left: 10px;
-
-
-}
-
-   #instruction1,  #instruction2, #instruction3 {
+ #instruction1, #instruction2, #instruction3 {
     width: 100%;
-    height: 75%;
+    height: 93%;
     display: block;
   }
 
 
   #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 88%;
+  top: 73%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -3942,6 +3862,19 @@ width: auto;
   /* Delay of 6 seconds */
   display: none;
 }
+
+  .howto-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    width: 13%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
 
 #footer {
   position: fixed;
@@ -3957,8 +3890,8 @@ width: auto;
 }
 
   #narrative-style {
-    padding-top: 25px;
-    width: 70%;
+    padding-top: 30px;
+    width: 60%;
     overflow: hidden;
     white-space: nowrap;
     padding-left: 35px;
@@ -3973,7 +3906,7 @@ width: auto;
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 9px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
     width: 30%;
     font-size: 14px;
     font-weight: normal;
@@ -4017,7 +3950,7 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 190px;
+    height: 170px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
@@ -4035,7 +3968,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 101%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -4052,7 +3985,7 @@ width: auto;
   width: 40%;
   /* Adjust the size as needed */
   height: auto;
-  top: 61%;
+  top: 49%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -4072,7 +4005,7 @@ width: auto;
 
  #title-text2 {
     font-size:13px;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
   padding-top: 40px;
 }
 
@@ -4159,51 +4092,6 @@ width: auto;
     bottom: 3px;
   }
 
-  #narration {
-    position: relative;
-    /* Change to relative */
-    width: 100vw;
-    height: 100vh;
-    /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-    padding-left: 70px;
-    padding-top: 30px;
-  }
-
-  #instruction1, #instruction2, #instruction3 {
-    width: 100%;
-    height: 94%;
-    display: block;
-  }
-
-
-  #howto {
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards;
-    /* Delay of 6 seconds */
-    display: none;
-  }
-
-  .howto-button {
-    background-color: #D4C029;
-    color: white;
-    border: none;
-    padding: 6px 10px 8px 10px;
-    width: 13%;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none;
-    border-radius: 4px;
-  }
 
     .info-container1 img {
     width: 55%;
@@ -4213,11 +4101,11 @@ width: auto;
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
-     padding-top: 20px;
+     padding-top: 35px;
   }
 
   .info-container1 .overlay-text {
-    top: 25%;
+    top: 28%;
     /* Adjust as needed */
     left: 49%;
     /* Adjust as needed */
@@ -4244,11 +4132,11 @@ width: auto;
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
-     padding-top: 10px;
+      padding-top: 35px;
   }
 
   .info-container2 .overlay-text {
-    top: 18%;
+    top: 22%;
     /* Adjust as needed */
     left: 50%;
     /* Adjust as needed */
@@ -4276,7 +4164,7 @@ width: auto;
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 6px 10px 8px 10px;
+    padding: 8px 10px 8px 10px;
     width: 13%;
     font-size: 12px;
     cursor: pointer;
@@ -4288,7 +4176,7 @@ width: auto;
    #car1,
   #car2,
   #car3 {
-    padding-bottom: 180px;
+    padding-bottom: 200px;
   }
 
   #car-video1,
@@ -4306,9 +4194,14 @@ width: auto;
   display: block;
 }
 
-   #game1, #game2, #game3, #game4 {
+   #game1, #game2, #game3 {
+    padding-bottom: 120px;
+  }
+
+ #game4 {
     padding-bottom: 100px;
   }
+
 
 
 .car {
@@ -4869,7 +4762,7 @@ width: auto;
   background-color: #206E63;
   color: white;
   border: none;
-  padding: 6px 10px 8px 10px;
+  padding: 8px 10px 8px 10px;
   width: 20%;
   font-size: 10px;
   font-weight: bold;
@@ -4898,15 +4791,15 @@ width: auto;
 }
 
 .result-container {
- height: 85px;
-  width: 415px;
+ position: relative;
+  width: 170px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
 }
 
 .result-img {
- width: 240px;
+ width: 100%;
   height: 60%;
   opacity: 1;
   position: relative;
@@ -4918,7 +4811,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 58%;
+  height: 100%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -4930,12 +4823,12 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-50%);
+  transform: translateX(40%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
   height: auto;
-  top: 35%;
+  top: 65%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -5050,7 +4943,7 @@ width: auto;
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 4px 8px 6px 8px;
+    padding: 6px 8px 6px 8px;
     width: 13%;
     font-size: 8px;
     cursor: pointer;
@@ -5075,7 +4968,7 @@ width: auto;
       position: relative;
       transition: opacity 0.5s ease;
       opacity: 1;
-      padding-top: 100px;
+      padding-top: 80px;
     }
 
     #mainImage {
@@ -5089,114 +4982,31 @@ width: auto;
       opacity: 0;
     }
 
-    
-    .thumbnails {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 3px;
-      width: 370px;
-      margin: 0 auto;
-    }
 
-    .thumbnails img {
+      .thumbnail-wrapper img {
       width: 100%;
       height: 40px;
       cursor: pointer;
       transition: transform 0.3s ease, border-color 0.3s ease;
       border-radius: 6px;
       user-select: none;
+  margin-bottom: 2px;
     }
 
-    .thumbnails img.active {
+  .thumbnail-wrapper img.active {
       transform: scale(1.25);
       border: 3px solid #D4C029;
     }
 
-     .slider-container2 {
-      position: relative;
-      width: 330px;
-      margin: 8px auto 0;
-      height: 48px;
-      right: 6px;
-    }
-
-    .slider-track {
-      position: absolute;
-       width: 330px;
-      top: 3px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: #206E63;
-      border-radius: 2px;
-    }
-
-  .slider-thumb {
-  position: absolute;
-  top: 5px;
-  width: 30px;
-  height: 18px;
-  background-image: url('../img/resultarrow.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: left 0.4s ease;
-  z-index: 2;
-  pointer-events: none;
+   .thumbnails {
+padding-top: 0px;
 }
-
-
-
-    input[type="range"] {
-      position: absolute;
-      top: 15px;
-      left: 5px;
-      width: 320px;
-      height: 20px;
-      background: transparent;
-      -webkit-appearance: none;
-      appearance: none;
-      pointer-events: auto;
-      z-index: 3;
-      margin: 0;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-webkit-slider-runnable-track {
-      background: transparent;
-      height: 4px;
-    }
-
-    input[type="range"]::-moz-range-track {
-      background: transparent;
-      height: 4px;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      margin-top: -8px;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-moz-range-thumb {
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
-
 
 }
 
 @media (min-width: 780px) and (max-width: 899px) {
   #index {
-    padding-top: 40px;
+    padding-top: 30px;
   }
 
     .sticky-row {
@@ -5207,7 +5017,7 @@ width: auto;
   /* Optional: set a background color */
   z-index: 1000;
   /* Ensure it stays on top of other content */
-  padding-top: 3px;
+  padding: 8px;
   /* Optional: add some padding */
   cursor: default;
 }
@@ -5222,53 +5032,15 @@ width: auto;
   color: #206E63;
 }
 
-#narration1 {
-
-    position: relative;
-    /* Change to relative */
-    width: 100vw;
-    height: 100vh;
-    /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-    padding-left: 10px;
-    padding-top: 20px;
-
-
-}
-
-#narration2, #narration3 {
-
-    position: relative;
-    /* Change to relative */
-    width: 100vw;
-    height: 90vh;
-    /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-    padding-left: 10px;
-
-
-}
-
-    #instruction1 {
+  #instruction1, #instruction2, #instruction3 {
     width: 100%;
-    height: 100%;
+    height: 93%;
     display: block;
   }
 
-   #instruction2, #instruction3 {
-    width: 100%;
-    height: 84%;
-    display: block;
-  }
-
-
-  #howto-1 {
+  #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 85%;
+  top: 73%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -5279,18 +5051,18 @@ width: auto;
   display: none;
 }
 
-  #howto-2, #howto-3 {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  /* Fully transparent */
-  transition: opacity 0.2s ease-in-out;
-  animation: fadeInButton 0.2s ease-in-out 2s forwards;
-  /* Delay of 6 seconds */
-  display: none;
-}
+  .howto-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    width: 13%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
 
 #footer {
   position: fixed;
@@ -5306,8 +5078,8 @@ width: auto;
 }
 
   #narrative-style {
-    padding-top: 18px;
-    width: 70%;
+    padding-top: 30px;
+    width: 60%;
     overflow: hidden;
     white-space: nowrap;
     padding-left: 35px;
@@ -5322,7 +5094,7 @@ width: auto;
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 9px 20px 10px 20px;
+    padding: 10px 20px 10px 20px;
     width: 30%;
     font-size: 14px;
     font-weight: normal;
@@ -5373,7 +5145,7 @@ width: auto;
   }
 
   .creditscore-img {
-    width: 90%;
+    width: 100%;
     height: 100%;
     opacity: 1;
     position: relative;
@@ -5384,7 +5156,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 100%;
-  height: 120%;
+  height: 101%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -5401,8 +5173,1190 @@ width: auto;
   width: 40%;
   /* Adjust the size as needed */
   height: auto;
-  top: 61%;
+  top: 49%;
+  /* Adjust this value to place the a53rrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+  .hidden-section {
+    padding-top: 5px;
+  }
+
+  #title-text {
+    font-size:13px;
+  padding-bottom: 8px;
+  padding-top: 10px;
+}
+
+ #title-text2 {
+    font-size:13px;
+  padding-bottom: 4px;
+  padding-top: 50px;
+}
+
+  #title-text3 {
+    font-size:10px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  }
+
+   #title-text4 {
+    font-size:10px;
+  padding-bottom: 8px;
+  padding-top: 60px;
+  }
+
+   #game-desc1 {
+    font-size:11px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  }
+
+  h1 {
+    font-size: small;
+  }
+
+  .hovertest {
+    padding-top: 10px;
+    margin: 0;
+  }
+
+  .my-card2 {
+    width: 90%;
+    height: 148px;
+    background-position: center;
+    padding: 15px;
+  }
+
+  .my-card2:hover {
+    background-size: 100% 150px;
+  }
+
+  .circular-progress-container {
+    padding-bottom: 25px;
+    width: 75px;
+  }
+
+  .circular-progress {
+    width: 48px;
+    /* Outer ring size */
+    height: 48px;
+    margin-right: 5px;
+    /* Space between the circle and the factor image */
+  }
+
+  .inner-circle {
+    width: 80%;
+    /* Inner circle size */
+    height: 80%;
+    background-color: #FCF8EA;
+    /* Inner circle color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    /* Ensure it is above the outer ring */
+  }
+
+  .factor-up-image {
+    width: 12px;
+    /* Adjust size as needed */
+    height: auto;
+    z-index: 2;
+    /* Make sure it's on top */
+    position: relative;
+    /* Ensure it positions beside the circular progress */
+    transform: translateX(0px);
+    /* Optional: Adjust position */
+    opacity: 0;
+    /* Start with the image hidden */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    /* Apply transition effects */
+    bottom: 3px;
+  }
+
+
+    .info-container1 img {
+    width: 50%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+     padding-top: 30px;
+  }
+
+  .info-container1 .overlay-text {
+    top: 25%;
+    /* Adjust as needed */
+    left: 49%;
+    /* Adjust as needed */
+    right: 16%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 8px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  .info-container2 img {
+    width: 50%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+     padding-top: 25px;
+  }
+
+  .info-container2 .overlay-text {
+    top: 25%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    right: 15%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 8px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  #info-button {
+    padding-top: 25px;
+  }
+
+
+  .game-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 8px 10px 8px 10px;
+    width: 13%;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+   #car1,
+  #car2,
+  #car3 {
+    padding-bottom: 200px;
+  }
+
+  #car-video1,
+#car-video2,
+#car-video3 {
+  width: 100%;
+  height: 92%;
+  display: block;
+}
+
+ #scenario-video1, #scenario-video2,
+  #scenario-video3, #scenario-video4 {
+  width: 100%;
+ height: 98%;
+  display: block;
+}
+
+ #game1, #game2,
+   #game3 {
+    padding-bottom: 120px;
+  }
+
+#game4 {
+    padding-bottom: 98px;
+  }
+
+.car {
+    width: 105px;
+    height: auto;
+    background: none;
+  }
+
+  /* Ensure the image fits within the card */
+  .car-image {
+    width: 100px;
+    height: auto;
+    object-fit: contain;
+    /* Ensures the image covers the card area without distortion */
+  }
+
+  /* Focused Card */
+  .car.focus {
+    width: 120px;
+    height: 150px;
+    transform: translateX(0) scale(1.1);
+    z-index: 3;
+    opacity: 1;
+    background-image: url('../img/cardhover.png');
+    background-size: cover;
+    /* Adjusts the background to fill the card */
+    background-position: center;
+    /* Centers the background image */
+    background-repeat: no-repeat;
+    /* Ensures the image doesn't repeat */
+    margin: 20px auto;
+  }
+
+  .slider-btn {
+    top: 40%;
+  }
+
+
+  .slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+  .slider-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    max-width: 770px;
+    height: 180px;
+    /* Adjust the height as needed */
+    margin: auto;
+  }
+
+  .car.left {
+    transform: translateX(-70px) scale(0.9);
+    z-index: 2;
+  }
+
+  .car.right {
+    transform: translateX(70px) scale(0.9);
+    z-index: 2;
+  }
+
+  .choice-card {
+    text-decoration: none;
+    color: #206E63;
+    /* Initial text color */
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+   #choices-div {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    gap: 5px;
+  }
+
+  #util-img {
+  width: 55%;
+  height: auto;
+}
+
+#util-div {
+  padding-top: 40px;
+}
+
+#util-btn {
+  padding-bottom: 28px;
+}
+
+#vacation {
+  padding-top: 20px;
+  width: 420px;
+}
+
+.monument {
+  width: 100%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 50px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin-bottom: 3px;
+  /* Space between the image and location box */
+}
+
+.location {
+  background-color: whitesmoke;
+  width: 100px;
+  height: 22px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 3px dotted #D4C029;
+}
+
+.japan1 {
+  width: 80%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 30px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 12px;
+  /* Space between the image and location box */
+}
+
+.egypt1 {
+  width: 70%;
+  /* Make sure the image takes the full width of its container */
+  max-height: 50px;
+  /* Limit the maximum height of the images */
+  object-fit: contain;
+  /* Ensures that the image is resized to fit within the box without distortion */
+  margin: 4px;
+  /* Space between the image and location box */
+}
+
+#location7 {
+  margin-left: 0px;
+   width: 100px;
+  height: 22px;
+  padding: 10px;
+  margin-right: 5px;
+}
+
+ #title-items {
+    padding-top: 2px;
+  }
+
+    #vacay-box {
+    margin-bottom: 7px;
+    /* Add some space between rows */
+    width: 100%;
+    /* Ensure they take up 100% of their container width */
+  }
+
+   .imgs {
+    width: 10%;
+    /* Set the width relative to the container's width */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  
+    #wedding-box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 70px;
+    padding-right: 0px;
+    padding-bottom: 160px;
+  }
+
+  #wedd-box {
+  margin-top: 10px;
+}
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 40px);
+    gap: 3px;
+    /* Centering handled by parent */
+    /* Removed top, left, and transform */
+  }
+
+  .card-game {
+    width: 40px;
+    height: 50px;
+    background: url('../img/wedding/card-cover.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid #D4C029;
+  }
+
+  table {
+    border-collapse: collapse;
+    table-layout: auto;
+    /* Adjust table to fit content width */
+    width: auto;
+    /* Table adjusts to fit its content */
+    margin: 0 auto;
+    /* Center table horizontally */
+    width: 50%;
+    /* Adjust to desired percentage */
+    padding-top: 20px;
+  }
+
+  .tooltip-text {
+  visibility: hidden;
+  width: 100px;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  border-radius: 2px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 85%;
+  /* Position above the image */
+  left: 40%;
+  margin-left: -60px;
+  /* Adjust the tooltip to be centered */
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  font-size: 9px;
+}
+
+  .timer-text-box {
+  font-size: 20px;
+  font-weight: bold;
+  color: #206E63;
+}
+
+.timer {
+  font-size: 40px;
+  font-weight: bold;
+  color: #206E63;
+}
+
+.timer .colon {
+  width: auto;
+  /* Smaller width */
+  height: 18px;
+  /* Fixed height */
+  margin-right: 10px;
+}
+
+#seconds {
+  color: #206E63;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+  font-size: 22px;
+}
+
+#secs {
+  color: #206E63;
+  font-size: 15px;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+}
+
+.score {
+  font-size: 20px;
+  font-weight: bolder;
+  color: #206E63;
+}
+
+#wedding-score1 {
+  font-size: 22px;
+  color: #206E63;
+  font-family: 'Geomanist-Bold', sans-serif;
+  /* Use bold font for headings */
+  font-weight: bolder;
+  /* Explicitly set the weight */
+  text-align: left;
+}
+
+
+.text-box {
+  font-size: 18px;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding: 10px;
+  margin: 20px 0;
+  background-color: rgba(255, 255, 255, 0);
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  bottom: 40%;
+  left: 10px;
+  transform: translate(5%, -10%);
+}
+
+#wedd-img {
+  width: 57%;
+  height: auto;
+}
+
+#wedd-div {
+  padding-top: 3px;
+}
+
+.fund1,
+  .fund2,
+  .fund3,
+  .fund4 {
+    margin: 0 auto;
+    width: 68px;
+    /* Adjust the width as needed */
+    height: 68px;
+    /* Adjust the height as needed */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*  transition: transform 0.1s ease; Smooth transition for scaling */
+  }
+
+    #email-div{
+    padding-top: 70px;
+  }
+
+
+    #accept-email {
+    padding-top: 160px;
+    padding-left: 320px;
+  }
+
+  
+.accept-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+  padding: 6px 8px;
+  font-size: 10px;
+  cursor: pointer;
+  visibility: hidden;
+  /* Start hidden */
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeInButton 0.3s ease-in-out 3s forwards;
+  /* Delay of 6 seconds */
+  text-decoration: none;
+}
+
+
+  #tips13, #tips3, #tips10 {
+    position: absolute;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Fully transparent */
+    transition: opacity 0.2s ease-in-out;
+    animation: fadeInButton 0.2s ease-in-out 2s forwards;
+    /* Delay of 6 seconds */
+    display: none;
+  }
+
+  #tips10-info{
+   width: 100%;
+   height: 98%;
+   display: block;
+  }
+
+   #tips13-info, #tips3-info{
+   width: 85%;
+   height: auto;
+   display: block;
+   position: relative;
+  }
+
+    #phone-button {
+    padding-top: 148px;
+  }
+
+  .phone-call {
+    background-image: url('../img/phonecall.png');
+    width: 100%;
+    /* Adjust as needed */
+    height: 60vh;
+    /* Adjust as needed */
+    background-size: contain;
+    /* Adjust as needed (cover, contain, etc.) */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+  }
+
+  #call-convo {
+  padding-top: 15px;
+}
+
+.phone-img {
+  width: 65%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.quiz-progress {
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 16px;
+}
+
+#questions{
+  padding-left: 15px;
+}
+
+ #question-words {
+    color: #206E63;
+    font-weight: bold;
+    font-size: 12px;
+  }
+
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap onto new lines */
+    justify-content: center;
+    /* Centers the items horizontally */
+    align-items: flex-start;
+    /* Aligns items to the top of the container */
+    gap: 10px;
+    /* Optional: Adds spacing between the options */
+    font-size: 9px;
+  }
+
+  .options button {
+    width: 320px;
+    /* Set a fixed width for buttons */
+    height: 30px;
+    /* Set a fixed height for buttons */
+    padding: 5px;
+  }
+
+  .vertical-line {
+    position: absolute;
+    top: 198px;
+    /* Adjust this value to control the distance from the top */
+    left: 51%;
+    width: 1px;
+    /* Line thickness */
+    height: 14px;
+    /* Line height */
+    background-color: #206E63;
+    /* Line color */
+    transform: translateX(-50%);
+    /* Center the line horizontally */
+  }
+
+
+
+  .options .option-top {
+    flex: 1 1 5%;
+    /* This makes the top options take up 45% of the width, adjust as needed */
+  }
+
+  .options .option-bottom {
+    flex: 1 1 60%;
+    /* The same for bottom options */
+  }
+
+  button {
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    color: #206E63;
+    font-weight: bold;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #206E63;
+    padding: 20px;
+    width: 80%;
+  }
+
+  #quiz-next {
+    width: 4%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #nextbtn-div {
+    padding-top: 0px;
+  }
+
+  .feedback {
+    font-style: bold;
+    font-size: 100%;
+    margin-top: 5px;
+    padding-top: 5px;
+    margin-right: 20px;
+    color: #fff;
+    border-top: 2px dashed #7a797a;
+    justify-content: flex-end;
+    text-align: left;
+    font-size: 9px;
+  }
+
+ 
+  #end-div {
+    padding-top: 40px;
+  }
+
+  #end-body {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  #end-text{
+    font-size: 12px;
+    padding-bottom: 5px;
+  }
+
+  #end-button {
+    margin-left: 130px;
+    margin-right: 130px;
+    padding-top: 5px;
+  }
+
+.game-end {
+  background-color: #206E63;
+  color: white;
+  border: none;
+  padding: 8px 10px 8px 10px;
+  width: 20%;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+
+
+#summary-div{
+  height: 110px;
+   padding-top: 20px;
+}
+
+#risk{
+  margin-top: 10px;
+}
+
+#risk-img{
+ width: 30%;
+ height: auto;
+
+}
+
+.result-container {
+position: relative;
+  width: 190px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+}
+
+
+
+.result-img {
+ width: 100%;
+  height: 50%;
+  opacity: 1;
+  position: relative;
+}
+
+
+
+.opacity-overlay2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+
+.resultarrow-img {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(30%);
+  /* Keep it centered relative to the new left position */
+  width: 3%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 65%;
   /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+
+
+#result-text{
+  position: absolute;
+   font-size: 7px;
+   font-weight: bold;
+  color: #000000;
+  width: 160px;
+  left: 4%;
+  transform: translateX(-50%);
+}
+
+.inner-circle2 {
+  width: 40%;
+  /* Inner circle size */
+  height: 40%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+
+.percentage2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+
+.outer-ring2 {
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+
+
+.circular-progress2 {
+  width: 50px;
+  /* Outer ring size */
+  height: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 17px;
+  /* Space between the circle and the factor image */
+}
+
+
+
+.circular-progress-container2 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+  padding-top: 0px;
+  padding-right: 1px;
+  width: 80px;
+  height: 70px;
+}
+
+
+.result-desc{
+  padding-top: 2px;
+  padding-left: 90px;
+  padding-right: 70px;
+}
+
+#resulttext{
+  font-size: 8px;
+}
+
+#result-button{
+  padding-top: 0px;
+}
+
+#mood-container{
+  height: 70px;
+  width: 300px;
+  margin-top: 35px;
+}
+
+#factortext{
+   color: #206E63;
+   font-style: italic;
+   padding-top: 0px;
+   padding-right: 20px;
+   padding-left: 20px;
+   font-size: 8px;
+}
+
+  .game-button3 {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 6px 8px 6px 8px;
+    width: 13%;
+    font-size: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  
+    .main-display {
+      width: 450px;
+      height: 150px;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+      background-position: center;
+      color: #ecee71;
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: relative;
+      transition: opacity 0.5s ease;
+      opacity: 1;
+      padding-top: 60px;
+    }
+
+    #mainImage {
+  max-width: 480px;
+  max-height: auto;
+  object-fit: cover; /* or cover */
+      padding-top: 10px;
+}
+
+
+    .main-display.fade {
+      opacity: 0;
+    }
+
+    .thumbnail-wrapper img {
+      width: 100%;
+      height: 40px;
+      cursor: pointer;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      border-radius: 6px;
+      user-select: none;
+  margin-bottom: 2px;
+    }
+
+  .thumbnail-wrapper img.active {
+      transform: scale(1.25);
+      border: 3px solid #D4C029;
+    }
+
+   .thumbnails {
+padding-top: 0px;
+}
+
+}
+
+
+
+@media (min-width: 900px) and (max-width: 999px) {
+  #index {
+    padding-top: 20px;
+  }
+
+    .sticky-row {
+  position: -webkit-sticky;
+  /* For Safari */
+  position: sticky;
+  background-color: unset;
+  /* Optional: set a background color */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
+  padding-top: 3px;
+  /* Optional: add some padding */
+  cursor: default;
+}
+
+  #home{
+height: 17px;
+width: auto;
+}
+
+#info {
+  font-size: 15px;
+  color: #206E63;
+}
+
+#narration1, #narration2, #narration3 {
+
+    position: relative;
+    /* Change to relative */
+    width: 100vw;
+    height: 100vh;
+    /* Cover the full viewport height */
+    margin: 0;
+    padding: 0;
+    background-size: contain;
+
+
+}
+
+ #instruction1, #instruction2, #instruction3 {
+    width: 100%;
+    height: 93%;
+    display: block;
+  }
+
+
+  #howto-1, #howto-2, #howto-3 {
+  position: absolute;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+
+#footer {
+  position: fixed;
+  bottom: 70px;
+  width: 100%;
+  height: 5%;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.start-link {
+  font-size: 12px;
+}
+
+  #narrative-style {
+    padding-top: 18px;
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  #typewriter {
+    font-size: 15px;
+  }
+
+  .index-button {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    width: 30%;
+    font-size: 14px;
+    font-weight: normal;
+    opacity: 0;
+    /* Initially hidden */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, opacity 1s;
+    text-decoration: none;
+    border-radius: 4px;
+
+  }
+
+
+  #creditmeter {
+    position: fixed;
+    top: 24px;
+    /* Distance from the top */
+    left: 0;
+    /* Stick to the left */
+    width: 20%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #factormeter {
+    position: fixed;
+    top: 6px;
+    /* Distance from the top */
+    right: 37px;
+    /* Stick to the right */
+    width: 40%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #cs-font {
+    font-size: 10px;
+  }
+
+  .credit-score-container {
+    position: relative;
+    height: 175px;
+    /* Set a specific height */
+    overflow: visible;
+    /* Hide overflow */
+  }
+
+  .creditscore-img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: relative;
+  }
+
+  .opacity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 101%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.creditarrow-img {
+  position: absolute;
+  left: 90%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 40%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 49%;
+  /* Adjust this value to place the a53rrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
   transition: left 0.2s ease, top 0.2s ease;
@@ -5513,7 +6467,7 @@ width: auto;
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 6px 10px 8px 10px;
+    padding: 8px 10px 8px 10px;
     width: 13%;
     font-size: 12px;
     cursor: pointer;
@@ -5593,7 +6547,7 @@ width: auto;
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 6px 10px 8px 10px;
+    padding: 8px 10px 8px 10px;
     width: 13%;
     font-size: 12px;
     cursor: pointer;
@@ -6187,7 +7141,7 @@ width: auto;
   background-color: #206E63;
   color: white;
   border: none;
-  padding: 6px 10px 8px 10px;
+  padding: 8px 10px 8px 10px;
   width: 20%;
   font-size: 10px;
   font-weight: bold;
@@ -6215,8 +7169,8 @@ width: auto;
 }
 
 .result-container {
-  height: 85px;
-  width: 315px;
+   position: relative;
+  width: 175px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
@@ -6225,7 +7179,7 @@ width: auto;
 
 
 .result-img {
- width: 240px;
+ width: 100%;
   height: 60%;
   opacity: 1;
   position: relative;
@@ -6238,7 +7192,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 51%;
-  height: 58%;
+  height: 80%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -6251,7 +7205,7 @@ width: auto;
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-50%);
+  transform: translateX(-30%);
   /* Keep it centered relative to the new left position */
   width: 3%;
   /* Adjust the size as needed */
@@ -6371,7 +7325,7 @@ width: auto;
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 4px 8px 6px 8px;
+    padding: 6px 8px 6px 8px;
     width: 13%;
     font-size: 8px;
     cursor: pointer;
@@ -6383,7 +7337,7 @@ width: auto;
   
     .main-display {
       width: 450px;
-      height: 150px;
+      height: 140px;
       margin: 0 auto 10px;
       display: flex;
       align-items: center;
@@ -6396,13 +7350,14 @@ width: auto;
       position: relative;
       transition: opacity 0.5s ease;
       opacity: 1;
-      padding-top: 100px;
+      padding-top: 60px;
     }
 
     #mainImage {
   max-width: 480px;
   max-height: auto;
   object-fit: cover; /* or cover */
+      padding-top: 20px;
 }
 
 
@@ -6410,1387 +7365,33 @@ width: auto;
       opacity: 0;
     }
 
-    
-    .thumbnails {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 3px;
-      width: 370px;
-      margin: 0 auto;
-    }
+ 
 
-    .thumbnails img {
+    .thumbnail-wrapper img {
       width: 100%;
       height: 40px;
       cursor: pointer;
       transition: transform 0.3s ease, border-color 0.3s ease;
       border-radius: 6px;
       user-select: none;
-    }
-
-    .thumbnails img.active {
-      transform: scale(1.25);
-      border: 3px solid #D4C029;
-    }
-
-     .slider-container2 {
-      position: relative;
-      width: 330px;
-      margin: 8px auto 0;
-      height: 48px;
-      right: 6px;
-    }
-
-    .slider-track {
-      position: absolute;
-       width: 330px;
-      top: 3px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: #206E63;
-      border-radius: 2px;
-    }
-
-  .slider-thumb {
-  position: absolute;
-  top: 5px;
-  width: 30px;
-  height: 18px;
-  background-image: url('../img/resultarrow.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: left 0.4s ease;
-  z-index: 2;
-  pointer-events: none;
-}
-
-
-
-    input[type="range"] {
-      position: absolute;
-      top: 15px;
-      left: 5px;
-      width: 320px;
-      height: 20px;
-      background: transparent;
-      -webkit-appearance: none;
-      appearance: none;
-      pointer-events: auto;
-      z-index: 3;
-      margin: 0;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-webkit-slider-runnable-track {
-      background: transparent;
-      height: 4px;
-    }
-
-    input[type="range"]::-moz-range-track {
-      background: transparent;
-      height: 4px;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      margin-top: -8px;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-moz-range-thumb {
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
-
-
-
-}
-
-
-
-@media (min-width: 900px) and (max-width: 999px) {
-  #index {
-    padding-top: 80px;
-  }
-
-    .sticky-row {
-  position: -webkit-sticky;
-  /* For Safari */
-  position: sticky;
-  background-color: unset;
-  /* Optional: set a background color */
-  z-index: 1000;
-  /* Ensure it stays on top of other content */
-  padding-top: 4px;
-  /* Optional: add some padding */
-  cursor: default;
-}
-
-  #home{
-height: 20px;
-width: auto;
-}
-
-#info {
-  font-size: 18px;
-  color: #206E63;
-}
-
- #footer {
-  position: fixed;
-  bottom: 100px;
-  width: 100%;
-  height: 5%;
-  justify-content: center;
-  padding-right: 10px;
-}
-
-  #narrative-style {
-    padding-top: 55px;
-    width: 70%;
-    overflow: hidden;
-    white-space: nowrap;
-    padding-left: 35px;
-    padding-right: 60px;
-  }
-
-  #typewriter {
-    font-size: 15px;
-  }
-
-  .index-button {
-    background-color: #D4C029;
-    color: white;
-    border: none;
-    padding: 9px 20px 10px 20px;
-    width: 30%;
-    font-size: 14px;
-    font-weight: normal;
-    opacity: 0;
-    /* Initially hidden */
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s, opacity 1s;
-    text-decoration: none;
-    border-radius: 4px;
-
-  }
-
-   #instruction1, #instruction2, #instruction3  {
-    width: 100%;
-    height: 94%;
-    display: block;
-  }
-
-
-    #howto {
-    position: absolute;
-    top: 92%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards;
-    /* Delay of 6 seconds */
-    display: none;
-  }
-
-  .howto-button {
-    background-color: #D4C029;
-    color: white;
-    border: none;
-    padding: 6px 10px 8px 10px;
-    width: 13%;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-
-   .hidden-section {
-    padding-top: 5px;
-  }
-
- #title-text {
-    font-size:13px;
-  padding-bottom: 8px;
-  padding-top: 8px;
-}
-
- #title-text2 {
-    font-size:13px;
-  padding-bottom: 8px;
-  padding-top: 60px;
-}
-
-  #title-text3 {
-    font-size:10px;
-  padding-bottom: 8px;
-  padding-top: 8px;
-  }
-
-   #title-text4 {
-    font-size:10px;
-  padding-bottom: 8px;
-  padding-top: 40px;
-  }
-
-    h1 {
-    font-size: small;
-  }
-
-    .game-button {
-    background-color: #D4C029;
-    color: white;
-    border: none;
-    padding: 6px 10px 8px 10px;
-    width: 13%;
-    font-size: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-
-  #creditmeter {
-    position: fixed;
-    top: 24px;
-    /* Distance from the top */
-    left: 0;
-    /* Stick to the left */
-    width: 20%;
-    /* Adjust width */
-    z-index: 1000;
-    /* Ensure it’s above other content */
-  }
-
-  
-  #cs-font {
-    font-size: 10px;
-  }
-
-  .credit-score-container {
-    position: relative;
-    height: 192px;
-    /* Set a specific height */
-    overflow: visible;
-    /* Hide overflow */
-  }
-
-  .creditscore-img {
-   width: 90%;
-    height: 100%;
-    opacity: 1;
-    position: relative;
-  }
-
-  .opacity-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 128%;
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-  /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out;
-  /* Add a transition for smooth movement */
-}
-
-.creditarrow-img {
-  position: absolute;
-  left: 90%;
-  /* Move the arrow to the right */
-  transform: translateX(-50%);
-  /* Keep it centered relative to the new left position */
-  width: 40%;
-  /* Adjust the size as needed */
-  height: auto;
-  top: 55%;
-  /* Adjust this value to place the arrow within the container */
-  z-index: 10;
-  /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease;
-  /* Add a transition for smooth movement */
-}
-
-  #factormeter {
-    position: fixed;
-    top: 10px;
-    /* Distance from the top */
-    right: 37px;
-    /* Stick to the right */
-    width: 40%;
-    /* Adjust width */
-    z-index: 1000;
-    /* Ensure it’s above other content */
-  }
-
-
-  .circular-progress-container {
-    padding-bottom: 30px;
-  }
-
-  .circular-progress {
-    width: 53px;
-    /* Outer ring size */
-    height: 53px;
-    margin-right: 10px;
-    /* Space between the circle and the factor image */
-  }
-
-  .inner-circle {
-    width: 80%;
-    /* Inner circle size */
-    height: 80%;
-    background-color: #FCF8EA;
-    /* Inner circle color */
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    z-index: 1;
-    /* Ensure it is above the outer ring */
-  }
-
-  .factor-up-image {
-    width: 14px;
-    /* Adjust size as needed */
-    height: auto;
-    z-index: 2;
-    /* Make sure it's on top */
-    position: relative;
-    /* Ensure it positions beside the circular progress */
-    transform: translateX(0px);
-    /* Optional: Adjust position */
-    opacity: 0;
-    /* Start with the image hidden */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    /* Apply transition effects */
-    bottom: 3px;
-  }
-
-  .hovertest {
-    padding-top: 10px;
-    margin: 0;
-  }
-
-  .my-card2 {
-    width: 90%;
-    height: 165px;
-    background-position: center;
-    padding: 15px;
-  }
-
-  .my-card2:hover {
-    background-size: 100% 158px;
-  }
-
-      .info-container1 img {
-    width: 55%;
-    height: auto;
-    opacity: 0;
-    /* Start hidden */
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    animation: fadeIn2 1s ease-in-out 0.8s forwards;
-    /* Animation with delay */
-     padding-top: 25px;
-  }
-
-  .info-container1 .overlay-text {
-    top: 23%;
-    /* Adjust as needed */
-    left: 49%;
-    /* Adjust as needed */
-    right: 12%;
-    /* Adjust as needed */
-    color: black;
-    /* Adjust text color */
-    font-weight: normal;
-    font-size: 8px;
-    text-align: center;
-    justify-content: center;
-    opacity: 0;
-    /* Start hidden */
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    animation: fadeIn2 1s ease-in-out 0.8s forwards;
-    /* Animation with delay */
-  }
-
-  .info-container2 img {
-    width: 53%;
-    height: auto;
-    opacity: 0;
-    /* Start hidden */
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    animation: fadeIn2 1s ease-in-out 0.8s forwards;
-    /* Animation with delay */
-     padding-top: 15px;
-  }
-
-  .info-container2 .overlay-text {
-    top: 17%;
-    /* Adjust as needed */
-    left: 50%;
-    /* Adjust as needed */
-    right: 15%;
-    /* Adjust as needed */
-    color: black;
-    /* Adjust text color */
-    font-weight: normal;
-    font-size: 8px;
-    text-align: center;
-    justify-content: center;
-    opacity: 0;
-    /* Start hidden */
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    animation: fadeIn2 1s ease-in-out 0.8s forwards;
-    /* Animation with delay */
-  }
-
-  #info-button {
-    padding-top: 25px;
-  }
-
-    #util-img {
-  width: 57%;
-  height: auto;
-}
-
-#util-div {
-  padding-top: 35px;
-}
-
-#util-btn {
-  padding-bottom: 28px;
-}
-
-.car {
-    width: 105px;
-    height: auto;
-    background: none;
-  }
-
-  /* Ensure the image fits within the card */
-  .car-image {
-    width: 100px;
-    height: auto;
-    object-fit: contain;
-    /* Ensures the image covers the card area without distortion */
-  }
-
-  /* Focused Card */
-  .car.focus {
-    width: 130px;
-    height: 160px;
-    transform: translateX(0) scale(1.1);
-    z-index: 3;
-    opacity: 1;
-    background-image: url('../img/cardhover.png');
-    background-size: cover;
-    /* Adjusts the background to fill the card */
-    background-position: center;
-    /* Centers the background image */
-    background-repeat: no-repeat;
-    /* Ensures the image doesn't repeat */
-    margin: 20px auto;
-  }
-
-  .slider-btn {
-    top: 40%;
-  }
-
-
-  .slider-btn.prev {
-  left: 0;
-}
-
-.slider-btn.next {
-  right: 0;
-}
-
-  .slider-container {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    max-width: 770px;
-    height: 180px;
-    /* Adjust the height as needed */
-    margin: auto;
-  }
-
-  .car.left {
-    transform: translateX(-70px) scale(0.9);
-    z-index: 2;
-  }
-
-  .car.right {
-    transform: translateX(70px) scale(0.9);
-    z-index: 2;
-  }
-
-     #car1,
-  #car2,
-  #car3 {
-    padding-bottom: 123px;
-  }
-
-  #car-video1,
-#car-video2,
-#car-video3 {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-  .choice-card {
-    text-decoration: none;
-    color: #206E63;
-    /* Initial text color */
-    font-size: 10px;
-    font-weight: bold;
-  }
-
-   #choices-div {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
-    gap: 1px;
-  }
-
-  #choices-col {
-  width: 40%;
-}
-
-   #scenario-video1, #scenario-video2,
- #scenario-video3, #scenario-video4 {
-  width: 100%;
- height: 100%;
-  display: block;
-}
-
-
-   #game1, #game2,
-   #game3, #game4 {
-    padding-bottom: 110px;
-  }
-
-    #game-desc1 {
-    font-size:13px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  }
-
-#vacation {
-  padding-top: 15px;
-  width: 510px;
-}
-
-.monument {
-  width: 100%;
-  /* Make sure the image takes the full width of its container */
-  max-height: 60px;
-  /* Limit the maximum height of the images */
-  object-fit: contain;
-  /* Ensures that the image is resized to fit within the box without distortion */
   margin-bottom: 3px;
-  /* Space between the image and location box */
-}
-
-.location {
-  background-color: whitesmoke;
-  width: 120px;
-  height: 22px;
-  padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 3px dotted #D4C029;
-}
-
-.japan1 {
-  width: 90%;
-  /* Make sure the image takes the full width of its container */
-  max-height: 30px;
-  /* Limit the maximum height of the images */
-  object-fit: contain;
-  /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 17px;
-  /* Space between the image and location box */
-}
-
-.egypt1 {
-  width: 90%;
-  /* Make sure the image takes the full width of its container */
-  max-height: 50px;
-  /* Limit the maximum height of the images */
-  object-fit: contain;
-  /* Ensures that the image is resized to fit within the box without distortion */
-  margin: 6px;
-  /* Space between the image and location box */
-}
-
-#location7 {
-  margin-left: 0px;
-   width: 120px;
-  height: 22px;
-  padding: 10px;
-  margin-right: 4px;
-}
-
- #title-items {
-    padding-top: 2px;
-  }
-
-    #vacay-box {
-    margin-bottom: 7px;
-    /* Add some space between rows */
-    width: 100%;
-    /* Ensure they take up 100% of their container width */
-  }
-
-   .imgs {
-    width: 10%;
-    /* Set the width relative to the container's width */
-    height: auto;
-    /* Maintain aspect ratio */
-  }
-
-   #wedding-box {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 130px;
-    padding-right: 0px;
-    padding-bottom: 100px;
-  }
-
-  #wedd-box {
-  margin-top: 10px;
-}
-
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(4, 50px);
-    gap: 3px;
-    /* Centering handled by parent */
-    /* Removed top, left, and transform */
-  }
-
-  .card-game {
-    width: 50px;
-    height: 60px;
-    background: url('../img/wedding/card-cover.png') no-repeat center center;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    font-size: 24px;
-    cursor: pointer;
-    border: 1px solid #D4C029;
-  }
-
-   .timer-text-box {
-  font-size: 20px;
-  font-weight: bold;
-  color: #206E63;
-}
-
-.timer {
-  font-size: 40px;
-  font-weight: bold;
-  color: #206E63;
-}
-
-.timer .colon {
-  width: auto;
-  /* Smaller width */
-  height: 18px;
-  /* Fixed height */
-  margin-right: 10px;
-}
-
-#seconds {
-  color: #206E63;
-  font-family: 'Geomanist-Bold', sans-serif;
-  /* Use bold font for headings */
-  font-weight: bolder;
-  /* Explicitly set the weight */
-  font-size: 22px;
-}
-
-#secs {
-  color: #206E63;
-  font-size: 15px;
-  font-family: 'Geomanist-Bold', sans-serif;
-  /* Use bold font for headings */
-  font-weight: bolder;
-  /* Explicitly set the weight */
-}
-
-.score {
-  font-size: 20px;
-  font-weight: bolder;
-  color: #206E63;
-}
-
-#wedding-score1 {
-  font-size: 22px;
-  color: #206E63;
-  font-family: 'Geomanist-Bold', sans-serif;
-  /* Use bold font for headings */
-  font-weight: bolder;
-  /* Explicitly set the weight */
-  text-align: left;
-}
-
-
-.text-box {
-  font-size: 18px;
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0);
-  padding: 10px;
-  margin: 20px 0;
-  background-color: rgba(255, 255, 255, 0);
-  display: flex;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-  bottom: 40%;
-  left: 10px;
-  transform: translate(5%, -10%);
-}
-
-#wedd-img {
-  width: 57%;
-  height: auto;
-}
-
-#wedd-div {
-  padding-top: 3px;
-}
-
- table {
-    border-collapse: collapse;
-    table-layout: auto;
-    /* Adjust table to fit content width */
-    width: auto;
-    /* Table adjusts to fit its content */
-    margin: 0 auto;
-    /* Center table horizontally */
-    width: 57%;
-    /* Adjust to desired percentage */
-    padding-top: 20px;
-  }
-
-  .tooltip-text {
-  visibility: hidden;
-  width: 100px;
-  background-color: #ffffff;
-  color: #000000;
-  text-align: center;
-  border-radius: 2px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 85%;
-  /* Position above the image */
-  left: 40%;
-  margin-left: -60px;
-  /* Adjust the tooltip to be centered */
-  opacity: 0;
-  transition: opacity 0.3s;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  font-size: 9px;
-}
-
-.fund1,
-  .fund2,
-  .fund3,
-  .fund4 {
-    margin: 0 auto;
-    width: 80px;
-    /* Adjust the width as needed */
-    height: 80px;
-    /* Adjust the height as needed */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    /*  transition: transform 0.1s ease; Smooth transition for scaling */
-  }
-
-      #email-div{
-    padding-top: 80px;
-  }
-
-
-    #accept-email {
-    padding-top: 200px;
-    padding-left: 340px;
-  }
-
-.accept-button {
-  background-color: #D4C029;
-  color: white;
-  border: none;
-  padding: 6px 8px;
-  font-size: 10px;
-  cursor: pointer;
-  visibility: hidden;
-  /* Start hidden */
-  opacity: 0;
-  /* Fully transparent */
-  transition: opacity 0.3s ease-in-out;
-  animation: fadeInButton 0.3s ease-in-out 3s forwards;
-  /* Delay of 6 seconds */
-  text-decoration: none;
-}
-
- #tips10 {
-    position: absolute;
-    top: 76%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards;
-    /* Delay of 6 seconds */
-    display: none;
-  }
-
-  #tips13, #tips3 {
-    position: absolute;
-    top: 78%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards;
-    /* Delay of 6 seconds */
-    display: none;
-  }
-
-  #tips10-info{
-   width: 100%;
-   height: 100%;
-   display: block;
-  }
-
-  
-   #tips13-info, #tips3-info{
-   width: 80%;
-   height: auto;
-   display: block;
-   position: relative;
-  }
-
-      #phone-button {
-    padding-top: 140px;
-  }
-
-  .phone-call {
-    background-image: url('../img/phonecall.png');
-    width: 100%;
-    /* Adjust as needed */
-    height: 60vh;
-    /* Adjust as needed */
-    background-size: contain;
-    /* Adjust as needed (cover, contain, etc.) */
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-top: 40px;
-  }
-
-  #call-convo {
-  padding-top: 15px;
-}
-
-.phone-img {
-  width: 65%;
-  height: auto;
-  margin: 0 auto;
-}
-  
-.quiz-progress {
-  padding-left: 100px;
-  padding-right: 100px;
-  padding-top: 16px;
-}
-
-#questions{
-  padding-left: 45px;
-  padding-right: 45px;
-}
-
- #question-words {
-    color: #206E63;
-    font-weight: bold;
-    font-size: 12px;
-  }
-
-  .options {
-    display: flex;
-    flex-wrap: wrap;
-    /* Allows items to wrap onto new lines */
-    justify-content: center;
-    /* Centers the items horizontally */
-    align-items: flex-start;
-    /* Aligns items to the top of the container */
-    gap: 10px;
-    /* Optional: Adds spacing between the options */
-    font-size: 9px;
-  }
-
-  .options button {
-    width: 320px;
-    /* Set a fixed width for buttons */
-    height: 30px;
-    /* Set a fixed height for buttons */
-    padding: 5px;
-  }
-
-  .vertical-line {
-    position: absolute;
-    top: 198px;
-    /* Adjust this value to control the distance from the top */
-    left: 50%;
-    width: 1px;
-    /* Line thickness */
-    height: 14px;
-    /* Line height */
-    background-color: #206E63;
-    /* Line color */
-    transform: translateX(-50%);
-    /* Center the line horizontally */
-  }
-
-
-
-  .options .option-top {
-    flex: 1 1 5%;
-    /* This makes the top options take up 45% of the width, adjust as needed */
-  }
-
-  .options .option-bottom {
-    flex: 1 1 60%;
-    /* The same for bottom options */
-  }
-
-  button {
-    display: inline-block;
-    margin: 10px;
-    cursor: pointer;
-    color: #206E63;
-    font-weight: bold;
-    background-color: #ffffff;
-    border-radius: 5px;
-    border: 1px solid #206E63;
-    padding: 20px;
-    width: 80%;
-  }
-
-  #quiz-next {
-    width: 4%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  #nextbtn-div {
-    padding-top: 3px;
-  }
-
-  .feedback {
-    font-style: bold;
-    font-size: 100%;
-    margin-top: 7px;
-    padding-top: 5px;
-    margin-right: 20px;
-    color: #fff;
-    border-top: 2px dashed #7a797a;
-    justify-content: flex-end;
-    text-align: left;
-    font-size: 9px;
-  }
-
-    #end-div {
-    padding-top: 30px;
-  }
-
-  #end-body {
-    padding-top: 10px;
-    padding-bottom: 5px;
-    padding-left: 80px;
-    padding-right: 80px;
-  }
-
-  #end-text{
-    font-size: 12px;
-    padding-bottom: 5px;
-  }
-
-  #end-button {
-    margin-left: 130px;
-    margin-right: 130px;
-    padding-top: 5px;
-  }
-
-.game-end {
-  background-color: #206E63;
-  color: white;
-  border: none;
-  padding: 6px 10px 8px 10px;
-  width: 20%;
-  font-size: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  text-decoration: none;
-  border-radius: 4px;
-}
-
-
-#summary-div{
-  height: 110px;
-   padding-top: 20px;
-}
-
-#risk{
-  margin-top: 10px;
-}
-
-#risk-img{
- width: 30%;
- height: auto;
-
-}
-
-.result-container {
-  height: 88px;
-  width: 435px;
-  /* Set a specific height */
-  overflow: visible;
-  /* Hide overflow */
-  margin-top: 120px;
-}
-
-
-
-.result-img {
- width: 270px;
-  height: 68%;
-  opacity: 1;
-  position: relative;
-}
-
-
-
-.opacity-overlay2 {
-   position: absolute;
-  top: 0;
-  left: 0;
-  width: 51%;
-  height: 68%;
-  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
-  pointer-events: none;
-  /* Ensure the overlay doesn't interfere with other elements */
-  transition: opacity 5s ease-in-out;
-  /* Add a transition for smooth movement */
-}
-
-
-
-.resultarrow-img {
-  position: absolute;
- left: 54%;
-  /* Move the arrow to the right */
-  transform: translateX(-50%);
-  /* Keep it centered relative to the new left position */
-  width: 3%;
-  /* Adjust the size as needed */
-  height: auto;
-  top: 43%;
-  /* Adjust this value to place the arrow within the container */
-  z-index: 10;
-  /* Ensures the arrow stays on top */
-  transition: left 0.2s ease, top 0.2s ease;
-  /* Add a transition for smooth movement */
-}
-
-
-
-#result-text{
-  position: absolute;
-   font-size: 9px;
-   font-weight: bold;
-  color: #000000;
-  width: 160px;
-  left: 4%;
-  transform: translateX(-50%);
-}
-
-.inner-circle2 {
-  width: 50%;
-  /* Inner circle size */
-  height: 50%;
-  background-color: #FCF8EA;
-  /* Inner circle color */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  z-index: 1;
-  /* Ensure it is above the outer ring */
-}
-
-
-
-.percentage2 {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-  /* Text color */
-  vertical-align: middle;
-  line-height: 60%;
-}
-
-
-.outer-ring2 {
-  width: 65%;
-  height: 65%;
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-  /* Ensure it is below the inner circle */
-}
-
-
-.circular-progress2 {
-  width: 60px;
-  /* Outer ring size */
-  height: 60px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 10px;
-  /* Space between the circle and the factor image */
-}
-
-
-
-.circular-progress-container2 {
-  align-items: center;
-  justify-content: center;
-  /* Align items horizontally */
-  padding-top: 20px;
-  padding-right: 1px;
-  width: 80px;
-  height: 70px;
-}
-
-
-
-.result-desc{
-  padding-top: 30px;
-  padding-left: 150px;
-  padding-right: 150px;
-}
-
-#resulttext{
-  font-size: 8px;
-}
-
-#result-button{
-  padding-top: 0px;
-}
-
-  #mood-container{
-  height: 70px;
-  width: 300px;
-  margin-top: 35px;
-}
-
-#factortext{
-   color: #206E63;
-   font-style: italic;
-   padding-top: 0px;
-   padding-right: 30px;
-   padding-left: 20px;
-   font-size: 8px;
-}
-
-  .game-button3 {
-    background-color: #D4C029;
-    color: white;
-    border: none;
-    padding: 4px 8px 6px 8px;
-    width: 13%;
-    font-size: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-
-      .main-display {
-      width: 500px;
-      height: 160px;
-      margin: 0 auto 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-size: cover;
-      background-position: center;
-      color: #ecee71;
-      font-weight: bold;
-      font-size: 1.2rem;
-      position: relative;
-      transition: opacity 0.5s ease;
-      opacity: 1;
-      padding-top: 70px;
     }
 
-    #mainImage {
-  max-width: 530px;
-  max-height: auto;
-  object-fit: cover; /* or cover */
-}
-
-
-    .main-display.fade {
-      opacity: 0;
-    }
-
-    
-    .thumbnails {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 3px;
-      width: 370px;
-      margin: 0 auto;
-    }
-
-    .thumbnails img {
-      width: 100%;
-      height: 40px;
-      cursor: pointer;
-      transition: transform 0.3s ease, border-color 0.3s ease;
-      border-radius: 6px;
-      user-select: none;
-    }
-
-    .thumbnails img.active {
+  .thumbnail-wrapper img.active {
       transform: scale(1.25);
       border: 3px solid #D4C029;
     }
 
-     .slider-container2 {
-      position: relative;
-      width: 330px;
-      margin: 8px auto 0;
-      height: 48px;
-      right: 6px;
-    }
-
-    .slider-track {
-      position: absolute;
-       width: 330px;
-      top: 3px;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: #206E63;
-      border-radius: 2px;
-    }
-
-  .slider-thumb {
-  position: absolute;
-  top: 5px;
-  width: 30px;
-  height: 18px;
-  background-image: url('../img/resultarrow.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  transition: left 0.4s ease;
-  z-index: 2;
-  pointer-events: none;
+   .thumbnails {
+padding-top: 2px;
 }
-
-
-
-    input[type="range"] {
-      position: absolute;
-      top: 15px;
-      left: 5px;
-      width: 320px;
-      height: 20px;
-      background: transparent;
-      -webkit-appearance: none;
-      appearance: none;
-      pointer-events: auto;
-      z-index: 3;
-      margin: 0;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-webkit-slider-runnable-track {
-      background: transparent;
-      height: 4px;
-    }
-
-    input[type="range"]::-moz-range-track {
-      background: transparent;
-      height: 4px;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      margin-top: -8px;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-moz-range-thumb {
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
-
 
 
 }
 
 @media (min-width: 1000px) and (max-width: 1200px) {
   #index {
-    padding-top: 100px;
+    padding-top: 80px;
   }
 
      .sticky-row {
@@ -7808,7 +7409,7 @@ width: auto;
 
 #footer {
   position: fixed;
-  bottom: 170px;
+  bottom: 150px;
   width: 100%;
   height: 5%;
   justify-content: center;
@@ -7825,52 +7426,17 @@ width: auto;
   color: #206E63;
 }
 
-#narration1 {
 
-    position: relative;
-    /* Change to relative */
-    width: 100vw;
-    height: 97vh;
-    /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-    padding-left: 10px;
-    padding-top: 20px;
-
-
-}
-
-#narration2, #narration3 {
-
-    position: relative;
-    /* Change to relative */
-    width: 100vw;
-    height: 90vh;
-    /* Cover the full viewport height */
-    margin: 0;
-    padding: 0;
-    background-size: contain;
-    padding-left: 10px;
-
-
-}
-
-  #instruction1 {
+  #instruction1, #instruction2, #instruction3 {
     width: 100%;
-    height: 94%;
+    height: 100%;
     display: block;
   }
 
-   #instruction2, #instruction3  {
-    width: 100%;
-    height: 88%;
-    display: block;
-  }
 
     #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 86%;
+  top: 78%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -7882,7 +7448,7 @@ width: auto;
 }
 
   #narrative-style {
-    padding-top: 15vh;
+    padding-top: 18vh;
     width: 70%;
     overflow: hidden;
     white-space: nowrap;
@@ -7899,7 +7465,7 @@ width: auto;
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 10px 25px 12px 25px;
+    padding: 12px 25px 12px 25px;
     width: 15%;
     font-size: 14px;
     font-weight: normal;
@@ -7928,21 +7494,9 @@ width: auto;
   #car1,
   #car2,
   #car3 {
-    padding-bottom: 230px;
+    padding-bottom: 250px;
   }
 
-  #howto {
-    position: absolute;
-    top: 83%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    /* Fully transparent */
-    transition: opacity 0.2s ease-in-out;
-    animation: fadeInButton 0.2s ease-in-out 2s forwards;
-    /* Delay of 6 seconds */
-    display: none;
-  }
 
 
   #creditmeter {
@@ -7976,15 +7530,15 @@ width: auto;
 
   .credit-score-container {
     position: relative;
-    height: 326px;
+    height: 315px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
   }
 
 .creditscore-img {
-  width: 80px;
-  height: 320px;
+  width: 100%;
+  height: 100%;
   opacity: 1;
   position: relative;
 }
@@ -7995,7 +7549,7 @@ width: auto;
   top: 0;
   left: 0;
   width: 125%;
-  height: 100%;
+  height: 99%;
 background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -8005,14 +7559,14 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 .creditarrow-img {
   position: absolute;
-  left: 100%;
+  left: 90%;
   /* Move the arrow to the right */
   transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
   width: 44%;
   /* Adjust the size as needed */
   height: auto;
-  top: 49%;
+  top: 48%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -8022,11 +7576,12 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
   #title-text {
     font-size: large;
+  padding-top: 20px;
   }
 
    #title-text2 {
     font-size:large;
-  padding-top: 120px;
+  padding-top: 110px;
 }
 
  #title-text3 {
@@ -8280,7 +7835,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 10px 25px 12px 25px;
+    padding: 12px 25px 12px 25px;
     width: 15%;
     font-size: 14px;
     cursor: pointer;
@@ -8289,8 +7844,12 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     border-radius: 4px;
   }
 
-  #game1, #game2, #game3, #game4 {
+  #game1, #game2, #game3 {
     top: 73%;
+  }
+
+   #game4 {
+    top: 60%;
   }
 
   .monument {
@@ -8636,7 +8195,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-50%);
+  transform: translateX(-20%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
@@ -8753,7 +8312,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 10px 18px 12px 18px;
+    padding: 12px 18px 12px 18px;
     width: 18%;
     font-size: 14px;
     cursor: pointer;
@@ -9125,8 +8684,8 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 }
 
 .result-container {
- height: 110px;
-  width: 500px;
+ position: relative;
+  width: 315px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
@@ -9135,7 +8694,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
 .result-img {
-  width: 440px;
+  width: 100%;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -9162,7 +8721,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-50%);
+  transform: translateX(50%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
@@ -9281,7 +8840,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 10px 18px 12px 18px;
+    padding: 12px 18px 12px 18px;
     width: 18%;
     font-size: 14px;
     cursor: pointer;
@@ -9296,32 +8855,549 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
 
+@media (min-width: 1350px) and (max-width: 1399px) {
+ #index {
+    padding-top: 200px;
+  }
+
+        .sticky-row {
+  position: -webkit-sticky;
+  /* For Safari */
+  position: sticky;
+  background-color: unset;
+  /* Optional: set a background color */
+  z-index: 1000;
+  /* Ensure it stays on top of other content */
+  padding: 30px;
+  /* Optional: add some padding */
+  cursor: default;
+}
+
+#narration1, #narration2, #narration3 {
+ position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Hide parts that overflow */
+}
+
+
+ #instruction1, #instruction2, #instruction3 {
+    width: 100%;
+    height: 100%;
+    display: block; 
+    object-fit: contain; /* Keeps it proportional but fills */
+  }
+
+
+  #howto-1, #howto-2, #howto-3 {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Fully transparent */
+  transition: opacity 0.2s ease-in-out;
+  animation: fadeInButton 0.2s ease-in-out 2s forwards;
+  /* Delay of 6 seconds */
+  display: none;
+}
+  
+.howto-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+ padding: 15px 40px 15px 40px;
+  width: 20%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+
+   #car1,
+  #car2,
+  #car3 {
+    padding-bottom: 420px;
+  }
+
+
+  #footer {
+  position: fixed;
+  bottom: 300px;
+  width: 100%;
+  height: 5%;
+  justify-content: center;
+  padding-right: 10px;
+}
+
+  #narrative-style {
+    padding-top: 23vh;
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-left: 75px;
+    padding-right: 80px;
+  }
+
+  #creditmeter {
+    position: fixed;
+    top: 120px;
+    /* Distance from the top */
+    left: 0;
+    /* Stick to the left */
+    width: 30%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #factormeter {
+    position: fixed;
+    top: 120px;
+    /* Distance from the top */
+    right: 18px;
+    /* Stick to the right */
+    width: 20%;
+    /* Adjust width */
+    z-index: 1000;
+    /* Ensure it’s above other content */
+  }
+
+  #cs-font {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .credit-score-container {
+     position: relative;
+    height: 455px;
+    /* Set a specific height */
+    overflow: visible;
+    /* Hide overflow */
+  }
+
+.creditscore-img {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: relative;
+}
+
+
+.opacity-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 125%;
+  height: 100%;
+background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+.creditarrow-img {
+  position: absolute;
+  left: 98%;
+  /* Move the arrow to the right */
+  transform: translateX(-50%);
+  /* Keep it centered relative to the new left position */
+  width: 44%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 49%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+     #game1, #game2,
+   #game3, #game4 {
+    padding-bottom: 480px;
+  }
+
+     #game-desc1 {
+  padding-top: 60px;
+  padding-bottom: 5px;
+  }
+
+
+
+   #title-text2 {
+  padding-bottom: 20px;
+  padding-top: 200px;
+}
+
+  #title-text {
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+
+
+    .info-container1 img {
+    width: 64%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+    padding-top: 130px;
+  }
+
+  .info-container1 .overlay-text {
+    top: 48%;
+    /* Adjust as needed */
+    left: 49%;
+    /* Adjust as needed */
+    right: 14%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+  .info-container2 img {
+    width: 64%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+    padding-top: 45px;
+  }
+
+  .info-container2 .overlay-text {
+    top: 38%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    right: 16%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+    #wedding-box {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 70px;
+    padding-right: 0px;
+    padding-bottom: 270px;
+  }
+
+  #wedd-box {
+  margin-top: 60px;
+}
+
+  #wedd-div {
+  padding-top: 70px;
+}
+
+#tips10, #tips13, #tips3 {
+   top: 63%;
+    left: 50%;
+}
+
+     #phone-button {
+    padding-top: 360px;
+  }
+
+    .phone-call {
+    background-image: url('../img/phonecall.png');
+    width: 100%;
+    /* Adjust as needed */
+    height: 60vh;
+    /* Adjust as needed */
+    background-size: contain;
+    /* Adjust as needed (cover, contain, etc.) */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 50px;
+  }
+
+    #call-convo {
+  padding-top: 130px;
+}
+
+
+#summary-div{
+  height: 110px;
+    padding-top: 100px;
+}
+
+#risk{
+  margin-top: 30px;
+}
+
+#risk-img{
+ width: 40%;
+ height: auto;
+
+}
+
+.result-container {
+   position: relative;
+  width: 455px;
+  /* Set a specific height */
+  overflow: visible;
+  /* Hide overflow */
+  margin-top: 120px;
+}
+
+
+.result-img {
+  width: 100%;
+  height: 95%;
+  opacity: 1;
+  position: relative;
+}
+
+
+
+.opacity-overlay2 {
+   position: absolute;
+  top: 0;
+  left: 0;
+  width: 51%;
+  height: 95%;
+  background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
+  pointer-events: none;
+  /* Ensure the overlay doesn't interfere with other elements */
+  transition: opacity 5s ease-in-out;
+  /* Add a transition for smooth movement */
+}
+
+
+.resultarrow-img {
+  position: absolute;
+ left: 54%;
+  /* Move the arrow to the right */
+  transform: translateX(-20%);
+  /* Keep it centered relative to the new left position */
+  width: 4%;
+  /* Adjust the size as needed */
+  height: auto;
+  top: 57%;
+  /* Adjust this value to place the arrow within the container */
+  z-index: 10;
+  /* Ensures the arrow stays on top */
+  transition: left 0.2s ease, top 0.2s ease;
+  /* Add a transition for smooth movement */
+}
+
+  #util-img {
+  width: 80%;
+  height: auto;
+}
+
+#util-div {
+  padding-top: 120px;
+}
+
+#util-btn {
+  padding-bottom: 40px;
+}
+
+  #vacation {
+    padding-top: 30px;
+  }
+
+  #vacay-row {
+  padding-top: 30px;
+}
+
+#title-items {
+  padding-top: 10px;
+}
+
+#result-text{
+  position: absolute;
+   font-size: 18px;
+   font-weight: bold;
+  color: #000000;
+  width: 160px;
+  left: 4%;
+  transform: translateX(-50%);
+}
+
+.inner-circle2 {
+  width: 70%;
+  /* Inner circle size */
+  height: 70%;
+  background-color: #FCF8EA;
+  /* Inner circle color */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  /* Ensure it is above the outer ring */
+}
+
+
+
+.percentage2 {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  /* Text color */
+  vertical-align: middle;
+  line-height: 60%;
+}
+
+.outer-ring2 {
+  width: 95%;
+  height: 95%;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+  /* Ensure it is below the inner circle */
+}
+
+
+.circular-progress2 {
+   width: 90px;
+  /* Outer ring size */
+  height: 90px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  /* Space between the circle and the factor image */
+}
+
+
+.circular-progress-container2 {
+  align-items: center;
+  justify-content: center;
+  /* Align items horizontally */
+ padding-top: 100px;
+  padding-left: 40px;
+  width: 100px;
+  height: 70px;
+}
+
+
+.result-desc{
+  padding-top: 200px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+#resulttext{
+  font-size: 20px;
+}
+
+#result-button {
+  padding-bottom: 100px;
+}
+
+
+#mood-container{
+  height: 70px;
+  width: 580px;
+  margin-top: 160px;
+}
+
+#factortext{
+   color: #206E63;
+   font-style: italic;
+   padding-top: 15px;
+   padding-right: 6px;
+   padding-left: 10px;
+   font-size: 14px;
+}
+
+  .game-button3 {
+    background-color: #D4C029;
+    color: white;
+    border: none;
+    padding: 12px 18px 12px 18px;
+    width: 18%;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+    #end-div {
+    padding-top: 210px;
+  }
+
+  #end-body {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    padding-left: 150px;
+    padding-right: 150px;
+  }
+
+  #end-button {
+    margin-left: 150px;
+    margin-right: 130px;
+    padding-top: 40px;
+  }
+
+  .main-display {
+      margin-top: 20px;
+    }
+
+   .thumbnails {
+padding-top: 10px;
+}
+  
+}
+
+
+
+
+
+
 @media (min-width: 1400px) and (max-width: 1510px) {
    #index {
-    padding-top: 120px;
+    padding-top: 110px;
   }
   
    #car1,
   #car2,
   #car3 {
-    padding-bottom: 350px;
+    padding-bottom: 370px;
   }
 
-   #instruction1  {
-    width: 100%;
-    height: 93%;
-    display: block;
-  }
-
-   #instruction2, #instruction3 {
-    width: 100%;
-    height: 86%;
-    display: block;
-  }
 
   #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 81%;
+  top: 78%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -9332,9 +9408,22 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   display: none;
 }
 
+.howto-button {
+  background-color: #D4C029;
+  color: white;
+  border: none;
+ padding: 15px 40px 15px 40px;
+  width: 20%;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
   #footer {
   position: fixed;
-  bottom: 240px;
+  bottom: 230px;
   width: 100%;
   height: 5%;
   justify-content: center;
@@ -9381,8 +9470,8 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   }
 
 .creditscore-img {
-  width: 100px;
-  height: 480px;
+  width: 100%;
+  height: 100%;
   opacity: 1;
   position: relative;
 }
@@ -9405,12 +9494,12 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   position: absolute;
   left: 90%;
   /* Move the arrow to the right */
-  transform: translateX(-50%);
+  transform: translateX(-60%);
   /* Keep it centered relative to the new left position */
   width: 44%;
   /* Adjust the size as needed */
   height: auto;
-  top: 49%;
+  top: 48%;
   /* Adjust this value to place the arrow within the container */
   z-index: 10;
   /* Ensures the arrow stays on top */
@@ -9419,8 +9508,12 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 }
 
      #game1, #game2,
-   #game3, #game4 {
-    padding-bottom: 300px;
+   #game3 {
+    padding-bottom: 280px;
+  }
+
+#game4 {
+    padding-bottom: 260px;
   }
 
      #game-desc1 {
@@ -9460,8 +9553,8 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   text-decoration: none;
 }
 
-#tips10, #tips13 {
-   top: 75%;
+#tips3, #tips10, #tips13 {
+   top: 68%;
     left: 50%;
 }
 
@@ -9488,12 +9581,12 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   }
 
   .quiz-progress {
-  padding-top: 80px;
+  padding-top: 70px;
 }
 
   .vertical-line {
     position: absolute;
-    top: 440px;
+    top: 430px;
     /* Adjust this value to control the distance from the top */
     left: 50%;
     width: 1px;
@@ -9529,7 +9622,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 .result-container {
  height: 110px;
-  width: 500px;
+  width: 485px;
   /* Set a specific height */
   overflow: visible;
   /* Hide overflow */
@@ -9538,7 +9631,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 
 .result-img {
-  width: 448px;
+  width: 100%;
   height: 100%;
   opacity: 1;
   position: relative;
@@ -9565,7 +9658,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   position: absolute;
  left: 54%;
   /* Move the arrow to the right */
-  transform: translateX(-50%);
+  transform: translateX(-20%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
@@ -9684,7 +9777,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 10px 18px 12px 18px;
+    padding: 12px 18px 12px 18px;
     width: 18%;
     font-size: 14px;
     cursor: pointer;
@@ -9699,7 +9792,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
 
 @media (min-width: 1920px) and (max-width: 2000px) {
    #index {
-    padding-top: 300px;
+    padding-top: 200px;
   }
 
       .sticky-row {
@@ -9710,7 +9803,7 @@ background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0
   /* Optional: set a background color */
   z-index: 1000;
   /* Ensure it stays on top of other content */
-  padding-top: 20px;
+  padding-top: 30px;
   /* Optional: add some padding */
   cursor: default;
 }
@@ -9746,7 +9839,7 @@ width: auto;
 
 #howto-1, #howto-2, #howto-3 {
   position: absolute;
-  top: 95%;
+  top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0;
@@ -9762,7 +9855,7 @@ width: auto;
   background-color: #D4C029;
   color: white;
   border: none;
- padding: 20px 60px 25px 60px;
+ padding: 25px 60px 25px 60px;
   width: 20%;
   font-size: 32px;
   cursor: pointer;
@@ -9774,7 +9867,7 @@ width: auto;
 
   #footer {
     position: fixed;
-  bottom: 290px;
+  bottom: 310px;
   width: 100%;
   height: 5%;
   justify-content: center;
@@ -9786,7 +9879,7 @@ width: auto;
   }
 
   #narrative-style {
-    padding-top: 28vh;
+    padding-top: 30vh;
     width: 60%;
     overflow: hidden;
     white-space: nowrap;
@@ -9803,7 +9896,7 @@ width: auto;
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 20px 60px 25px 60px;
+    padding: 25px 60px 25px 60px;
     width: 20%;
     font-size: 32px;
     font-weight: normal;
@@ -9832,26 +9925,26 @@ width: auto;
 
     .credit-score-container {
     position: relative;
-    height: 675px;
+    height: 590px;
     /* Set a specific height */
     overflow: visible;
     /* Hide overflow */
   }
 
   .creditscore-img {
-  width: 130%;
-  height: 670px;
+  width: 100%;
+  height: 585px;
   opacity: 1;
   position: relative;
 }
 
 .creditarrow-img {
   position: absolute;
-  left: 110%;
+  left: 90%;
   /* Move the arrow to the right */
   transform: translateX(-50%);
   /* Keep it centered relative to the new left position */
-  width: 70%;
+  width: 60%;
   /* Adjust the size as needed */
   height: auto;
   top: 48%;
@@ -9866,8 +9959,8 @@ width: auto;
   position: absolute;
   top: 0;
   left: 0;
-  width: 130%;
-  height: 100%;
+  width: 100%;
+  height: 101%;
   background: linear-gradient(to bottom, rgba(252, 252, 252, 0.486) 50%, rgba(0, 0, 0, 0) 50%);
   pointer-events: none;
   /* Ensure the overlay doesn't interfere with other elements */
@@ -9877,7 +9970,6 @@ width: auto;
 
 #cs-font {
     font-size: 35px;
-    padding-left: 45px;
   }
 
   
@@ -9896,7 +9988,7 @@ width: auto;
 
 
 .circular-progress-container {
-    padding-bottom: 130px;
+    padding-bottom: 110px;
     width: 300px;
   }
 
@@ -9953,8 +10045,8 @@ width: auto;
 
   #title-text {
     font-size: 37px;
-  padding-bottom: 50px;
-  padding-top: 120px;
+  padding-bottom: 30px;
+  padding-top: 70px;
 }
 
 h1 {
@@ -9977,19 +10069,49 @@ h1 {
     background-size: 100% 410px;
   }
 
-    .info-container2 img {
-    width: 70%;
+      .info-container1 img {
+    width: 65%;
     height: auto;
     opacity: 0;
     /* Start hidden */
     transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
     animation: fadeIn2 1s ease-in-out 0.8s forwards;
     /* Animation with delay */
-     padding-top: 50px;
+     padding-top: 100px;
+  }
+
+  .info-container1 .overlay-text {
+    top: 45%;
+    /* Adjust as needed */
+    left: 50%;
+    /* Adjust as needed */
+    right: 5%;
+    /* Adjust as needed */
+    color: black;
+    /* Adjust text color */
+    font-weight: normal;
+    font-size: 28px;
+    text-align: center;
+    justify-content: center;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
+  }
+
+    .info-container2 img {
+    width: 65%;
+    height: auto;
+    opacity: 0;
+    /* Start hidden */
+    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
+    animation: fadeIn2 1s ease-in-out 0.8s forwards;
+    /* Animation with delay */
   }
 
   .info-container2 .overlay-text {
-    top: 45%;
+    top: 40%;
     /* Adjust as needed */
     left: 50%;
     /* Adjust as needed */
@@ -10016,7 +10138,7 @@ h1 {
     background-color: #D4C029;
     color: white;
     border: none;
-  padding: 20px 60px 25px 60px;
+  padding: 25px 60px 25px 60px;
   width: 30%;
   font-size: 32px;
     cursor: pointer;
@@ -10027,7 +10149,7 @@ h1 {
 
 
     #util-img {
-  width: 80%;
+  width: 75%;
   height: auto;
 }
 
@@ -10036,7 +10158,7 @@ h1 {
 }
 
 #util-btn {
-  padding-bottom: 28px;
+  padding-bottom: 58px;
 }
 
 
@@ -10113,7 +10235,7 @@ h1 {
   }
 
     #title-text2 {
-  padding-top: 300px;
+  padding-top: 200px;
       font-size: 37px;
 }
 
@@ -10142,14 +10264,15 @@ h1 {
 
 
   #game1, #game2,
-  #game3{
-    top: 78%;
+  #game3 {
+    top: 80%;
   }
 
-  #game4 {
+#game4{
     top: 70%;
-    position: fixed;
+  position: fixed;
   }
+
 
 #game-desc1 {
     font-size:40px;
@@ -10159,11 +10282,11 @@ h1 {
 
   #vacation {
   width: 1500px;
- margin-top: 25px;
+ margin-top: 10px;
 }
 
 #vacay-row {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .monument {
@@ -10226,36 +10349,6 @@ h1 {
   /* Maintain aspect ratio */
 }
 
-    .info-container1 img {
-    width: 70%;
-    height: auto;
-    opacity: 0;
-    /* Start hidden */
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    animation: fadeIn2 1s ease-in-out 0.8s forwards;
-    /* Animation with delay */
-     padding-top: 120px;
-  }
-
-  .info-container1 .overlay-text {
-    top: 45%;
-    /* Adjust as needed */
-    left: 50%;
-    /* Adjust as needed */
-    right: 5%;
-    /* Adjust as needed */
-    color: black;
-    /* Adjust text color */
-    font-weight: normal;
-    font-size: 28px;
-    text-align: center;
-    justify-content: center;
-    opacity: 0;
-    /* Start hidden */
-    transition: opacity 0.5s ease-in-out, background-image 0.5s ease-in-out;
-    animation: fadeIn2 1s ease-in-out 0.8s forwards;
-    /* Animation with delay */
-  }
 
       #wedding-box {
     height: 100vh;
@@ -10444,15 +10537,15 @@ h1 {
   text-decoration: none;
 }
 
-#tips10, #tips13 {
-   top: 76%;
+#tips3, #tips10, #tips13 {
+   top: 78%;
     left: 50%;
 }
 
 #title-text4 {
      font-size: 35px;
   padding-bottom: 50px;
-  padding-top: 270px;
+  padding-top: 200px;
   }
 
    #phone-button {
@@ -10465,7 +10558,7 @@ h1 {
   }
 
   #call-convo {
-  padding-top: 180px;
+  padding-top: 150px;
 }
 
 .phone-img {
@@ -10475,7 +10568,7 @@ h1 {
 }
 
 .quiz{
-  position: absolute;
+ position: absolute;
 }
 
 .quiz-progress {
@@ -10489,7 +10582,7 @@ h1 {
 
 
 #questions{
-  padding-top: 40px;
+  padding-top: 50px;
   width: 1600px;
   margin-left: 150px;
 }
@@ -10524,7 +10617,7 @@ h1 {
 
     .vertical-line {
     position: absolute;
-    top: 400px;
+    top: 410px;
     /* Adjust this value to control the distance from the top */
     left: 95%;
     width: 1px;
@@ -10568,7 +10661,7 @@ h1 {
   }
 
     #end-div {
-    padding-top: 260px;
+    padding-top: 240px;
   }
 
   #end-body {
@@ -10593,7 +10686,7 @@ h1 {
   background-color: #206E63;
   color: white;
   border: none;
-  padding: 26px 40px 28px 40px;
+  padding: 28px 40px 28px 40px;
   width: 60%;
   font-size: 34px;
   font-weight: bold;
@@ -10628,17 +10721,17 @@ h1 {
 }
 
 .result-container {
-  height: 150px;
-  width: 620px;
-  /* Set a specific height */
-  overflow: visible;
+  position: relative;
+    width: 590px;
+    /* Set a specific height */
+    overflow: visible;
   /* Hide overflow */
   margin-top: 140px;
 }
 
 
 .result-img {
-  width: 630px;
+  width: 100%;
   height: 95%;
   opacity: 1;
   position: relative;
@@ -10661,7 +10754,7 @@ h1 {
     position: absolute;
   left: 60%;
   /* Move the arrow to the right */
-  transform: translateX(-50%);
+  transform: translateX(-20%);
   /* Keep it centered relative to the new left position */
   width: 4%;
   /* Adjust the size as needed */
@@ -10778,7 +10871,7 @@ h1 {
     background-color: #D4C029;
     color: white;
     border: none;
-    padding: 20px 40px 22px 40px;
+    padding: 22px 40px 22px 40px;
     width: 24%;
     font-size: 28px;
     cursor: pointer;
@@ -10804,13 +10897,13 @@ h1 {
       position: relative;
       transition: opacity 0.5s ease;
       opacity: 1;
-      padding-top: 280px;
+      padding-top: 250px;
     }
 
     #mainImage {
   max-width: 1600px;
   max-height: auto;
-  object-fit: contain; /* or cover */
+  object-fit: cover; /* or cover */
 }
 
 
@@ -10818,51 +10911,11 @@ h1 {
       opacity: 0;
     }
 
-    .slider-container2 {
-      position: relative;
-      width: 720px;
-      margin: 15px auto 0;
-      height: 50px;
-    }
 
-    .slider-track {
-      position: absolute;
-      top: 3px;
-      left: 0;
-      right: 0;
-      height: 10px;
-      background: #206E63;
-      border-radius: 2px;
-    }
-
-    .slider-thumb {
-      position: absolute;
-      top: 6px;
-      width: 70px;
-      height: 50px;
-         background-image: url('../img/resultarrow.png');
-    background-size: contain;
-    /* Adjusts the background to fill the card */
-    background-position: center;
-    /* Centers the background image */
-    background-repeat: no-repeat;
-      transition: left 0.4s ease;
-      transform: none;
-      z-index: 2;
-      pointer-events: none;
-    }
-
-    .thumbnails {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-      width: 880px;
-      margin: 0 auto;
-    }
 
     .thumbnails img {
       width: 100%;
-      height: 120px;
+      height: 110px;
       cursor: pointer;
       transition: transform 0.3s ease, border-color 0.3s ease;
       border-radius: 6px;
@@ -10874,53 +10927,7 @@ h1 {
       border: 3px solid #D4C029;
     }
 
-    input[type="range"] {
-      position: absolute;
-      top: 15px;
-      left: 0;
-      width: 710px;
-      height: 20px;
-      background: transparent;
-      -webkit-appearance: none;
-      appearance: none;
-      pointer-events: auto;
-      z-index: 3;
-      margin: 0;
-      cursor: pointer;
-    }
 
-    input[type="range"]::-webkit-slider-runnable-track {
-      background: transparent;
-      height: 4px;
-    }
-
-    input[type="range"]::-moz-range-track {
-      background: transparent;
-      height: 4px;
-    }
-
-    input[type="range"]::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      margin-top: -8px;
-      cursor: pointer;
-    }
-
-    input[type="range"]::-moz-range-thumb {
-      width: 20px;
-      height: 20px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-    }
 
 }
-
-
-
-
 
