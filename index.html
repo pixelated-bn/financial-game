@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CreditLit</title>
 
+   <!-- add icon link -->
+        <link rel="icon" href="./img/creditlit 32x32.png" sizes="32x32" type="image/x-icon">
+
   <!-- Bootstrap and CSS -->
   <!--Link for connecting to bootstrap-->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -67,19 +70,15 @@ This game is developed to raise awareness and empower individuals to make inform
     </div>
 
 
-    <div id="index" class="visible">
-      <div class="row" style="background: none;">
-        <div class="col-sm-12 text-center" style="padding-right: 50px;">
+    <div id="index" class="visible text-center">
+
           <a href="narrative" id="index-link">
             <img src="./img/creditlit1.png" class="card-img-top zoom-title"
               style="width: 45%; height: auto; margin: 0 auto;">
           </a>
-        </div>
-      </div>
     </div>
 
-    <div id="narrative" class="hidden" style="padding-top: 20px;">
-      <div class="row">
+    <div id="narrative" class="hidden">
         <div class="container" id="narrative-style">
           <h3 id="typewriter">Credit is nothing to be afraid of but <br><br>like any other challenge in living your financial vision,<br><br> will you be able to manage, maintain and monitor it<br><br> so it can be of benefit to you</h3>
           <br>
@@ -88,9 +87,8 @@ This game is developed to raise awareness and empower individuals to make inform
             <a href="#narration1" class="index-button" id="index-link2">continue</a>
           </div>
 
-          <br>
+         
         </div>
-      </div>
     </div>
 
 
@@ -173,7 +171,7 @@ This game is developed to raise awareness and empower individuals to make inform
       // Sticky row hide/show logic
       document.addEventListener("DOMContentLoaded", () => {
         const stickyRow = document.querySelector(".sticky-row");
-        const targets = [document.querySelector("#narration1"), document.querySelector("#narration2"), document.querySelector("#narration3"),   document.querySelector("#scene1-tips")];
+        const targets = [document.querySelector("#narrative"), document.querySelector("#narration1"), document.querySelector("#narration2"), document.querySelector("#narration3"), document.querySelector("#scene1-tips")];
 
         const howto_observer = new IntersectionObserver(
           (entries) => {
@@ -208,6 +206,7 @@ This game is developed to raise awareness and empower individuals to make inform
         <aside style="padding-top: 30px;">
           <div class="text-center">
             <h5 id="cs-font">CREDIT<br>SCORE</h5>
+                <h2 hidden>Credit Score: <span id="creditScoreText">50</span></h2>
             <div class="credit-score-container" style="position: relative; width: 50%; margin: 0 auto;"
               data-progress2="300">
               <img src="./img/creditscore.png" class="card-img-top creditscore-img">
@@ -678,42 +677,6 @@ This game is developed to raise awareness and empower individuals to make inform
           </div>
 
 
-          <script>
-            // Get the 'continue' button
-            const continueButton1 = document.getElementById('optlink7');
-
-            // Store the previously visited URL
-            let previousURL1 = null;
-
-            // Function to randomize URL
-            function randomizeURL1() {
-              // Array of possible URLs
-              const gameURLs1 = ['game2.html', 'game3.html'];
-
-              // Select a random URL from the array
-              let randomURL1;
-
-              do {
-                randomURL1 = gameURLs1[Math.floor(Math.random() * gameURLs1.length)];
-              } while (randomURL1 === previousURL1); // Make sure it's not the same as the last URL
-
-              // Store the current URL as the previous URL for the next click
-              previousURL1 = randomURL1;
-
-              // Redirect the user to the randomly selected URL
-              window.location.href = randomURL1;
-            }
-
-            // Add event listener to the continue button
-            continueButton1.addEventListener('click', function (event) {
-              // Prevent the default link behavior
-              event.preventDefault();
-
-              // Randomize and redirect to the selected game page
-              randomizeURL1();
-            });
-
-          </script>
 
           <div id="scene2a-opt2" class="hidden-section">
 
@@ -738,42 +701,87 @@ This game is developed to raise awareness and empower individuals to make inform
 
           </div>
 
-          <script>
-            // Get the 'continue' button
-            const continueButton2 = document.getElementById('optlink8');
+  <script>
+  // Get the 'continue' button
+  const continueButton1 = document.getElementById('optlink7');
 
-            // Store the previously visited URL
-            let previousURL2 = null;
+  // Store the previously visited URL
+  let previousURL1 = null;
 
-            // Function to randomize URL
-            function randomizeURL2() {
-              // Array of possible URLs
-              const gameURLs2 = ['game2.html', 'game3.html'];
+  // Example: your current score (replace this with your actual variable)
+  //let currentCreditScore = 50; 
 
-              // Select a random URL from the array
-              let randomURL2;
+  // Function to randomize URL
+  function randomizeURL1() {
+    // Array of possible URLs
+    const gameURLs1 = ['game1.html', 'game2.html'];
 
-              do {
-                randomURL2 = gameURLs2[Math.floor(Math.random() * gameURLs2.length)];
-              } while (randomURL2 === previousURL2); // Make sure it's not the same as the last URL
+    // Select a random URL from the array
+    let randomURL1;
+    do {
+      randomURL1 = gameURLs1[Math.floor(Math.random() * gameURLs1.length)];
+    } while (randomURL1 === previousURL1); // Make sure it's not the same as the last URL
 
-              // Store the current URL as the previous URL for the next click
-              previousURL2 = randomURL2;
+    // Store the current URL as the previous URL for the next click
+    previousURL1 = randomURL1;
 
-              // Redirect the user to the randomly selected URL
-              window.location.href = randomURL2;
-            }
+    // ✅ Save the score to localStorage before navigating
+    localStorage.setItem('creditScore', currentCreditScore);
 
-            // Add event listener to the continue button
-            continueButton2.addEventListener('click', function (event) {
-              // Prevent the default link behavior
-              event.preventDefault();
+    // Redirect the user to the randomly selected URL
+    window.location.href = randomURL1;
+  }
 
-              // Randomize and redirect to the selected game page
-              randomizeURL2();
-            });
+  // Add event listener to the continue button
+  continueButton1.addEventListener('click', function (event) {
+    // Prevent the default link behavior
+    event.preventDefault();
 
-          </script>
+    // Randomize and redirect to the selected game page
+    randomizeURL1();
+  });
+
+
+  // Get the 'continue' button
+  const continueButton2 = document.getElementById('optlink8');
+
+  // Store the previously visited URL
+  let previousURL2 = null;
+
+  // Example: your current score (replace this with your actual variable)
+  //let currentCreditScore = 50; 
+
+  // Function to randomize URL
+  function randomizeURL2() {
+    // Array of possible URLs
+    const gameURLs2 = ['game1.html', 'game2.html'];
+
+    // Select a random URL from the array
+    let randomURL2;
+    do {
+      randomURL2 = gameURLs2[Math.floor(Math.random() * gameURLs2.length)];
+    } while (randomURL2 === previousURL2); // Make sure it's not the same as the last URL
+
+    // Store the current URL as the previous URL for the next click
+    previousURL2 = randomURL2;
+
+    // ✅ Save the score to localStorage before navigating
+    localStorage.setItem('creditScore', currentCreditScore);
+
+    // Redirect the user to the randomly selected URL
+    window.location.href = randomURL2;
+  }
+
+  // Add event listener to the continue button
+  continueButton2.addEventListener('click', function (event) {
+    // Prevent the default link behavior
+    event.preventDefault();
+
+    // Randomize and redirect to the selected game page
+    randomizeURL2();
+  });
+
+</script>
 
           <script>
             document.addEventListener("DOMContentLoaded", () => {
@@ -868,7 +876,29 @@ This game is developed to raise awareness and empower individuals to make inform
                   <span class="tooltip">HAPPINESS: Reduce financial stress,<br>making it easier to manage<br>expenses
                     and enjoy life’s comforts</span>
                 </div>
-                <div class="outer-ring"></div>
+        <div class="outer-ring">
+      <svg width="100%" height="100%" viewBox="0 0 100 100">
+        <!-- Background ring -->
+        <circle
+          cx="50" cy="50" r="45"
+          stroke="#FCF8EA"
+          stroke-width="10"
+          fill="none"
+        />
+        <!-- Progress ring -->
+        <circle
+          class="progress-circle"
+          cx="50" cy="50" r="45"
+          stroke="#D4C029"
+          stroke-width="10"
+          fill="none"
+          stroke-linecap="round"
+          stroke-dasharray="283"
+          stroke-dashoffset="283"
+          transform="rotate(-90 50 50)"
+        />
+      </svg>
+    </div>
               </div>
               <img src="./img/factor-up.png" class="factor-up-image">
             </div>
@@ -882,7 +912,29 @@ This game is developed to raise awareness and empower individuals to make inform
                     loved<br>ones
                     move forward with their ambitions</span>
                 </div>
-                <div class="outer-ring"></div>
+               <div class="outer-ring">
+      <svg width="100%" height="100%" viewBox="0 0 100 100">
+        <!-- Background ring -->
+        <circle
+          cx="50" cy="50" r="45"
+          stroke="#FCF8EA"
+          stroke-width="10"
+          fill="none"
+        />
+        <!-- Progress ring -->
+        <circle
+          class="progress-circle"
+          cx="50" cy="50" r="45"
+          stroke="#D4C029"
+          stroke-width="10"
+          fill="none"
+          stroke-linecap="round"
+          stroke-dasharray="283"
+          stroke-dashoffset="283"
+          transform="rotate(-90 50 50)"
+        />
+      </svg>
+    </div>
               </div>
               <img src="./img/factor-up.png" class="factor-up-image">
             </div>
@@ -897,7 +949,29 @@ This game is developed to raise awareness and empower individuals to make inform
                     communication about finances and<br>
                     work together toward shared financial goals</span>
                 </div>
-                <div class="outer-ring"></div>
+               <div class="outer-ring">
+      <svg width="100%" height="100%" viewBox="0 0 100 100">
+        <!-- Background ring -->
+        <circle
+          cx="50" cy="50" r="45"
+          stroke="#FCF8EA"
+          stroke-width="10"
+          fill="none"
+        />
+        <!-- Progress ring -->
+        <circle
+          class="progress-circle"
+          cx="50" cy="50" r="45"
+          stroke="#D4C029"
+          stroke-width="10"
+          fill="none"
+          stroke-linecap="round"
+          stroke-dasharray="283"
+          stroke-dashoffset="283"
+          transform="rotate(-90 50 50)"
+        />
+      </svg>
+    </div>
               </div>
               <img src="./img/factor-up.png" class="factor-up-image">
             </div>
@@ -1034,27 +1108,13 @@ birokredit@bdcb.gov.bn
         imageLink.addEventListener('click', function (event) {
           event.preventDefault(); // Prevent the default anchor link behavior
 
-          // Start fading out the music
-          //fadeOutMusic(backgroundMusic, 2000); // Fade out over 2 seconds
+           var targetSection = document.getElementById('narrative');
+        targetSection.classList.remove('hidden');
+        targetSection.classList.add('visible');
 
-          // Start fading out the visible section
-          const visibleSection = document.getElementById('index');
-          visibleSection.classList.add('fade-out');
-
-          // Once the fade-out transition is complete, proceed to reveal the target section
-          visibleSection.addEventListener('transitionend', function onTransitionEnd() {
-            // Remove event listener to avoid multiple triggers
-            visibleSection.removeEventListener('transitionend', onTransitionEnd);
-
-            // Reveal the target section
-            const targetSection = document.getElementById('narrative');
-            targetSection.classList.remove('hidden');
-            targetSection.classList.add('visible');
-            targetSection.classList.add('fade-in');
-
-            // Hide the old section
-            visibleSection.classList.remove('visible');
-            visibleSection.classList.add('hidden');
+        var hideSection = document.getElementById('index');
+        hideSection.classList.remove('visible');
+        hideSection.classList.add('hidden');
 
             // Scroll to the section
             targetSection.scrollIntoView({ behavior: 'smooth' });
@@ -1063,7 +1123,7 @@ birokredit@bdcb.gov.bn
             type();
           }, { once: true }); // Ensures the event listener is only invoked once
         });
-      });
+    
 
       document.getElementById('index-link2').addEventListener('click', function (event) {
         event.preventDefault(); // Prevent the default anchor link behavior
@@ -1488,43 +1548,41 @@ birokredit@bdcb.gov.bn
 
 
       function updateCircularProgress(element, newValue) {
-        const previousValue = parseInt(element.getAttribute('data-progress'), 10);
-        element.setAttribute('data-progress', newValue);
+      const previousValue = parseInt(element.getAttribute('data-progress'), 10);
+  element.setAttribute('data-progress', newValue);
 
-        // Update percentage text
-        const percentageElement = element.querySelector('.inner-circle .percentage');
-        if (percentageElement) {
-          percentageElement.innerHTML = `${newValue}%`;
-          percentageElement.hidden = true;
-        }
+  const percentageElement = element.querySelector('.inner-circle .percentage');
+  if (percentageElement) percentageElement.textContent = `${newValue}%`;
 
-        const outerRing = element.querySelector('.outer-ring');
-    const innercirc = element.querySelector('.inner-circle');
-  if (outerRing) {
-  const originalGradient = `conic-gradient(#D4C029 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`;
+  const svgCircle = element.querySelector('.progress-circle');
+  if (!svgCircle) return;
 
-  let tempColor;
-  if (newValue > previousValue) {
-    tempColor = `conic-gradient(#206E63 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`; // Green
-  } else if (newValue < previousValue) {
-    tempColor = `conic-gradient(#DA1F27 0% ${newValue}%, #FCF8EA ${newValue}% 100%)`; // Red
-  }
+  const radius = 45;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (newValue / 100) * circumference;
+  svgCircle.style.strokeDasharray = circumference;
+  svgCircle.style.strokeDashoffset = offset;
 
-  if (tempColor) {
-    outerRing.style.background = tempColor;
+  const originalColor = '#D4C029';
+  let tempColor = originalColor;
 
-    // ✨ Add pulse effect
-    outerRing.classList.add('pulse');
-     innercirc.classList.add('pulse');
-    setTimeout(() => {
-      outerRing.classList.remove('pulse');
-       innercirc.classList.remove('pulse');
-      outerRing.style.background = originalGradient;
-    }, 1000); // same as arrow duration
-  } else {
-    outerRing.style.background = originalGradient;
-  }
-}
+  // Determine temporary color based on change
+  if (newValue > previousValue) tempColor = '#206E63'; // green
+  else if (newValue < previousValue) tempColor = '#DA1F27'; // red
+
+  // Apply temporary color
+  svgCircle.setAttribute('stroke', tempColor);
+
+  // Pulse effect
+  element.querySelector('.outer-ring').classList.add('pulse');
+  element.querySelector('.inner-circle').classList.add('pulse');
+
+  // Reset color AFTER 1 second
+  setTimeout(() => {
+    svgCircle.setAttribute('stroke', originalColor);
+    element.querySelector('.outer-ring').classList.remove('pulse');
+    element.querySelector('.inner-circle').classList.remove('pulse');
+  }, 1000);
 
 
         const arrowImage = element.parentElement.querySelector('.factor-up-image');
@@ -1558,6 +1616,7 @@ function updateCreditArrow() {
   const container = document.querySelector('.credit-score-container');
   const arrow = document.querySelector('.creditarrow-img');
   const overlay = document.querySelector('.opacity-overlay');
+    const creditScoreText = document.getElementById('creditScoreText');
 
   if (!container || !arrow || !overlay) return;
 
@@ -1581,8 +1640,11 @@ let currentCreditScore = parseInt(container.getAttribute('data-progress2'), 10);
   const arrowTop = (containerHeight - arrowHeight) * (1 - positionPercentage / 100);
      arrow.style.top = `${Math.max(0, Math.min(arrowTop, containerHeight - arrowHeight))}px`;
 
+  creditScoreText.textContent = Math.round(currentCreditScore);
+const offset = containerHeight * 0.0195; // responsive offset
+
   // Update overlay gradient
-  const gradientPosition = ((arrowTop + 6) / containerHeight) * 100;
+  const gradientPosition = ((arrowTop + offset) / containerHeight) * 100;
   overlay.style.background = `linear-gradient(to bottom, rgba(252,252,252,0.486) ${gradientPosition}%, rgba(0,0,0,0) ${gradientPosition}%)`;
   overlay.style.height = `${containerHeight}px`;
 }
@@ -1622,15 +1684,18 @@ let currentCreditScore = parseInt(container.getAttribute('data-progress2'), 10);
             }
           });
 
-       currentCreditScore += change;
-    currentCreditScore = Math.max(1, Math.min(100, currentCreditScore));
+   currentCreditScore += change;
+currentCreditScore = Math.max(1, Math.min(100, currentCreditScore));
 
-    // Update container attribute and arrow
-    const container = document.querySelector('.credit-score-container');
-    if (container) {
-      container.setAttribute('data-progress2', currentCreditScore);
-      updateCreditArrow();
-    }
+// Save updated score
+localStorage.setItem('creditScore', currentCreditScore);
+
+// Update container attribute and arrow
+const container = document.querySelector('.credit-score-container');
+if (container) {
+  container.setAttribute('data-progress2', currentCreditScore);
+  updateCreditArrow('.credit-score-container', '.creditarrow-img', '.opacity-overlay');
+}
 
           // Navigate to the target section
           const targetSection = document.querySelector(this.getAttribute('href'));
