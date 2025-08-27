@@ -22,10 +22,15 @@
     }
 
     h3 {
-      margin: 0 0 20px 0;
+      margin: 0 0 10px 0;
       font-size: 28px;
       color: #333;
-        font-family: 'Geomanist-Bold';
+    }
+
+    .hint-text {
+      margin: 0 0 20px 0;
+      font-size: 14px;
+      color: #666;
     }
 
     a {
@@ -51,9 +56,12 @@
     }
 
     /* Responsive font sizes for mobile */
-    @media (max-width: 700px) {
+    @media (max-width: 600px) {
       h3 {
         font-size: 20px;
+      }
+      .hint-text {
+        font-size: 12px;
       }
       a {
         font-size: 18px;
@@ -65,7 +73,8 @@
 <body>
   <div class="center-box">
     <h3>Creditlit Game</h3>
-    <a href="https://creditlit.com.bn" target="">Click Here to Play</a>
+    <p class="hint-text">Best to be played in landscape mode</p>
+    <a href="https://example.com" target="_blank">Click Here to Play</a>
   </div>
 </body>
 </html>
